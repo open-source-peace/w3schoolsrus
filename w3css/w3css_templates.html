@@ -1,736 +1,125 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
-
-<!-- Mirrored from www.w3schools.com/w3css/w3css_templates.asp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2020 10:55:33 GMT -->
+<html lang="ru">
 <head>
-<title>W3.CSS Templates</title>
+<title>W3.CSS Шаблоны сайтов. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
-<meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
-<link rel="icon" href="https://www.w3schools.com/favicon.ico" type="image/x-icon">
+<meta name="keywords" content="W3,w3css,шаблоны,сайтов,w3schools,на русском,уроки,для начинающих">
+<meta name="description" content="W3.CSS Шаблоны сайтов. Мы создали несколько адаптивных шаблонов веб-сайтов W3.CSS, которые вы можете использовать. Вы можете изменять, сохранять, делиться и использовать их во всех своих проектах БЕСПЛАТНО. Учебник по W3.CSS для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="4/w3.css">
-<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
-
-<style>
-a:hover,a:active{color:#4CAF50}
-table.w3-table-all{margin:20px 0}
-/*OPPSETT AV TOP, TOPNAV, SIDENAV, MAIN, RIGHT OG FOOTER:*/
-.top {
-position:relative;
-background-color:#ffffff;
-height:68px;
-padding-top:20px;
-line-height:50px;
-overflow:hidden;
-z-index:2;
-}
-.w3schools-logo {
-font-family:fontawesome;
-text-decoration:none;
-line-height:1;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-font-size:37px;
-letter-spacing:3px;
-color:#555555;
-display:block;
-position:absolute;
-top:17px;
-}
-.w3schools-logo .dotcom {color:#4CAF50}
-.topnav {
-position:relative;
-z-index:2;
-font-size:17px;
-background-color:#5f5f5f;
-color:#f1f1f1;
-width:100%;
-padding:0;
-letter-spacing:1px;
-font-family:"Segoe UI",Arial,sans-serif;
-}
-.topnav a{
-padding:10px 15px 9px 15px !important;
-}
-.topnav .w3-bar a:hover,.topnav .w3-bar a:focus{
-background-color:#000000 !important;
-color:#ffffff !important;
-}
-.topnav .w3-bar a.active {
-background-color:#4CAF50;
-color:#ffffff;
-}
-a.topnav-icons {
-width:52px !important;
-font-size:20px !important;
-padding-top:11px !important;
-padding-bottom:13px !important;
-}
-a.topnav-icons.fa-home {font-size:22px !important}
-a.topnav-icons.fa-menu {font-size:22px !important}
-a.topnav-localicons {
-font-size:20px !important;
-padding-top:6px !important;
-padding-bottom:12px !important;
-}
-i.fa-caret-down,i.fa-caret-up{width:10px}
-#sidenav h2 {
-font-size:21px;
-padding-left:16px;
-margin:-4px 0 4px 0;
-width:204px;
-}
-#sidenav a {font-family:"Segoe UI",Arial,sans-serif;text-decoration:none;display:block;padding:2px 1px 1px 16px}
-#sidenav a:hover,#sidenav a:focus {color:#000000;background-color:#cccccc;}
-#sidenav a.active {background-color:#4CAF50;color:#ffffff}
-#sidenav a.activesub:link,#sidenav a.activesub:visited {background-color:#ddd;color:#000;}
-#sidenav a.activesub:hover,#sidenav a.activesub:active {background-color:#ccc;color:#000;}
-#leftmenuinner {
-position:fixed;
-top:0;
-padding-top:112px;
-padding-bottom:0;    
-height:100%;
-width:220px;
-background-color:transparent;
-}
-#leftmenuinnerinner {
-height:100%;
-width:100%;
-overflow-y:scroll;
-overflow-x:hidden;
-padding-top:20px;
-}
-#main {padding:16px}
-#mainLeaderboard {height:90px}
-#right {text-align:center;padding:16px 16px 0 0}
-#right a {text-decoration:none}
-#right a:hover {text-decoration:underline}
-#skyscraper {min-height:600px}
-.sidesection {margin-bottom:32px;}
-#sidesection_exercise a{display:block;padding:4px 10px;}
-#sidesection_exercise a:hover,#sidesection_exercise a:active{background-color:#ccc;text-decoration:none;color:#000000;}
-.bottomad {padding:0 16px 16px 0;float:left;width:auto;}
-.footer a {text-decoration:none;}
-.footer a:hover{text-decoration:underline;}
-#nav_tutorials,#nav_references,#nav_exercises{-webkit-overflow-scrolling:touch;overflow:auto;}
-#nav_tutorials::-webkit-scrollbar,#nav_references::-webkit-scrollbar,#nav_exercises::-webkit-scrollbar {width: 12px;}
-#nav_tutorials::-webkit-scrollbar-track,#nav_references::-webkit-scrollbar-track,#nav_exercises::-webkit-scrollbar-track {background:#555555;}
-#nav_tutorials::-webkit-scrollbar-thumb,#nav_references::-webkit-scrollbar-thumb,#nav_exercises::-webkit-scrollbar-thumb {background: #999999;}
-#nav_tutorials,#nav_references,#nav_exercises {
-display:none;
-letter-spacing:0;
-margin-top:44px;
-}
-#nav_tutorials a,#nav_references a,#nav_exercises a{
-padding:2px 0 2px 6px!important;
-}
-#nav_tutorials a:focus,#nav_references a:focus,#nav_exercises a:focus{
-color: #000;
-background-color: #ccc;
-}
-#nav_tutorials h3,#nav_references h3,#nav_exercises h3{
-padding-left:6px;
-}
-.ref_overview{display:none}
-.tut_overview{
- display :none;
- margin-left:10px;
- background-color :#ddd;
- line-height:1.8em;
-}
-#sidenav a.activesub:link,#sidenav a.activesub:visited {background-color:#ddd;color:#000;}
-#sidenav a.activesub:hover,#sidenav a.activesub:active {background-color:#ccc;color:#000;}
-#sidenav a.active_overview:link,#sidenav a.active_overview:visited {background-color:#ccc;color:#000;}
-.w3-example{background-color:#f1f1f1;padding:0.01em 16px;margin:20px 0;box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
-.nextprev a {font-size:17px;border:1px solid #cccccc;}
-.nextprev a:link,.nextprev a:visited {background-color:#ffffff;color:#000000;}
-.w3-example a:focus,.nextprev a:focus{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
-.nextprev a.w3-right,.nextprev a.w3-left {background-color:#4CAF50;color:#ffffff;border-color:#4CAF50}
-.pagemenu{margin-left:-20px;margin-right:-20px;padding:20px;background-color:#d4edda;line-height:2.8em;color:#555;}
-.pagemenu hr {border-top: 1px solid #fff;margin:20px 0;}
-.pagemenu a {display:block;text-decoration:none!important;}
-.pagemenu a:hover,.learnmore a:active {color:#000;}
-#w3-exerciseform {background-color:#555555;padding:16px;color:#ffffff;}
-#w3-exerciseform .exercisewindow {background-color:#ffffff;padding:16px;color:#000000;}
-#w3-exerciseform .exerciseprecontainer {background-color:#f1f1f1;padding:16px;font-size:120%;font-family:Consolas,"Courier New", Courier, monospace;}
-#w3-exerciseform .exerciseprecontainer pre[class*="language-"] {padding:1px;}
-#w3-exerciseform .exerciseprecontainer pre {display: block;}
-#w3-exerciseform .exerciseprecontainer textarea {width:100%;border:none;overflow:hidden}
-#w3-exerciseform .exerciseprecontainer input {padding:1px;border: 1px solid transparent;height:1.3em;}
-.w3-theme {color:#fff !important;background-color:#73AD21 !important;background-color:#4CAF50 !important}
-.w3-theme-border {border-color:#4CAF50 !important}
-.sharethis a:hover {color:inherit;}
-.fa-facebook-square,.fa-twitter-square,.fa-google-plus-square {padding:0 8px;}
-.fa-facebook-square:hover, .fa-thumbs-o-up:hover {color:#3B5998;}
-.fa-twitter-square:hover {color:#55acee;}
-.fa-google-plus-square:hover {color:#dd4b39;}
-#google_translate_element img {margin-bottom:-1px;}
-#googleSearch {color:#000000;}
-#googleSearch a {padding:0 !important;}
-.searchdiv {max-width:400px;margin:auto;text-align:left;font-size:16px}
-div.cse .gsc-control-cse, div.gsc-control-cse {background-color:transparent;border:none;padding:6px;margin:0px}
-td.gsc-search-button input.gsc-search-button {background-color:#4CAF50;border-color:#4CAF50}
-td.gsc-search-button input.gsc-search-button:hover {background-color:#46a049;}
-input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
-box-sizing:content-box; line-height:normal;}
-.gsc-tabsArea div {overflow:visible;}
-/*"nullstille" w3css:*/
-.w3-main{transition:margin-left 0s;}
-/*"nullstilling" slutt*/
-@media (min-width:1675px) {
-#main {width:79%}
-#right {width:21%}
-}
-@media (max-width:992px) {
-.top {height:100px}
-.top img {display:block;margin:auto;}
-.top .w3schools-logo {position:relative;top:0;width:100%;text-align:center;margin:auto}
-.toptext {width:100%;text-align:center}
-#sidenav {width:260px;box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
-#sidenav h2 {font-size:26px;width:100%;}
-#sidenav a {padding:3px 2px 3px 24px;font-size:17px}
-#leftmenuinner {overflow:auto;-webkit-overflow-scrolling:touch;height:100%;position:relative;width:auto;padding-top:0;background-color:#f1f1f1;}
-#leftmenuinnerinner {overflow-y:scroll}
-.bottomad {float:none;text-align:center}
-#skyscraper {min-height:60px}
-}
-@media screen and (max-width:600px) {
-.w3-example, .w3-note, #w3-exerciseform {margin-left:-16px;margin-right:-16px;}
-.top {height:68px}
-.toptext {display:none}
-}
-@font-face {
-font-family:'fontawesome';
-src: url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396');
-src:url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
-url('https://www.w3schools.com/lib/fonts/fontawesome.woff?14663396') format('woff'),
-url('https://www.w3schools.com/lib/fonts/fontawesome.ttf?14663396') format('truetype'),
-url('https://www.w3schools.com/lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
-font-weight:normal;
-font-style:normal;
-}
-.fa {
-display:inline-block;
-font:normal normal normal 14px/1 FontAwesome;
-font-size:inherit;
-text-rendering:auto;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-transform:translate(0, 0);
-}
-.fa-2x {
- font-size:2em;
-}
-.fa-home:before {content:'\e800';}
-.fa-menu:before {content: '\f0c9';}
-.fa-globe:before {content:'\e801';}
-.fa-search:before {content:'\e802'; }
-.fa-thumbs-o-up:before {content:'\e803';}
-.fa-left-open:before {content:'\e804';}
-.fa-right-open:before {content:'\e805';}
-.fa-facebook-square:before {content:'\e806';}
-.fa-google-plus-square:before {content:'\e807';}
-.fa-twitter-square:before {content:'\e808';}
-.fa-caret-down:before {content:'\e809';}
-.fa-caret-up:before {content:'\e80a';}
-.fa.fa-adjust:before { content: '\e80b'; }
-span.marked, span.deprecated {
- color:#e80000;
- background-color:transparent;
-}
-.w3-code span.marked {
- color:#e80000;
- background-color:transparent;
-}
-.darktheme .w3-code span.marked {
- color:#ff9999;
- background-color:transparent;
-}
-.darktheme .w3-example.w3-light-grey {
-  background-color:rgb(40,44,52)!important;color:white;
-}
-.intro {font-size:16px}
-.w3-btn, .w3-btn:link, .w3-btn:visited {color:#FFFFFF;background-color:#4CAF50}
-a.w3-btn[href*="exercise.asp"],a.w3-btn[href*="exercise_js.asp"] {margin:10px 5px 0 0}
-a.btnplayit,a.btnplayit:link,a.btnplayit:visited {background-color:#FFAD33;padding:1px 10px 2px 10px}
-a.btnplayit:hover,a.btnplayit:active {background-color:#ffffff;color:#FFAD33}
-a.btnplayit:hover {box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);}
-a.btnsmall:link,a.btnsmall:visited,a.btnsmall:active,a.btnsmall:hover {
-float:right;padding:1px 10px 2px 10px;font:15px Verdana, sans-serif;}
-a.btnsmall:hover {box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);}
-a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
-.tagcolor{color:mediumblue}
-.tagnamecolor{color:brown}
-.attributecolor{color:red}
-.attributevaluecolor{color:mediumblue}
-.commentcolor{color:green}
-.cssselectorcolor{color:brown}
-.csspropertycolor{color:red}
-.csspropertyvaluecolor{color:mediumblue}
-.cssdelimitercolor{color:black}
-.cssimportantcolor{color:red}  
-.jscolor{color:black}
-.jskeywordcolor{color:mediumblue}
-.jsstringcolor{color:brown}
-.jsnumbercolor{color:red}
-.jspropertycolor{color:black}
-.javacolor{color:black}
-.javakeywordcolor{color:mediumblue}
-.javastringcolor{color:brown}
-.javanumbercolor{color:red}
-.javapropertycolor{color:black}
-.kotlincolor{color:black}
-.kotlinkeywordcolor{color:mediumblue}
-.kotlinstringcolor{color:brown}
-.kotlinnumbercolor{color:red}
-.kotlinpropertycolor{color:black}
-.phptagcolor{color:red}
-.phpcolor{color:black}
-.phpkeywordcolor{color:mediumblue}
-.phpglobalcolor{color:goldenrod}
-.phpstringcolor{color:brown}
-.phpnumbercolor{color:red}  
-.pythoncolor{color:black}
-.pythonkeywordcolor{color:mediumblue}
-.pythonstringcolor{color:brown}
-.pythonnumbercolor{color:red}  
-.angularstatementcolor{color:red}
-.sqlcolor{color:black}
-.sqlkeywordcolor{color:mediumblue}
-.sqlstringcolor{color:brown}
-.sqlnumbercolor{color:} 
-.darktheme .w3-code{background-color:rgb(40,44,52);color:white;border-left-color:rgb(40,44,52)}
-.darktheme .w3-example pre{background-color:rgb(40,44,52)!important;border-left-color:rgb(40,44,52)}
-.darktheme .tagcolor{color:#88ccbb/*green2*/!important}
-.darktheme .tagnamecolor{color:#ff9999/*red*/!important}
-.darktheme .attributecolor{color:#c5a5c5/*purple*/!important}
-.darktheme .attributevaluecolor{color:#88c999/*green*/!important}
-.darktheme .commentcolor{color:#999!important}
-.darktheme .cssselectorcolor{color:#ff9999/*red*/!important}
-.darktheme .csspropertycolor{color:#c5a5c5/*purple*/!important}
-.darktheme .csspropertyvaluecolor{color:#88c999/*green*/!important}
-.darktheme .cssdelimitercolor{color:white!important}
-.darktheme .cssimportantcolor{color:#ff9999/*red*/!important}
-.darktheme .jscolor{color:white!important}
-.darktheme .jskeywordcolor{color:#c5a5c5/*purple*/!important}
-.darktheme .jsstringcolor{color:#88c999/*green*/!important}
-.darktheme .jsnumbercolor{color:#80b6ff/*blue*/!important}
-.darktheme .jspropertycolor{color:white!important}
-.darktheme .javacolor{color:white!important}
-.darktheme .javakeywordcolor{color:#88c999/*green*/!important}
-.darktheme .javastringcolor{color:#88c999/*green*/!important}
-.darktheme .javanumbercolor{color:#88c999/*green*/!important}
-.darktheme .javapropertycolor{color:white!important}
-.darktheme .kotlincolor{color:white!important}
-.darktheme .kotlinkeywordcolor{color:#88c999/*green*/!important}
-.darktheme .kotlinstringcolor{color:#88c999/*green*/!important}
-.darktheme .kotlinnumbercolor{color:#88c999/*green*/!important}
-.darktheme .kotlinpropertycolor{color:white!important}
-.darktheme .phptagcolor{color:#999!important}
-.darktheme .phpcolor{color:white!important}
-.darktheme .phpkeywordcolor{color:#ff9999/*red*/!important}
-.darktheme .phpglobalcolor{color:white!important}
-.darktheme .phpstringcolor{color:#88c999/*green*/!important}
-.darktheme .phpnumbercolor{color:#88c999/*green*/!important}
-.darktheme .pythoncolor{color:white!important}
-.darktheme .pythonkeywordcolor{color:#ff9999/*red*/!important}
-.darktheme .pythonstringcolor{color:#88c999/*green*/!important}
-.darktheme .pythonnumbercolor{color:#88c999/*green*/!important}
-.darktheme .angularstatementcolor{color:#ff9999/*red*/!important}
-.darktheme .sqlcolor{color:white!important}
-.darktheme .sqlkeywordcolor{color:#80b6ff/*blue*/!important}
-.darktheme .sqlstringcolor{color:#88c999/*green*/!important}
-.darktheme .sqlnumbercolor{color:}
-@media only screen and (max-device-width: 480px) {
-.w3-code, .w3-codespan,#w3-exerciseform .exerciseprecontainer {font-family: 'Source Code Pro',Menlo,Consolas,monospace;}
-.w3-code {font-size:14px;}
-.w3-codespan {font-size:15px;}
-#w3-exerciseform .exerciseprecontainer {font-size:15px;}
-#w3-exerciseform .exerciseprecontainer input {padding:0;height:1.5em}
-}
-@media screen and (max-width:700px) {
-#mainLeaderboard {height:60px}
-#div-gpt-ad-1422003450156-0 {float:none;margin-left:auto;margin-right:auto}
-#div-gpt-ad-1422003450156-3 {float:none;margin-left:auto;margin-right:auto}
-}
-@media (max-width:1700px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(18){display:none;}}
-@media (max-width:1600px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(13){display:none;}}
-/*@media (max-width:1510px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(12){display:none;}}*/
-@media (max-width:1530px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(12){display:none;}}
-@media (max-width:1450px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(11){display:none;}}
-/*@media (max-width:1330px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(10){display:none;}}*/
-@media (max-width:1350px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(10){display:none;}}
-/*@media (max-width:1200px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(9){display:none;}}*/
-@media (max-width:1240px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(9){display:none;}}
-/*@media (max-width:1100px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(8){display:none;}}*/
-@media (max-width:1140px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(8){display:none;}}
-/*@media (max-width:1000px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(7){display:none;}}*/
-@media (max-width:1050px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(7){display:none;}}
-@media (max-width:992px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(6){display:none;}}
-@media (max-width:300px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(17){display:none;}}
-@media (max-width:930px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(19){display:none;}}
-@media (max-width:800px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(20){display:none;}}
-@media (max-width:650px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(5){display:none;} #topnav .w3-bar:nth-of-type(1) a:nth-of-type(16){display:none;}}
-@media (max-width:460px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(4){display:none;}}
-@media (max-width:400px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(3){display:none;}}
-.w3-note{background-color:#ffffcc;border-left:6px solid #ffeb3b}
-.w3-warning{background-color:#ffdddd;border-left:6px solid #f44336}
-.w3-info{background-color:#ddffdd;border-left:6px solid #4CAF50}
-hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
-.phonebr {display:none;}
-@media screen and (max-width: 475px) {.phonebr {display:initial;}}
-
-/*NYTT:*/
-#main {
-  padding:16px 32px 32px 32px;
-  border-right: 1px solid #f1f1f1;
-}
-#right {
-  padding:16px 8px;
-}
-.sidesection .w3-left-align {
-  text-align:center!important;
-}
-#footer {padding:32px;border-top:1px solid #f1f1f1;}
-#footer hr:first-child {
-  display:none;
-}
-.w3-info {
-  background-color: #d4edda;
-  border-left: none;
-  padding:32px;
-  margin:24px;
-  margin-left:-32px;
-  margin-right:-32px;
-}
-.w3-example {
-  padding: 8px 20px;
-  margin: 24px -20px;
-  box-shadow:none!important;
-}
-.w3-note, .w3-warning {
-  border-left: none;
-}
-.w3-panel {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-left:-32px;
-  margin-right:-32px;
-  padding:16px 32px;
-}
-h1 {
-  font-size: 42px;
-}
-h2 {
-  font-size: 32px;
-}
-.w3-btn:hover,.w3-btn:active,.w3-example a:focus,.nextprev a:focus {
-  box-shadow: none;
-  background-color: #46a049!important;
-}
-.w3-btn:hover.w3-blue,.w3-btn:active.w3-blue,.w3-button:hover.w3-blue,.w3-button:active.w3-blue {
-  background-color: #0d8bf2!important;color: #fff!important;
-}
-.w3-btn:hover.w3-white,.w3-btn:active.w3-white,.w3-button:hover.w3-white,.w3-button:active.w3-white {
-  background-color: #f1f1f1!important;
-}
-.nextprev .w3-btn:not(.w3-left):not(.w3-right):hover,.nextprev .w3-btn:not(.w3-left):not(.w3-right):active,.nextprev .w3-btn:not(.w3-left):not(.w3-right):focus {
-  background-color: #f1f1f1!important;
-}
-a.btnsmall:hover {box-shadow:none;}
-a.btnsmall:active,a.btnsmall:hover {color:#fff;}
-a.btnplayit:hover,a.btnplayit:active {background-color:#ff9900!important;color:#fff}
-a.btnplayit:hover {box-shadow:none;}
-#w3-exerciseform {
-  padding: 20px;
-  margin:32px -20px;
-}
-p {
-  margin-top: 1.2em;
-  margin-bottom: 1.2em;
-  font-size: 15px;
-}
-hr {
-  margin:20px -16px;
-}
-.w3-codespan {
-  font-size:105%;
-}
-.w3-example p,.w3-panel p {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.w3-code{
-  font-size:15px;
-}
-#midcontentadcontainer,#mainLeaderboard {
-  text-align:center;
-  margin-left:-20px;
-  margin-right:-20px;
-}
-@media screen and (max-width:600px) {
-.w3-example, #w3-exerciseform {margin-left:-32px;margin-right:-32px;}
-}
-
-@media only screen and (max-device-width: 480px) {
-#main {padding:24px}
-h1 {
-  font-size: 30px;
-}
-h2 {
-  font-size: 25px;
-}
-.w3-example {
-  padding: 8px 16px;
-  margin: 24px -24px;
-}
-#w3-exerciseform {
-  padding: 8px 16px 16px 16px;
-  margin: 24px -24px;
-}
-.w3-panel,.w3-info {
-  margin-left:-24px;
-  margin-right:-24px;
-}
-
-}
-
-</style>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-3855518-1', 'auto');
-ga('require', 'displayfeatures');
-ga('require', 'GTM-WJ88MZ5');
-ga('send', 'pageview');
-</script>
-
-<script type='text/javascript'>
-var k42 = false;
-var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
-
-k42 = true;
-googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("https://www.w3schools.com/", "");
-    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
-    return folder;
-  })());
-});  
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
-
-var snhb = snhb || {}; snhb.queue = snhb.queue || [];
-snhb.options = {
-               logOutputEnabled : false,
-               autoStartAuction: false,
-               gdpr: {
-                     mainGeo: "us",
-                     reconsiderationAppealIntervalSeconds: 0
-                     }
-               };
-
-</script>
-<script src="../../static.h-bid.com/sncmp/latest/sncmp_stub.min.js" type="text/javascript"></script>
-<script>
-			window.__cmp('setLogo', "../images/w3schoolscom_gray.gif", function(result){
-	       		//snhb.console.log("Logo set");
-	    	});
-			window.__cmp('setPrivacyPolicy', "http://www.w3schools.com/about/about_privacy.asp", function(result){
-	       		//snhb.console.log("Privacy policy URI set");
-	    	});
-			__cmp('forceLocale', 'en', function(result){
-	    });
-			window.__cmp('enableWelcomeBanner', null, function(result) {
-	       		//snhb.console.log("Banner mode enabled");
-			});
-			__cmp('enablePopupDismissable', null, function(result) {});
-			window.__cmp('disableBannerPrivacyPolicyButton', null, function(result) {
-	       		//snhb.console.log("Banner mode without privacy policy button enabled");
-			});
-      window.__cmp('setTranslationFiles', { path: '//www.w3schools.com/lib/', locales: ["en"] }, function(result) {});
-      __cmp('setCSS', '../lib/cmp.css', function(result){} );
-</script>
-<script async type="text/javascript" src="../../static.h-bid.com/w3schools.com/20200121/snhb-w3schools.com.min.js"></script>
-<script>
-  snhb.queue.push(function(){
-
-    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
-
-  });
-</script>
-<script type='text/javascript'>
-var stickyadstatus = "";
-function fix_stickyad() {
-  document.getElementById("stickypos").style.position = "sticky";
-  var elem = document.getElementById("stickyadcontainer");
-  if (!elem) {return false;}
-  if (document.getElementById("skyscraper")) {
-    var skyWidth = Number(w3_getStyleValue(document.getElementById("skyscraper"), "width").replace("px", ""));  
-    }
-  else {
-    var skyWidth = Number(w3_getStyleValue(document.getElementById("right"), "width").replace("px", ""));  
-  }
-  elem.style.width = skyWidth + "px";
-  if (window.innerWidth <= 992) {
-    elem.style.position = "";
-    elem.style.top = stickypos + "px";
-    return false;
-  }
-  var stickypos = document.getElementById("stickypos").offsetTop;
-  var docTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-  var adHeight = Number(w3_getStyleValue(elem, "height").replace("px", ""));
-  if (stickyadstatus == "") {
-    if ((stickypos - docTop) < 60) {
-      elem.style.position = "fixed";
-      elem.style.top = "60px";
-      stickyadstatus = "sticky";
-      document.getElementById("stickypos").style.position = "sticky";
-
-    }
-  } else {
-    if ((docTop + 60) - stickypos < 0) {  
-      elem.style.position = "";
-      elem.style.top = stickypos + "px";
-      stickyadstatus = "";
-      document.getElementById("stickypos").style.position = "static";
-    }
-  }
-  if (stickyadstatus == "sticky") {
-    if ((docTop + adHeight + 60) > document.getElementById("footer").offsetTop) {
-      elem.style.position = "absolute";
-      elem.style.top = (document.getElementById("footer").offsetTop - adHeight) + "px";
-      document.getElementById("stickypos").style.position = "static";
-    } else {
-        elem.style.position = "fixed";
-        elem.style.top = "60px";
-        stickyadstatus = "sticky";
-        document.getElementById("stickypos").style.position = "sticky";
-    }
-  }
-}
-function w3_getStyleValue(elmnt,style) {
-  if (window.getComputedStyle) {
-    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
-  } else {
-    return elmnt.currentStyle[style];
-  }
-}
-</script>
-<style>
-.w3-light-grey {background-color:#eee !important;}
-@media screen and (max-width:601px){.w3-btn.w3-padding-large {width:100% ! important;margin-bottom:5px;}}
-</style>
 </head>
+
 <body>
+<div id="mainContent">
 <div class='w3-container top'>
-  <a class='w3schools-logo notranslate' href='http://www.w3schools.com/'>w3schools<span class='dotcom'>.com</span></a>
-  <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.на русском</span></a>
+  <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ</div>
 </div>
 
+<!--GoogleSearch-->
 <div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
   <div class='gcse-search'></div>
 </div>
-<div style='display:none;position:absolute;z-index:3;right:111px;height:44px;background-color:#5f5f5f;text-align:right;padding-top:9px;' id='google_translate_element'></div>
+<!--/GoogleSearch-->
 
+<!--Top menu-->
 <div class='w3-card-2 topnav notranslate' id='topnav'>
   <div style="overflow:auto;">
     <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
       <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
-      <a href='https://www.w3schools.com/default.asp' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/html/default.asp' title='HTML Tutorial'>HTML</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/css/default.asp' title='CSS Tutorial'>CSS</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/default.asp' title='JavaScript Tutorial'>JAVASCRIPT</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sql/default.asp' title='SQL Tutorial'>SQL</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/default.asp' title='Python Tutorial'>PYTHON</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/php/default.asp' title='PHP Tutorial'>PHP</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_ver.asp' title='Bootstrap Tutorial'>BOOTSTRAP</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/howto/default.asp' title='How To'>HOW TO</a>
-      <a class="w3-bar-item w3-button" href='default.html' title='W3.CSS Tutorial'>W3.CSS</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/default.asp' title='jQuery Tutorial'>JQUERY</a>
-      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/java/default.asp' title='Java Tutorial'>JAVA</a>
-      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
-      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
-      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
-      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://www.w3schools.com/forum/default.asp'>FORUM</a>
-      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Главная'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Учебник'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Учебник'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Учебник'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Учебник'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Учебник'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>КАК СДЕЛАТЬ</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Учебник'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Учебник'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Учебник'>JAVA</a>
+      <a class="w3-bar-item w3-button" href='../xml/default.html' title='XML Учебник'>XML</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Учебники'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключить на тёмный код'>&#9681;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'>КНИГИ</a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
     </div>
     <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
       <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l3 m6'>
-          <h3>HTML and CSS</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/html/default.asp'>Learn HTML</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/css/default.asp'>Learn CSS</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_ver.asp'>Learn Bootstrap</a>
-          <a class="w3-bar-item w3-button" href='default.html'>Learn W3.CSS</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/colors/default.asp'>Learn Colors</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/icons/default.asp'>Learn Icons</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/default.asp'>Learn Graphics</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/svg_intro.asp'>Learn SVG</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/canvas_intro.asp'>Learn Canvas</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/howto/default.asp'>Learn How To</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sass/default.asp'>Learn Sass</a>          
+          <h3>HTML и CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Выучить HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Выучить CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Выучить W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Выучить Цвета</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Выучить Иконки</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Выучить Графика</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Выучить SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+          <a class="w3-bar-item w3-button" href='default.html'>Выучить Как сделать</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Выучить Sass</a>
           <div class="w3-hide-large w3-hide-small">
             <h3>XML</h3>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/default.asp'>Learn XML</a>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/ajax_intro.asp'>Learn XML AJAX</a>
-            <a class="w3-bar-item w3-button" href="https://www.w3schools.com/xml/dom_intro.asp">Learn XML DOM</a>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xml_dtd_intro.asp'>Learn XML DTD</a>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/schema_intro.asp'>Learn XML Schema</a>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xsl_intro.asp'>Learn XSLT</a>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xpath_intro.asp'>Learn XPath</a>
-            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xquery_intro.asp'>Learn XQuery</a>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Выучить XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Выучить XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Выучить XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Выучить XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Выучить XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Выучить XQuery</a>
           </div>
         </div>
         <div class='w3-col l3 m6'>
           <h3>JavaScript</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/default.asp'>Learn JavaScript</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/default.asp'>Learn jQuery</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/react/default.asp'>Learn React</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/angular/default.asp'>Learn AngularJS</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/js/js_json_intro.asp">Learn JSON</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/js_ajax_intro.asp'>Learn AJAX</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/w3js/default.asp">Learn W3.JS</a>
-          <h3>Programming</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/default.asp'>Learn Python</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/java/default.asp'>Learn Java</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cpp/default.asp'>Learn C++</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cs/default.asp'>Learn C#</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/python_ml_getting_started.asp'>Learn Machine Learning</a>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Выучить JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Выучить jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Выучить React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Выучить AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Выучить JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Выучить W3.JS</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Выучить Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Выучить Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Выучить C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Выучить C#</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Уроки Машинное обучение</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
         <div class='w3-col l3 m6'>
-          <h3>Server Side</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sql/default.asp'>Learn SQL</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/php/default.asp'>Learn PHP</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/asp/default.asp'>Learn ASP</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/nodejs/default.asp'>Learn Node.js</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp'>Learn Raspberry Pi</a>          
-          <h3>Web Building</h3>
-          <a class="w3-bar-item w3-button" href="w3css_templates.html">Web Templates</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/browsers/default.asp'>Web Statistics</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cert/default.asp'>Web Certificates</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tryit/default.asp'>Web Editor</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/whatis/default.asp">Web Development</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/typingspeed/default.asp">Test Your Typing Speed</a>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Выучить SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Выучить PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Выучить ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Выучить Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+          <h3>Веб-строительство</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Веб-шаблоны</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Веб-статистика</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Веб-сертификаты</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Веб-редактор</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Веб-разработка</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/typingspeed/default.asp" target="_blank" rel="nofollow">Скорость печати</a>
         </div>
         <div class='w3-col l3 m6 w3-hide-medium'>
           <h3>XML</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/default.asp'>Learn XML</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/ajax_intro.asp'>Learn XML AJAX</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/xml/dom_intro.asp">Learn XML DOM</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xml_dtd_intro.asp'>Learn XML DTD</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/schema_intro.asp'>Learn XML Schema</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xsl_intro.asp'>Learn XSLT</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xpath_intro.asp'>Learn XPath</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xquery_intro.asp'>Learn XQuery</a>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Выучить XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Выучить XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Выучить XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Выучить XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Выучить XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Выучить XQuery</a>
         </div>
       </div>
       <br>
@@ -740,56 +129,56 @@ function w3_getStyleValue(elmnt,style) {
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l3 m6'>
           <h3>HTML</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/default.asp'>HTML Tag Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_html_browsersupport.asp'>HTML Browser Support</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_eventattributes.asp'>HTML Event Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/colors/default.asp'>HTML Color Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_attributes.asp'>HTML Attribute Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_canvas.asp'>HTML Canvas Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/svg_reference.asp'>HTML SVG Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/default.asp'>HTML Character Sets</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/google_maps_reference.asp'>Google Maps Reference</a>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Справочник тегов</a>
+	  <a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Справочник цветов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
           <h3>CSS</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cssref/default.asp'>CSS Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cssref/css3_browsersupport.asp'>CSS Browser Support</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cssref/css_selectors.asp'>CSS Selector Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp'>Bootstrap 3 Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp'>Bootstrap 4 Reference</a>
-          <a class="w3-bar-item w3-button" href='w3css_references.html'>W3.CSS Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/icons/icons_reference.asp'>Icon Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sass/sass_functions_string.asp'>Sass Reference</a>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Справочник</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Справочник</a>
        </div>
         <div class='w3-col l3 m6'>
           <h3>JavaScript</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jsref/default.asp'>JavaScript Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jsref/default.asp'>HTML DOM Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/jquery_ref_overview.asp'>jQuery Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/angular/angular_ref_directives.asp'>AngularJS Reference</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/w3js/w3js_references.asp">W3.JS Reference</a>
-          <h3>Programming</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/python_reference.asp'>Python Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/java/java_ref_keywords.asp'>Java Reference</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Справочник</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Справочник</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Справочник</a>
         </div>
         <div class='w3-col l3 m6'>
-          <h3>Server Side</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sql/sql_ref_keywords.asp'>SQL Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/php/php_ref_overview.asp'>PHP Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/asp/asp_ref_response.asp'>ASP Reference</a>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Справочник</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Справочник</a>
           <h3>XML</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/dom_nodetype.asp'>XML Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/dom_http.asp'>XML Http Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xsl_elementref.asp'>XSLT Reference</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/schema_elements_ref.asp'>XML Schema Reference</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
         </div>
         <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
-          <h3>Character Sets</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/default.asp'>HTML Character Sets</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_ascii.asp'>HTML ASCII</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_ansi.asp'>HTML ANSI</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_ansi.asp'>HTML Windows-1252</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_8859.asp'>HTML ISO-8859-1</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_symbols.asp'>HTML Symbols</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_utf8.asp'>HTML UTF-8</a>
+          <h3>Наборы символов</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
         </div>
       </div>
       <br>
@@ -798,152 +187,149 @@ function w3_getStyleValue(elmnt,style) {
       <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l4 m6'>
-          <h3>Exercises</h3>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/html/html_exercises.asp">HTML Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/css/css_exercises.asp">CSS Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/js/js_exercises.asp">JavaScript Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/sql/sql_exercises.asp">SQL Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/php/php_exercises.asp">PHP Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/python/python_exercises.asp">Python Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/jquery/jquery_exercises.asp">jQuery Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/bootstrap/bootstrap_exercises.asp">Bootstrap Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/java/java_exercises.asp">Java Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cpp/cpp_exercises.asp">C++ Exercises</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cs/cs_exercises.asp">C# Exercises</a>
+          <h3>Упражнения</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../cs/cpp_exercises.html">C# Упражнения</a>
         </div>
         <div class='w3-col l4 m6'>
-          <h3>Quizzes</h3>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/html/html_quiz.asp' target='_top'>HTML Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/css/css_quiz.asp' target='_top'>CSS Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/js_quiz.asp' target='_top'>JavaScript Quiz</a>
-          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/sql/sql_quiz.asp" target="_top">SQL Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/php/php_quiz.asp' target='_top'>PHP Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/python_quiz.asp' target='_top'>Python Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/jquery_quiz.asp' target='_top'>jQuery Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_quiz.asp' target='_top'>Bootstrap Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/java/java_quiz.asp' target='_top'>Java Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cpp/cpp_quiz.asp' target='_top'>C++ Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cs/cs_quiz.asp' target='_top'>C# Quiz</a>
-          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xml_quiz.asp' target='_top'>XML Quiz</a>
+          <h3>Викторины</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Викторина</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+	  <a class="w3-bar-item w3-button" href='../java/java_quiz.html' target='_top'>Java Викторина</a>
+	  <a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.html' target='_top'>C++ Викторина</a>
+          <a class="w3-bar-item w3-button" href='../cs/cs_quiz.html' target='_top'>C# Викторина</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
         </div>
         <div class='w3-col l4 m12'>
-         <h3>Certificates</h3>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_css.asp" target="_top">CSS Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_sql.asp" target="_top">SQL Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_php.asp" target="_top">PHP Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_python.asp" target="_top">Python Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_jquery.asp" target="_top">jQuery Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_bootstrap.asp" target="_top">Bootstrap Certificate</a>
-         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_xml.asp" target="_top">XML Certificate</a>
+         <h3>Сертификаты</h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Сертификат</a>
         </div>
       </div>
       <br>
     </div>
   </div>
 </div>
+<!--/Top menu-->
 
+<!--Left menu sidebar -->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
   <div id='leftmenuinner'>
     <div class='w3-light-grey' id='leftmenuinnerinner'>
 <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
-<h2 class="left">W3.CSS</h2>
-<a target="_top" href="default.html">W3.CSS HOME</a>
-<a target="_top" href="w3css_intro.html">W3.CSS Intro</a>
-<a target="_top" href="w3css_colors.html">W3.CSS Colors</a>
-<a target="_top" href="w3css_containers.html">W3.CSS Containers</a>
-<a target="_top" href="w3css_panels.html">W3.CSS Panels</a>
-<a target="_top" href="w3css_borders.html">W3.CSS Borders</a>
-<a target="_top" href="w3css_cards.html">W3.CSS Cards</a>
-<a target="_top" href="w3css_fonts.html">W3.CSS Fonts</a>
-<a target="_top" href="w3css_text.html">W3.CSS Text</a>
-<a target="_top" href="w3css_round.html">W3.CSS Round</a>
-<a target="_top" href="w3css_padding.html">W3.CSS Padding</a>
-<a target="_top" href="w3css_margins.html">W3.CSS Margins</a>
-<a target="_top" href="w3css_display.html">W3.CSS Display</a>
-<a target="_top" href="w3css_buttons.html">W3.CSS Buttons</a>
-<a target="_top" href="w3css_notes.html">W3.CSS Notes</a>
-<a target="_top" href="w3css_quotes.html">W3.CSS Quotes</a>
-<a target="_top" href="w3css_alerts.html">W3.CSS Alerts</a>
-<a target="_top" href="w3css_tables.html">W3.CSS Tables</a>
-<a target="_top" href="w3css_lists.html">W3.CSS Lists</a>
-<a target="_top" href="w3css_images.html">W3.CSS Images</a>
-<a target="_top" href="w3css_input.html">W3.CSS Inputs</a>
-<a target="_top" href="w3css_badges.html">W3.CSS Badges</a>
-<a target="_top" href="w3css_tags.html">W3.CSS Tags</a>
-<a target="_top" href="w3css_icons.html">W3.CSS Icons</a>
-<a target="_top" href="w3css_responsive.html">W3.CSS Responsive</a>
-<a target="_top" href="w3css_layout.html">W3.CSS Layout</a>
-<a target="_top" href="w3css_animate.html">W3.CSS Animations</a>
-<a target="_top" href="w3css_effects.html">W3.CSS Effects</a>
-<a target="_top" href="w3css_bars.html">W3.CSS Bars</a>
-<a target="_top" href="w3css_dropdowns.html">W3.CSS Dropdowns</a>
-<a target="_top" href="w3css_accordions.html">W3.CSS Accordions</a>
-<a target="_top" href="w3css_navigation.html">W3.CSS Navigation</a>
-<a target="_top" href="w3css_sidebar.html">W3.CSS Sidebar</a>
-<a target="_top" href="w3css_tabulators.html">W3.CSS Tabs</a>
-<a target="_top" href="w3css_pagination.html">W3.CSS Pagination</a>
-<a target="_top" href="w3css_progressbar.html">W3.CSS Progress Bars</a>
-<a target="_top" href="w3css_slideshow.html">W3.CSS Slideshow</a>
-<a target="_top" href="w3css_modal.html">W3.CSS Modal</a>
-<a target="_top" href="w3css_tooltips.html">W3.CSS Tooltips</a>
-<a target="_top" href="w3css_grid.html">W3.CSS Grid</a>
-<a target="_top" href="w3css_code.html">W3.CSS Code</a>
-<a target="_top" href="w3css_filters.html">W3.CSS Filters</a>
-<a target="_top" href="w3css_trends.html">W3.CSS Trends</a>
-<a target="_top" href="w3css_case.html">W3.CSS Case</a>
-<a target="_top" href="w3css_material.html">W3.CSS Material</a>
-<a target="_top" href="w3css_validation.html">W3.CSS Validation</a>
-<a target="_top" href="w3css_versions.html">W3.CSS Versions</a>
-<a target="_top" href="w3css_mobile.html">W3.CSS Mobile</a>
+<h2 class="left">W3.CSS Учебник</h2>
+<a target="_top" href="default.html">W3.CSS Учебник</a>
+<a target="_top" href="w3css_intro.html">W3.CSS Введение</a>
+<a target="_top" href="w3css_colors.html">W3.CSS Цвета</a>
+<a target="_top" href="w3css_containers.html">W3.CSS Контейнеры</a>
+<a target="_top" href="w3css_panels.html">W3.CSS Панели</a>
+<a target="_top" href="w3css_borders.html">W3.CSS Границы</a>
+<a target="_top" href="w3css_cards.html">W3.CSS Открытки</a>
+<a target="_top" href="w3css_fonts.html">W3.CSS Шрифты</a>
+<a target="_top" href="w3css_text.html">W3.CSS Текст</a>
+<a target="_top" href="w3css_round.html">W3.CSS Округлости</a>
+<a target="_top" href="w3css_padding.html">W3.CSS Внутренние отступы</a>
+<a target="_top" href="w3css_margins.html">W3.CSS Внешние отступы</a>
+<a target="_top" href="w3css_display.html">W3.CSS Отображение</a>
+<a target="_top" href="w3css_buttons.html">W3.CSS Кнопки</a>
+<a target="_top" href="w3css_notes.html">W3.CSS Примечания</a>
+<a target="_top" href="w3css_quotes.html">W3.CSS Цитаты</a>
+<a target="_top" href="w3css_alerts.html">W3.CSS Оповещения</a>
+<a target="_top" href="w3css_tables.html">W3.CSS Таблицы</a>
+<a target="_top" href="w3css_lists.html">W3.CSS Списки</a>
+<a target="_top" href="w3css_images.html">W3.CSS Изображения</a>
+<a target="_top" href="w3css_input.html">W3.CSS Вводы</a>
+<a target="_top" href="w3css_badges.html">W3.CSS Значки</a>
+<a target="_top" href="w3css_tags.html">W3.CSS Ярлыки</a>
+<a target="_top" href="w3css_icons.html">W3.CSS Иконки</a>
+<a target="_top" href="w3css_responsive.html">W3.CSS Адаптив</a>
+<a target="_top" href="w3css_layout.html">W3.CSS Макеты</a>
+<a target="_top" href="w3css_animate.html">W3.CSS Анимация</a>
+<a target="_top" href="w3css_effects.html">W3.CSS Эффекты</a>
+<a target="_top" href="w3css_bars.html">W3.CSS Панели</a>
+<a target="_top" href="w3css_dropdowns.html">W3.CSS Выпадающие</a>
+<a target="_top" href="w3css_accordions.html">W3.CSS Аккордионы</a>
+<a target="_top" href="w3css_navigation.html">W3.CSS Навигация</a>
+<a target="_top" href="w3css_sidebar.html">W3.CSS Сайдбар</a>
+<a target="_top" href="w3css_tabulators.html">W3.CSS Вкладки</a>
+<a target="_top" href="w3css_pagination.html">W3.CSS Пагинация</a>
+<a target="_top" href="w3css_progressbar.html">W3.CSS Прогресс-бары</a>
+<a target="_top" href="w3css_slideshow.html">W3.CSS Слайдшоу</a>
+<a target="_top" href="w3css_modal.html">W3.CSS Модальные окна</a>
+<a target="_top" href="w3css_tooltips.html">W3.CSS Всплывающие подсказки</a>
+<a target="_top" href="w3css_grid.html">W3.CSS Сетка</a>
+<a target="_top" href="w3css_code.html">W3.CSS Код</a>
+<a target="_top" href="w3css_filters.html">W3.CSS Фильтры</a>
+<a target="_top" href="w3css_trends.html">W3.CSS Тренды</a>
+<a target="_top" href="w3css_case.html">W3.CSS Кейс</a>
+<a target="_top" href="w3css_material.html">W3.CSS Material-дизайн</a>
+<a target="_top" href="w3css_validation.html">W3.CSS Валидация</a>
+<a target="_top" href="w3css_versions.html">W3.CSS Версии</a>
+<a target="_top" href="w3css_mobile.html">W3.CSS Мобильность</a>
 <br>
-<h2 class="left">W3.CSS Colors</h2>
-<a target="_top" href="w3css_color_classes.html">W3.CSS Color Classes</a>
-<a target="_top" href="w3css_color_material.html">W3.CSS Color Material</a>
-<a target="_top" href="w3css_color_flat.html">W3.CSS Color Flat UI</a>
-<a target="_top" href="w3css_color_metro.html">W3.CSS Color Metro UI</a>
-<a target="_top" href="w3css_color_win8.html">W3.CSS Color Win8</a>
-<a target="_top" href="w3css_color_ios.html">W3.CSS Color iOS</a>
-<a target="_top" href="w3css_color_libraries.html">W3.CSS Color Libraries</a>
-<a target="_top" href="w3css_color_schemes.html">W3.CSS Color Schemes</a>
-<a target="_top" href="w3css_color_themes.html">W3.CSS Color Themes</a>
-<a target="_top" href="w3css_color_generator.html">W3.CSS Color Generator</a>
+<h2 class="left">W3.CSS Цвета</h2>
+<a target="_top" href="w3css_color_classes.html">W3.CSS Классы цветов</a>
+<a target="_top" href="w3css_color_material.html">W3.CSS Цвет Material</a>
+<a target="_top" href="w3css_color_flat.html">W3.CSS Цвет Flat UI</a>
+<a target="_top" href="w3css_color_metro.html">W3.CSS Цвет Metro UI</a>
+<a target="_top" href="w3css_color_win8.html">W3.CSS Цвет Win8</a>
+<a target="_top" href="w3css_color_ios.html">W3.CSS Цвет iOS</a>
+<a target="_top" href="w3css_color_libraries.html">W3.CSS Библиотеки цветов</a>
+<a target="_top" href="w3css_color_schemes.html">W3.CSS Цветовые схемы</a>
+<a target="_top" href="w3css_color_themes.html">W3.CSS Цветовые темы</a>
+<a target="_top" href="w3css_color_generator.html">W3.CSS Генератор цветов</a>
 <br>
-<h2 class="left">Examples</h2>
-<a target="_top" href="w3css_examples.html">W3.CSS Examples</a>
-<a target="_top" href="w3css_demo.html">W3.CSS Demos</a>
-<a target="_top" href="w3css_templates.html">W3.CSS Templates</a>
+<h2 class="left">Примеры</h2>
+<a target="_top" href="w3css_examples.html">W3.CSS Примеры</a>
+<a target="_top" href="w3css_demo.html">W3.CSS Демо</a>
+<a target="_top" href="w3css_templates.html">W3.CSS Шаблоны</a>
 <br>
-<h2 class="left">References</h2>
-<a target="_top" href="w3css_references.html">W3.CSS Reference</a>
-<a target="_top" href="w3css_downloads.html">W3.CSS Downloads</a>
-
-
+<h2 class="left">Справочники</h2>
+<a target="_top" href="w3css_references.html">W3.CSS Справочник</a>
+<a target="_top" href="w3css_downloads.html">W3.CSS Загрузки</a>
       <br><br>
     </div>
   </div>
 </div>
+<!--/Left menu sidebar -->
+
+<!--CONTENT-->
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
   <div class='w3-row w3-white'>
     <div class='w3-col l10 m12' id='main'>
-      <div id='mainLeaderboard' style='overflow:hidden;'>
-        <!-- MainLeaderboard-->
+<a href="index.html"><img src="../images/w3css_logo.png" alt="W3.CSS Уроки для начинающих" class="w3-left w3-padding" title="W3.CSS для начинающих" width="120"></a>
 
-        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="snhb-main_leaderboard-0"></div>
-        <!-- adspace leaderboard -->
-       
-      </div>
-<h1>W3.CSS <span class="color_h1">Templates</span></h1>
+<h1>W3.CSS <span class="color_h1">Шаблоны</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="w3css_demo.html">&#10094; Previous</a>
+<a class="w3-left w3-btn" href="w3css_demo.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="w3css_references.html">Next &#10095;</a>
 </div>
 <hr>
 <div id="w3Modal01" class="w3-modal" style="width:100%">
   <div class="w3-modal-content w3-card-4" style="width:90%">
-    <header class="w3-container w3-display-container w3-theme"> 
+    <header class="w3-container w3-display-container w3-theme">
       <span onclick="document.getElementById('w3Modal01').style.display='none'" class="w3-button w3-xlarge w3-display-topright">&times;</span>
       <h3 id="w3ModalHeading01">Header</h3>
     </header>
@@ -969,610 +355,602 @@ function displayHTML(fname) {
 }
 </script>
 
-<h2>W3.CSS Website Templates</h2>
+<h2>W3.CSS Шаблоны сайтов</h2>
 
-<p>We have created some responsive W3.CSS website templates for you to use.</p>
-<p>You are free to modify, save, share, and use them in all your projects.</p>
+<p>Мы создали несколько адаптивных шаблонов веб-сайтов W3.CSS, которые вы можете использовать.</p>
+<p>Вы можете изменять, сохранять, делиться и использовать их во всех своих проектах.</p>
 <hr>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Band Template</h3>
+<h3 class="w3-center">Band шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_band.html" target="_blank" title="Band Demo"><img src="img_temp_band.jpg" style="width:98%;margin:20px 0" alt="Band Template"></a><br>
+<a href="tryw3css_templates_band.html" target="_blank" title="Band Демо"><img src="img_temp_band.jpg" style="width:98%;margin:20px 0" alt="Band шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_band.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_band.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitb525.html?filename=tryw3css_templates_band&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitb525.html?filename=tryw3css_templates_band&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Gourmet Catering Template</h3>
+<h3 class="w3-center">Gourmet Catering шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_gourmet_catering.html" target="_blank" title="Gourmet Catering Demo"><img src="img_temp_gourmet_catering.jpg" style="width:98%;margin:20px 0" alt="Gourmet Catering Template"></a><br>
+<a href="tryw3css_templates_gourmet_catering.html" target="_blank" title="Gourmet Catering Демо"><img src="img_temp_gourmet_catering.jpg" style="width:98%;margin:20px 0" alt="Gourmet Catering шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_gourmet_catering.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_gourmet_catering.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit462d.html?filename=tryw3css_templates_gourmet_catering&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit462d.html?filename=tryw3css_templates_gourmet_catering&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Architect Template</h3>
+<h3 class="w3-center">Architect шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_architect.html" target="_blank"  title="Architect Demo"><img src="img_temp_architect.jpg" style="width:98%;margin:20px 0" alt="Architect Template"></a><br>
+<a href="tryw3css_templates_architect.html" target="_blank"  title="Architect Демо"><img src="img_temp_architect.jpg" style="width:98%;margin:20px 0" alt="Architect шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_architect.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_architect.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitac8f.html?filename=tryw3css_templates_architect&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitac8f.html?filename=tryw3css_templates_architect&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Parallax Template</h3>
+<h3 class="w3-center">Parallax шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_parallax.html" target="_blank" title="Parallax Demo"><img src="img_temp_parallax.jpg" style="width:98%;margin:20px 0" alt="Parallax Template"></a><br>
+<a href="tryw3css_templates_parallax.html" target="_blank" title="Parallax Демо"><img src="img_temp_parallax.jpg" style="width:98%;margin:20px 0" alt="Parallax шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_parallax.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_parallax.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit7746.html?filename=tryw3css_templates_parallax&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit7746.html?filename=tryw3css_templates_parallax&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Blog Template</h3>
+<h3 class="w3-center">Blog шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_blog.html" target="_blank" title="Blog Demo"><img src="img_temp_blog.jpg" style="width:98%;margin:20px 0" alt="Blog Template"></a><br>
+<a href="tryw3css_templates_blog.html" target="_blank" title="Blog Демо"><img src="img_temp_blog.jpg" style="width:98%;margin:20px 0" alt="Blog шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_blog.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_blog.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit5260.html?filename=tryw3css_templates_blog&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit5260.html?filename=tryw3css_templates_blog&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Food Blog Template</h3>
+<h3 class="w3-center">Food Blog шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_food_blog.html" target="_blank" title="Food Blog Demo"><img src="img_temp_food_blog.jpg" style="width:98%;margin:20px 0" alt="Food Blog Template"></a><br>
+<a href="tryw3css_templates_food_blog.html" target="_blank" title="Food Blog Демо"><img src="img_temp_food_blog.jpg" style="width:98%;margin:20px 0" alt="Food Blog шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_food_blog.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_food_blog.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit2c24.html?filename=tryw3css_templates_food_blog&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit2c24.html?filename=tryw3css_templates_food_blog&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
-</div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-    
 </div>
 <hr>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Fashion Blog Template</h3>
+<h3 class="w3-center">Fashion Blog шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_fashion_blog.html" target="_blank" title="Fashion Blog Demo"><img src="img_temp_fashion_blog.jpg" style="width:98%;margin:20px 0" alt="Fashion Blog Template"></a><br>
+<a href="tryw3css_templates_fashion_blog.html" target="_blank" title="Fashion Blog Демо"><img src="img_temp_fashion_blog.jpg" style="width:98%;margin:20px 0" alt="Fashion Blog шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_fashion_blog.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_fashion_blog.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit9e69.html?filename=tryw3css_templates_fashion_blog&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit9e69.html?filename=tryw3css_templates_fashion_blog&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Cafe Template</h3>
+<h3 class="w3-center">Cafe шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_cafe.html" target="_blank"  title="Cafe Demo"><img src="img_temp_cafe.jpg" style="width:98%;margin:20px 0" alt="Cafe Template"></a><br>
+<a href="tryw3css_templates_cafe.html" target="_blank"  title="Cafe Демо"><img src="img_temp_cafe.jpg" style="width:98%;margin:20px 0" alt="Cafe шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_cafe.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_cafe.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit5868.html?filename=tryw3css_templates_cafe" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit5868.html?filename=tryw3css_templates_cafe" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Clothing Store Template</h3>
+<h3 class="w3-center">Clothing Store шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_clothing_store.html" target="_blank" title="Clothing/Fashion Store Demo"><img src="img_temp_clothing_store.jpg" style="width:98%;margin:20px 0" alt="Clothing/Fashion Store Template"></a><br>
+<a href="tryw3css_templates_clothing_store.html" target="_blank" title="Clothing/Fashion Store Демо"><img src="img_temp_clothing_store.jpg" style="width:98%;margin:20px 0" alt="Clothing/Fashion Store шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_clothing_store.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_clothing_store.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit9638.html?filename=tryw3css_templates_clothing_store&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit9638.html?filename=tryw3css_templates_clothing_store&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">CV Template</h3>
+<h3 class="w3-center">CV шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_cv.html" target="_blank"  title="CV Demo"><img src="img_temp_cv.jpg" style="width:98%;margin:20px 0" alt="CV Template"></a><br>
+<a href="tryw3css_templates_cv.html" target="_blank"  title="CV Демо"><img src="img_temp_cv.jpg" style="width:98%;margin:20px 0" alt="CV шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_cv.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_cv.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitfa0f.html?filename=tryw3css_templates_cv&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitfa0f.html?filename=tryw3css_templates_cv&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Coming Soon Template</h3>
+<h3 class="w3-center">Coming Soon шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_coming_soon.html" target="_blank" title="Blog Demo"><img src="img_temp_comingsoon.jpg" style="width:98%;margin:20px 0" alt="Coming Soon Template"></a><br>
+<a href="tryw3css_templates_coming_soon.html" target="_blank" title="Blog Демо"><img src="img_temp_comingsoon.jpg" style="width:98%;margin:20px 0" alt="Coming Soon шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_coming_soon.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_coming_soon.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit9ad1.html?filename=tryw3css_templates_coming_soon&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit9ad1.html?filename=tryw3css_templates_coming_soon&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Wedding Invitation Template</h3>
+<h3 class="w3-center">Wedding Invitation шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_wedding.html" target="_blank" title="Wedding Invitation Demo"><img src="img_temp_wedding.jpg" style="width:98%;margin:20px 0" alt="Wedding Invitation Template"></a><br>
+<a href="tryw3css_templates_wedding.html" target="_blank" title="Wedding Invitation Демо"><img src="img_temp_wedding.jpg" style="width:98%;margin:20px 0" alt="Wedding Invitation шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_wedding.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_wedding.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit5e71.html?filename=tryw3css_templates_wedding&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit5e71.html?filename=tryw3css_templates_wedding&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Photo Template</h3>
+<h3 class="w3-center">Photo шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_photo.html" target="_blank" title="Photo II Demo"><img src="img_temp_photo.jpg" style="width:98%;margin:20px 0" alt="Photo Template"></a><br>
+<a href="tryw3css_templates_photo.html" target="_blank" title="Photo II Демо"><img src="img_temp_photo.jpg" style="width:98%;margin:20px 0" alt="Photo шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_photo.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_photo.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryite837.html?filename=tryw3css_templates_photo&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryite837.html?filename=tryw3css_templates_photo&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Black &amp; White Photo Template</h3>
+<h3 class="w3-center">Black &amp; White Photo шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_photo2.html" target="_blank" title="Photo III Demo"><img src="img_temp_photo2.jpg" style="width:98%;margin:20px 0" alt="Photo Template"></a><br>
+<a href="tryw3css_templates_photo2.html" target="_blank" title="Photo III Демо"><img src="img_temp_photo2.jpg" style="width:98%;margin:20px 0" alt="Photo шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_photo2.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_photo2.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitc354.html?filename=tryw3css_templates_photo2&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitc354.html?filename=tryw3css_templates_photo2&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Photo Portfolio Template</h3>
+<h3 class="w3-center">Photo Portfolio шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_photo3.html" target="_blank" title="Photo Template"><img src="img_temp_photo3.jpg" style="width:98%;margin:20px 0" alt="Photo Template"></a><br>
+<a href="tryw3css_templates_photo3.html" target="_blank" title="Photo шаблон"><img src="img_temp_photo3.jpg" style="width:98%;margin:20px 0" alt="Photo шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_photo3.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_photo3.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit42e9.html?filename=tryw3css_templates_photo3&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit42e9.html?filename=tryw3css_templates_photo3&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Nature Portfolio Template</h3>
+<h3 class="w3-center">Nature Portfolio шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_portfolio.html" target="_blank" title="Nature Portfolio Demo"><img src="img_temp_portfolio.jpg" style="width:98%;margin:20px 0" alt="Nature Portfolio Template"></a><br>
+<a href="tryw3css_templates_portfolio.html" target="_blank" title="Nature Portfolio Демо"><img src="img_temp_portfolio.jpg" style="width:98%;margin:20px 0" alt="Nature Portfolio шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_portfolio.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_portfolio.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitcbfd.html?filename=tryw3css_templates_portfolio&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitcbfd.html?filename=tryw3css_templates_portfolio&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">People Portfolio Template</h3>
+<h3 class="w3-center">People Portfolio шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_portfolio2.html" target="_blank" title="People Portfolio Demo"><img src="img_temp_portfolio2.jpg" style="width:98%;margin:20px 0" alt="People Portfolio Template"></a><br>
+<a href="tryw3css_templates_portfolio2.html" target="_blank" title="People Portfolio Демо"><img src="img_temp_portfolio2.jpg" style="width:98%;margin:20px 0" alt="People Portfolio шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_portfolio2.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_portfolio2.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitecbe.html?filename=tryw3css_templates_portfolio2&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitecbe.html?filename=tryw3css_templates_portfolio2&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">People Portfolio II Template</h3>
+<h3 class="w3-center">People Portfolio II шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_portfolio3.html" target="_blank" title="People Portfolio II Demo"><img src="img_temp_portfolio3.jpg" style="width:98%;margin:20px 0" alt="People Portfolio II Template"></a><br>
+<a href="tryw3css_templates_portfolio3.html" target="_blank" title="People Portfolio II Демо"><img src="img_temp_portfolio3.jpg" style="width:98%;margin:20px 0" alt="People Portfolio II шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_portfolio3.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_portfolio3.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitf374.html?filename=tryw3css_templates_portfolio3&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitf374.html?filename=tryw3css_templates_portfolio3&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Dark Portfolio Template</h3>
+<h3 class="w3-center">Dark Portfolio шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_dark_portfolio.html" target="_blank" title="Dark Icon Bar Portfolio Demo"><img src="img_temp_dark_icon.jpg" style="width:98%;margin:20px 0" alt="Dark Icon Bar Template"></a><br>
+<a href="tryw3css_templates_dark_portfolio.html" target="_blank" title="Dark Icon Bar Portfolio Демо"><img src="img_temp_dark_icon.jpg" style="width:98%;margin:20px 0" alt="Dark Icon Bar шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_dark_portfolio.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_dark_portfolio.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit3877.html?filename=tryw3css_templates_dark_portfolio&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit3877.html?filename=tryw3css_templates_dark_portfolio&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Black &amp; White Portfolio Template</h3>
+<h3 class="w3-center">Black &amp; White Portfolio шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_bw_portfolio.html" target="_blank" title="Black and White Portfolio Demo"><img src="img_temp_bw_port.jpg" style="width:98%;margin:20px 0" alt="Black and White Portfolio Template"></a><br>
+<a href="tryw3css_templates_bw_portfolio.html" target="_blank" title="Black and White Portfolio Демо"><img src="img_temp_bw_port.jpg" style="width:98%;margin:20px 0" alt="Black and White Portfolio шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_bw_portfolio.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_bw_portfolio.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit29de.html?filename=tryw3css_templates_bw_portfolio&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit29de.html?filename=tryw3css_templates_bw_portfolio&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Interior Design Template</h3>
+<h3 class="w3-center">Interior Design шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_interior_design.html" target="_blank" title="Interior Design Demo"><img src="img_temp_interior_design.jpg" style="width:98%;margin:20px 0" alt="Interior Design Template"></a><br>
+<a href="tryw3css_templates_interior_design.html" target="_blank" title="Interior Design Демо"><img src="img_temp_interior_design.jpg" style="width:98%;margin:20px 0" alt="Interior Design шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_interior_design.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_interior_design.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit9df4.html?filename=tryw3css_templates_interior_design&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit9df4.html?filename=tryw3css_templates_interior_design&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Modal Restaurant Template</h3>
+<h3 class="w3-center">Modal Restaurant шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_restaurant_modal.html" target="_blank"  title="Modal Restaurant Demo"><img src="img_temp_modal_restaurant.jpg" style="width:98%;margin:20px 0" alt="Modal Restaurant Template"></a><br>
+<a href="tryw3css_templates_restaurant_modal.html" target="_blank"  title="Modal Restaurant Демо"><img src="img_temp_modal_restaurant.jpg" style="width:98%;margin:20px 0" alt="Modal Restaurant шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_restaurant_modal.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_restaurant_modal.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryite3e4.html?filename=tryw3css_templates_restaurant_modal" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryite3e4.html?filename=tryw3css_templates_restaurant_modal" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Pizza Restaurant Template</h3>
+<h3 class="w3-center">Pizza Restaurant шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_pizza.html" target="_blank"  title="Pizza Restaurant Demo"><img src="img_temp_pizza.jpg" style="width:98%;margin:20px 0" alt="Pizza Restaurant Template"></a><br>
+<a href="tryw3css_templates_pizza.html" target="_blank"  title="Pizza Restaurant Демо"><img src="img_temp_pizza.jpg" style="width:98%;margin:20px 0" alt="Pizza Restaurant шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_pizza.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_pizza.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitcf90.html?filename=tryw3css_templates_pizza" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitcf90.html?filename=tryw3css_templates_pizza" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Start Page Template</h3>
+<h3 class="w3-center">Start Page шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_start_page.html" target="_blank"  title="Start Page Demo"><img src="img_temp_startpage.jpg" style="width:98%;margin:20px 0" alt="Start Page Template"></a><br>
+<a href="tryw3css_templates_start_page.html" target="_blank"  title="Start Page Демо"><img src="img_temp_startpage.jpg" style="width:98%;margin:20px 0" alt="Start Page шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_start_page.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_start_page.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit3340.html?filename=tryw3css_templates_start_page&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit3340.html?filename=tryw3css_templates_start_page&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Startup Template</h3>
+<h3 class="w3-center">Startup шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_startup.html" target="_blank" title="Startup Demo"><img src="img_temp_startup.jpg" style="width:98%;margin:20px 0" alt="Startup Template"></a><br>
+<a href="tryw3css_templates_startup.html" target="_blank" title="Startup Демо"><img src="img_temp_startup.jpg" style="width:98%;margin:20px 0" alt="Startup шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_startup.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_startup.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitdeb1.html?filename=tryw3css_templates_startup" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitdeb1.html?filename=tryw3css_templates_startup" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">App Launch Template</h3>
+<h3 class="w3-center">App Launch шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_app_launch.html" target="_blank" title="App Launch Demo"><img src="img_temp_app_launch.jpg" style="width:98%;margin:20px 0" alt="App Launch Template"></a><br>
+<a href="tryw3css_templates_app_launch.html" target="_blank" title="App Launch Демо"><img src="img_temp_app_launch.jpg" style="width:98%;margin:20px 0" alt="App Launch шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_app_launch.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_app_launch.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitf796.html?filename=tryw3css_templates_app_launch&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitf796.html?filename=tryw3css_templates_app_launch&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Marketing Template</h3>
+<h3 class="w3-center">Marketing шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_marketing.html" target="_blank" title="Marketing Demo"><img src="img_temp_marketing.jpg" style="width:98%;margin:20px 0" alt="Marketing Template"></a><br>
+<a href="tryw3css_templates_marketing.html" target="_blank" title="Marketing Демо"><img src="img_temp_marketing.jpg" style="width:98%;margin:20px 0" alt="Marketing шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_marketing.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_marketing.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitcd39.html?filename=tryw3css_templates_marketing&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitcd39.html?filename=tryw3css_templates_marketing&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Marketing / Website Template</h3>
+<h3 class="w3-center">Marketing / Website шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_website.html" target="_blank" title="Marketing/Website Demo"><img src="img_temp_website.jpg" style="width:98%;margin:20px 0" alt="Website Template"></a><br>
+<a href="tryw3css_templates_website.html" target="_blank" title="Marketing/Website Демо"><img src="img_temp_website.jpg" style="width:98%;margin:20px 0" alt="Website шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_website.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_website.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit194f.html?filename=tryw3css_templates_website&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit194f.html?filename=tryw3css_templates_website&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Art Template</h3>
+<h3 class="w3-center">Art шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_streetart.html" target="_blank"  title="Street Art Demo"><img src="img_temp_art.jpg" style="width:98%;margin:20px 0" alt="Streert Art Template"></a><br>
+<a href="tryw3css_templates_streetart.html" target="_blank"  title="Street Art Демо"><img src="img_temp_art.jpg" style="width:98%;margin:20px 0" alt="Streert Art шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_streetart.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_streetart.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit4200.html?filename=tryw3css_templates_streetart&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit4200.html?filename=tryw3css_templates_streetart&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Web Page Template</h3>
+<h3 class="w3-center">Web Page шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_webpage.html" target="_blank" title="Web Page Demo"><img src="img_temp_webpage.jpg" style="width:98%;margin:20px 0" alt="Web Page Template"></a><br>
+<a href="tryw3css_templates_webpage.html" target="_blank" title="Web Page Демо"><img src="img_temp_webpage.jpg" style="width:98%;margin:20px 0" alt="Web Page шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_webpage.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_webpage.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit650e.html?filename=tryw3css_templates_webpage&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit650e.html?filename=tryw3css_templates_webpage&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Social Media Template</h3>
+<h3 class="w3-center">Social Media шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_social.html" target="_blank" title="Social Media Demo"><img src="img_temp_social.jpg" style="width:98%;margin:20px 0" alt="Social Media Template"></a><br>
+<a href="tryw3css_templates_social.html" target="_blank" title="Social Media Демо"><img src="img_temp_social.jpg" style="width:98%;margin:20px 0" alt="Social Media шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_social.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_social.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitb992.html?filename=tryw3css_templates_social&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitb992.html?filename=tryw3css_templates_social&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Analytics Template</h3>
+<h3 class="w3-center">Analytics шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_analytics.html" target="_blank" title="Analytics Demo"><img src="img_temp_analytics.jpg" style="width:98%;margin:20px 0" alt="Analytics Template"></a><br>
+<a href="tryw3css_templates_analytics.html" target="_blank" title="Analytics Демо"><img src="img_temp_analytics.jpg" style="width:98%;margin:20px 0" alt="Analytics шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_analytics.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_analytics.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit96f4.html?filename=tryw3css_templates_analytics&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit96f4.html?filename=tryw3css_templates_analytics&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Apartment Rental Template</h3>
+<h3 class="w3-center">Apartment Rental шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_apartment_rental.html" target="_blank"  title="Apartment Rental Demo"><img src="img_temp_apartment_rental.jpg" style="width:98%;margin:20px 0" alt="Apartment Rental Template"></a><br>
+<a href="tryw3css_templates_apartment_rental.html" target="_blank"  title="Apartment Rental Демо"><img src="img_temp_apartment_rental.jpg" style="width:98%;margin:20px 0" alt="Apartment Rental шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_apartment_rental.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_apartment_rental.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit087b.html?filename=tryw3css_templates_apartment_rental&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit087b.html?filename=tryw3css_templates_apartment_rental&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Hotel Template</h3>
+<h3 class="w3-center">Hotel шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_hotel.html" target="_blank"  title="Hotel Demo"><img src="img_temp_hotel.jpg" style="width:98%;margin:20px 0" alt="Hotel Template"></a><br>
+<a href="tryw3css_templates_hotel.html" target="_blank"  title="Hotel Демо"><img src="img_temp_hotel.jpg" style="width:98%;margin:20px 0" alt="Hotel шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_hotel.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_hotel.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitbd28.html?filename=tryw3css_templates_hotel&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitbd28.html?filename=tryw3css_templates_hotel&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Travel Template</h3>
+<h3 class="w3-center">Travel шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_travel2.html" target="_blank"  title="Travel Demo"><img src="img_temp_travel2.jpg" style="width:98%;margin:20px 0" alt="Travel Template"></a><br>
+<a href="tryw3css_templates_travel2.html" target="_blank"  title="Travel Демо"><img src="img_temp_travel2.jpg" style="width:98%;margin:20px 0" alt="Travel шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_travel2.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_travel2.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryitfe4e.html?filename=tryw3css_templates_travel2&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryitfe4e.html?filename=tryw3css_templates_travel2&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Travel Agency Template</h3>
+<h3 class="w3-center">Travel Agency шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_travel.html" target="_blank"  title="Travel Agency Demo"><img src="img_temp_travel.jpg" style="width:98%;margin:20px 0" alt="Travel Agency Template"></a><br>
+<a href="tryw3css_templates_travel.html" target="_blank"  title="Travel Agency Демо"><img src="img_temp_travel.jpg" style="width:98%;margin:20px 0" alt="Travel Agency шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_travel.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_travel.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryita19f.html?filename=tryw3css_templates_travel&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryita19f.html?filename=tryw3css_templates_travel&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">House Design Template</h3>
+<h3 class="w3-center">House Design шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_design.html" target="_blank"  title="Design Demo"><img src="img_temp_design.jpg" style="width:98%;margin:20px 0" alt="House Design Template"></a><br>
+<a href="tryw3css_templates_design.html" target="_blank"  title="Design Демо"><img src="img_temp_design.jpg" style="width:98%;margin:20px 0" alt="House Design шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_design.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_design.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit9f8d.html?filename=tryw3css_templates_design&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit9f8d.html?filename=tryw3css_templates_design&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Screen 50/50 Template</h3>
+<h3 class="w3-center">Screen 50/50 шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_fifty.html" target="_blank"  title="50/50 Demo"><img src="img_temp_fifty.jpg" style="width:98%;margin:20px 0" alt="50/50 Template"></a><br>
+<a href="tryw3css_templates_fifty.html" target="_blank"  title="50/50 Демо"><img src="img_temp_fifty.jpg" style="width:98%;margin:20px 0" alt="50/50 шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_fifty.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_fifty.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit9d58.html?filename=tryw3css_templates_fifty&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit9d58.html?filename=tryw3css_templates_fifty&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Mail Template</h3>
+<h3 class="w3-center">Mail шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_mail.html" target="_blank"  title="Mail Demo"><img src="img_temp_mail.jpg" style="width:98%;margin:20px 0" alt="Start Page Template"></a><br>
+<a href="tryw3css_templates_mail.html" target="_blank"  title="Mail Демо"><img src="img_temp_mail.jpg" style="width:98%;margin:20px 0" alt="Start Page шаблон"></a><br>
 <div class="w3-row">
   <div class="w3-col m6">
-    <a href="tryw3css_templates_mail.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+    <a href="tryw3css_templates_mail.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Демо</a>
   </div>
   <div class="w3-col m6">
-    <a href="tryit913d.html?filename=tryw3css_templates_mail&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Try it Yourself</a>
+    <a href="tryit913d.html?filename=tryw3css_templates_mail&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98.5%">Попробуйте сами</a>
   </div>
 </div>
 </div>
 </div>
 
 <div class="w3-panel w3-light-grey w3-padding-16 w3-card">
-<h3 class="w3-center">Kitchen Sink/W3.CSS Demo Template</h3>
+<h3 class="w3-center">Kitchen Sink/W3.CSS Демо шаблон</h3>
 <div class="w3-content" style="max-width:800px">
-<a href="tryw3css_templates_black.html" target="_blank" title="Kitchen Sink Demo"><img src="img_temp_demosite.jpg" style="width:98%;margin:20px 0" alt="Demo Template"></a></div><br>
+<a href="tryw3css_templates_black.html" target="_blank" title="Kitchen Sink Демо"><img src="img_temp_demosite.jpg" style="width:98%;margin:20px 0" alt="Демо шаблон"></a></div><br>
 <div class="w3-row">
 <div class="w3-col m2">
 <a href="tryw3css_templates_black.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98%">Black</a>
@@ -1584,305 +962,211 @@ function displayHTML(fname) {
 <a href="tryw3css_templates_teal.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:98%">Teal</a>
 </div>
 <div class="w3-col m6">
-<a href="tryit238b.html?filename=tryw3css_templates_black&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:100%">Try it Yourself</a>
+<a href="tryit238b.html?filename=tryw3css_templates_black&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-dark-grey" style="width:100%">Попробуйте сами</a>
 </div>
 </div>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="w3css_demo.html">&#10094; Previous</a>
+<a class="w3-left w3-btn" href="w3css_demo.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="w3css_references.html">Next &#10095;</a>
 </div>
+
+<hr>
+<!--Комментарии от Disqus-->
+<iframe class="predisqus" src="../pages/predisqus.html"></iframe>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = w3schoolsrus.github.io; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io / w3css / w3css_templates.html; // уникальный идентификатор страницы
+};
+(function() { // Не редактировать ниже этой линии
+var d = document, s = d.createElement('script');
+s.src = 'https://w3schoolsrus-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев, предоставленных Disqus.</a></noscript>
+<!--/ Комментарии от Disqus-->
+<hr>
+
 </div>
+
+<!--Right sidebar-->
 <div class="w3-col l2 m12" id="right">
 
-<div class="sidesection">
-  <div id="skyscraper">
-  
-    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
-    <div id="snhb-wide_skyscraper-0"></div>
-    <!-- adspace wide-->
-  
-  </div>
-</div>
-
-<div class="sidesection">
-<h4><a href="https://www.w3schools.com/colors/colors_picker.asp">COLOR PICKER</a></h4>
-<a href="https://www.w3schools.com/colors/colors_picker.asp">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<div class="sidesection w3-light-grey" style="padding-bottom: 5px">
+<h4><a href="../colors/colors_picker.html">ПАЛИТРА ЦВЕТОВ</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="Палитра цветов"></a>
 </div>
 
 <div class="sidesection" id="moreAboutSubject">
 </div>
 
-<!--
-<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
-  <div class="w3-container w3-text-white">
-    <h4>Exercises</h4>
-  </div>
-  <div>
-    <div class="w3-light-grey">
-      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
-      <a target="_blank" href="/css/exercise.asp">CSS</a>
-      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
-      <a target="_blank" href="/sql/exercise.asp">SQL</a>
-      <a target="_blank" href="/php/exercise.asp">PHP</a>
-      <a target="_blank" href="/python/exercise.asp">Python</a>
-      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
-      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
-    </div>
-  </div>
-</div>
--->
-
 <div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
   <div class="w3-container w3-dark-grey">
-    <h4><a href="https://www.w3schools.com/howto/default.asp" class="w3-hover-text-white">HOW TO</a></h4>
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4>
   </div>
   <div class="w3-container w3-left-align w3-padding-16">
-    <a href="https://www.w3schools.com/howto/howto_js_tabs.asp">Tabs</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_dropdown.asp">Dropdowns</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_accordion.asp">Accordions</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">Side Navigation</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Top Navigation</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_modals.asp">Modal Boxes</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_progressbar.asp">Progress Bars</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_parallax.asp">Parallax</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">Login Form</a><br>
-    <a href="https://www.w3schools.com/howto/howto_html_include.asp">HTML Includes</a><br>
-    <a href="https://www.w3schools.com/howto/howto_google_maps.asp">Google Maps</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp">Range Sliders</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_tooltip.asp">Tooltips</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Slideshow</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_filter_lists.asp">Filter List</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_sort_list.asp">Sort List</a><br>
+    <a href="../howto/howto_css_icon_bar.html">Навбар с иконками</a><br>
+    <a href="../howto/howto_css_menu_icon.html">Меню бургер</a><br>
+    <a href="../howto/howto_js_accordion.html">Меню аккордеон</a><br>
+    <a href="../howto/howto_js_tabs.html">Меню вкладки</a><br>
+    <a href="../howto/howto_js_vertical_tabs.html">Вертикальные вкладки</a><br>
+    <a href="../howto/howto_js_tab_header.html">Заголовки вкладок</a><br>
+    <a href="../howto/howto_js_full_page_tabs.html">Вкладки полной страницы</a><br>
+    <a href="../howto/howto_js_hover_tabs.html">Вкладки при наведении</a><br>
+    <a href="../howto/howto_js_topnav.html">Верхний навбар</a><br>
+    <a href="../howto/howto_js_topnav_responsive.html">Адаптивный верхний навбар</a><br>
+    <a href="../howto/howto_css_navbar_icon.html">Навбар с иконками</a><br>
+    <a href="../howto/howto_js_search_menu.html">Меню поиска по сайту</a><br>
+    <a href="../howto/howto_css_searchbar.html">Панель поиска по сайту</a><br>
+    <a href="../howto/howto_css_fixed_sidebar.html">Фиксированный сайдбар</a><br>
+    <a href="../howto/howto_js_sidenav.html">Боковой сайдбар</a><br>
+    <a href="../howto/howto_css_sidebar_responsive.html">Адаптивный сайдбар</a><br>
+    <a href="../howto_js_fullscreen_overlay.html">Полноэкранный навбар</a><br>
+    <a href="../howto/howto_js_off-canvas.html">Меню Off-Canvas</a><br>
+    <a href="../howto/howto_css_sidenav_buttons.html">Кнопки навбара при наведении</a><br>
+    <a href="../howto/howto_css_sidebar_icons.html">Сайдбар с иконками</a><br>
+    <a href="../howto/howto_css_menu_horizontal_scroll.html">Горизонтальное меню с прокруткой</a><br>
+    <a href="../howto/howto_css_vertical_menu.html">Вертикальное меню</a><br>
+    <a href="../howto/howto_css_bottom_nav.html">Нижняя навигация</a><br>
+    <a href="../howto/howto_js_bottom_nav_responsive.html">Адаптивная нижняя навигация</a><br>
+    <a href="../howto/howto_css_navbar_border.html">Нижняя граница навигационных ссылок</a>
   </div>
 </div>
 
-<div class="sidesection">
-<h4>SHARE</h4>
-<div class="w3-text-grey sharethis">
-<script>
-<!--
-try{
-loc=location.pathname;
-if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"default.asp";
-txt='<a href="http://www.facebook.com/sharer.php?u=https://www.w3schools.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';
-txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://www.w3schools.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';
-document.write(txt);
-} catch(e) {}
-//-->
-</script>
-<br><br>
-<a href="javascript:void(0);" onclick="clickFBLike()" title="Like W3Schools on Facebook">
-<span class="fa fa-thumbs-o-up fa-2x"></span></a>
-<div id="fblikeframe" class="w3-modal">
-<div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div>
 </div>
-</div>
-</div>
-
-<div class="sidesection">
-<h4><a target="_blank" href="http://www.w3schools.com/cert/default.asp">CERTIFICATES</a></h4>
-<p>
-<a href="https://www.w3schools.com/cert/cert_html.asp">HTML</a><br>
-<a href="https://www.w3schools.com/cert/cert_css.asp">CSS</a><br>
-<a href="https://www.w3schools.com/cert/cert_javascript.asp">JavaScript</a><br>
-<a href="https://www.w3schools.com/cert/cert_sql.asp">SQL</a><br>
-<a href="https://www.w3schools.com/cert/cert_python.asp">Python</a><br>
-<a href="https://www.w3schools.com/cert/cert_php.asp">PHP</a><br>
-<a href="https://www.w3schools.com/cert/cert_jquery.asp">jQuery</a><br>
-<a href="https://www.w3schools.com/cert/cert_bootstrap.asp">Bootstrap</a><br>
-<a href="https://www.w3schools.com/cert/cert_xml.asp">XML</a></p>
-<a href="http://www.w3schools.com/cert/default.asp" class="w3-button w3-dark-grey" style="text-decoration:none">
-Read More &raquo;</a>
-</div>
-
-<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
-  <div id="stickyadcontainer">
-    <div style="position:relative;margin:auto;">
-      
-      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
-      <div id="snhb-sidebar_sticky-0"></div>
-      <script>
-          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-            // adspace sticky
-            if (document.getElementById("snhb-mid_content-0")) {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
-            }
-            else {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
-            }
-          }
-          else {
-              if (document.getElementById("snhb-mid_content-0")) {
-                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
-              }
-          }
-      </script>  
-      
-    </div>
-  </div>
-</div>
-
-<script>
-  window.addEventListener("scroll", fix_stickyad);
-  window.addEventListener("resize", fix_stickyad);
-</script>
+<!--/Right sidebar-->
 
 </div>
-</div>
+
+<!--FOOTER-->
 <div id="footer" class="footer w3-container w3-white">
-
 <hr>
 
-<div style="overflow:auto">
-  <div class="bottomad">
-    <!-- BottomMediumRectangle -->
-    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-    <!-- adspace bmr -->
-    <!-- RightBottomMediumRectangle -->
-    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-  </div>
-</div>
-
-<hr>
 <div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="https://www.w3schools.com/forum/default.asp" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="https://www.w3schools.com/about/default.asp" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
 </div>
 </div>
 <hr>
 <div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
 <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
-
-<h2>Report Error</h2>
-
-<p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
-<p>help@w3schools.com</p>
-<br>
-
-<!--
-<h2>Your Suggestion:</h2>
+<h2>Ваше предложение:</h2>
 <form>
-<div class="w3-section">      
-<label for="err_email">Your E-mail:</label>
+<div class="w3-section">
+<label for="err_email">Ваш E-mail:</label>
 <input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
 </div>
-<div class="w3-section">      
-<label for="err_email">Page address:</label>
+<div class="w3-section">
+<label for="err_email">Адрес страницы:</label>
 <input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
 </div>
 <div class="w3-section">
-<label for="err_email">Description:</label>
+<label for="err_email">Описание:</label>
 <textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
 </div>
-<div class="form-group">        
-<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+<div class="form-group">
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
 </div>
 <br>
 </form>
--->
-
 </div>
 <div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
-<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>     
-<h2>Thank You For Helping Us!</h2>
-<p>Your message has been sent to W3Schools.</p>
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<h2>Спасибо за Вашу помощь!</h2>
+<p>Ваше сообщение было отправлено в W3Schools.</p>
 </div>
 
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
-<a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a><br>
-<a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a><br>
-<a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorial</a><br>
-<a href="https://www.w3schools.com/howto/default.asp">How To Tutorial</a><br>
-<a href="https://www.w3schools.com/sql/default.asp">SQL Tutorial</a><br>
-<a href="https://www.w3schools.com/python/default.asp">Python Tutorial</a><br>
-<a href="default.html">W3.CSS Tutorial</a><br>
-<a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap Tutorial</a><br>
-<a href="https://www.w3schools.com/php/default.asp">PHP Tutorial</a><br>
-<a href="https://www.w3schools.com/jquery/default.asp">jQuery Tutorial</a><br>
-<a href="https://www.w3schools.com/java/default.asp">Java Tutorial</a><br>
-<a href="https://www.w3schools.com/cpp/default.asp">C++ Tutorial</a><br>
+<h4>Топ Учебники</h4>
+<a href="default.html">HTML Учебник</a><br>
+<a href="../css/default.html">CSS Учебник</a><br>
+<a href="../js/default.html">JavaScript Учебник</a><br>
+<a href="../howto/default.html">Как сделать Учебник</a><br>
+<a href="../sql/default.html">SQL Учебник</a><br>
+<a href="../python/default.html">Python Учебник</a><br>
+<a href="../w3css/default.html">W3.CSS Учебник</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Учебник</a><br>
+<a href="../php/default.html">PHP Учебник</a><br>
+<a href="../jquery/default.html">jQuery Учебник</a><br>
+<a href="../java/default.html">Java Учебник</a><br>
+<a href="../cpp/default.html">C++ Учебник</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
-<a href="https://www.w3schools.com/tags/default.asp">HTML Reference</a><br>
-<a href="https://www.w3schools.com/cssref/default.asp">CSS Reference</a><br>
-<a href="https://www.w3schools.com/jsref/default.asp">JavaScript Reference</a><br>
-<a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">SQL Reference</a><br>
-<a href="https://www.w3schools.com/python/python_reference.asp">Python Reference</a><br>
-<a href="w3css_references.html">W3.CSS Reference</a><br>
-<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap Reference</a><br>
-<a href="https://www.w3schools.com/php/php_ref_overview.asp">PHP Reference</a><br>
-<a href="https://www.w3schools.com/colors/colors_names.asp">HTML Colors</a><br>
-<a href="https://www.w3schools.com/jquery/jquery_ref_overview.asp">jQuery Reference</a><br>
-<a href="https://www.w3schools.com/java/java_ref_keywords.asp">Java Reference</a><br>
-<a href="https://www.w3schools.com/angular/angular_ref_directives.asp">Angular Reference</a><br>
+<h4>Топ Справочники</h4>
+<a href="../tags/default.html">HTML Справочник</a><br>
+<a href="../cssref/default.html">CSS Справочник</a><br>
+<a href="../jsref/default.html">JavaScript Справочник</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Справочник</a><br>
+<a href="../python/python_reference.html">Python Справочник</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Справочник</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Справочник</a><br>
+<a href="../php/php_ref_overview.html">PHP Справочник</a><br>
+<a href="../colors/colors_names.html">HTML Цвета</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Справочник</a><br>
+<a href="../java/java_ref_keywords.html">Java Справочник</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Справочник</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
-<a href="https://www.w3schools.com/html/html_examples.asp">HTML Examples</a><br>
-<a href="https://www.w3schools.com/css/css_examples.asp">CSS Examples</a><br>
-<a href="https://www.w3schools.com/js/js_examples.asp">JavaScript Examples</a><br>
-<a href="https://www.w3schools.com/howto/default.asp">How To Examples</a><br>
-<a href="https://www.w3schools.com/sql/sql_examples.asp">SQL Examples</a><br>
-<a href="https://www.w3schools.com/python/python_examples.asp">Python Examples</a><br>
-<a href="w3css_examples.html">W3.CSS Examples</a><br>
-<a href="https://www.w3schools.com/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a><br>
-<a href="https://www.w3schools.com/php/php_examples.asp">PHP Examples</a><br>
-<a href="https://www.w3schools.com/jquery/jquery_examples.asp">jQuery Examples</a><br>
-<a href="https://www.w3schools.com/java/java_examples.asp">Java Examples</a><br>
-<a href="https://www.w3schools.com/xml/xml_examples.asp">XML Examples</a><br>
+<h4>Топ Примеры</h4>
+<a href="html_examples.html">HTML Примеры</a><br>
+<a href="../css/css_examples.html">CSS Примеры</a><br>
+<a href="../js/js_examples.html">JavaScript Примеры</a><br>
+<a href="../howto/default.html">Как сделать Примеры</a><br>
+<a href="../sql/sql_examples.html">SQL Примеры</a><br>
+<a href="../python/python_examples.html">Python Примеры</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Примеры</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Примеры</a><br>
+<a href="../php/php_examples.html">PHP Примеры</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Примеры</a><br>
+<a href="../java/java_examples.html">Java Примеры</a><br>
+<a href="../xml/xml_examples.html">XML Примеры</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Web Certificates</h4>
-<a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a><br>
-<a href="http://www.w3schools.com/cert/default.asp" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
-Get Certified &raquo;</a>
-
+<h4>Веб Сертификаты</h4>
+<a href="../cert/default.html">HTML Сертификат</a><br>
+<a href="../cert/default.html">CSS Сертификат</a><br>
+<a href="../cert/default.html">JavaScript Сертификат</a><br>
+<a href="../cert/default.html">SQL Сертификат</a><br>
+<a href="../cert/default.html">Python Сертификат</a><br>
+<a href="../cert/default.html">jQuery Сертификат</a><br>
+<a href="../cert/default.html">PHP Сертификат</a><br>
+<a href="../cert/default.html">Bootstrap Сертификат</a><br>
+<a href="../cert/default.html">XML Сертификат</a><br>
+<a class="w3-button w3-margin-top w3-dark-grey" href="../cert/default.html" style="text-decoration:none">Получить Сертификацию &raquo;</a>
 </div>
-</div>        
-</div>        
+</div>
+</div>
 
 <hr>
 <div class="w3-center w3-small w3-opacity">
-W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
-Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
-While using this site, you agree to have read and accepted our <a href="https://www.w3schools.com/about/about_copyright.asp">terms of use</a>,
-<a href="https://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
-<a href="https://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
- <a href="default.html">Powered by W3.CSS</a>.<br><br>
-<a href="http://www.w3schools.com/">
+Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
+<a href="../about/about_copyright.html">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
+<a href="../index.html">
 <img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
 </div>
 <br><br>
@@ -1890,12 +1174,10 @@ While using this site, you agree to have read and accepted our <a href="https://
 
 </div>
 <script src="../lib/w3schools_footer.js"></script>
-<script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
 <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
+<script src="../cdn/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+</div>
 </body>
-
-<!-- Mirrored from www.w3schools.com/w3css/w3css_templates.asp by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2020 10:56:21 GMT -->
 </html>
