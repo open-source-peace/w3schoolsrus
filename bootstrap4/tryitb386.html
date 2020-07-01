@@ -1,8 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-
-<!-- Mirrored from www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container-fluid&stacked=h by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:47:03 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -73,9 +70,9 @@ snhb.options = {
    });
 </script>
 <script>
-if (window.addEventListener) {              
+if (window.addEventListener) {
     window.addEventListener("resize", browserResize);
-} else if (window.attachEvent) {                 
+} else if (window.attachEvent) {
     window.attachEvent("onresize", browserResize);
 }
 var xbeforeResize = window.innerWidth;
@@ -86,15 +83,15 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
+
         snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
-         
+
     }
     if (window.screen.availWidth <= 768) {
       restack(window.innerHeight > window.innerWidth);
     }
     fixDragBtn();
-    showFrameSize();    
+    showFrameSize();
 }
 var fileID = "";
 var loadSave = false;
@@ -115,16 +112,7 @@ function getSavedFile() {
             loadSave = false;
         }
     }
-    httpA.send(paramA);   
-}
-
-function retheme() {
-  var cc = document.body.className;
-  if (cc.indexOf("darktheme") > -1) {
-    document.body.className = cc.replace("darktheme", "");
-  } else {
-    document.body.className += " darktheme";
-  }
+    httpA.send(paramA);
 }
 </script>
 <style>
@@ -201,11 +189,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 }
 #textarea {
   padding-left:10px;
-  padding-right:5px;  
+  padding-right:5px;
 }
 #iframe {
   padding-left:5px;
-  padding-right:10px;  
+  padding-right:10px;
 }
 #textareawrapper {
   width:100%;
@@ -230,7 +218,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   padding:8px;
   resize: none;
   border:none;
-  line-height:normal;    
+  line-height:normal;
 }
 .CodeMirror.cm-s-default {
   line-height:normal;
@@ -241,7 +229,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframeResult, #iframeSource {
   background-color: #ffffff;
   height:100%;
-  width:100%;  
+  width:100%;
 }
 #stackV {background-color:#999999;}
 #stackV:hover {background-color:#BBBBBB !important;}
@@ -263,7 +251,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   padding-right:10px;
   padding-bottom:10px;
-  padding-left:10px;  
+  padding-left:10px;
 }
 #container.horizontal{
   min-height:200px;
@@ -276,7 +264,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:90px;
 }
   .w3-dropdown-content {width:350px}
-  
+
 @media screen and (max-width: 727px) {
   .trytopnav {top:70px;}
   #container {top:108px;}
@@ -338,7 +326,7 @@ font-style:normal;
     100% { transform: rotate(360deg); }
 }
 #iframewrapper {
-	
+
 }
 
 body.darktheme {
@@ -380,7 +368,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
   <div id="snhb-try_it_leaderboard-0"></div>
   <!-- adspace tryit-->
- 
+
 </div>
 <script>globalURL = 'https://tryit.w3schools.com/code_datas.php';</script>
 <div id="saveModal" class="w3-modal" style="z-index:4">
@@ -401,7 +389,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
         <div id="saveDisclaimer" style="display:none;">
           <p>All code in shared files are supplied by users, and belongs to the poster.</p>
           <p>All shared files are made public. No license is enforced.</p>
-          <p>Any code can be removed without warning (if it is deemed offensive, damaging or for any other reason).</p>        
+          <p>Any code can be removed without warning (if it is deemed offensive, damaging or for any other reason).</p>
           <p>w3schools.com are not responsible or liable for any loss or damage of any kind during the usage of provided code.</p>
         </div>
       </div>
@@ -451,7 +439,6 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   </div>
 </div>
 
-
 <div class="trytopnav">
 <div class="w3-bar" style="overflow:auto">
   <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
@@ -465,6 +452,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 </div>
 
 </div>
+
 <div id="shield"></div>
 
 <a href="javascript:void(0)" id="dragbar"></a>
@@ -479,7 +467,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
   </div>
   <footer class="w3-container w3-small w3-light-gray">
-  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
+  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and
   <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2019</a></p>
   </footer>
 </div>
@@ -493,22 +481,20 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="../../maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.2/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  
+
 <div class="container-fluid">
-  <h1>My First Bootstrap Page</h1>
-  <p>This part is inside a .container-fluid class.</p>
-  <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>           
+  <h1>Моя первая Bootstrap страница</h1>
+  <p>Эта часть находится внутри класса .container-fluid.</p>
+  <p>Класс .container-fluid обеспечивает контейнер полной ширины, охватывающий всю ширину области просмотра.</p>
 </div>
 
 </body>
-
-<!-- Mirrored from www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container-fluid&stacked=h by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:47:03 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -529,9 +515,9 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
       <div class="w3-container w3-green">
         <h2>Report a Problem:</h2>
       </div>
-<form class="w3-container"> 
+<form class="w3-container">
 <p><label for="err_email">Your E-mail:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">   
+<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">
 </p>
 <p>
 <label for="err_email">Page address:</label>
@@ -539,13 +525,14 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 </p>
 <p>
 <label for="err_email">Description:</label>
-<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>   
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>
 </p>
 <button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Submit</button>
 </form>
 
   </div>
 </div>
+
 <script>
 submitTryit()
 
@@ -557,7 +544,7 @@ function submitTryit(n) {
   var ifr = document.createElement("iframe");
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
-  ifr.setAttribute("name", "iframeResult");  
+  ifr.setAttribute("name", "iframeResult");
   document.getElementById("iframewrapper").innerHTML = "";
   document.getElementById("iframewrapper").appendChild(ifr);
   if (loadSave == true ) {
@@ -565,7 +552,7 @@ function submitTryit(n) {
   } else if (fileID != "" && loadSave == false) {
     var t=text;
     t=t.replace(/=/gi,"w3equalsign");
-    t=t.replace(/\+/gi,"w3plussign");    
+    t=t.replace(/\+/gi,"w3plussign");
     var pos=t.search(/script/i)
     while (pos>0) {
       t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
@@ -580,11 +567,11 @@ function submitTryit(n) {
   } else {
     var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
     ifrw.document.open();
-    ifrw.document.write(text);  
+    ifrw.document.write(text);
     ifrw.document.close();
     //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
     //(and back to false to prevent the content from being editable)
-    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)
     if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
       ifrw.document.body.contentEditable = true;
       ifrw.document.body.contentEditable = false;
@@ -599,23 +586,23 @@ function restack(horizontal) {
     ic = document.getElementById("iframecontainer");
     t = document.getElementById("textarea");
     i = document.getElementById("iframe");
-    c = document.getElementById("container");    
+    c = document.getElementById("container");
     sv = document.getElementById("stackV");
     sh = document.getElementById("stackH");
     tc.className = tc.className.replace("horizontal", "");
-    ic.className = ic.className.replace("horizontal", "");        
-    t.className = t.className.replace("horizontal", "");        
-    i.className = i.className.replace("horizontal", "");        
-    c.className = c.className.replace("horizontal", "");                        
+    ic.className = ic.className.replace("horizontal", "");
+    t.className = t.className.replace("horizontal", "");
+    i.className = i.className.replace("horizontal", "");
+    c.className = c.className.replace("horizontal", "");
     if (sv) {sv.className = sv.className.replace("horizontal", "")};
     if (sv) {sh.className = sh.className.replace("horizontal", "")};
     stack = "";
     if (horizontal) {
         tc.className = tc.className + " horizontal";
-        ic.className = ic.className + " horizontal";        
-        t.className = t.className + " horizontal";        
-        i.className = i.className + " horizontal";                
-        c.className = c.className + " horizontal";                
+        ic.className = ic.className + " horizontal";
+        t.className = t.className + " horizontal";
+        i.className = i.className + " horizontal";
+        c.className = c.className + " horizontal";
         if (sv) {sv.className = sv.className + " horizontal"};
         if (sv) {sh.className = sh.className + " horizontal"};
         stack = " horizontal";
@@ -629,7 +616,7 @@ function restack(horizontal) {
         document.getElementById("iframecontainer").style.height = "100%";
         document.getElementById("textareacontainer").style.width = "50%";
         document.getElementById("iframecontainer").style.width = "50%";
-        currentStack=true;        
+        currentStack=true;
     }
     fixDragBtn();
     showFrameSize();
@@ -647,7 +634,7 @@ function fixDragBtn() {
   var textareawidth, leftpadding, dragleft, containertop, buttonwidth
   var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
   if (stack != " horizontal") {
-    document.getElementById("dragbar").style.width = "5px";    
+    document.getElementById("dragbar").style.width = "5px";
     textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
     leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
     buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
@@ -657,7 +644,7 @@ function fixDragBtn() {
     document.getElementById("dragbar").style.left = dragleft + "px";
     document.getElementById("dragbar").style.height = textareaheight;
     document.getElementById("dragbar").style.cursor = "col-resize";
-    
+
   } else {
     document.getElementById("dragbar").style.height = "5px";
     if (window.getComputedStyle) {
@@ -675,7 +662,7 @@ function fixDragBtn() {
     document.getElementById("dragbar").style.top = dragleft + "px";
     document.getElementById("dragbar").style.left = "5px";
     document.getElementById("dragbar").style.width = textareaheight;
-    document.getElementById("dragbar").style.cursor = "row-resize";        
+    document.getElementById("dragbar").style.cursor = "row-resize";
   }
 }
 function dragstart(e) {
@@ -684,9 +671,9 @@ function dragstart(e) {
   var main = document.getElementById("iframecontainer");
 }
 function dragmove(e) {
-  if (dragging) 
+  if (dragging)
   {
-    document.getElementById("shield").style.display = "block";        
+    document.getElementById("shield").style.display = "block";
     if (stack != " horizontal") {
       var percentage = (e.pageX / window.innerWidth) * 100;
       if (percentage > 5 && percentage < 98) {
@@ -705,17 +692,18 @@ function dragmove(e) {
         fixDragBtn();
       }
     }
-    showFrameSize();    
+    showFrameSize();
   }
 }
 function dragend() {
   document.getElementById("shield").style.display = "none";
   dragging = false;
-  if (window.editor) {
-    window.editor.refresh();
+  var vend = navigator.vendor;
+  if (window.editor && vend.indexOf("Apple") == -1) {
+      window.editor.refresh();
   }
 }
-if (window.addEventListener) {              
+if (window.addEventListener) {
   document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
   document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
   window.addEventListener("mousemove", function(e) {dragmove(e);});
@@ -741,8 +729,25 @@ function click_google_savebtn() {
 function click_google_loadbtn() {
   document.getElementById('driveLoadModal').style.display='block'
 }
-
-
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
 function colorcoding() {
   var ua = navigator.userAgent;
   //Opera Mini refreshes the page when trying to edit the textarea.
@@ -811,7 +816,7 @@ function onPickerApiLoad() {
         userAction="";
         document.getElementById('driveText').style.display='none';
         document.getElementById('driveSavedPanel').style.display='block';
-        createFileWithHTMLContent(document.getElementById('googleFileName').value,document.getElementById('textareaCode').value)     
+        createFileWithHTMLContent(document.getElementById('googleFileName').value,document.getElementById('textareaCode').value)
     }
     if (userAction=="open") {
         userAction="";
@@ -924,10 +929,10 @@ function resetDriveLoadModal() {
 function saveFile(code) {
     document.getElementById('preSave').style.display='none';
     if (code.length>20000) {
-        document.getElementById('errorSave').style.display='block';    
+        document.getElementById('errorSave').style.display='block';
         return;
     }
-    document.getElementById('postSave').style.display='block';    
+    document.getElementById('postSave').style.display='block';
     var paramObj = {};
     paramObj.code = code;
     var paramB = JSON.stringify(paramObj);
@@ -952,7 +957,7 @@ function saveFile(code) {
 function hideAndResetModal() {
     document.getElementById("saveModal").style.display = "none";
     document.getElementById('preSave').style.display = "block";
-    document.getElementById('errorSave').style.display = "none";    
+    document.getElementById('errorSave').style.display = "none";
     document.getElementById('postSave').style.display = "none";
     document.getElementById("saveModalSaved").style.display = "none";
     document.getElementById('saveDisclaimer').style.display= "none";
@@ -995,22 +1000,22 @@ function openMenu() {
     var z = document.getElementById("menuButton");
     if (z.className.indexOf("w3-text-gray") == -1) {
         z.className += " w3-text-gray";
-    } else { 
+    } else {
         z.className = z.className.replace(" w3-text-gray", "");
     }
     if (z.className.indexOf("w3-gray") == -1) {
         z.className += " w3-gray";
-    } else { 
+    } else {
         z.className = z.className.replace(" w3-gray", "");
     }
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else { 
+    } else {
         x.className = x.className.replace(" w3-show", "");
     }
     if (y.className.indexOf("w3-show") == -1) {
         y.className += " w3-show";
-    } else { 
+    } else {
         y.className = y.className.replace(" w3-show", "");
     }
 
@@ -1029,9 +1034,8 @@ window.onclick = function(event) {
     if (event.target == document.getElementById("menuOverlay")) {
         openMenu();
     }
-    
-}
 
+}
 </script>
 
 <script src="../../apis.google.com/js/clientba50.js?onload=checkAuth"></script>
