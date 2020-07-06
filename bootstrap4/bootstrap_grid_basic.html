@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>Bootstrap 4 Учебник. Уроки для начинающих. W3Schools на русском</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<title>Bootstrap 4 Сетка / Grid. Уроки для начинающих. W3Schools на русском</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.2/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="bootstrap 4,фреймворк,библиотека,w3schools,на русском,уроки,для начинающих">
-<meta name="description" content="Bootstrap 4. Полный учебник для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
+<meta name="keywords" content="bootstrap 4,сетка,система,сетки,библиотека,w3schools,на русском,уроки,для начинающих">
+<meta name="description" content="Система сетки Bootstrap построена с помощью flexbox и позволяет разместить до 12 столбцов на странице. Система сетки реагирует, и столбцы будут автоматически переставляться в зависимости от размера экрана. Классы Bootstrap 4 сетки: .col- .col-sm- .col-md- .col-lg- .col-xl- . Полный учебник для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
 <link rel="stylesheet" href="w3-fix.css">
@@ -405,41 +405,27 @@ table.grid td {
   <li><code class="w3-codespan">.col-lg-</code> (large devices / большие устройства - ширина экрана не менее 992 пикселей)</li>
   <li><code class="w3-codespan">.col-xl-</code> (xlarge devices / экстрабольшие устройства - ширина экрана равна или превышает 1200 пикселей)</li>
 </ul>
-<p>The classes above can be combined to create more dynamic and flexible layouts.</p>
-<p><strong>Tip:</strong> Each class scales up, so if you wish to set the same widths for
-<code class="w3-codespan">sm</code> and <code class="w3-codespan">md</code>, you only need to specify <code class="w3-codespan">sm</code>.</p>
+<p>Указанные выше классы можно комбинировать для создания более динамичных и гибких макетов.</p>
+<p><strong>Совет:</strong> Каждый класс масштабируется, поэтому, если вы хотите установить одинаковую ширину для
+<code class="w3-codespan">sm</code> и <code class="w3-codespan">md</code>, вам нужно только указать <code class="w3-codespan">sm</code>.</p>
 <hr>
 
-<h2>Basic Structure of a Bootstrap 4 Grid</h2>
-<p>The following is a basic structure of a Bootstrap 4 grid:</p>
+<h2>Базовая структура сетки Bootstrap 4</h2>
+<p>Ниже приведена базовая структура сетки Bootstrap 4:</p>
 <div class="w3-example">
  <div class="w3-code notranslate htmlHigh">
-   &lt;!-- Control the column width, and how they should appear on different
-   devices --&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp;
+   &lt;!-- Контроль ширины столбцов, и как они должны отображаться на разных устройствах --&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp;
    &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br>
-   <br>&lt;!-- Or let Bootstrap automatically handle the layout --&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;</div>
+   <br>&lt;!-- Или пусть Bootstrap автоматически обрабатывает макет --&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;</div>
 </div>
-<p>First example: create a row (<code class="w3-codespan">&lt;div
-class="row"&gt;</code>). Then, add the desired number of columns (tags with appropriate
-<code class="w3-codespan">.col-*-*</code> classes). The first star (*)
-represents the responsiveness: sm, md, lg or xl, while the second star
-represents a number, which should add up to 12 for each row.</p>
-<p>Second example: instead of adding a number to each <code class="w3-codespan">col</code>, let bootstrap handle
-the layout, to create equal width columns: two <code class="w3-codespan">&quot;col&quot;</code> elements = 50% width to
-each col. three cols = 33.33% width to each col. four cols = 25% width, etc. You
-can also use <code class="w3-codespan">.col-sm|md|lg|xl</code> to make the columns responsive.</p>
-<p>Below we have collected some examples of basic Bootstrap 4 grid layouts.</p>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
+<p>Первый пример: создать строку (<code class="w3-codespan">&lt;div
+class="row"&gt;</code>). Затем добавьте нужное количество столбцов (теги с соответствующими
+<code class="w3-codespan">.col-*-*</code> классами). Первая звезда (*) представляет отзывчивость: sm, md, lg или xl, а вторая звезда представляет число, которое должно составлять до 12 для каждой строки.</p>
+<p>Второй пример: вместо добавления номера к каждому <code class="w3-codespan">col</code>, пусть bootstrap обрабатывает макет, чтобы создать столбцы равной ширины: два <code class="w3-codespan">&quot;col&quot;</code> элемента = 50% ширины для каждого столбца. три столбца = 33,33% ширины каждого столбца. четыре столбца = 25% ширины и т.д. Вы также можете использовать <code class="w3-codespan">.col-sm|md|lg|xl</code> чтобы сделать столбцы адаптивными.</p>
+<p>Ниже мы собрали несколько примеров основных макетов сетки Bootstrap 4.</p>
 <hr>
 
-<h2>Three Equal Columns</h2>
+<h2>Три равных столбца</h2>
 <div class="container-fluid" style="margin:8px 0 15px 0;">
 <div class="row test">
   <div class="col-sm-4">.col</div>
@@ -447,17 +433,16 @@ can also use <code class="w3-codespan">.col-sm|md|lg|xl</code> to make the colum
   <div class="col-sm-4">.col</div>
 </div>
 </div>
-<p>The following example shows how to create three equal-width columns, on all
-devices and screen widths:</p>
+<p>В следующем примере показано, как создать три столбца одинаковой ширины на всех устройствах и ширине экрана:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;.col&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;.col&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col&quot;&gt;.col&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryit98a6.html?filename=trybs_grid_ex&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryit98a6.html?filename=trybs_grid_ex&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Responsive Columns</h2>
+<h2>Адаптивные столбцы</h2>
 <div class="container-fluid" style="margin:8px 0 15px 0;">
 <div class="row test">
   <div class="col-sm-3">.col-sm-3</div>
@@ -466,39 +451,36 @@ devices and screen widths:</p>
   <div class="col-sm-3">.col-sm-3</div>
 </div>
 </div>
-<p>The following example shows how to create four equal-width columns starting at tablets and scaling to
-extra large desktops. <strong>On mobile phones or screens that are less than 576px wide, the columns will automatically stack
-on top of each other</strong>:</p>
+<p>В следующем примере показано, как создать четыре столбца одинаковой ширины, начиная с планшетов и масштабируя их до экстра больших (extra large) десктопов. <strong>На мобильных телефонах или экранах шириной менее 576 пикселей столбцы автоматически накладываются друг на друга</strong>:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;.col-sm-3&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;.col-sm-3&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;.col-sm-3&lt;/div&gt;<br>&nbsp;
   &lt;div class=&quot;col-sm-3&quot;&gt;.col-sm-3&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryitc236.html?filename=trybs_grid_ex1&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryitc236.html?filename=trybs_grid_ex1&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Two Unequal Responsive Columns</h2>
+<h2>Два неравных адаптивных столбца</h2>
 <div class="container-fluid" style="margin:8px 0 15px 0;">
 <div class="row test">
   <div class="col-sm-4">.col-sm-4</div>
   <div class="col-sm-8">.col-sm-8</div>
 </div>
 </div>
-<p>The following example shows how to get two various-width columns starting at
-tablets and scaling to large extra desktops:</p>
+<p>В следующем примере показано, как получить два столбца различной ширины, начиная с планшетов и масштабируя их до экстра больших (extra large) десктопов:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;.col-sm-4&lt;/div&gt;<br>&nbsp; &lt;div class=&quot;col-sm-8&quot;&gt;.col-sm-8&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryite1a2.html?filename=trybs_grid_ex3&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryite1a2.html?filename=trybs_grid_ex3&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 
 <div class="w3-panel w3-note">
-<p style="margin-bottom:8px"><strong>Tip:</strong> You will learn more about Bootstrap 4 grids later in this tutorial.</p>
+<p style="margin-bottom:8px"><strong>Примечание:</strong> Вы узнаете больше о сетках Bootstrap 4 позже в этом учебнике.</p>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="bootstrap_containers.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="bootstrap_typography.html">Next &#10095;</a>
@@ -511,7 +493,7 @@ tablets and scaling to large extra desktops:</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / bootstrap4 / bootstrap_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / bootstrap4 / bootstrap_grid_basic.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
