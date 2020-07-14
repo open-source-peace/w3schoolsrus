@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>Bootstrap 4 Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Bootstrap 4 Прогресс-бары. Уроки для начинающих. W3Schools на русском</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.2/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap 4. Полный учебник для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
+<meta name="description" content="Bootstrap 4. Прогресс-бары. Индикаторы выполнения. Высота. Ярлыки. Цветные. Полосатый. Анимированный. Несколько прогресс-баров. Как сделать? Полный учебник для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
@@ -322,48 +322,44 @@
     <div class='w3-col l10 m12' id='main'>
 <a href="index.html"><img src="../svg/bootstrap_icon.svg" alt="Bootstrap 4. Уроки для начинающих" class="w3-left" title="Bootstrap 4 для начинающих" width="120"></a>
 
-<h1>Bootstrap 4 <span class="color_h1">Progress Bars</span></h1>
+<h1>Bootstrap 4 <span class="color_h1">Прогресс-бары (Индикаторы выполнения)</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="bootstrap_badges.html">&#10094; Previous</a>
+<a class="w3-left w3-btn" href="bootstrap_badges.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="bootstrap_spinners.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Basic Progress Bar</h2>
-<p>A progress bar can be used to show a user how far along he/she is in a
-process.</p>
+<h2>Основной прогресс-бар (индикатор выполнения)</h2>
+<p>Индикатор выполнения может использоваться, чтобы показать пользователю, как далеко он / она находится в процессе.</p>
 <div class="progress" style="margin-bottom:16px">
   <div class="progress-bar" role="progressbar" aria-valuenow="50"
   aria-valuemin="0" aria-valuemax="100" style="width:25%">
-    <span class="sr-only">25% Complete</span>
+    <span class="sr-only">25% Завершено</span>
   </div>
 </div>
 <div class="progress" style="margin-bottom:16px">
   <div class="progress-bar" role="progressbar" aria-valuenow="50"
   aria-valuemin="0" aria-valuemax="100" style="width:50%">
-    <span class="sr-only">50% Complete</span>
+    <span class="sr-only">50% Завершено</span>
   </div>
 </div>
 <div class="progress" style="margin-bottom:16px">
   <div class="progress-bar" role="progressbar" aria-valuenow="50"
   aria-valuemin="0" aria-valuemax="100" style="width:100%">
-    <span class="sr-only">100% Complete</span>
+    <span class="sr-only">100% Завершено</span>
   </div>
 </div>
 
-<p>To create a default progress bar, add a <code class="w3-codespan">.progress</code> class to a
-container element
-and add the <code class="w3-codespan">.progress-bar</code> class to its child element. Use the CSS <code class="w3-codespan">width</code> property to set the width of the progress bar:</p>
+<p>Чтобы создать прогресс-бар по умолчанию, добавьте класс <code class="w3-codespan">.progress</code> к элементу контейнера и добавьте класс <code class="w3-codespan">.progress-bar</code> для его дочернего элемента. Используйте свойство CSS <code class="w3-codespan">width</code> чтобы установить ширину прогресс-бара:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar&quot; style=&quot;width:70%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryitf1b0.html?filename=trybs_progressbar1&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryitf1b0.html?filename=trybs_progressbar1&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
-
 <hr>
 
-<h2>Progress Bar Height</h2>
+<h2>Высота прогресс-бара</h2>
 <div class="progress" style="height:10px">
     <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;height:10px;">
   </div>
@@ -376,19 +372,17 @@ and add the <code class="w3-codespan">.progress-bar</code> class to its child el
     <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;height:30px;">
   </div>
 </div><br>
-<p>The height of the progress bar is 16px by default. Use the CSS <code class="w3-codespan">height</code> property to change
-it. Note that you must set the same height for the progress container and the
-progress bar:</p>
+<p>Высота прогресс-бара по умолчанию составляет 16 пикселей. Используйте свойство CSS <code class="w3-codespan">height</code> чтобы изменить его. Обратите внимание, что вы должны установить одинаковую высоту для прогресс-контейнера и прогресс-бара:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;progress&quot; style=&quot;height:20px&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar&quot; style=&quot;width:40%;height:20px&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryitd794.html?filename=trybs_progressbar7&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryitd794.html?filename=trybs_progressbar7&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Progress Bar Labels</h2>
-<p>Add text inside the progress bar to show the visible percentage:</p>
+<h2>Ярлыки прогресс-бара</h2>
+<p>Добавьте текст внутри прогресс-бара, чтобы показать видимый процент:</p>
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="70"
   aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -396,22 +390,14 @@ progress bar:</p>
   </div>
 </div>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class="progress-bar" style=&quot;width:70%&quot;&gt;70%&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryit46da.html?filename=trybs_progressbar2&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-</div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
+<a target="_blank" href="tryit46da.html?filename=trybs_progressbar2&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Colored Progress Bars</h2>
+<h2>Цветные прогресс-бары</h2>
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
   </div>
@@ -449,33 +435,33 @@ progress bar:</p>
   </div>
 </div><br>
 
-<p style="margin-top:16px;">By default, the progress bar is blue (primary). Use any of the Bootstrap 4 contextual background classes to its color:</p>
+<p style="margin-top:16px;">По умолчанию прогресс-бар синий (основной). Используйте любой из контекстных фоновых классов Bootstrap 4 для его цвета:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;!-- Blue --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar&quot;
-  style=&quot;width:10%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Green --&gt;<br>&lt;div
+  &lt;!-- Синий --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar&quot;
+  style=&quot;width:10%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Зеленый --&gt;<br>&lt;div
   class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div
   class=&quot;progress-bar bg-success&quot; style=&quot;width:20%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!--
-  Turquoise --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp;
+  Бирюзовый --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp;
   &lt;div class=&quot;progress-bar bg-info&quot; style=&quot;width:30%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>
-  &lt;!-- Orange --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp;&nbsp; &lt;div class=&quot;progress-bar bg-warning&quot;
-  style=&quot;width:40%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Red --&gt;<br>&lt;div
+  &lt;!-- Оранжевый --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp;&nbsp; &lt;div class=&quot;progress-bar bg-warning&quot;
+  style=&quot;width:40%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Красный --&gt;<br>&lt;div
   class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar bg-danger&quot;
-  style=&quot;width:50%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- White --&gt;<br>&lt;div
+  style=&quot;width:50%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Белый --&gt;<br>&lt;div
   class=&quot;progress border&quot;&gt;<br>&nbsp; &lt;div
   class=&quot;progress-bar bg-white&quot; style=&quot;width:60%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!--
-  Grey --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar bg-secondary&quot;
-  style=&quot;width:70%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Light Grey --&gt;<br>&lt;div
+  Серый --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar bg-secondary&quot;
+  style=&quot;width:70%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!-- Светло-серый --&gt;<br>&lt;div
   class=&quot;progress border&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar bg-light&quot;
   style=&quot;width:80%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;!--
-  Dark Grey --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp;
+  Тёмно-серый --&gt;<br>&lt;div class=&quot;progress&quot;&gt;<br>&nbsp;
   &lt;div class=&quot;progress-bar bg-dark&quot; style=&quot;width:90%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryitb220.html?filename=trybs_progressbar3&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryitb220.html?filename=trybs_progressbar3&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Striped Progress Bars</h2>
+<h2>Полосатый прогресс-бар</h2>
 <div class="progress">
     <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
   </div>
@@ -496,33 +482,33 @@ progress bar:</p>
   <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
   </div>
 </div><br>
-<p>Use the <code class="w3-codespan">.progress-bar-striped</code> class to add stripes to the progress bars:</p>
+<p>Используйте класс <code class="w3-codespan">.progress-bar-striped</code> чтобы добавить полосы на прогресс-бары:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar
   progress-bar-striped&quot; style=&quot;width:40%&quot;&gt;&lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryitef9a.html?filename=trybs_progressbar4&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryitef9a.html?filename=trybs_progressbar4&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Animated Progress Bar</h2>
+<h2>Анимированный прогресс-бар</h2>
 <div class="progress">
     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
   </div>
 </div><br>
-<p>Add the <code class="w3-codespan">.progress-bar-animated</code> class to animate the progress bar:</p>
+<p>Добавьте класс <code class="w3-codespan">.progress-bar-animated</code> чтобы анимировать прогресс-бар:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
   &lt;div class=&quot;progress-bar progress-bar-striped progress-bar-animated&quot;
   style=&quot;width:40%&quot;&gt;&lt;/div&gt;</div>
-<a target="_blank" href="tryit3da0.html?filename=trybs_progressbar5&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryit3da0.html?filename=trybs_progressbar5&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Multiple Progress Bars</h2>
-<p>Progress bars can also be stacked:</p>
+<h2>Несколько прогресс-баров</h2>
+<p>Прогресс-бары также могут быть сложены:</p>
 <div class="progress">
   <div class="progress-bar bg-success" style="width:40%">
     Free Space
@@ -534,17 +520,17 @@ progress bar:</p>
     Danger
   </div>
 </div><div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
   &lt;div class=&quot;progress&quot;&gt;<br>&nbsp; &lt;div class=&quot;progress-bar bg-success&quot;
   style=&quot;width:40%&quot;&gt;<br>&nbsp;&nbsp;&nbsp; Free Space<br>&nbsp; &lt;/div&gt;<br>&nbsp;
   &lt;div class=&quot;progress-bar bg-warning&quot; style=&quot;width:10%&quot;&gt;<br>&nbsp;&nbsp;&nbsp;
   Warning<br>&nbsp; &lt;/div&gt;<br>&nbsp; &lt;div class=&quot;progress-bar bg-danger&quot;
   style=&quot;width:20%&quot;&gt;<br>&nbsp;&nbsp;&nbsp; Danger<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;</div>
-<a target="_blank" href="tryit61d0.html?filename=trybs_progressbar6&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+<a target="_blank" href="tryit61d0.html?filename=trybs_progressbar6&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="bootstrap_badges.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="bootstrap_spinners.html">Next &#10095;</a>
@@ -557,7 +543,7 @@ progress bar:</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / bootstrap4 / bootstrap_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / bootstrap4 / bootstrap_progressbars.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
