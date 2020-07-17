@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>Bootstrap 4 Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Bootstrap 4 Группы списков. Уроки для начинающих. W3Schools на русском</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.2/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap 4. Полный учебник для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
+<meta name="description" content="Bootstrap 4. Группы списков. Основные (базовые) группы. Используйте элемент ul с классом .list-group и элементы li с классом .list-group-item. Активное состояние. Отключенный пункт (элемент). Полный учебник для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
@@ -362,149 +362,146 @@
 <hr>
 
 <h2>Список группы со связанными элементами</h2>
+
 <div class="list-group" style="margin:20px 0">
-  <a href="javascript:void(0)" class="list-group-item list-group-item-action">First item</a>
-  <a href="javascript:void(0)" class="list-group-item list-group-item-action">Second item</a>
-  <a href="javascript:void(0)" class="list-group-item list-group-item-action">Third item</a>
+  <a href="javascript:void(0)" class="list-group-item list-group-item-action">Первый пункт</a>
+  <a href="javascript:void(0)" class="list-group-item list-group-item-action">Второй пункт</a>
+  <a href="javascript:void(0)" class="list-group-item list-group-item-action">Третий пункт</a>
 </div>
-<p>To create a list group with linked items, use <code class="w3-codespan">&lt;div&gt;</code> instead of <code class="w3-codespan">&lt;ul&gt;</code>
-and <code class="w3-codespan">&lt;a&gt;</code> instead of <code class="w3-codespan">&lt;li&gt;</code>.
-Optionally, add the <code class="w3-codespan">.list-group-item-action</code> class if you want a grey background color on
-hover:</p>
+<p>Чтобы создать группу списков со связанными элементами, используйте <code class="w3-codespan">&lt;div&gt;</code> вместо <code class="w3-codespan">&lt;ul&gt;</code> и <code class="w3-codespan">&lt;a&gt;</code> вместо <code class="w3-codespan">&lt;li&gt;</code>. При желании добавьте класс <code class="w3-codespan">.list-group-item-action</code> если хотите, чтобы цвет фона становился серым при наведении:</p>
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;div class=&quot;list-group&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot;
-  class=&quot;list-group-item list-group-item-action&quot;&gt;First item&lt;/a&gt;<br>&nbsp; &lt;a
-  href=&quot;#&quot; class=&quot;list-group-item list-group-item-action&quot;&gt;Second item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action&quot;&gt;Third item&lt;/a&gt;<br>
+  class=&quot;list-group-item list-group-item-action&quot;&gt;Первый пункт&lt;/a&gt;<br>&nbsp; &lt;a
+  href=&quot;#&quot; class=&quot;list-group-item list-group-item-action&quot;&gt;Второй пункт&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action&quot;&gt;Третий пункт&lt;/a&gt;<br>
  &lt;/div&gt;</div>
 <a target="_blank" href="tryitb2d2.html?filename=trybs_list_group_link&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Disabled Item</h2>
-  <p>The <code class="w3-codespan">.disabled</code> class adds a lighter text color to the disabled item. And when used on links, it will remove the hover effect:</p>
+<h2>Отключеный пункт</h2>
+  <p>Класс <code class="w3-codespan">.disabled</code> добавляет более светлый цвет текста к отключенному элементу. И при использовании на ссылках, он удалит эффект наведения:</p>
   <div class="list-group" style="margin:20px 0">
-    <a href="javascript:void(0)" class="list-group-item disabled">Disabled item</a>
-    <a href="javascript:void(0)" class="list-group-item disabled">Disabled item</a>
-    <a href="javascript:void(0)" class="list-group-item xxhey">Third item</a>
+    <a href="javascript:void(0)" class="list-group-item disabled">Отключеный пункт</a>
+    <a href="javascript:void(0)" class="list-group-item disabled">Отключенный пункт</a>
+    <a href="javascript:void(0)" class="list-group-item xxhey">Третий пункт</a>
   </div><div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;list-group&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;list-group-item disabled&quot;&gt;Disabled item&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot;
-  class=&quot;list-group-item disabled&quot;&gt;Disabled item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Third item&lt;/a&gt;<br>
+  &lt;div class=&quot;list-group&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;list-group-item disabled&quot;&gt;Отключенный пункт&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot;
+  class=&quot;list-group-item disabled&quot;&gt;Отключенный пункт&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Третий пункт&lt;/a&gt;<br>
   &lt;/div&gt;</div>
 <a target="_blank" href="tryite577.html?filename=trybs_list_group_disabled&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Flush / Remove Borders</h2>
-<p>Use the <code class="w3-codespan">.list-group-flush</code> class to remove some borders and rounded corners:</p>
+<h2>Flush / Удаление границ</h2>
+<p>Используйте класс <code class="w3-codespan">.list-group-flush</code> для удаления каких-либо границ и закругленных углов:</p>
 <div class="container" style="margin: 0 -16px">
 <ul class="list-group list-group-flush">
-  <li class="list-group-item">First item</li>
-  <li class="list-group-item">Second item</li>
-  <li class="list-group-item">Third item</li>
-  <li class="list-group-item">Fourth item</li>
+  <li class="list-group-item">Первый пункт</li>
+  <li class="list-group-item">Второй пункт</li>
+  <li class="list-group-item">Третий пункт</li>
+  <li class="list-group-item">Четвертый пункт</li>
 </ul>
 </div>
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;ul class=&quot;list-group
-  list-group-flush&quot;&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;First item&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Second item&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Third item&lt;/li&gt;<br>&nbsp;
-  &lt;li class=&quot;list-group-item&quot;&gt;Fourth item&lt;/li&gt;<br>&lt;/ul&gt;</div>
+  list-group-flush&quot;&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Первый пункт&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Второй пункт&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Третий пункт&lt;/li&gt;<br>&nbsp;
+  &lt;li class=&quot;list-group-item&quot;&gt;Четвертый пункт&lt;/li&gt;<br>&lt;/ul&gt;</div>
 <a target="_blank" href="tryitb305.html?filename=trybs_list_group_flush&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Horizontal List Groups</h2>
-<p>If you want the list items to display horizontally instead of vertically (side by side instead of on top of each other), add the <code class="w3-codespan">.list-group-horizontal</code> class to <code class="w3-codespan">.list-group</code>:</p>
+<h2>Горизонтальный список групп</h2>
+<p>Если вы хотите, чтобы элементы списка отображались горизонтально, а не вертикально (рядом, а не друг над другом), добавьте класс <code class="w3-codespan">.list-group-horizontal</code> в <code class="w3-codespan">.list-group</code>:</p>
 <div class="container" style="margin: 0 -16px">
 <ul class="list-group list-group-horizontal">
-  <li class="list-group-item">First item</li>
-  <li class="list-group-item">Second item</li>
-  <li class="list-group-item">Third item</li>
-  <li class="list-group-item">Fourth item</li>
+  <li class="list-group-item">Первый пункт</li>
+  <li class="list-group-item">Второй пункт</li>
+  <li class="list-group-item">Третий пункт</li>
+  <li class="list-group-item">Четвертый пункт</li>
 </ul>
 </div>
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;ul class=&quot;list-group
-  list-group-horizontal&quot;&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;First item&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Second item&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Third item&lt;/li&gt;<br>&nbsp;
-  &lt;li class=&quot;list-group-item&quot;&gt;Fourth item&lt;/li&gt;<br>&lt;/ul&gt;</div>
+  list-group-horizontal&quot;&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Первй пункт&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Второй пункт&lt;/li&gt;<br>&nbsp; &lt;li class=&quot;list-group-item&quot;&gt;Третий пункт&lt;/li&gt;<br>&nbsp;
+  &lt;li class=&quot;list-group-item&quot;&gt;Четвертый пункт&lt;/li&gt;<br>&lt;/ul&gt;</div>
 <a target="_blank" href="tryit9a5f.html?filename=trybs_list_group_horizontal&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Contextual Classes</h2>
-<p>Contextual classes can be used to color list items:</p>
+<h2>Контекстные классы</h2>
+<p>Контекстные классы могут быть использованы для окрашивания элементов списка:</p>
 <ul class="list-group" style="margin:20px 0">
-  <li class="list-group-item list-group-item-success">Success item</li>
-  <li class="list-group-item list-group-item-secondary">Secondary item</li>
-  <li class="list-group-item list-group-item-info">Info item</li>
-  <li class="list-group-item list-group-item-warning">Warning item</li>
-  <li class="list-group-item list-group-item-danger">Danger item</li>
-  <li class="list-group-item list-group-item-primary">Primary item</li>
-  <li class="list-group-item list-group-item-dark">Dark item</li>
-  <li class="list-group-item list-group-item-light">Light item</li>
+  <li class="list-group-item list-group-item-success">Success элемент</li>
+  <li class="list-group-item list-group-item-secondary">Secondary элемент</li>
+  <li class="list-group-item list-group-item-info">Info элемент</li>
+  <li class="list-group-item list-group-item-warning">Warning элемент</li>
+  <li class="list-group-item list-group-item-danger">Danger элемент</li>
+  <li class="list-group-item list-group-item-primary">Primary элемент</li>
+  <li class="list-group-item list-group-item-dark">Dark элемент</li>
+  <li class="list-group-item list-group-item-light">Light элемент</li>
 </ul>
 
-<p>The classes for coloring list-items are: <code class="w3-codespan">
-.list-group-item-success</code>, <code class="w3-codespan">list-group-item-secondary</code>, <code class="w3-codespan">list-group-item-info</code>, <code class="w3-codespan">
-list-group-item-warning</code>, <code class="w3-codespan">.list-group-item-danger</code>, <code class="w3-codespan">.list-group-item-primary</code>, <code class="w3-codespan">list-group-item-dark</code> and <code class="w3-codespan">list-group-item-light</code>,:</p>
+<p>Классы для раскраски элементов списка: <code class="w3-codespan">
+.list-group-item-success</code>, <code class="w3-codespan">list-group-item-secondary</code>, <code class="w3-codespan">list-group-item-info</code>, <code class="w3-codespan">list-group-item-warning</code>, <code class="w3-codespan">.list-group-item-danger</code>, <code class="w3-codespan">.list-group-item-primary</code>, <code class="w3-codespan">list-group-item-dark</code> и <code class="w3-codespan">list-group-item-light</code>,:</p>
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
  &lt;ul class=&quot;list-group&quot;&gt;<br>&nbsp; &lt;li class=&quot;list-group-item
-  list-group-item-success&quot;&gt;Success item&lt;/li&gt;<br>&nbsp; &lt;li
-  class=&quot;list-group-item list-group-item-secondary&quot;&gt;Secondary item&lt;/li&gt;<br>&nbsp;
-  &lt;li class=&quot;list-group-item list-group-item-info&quot;&gt;Info item&lt;/li&gt;<br>&nbsp; &lt;li
-  class=&quot;list-group-item list-group-item-warning&quot;&gt;Warning item&lt;/li&gt;<br>&nbsp;
-  &lt;li class=&quot;list-group-item list-group-item-danger&quot;&gt;Danger item&lt;/li&gt;<br>&nbsp;
-  &lt;li class=&quot;list-group-item list-group-item-primary&quot;&gt;Primary item&lt;/li&gt;<br>&nbsp;
-  &lt;li class=&quot;list-group-item list-group-item-dark&quot;&gt;Dark item&lt;/li&gt;<br>&nbsp; &lt;li
-  class=&quot;list-group-item list-group-item-light&quot;&gt;Light item&lt;/li&gt;<br>&lt;/ul&gt;</div>
+  list-group-item-success&quot;&gt;Success элемент&lt;/li&gt;<br>&nbsp; &lt;li
+  class=&quot;list-group-item list-group-item-secondary&quot;&gt;Secondary элемент&lt;/li&gt;<br>&nbsp;
+  &lt;li class=&quot;list-group-item list-group-item-info&quot;&gt;Info элемент&lt;/li&gt;<br>&nbsp; &lt;li
+  class=&quot;list-group-item list-group-item-warning&quot;&gt;Warning элемент&lt;/li&gt;<br>&nbsp;
+  &lt;li class=&quot;list-group-item list-group-item-danger&quot;&gt;Danger элемент&lt;/li&gt;<br>&nbsp;
+  &lt;li class=&quot;list-group-item list-group-item-primary&quot;&gt;Primary элемент&lt;/li&gt;<br>&nbsp;
+  &lt;li class=&quot;list-group-item list-group-item-dark&quot;&gt;Dark элемент&lt;/li&gt;<br>&nbsp; &lt;li
+  class=&quot;list-group-item list-group-item-light&quot;&gt;Light элемент&lt;/li&gt;<br>&lt;/ul&gt;</div>
 <a target="_blank" href="tryit4ce5.html?filename=trybs_list_group_context&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>Link items with Contextual Classes</h2>
+<h2>Связать элементы с контекстными классами</h2>
 <div class="list-group" style="margin:20px 0">
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action">Action item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-success">Success item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-secondary">Secondary item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-info">Info item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-warning">Warning item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
-    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action">Action элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-success">Success элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-secondary">Secondary элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-info">Info элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-warning">Warning элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-danger">Danger элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-primary">Primary элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-dark">Dark элемент</a>
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action list-group-item-light">Light элемент</a>
 </div>
 
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
   &lt;div class=&quot;list-group&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;list-group-item
-  list-group-item-action&quot;&gt;Action item&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot;
-  class=&quot;list-group-item list-group-item-action list-group-item-success&quot;&gt;Success item&lt;/a&gt;<br>&nbsp; &lt;a
-  href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-secondary&quot;&gt;Secondary item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-info&quot;&gt;Info item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-warning&quot;&gt;Warning item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-danger&quot;&gt;Danger item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-primary&quot;&gt;Primary item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-dark&quot;&gt;Dark item&lt;/a&gt;<br>&nbsp;
-  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-light&quot;&gt;Light item&lt;/a&gt;<br>
+  list-group-item-action&quot;&gt;Action элемент&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot;
+  class=&quot;list-group-item list-group-item-action list-group-item-success&quot;&gt;Success элемент&lt;/a&gt;<br>&nbsp; &lt;a
+  href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-secondary&quot;&gt;Secondary элемент&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-info&quot;&gt;Info элемент&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-warning&quot;&gt;Warning элемент&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-danger&quot;&gt;Danger элемент&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-primary&quot;&gt;Primary элемент&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-dark&quot;&gt;Dark элемент&lt;/a&gt;<br>&nbsp;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item list-group-item-action list-group-item-light&quot;&gt;Light элемент&lt;/a&gt;<br>
   &lt;/div&gt;</div>
 <a target="_blank" href="tryit9ca7.html?filename=trybs_list_group_context_links&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>List Group with Badges</h2>
-<p>Combine <code class="w3-codespan">.badge</code> classes with utility/helper classes to add badges inside the list group:</p>
+<h2>Список группы со значками</h2>
+<p>Объедините классы <code class="w3-codespan">.badge</code> из служебными/помощи классами, чтобы добавить значки в группу списка:</p>
 <div class="container" style="margin: 0 -16px">
   <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -535,10 +532,10 @@ list-group-item-warning</code>, <code class="w3-codespan">.list-group-item-dange
 <a target="_blank" href="tryit45d9.html?filename=trybs_list_group_badge&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <div class="w3-note w3-panel">
-<p class="margin-bottom-add"><strong>Tip:</strong> Read more about Bootstrap 4 Utility/Helper classes in our <a href="bootstrap_utilities.html">BS4 Utilities Chapter</a>.</p>
+<p class="margin-bottom-add"><strong>Примечание:</strong> Узнать больше о классах Bootstrap 4 Служебные/Помощь вы можете в разделе <a href="bootstrap_utilities.html">BS4 Утилиты</a>.</p>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="bootstrap_pagination.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="bootstrap_cards.html">Next &#10095;</a>
@@ -551,7 +548,7 @@ list-group-item-warning</code>, <code class="w3-codespan">.list-group-item-dange
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / bootstrap4 / bootstrap_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / bootstrap4 / bootstrap_list_groups.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
