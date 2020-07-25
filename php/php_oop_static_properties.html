@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_oop_static_properties.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:12 GMT -->
+<head><title>PHP OOP Static Properties</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,97 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">OOP - Static Properties</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_static_methods.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_mysql_intro.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
+<h2>PHP - Static Properties</h2>
+<p>Static properties can be called directly - without creating an instance of a 
+class.</p>
+<p>Static properties are declared with the <code class="w3-codespan">static</code> 
+keyword:</p>
+
+<div class="w3-example">
+  <h3>Syntax</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>
+    class ClassName {<br>&nbsp; public static $staticProp = &quot;W3Schools&quot;;<br>}<br>?&gt;
+</div>
+</div>
+
+<p>To access a static property use the class name, double colon (::), and the 
+property name:</p>
+
+<div class="w3-example">
+  <h3>Syntax</h3>
+  <div class="w3-code htmlHigh notranslate">
+    ClassName::staticProp();</div>
+</div>
+
+<p>Let's look at an example:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class 
+    pi {<br>&nbsp; public static $value = 3.14159;<br>}<br>
+    <br>// Get static property<br>
+    echo pi::$value;<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit80d5.html?filename=tryphp_static_prop">Try it Yourself &raquo;</a>
+</div>
+<h3>Example Explained</h3>
+<p>Here, we declare a static property: $value. Then, we echo the value of the static 
+property 
+by using the class name, double colon (::), and the property name (without creating a class 
+first).</p>
 <hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
-</div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+    
 </div>
 <hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
+
+<h2>PHP - More on Static Properties</h2>
+<p>A class can have both static and non-static properties. A static property can be 
+accessed from a method in the same class using the <code class="w3-codespan">self</code> 
+keyword and double colon (::):</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class 
+    pi {<br>&nbsp; public static $value=3.14159;<br>&nbsp; public function 
+    staticValue() {<br>&nbsp;&nbsp;&nbsp; return self::$value;<br>&nbsp; }<br>}<br>
+    <br>$pi = new pi();<br>echo $pi-&gt;staticValue(); <br>?&gt;
 </div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit719f.html?filename=tryphp_static_prop2">Try it Yourself &raquo;</a>
 </div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+
+<p>To call a static property from a child class, use the <code class="w3-codespan">parent</code> 
+keyword inside the child class:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class 
+    pi {<br>&nbsp; public static $value=3.14159;<br>}<br>
+    <br>class x extends pi {<br>&nbsp; 
+    public function xStatic() {<br>&nbsp;&nbsp;&nbsp; return 
+    parent::$value;<br>&nbsp; } <br>}<br><br>// Get value of static property 
+    directly via child class<br>
+    echo x::$value;<br><br>// or get value of static property via xStatic() 
+    method<br>$x = new x();<br>echo $x-&gt;xStatic(); <br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitad5f.html?filename=tryphp_static_prop3">Try it Yourself &raquo;</a>
+</div>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_static_methods.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_mysql_intro.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2067,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_oop_static_properties.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:13 GMT -->
 </html>

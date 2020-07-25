@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_mysql_select_where.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:14 GMT -->
+<head><title>PHP MySQL Select Data With WHERE Clause</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,115 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">MySQL Use The WHERE Clause</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_mysql_select.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_mysql_select_orderby.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
+
+<h2>Select and Filter Data From a MySQL Database</h2>
+<p>The WHERE clause is used to filter records.</p>
+<p>The WHERE clause is used to extract only those records that fulfill a 
+specified condition.</p>
+<div class="w3-code w3-border notranslate"><div>
+SELECT column_name(s)
+FROM table_name WHERE column_name operator value&nbsp;
+</div></div>
+<p>To learn more about SQL, please visit our <a href="https://www.w3schools.com/sql/default.asp">SQL tutorial</a>.</p>
 <hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
+
+<h2>Select and Filter Data With MySQLi</h2>
+<p>The following example selects the id, firstname and lastname columns from the MyGuests 
+table where the lastname is &quot;Doe&quot;, and displays it on the page:</p>
+
+<div class="w3-example">
+<h3>Example (MySQLi Object-oriented)</h3>
+<div class="w3-code htmlHigh notranslate">
+&lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Create connection<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Check connection<br>if ($conn-&gt;connect_error) {<br>&nbsp;&nbsp;&nbsp; die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>
+ } <br><br>$sql = &quot;SELECT id, firstname, lastname FROM MyGuests WHERE 
+  lastname='Doe'&quot;;<br>$result = $conn-&gt;query($sql);<br><br>if ($result-&gt;num_rows &gt; 0) {<br>&nbsp;&nbsp;&nbsp; // output data of each row<br>&nbsp;&nbsp;&nbsp; while($row = $result-&gt;fetch_assoc()) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;id: &quot; . $row[&quot;id&quot;]. &quot; - Name: &quot; . $row[&quot;firstname&quot;]. &quot; &quot; . $row[&quot;lastname&quot;]. &quot;&lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; }<br>} else {<br>&nbsp;&nbsp;&nbsp; echo &quot;0 results&quot;;<br>}<br>
+ $conn-&gt;close();<br>
+?&gt;
 </div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_where_oo">Run example &raquo;</a>
+</div>
+
+<p>Code lines to explain from the example above:</p>
+<p>First, we set up the SQL query that selects the id, firstname and lastname columns from the MyGuests 
+table where the lastname is &quot;Doe&quot;. The next line of code runs the query and puts the resulting data into a 
+variable called $result.</p>
+<p>Then, the <code class="w3-codespan">function num_rows()</code> checks if there are more than zero 
+rows returned.</p>
+<p>If there are more than zero rows returned, the 
+function <code class="w3-codespan">fetch_assoc()</code> puts all the results into an associative array that we can loop 
+through. The <code class="w3-codespan">while()</code> loop loops through the result set and outputs the data from 
+the id, firstname and lastname columns.</p>
+<p>The following example shows the same as the example above, in the MySQLi procedural way:</p>
+<div class="w3-example">
+<h3>Example (MySQLi Procedural)</h3>
+<div class="w3-code htmlHigh notranslate">
+&lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Create connection<br>
+$conn = mysqli_connect($servername, $username, $password, $dbname);<br>
+ // Check connection<br>
+ if (!$conn)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;SELECT id, firstname, lastname FROM MyGuests 
+  WHERE lastname='Doe'&quot;;<br>$result = mysqli_query($conn, $sql);<br><br>if (mysqli_num_rows($result) &gt; 0) {<br>&nbsp;&nbsp;&nbsp; // output data of each row<br>&nbsp;&nbsp;&nbsp; while($row = mysqli_fetch_assoc($result)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;id: &quot; . $row[&quot;id&quot;]. &quot; - Name: &quot; . $row[&quot;firstname&quot;]. &quot; &quot; . $row[&quot;lastname&quot;]. &quot;&lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; }<br>} else {<br>&nbsp;&nbsp;&nbsp; echo &quot;0 results&quot;;<br>}<br>
+ <br>mysqli_close($conn);<br>
+?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_where_proc">Run example &raquo;</a>
 </div>
 <hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+    
 </div>
+<hr>
+
+<p>You can also put the result in an HTML table:</p>
+
+<div class="w3-example">
+<h3>Example (MySQLi Object-oriented)</h3>
+<div class="w3-code htmlHigh notranslate">
+&lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Create connection<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Check connection<br>if ($conn-&gt;connect_error) {<br>&nbsp;&nbsp;&nbsp; die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>
+ } <br><br>$sql = &quot;SELECT id, firstname, lastname FROM MyGuests WHERE 
+  lastname='Doe'&quot;;<br>$result = $conn-&gt;query($sql);<br><br>if ($result-&gt;num_rows &gt; 0) {<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;table&gt;&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;/tr&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; // output data of each row<br>&nbsp;&nbsp;&nbsp; while($row = $result-&gt;fetch_assoc()) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;tr&gt;&lt;td&gt;&quot;.$row[&quot;id&quot;].&quot;&lt;/td&gt;&lt;td&gt;&quot;.$row[&quot;firstname&quot;].&quot; &quot;.$row[&quot;lastname&quot;].&quot;&lt;/td&gt;&lt;/tr&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;/table&gt;&quot;;<br>} else {<br>&nbsp;&nbsp;&nbsp; echo &quot;0 results&quot;;<br>}<br>
+ $conn-&gt;close();<br>
+?&gt;
 </div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_where_oo_table">Run example &raquo;</a>
+</div>
+
+<hr>
+
+<h2>Select Data With PDO (+ Prepared Statements)</h2>
+<p>The following example uses prepared statements.</p>
+<p>It selects the id, firstname and lastname columns from the MyGuests table 
+where the lastname is &quot;Doe&quot;, and 
+displays it in an HTML table:</p>
+<div class="w3-example">
+<h3>Example (PDO)</h3>
+<div class="w3-code htmlHigh notranslate">
+&lt;?php<br>echo &quot;&lt;table style='border: solid 1px black;'&gt;&quot;;<br>
+ echo &quot;&lt;tr&gt;&lt;th&gt;Id&lt;/th&gt;&lt;th&gt;Firstname&lt;/th&gt;&lt;th&gt;Lastname&lt;/th&gt;&lt;/tr&gt;&quot;;<br><br>class TableRows extends RecursiveIteratorIterator {
+ <br>&nbsp;&nbsp;&nbsp; function __construct($it) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent::__construct($it, self::LEAVES_ONLY); <br>&nbsp;&nbsp;&nbsp; }<br>
+ <br>&nbsp;&nbsp;&nbsp; function current() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return &quot;&lt;td style='width:150px;border:1px solid black;'&gt;&quot; . parent::current(). &quot;&lt;/td&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; }<br><br>&nbsp;&nbsp;&nbsp; function beginChildren() { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;tr&gt;&quot;; <br>&nbsp;&nbsp;&nbsp; } <br><br>&nbsp;&nbsp;&nbsp; function endChildren() { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;/tr&gt;&quot; . &quot;\n&quot;;<br>&nbsp;&nbsp;&nbsp; } <br>} <br><br>$servername = &quot;localhost&quot;;<br>
+ $username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>
+ try {<br>&nbsp;&nbsp;&nbsp; $conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp;&nbsp;&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp;&nbsp;&nbsp; $stmt = $conn-&gt;prepare(&quot;SELECT id, firstname, lastname FROM MyGuests 
+  WHERE lastname='Doe'&quot;); <br>&nbsp;&nbsp;&nbsp; $stmt-&gt;execute();<br>
+ <br>&nbsp;&nbsp;&nbsp; // set the resulting array to associative<br>&nbsp;&nbsp;&nbsp; $result = $stmt-&gt;setFetchMode(PDO::FETCH_ASSOC); <br>&nbsp;&nbsp;&nbsp; foreach(new TableRows(new RecursiveArrayIterator($stmt-&gt;fetchAll())) as $k=&gt;$v) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo $v;<br>&nbsp;&nbsp;&nbsp; }<br>}<br>catch(PDOException $e) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Error: &quot; . $e-&gt;getMessage();<br>}<br>$conn = null;<br>echo &quot;&lt;/table&gt;&quot;;<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_where_pdo">Run example &raquo;</a>
+</div>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_mysql_select.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_mysql_select_orderby.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2085,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_mysql_select_where.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:14 GMT -->
 </html>

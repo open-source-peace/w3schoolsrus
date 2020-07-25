@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_oop_constants.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:07 GMT -->
+<head><title>PHP OOP Class Constants</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -513,14 +513,18 @@ ga('require', 'displayfeatures');
 ga('send', 'pageview');
 </script>
 
-<script src="../../snigelweb-com.videoplayerhub.com/videoloader.js" async></script>
-
 <script type='text/javascript'>
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-k42 = true;
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  gads.src = '../../www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -531,6 +535,85 @@ snhb.options = {
                      reconsiderationAppealIntervalSeconds: 0
                      }
                };
+
+// GPT slots
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+  googletag.pubads().disableInitialLoad();               
+  googletag.pubads().enableSingleRequest();
+  var leaderMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [320, 50]). 
+    // Vertical Tablet ad
+    addSize([512, 0], [468, 60]). 
+    // Horizontal Tablet
+    addSize([812, 0], [728, 90]).
+    // Small Desktop
+    addSize([1025, 0], [468, 60]).
+    // Normal Desktop
+    addSize([1182, 0], [728, 90]).
+    // Large Desktop and bigger ad
+    addSize([1457, 0], [[728, 90], [970, 90]]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
+    defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  var skyMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [320, 50]). 
+    // Tablet ad
+    addSize([983, 0], [120, 600]). 
+    // Desktop
+    addSize([1143, 0], [160, 600]).   
+    // Large Desktop
+    addSize([1683, 0], [[160, 600], [300, 600], [300, 1050]]).build();
+  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
+    defineSizeMapping(skyMapping).addService(googletag.pubads());
+  var stickyMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], []). 
+    // Tablet ad
+    addSize([983, 0], [120, 600]). 
+    // Desktop
+    addSize([1143, 0], [160, 600]).   
+    // Large Desktop
+    addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
+  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
+    defineSizeMapping(stickyMapping).addService(googletag.pubads());
+  var mcontMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
+    // Vertical Tablet ad
+    addSize([522, 0], [[300, 250], [336, 280], [468, 60]]). 
+    // Horizontal Tablet
+    addSize([782, 0], [728, 90]).
+    // Small Desktop
+    addSize([1025, 0], [[300, 250], [336, 280], [468, 60]]).
+    // Normal Desktop
+    addSize([1167, 0], [728, 90]).
+    // Large Desktop and bigger ad
+    addSize([1472, 0], [[728, 90], [970, 90], [970, 250]]).build();
+  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
+    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  var bmrMapping = googletag.sizeMapping().
+    // Smaller
+    addSize([0, 0], [[300, 250], [336, 280]]). 
+    // Large Desktop
+    addSize([1272, 0], [[300, 250], [336, 280], [970, 250]]).build();
+    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
+    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  var rbmrMapping = googletag.sizeMapping().
+    // Smaller
+    addSize([0, 0], []). 
+    // Large Desktop
+    addSize([1007, 0], [[300, 250], [336, 280]]).build();
+  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
+    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("https://www.w3schools.com/", "");
+    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
+    return folder;
+  })());
+});  
 
 </script>
 <script src="../../static.h-bid.com/sncmp/sncmp_stub.min.js" type="text/javascript"></script>
@@ -555,7 +638,7 @@ snhb.options = {
 <script>
   snhb.queue.push(function(){
 
-    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
 
   });
 </script>
@@ -1676,57 +1759,55 @@ function w3_getStyleValue(elmnt,style) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-
-        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="snhb-main_leaderboard-0"></div>
-        <!-- adspace leaderboard -->
+        
+        <div id='div-gpt-ad-1422003450156-2'>
+          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
+        </div>
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">OOP - Class Constants</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_inheritance.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_classes_abstract.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
-<hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
+<h2>PHP - Class Constants</h2>
+<p>Constants cannot be changed once it is declared.</p>
+<p>Class constants can be useful if you need to define some constant data within 
+a class.</p>
+<p>A class constant is declared inside a class with the <code class="w3-codespan">const</code> 
+keyword.</p>
+<p>Class constants are case-sensitive. However, it is recommended to name the constants in 
+all uppercase letters.</p>
+<p>We can access a constant from outside the class by using the class name 
+followed by the scope resolution operator (<code class="w3-codespan">::</code>) followed by the constant 
+name, like here:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class 
+    Goodbye {<br>&nbsp; const LEAVING_MESSAGE = &quot;Thank you for visiting W3Schools.com!&quot;;<br>}<br><br>echo 
+    Goodbye::LEAVING_MESSAGE;<br>
+    ?&gt;
 </div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit69cb.html?filename=tryphp_class_constant">Try it Yourself &raquo;</a>
 </div>
-<hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
+<p>Or, we can access a constant from inside the class by using the <code class="w3-codespan">
+self</code> keyword followed by the scope resolution operator (<code class="w3-codespan">::</code>) followed&nbsp;by the constant name, like here:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Goodbye {<br>&nbsp; const LEAVING_MESSAGE = &quot;Thank you for visiting W3Schools.com!&quot;;<br>&nbsp; 
+    public function byebye() {<br>&nbsp;&nbsp;&nbsp; echo self::LEAVING_MESSAGE;<br>&nbsp; 
+    }<br>}<br><br>$goodbye = new Goodbye();<br>$goodbye-&gt;byebye();<br>?&gt;
 </div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryita1d8.html?filename=tryphp_class_constant2">Try it Yourself &raquo;</a>
 </div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_inheritance.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_classes_abstract.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -1734,9 +1815,13 @@ your total score will be displayed. Maximum score is 25 points.</p>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
-    <div id="snhb-wide_skyscraper-0"></div>
-    <!-- adspace wide-->
+    <div id="div-gpt-ad-1422003450156-5">
+      <script>
+      googletag.cmd.push(function() {
+      googletag.display('div-gpt-ad-1422003450156-5');
+      });
+      </script> 
+    </div>
   
   </div>
 </div>
@@ -1837,24 +1922,13 @@ Read More &raquo;</a>
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
-      <div id="snhb-sidebar_sticky-0"></div>
-      <script>
-          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-            // adspace sticky
-            if (document.getElementById("snhb-mid_content-0")) {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
-            }
-            else {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
-            }
-          }
-          else {
-              if (document.getElementById("snhb-mid_content-0")) {
-                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
-              }
-          }
-      </script>  
+        <script>
+        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+        document.write("<div id='div-gpt-ad-1472547360578-0'>");
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
+        document.write("</div>");
+        }
+        </script>
       
     </div>
   </div>
@@ -1872,14 +1946,17 @@ Read More &raquo;</a>
 <hr>
 
 <div style="overflow:auto">
-  <div class="bottomad">
-    <!-- BottomMediumRectangle -->
-    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-    <!-- adspace bmr -->
-    <!-- RightBottomMediumRectangle -->
-    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  <!-- BottomMediumRectangle -->
+  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
+    </script>
+  </div>
+  <!-- RightBottomMediumRectangle -->
+  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
+    </script>
   </div>
 </div>
 
@@ -2021,5 +2098,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_oop_constants.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:08 GMT -->
 </html>

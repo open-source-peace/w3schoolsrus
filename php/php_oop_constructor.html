@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_oop_constructor.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:01 GMT -->
+<head><title>PHP OOP Constructor</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,53 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">OOP - Constructor</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_classes_objects.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_destructor.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
-<hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
+<h2>PHP - The __construct Function</h2>
+<p>A constructor allows you to initialize an object's properties upon creation of the object.</p>
+<p>If you create a <code class="w3-codespan">__construct()</code> function, PHP will automatically call this 
+function when you create an object from a class.</p>
+<p>Notice that the construct function starts with two underscores (__)!</p>
+<p>We see in the example below, that using a constructor saves us from  
+calling the set_name() method which reduces the amount of code:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; public 
+    $name;<br>&nbsp; public $color;<br><br>&nbsp; 
+    function __construct($name) {<br>&nbsp;&nbsp;&nbsp; $this-&gt;name = $name;
+    <br>&nbsp; }<br>&nbsp; function get_name() {<br>&nbsp;&nbsp;&nbsp; 
+    return $this-&gt;name;<br>&nbsp; }<br>}<br><br>$apple = new Fruit(&quot;Apple&quot;);<br>
+    echo $apple-&gt;get_name();<br>?&gt;
 </div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitef24.html?filename=tryphp_constructor">Try it Yourself &raquo;</a>
 </div>
-<hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
+
+<p>Another example:</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; public 
+    $name;<br>&nbsp; public $color;<br><br>&nbsp; 
+    function __construct($name, $color) {<br>&nbsp;&nbsp;&nbsp; $this-&gt;name = $name;
+    <br>&nbsp;&nbsp;&nbsp; $this-&gt;color = $color;
+    <br>&nbsp; }<br>&nbsp; function get_name() {<br>&nbsp;&nbsp;&nbsp; 
+    return $this-&gt;name;<br>&nbsp; }<br>&nbsp; function get_color() {<br>&nbsp;&nbsp;&nbsp; 
+    return $this-&gt;color;<br>&nbsp; }<br>}<br><br>$apple = new Fruit(&quot;Apple&quot;, &quot;red&quot;);<br>echo $apple-&gt;get_name();<br>echo 
+    &quot;&lt;br&gt;&quot;;<br>echo $apple-&gt;get_color();<br>?&gt;
 </div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitfb5b.html?filename=tryphp_constructor2">Try it Yourself &raquo;</a>
 </div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_classes_objects.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_destructor.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2023,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_oop_constructor.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:02 GMT -->
 </html>

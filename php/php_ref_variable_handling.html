@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_ref_variable_handling.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:57:39 GMT -->
+<head><title>PHP Variable Handling Functions</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,168 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">Variable Handling</span> Functions</h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_ref_string.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="php_ref_xml.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
-<hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
+<h2>PHP Variable Handling Functions</h2>
+<p>The PHP variable handling functions are part of the PHP core. No installation is required to use these functions.</p>
+
+<div class="w3-responsive">
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:30%">Function</th>
+    <th style="width:70%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="func_var_boolval.html">boolval()</a></td>
+    <td>Returns the boolean value of a variable</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_debug_zval_dump.html">debug_zval_dump()</a></td>
+    <td>Dumps a string representation of an internal zend value to output</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_doubleval.html">doubleval()</a></td>
+    <td>Alias of <a href="func_var_floatval.html">floatval()</a></td>
+  </tr>
+  <tr>
+    <td><a href="func_var_empty.html">empty()</a></td>
+    <td>Checks whether a variable is empty</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_floatval.html">floatval()</a></td>
+    <td>Returns the float value of a variable</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_get_defined_vars.html">get_defined_vars()</a></td>
+    <td>Returns all defined variables, as an array</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_get_resource_type.html">get_resource_type()</a></td>
+    <td>Returns the type of a resource</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_gettype.html">gettype()</a></td>
+    <td>Returns the type of a variable</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_intval.html">intval()</a></td>
+    <td>Returns the integer value of a variable</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_array.html">is_array()</a></td>
+    <td>Checks whether a variable is an array</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_bool.html">is_bool()</a></td>
+    <td>Checks whether a variable is a boolean</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_callable.html">is_callable()</a></td>
+    <td>Checks whether the contents of a variable can be called as a function</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_countable.html">is_countable()</a></td>
+    <td>Checks whether the contents of a variable is a countable value</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_double.html">is_double()</a></td>
+    <td>Alias of <a href="func_var_is_float.html">is_float()</a></td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_float.html">is_float()</a></td>
+    <td>Checks whether a variable is of type float</td>
+  </tr>
+  <tr>
+    <td style="height: 31px"><a href="func_var_is_int.html">is_int()</a></td>
+    <td style="height: 31px">Checks whether a variable is of type integer</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_integer.html">is_integer()</a></td>
+    <td>Alias of <a href="func_var_is_int.html">is_int()</a></td>
+  </tr>
+   <tr>
+    <td><a href="func_var_is_iterable.html">is_iterable()</a></td>
+    <td>Checks whether the contents of a variable is an iterable value</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_long.html">is_long()</a></td>
+    <td>Alias of <a href="func_var_is_int.html">is_int()</a></td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_null.html">is_null()</a></td>
+    <td>Checks whether a variable is NULL</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_numeric.html">is_numeric()</a></td>
+    <td>Checks whether a variable is a number or a numeric string</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_object.html">is_object()</a></td>
+    <td>Checks whether a variable is an object</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_real.html">is_real()</a></td>
+    <td>Alias of <a href="func_var_is_float.html">is_float()</a></td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_resource.html">is_resource()</a></td>
+    <td>Checks whether a variable is a resource</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_scalar.html">is_scalar()</a></td>
+    <td>Checks whether a variable is a scalar</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_is_string.html">is_string()</a></td>
+    <td>Checks whether a variable is of type string</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_isset.html">isset()</a></td>
+    <td>Checks whether a variable is set (declared and not NULL)</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_print_r.html">print_r()</a></td>
+    <td>Prints the information about a variable in a human-readable way</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_serialize.html">serialize()</a></td>
+    <td>Converts a storable representation of a value</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_settype.html">settype()</a></td>
+    <td>Converts a variable to a specific type</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_strval.html">strval()</a></td>
+    <td>Returns the string value of a variable</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_unserialize.html">unserialize()</a></td>
+    <td>Converts serialized data back into actual data</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_unset.html">unset()</a></td>
+    <td>Unsets a variable</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_var_dump.html">var_dump()</a></td>
+    <td>Dumps information about one or more variables</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_var_export.html">var_export()</a></td>
+    <td>Returns structured information (valid PHP code) about a variable</td>
+  </tr>
+  </table>
 </div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
-</div>
-<hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
-</div>
-</div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_ref_string.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="php_ref_xml.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2138,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_ref_variable_handling.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:57:39 GMT -->
 </html>

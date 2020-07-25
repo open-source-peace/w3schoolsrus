@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_oop_classes_abstract.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:08 GMT -->
+<head><title>PHP OOP Abstract Classes</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,137 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">OOP - Abstract Classes</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_constants.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_traits.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
+<h2>PHP - What are Abstract Classes and Methods?</h2>
+<p>Abstract classes and methods are when the parent class has a named method, 
+but 
+need its child class(es) to fill out the tasks.</p>
+<p>An abstract class is a class that contains at least one abstract method. An 
+abstract method is a method that is declared, but not implemented in the code.</p>
+<p>An abstract class or method is defined with the <code class="w3-codespan">abstract</code> 
+keyword:</p>
+
+<div class="w3-example">
+  <h3>Syntax</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>abstract class 
+    ParentClass {<br>&nbsp; abstract public function someMethod1();<br>&nbsp; 
+    abstract public function someMethod2($name, $color);<br>&nbsp; abstract 
+    public function someMethod3() : string;<br>}<br>?&gt;
+</div>
+</div>
+
+<p>When inheriting from an abstract class, the child class method must be 
+defined with the same name, and the same or a less restricted access modifier. 
+So, if the abstract method is defined as protected, the child class method must 
+be defined as either protected or public, but not private. Also, the type and number of 
+required arguments must be the same. However, the child classes may have optional 
+arguments in addition.</p>
+<p>So, when a child class is inherited from an abstract class, we have the following rules:</p>
+<ul>
+  <li>The child class method must be defined with the same name and it redeclares the parent abstract method</li>
+  <li>The child class method must be defined with the same or a less restricted 
+  access modifier</li>
+  <li>The number of required arguments must be the same. However, the child class 
+  may has optional 
+arguments in addition</li>
+</ul>
+
+<p>Let's look at an example:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>// Parent class<br>abstract class Car {<br>&nbsp; public 
+    $name;<br>&nbsp; public 
+    function __construct($name) {<br>&nbsp;&nbsp;&nbsp; $this-&gt;name = $name;<br>&nbsp; }<br>&nbsp; 
+    abstract public function intro() : string;     <br>}<br><br>// Child classes<br>class 
+    Audi extends Car {<br>&nbsp; public 
+    function intro() : string {<br>&nbsp;&nbsp;&nbsp; return &quot;Choose German 
+    quality! I'm an $this-&gt;name!&quot;;
+    <br>&nbsp; }<br>}<br><br>class 
+    Volvo extends Car {<br>&nbsp; public 
+    function intro() : string {<br>&nbsp;&nbsp;&nbsp; return &quot;Proud to be 
+    Swedish! I'm a $this-&gt;name!&quot;;
+    <br>&nbsp; }<br>}<br><br>class 
+    Citroen extends Car {<br>&nbsp; public 
+    function intro() : string {<br>&nbsp;&nbsp;&nbsp; return &quot;French 
+    extravagance! I'm a $this-&gt;name!&quot;;
+    <br>&nbsp; }<br>}<br><br>// Create objects from the child classes<br>$audi = new 
+    audi(&quot;Audi&quot;);<br>
+    echo $audi-&gt;intro();<br>echo &quot;&lt;br&gt;&quot;;<br><br>$volvo = new 
+    volvo(&quot;Volvo&quot;);<br>
+    echo $volvo-&gt;intro();<br>echo &quot;&lt;br&gt;&quot;;<br>
+    <br>$citroen = new citroen(&quot;Citroen&quot;);<br>
+    echo $citroen-&gt;intro();<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit2a09.html?filename=tryphp_abstract">Try it Yourself &raquo;</a>
+</div>
+<h3>Example Explained</h3>
+<p>The Audi, Volvo, and Citroen classes are inherited from the Car class. This means that the 
+Audi, Volvo, and Citroen classes can use the public $name 
+property as well as the public __construct() method from the 
+Car class because of inheritance.</p>
+<p>But, intro() is an abstract method that should be defined in all the child 
+classes and they should return a string.</p>
 <hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
-</div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+    
 </div>
 <hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
+
+<h2>PHP - More Abstract Class Examples</h2>
+<p>Let's look at another example where the abstract method has an argument:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>abstract class ParentClass {<br>&nbsp; // Abstract method 
+    with an argument<br>&nbsp; abstract protected 
+    function prefixName($name);<br>}<br><br>class ChildClass extends ParentClass {<br>&nbsp; public function prefixName($name) {<br>&nbsp;&nbsp;&nbsp; 
+    if ($name == &quot;John Doe&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $prefix = &quot;Mr.&quot;;<br>&nbsp;&nbsp;&nbsp; 
+    } elseif ($name == &quot;Jane Doe&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $prefix = 
+    &quot;Mrs.&quot;;<br>&nbsp;&nbsp;&nbsp; } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    $prefix = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; return 
+    &quot;{$prefix} {$name}&quot;;<br>&nbsp; }<br>}<br><br>$class = new ChildClass;<br>echo $class-&gt;prefixName(&quot;John 
+    Doe&quot;);<br>echo &quot;&lt;br&gt;&quot;; <br>echo $class-&gt;prefixName(&quot;Jane Doe&quot;);<br>?&gt;
 </div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit305a.html?filename=tryphp_abstract2">Try it Yourself &raquo;</a>
 </div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+
+
+<p>Let's look at another example where the abstract method has an argument, and 
+the child class has two optional arguments that are not defined in the parent's 
+    abstract method:</p>
+<div class="w3-example">
+  <h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>abstract class ParentClass {<br>&nbsp; // Abstract method 
+    with an argument<br>&nbsp; abstract protected 
+    function prefixName($name);<br>}<br><br>class ChildClass extends ParentClass {<br>&nbsp; 
+    // The child class may define optional arguments that are not in the parent's 
+    abstract method<br>&nbsp; public function prefixName($name, $separator = &quot;.&quot;, 
+    $greet = &quot;Dear&quot;) {<br>&nbsp;&nbsp;&nbsp; 
+    if ($name == &quot;John Doe&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $prefix = &quot;Mr&quot;;<br>&nbsp;&nbsp;&nbsp; 
+    } elseif ($name == &quot;Jane Doe&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $prefix = 
+    &quot;Mrs&quot;;<br>&nbsp;&nbsp;&nbsp; } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    $prefix = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; return 
+    &quot;{$greet} {$prefix}{$separator} {$name}&quot;;<br>&nbsp; }<br>}<br><br>$class = new ChildClass;<br>echo $class-&gt;prefixName(&quot;John 
+    Doe&quot;);<br>echo &quot;&lt;br&gt;&quot;; <br>echo $class-&gt;prefixName(&quot;Jane Doe&quot;);<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitd225.html?filename=tryphp_abstract3">Try it Yourself &raquo;</a>
+</div>
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_constants.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_traits.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2107,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_oop_classes_abstract.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:09 GMT -->
 </html>

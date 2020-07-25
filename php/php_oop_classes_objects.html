@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_oop_classes_objects.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:52:59 GMT -->
+<head><title>PHP OOP Classes and Objects</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,152 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">OOP - Classes and Objects</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_what_is.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_constructor.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
+<p class="intro">A class is a template for objects, and an object is an instance 
+of class.</p>
 <hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
+
+<h2>OOP Case</h2>
+<p>Let's assume we have a class named Fruit. A Fruit can have properties like name, 
+color, weight, etc. We can define variables like $name, $color, and $weight to hold the values of these properties.</p>
+<p>When the individual objects (apple, banana, etc.) are created, they inherit 
+all the  
+properties and behaviors from the class, but each object will have different values for the properties.</p>
+<hr>
+
+<h2>Define a Class</h2>
+<p>A class is defined by using the <code class="w3-codespan">class</code> 
+keyword, followed by the name of the class and a pair of curly braces ({}). All 
+its properties and methods goes inside the braces:</p>
+<div class="w3-example">
+<h3>Syntax</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; // code goes here...<br>}<br>?&gt;
 </div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
+</div>
+
+<p>Below we declare a class named Fruit consisting of two properties 
+($name and $color) and two methods set_name() and 
+get_name() for setting and getting the $name property:</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; // Properties<br>&nbsp; public 
+    $name;<br>&nbsp; public $color;<br><br>&nbsp; // Methods<br>&nbsp; function 
+    set_name($name) {<br>&nbsp;&nbsp;&nbsp; 
+    $this-&gt;name = $name;<br>&nbsp; }<br>&nbsp; function get_name() {<br>&nbsp;&nbsp;&nbsp; 
+    return $this-&gt;name;<br>&nbsp; }<br>}<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryita947.html?filename=tryphp_class">Try it Yourself &raquo;</a>
+</div>
+<div class="w3-panel w3-note">
+  <p><strong>Note:</strong> In a class, variables are called properties and 
+  functions are called methods!</p>
 </div>
 <hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
+    
+</div>
+<hr>
+
+<h2>Define Objects</h2>
+<p>Classes are nothing without objects! We can create multiple objects from a 
+class. Each object has all the properties and methods defined in the class, but 
+they will have different property values.</p>
+<p>Objects 
+of a class is created using the <code class="w3-codespan">new</code> keyword.</p>
+<p>In the example below, $apple and $banana are instances of the class Fruit:</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; // Properties<br>&nbsp; public 
+    $name;<br>&nbsp; public $color;<br><br>&nbsp; // Methods<br>&nbsp; function 
+    set_name($name) {<br>&nbsp;&nbsp;&nbsp; 
+    $this-&gt;name = $name;<br>&nbsp; }<br>&nbsp; function get_name() {<br>&nbsp;&nbsp;&nbsp; 
+    return $this-&gt;name;<br>&nbsp; }<br>}<br><br>$apple = new Fruit();<br>
+    $banana = new Fruit();<br>$apple-&gt;set_name('Apple');<br>$banana-&gt;set_name('Banana');<br>
+    <br>echo $apple-&gt;get_name();<br>echo &quot;&lt;br&gt;&quot;;<br>
+    echo $banana-&gt;get_name();<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit5914.html?filename=tryphp_class2">Try it Yourself &raquo;</a>
+</div>
+
+<p>In the example below, we add two more methods to class Fruit, for setting and 
+getting the $color property:</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; // Properties<br>&nbsp; public $name;<br>&nbsp; 
+    public $color;<br><br>&nbsp; // Methods<br>&nbsp; 
+    function set_name($name) {<br>&nbsp;&nbsp;&nbsp; $this-&gt;name = $name;<br>&nbsp; }<br>&nbsp; 
+    function get_name() {<br>&nbsp;&nbsp;&nbsp; return $this-&gt;name;<br>&nbsp; }<br>&nbsp; 
+    function set_color($color) {<br>&nbsp;&nbsp;&nbsp; $this-&gt;color = $color;<br>&nbsp; }<br>&nbsp; 
+    function get_color() {<br>&nbsp;&nbsp;&nbsp; return $this-&gt;color;<br>&nbsp; }<br>
+    }<br><br>$apple = new Fruit();<br>$apple-&gt;set_name('Apple');<br>
+    $apple-&gt;set_color('Red');<br>echo &quot;Name: &quot; . $apple-&gt;get_name();<br>echo &quot;&lt;br&gt;&quot;;<br>
+    echo &quot;Color: &quot; . $apple-&gt;get_color();<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryita918.html?filename=tryphp_class3">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>PHP - The $this Keyword</h2>
+<p>The $this keyword refers to the current object, and is only available inside 
+methods.</p>
+<p>Look at the following example:</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; public $name;<br>}<br>$apple = new Fruit();<br>?&gt;
 </div>
 </div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+<p>So, where can we change the value of the $name property? There are two 
+ways:</p>
+<p>1. Inside the class (by adding a set_name() method and use $this):</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; public $name;<br>&nbsp; 
+    function set_name($name) {<br>&nbsp;&nbsp;&nbsp; $this-&gt;name = $name;<br>&nbsp; 
+    }<br>}<br>$apple = new Fruit();<br>$apple-&gt;set_name(&quot;Apple&quot;);<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit79be.html?filename=tryphp_this">Try it Yourself &raquo;</a>
+</div>
+
+<p>2. Outside the class (by directly change the property value):</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>class Fruit {<br>&nbsp; public $name;<br>}<br>$apple = new Fruit();<br>$apple-&gt;name = &quot;Apple&quot;;<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit5a87.html?filename=tryphp_this2">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>PHP - instanceof</h2>
+<p>You can use the <code class="w3-codespan">instanceof</code> keyword to check if an object belongs to a specific class:</p>
+<div class="w3-example">
+<h3>Example</h3>
+  <div class="w3-code htmlHigh notranslate">
+    &lt;?php<br>$apple = new Fruit();<br>var_dump($apple instanceof 
+    Fruit);<br>?&gt;
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit7dff.html?filename=tryphp_class4">Try it Yourself &raquo;</a>
+</div>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_oop_what_is.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_oop_constructor.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2122,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_oop_classes_objects.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:01 GMT -->
 </html>

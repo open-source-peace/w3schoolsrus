@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
-<head>
-<title>PHP Quiz</title>
+<!-- Mirrored from www.w3schools.com/php/php_ref_json.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:55:20 GMT -->
+<head><title>PHP JSON Functions</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1682,51 +1682,197 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Quiz</span></h1>
+<h1>PHP <span class="color_h1">JSON</span> Functions</h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_ref_ftp.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_ref_libxml.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">You can test your PHP skills with W3Schools' Quiz.</p>
+<h2>PHP JSON Introduction</h2>
+<p>The JSON extension implements the JavaScript Object Notation data-interchange 
+format.</p>
+<p>In PHP 5, the decoding is handled by a parser based on the JSON_checker by 
+Douglas Crockford.</p>
+<p>PHP 7 has a new and improved parser specifically written for PHP and licensed 
+under the PHP license.</p>
 <hr>
-<h2>The Test</h2>
-<p>The test contains 25 questions and there is no time limit.</p>
-<p>The test is not official, it's just a nice way to see how much you know, or don't know, about 
-PHP.</p>
-<h2>Count Your Score</h2>
-<p>You will get 1 point for each correct answer. At the end of the Quiz,
-your total score will be displayed. Maximum score is 25 points.</p>
-<div class="w3-light-grey w3-padding w3-margin-top">
-<h2>Start the Quiz</h2>
-<p>Good luck!</p>
-<p><a href='https://www.w3schools.com/quiztest/quiztest.asp?qtest=PHP' class="w3-btn w3-blue" style="margin-top:10px;padding:17px;font-size:17px">Start the PHP Quiz &#10095;</a></p>
-</div>
-<div class="w3-note w3-panel">
-  <p>If you don't know PHP, we suggest that you read our <a href="default.html">PHP Tutorial</a> from scratch.</p>
-</div>
+
+<h2>Installation</h2>
+<p>From PHP 5.2.0, the JSON functions are enabled by default. There is no 
+installation needed to use these functions.</p>
 <hr>
-<div class="w3-row">
-<div class="w3-third w3-container w3-padding-24"><a href="https://www.w3schools.com/cert/default.asp"><img src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="W3Schools Certification" /></a> </div>
-<div class="w3-twothird w3-container"><h2>W3Schools' Online Certification</h2>
-<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
-<p>More than 25 000 certificates already issued!</p>
-</div>
-</div>
-<p><a class="w3-btn" href="https://www.w3schools.com/cert/default.asp">Get Your Certificate &raquo;</a></p>
-<p style="clear:both;">The <a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a> documents your knowledge of HTML.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a> documents your knowledge of Python.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a> documents your knowledge of jQuery.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a> documents your knowledge of SQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a> documents your knowledge of PHP and MySQL.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
-<p>The <a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a> documents your knowledge of the Bootstrap framework.</p>
+<h2>PHP JSON Functions</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:30%">Function</th>
+    <th style="width:70%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="func_json_decode.html">json_decode()</a></td>
+    <td>Decodes a JSON string</td>
+  </tr>
+  <tr>
+    <td><a href="func_json_encode.html">json_encode()</a></td>
+    <td>Encode a value to JSON format</td>
+  </tr>
+  <tr>
+    <td><a href="func_json_last_error.html">json_last_error()</a></td>
+    <td>Returns the last error occurred</td>
+  </tr>
+  <tr>
+    <td>json_last_error_msg()</td>
+    <td>Returns the error string of the last json_encode() or json_decode() call</td>
+  </tr>
+  </table>
+
+<h2>PHP Predefined JSON Constants</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:50%">Constant</th>
+    <th style="width:15%">Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_NONE</td>
+    <td>Integer</td>
+    <td>No error has occurred</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_DEPTH</td>
+    <td>Integer</td>
+    <td>Maximum stack depth has been exceeded</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_STATE_MISMATCH</td>
+    <td>Integer</td>
+    <td>Invalid/Malformed JSON</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_CTRL_CHAR</td>
+    <td>Integer</td>
+    <td>Control character error</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_SYNTAX</td>
+    <td>Integer</td>
+    <td>Syntax error</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_UTF8</td>
+    <td>Integer</td>
+    <td>Malformed UTF-8 characters. PHP 5.3</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_RECURSION</td>
+    <td>Integer</td>
+    <td>Invalid recursive reference values. PHP 5.5</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_INF_OR_NAN</td>
+    <td>Integer</td>
+    <td>Invalid NAN or INF values. PHP 5.5</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_UNSUPPORTED_TYPE</td>
+    <td>Integer</td>
+    <td>Invalid type. PHP 5.5</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_INVALID_PROPERTY_NAME</td>
+    <td>Integer</td>
+    <td>Invalid property name. PHP 7.0</td>
+  </tr>
+  <tr>
+    <td>JSON_ERROR_UTF16</td>
+    <td>Integer</td>
+    <td>Malformed UTF-16 characters. PHP 7.0</td>
+  </tr>
+  <tr>
+    <td>JSON_BIGINT_AS_STRING</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_OBJECT_AS_ARRAY</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_HEX_TAG</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_HEX_AMP</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_HEX_APOS</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_HEX_QUOT</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_FORCE_OBJECT</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_NUMERIC_CHECK</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_PRETTY_PRINT</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_UNESCAPED_SLASHES</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_PARTIAL_OUTPUT_ON_ERROR</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_PRESERVE_ZERO_FRACTION</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_UNESCAPED_LINE_TERMINATORS</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_INVALID_UTF8_IGNORE</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_INVALID_UTF8_SUBSTITUTE</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>JSON_THROWN_ON_ERROR</td>
+    <td>Integer</td>
+    <td>&nbsp;</td>
+  </tr>
+  </table>
+
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_examples.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="php_exercises.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="php_ref_ftp.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="php_ref_libxml.html">Next &#10095;</a>
 </div>
 </div>
 <div class="w3-col l2 m12" id="right">
@@ -2021,5 +2167,5 @@ While using this site, you agree to have read and accepted our <a href="https://
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_quiz.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:51:55 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_ref_json.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:55:21 GMT -->
 </html>

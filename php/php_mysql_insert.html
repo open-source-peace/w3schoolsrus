@@ -2,15 +2,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/php/php_mysql_insert.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:42:27 GMT -->
-<head><title>PHP Insert Data Into MySQL</title>
+<!-- Mirrored from www.w3schools.com/php/php_mysql_insert.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:14 GMT -->
+<head><title>PHP MySQL Insert Data</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
 <meta name="Description" content="Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Bootstrap, Java and XML.">
-<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://www.w3schools.com/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
 <link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+
 <style>
 a:hover,a:active{color:#4CAF50}
 table.w3-table-all{margin:20px 0}
@@ -150,6 +151,7 @@ padding-left:6px;
 #w3-exerciseform {background-color:#555555;padding:16px;color:#ffffff;}
 #w3-exerciseform .exercisewindow {background-color:#ffffff;padding:16px;color:#000000;}
 #w3-exerciseform .exerciseprecontainer {background-color:#f1f1f1;padding:16px;font-size:120%;font-family:Consolas,"Courier New", Courier, monospace;}
+#w3-exerciseform .exerciseprecontainer pre[class*="language-"] {padding:1px;}
 #w3-exerciseform .exerciseprecontainer pre {display: block;}
 #w3-exerciseform .exerciseprecontainer input {padding:1px;border: 1px solid transparent;height:1.3em;}
 .w3-theme {color:#fff !important;background-color:#73AD21 !important;background-color:#4CAF50 !important}
@@ -206,11 +208,11 @@ background-color:#f1f1f1;
 }
 @font-face {
 font-family:'fontawesome';
-src: url('../lib/fonts/fontawesome8deb.eot?14663396');
-src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
-url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
-url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
-url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
+src: url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396');
+src:url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
+url('https://www.w3schools.com/lib/fonts/fontawesome.woff?14663396') format('woff'),
+url('https://www.w3schools.com/lib/fonts/fontawesome.ttf?14663396') format('truetype'),
+url('https://www.w3schools.com/lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
 font-weight:normal;
 font-style:normal;
 }
@@ -242,6 +244,17 @@ transform:translate(0, 0);
 span.marked, span.deprecated {
  color:#e80000;
  background-color:transparent;
+}
+.w3-code span.marked {
+ color:#e80000;
+ background-color:transparent;
+}
+.darktheme .w3-code span.marked {
+ color:#ff9999;
+ background-color:transparent;
+}
+.darktheme .w3-example.w3-light-grey {
+  background-color:rgb(40,44,52)!important;color:white;
 }
 .intro {font-size:16px}
 .w3-btn, .w3-btn:link, .w3-btn:visited {color:#FFFFFF;background-color:#4CAF50}
@@ -293,17 +306,18 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 .sqlkeywordcolor{color:mediumblue}
 .sqlstringcolor{color:brown}
 .sqlnumbercolor{color:} 
-.darktheme {background-color:rgb(40,44,52);color:white;}
+.darktheme .w3-code{background-color:rgb(40,44,52);color:white;border-left-color:rgb(40,44,52)}
+.darktheme .w3-example pre{background-color:rgb(40,44,52)!important;border-left-color:rgb(40,44,52)}
 .darktheme .tagcolor{color:#88ccbb/*green2*/!important}
 .darktheme .tagnamecolor{color:#ff9999/*red*/!important}
 .darktheme .attributecolor{color:#c5a5c5/*purple*/!important}
 .darktheme .attributevaluecolor{color:#88c999/*green*/!important}
-.darktheme .commentcolor{color:color: #999;!important}
+.darktheme .commentcolor{color:#999!important}
 .darktheme .cssselectorcolor{color:#ff9999/*red*/!important}
 .darktheme .csspropertycolor{color:#c5a5c5/*purple*/!important}
 .darktheme .csspropertyvaluecolor{color:#88c999/*green*/!important}
 .darktheme .cssdelimitercolor{color:white!important}
-.darktheme .cssimportantcolor{color:color:#ff9999/*red*/!important}
+.darktheme .cssimportantcolor{color:#ff9999/*red*/!important}
 .darktheme .jscolor{color:white!important}
 .darktheme .jskeywordcolor{color:#c5a5c5/*purple*/!important}
 .darktheme .jsstringcolor{color:#88c999/*green*/!important}
@@ -323,7 +337,7 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 .darktheme .phpcolor{color:white!important}
 .darktheme .phpkeywordcolor{color:#ff9999/*red*/!important}
 .darktheme .phpglobalcolor{color:white!important}
-.darktheme .phpstringcolor{color:color:#88c999/*green*/!important}
+.darktheme .phpstringcolor{color:#88c999/*green*/!important}
 .darktheme .phpnumbercolor{color:#88c999/*green*/!important}
 .darktheme .pythoncolor{color:white!important}
 .darktheme .pythonkeywordcolor{color:#ff9999/*red*/!important}
@@ -346,26 +360,148 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 #div-gpt-ad-1422003450156-0 {float:none;margin-left:auto;margin-right:auto}
 #div-gpt-ad-1422003450156-3 {float:none;margin-left:auto;margin-right:auto}
 }
-@media (max-width:1700px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(17){display:none;}}
+@media (max-width:1700px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(18){display:none;}}
 @media (max-width:1600px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(13){display:none;}}
-@media (max-width:1510px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(12){display:none;}}
+/*@media (max-width:1510px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(12){display:none;}}*/
+@media (max-width:1530px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(12){display:none;}}
 @media (max-width:1450px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(11){display:none;}}
-@media (max-width:1330px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(10){display:none;}}
-@media (max-width:1200px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(9){display:none;}}
-@media (max-width:1100px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(8){display:none;}}
-@media (max-width:1000px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(7){display:none;}}
-@media (max-width:992px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(6){display:none;}}
-@media (max-width:930px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(18){display:none;}}
-@media (max-width:800px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(19){display:none;}}
-@media (max-width:650px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(5){display:none;} #topnav .w3-bar:nth-of-type(1) a:nth-of-type(16){display:none;}}
-@media (max-width:460px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(4){display:none;}}
-@media (max-width:400px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(3){display:none;}}
+/*@media (max-width:1330px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(10){display:none;}}*/
+@media (max-width:1350px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(10){display:none;}}
+/*@media (max-width:1200px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(9){display:none;}}*/
+@media (max-width:1240px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(9){display:none;}}
+/*@media (max-width:1100px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(8){display:none;}}*/
+@media (max-width:1140px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(8){display:none;}}
+/*@media (max-width:1000px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(7){display:none;}}*/
+@media (max-width:1050px) {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(7){display:none;}}
+@media (max-width:992px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(6){display:none;}}
+@media (max-width:300px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(17){display:none;}}
+@media (max-width:930px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(19){display:none;}}
+@media (max-width:800px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(20){display:none;}}
+@media (max-width:650px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(5){display:none;} #topnav .w3-bar:nth-of-type(1) a:nth-of-type(16){display:none;}}
+@media (max-width:460px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(4){display:none;}}
+@media (max-width:400px)  {#topnav .w3-bar:nth-of-type(1) a:nth-of-type(3){display:none;}}
 .w3-note{background-color:#ffffcc;border-left:6px solid #ffeb3b}
 .w3-warning{background-color:#ffdddd;border-left:6px solid #f44336}
 .w3-info{background-color:#ddffdd;border-left:6px solid #4CAF50}
 hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
 .phonebr {display:none;}
 @media screen and (max-width: 475px) {.phonebr {display:initial;}}
+
+/*NYTT:*/
+#main {
+  padding:16px 32px 32px 32px;
+  border-right: 1px solid #f1f1f1;
+}
+#right {
+  padding:16px 8px;
+}
+.sidesection .w3-left-align {
+  text-align:center!important;
+}
+#footer {padding:32px;border-top:1px solid #f1f1f1;}
+#footer hr:first-child {
+  display:none;
+}
+.w3-info {
+  background-color: #d4edda;
+  border-left: none;
+  padding:32px;
+  margin:24px;
+  margin-left:-32px;
+  margin-right:-32px;
+}
+.w3-example {
+  padding: 8px 20px;
+  margin: 24px -20px;
+  box-shadow:none!important;
+}
+.w3-note, .w3-warning {
+  border-left: none;
+}
+.w3-panel {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left:-32px;
+  margin-right:-32px;
+  padding:16px 32px;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 32px;
+}
+.w3-btn:hover,.w3-btn:active,.w3-example a:focus,.nextprev a:focus {
+  box-shadow: none;
+  background-color: #46a049!important;
+}
+.w3-btn:hover.w3-blue,.w3-btn:active.w3-blue,.w3-button:hover.w3-blue,.w3-button:active.w3-blue {
+  background-color: #0d8bf2!important;color: #fff!important;
+}
+.w3-btn:hover.w3-white,.w3-btn:active.w3-white,.w3-button:hover.w3-white,.w3-button:active.w3-white {
+  background-color: #f1f1f1!important;
+}
+.nextprev .w3-btn:not(.w3-left):not(.w3-right):hover,.nextprev .w3-btn:not(.w3-left):not(.w3-right):active,.nextprev .w3-btn:not(.w3-left):not(.w3-right):focus {
+  background-color: #f1f1f1!important;
+}
+a.btnsmall:hover {box-shadow:none;}
+a.btnsmall:active,a.btnsmall:hover {color:#fff;}
+a.btnplayit:hover,a.btnplayit:active {background-color:#ff9900!important;color:#fff}
+a.btnplayit:hover {box-shadow:none;}
+#w3-exerciseform {
+  padding: 20px;
+  margin:32px -20px;
+}
+p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  font-size: 15px;
+}
+hr {
+  margin:20px -16px;
+}
+.w3-codespan {
+  font-size:105%;
+}
+.w3-example p,.w3-panel p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.w3-code{
+  font-size:15px;
+}
+#midcontentadcontainer,#mainLeaderboard {
+  text-align:center;
+  margin-left:-20px;
+  margin-right:-20px;
+}
+@media screen and (max-width:600px) {
+.w3-example, #w3-exerciseform {margin-left:-32px;margin-right:-32px;}
+}
+
+@media only screen and (max-device-width: 480px) {
+#main {padding:24px}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 25px;
+}
+.w3-example {
+  padding: 8px 16px;
+  margin: 24px -24px;
+}
+#w3-exerciseform {
+  padding: 8px 16px 16px 16px;
+  margin: 24px -24px;
+}
+.w3-panel,.w3-info {
+  margin-left:-24px;
+  margin-right:-24px;
+}
+
+}
+
 </style>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -377,18 +513,14 @@ ga('require', 'displayfeatures');
 ga('send', 'pageview');
 </script>
 
+<script src="../../snigelweb-com.videoplayerhub.com/videoloader.js" async></script>
+
 <script type='text/javascript'>
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = '../../www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -400,92 +532,13 @@ snhb.options = {
                      }
                };
 
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-  googletag.pubads().disableInitialLoad();               
-  googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Vertical Tablet ad
-    addSize([480, 0], [468, 60]). 
-    // Horizontal Tablet
-    addSize([780, 0], [728, 90]).
-    // Small Desktop
-    addSize([993, 0], [468, 60]).
-    // Normal Desktop
-    addSize([1150, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1425, 0], [[728, 90], [970, 90]]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
-    defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  var skyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Tablet ad
-    addSize([975, 0], [120, 600]). 
-    // Desktop
-    addSize([1135, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1675, 0], [[160, 600], [300, 600], [300, 1050]]).build();
-  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
-    defineSizeMapping(skyMapping).addService(googletag.pubads());
-  var stickyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], []). 
-    // Tablet ad
-    addSize([975, 0], [120, 600]). 
-    // Desktop
-    addSize([1135, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1675, 0], [[160, 600], [300, 600], [300, 250]]).build();
-  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
-    defineSizeMapping(stickyMapping).addService(googletag.pubads());
-  var mcontMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
-    // Vertical Tablet ad
-    addSize([490, 0], [[300, 250], [336, 280], [468, 60]]). 
-    // Horizontal Tablet
-    addSize([750, 0], [728, 90]).
-    // Small Desktop
-    addSize([993, 0], [[300, 250], [336, 280], [468, 60]]).
-    // Normal Desktop
-    addSize([1135, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1440, 0], [[728, 90], [970, 90], [970, 250]]).build();
-  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
-    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var bmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], [[300, 250], [336, 280]]). 
-    // Large Desktop
-    addSize([1240, 0], [[300, 250], [336, 280], [970, 250]]).build();
-    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
-    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var rbmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], []). 
-    // Large Desktop
-    addSize([975, 0], [[300, 250], [336, 280]]).build();
-  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
-    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("../index.html", "");
-    folder = folder.substr(0, folder.indexOf("../index.html"));
-    return folder;
-  })());
-});  
-
 </script>
 <script src="../../static.h-bid.com/sncmp/sncmp_stub.min.js" type="text/javascript"></script>
 <script>
 			window.__cmp('setLogo', "../images/w3schoolscom_gray.gif", function(result){
 	       		snhb.console.log("Logo set");
 	    	});
-			window.__cmp('setPrivacyPolicy', "../about/about_privacy.html", function(result){
+			window.__cmp('setPrivacyPolicy', "http://www.w3schools.com/about/about_privacy.asp", function(result){
 	       		snhb.console.log("Privacy policy URI set");
 	    	});
 			window.__cmp('enableBanner', null, function(result) {
@@ -502,7 +555,7 @@ googletag.cmd.push(function() {
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
 
   });
 </script>
@@ -566,7 +619,7 @@ function w3_getStyleValue(elmnt,style) {
 </script>
 </head><body>
 <div class='w3-container top'>
-  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.com</span></a>
+  <a class='w3schools-logo notranslate' href='http://www.w3schools.com/'>w3schools<span class='dotcom'>.com</span></a>
   <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
 </div>
 
@@ -579,22 +632,23 @@ function w3_getStyleValue(elmnt,style) {
   <div style="overflow:auto;">
     <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
       <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
-      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
-      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Tutorial'>HTML</a>
-      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Tutorial'>CSS</a>
-      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
-      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
-      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
+      <a href='https://www.w3schools.com/default.asp' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/html/default.asp' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/css/default.asp' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/default.asp' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sql/default.asp' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/default.asp' title='Python Tutorial'>PYTHON</a>
       <a class="w3-bar-item w3-button" href='default.html' title='PHP Tutorial'>PHP</a>
-      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
-      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>HOW TO</a>
-      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
-      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Tutorial'>JQUERY</a>
-      <a class="w3-bar-item w3-button" href='../xml/default.html' title='XML Tutorial'>XML</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_ver.asp' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/howto/default.asp' title='How To'>HOW TO</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/w3css/default.asp' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/default.asp' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/default.asp' title='XML Tutorial'>XML</a>
       <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>MORE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Search W3Schools'>&#xe802;</a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_translate(this)' title='Translate W3Schools'>&#xe801;</a>
-      <a class="w3-bar-item w3-button w3-right" target="_blank" href='http://w3schools.invisionzone.com/'>FORUM</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Toggle Dark Code'>&#xe80b;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://www.w3schools.com/forum/default.asp'>FORUM</a>
       <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
       <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
     </div>
@@ -603,68 +657,69 @@ function w3_getStyleValue(elmnt,style) {
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l3 m6'>
           <h3>HTML and CSS</h3>
-          <a class="w3-bar-item w3-button" href='../html/default.html'>Learn HTML</a>
-          <a class="w3-bar-item w3-button" href='../css/default.html'>Learn CSS</a>
-          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Learn Bootstrap</a>
-          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Learn W3.CSS</a>
-          <a class="w3-bar-item w3-button" href='../colors/default.html'>Learn Colors</a>
-          <a class="w3-bar-item w3-button" href='../icons/default.html'>Learn Icons</a>
-          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Learn Graphics</a>
-          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Learn SVG</a>
-          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Learn Canvas</a>
-          <a class="w3-bar-item w3-button" href='../howto/default.html'>Learn How To</a>
-          <a class="w3-bar-item w3-button" href='../sass/default.html'>Learn Sass</a>          
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/html/default.asp'>Learn HTML</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/css/default.asp'>Learn CSS</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_ver.asp'>Learn Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/w3css/default.asp'>Learn W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/colors/default.asp'>Learn Colors</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/icons/default.asp'>Learn Icons</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/default.asp'>Learn Graphics</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/svg_intro.asp'>Learn SVG</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/canvas_intro.asp'>Learn Canvas</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/howto/default.asp'>Learn How To</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sass/default.asp'>Learn Sass</a>          
           <div class="w3-hide-large w3-hide-small">
             <h3>XML</h3>
-            <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
-            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
-            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
-            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
-            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
-            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
-            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
-            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/default.asp'>Learn XML</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/ajax_intro.asp'>Learn XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="https://www.w3schools.com/xml/dom_intro.asp">Learn XML DOM</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xml_dtd_intro.asp'>Learn XML DTD</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/schema_intro.asp'>Learn XML Schema</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xsl_intro.asp'>Learn XSLT</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xpath_intro.asp'>Learn XPath</a>
+            <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xquery_intro.asp'>Learn XQuery</a>
           </div>
         </div>
         <div class='w3-col l3 m6'>
           <h3>JavaScript</h3>
-          <a class="w3-bar-item w3-button" href='../js/default.html'>Learn JavaScript</a>
-          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Learn jQuery</a>
-          <a class="w3-bar-item w3-button" href='../react/default.html'>Learn React</a>
-          <a class="w3-bar-item w3-button" href='../angular/default.html'>Learn AngularJS</a>
-          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Learn JSON</a>
-          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Learn AJAX</a>
-          <a class="w3-bar-item w3-button" href="../w3js/default.html">Learn W3.JS</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/default.asp'>Learn JavaScript</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/default.asp'>Learn jQuery</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/react/default.asp'>Learn React</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/angular/default.asp'>Learn AngularJS</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/js/js_json_intro.asp">Learn JSON</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/js_ajax_intro.asp'>Learn AJAX</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/w3js/default.asp">Learn W3.JS</a>
           <h3>Programming</h3>
-          <a class="w3-bar-item w3-button" href='../python/default.html'>Learn Python</a>
-          <a class="w3-bar-item w3-button" href='../java/default.html'>Learn Java</a>
-          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/default.asp'>Learn Python</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/java/default.asp'>Learn Java</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cpp/default.asp'>Learn C++</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cs/default.asp'>Learn C#</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
         <div class='w3-col l3 m6'>
           <h3>Server Side</h3>
-          <a class="w3-bar-item w3-button" href='../sql/default.html'>Learn SQL</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sql/default.asp'>Learn SQL</a>
           <a class="w3-bar-item w3-button" href='default.html'>Learn PHP</a>
-          <a class="w3-bar-item w3-button" href='../asp/default.html'>Learn ASP</a>
-          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Learn Node.js</a>
-          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Learn Raspberry Pi</a>          
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/asp/default.asp'>Learn ASP</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/nodejs/default.asp'>Learn Node.js</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp'>Learn Raspberry Pi</a>          
           <h3>Web Building</h3>
-          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Web Templates</a>
-          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Web Statistics</a>
-          <a class="w3-bar-item w3-button" href='../cert/default.html'>Web Certificates</a>
-          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Web Editor</a>
-          <a class="w3-bar-item w3-button" href="../whatis/default.html">Web Development</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/w3css/w3css_templates.asp">Web Templates</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/browsers/default.asp'>Web Statistics</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cert/default.asp'>Web Certificates</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tryit/default.asp'>Web Editor</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/whatis/default.asp">Web Development</a>
         </div>
         <div class='w3-col l3 m6 w3-hide-medium'>
           <h3>XML</h3>
-          <a class="w3-bar-item w3-button" href='../xml/default.html'>Learn XML</a>
-          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Learn XML AJAX</a>
-          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Learn XML DOM</a>
-          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Learn XML DTD</a>
-          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Learn XML Schema</a>
-          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Learn XSLT</a>
-          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Learn XPath</a>
-          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Learn XQuery</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/default.asp'>Learn XML</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/ajax_intro.asp'>Learn XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/xml/dom_intro.asp">Learn XML DOM</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xml_dtd_intro.asp'>Learn XML DTD</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/schema_intro.asp'>Learn XML Schema</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xsl_intro.asp'>Learn XSLT</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xpath_intro.asp'>Learn XPath</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xquery_intro.asp'>Learn XQuery</a>
         </div>
       </div>
       <br>
@@ -674,55 +729,55 @@ function w3_getStyleValue(elmnt,style) {
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l3 m6'>
           <h3>HTML</h3>
-          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Tag Reference</a>
-          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Event Reference</a>
-          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Color Reference</a>
-          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Attribute Reference</a>
-          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Reference</a>
-          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Reference</a>
-          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
-          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google Maps Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/default.asp'>HTML Tag Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_eventattributes.asp'>HTML Event Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/colors/default.asp'>HTML Color Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_attributes.asp'>HTML Attribute Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/tags/ref_canvas.asp'>HTML Canvas Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/svg_reference.asp'>HTML SVG Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/default.asp'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/graphics/google_maps_reference.asp'>Google Maps Reference</a>
           <h3>CSS</h3>
-          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Reference</a>
-          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Browser Support</a>
-          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Reference</a>
-          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Reference</a>
-          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Reference</a>
-          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Reference</a>
-          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Reference</a>
-          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cssref/default.asp'>CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cssref/css3_browsersupport.asp'>CSS Browser Support</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/cssref/css_selectors.asp'>CSS Selector Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp'>Bootstrap 3 Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp'>Bootstrap 4 Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/w3css/w3css_references.asp'>W3.CSS Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/icons/icons_reference.asp'>Icon Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sass/sass_functions_string.asp'>Sass Reference</a>
        </div>
         <div class='w3-col l3 m6'>
           <h3>JavaScript</h3>
-          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Reference</a>
-          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Reference</a>
-          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Reference</a>
-          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Reference</a>
-          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jsref/default.asp'>JavaScript Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jsref/default.asp'>HTML DOM Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/jquery_ref_overview.asp'>jQuery Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/angular/angular_ref_directives.asp'>AngularJS Reference</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/w3js/w3js_references.asp">W3.JS Reference</a>
           <h3>Programming</h3>
-          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Reference</a>
-          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/python_reference.asp'>Python Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/java/java_ref_keywords.asp'>Java Reference</a>
         </div>
         <div class='w3-col l3 m6'>
           <h3>Server Side</h3>
-          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/sql/sql_ref_keywords.asp'>SQL Reference</a>
           <a class="w3-bar-item w3-button" href='php_ref_overview.html'>PHP Reference</a>
-          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/asp/asp_ref_response.asp'>ASP Reference</a>
           <h3>XML</h3>
-          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Reference</a>
-          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Reference</a>
-          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Reference</a>
-          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/dom_nodetype.asp'>XML Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/dom_http.asp'>XML Http Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xsl_elementref.asp'>XSLT Reference</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/schema_elements_ref.asp'>XML Schema Reference</a>
         </div>
         <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
           <h3>Character Sets</h3>
-          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Character Sets</a>
-          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
-          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
-          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
-          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
-          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Symbols</a>
-          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/default.asp'>HTML Character Sets</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_ascii.asp'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_ansi.asp'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_ansi.asp'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_8859.asp'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_symbols.asp'>HTML Symbols</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/charsets/ref_html_utf8.asp'>HTML UTF-8</a>
         </div>
       </div>
       <br>
@@ -732,40 +787,41 @@ function w3_getStyleValue(elmnt,style) {
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l4 m6'>
           <h3>Exercises</h3>
-          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Exercises</a>
-          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Exercises</a>
-          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Exercises</a>
-          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/html/html_exercises.asp">HTML Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/css/css_exercises.asp">CSS Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/js/js_exercises.asp">JavaScript Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/sql/sql_exercises.asp">SQL Exercises</a>
           <a class="w3-bar-item w3-button" href="php_exercises.html">PHP Exercises</a>
-          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Exercises</a>
-          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Exercises</a>
-          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Exercises</a>
-          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Exercises</a>
-          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/python/python_exercises.asp">Python Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/jquery/jquery_exercises.asp">jQuery Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/bootstrap/bootstrap_exercises.asp">Bootstrap Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/java/java_exercises.asp">Java Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cpp/cpp_exercises.asp">C++ Exercises</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cs/cs_exercises.asp">C# Exercises</a>
         </div>
         <div class='w3-col l4 m6'>
           <h3>Quizzes</h3>
-          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Quiz</a>
-          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Quiz</a>
-          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Quiz</a>
-          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/html/html_quiz.asp' target='_top'>HTML Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/css/css_quiz.asp' target='_top'>CSS Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/js/js_quiz.asp' target='_top'>JavaScript Quiz</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/sql/sql_quiz.asp" target="_top">SQL Quiz</a>
           <a class="w3-bar-item w3-button" href='php_quiz.html' target='_top'>PHP Quiz</a>
-          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Quiz</a>
-          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Quiz</a>
-          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Quiz</a>
-          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/python/python_quiz.asp' target='_top'>Python Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/jquery/jquery_quiz.asp' target='_top'>jQuery Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/bootstrap/bootstrap_quiz.asp' target='_top'>Bootstrap Quiz</a>
+          <a class="w3-bar-item w3-button" href='https://www.w3schools.com/xml/xml_quiz.asp' target='_top'>XML Quiz</a>
         </div>
         <div class='w3-col l4 m12'>
          <h3>Certificates</h3>
-         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Certificate</a>
-         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_html_new.asp" target="_top">HTML Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_css.asp" target="_top">CSS Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_javascript.asp" target="_top">JavaScript Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_sql.asp" target="_top">SQL Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_php.asp" target="_top">PHP Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_python.asp" target="_top">Python Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_jquery.asp" target="_top">jQuery Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_bootstrap.asp" target="_top">Bootstrap Certificate</a>
+         <a class="w3-bar-item w3-button" href="https://www.w3schools.com/cert/cert_xml.asp" target="_top">XML Certificate</a>
         </div>
       </div>
       <br>
@@ -792,12 +848,32 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="php_operators.html">PHP Operators</a>
 <a target="_top" href="php_if_else.html">PHP If...Else...Elseif</a>
 <a target="_top" href="php_switch.html">PHP Switch</a>
-<a target="_top" href="php_looping.html">PHP While Loops</a>
-<a target="_top" href="php_looping_for.html">PHP For Loops</a>
+<a target="_top" href="php_looping.html">PHP Loops</a>
+<div class="tut_overview">
+<a target="_top" href="php_looping.html">Loops</a>
+<a target="_top" href="php_looping_while.html">While Loop</a>
+<a target="_top" href="php_looping_do_while.html">Do While Loop</a>
+<a target="_top" href="php_looping_for.html">For Loop</a>
+<a target="_top" href="php_looping_foreach.html">Foreach Loop</a>
+</div>
 <a target="_top" href="php_functions.html">PHP Functions</a>
 <a target="_top" href="php_arrays.html">PHP Arrays</a>
-<a target="_top" href="php_arrays_sort.html">PHP Sorting Arrays</a>
+<div class="tut_overview">
+<a target="_top" href="php_arrays.html">Arrays</a>
+<a target="_top" href="php_arrays_indexed.html">Indexed Arrays</a>
+<a target="_top" href="php_arrays_associative.html">Associative Arrays</a>
+<a target="_top" href="php_arrays_multidimensional.html">Mutidimensional Arrays</a>
+<a target="_top" href="php_arrays_sort.html">Sorting Arrays</a>
+</div>
 <a target="_top" href="php_superglobals.html">PHP Superglobals</a>
+<div class="tut_overview">
+<a target="_top" href="php_superglobals.html">Superglobals</a>
+<a target="_top" href="php_superglobals_globals.html">$GLOBALS</a>
+<a target="_top" href="php_superglobals_server.html">$_SERVER</a>
+<a target="_top" href="php_superglobals_request.html">$_REQUEST</a>
+<a target="_top" href="php_superglobals_post.html">$_POST</a>
+<a target="_top" href="php_superglobals_get.html">$_GET</a>
+</div>
 <br>
 <h2 class="left"><span class="left_h2">PHP</span> Forms</h2>
 <a target="_top" href="php_forms.html">PHP Form Handling</a>
@@ -807,7 +883,6 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="php_form_complete.html">PHP Form Complete</a>
 <br>
 <h2 class="left"><span class="left_h2">PHP</span> Advanced</h2>
-<a target="_top" href="php_arrays_multi.html">PHP Arrays Multi</a>
 <a target="_top" href="php_date.html">PHP Date and Time</a>
 <a target="_top" href="php_includes.html">PHP Include</a>
 <a target="_top" href="php_file.html">PHP File Handling</a>
@@ -818,8 +893,22 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="php_sessions.html">PHP Sessions</a>
 <a target="_top" href="php_filter.html">PHP Filters</a>
 <a target="_top" href="php_filter_advanced.html">PHP Filters Advanced</a>
+<a target="_top" href="php_json.html">PHP JSON</a>
 <!-- <a target="_top" href="php_error_handling.asp">PHP Error Handling</a>
 <a target="_top" href="php_exception.asp">PHP Exception</a> -->
+<br>
+<h2 class="left"><span class="left_h2">PHP</span> OOP</h2>
+<a target="_top" href="php_oop_what_is.html">PHP What is OOP</a>
+<a target="_top" href="php_oop_classes_objects.html">PHP Classes/Objects</a>
+<a target="_top" href="php_oop_constructor.html">PHP Constructor</a>
+<a target="_top" href="php_oop_destructor.html">PHP Destructor</a>
+<a target="_top" href="php_oop_access_modifiers.html">PHP Access Modifiers</a>
+<a target="_top" href="php_oop_inheritance.html">PHP Inheritance</a>
+<a target="_top" href="php_oop_constants.html">PHP Constants</a>
+<a target="_top" href="php_oop_classes_abstract.html">PHP Abstract Classes</a>
+<a target="_top" href="php_oop_traits.html">PHP Traits</a>
+<a target="_top" href="php_oop_static_methods.html">PHP Static Methods</a>
+<a target="_top" href="php_oop_static_properties.html">PHP Static Properties</a>
 <br>
 <h2 class="left"><span class="left_h2">MySQL</span> Database</h2>
 <a target="_top" href="php_mysql_intro.html">MySQL Database</a>
@@ -831,6 +920,8 @@ function w3_getStyleValue(elmnt,style) {
 <a target="_top" href="php_mysql_insert_multiple.html">MySQL Insert Multiple</a>
 <a target="_top" href="php_mysql_prepared_statements.html">MySQL Prepared</a>
 <a target="_top" href="php_mysql_select.html">MySQL Select Data</a>
+<a target="_top" href="php_mysql_select_where.html">MySQL Where</a>
+<a target="_top" href="php_mysql_select_orderby.html">MySQL Order By</a>
 <a target="_top" href="php_mysql_delete.html">MySQL Delete Data</a>
 <a target="_top" href="php_mysql_update.html">MySQL Update Data</a>
 <a target="_top" href="php_mysql_select_limit.html">MySQL Limit Data</a>
@@ -1169,6 +1260,13 @@ function w3_getStyleValue(elmnt,style) {
     <a target="_top" href="func_ftp_ssl_connect.html">ftp_ssl_connect()</a>
     <a target="_top" href="func_ftp_systype.html">ftp_systype()</a>
 </div>
+<a target="_top" href="php_ref_json.html">PHP JSON</a>
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+    <a target="_top" href="func_json_decode.html">json_decode()</a>
+    <a target="_top" href="func_json_encode.html">json_encode()</a>
+<!--<a target="_top" href="func_json_last_error.asp">json_last_error()</a>
+    <a target="_top" href="func_json_last_error_msg.asp">json_last_error_msg()</a>-->
+</div>
 <a target="_top" href="php_ref_libxml.html">PHP Libxml</a>
 <div class="ref_overview" style="margin-left:10px;background-color:#ddd">
     <a target="_top" href="func_libxml_clear_errors.html">libxml_clear_errors()</a>
@@ -1265,6 +1363,65 @@ function w3_getStyleValue(elmnt,style) {
     <a target="_top" href="func_misc_usleep.html">usleep()</a>
 </div>
 <a target="_top" href="php_ref_mysqli.html">PHP MySQLi</a>
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+    <a target="_top" href="func_mysqli_affected_rows.html">affected_rows</a>
+    <a target="_top" href="func_mysqli_autocommit.html">autocommit</a>    
+    <a target="_top" href="func_mysqli_change_user.html">change_user</a>
+    <a target="_top" href="func_mysqli_character_set_name.html">character_set_name</a>
+    <a target="_top" href="func_mysqli_close.html">close</a>
+    <a target="_top" href="func_mysqli_commit.html">commit</a>
+    <a target="_top" href="func_mysqli_connect.html">connect</a>
+    <a target="_top" href="func_mysqli_connect_errno.html">connect_errno</a>
+    <a target="_top" href="func_mysqli_connect_error.html">connect_error</a>    
+    <a target="_top" href="func_mysqli_data_seek.html">data_seek</a>    
+    <a target="_top" href="func_mysqli_debug.html">debug</a>
+    <a target="_top" href="func_mysqli_dump_debug_info.html">dump_debug_info</a>
+    <a target="_top" href="func_mysqli_errno.html">errno</a>    
+    <a target="_top" href="func_mysqli_error.html">error</a>
+    <a target="_top" href="func_mysqli_error_list.html">error_list</a>    
+    <a target="_top" href="func_mysqli_fetch_all.html">fetch_all</a>    
+    <a target="_top" href="func_mysqli_fetch_array.html">fetch_array</a>    
+    <a target="_top" href="func_mysqli_fetch_assoc.html">fetch_assoc</a>    
+    <a target="_top" href="func_mysqli_fetch_field.html">fetch_field</a>    
+    <a target="_top" href="func_mysqli_fetch_field_direct.html">fetch_field_direct</a>    
+    <a target="_top" href="func_mysqli_fetch_fields.html">fetch_fields</a>    
+    <a target="_top" href="func_mysqli_fetch_lengths.html">fetch_lengths</a>    
+    <a target="_top" href="func_mysqli_fetch_object.html">fetch_object</a>        
+    <a target="_top" href="func_mysqli_fetch_row.html">fetch_row</a>        
+    <a target="_top" href="func_mysqli_field_count.html">field_count</a>        
+    <a target="_top" href="func_mysqli_field_seek.html">field_seek</a>        
+    <a target="_top" href="func_mysqli_get_charset.html">get_charset</a>            
+    <a target="_top" href="func_mysqli_get_client_info.html">get_client_info</a>                
+    <a target="_top" href="func_mysqli_get_client_stats.html">get_client_stats</a>                
+    <a target="_top" href="func_mysqli_get_client_version.html">get_client_version</a>                
+    <a target="_top" href="func_mysqli_get_connection_stats.html">get_connection_stats</a>
+    <a target="_top" href="func_mysqli_get_host_info.html">get_host_info</a>
+    <a target="_top" href="func_mysqli_get_proto_info.html">get_proto_info</a>
+    <a target="_top" href="func_mysqli_get_server_info.html">get_server_info</a>
+    <a target="_top" href="func_mysqli_get_server_version.html">get_server_version</a>
+    <a target="_top" href="func_mysqli_info.html">info</a>
+    <a target="_top" href="func_mysqli_init.html">init</a>
+    <a target="_top" href="func_mysqli_insert_id.html">insert_id</a>    
+    <a target="_top" href="func_mysqli_kill.html">kill</a>
+    <a target="_top" href="func_mysqli_more_results.html">more_results</a>
+    <a target="_top" href="func_mysqli_multi_query.html">multi_query</a>
+    <a target="_top" href="func_mysqli_next_result.html">next_result</a>    
+    <a target="_top" href="func_mysqli_options.html">options</a>
+    <a target="_top" href="func_mysqli_ping.html">ping</a>
+    <a target="_top" href="func_mysqli_query.html">query</a>
+    <a target="_top" href="func_mysqli_real_connect.html">real_connect</a>    
+    <a target="_top" href="func_mysqli_real_escape_string.html">real_escape_string</a>
+    <a target="_top" href="func_mysqli_refresh.html">refresh</a>
+    <a target="_top" href="func_mysqli_rollback.html">rollback</a>    
+    <a target="_top" href="func_mysqli_select_db.html">select_db</a>
+    <a target="_top" href="func_mysqli_set_charset.html">set_charset</a>
+    <a target="_top" href="func_mysqli_sqlstate.html">sqlstate</a>    
+    <a target="_top" href="func_mysqli_ssl_set.html">ssl_set</a>
+    <a target="_top" href="func_mysqli_stat.html">stat</a>
+    <a target="_top" href="func_mysqli_stmt_init.html">stmt_init</a>        
+    <a target="_top" href="func_mysqli_thread_id.html">thread_id</a>    
+    <a target="_top" href="func_mysqli_thread_safe.html">thread_safe</a>    
+</div>
 <a target="_top" href="php_ref_network.html">PHP Network</a>
 <div class="ref_overview" style="margin-left:10px;background-color:#ddd">
     <a target="_top" href="func_network_checkdnsrr.html">checkdnsrr()</a>
@@ -1431,6 +1588,44 @@ function w3_getStyleValue(elmnt,style) {
     <a target="_top" href="func_string_vsprintf.html">vsprintf()</a>
     <a target="_top" href="func_string_wordwrap.html">wordwrap()</a>
 </div>
+<a target="_top" href="php_ref_variable_handling.html">PHP Variable Handling
+<div class="ref_overview" style="margin-left:10px;background-color:#ddd">
+    <a target="_top" href="func_var_boolval.html">boolval()</a>
+    <a target="_top" href="func_var_debug_zval_dump.html">debug_zval_dump()</a>    
+    <a target="_top" href="func_var_doubleval.html">doubleval()</a>    
+    <a target="_top" href="func_var_is_countable.html">is_countable()</a>    
+    <a target="_top" href="func_var_empty.html">empty()</a>    
+    <a target="_top" href="func_var_floatval.html">floatval()</a>
+    <a target="_top" href="func_var_get_defined_vars.html">get_defined_vars()</a>
+    <a target="_top" href="func_var_get_resource_type.html">get_resource_type()</a>
+    <a target="_top" href="func_var_gettype.html">gettype()</a>
+    <a target="_top" href="func_var_intval.html">intval()</a>
+    <a target="_top" href="func_var_is_array.html">is_array()</a>
+    <a target="_top" href="func_var_is_bool.html">is_bool()</a>    
+    <a target="_top" href="func_var_is_callable.html">is_callable()</a>
+    <a target="_top" href="func_var_is_double.html">is_double()</a>        
+    <a target="_top" href="func_var_is_float.html">is_float()</a>    
+    <a target="_top" href="func_var_is_int.html">is_int()</a>
+    <a target="_top" href="func_var_is_integer.html">is_integer()</a>
+    <a target="_top" href="func_var_is_iterable.html">is_iterable()</a>    
+    <a target="_top" href="func_var_is_long.html">is_long()</a>    
+    <a target="_top" href="func_var_is_null.html">is_null()</a>    
+    <a target="_top" href="func_var_is_numeric.html">is_numeric()</a>
+    <a target="_top" href="func_var_is_object.html">is_object()</a>        
+    <a target="_top" href="func_var_is_real.html">is_real()</a>
+    <a target="_top" href="func_var_is_resource.html">is_resource()</a>            
+    <a target="_top" href="func_var_is_scalar.html">is_scalar()</a>    
+    <a target="_top" href="func_var_is_string.html">is_string()</a>    
+    <a target="_top" href="func_var_isset.html">isset()</a>    
+    <a target="_top" href="func_var_print_r.html">print_r()</a>    
+    <a target="_top" href="func_var_serialize.html">serialize()</a>    
+    <a target="_top" href="func_var_settype.html">settype()</a>    
+    <a target="_top" href="func_var_strval.html">strval()</a>    
+    <a target="_top" href="func_var_unserialize.html">unserialize()</a>    
+    <a target="_top" href="func_var_unset.html">unset()</a>    
+    <a target="_top" href="func_var_var_dump.html">var_dump()</a>    
+    <a target="_top" href="func_var_var_export.html">var_export()</a>    
+</div>
 <a target="_top" href="php_ref_xml.html">PHP XML Parser</a>
 <div class="ref_overview" style="margin-left:10px;background-color:#ddd">
     <a target="_top" href="func_xml_utf8_decode.html">utf8_decode()</a>
@@ -1481,13 +1676,13 @@ function w3_getStyleValue(elmnt,style) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-        
-        <div id='div-gpt-ad-1422003450156-2'>
-          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
-        </div>
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
        
       </div>
-<h1>PHP <span class="color_h1">Insert Data Into MySQL</span></h1>
+<h1>PHP <span class="color_h1">MySQL Insert Data</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_mysql_create_table.html">&#10094; Previous</a>
   <a class="w3-right w3-btn" href="php_mysql_insert_lastid.html">Next &#10095;</a>
@@ -1510,7 +1705,7 @@ INSERT INTO table_name (column1, column2, column3,...)<br>
 VALUES (value1, value2, value3,...)
 </div></div>
 
-<p>To learn more about SQL, please visit our <a href="../sql/default.html">SQL tutorial</a>.</p>
+<p>To learn more about SQL, please visit our <a href="https://www.w3schools.com/sql/default.asp">SQL tutorial</a>.</p>
 <p>In the previous chapter we created an empty table named &quot;MyGuests&quot; with 
 five columns: &quot;id&quot;, &quot;firstname&quot;, &quot;lastname&quot;, &quot;email&quot; and &quot;reg_date&quot;. 
 Now, let us fill the table with data.</p>
@@ -1543,11 +1738,8 @@ the SQL query; MySQL will automatically add the value.</p>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
 <!-- MidContent -->
 
-  <div id='div-gpt-ad-1493883843099-0' style="display: inline-block">
-    <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1493883843099-0'); });
-    </script>
-  </div>
+  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
+  <div id="snhb-mid_content-0"></div>
     
 </div>
 <hr>
@@ -1592,20 +1784,16 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);<br>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="div-gpt-ad-1422003450156-5">
-      <script>
-      googletag.cmd.push(function() {
-      googletag.display('div-gpt-ad-1422003450156-5');
-      });
-      </script> 
-    </div>
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
   
   </div>
 </div>
 
 <div class="sidesection">
-<h4><a href="../colors/colors_picker.html">COLOR PICKER</a></h4>
-<a href="../colors/colors_picker.html">
+<h4><a href="https://www.w3schools.com/colors/colors_picker.asp">COLOR PICKER</a></h4>
+<a href="https://www.w3schools.com/colors/colors_picker.asp">
 <img src="../images/colorpicker.gif" alt="colorpicker"></a>
 </div>
 
@@ -1634,25 +1822,25 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);<br>
 
 <div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
   <div class="w3-container w3-dark-grey">
-    <h4><a href="../howto/default.html" class="w3-hover-text-white">HOW TO</a></h4>
+    <h4><a href="https://www.w3schools.com/howto/default.asp" class="w3-hover-text-white">HOW TO</a></h4>
   </div>
   <div class="w3-container w3-left-align w3-padding-16">
-    <a href="../howto/howto_js_tabs.html">Tabs</a><br>
-    <a href="../howto/howto_css_dropdown.html">Dropdowns</a><br>
-    <a href="../howto/howto_js_accordion.html">Accordions</a><br>
-    <a href="../howto/howto_js_sidenav.html">Side Navigation</a><br>
-    <a href="../howto/howto_js_topnav.html">Top Navigation</a><br>
-    <a href="../howto/howto_css_modals.html">Modal Boxes</a><br>
-    <a href="../howto/howto_js_progressbar.html">Progress Bars</a><br>
-    <a href="../howto/howto_css_parallax.html">Parallax</a><br>
-    <a href="../howto/howto_css_login_form.html">Login Form</a><br>
-    <a href="../howto/howto_html_include.html">HTML Includes</a><br>
-    <a href="../graphics/google_maps_intro.html">Google Maps</a><br>
-    <a href="../howto/howto_js_rangeslider.html">Range Sliders</a><br>
-    <a href="../howto/howto_css_tooltip.html">Tooltips</a><br>
-    <a href="../howto/howto_js_slideshow.html">Slideshow</a><br>
-    <a href="../howto/howto_js_filter_lists.html">Filter List</a><br>
-    <a href="../howto/howto_js_sort_list.html">Sort List</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_tabs.asp">Tabs</a><br>
+    <a href="https://www.w3schools.com/howto/howto_css_dropdown.asp">Dropdowns</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_accordion.asp">Accordions</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">Side Navigation</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Top Navigation</a><br>
+    <a href="https://www.w3schools.com/howto/howto_css_modals.asp">Modal Boxes</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_progressbar.asp">Progress Bars</a><br>
+    <a href="https://www.w3schools.com/howto/howto_css_parallax.asp">Parallax</a><br>
+    <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">Login Form</a><br>
+    <a href="https://www.w3schools.com/howto/howto_html_include.asp">HTML Includes</a><br>
+    <a href="https://www.w3schools.com/howto/howto_google_maps.asp">Google Maps</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp">Range Sliders</a><br>
+    <a href="https://www.w3schools.com/howto/howto_css_tooltip.asp">Tooltips</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Slideshow</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_filter_lists.asp">Filter List</a><br>
+    <a href="https://www.w3schools.com/howto/howto_js_sort_list.asp">Sort List</a><br>
   </div>
 </div>
 
@@ -1680,18 +1868,18 @@ document.write(txt);
 </div>
 
 <div class="sidesection">
-<h4><a target="_blank" href="../cert/default.html">CERTIFICATES</a></h4>
+<h4><a target="_blank" href="http://www.w3schools.com/cert/default.asp">CERTIFICATES</a></h4>
 <p>
-<a href="../cert/cert_html_new.html">HTML</a><br>
-<a href="../cert/cert_css.html">CSS</a><br>
-<a href="../cert/cert_javascript.html">JavaScript</a><br>
-<a href="../cert/cert_sql.html">SQL</a><br>
-<a href="../cert/cert_python.html">Python</a><br>
-<a href="../cert/cert_php.html">PHP</a><br>
-<a href="../cert/cert_jquery.html">jQuery</a><br>
-<a href="../cert/cert_bootstrap.html">Bootstrap</a><br>
-<a href="../cert/cert_xml.html">XML</a></p>
-<a href="../cert/default.html" class="w3-button w3-dark-grey" style="text-decoration:none">
+<a href="https://www.w3schools.com/cert/cert_html.asp">HTML</a><br>
+<a href="https://www.w3schools.com/cert/cert_css.asp">CSS</a><br>
+<a href="https://www.w3schools.com/cert/cert_javascript.asp">JavaScript</a><br>
+<a href="https://www.w3schools.com/cert/cert_sql.asp">SQL</a><br>
+<a href="https://www.w3schools.com/cert/cert_python.asp">Python</a><br>
+<a href="https://www.w3schools.com/cert/cert_php.asp">PHP</a><br>
+<a href="https://www.w3schools.com/cert/cert_jquery.asp">jQuery</a><br>
+<a href="https://www.w3schools.com/cert/cert_bootstrap.asp">Bootstrap</a><br>
+<a href="https://www.w3schools.com/cert/cert_xml.asp">XML</a></p>
+<a href="http://www.w3schools.com/cert/default.asp" class="w3-button w3-dark-grey" style="text-decoration:none">
 Read More &raquo;</a>
 </div>
 
@@ -1699,13 +1887,24 @@ Read More &raquo;</a>
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-        <script>
-        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-        document.write("<div id='div-gpt-ad-1472547360578-0'>");
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
-        document.write("</div>");
-        }
-        </script>
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
       
     </div>
   </div>
@@ -1723,17 +1922,14 @@ Read More &raquo;</a>
 <hr>
 
 <div style="overflow:auto">
-  <!-- BottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
-    </script>
-  </div>
-  <!-- RightBottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
-    </script>
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
@@ -1746,10 +1942,10 @@ Read More &raquo;</a>
 <a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="http://w3schools.invisionzone.com/" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button w3-light-grey w3-block" href="https://www.w3schools.com/forum/default.asp" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button w3-light-grey w3-block" href="https://www.w3schools.com/about/default.asp" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
 </div>
 </div>
 <hr>
@@ -1785,67 +1981,67 @@ Read More &raquo;</a>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
 <h4>Top Tutorials</h4>
-<a href="../html/default.html">HTML Tutorial</a><br>
-<a href="../css/default.html">CSS Tutorial</a><br>
-<a href="../js/default.html">JavaScript Tutorial</a><br>
-<a href="../howto/default.html">How To Tutorial</a><br>
-<a href="../sql/default.html">SQL Tutorial</a><br>
-<a href="../python/default.html">Python Tutorial</a><br>
-<a href="../w3css/default.html">W3.CSS Tutorial</a><br>
-<a href="../bootstrap/bootstrap_ver.html">Bootstrap Tutorial</a><br>
+<a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a><br>
+<a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a><br>
+<a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorial</a><br>
+<a href="https://www.w3schools.com/howto/default.asp">How To Tutorial</a><br>
+<a href="https://www.w3schools.com/sql/default.asp">SQL Tutorial</a><br>
+<a href="https://www.w3schools.com/python/default.asp">Python Tutorial</a><br>
+<a href="https://www.w3schools.com/w3css/default.asp">W3.CSS Tutorial</a><br>
+<a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap Tutorial</a><br>
 <a href="default.html">PHP Tutorial</a><br>
-<a href="../jquery/default.html">jQuery Tutorial</a><br>
-<a href="../java/default.html">Java Tutorial</a><br>
-<a href="../cpp/default.html">C++ Tutorial</a><br>
+<a href="https://www.w3schools.com/jquery/default.asp">jQuery Tutorial</a><br>
+<a href="https://www.w3schools.com/java/default.asp">Java Tutorial</a><br>
+<a href="https://www.w3schools.com/cpp/default.asp">C++ Tutorial</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
 <h4>Top References</h4>
-<a href="../tags/default.html">HTML Reference</a><br>
-<a href="../cssref/default.html">CSS Reference</a><br>
-<a href="../jsref/default.html">JavaScript Reference</a><br>
-<a href="../sql/sql_ref_keywords.html">SQL Reference</a><br>
-<a href="../python/python_reference.html">Python Reference</a><br>
-<a href="../w3css/w3css_references.html">W3.CSS Reference</a><br>
-<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Reference</a><br>
+<a href="https://www.w3schools.com/tags/default.asp">HTML Reference</a><br>
+<a href="https://www.w3schools.com/cssref/default.asp">CSS Reference</a><br>
+<a href="https://www.w3schools.com/jsref/default.asp">JavaScript Reference</a><br>
+<a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">SQL Reference</a><br>
+<a href="https://www.w3schools.com/python/python_reference.asp">Python Reference</a><br>
+<a href="https://www.w3schools.com/w3css/w3css_references.asp">W3.CSS Reference</a><br>
+<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap Reference</a><br>
 <a href="php_ref_overview.html">PHP Reference</a><br>
-<a href="../colors/colors_names.html">HTML Colors</a><br>
-<a href="../jquery/jquery_ref_overview.html">jQuery Reference</a><br>
-<a href="../java/java_ref_keywords.html">Java Reference</a><br>
-<a href="../angular/angular_ref_directives.html">Angular Reference</a><br>
+<a href="https://www.w3schools.com/colors/colors_names.asp">HTML Colors</a><br>
+<a href="https://www.w3schools.com/jquery/jquery_ref_overview.asp">jQuery Reference</a><br>
+<a href="https://www.w3schools.com/java/java_ref_keywords.asp">Java Reference</a><br>
+<a href="https://www.w3schools.com/angular/angular_ref_directives.asp">Angular Reference</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
 <h4>Top Examples</h4>
-<a href="../html/html_examples.html">HTML Examples</a><br>
-<a href="../css/css_examples.html">CSS Examples</a><br>
-<a href="../js/js_examples.html">JavaScript Examples</a><br>
-<a href="../howto/default.html">How To Examples</a><br>
-<a href="../sql/sql_examples.html">SQL Examples</a><br>
-<a href="../python/python_examples.html">Python Examples</a><br>
-<a href="../w3css/w3css_examples.html">W3.CSS Examples</a><br>
-<a href="../bootstrap/bootstrap_examples.html">Bootstrap Examples</a><br>
+<a href="https://www.w3schools.com/html/html_examples.asp">HTML Examples</a><br>
+<a href="https://www.w3schools.com/css/css_examples.asp">CSS Examples</a><br>
+<a href="https://www.w3schools.com/js/js_examples.asp">JavaScript Examples</a><br>
+<a href="https://www.w3schools.com/howto/default.asp">How To Examples</a><br>
+<a href="https://www.w3schools.com/sql/sql_examples.asp">SQL Examples</a><br>
+<a href="https://www.w3schools.com/python/python_examples.asp">Python Examples</a><br>
+<a href="https://www.w3schools.com/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
+<a href="https://www.w3schools.com/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a><br>
 <a href="php_examples.html">PHP Examples</a><br>
-<a href="../jquery/jquery_examples.html">jQuery Examples</a><br>
-<a href="../java/java_examples.html">Java Examples</a><br>
-<a href="../xml/xml_examples.html">XML Examples</a><br>
+<a href="https://www.w3schools.com/jquery/jquery_examples.asp">jQuery Examples</a><br>
+<a href="https://www.w3schools.com/java/java_examples.asp">Java Examples</a><br>
+<a href="https://www.w3schools.com/xml/xml_examples.asp">XML Examples</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
 <h4>Web Certificates</h4>
-<a href="../cert/default.html">HTML Certificate</a><br>
-<a href="../cert/default.html">CSS Certificate</a><br>
-<a href="../cert/default.html">JavaScript Certificate</a><br>
-<a href="../cert/default.html">SQL Certificate</a><br>
-<a href="../cert/default.html">Python Certificate</a><br>
-<a href="../cert/default.html">jQuery Certificate</a><br>
-<a href="../cert/default.html">PHP Certificate</a><br>
-<a href="../cert/default.html">Bootstrap Certificate</a><br>
-<a href="../cert/default.html">XML Certificate</a><br>
-<a href="../cert/default.html" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
+<a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a><br>
+<a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a><br>
+<a href="http://www.w3schools.com/cert/default.asp" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
 Get Certified &raquo;</a>
 
 </div>
@@ -1856,11 +2052,11 @@ Get Certified &raquo;</a>
 <div class="w3-center w3-small w3-opacity">
 W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
 Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
-While using this site, you agree to have read and accepted our <a href="../about/about_copyright.html">terms of use</a>,
-<a href="../about/about_privacy.html">cookie and privacy policy</a>.
-<a href="../about/about_copyright.html">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
- <a href="../w3css/index.html">Powered by W3.CSS</a>.<br><br>
-<a href="../index.html">
+While using this site, you agree to have read and accepted our <a href="https://www.w3schools.com/about/about_copyright.asp">terms of use</a>,
+<a href="https://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
+<a href="https://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
+ <a href="http://www.w3schools.com/w3css/">Powered by W3.CSS</a>.<br><br>
+<a href="http://www.w3schools.com/">
 <img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
 </div>
 <br><br>
@@ -1875,5 +2071,5 @@ While using this site, you agree to have read and accepted our <a href="../about
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/php/php_mysql_insert.asp by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:42:27 GMT -->
+<!-- Mirrored from www.w3schools.com/php/php_mysql_insert.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:14 GMT -->
 </html>
