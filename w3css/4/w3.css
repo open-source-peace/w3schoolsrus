@@ -1,4 +1,4 @@
-/* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+/*! W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -367,7 +367,7 @@ padding-left:6px;
 #sidenav a.activesub:link,#sidenav a.activesub:visited {background-color:#ddd;color:#000;}
 #sidenav a.activesub:hover,#sidenav a.activesub:active {background-color:#ccc;color:#000;}
 #sidenav a.active_overview:link,#sidenav a.active_overview:visited {background-color:#ccc;color:#000;}
-.w3-example{background-color:#f1f1f1;padding:0.01em 16px;margin:20px 0;box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
+.w3-example{background-color:#f1f1f1;padding:0.01em 16px;margin:20px 0;box-shadow:1px 1px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
 .nextprev a {font-size:17px;border:1px solid #cccccc;}
 .nextprev a:link,.nextprev a:visited {background-color:#ffffff;color:#000000;}
 .w3-example a:focus,.nextprev a:focus{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
@@ -640,7 +640,6 @@ hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
 .w3-example {
   padding: 8px 20px;
   margin: 24px -20px;
-  box-shadow:none!important;
 }
 .w3-note, .w3-warning {
   border-left: none;
