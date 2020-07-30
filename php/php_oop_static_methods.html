@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP Статические методы. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="PHP Статические методы могут быть вызваны напрямую без создания экземпляра класса. Объявляются с помощью ключевого слова static. Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
@@ -1073,21 +1073,20 @@
   <div class='w3-row w3-white'>
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
-  
-<h1>PHP <span class="color_h1">OOP - Static Methods</span></h1>
+
+<h1>PHP <span class="color_h1">ООП - Статические методы</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_oop_traits.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="php_oop_traits.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_oop_static_properties.html">Next &#10095;</a>
 </div>
 <hr>
-<h2>PHP - Static Methods</h2>
-<p>Static methods can be called directly - without creating an instance of a
-class.</p>
-<p>Static methods are declared with the <code class="w3-codespan">static</code>
-keyword:</p>
+
+<h2>PHP - Статические методы</h2>
+<p><strong>Статические методы</strong> могут быть вызваны напрямую - без создания экземпляра класса.</p>
+<p><strong>Статические методы</strong> объявляются с помощью ключевого слова <code class="w3-codespan">static</code>:</p>
 
 <div class="w3-example">
-  <h3>Syntax</h3>
+  <h3>Синтаксис</h3>
   <div class="w3-code htmlHigh notranslate">
     &lt;?php<br>
     class ClassName {<br>&nbsp; public static function staticMethod() {<br>&nbsp;&nbsp;&nbsp;
@@ -1095,60 +1094,46 @@ keyword:</p>
 </div>
 </div>
 
-<p>To access a static method use the class name, double colon (::), and the
-method name:</p>
+<p>Для доступа к статическому методу используйте имя класса, двойное двоеточие (::), и имя метода:</p>
 
 <div class="w3-example">
-  <h3>Syntax</h3>
+  <h3>Синтаксис</h3>
   <div class="w3-code htmlHigh notranslate">
     ClassName::staticMethod();</div>
 </div>
 
-<p>Let's look at an example:</p>
+<p>Давайте посмотрим на пример:</p>
 <div class="w3-example">
-  <h3>Example</h3>
+  <h3>Пример</h3>
   <div class="w3-code htmlHigh notranslate">
     &lt;?php<br>class
     greeting {<br>&nbsp; public static function
     welcome() {<br>&nbsp;&nbsp;&nbsp; echo &quot;Hello World!&quot;;<br>&nbsp; }<br>}<br>
-    <br>// Call static method<br>
+    <br>// Вызов статического метода<br>
     greeting::welcome();<br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit679a.html?filename=tryphp_static_method">Try it Yourself &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit679a.html?filename=tryphp_static_method">Попробуйте сами &raquo;</a>
 </div>
-<h3>Example Explained</h3>
-<p>Here, we declare a static method: welcome(). Then, we call the static method
-by using the class name, double colon (::), and the method name (without creating a class
-first).</p>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
+<h3>Объяснение примера</h3>
+<p>Здесь мы объявляем статический метод: welcome(). Затем мы вызываем статический метод, используя имя класса, двойное двоеточие (::) и имя метода (без предварительного создания класса).</p>
 <hr>
 
-<h2>PHP - More on Static Methods</h2>
-<p>A class can have both static and non-static methods. A static method can be
-accessed from a method in the same class using the <code class="w3-codespan">self</code>
-keyword and double colon (::):</p>
+<h2>PHP - Подробнее о статических методах</h2>
+<p>Класс может иметь как статические, так и нестатические методы. Доступ к статическому методу можно получить из метода того же класса, используя ключевое слово <code class="w3-codespan">self</code> и двойное двоеточие (::):</p>
 <div class="w3-example">
-  <h3>Example</h3>
+  <h3>Пример</h3>
   <div class="w3-code htmlHigh notranslate">
     &lt;?php<br>class greeting {<br>&nbsp; public static function welcome() {<br>&nbsp;&nbsp;&nbsp;
     echo &quot;Hello World!&quot;;<br>&nbsp; }<br><br>&nbsp; public function __construct()
     {<br>&nbsp;&nbsp;&nbsp; self::welcome();<br>&nbsp; }<br>}<br><br>new
     greeting();<br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitba9a.html?filename=tryphp_static_method2">Try it Yourself &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitba9a.html?filename=tryphp_static_method2">Попробуйте сами &raquo;</a>
 </div>
 
-<p>Static methods can also be called from methods in other classes. To do this,
-the static method should be <code class="w3-codespan">public</code>:</p>
+<p>Статические методы также можно вызывать из методов других классов. Для этого статический метод должен быть <code class="w3-codespan">public</code> (публичный):</p>
 <div class="w3-example">
-  <h3>Example</h3>
+  <h3>Пример</h3>
   <div class="w3-code htmlHigh notranslate">
     &lt;?php<br>class
     greeting {<br>&nbsp; public static function
@@ -1158,14 +1143,13 @@ the static method should be <code class="w3-codespan">public</code>:</p>
     message() {<br>&nbsp;&nbsp;&nbsp;
     greeting::welcome();<br>&nbsp; }<br>}<br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit9ec2.html?filename=tryphp_static_method3">Try it Yourself &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryit9ec2.html?filename=tryphp_static_method3">Попробуйте сами &raquo;</a>
 </div>
 
-<p>To call a static method from a child class, use the <code class="w3-codespan">parent</code>
-keyword inside the child class. Here, the static method can be <code class="w3-codespan">public</code>
-or <code class="w3-codespan">protected</code>.</p>
+<p>Чтобы вызвать статический метод из дочернего класса, используйте ключевое слово <code class="w3-codespan">parent</code> внутри дочернего класса. Здесь статический метод может быть <code class="w3-codespan">public</code>
+или <code class="w3-codespan">protected</code> (публичный или защищенный).</p>
 <div class="w3-example">
-  <h3>Example</h3>
+  <h3>Пример</h3>
   <div class="w3-code htmlHigh notranslate">
     &lt;?php<br>class domain {<br>&nbsp; protected static function
     getWebsiteName() {<br>&nbsp;&nbsp;&nbsp; return &quot;W3Schools.com&quot;;<br>&nbsp; }<br>
@@ -1174,293 +1158,200 @@ or <code class="w3-codespan">protected</code>.</p>
     parent::getWebsiteName();<br>&nbsp; } <br>}<br><br>$domainW3 = new domainW3;<br>
     echo $domainW3 -&gt; websiteName;<br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitc094.html?filename=tryphp_static_method4">Try it Yourself &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="phptryitc094.html?filename=tryphp_static_method4">Попробуйте сами &raquo;</a>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_oop_traits.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="php_oop_traits.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_oop_static_properties.html">Next &#10095;</a>
 </div>
+
+<hr>
+<!--Комментарии от Disqus-->
+<iframe class="predisqus" src="../pages/predisqus.html"></iframe>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = w3schoolsrus.github.io; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_oop_static_methods.html; // уникальный идентификатор страницы
+};
+(function() { // Не редактировать ниже этой линии
+var d = document, s = d.createElement('script');
+s.src = 'https://w3schoolsrus-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев, предоставленных Disqus.</a></noscript>
+<!--/ Комментарии от Disqus-->
+<hr>
+
 </div>
+
+<!--Right sidebar-->
 <div class="w3-col l2 m12" id="right">
 
-<div class="sidesection">
-  <div id="skyscraper">
-
-    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
-    <div id="snhb-wide_skyscraper-0"></div>
-    <!-- adspace wide-->
-
-  </div>
-</div>
-
-<div class="sidesection">
-<h4><a href="https://www.w3schools.com/colors/colors_picker.asp">COLOR PICKER</a></h4>
-<a href="https://www.w3schools.com/colors/colors_picker.asp">
-<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+<div class="sidesection w3-light-grey" style="padding-bottom: 5px">
+<h4><a href="../colors/colors_picker.html">ПАЛИТРА ЦВЕТОВ</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="Палитра цветов"></a>
 </div>
 
 <div class="sidesection" id="moreAboutSubject">
 </div>
 
-<!--
-<div id="sidesection_exercise" class="sidesection" style="background-color:#555555;max-width:200px;margin:auto;margin-bottom:32px">
-  <div class="w3-container w3-text-white">
-    <h4>Exercises</h4>
-  </div>
-  <div>
-    <div class="w3-light-grey">
-      <a target="_blank" href="/html/exercise.asp" style="padding-top:8px">HTML</a>
-      <a target="_blank" href="/css/exercise.asp">CSS</a>
-      <a target="_blank" href="/js/exercise_js.asp">JavaScript</a>
-      <a target="_blank" href="/sql/exercise.asp">SQL</a>
-      <a target="_blank" href="/php/exercise.asp">PHP</a>
-      <a target="_blank" href="/python/exercise.asp">Python</a>
-      <a target="_blank" href="/bootstrap/exercise_bs3.asp">Bootstrap</a>
-      <a target="_blank" href="/jquery/exercise_jq.asp" style="padding-bottom:8px">jQuery</a>
-    </div>
-  </div>
-</div>
--->
-
 <div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
   <div class="w3-container w3-dark-grey">
-    <h4><a href="https://www.w3schools.com/howto/default.asp" class="w3-hover-text-white">HOW TO</a></h4>
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4>
   </div>
   <div class="w3-container w3-left-align w3-padding-16">
-    <a href="https://www.w3schools.com/howto/howto_js_tabs.asp">Tabs</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_dropdown.asp">Dropdowns</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_accordion.asp">Accordions</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">Side Navigation</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_topnav.asp">Top Navigation</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_modals.asp">Modal Boxes</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_progressbar.asp">Progress Bars</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_parallax.asp">Parallax</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_login_form.asp">Login Form</a><br>
-    <a href="https://www.w3schools.com/howto/howto_html_include.asp">HTML Includes</a><br>
-    <a href="https://www.w3schools.com/howto/howto_google_maps.asp">Google Maps</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp">Range Sliders</a><br>
-    <a href="https://www.w3schools.com/howto/howto_css_tooltip.asp">Tooltips</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Slideshow</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_filter_lists.asp">Filter List</a><br>
-    <a href="https://www.w3schools.com/howto/howto_js_sort_list.asp">Sort List</a><br>
+    <a href="../howto/howto_js_tabs.html">Вкладки</a><br>
+    <a href="../howto/howto_css_dropdown.html">Выпадающее меню</a><br>
+    <a href="../howto/howto_js_accordion.html">Меню аккордеон</a><br>
+    <a href="../howto/howto_js_sidenav.html">Боковая навигация</a><br>
+    <a href="../howto/howto_js_topnav.html">Верхняя навигация</a><br>
+    <a href="../howto/howto_css_modals.html">Модальные блоки</a><br>
+    <a href="../howto/howto_js_progressbar.html">Прогресс-бары</a><br>
+    <a href="../howto/howto_css_parallax.html">Паралакс</a><br>
+    <a href="../howto/howto_css_login_form.html">Форма входа</a><br>
+    <a href="../howto/howto_html_include.html">HTML сниппеты</a><br>
+    <a href="../graphics/google_maps_intro.html">Google карты</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Ползунки диапазона</a><br>
+    <a href="../howto/howto_css_tooltip.html">Всплывающие подсказки</a><br>
+    <a href="../howto/howto_js_slideshow.html">Слайдшоу</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Список фильтров</a><br>
+    <a href="../howto/howto_js_sort_list.html">Отсортированный список</a>
   </div>
 </div>
 
-<div class="sidesection">
-<h4>SHARE</h4>
-<div class="w3-text-grey sharethis">
-<script>
-<!--
-try{
-loc=location.pathname;
-if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"default.asp";
-txt='<a href="http://www.facebook.com/sharer.php?u=https://www.w3schools.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';
-txt=txt+'<a href="https://twitter.com/home?status=Currently reading https://www.w3schools.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';
-document.write(txt);
-} catch(e) {}
-//-->
-</script>
-<br><br>
-<a href="javascript:void(0);" onclick="clickFBLike()" title="Like W3Schools on Facebook">
-<span class="fa fa-thumbs-o-up fa-2x"></span></a>
-<div id="fblikeframe" class="w3-modal">
-<div class="w3-modal-content w3-padding-64 w3-animate-zoom" id="popupDIV"></div>
 </div>
-</div>
-</div>
-
-<div class="sidesection">
-<h4><a target="_blank" href="http://www.w3schools.com/cert/default.asp">CERTIFICATES</a></h4>
-<p>
-<a href="https://www.w3schools.com/cert/cert_html.asp">HTML</a><br>
-<a href="https://www.w3schools.com/cert/cert_css.asp">CSS</a><br>
-<a href="https://www.w3schools.com/cert/cert_javascript.asp">JavaScript</a><br>
-<a href="https://www.w3schools.com/cert/cert_sql.asp">SQL</a><br>
-<a href="https://www.w3schools.com/cert/cert_python.asp">Python</a><br>
-<a href="https://www.w3schools.com/cert/cert_php.asp">PHP</a><br>
-<a href="https://www.w3schools.com/cert/cert_jquery.asp">jQuery</a><br>
-<a href="https://www.w3schools.com/cert/cert_bootstrap.asp">Bootstrap</a><br>
-<a href="https://www.w3schools.com/cert/cert_xml.asp">XML</a></p>
-<a href="http://www.w3schools.com/cert/default.asp" class="w3-button w3-dark-grey" style="text-decoration:none">
-Read More &raquo;</a>
-</div>
-
-<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
-  <div id="stickyadcontainer">
-    <div style="position:relative;margin:auto;">
-
-      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
-      <div id="snhb-sidebar_sticky-0"></div>
-      <script>
-          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-            // adspace sticky
-            if (document.getElementById("snhb-mid_content-0")) {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
-            }
-            else {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
-            }
-          }
-          else {
-              if (document.getElementById("snhb-mid_content-0")) {
-                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
-              }
-          }
-      </script>
-
-    </div>
-  </div>
-</div>
-
-<script>
-  window.addEventListener("scroll", fix_stickyad);
-  window.addEventListener("resize", fix_stickyad);
-</script>
+<!--/Right sidebar-->
 
 </div>
-</div>
+
+<!--FOOTER-->
 <div id="footer" class="footer w3-container w3-white">
-
 <hr>
 
-<div style="overflow:auto">
-  <div class="bottomad">
-    <!-- BottomMediumRectangle -->
-    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-    <!-- adspace bmr -->
-    <!-- RightBottomMediumRectangle -->
-    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-  </div>
-</div>
-
-<hr>
 <div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT ERROR</a>
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT PAGE</a>
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="https://www.w3schools.com/forum/default.asp" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+<a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
 </div>
 <div class="w3-col l3 m3 s12">
-<a class="w3-button w3-light-grey w3-block" href="https://www.w3schools.com/about/default.asp" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
 </div>
 </div>
 <hr>
 <div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
 <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
-<h2>Your Suggestion:</h2>
+<h2>Ваше предложение:</h2>
 <form>
 <div class="w3-section">
-<label for="err_email">Your E-mail:</label>
+<label for="err_email">Ваш E-mail:</label>
 <input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
 </div>
 <div class="w3-section">
-<label for="err_email">Page address:</label>
+<label for="err_email">Адрес страницы:</label>
 <input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
 </div>
 <div class="w3-section">
-<label for="err_email">Description:</label>
+<label for="err_email">Описание:</label>
 <textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
 </div>
 <div class="form-group">
-<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Submit</button>
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
 </div>
 <br>
 </form>
 </div>
 <div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
 <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
-<h2>Thank You For Helping Us!</h2>
-<p>Your message has been sent to W3Schools.</p>
+<h2>Спасибо за Вашу помощь!</h2>
+<p>Ваше сообщение было отправлено в W3Schools.</p>
 </div>
 
 <div class="w3-row w3-center w3-small">
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Tutorials</h4>
-<a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a><br>
-<a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a><br>
-<a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorial</a><br>
-<a href="https://www.w3schools.com/howto/default.asp">How To Tutorial</a><br>
-<a href="https://www.w3schools.com/sql/default.asp">SQL Tutorial</a><br>
-<a href="https://www.w3schools.com/python/default.asp">Python Tutorial</a><br>
-<a href="https://www.w3schools.com/w3css/default.asp">W3.CSS Tutorial</a><br>
-<a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap Tutorial</a><br>
-<a href="default.html">PHP Tutorial</a><br>
-<a href="https://www.w3schools.com/jquery/default.asp">jQuery Tutorial</a><br>
-<a href="https://www.w3schools.com/java/default.asp">Java Tutorial</a><br>
-<a href="https://www.w3schools.com/cpp/default.asp">C++ Tutorial</a><br>
+<h4>Топ Учебники</h4>
+<a href="default.html">HTML Учебник</a><br>
+<a href="../css/default.html">CSS Учебник</a><br>
+<a href="../js/default.html">JavaScript Учебник</a><br>
+<a href="../howto/default.html">Как сделать Учебник</a><br>
+<a href="../sql/default.html">SQL Учебник</a><br>
+<a href="../python/default.html">Python Учебник</a><br>
+<a href="../w3css/default.html">W3.CSS Учебник</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Учебник</a><br>
+<a href="../php/default.html">PHP Учебник</a><br>
+<a href="../jquery/default.html">jQuery Учебник</a><br>
+<a href="../java/default.html">Java Учебник</a><br>
+<a href="../cpp/default.html">C++ Учебник</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top References</h4>
-<a href="https://www.w3schools.com/tags/default.asp">HTML Reference</a><br>
-<a href="https://www.w3schools.com/cssref/default.asp">CSS Reference</a><br>
-<a href="https://www.w3schools.com/jsref/default.asp">JavaScript Reference</a><br>
-<a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">SQL Reference</a><br>
-<a href="https://www.w3schools.com/python/python_reference.asp">Python Reference</a><br>
-<a href="https://www.w3schools.com/w3css/w3css_references.asp">W3.CSS Reference</a><br>
-<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp">Bootstrap Reference</a><br>
-<a href="php_ref_overview.html">PHP Reference</a><br>
-<a href="https://www.w3schools.com/colors/colors_names.asp">HTML Colors</a><br>
-<a href="https://www.w3schools.com/jquery/jquery_ref_overview.asp">jQuery Reference</a><br>
-<a href="https://www.w3schools.com/java/java_ref_keywords.asp">Java Reference</a><br>
-<a href="https://www.w3schools.com/angular/angular_ref_directives.asp">Angular Reference</a><br>
+<h4>Топ Справочники</h4>
+<a href="../tags/default.html">HTML Справочник</a><br>
+<a href="../cssref/default.html">CSS Справочник</a><br>
+<a href="../jsref/default.html">JavaScript Справочник</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Справочник</a><br>
+<a href="../python/python_reference.html">Python Справочник</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Справочник</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Справочник</a><br>
+<a href="../php/php_ref_overview.html">PHP Справочник</a><br>
+<a href="../colors/colors_names.html">HTML Цвета</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Справочник</a><br>
+<a href="../java/java_ref_keywords.html">Java Справочник</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Справочник</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Top Examples</h4>
-<a href="https://www.w3schools.com/html/html_examples.asp">HTML Examples</a><br>
-<a href="https://www.w3schools.com/css/css_examples.asp">CSS Examples</a><br>
-<a href="https://www.w3schools.com/js/js_examples.asp">JavaScript Examples</a><br>
-<a href="https://www.w3schools.com/howto/default.asp">How To Examples</a><br>
-<a href="https://www.w3schools.com/sql/sql_examples.asp">SQL Examples</a><br>
-<a href="https://www.w3schools.com/python/python_examples.asp">Python Examples</a><br>
-<a href="https://www.w3schools.com/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
-<a href="https://www.w3schools.com/bootstrap/bootstrap_examples.asp">Bootstrap Examples</a><br>
-<a href="php_examples.html">PHP Examples</a><br>
-<a href="https://www.w3schools.com/jquery/jquery_examples.asp">jQuery Examples</a><br>
-<a href="https://www.w3schools.com/java/java_examples.asp">Java Examples</a><br>
-<a href="https://www.w3schools.com/xml/xml_examples.asp">XML Examples</a><br>
+<h4>Топ Примеры</h4>
+<a href="html_examples.html">HTML Примеры</a><br>
+<a href="../css/css_examples.html">CSS Примеры</a><br>
+<a href="../js/js_examples.html">JavaScript Примеры</a><br>
+<a href="../howto/default.html">Как сделать Примеры</a><br>
+<a href="../sql/sql_examples.html">SQL Примеры</a><br>
+<a href="../python/python_examples.html">Python Примеры</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Примеры</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Примеры</a><br>
+<a href="../php/php_examples.html">PHP Примеры</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Примеры</a><br>
+<a href="../java/java_examples.html">Java Примеры</a><br>
+<a href="../xml/xml_examples.html">XML Примеры</a><br>
 </div>
 </div>
 <div class="w3-col l3 m6 s12">
 <div class="top10">
-<h4>Web Certificates</h4>
-<a href="https://www.w3schools.com/cert/default.asp">HTML Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">CSS Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">JavaScript Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">SQL Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">Python Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">jQuery Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">PHP Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">Bootstrap Certificate</a><br>
-<a href="https://www.w3schools.com/cert/default.asp">XML Certificate</a><br>
-<a href="http://www.w3schools.com/cert/default.asp" class="w3-button w3-margin-top w3-dark-grey" style="text-decoration:none">
-Get Certified &raquo;</a>
-
+<h4>Веб Сертификаты</h4>
+<a href="../cert/default.html">HTML Сертификат</a><br>
+<a href="../cert/default.html">CSS Сертификат</a><br>
+<a href="../cert/default.html">JavaScript Сертификат</a><br>
+<a href="../cert/default.html">SQL Сертификат</a><br>
+<a href="../cert/default.html">Python Сертификат</a><br>
+<a href="../cert/default.html">jQuery Сертификат</a><br>
+<a href="../cert/default.html">PHP Сертификат</a><br>
+<a href="../cert/default.html">Bootstrap Сертификат</a><br>
+<a href="../cert/default.html">XML Сертификат</a><br>
+<a class="w3-button w3-margin-top w3-dark-grey" href="../cert/default.html" style="text-decoration:none">Получить Сертификацию &raquo;</a>
 </div>
 </div>
 </div>
 
 <hr>
 <div class="w3-center w3-small w3-opacity">
-W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
-Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
-While using this site, you agree to have read and accepted our <a href="https://www.w3schools.com/about/about_copyright.asp">terms of use</a>,
-<a href="https://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
-<a href="https://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
- <a href="http://www.w3schools.com/w3css/">Powered by W3.CSS</a>.<br><br>
-<a href="http://www.w3schools.com/">
+Этот сайт оптимизирован для обучения, тестирования и обучения. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
+<a href="../about/about_copyright.html">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
+ <a href="../w3css/default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
+<a href="../index.html">
 <img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
 </div>
 <br><br>
@@ -1468,12 +1359,10 @@ While using this site, you agree to have read and accepted our <a href="https://
 
 </div>
 <script src="../lib/w3schools_footer.js"></script>
-<script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
 <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
+<script src="../cdn/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+</div>
 </body>
-
-<!-- Mirrored from www.w3schools.com/php/php_oop_static_methods.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 17:53:12 GMT -->
 </html>
