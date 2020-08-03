@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP XML Парсеры (синтаксические анализаторы). Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="XML Парсеры (синтаксические анализаторы). Что такое XML? Язык XML - это способ структурировать данные для совместного использования на веб-сайтах. XML легко создать. Это похоже на HTML, за исключением того, что вы создаёте свои собственные теги. Что такое XML Парсер? Чтобы читать и обновлять, создавать и манипулировать XML-документом, необходим XML-парсер (анализатор)">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://w3schoolsrus.github.io/php/page.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
@@ -1075,53 +1075,43 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP <span class="color_h1">XML Parsers</span></h1>
+<h1>PHP <span class="color_h1">XML Парсеры (синтаксические анализаторы)</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_mysql_select_limit.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_simplexml_read.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>What is XML?</h2>
-<p>The XML language is a way to structure data for sharing across websites.</p>
-<p>Several web technologies like RSS Feeds and Podcasts are written in XML.</p>
-<p>XML is easy to create. It looks a lot like HTML, except
-that you make up your own tags.</p>
-<p>If you want to learn more about XML, please visit our
-<a href="https://www.w3schools.com/xml/default.asp">XML tutorial</a>.</p>
+<h2>Что такое XML?</h2>
+<p>Язык XML - это способ структурировать данные для совместного использования на веб-сайтах.</p>
+<p>Некоторые веб-технологии, такие как RSS-каналы и подкасты, написаны на XML.</p>
+<p>XML легко создать. Это похоже на HTML, за исключением того, что вы создаёте свои собственные теги.</p>
+<p>Если вы хотите узнать больше об XML, посетите <a href="https://www.w3schools.com/xml/default.asp">XML Учебник</a> на нашем сайте.</p>
 <hr>
 
-<h2>What is an XML Parser?</h2>
-
-<p>To read and update, create and manipulate an XML document, you will need
-an XML parser.</p>
-<p>In PHP there are two major types of XML parsers:</p>
+<h2>Что такое XML Парсер?</h2>
+<p>Чтобы читать и обновлять, создавать и манипулировать XML-документом, вам потребуется XML-парсер (анализатор).</p>
+<p>В PHP есть два основных типа XML-парсеров:</p>
 <ul>
-  <li>Tree-Based Parsers</li>
-  <li>Event-Based Parsers</li>
+  <li>Tree-Based парсеры (древовидные, на основе дерева)</li>
+  <li>Event-Based парсеры (событийные, на основе событий)</li>
 </ul>
 <hr>
 
-<h2>Tree-Based Parsers</h2>
-<p>Tree-based parsers holds the entire document in Memory and transforms the XML document into a
-Tree structure. It analyzes the whole document, and provides access to the Tree elements (DOM).</p>
-<p>This type of parser is a better option for smaller
-XML documents, but not for large XML document as it causes major
-performance issues.</p>
-<p>Example of tree-based parsers:</p>
+<h2>Tree-Based парсеры (древовидные)</h2>
+<p>Древовидные парсеры (Tree-Based) хранят весь документ в памяти и преобразуют XML-документ в древовидную структуру. Он анализирует весь документ и предоставляет доступ к элементам дерева (DOM).</p>
+<p>Этот тип парсера является лучшим вариантом для небольших XML-документов, но не для больших XML-документов, так как он вызывает серьёзные проблемы с производительностью.</p>
+<p>Пример древовидных парсеров:</p>
 <ul>
   <li>SimpleXML</li>
   <li>DOM</li>
 </ul>
 <hr>
 
-<h2>Event-Based Parsers</h2>
-<p>Event-based parsers do
-not hold the entire document in Memory, instead, they read in one node at a
-time and allow you to interact with in real time. Once you move onto the next
-node, the old one is thrown away.</p>
-<p>This type of parser is well suited for large XML documents. It parses faster and consumes less memory. </p>
-<p>Example of event-based parsers:</p>
+<h2>Event-Based парсеры (событийные)</h2>
+<p>Событийные парсеры (Event-Based) не хранят весь документ в памяти, вместо этого они читают по одному узлу за раз и позволяют вам взаимодействовать в режиме реального времени. Как только вы переходите к следующему узлу, старый выбрасывается.</p>
+<p>Этот тип парсера хорошо подходит для больших XML-документов. Он разбирает быстрее и потребляет меньше памяти.</p>
+<p>Пример событийных парсеров:</p>
 <ul>
   <li>XMLReader</li>
   <li>XML Expat Parser</li>
@@ -1140,7 +1130,7 @@ node, the old one is thrown away.</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_xml_parsers.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
