@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP SimpleXML Парсер. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="SimpleXML - это расширение PHP, которое позволяет нам легко манипулировать и получать данные XML. SimpleXML Парсер является древовидным. Предоставляет простой способ получения имени элемента, атрибутов и текстового содержимого, если вы знаете структуру или макет XML-документа, превращает XML-документ в структуру данных, которую вы можете перебирать, как совокупность массивов и объектов. W3Schools на русском">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/php/page.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_xml_simplexml_read.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -1075,29 +1075,29 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP <span class="color_h1">SimpleXML Parser</span></h1>
+<h1>PHP <span class="color_h1">SimpleXML Парсер</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_parsers.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_simplexml_get.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">SimpleXML is a PHP extension that allows us to easily manipulate and get XML data.</p>
+<p class="intro"><strong>SimpleXML</strong> - это расширение PHP, которое позволяет нам легко манипулировать и получать данные XML.</p>
 <hr>
 
-<h2>The SimpleXML Parser</h2>
-<p>SimpleXML is a tree-based parser.</p>
-<p>SimpleXML provides an easy way of getting an element's name, attributes and textual content if you know the XML document's structure or layout.</p>
-<p>SimpleXML turns an XML document into a data structure you can iterate through like a collection of arrays and objects.</p>
-<p>Compared to DOM or the Expat parser, SimpleXML takes a fewer lines of code to read text data from an element.</p>
+<h2>SimpleXML Парсер</h2>
+<p>SimpleXML является древовидным (tree-based) парсером.</p>
+<p>SimpleXML предоставляет простой способ получения имени элемента, атрибутов и текстового содержимого, если вы знаете структуру или макет XML-документа.</p>
+<p>SimpleXML превращает XML-документ в структуру данных, которую вы можете перебирать, как совокупность массивов и объектов.</p>
+<p>По сравнению с DOM или парсером Expat, SimpleXML требует меньше строк кода для чтения текстовых данных из элемента.</p>
 <hr>
 
-<h2>Installation</h2>
-<p>From PHP 5, the SimpleXML functions are part of the PHP core. No installation is required to use these functions.</p>
+<h2>Установка</h2>
+<p>Начиная с PHP 5, функции SimpleXML являются частью ядра PHP. Для использования этих функций установка не требуется.</p>
 <hr>
 
-<h2>PHP SimpleXML - Read From String</h2>
-<p>The PHP <code class="w3-codespan">simplexml_load_string()</code> function is used to read XML data from a string.</p>
-<p>Assume we have a variable that contains XML data, like this:</p>
+<h2>PHP SimpleXML - Читать из строки</h2>
+<p>PHP функция <code class="w3-codespan">simplexml_load_string()</code> используется для чтения данных XML из строки.</p>
+<p>Предположим, у нас есть переменная, которая содержит данные XML, как в примере:</p>
 <div class="w3-example">
 <div class="w3-code htmlHigh notranslate">
 $myXMLData = <br>&quot;&lt;?xml version='1.0' encoding='UTF-8'?&gt;<br>
@@ -1105,60 +1105,49 @@ $myXMLData = <br>&quot;&lt;?xml version='1.0' encoding='UTF-8'?&gt;<br>
 &lt;to&gt;Tove&lt;/to&gt;<br>
 &lt;from&gt;Jani&lt;/from&gt;<br>
 &lt;heading&gt;Reminder&lt;/heading&gt;<br>
-&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>
+&lt;body&gt;Не забудь меня в эти выходные!&lt;/body&gt;<br>
 &lt;/note&gt;&quot;;
 </div></div>
-<p>The example below shows how to use the <code class="w3-codespan">simplexml_load_string()</code> function to
-read XML data from a string:</p>
+<p>В приведенном ниже примере показано, как использовать функцию <code class="w3-codespan">simplexml_load_string()</code> для чтения данных XML из строки:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code htmlHigh notranslate">
 &lt;?php<br>$myXMLData =<br>&quot;&lt;?xml version='1.0' encoding='UTF-8'?&gt;<br>
 &lt;note&gt;<br>
 &lt;to&gt;Tove&lt;/to&gt;<br>
 &lt;from&gt;Jani&lt;/from&gt;<br>
 &lt;heading&gt;Reminder&lt;/heading&gt;<br>
-&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>
+&lt;body&gt;Не забудь меня в эти выходные!&lt;/body&gt;<br>
 &lt;/note&gt;&quot;;<br><br>
-$xml=simplexml_load_string($myXMLData) or die(&quot;Error: Cannot create object&quot;);<br>print_r($xml);<br>
+$xml=simplexml_load_string($myXMLData) or die(&quot;Ошибка: не удается создать объект&quot;);<br>print_r($xml);<br>
 ?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_read_string">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_read_string">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
- SimpleXMLElement Object ( [to] =&gt; Tove [from] =&gt; Jani [heading] =&gt; Reminder [body] =&gt; Don't forget me this weekend! )
+ SimpleXMLElement Object ( [to] =&gt; Tove [from] =&gt; Jani [heading] =&gt; Reminder [body] =&gt; Не забудь меня в эти выходные! )
 </div></div>
-<p><strong>Error Handling Tip:</strong> Use the libxml functionality to retrieve
-all XML errors when loading the document and then iterate over the errors. The
-following example tries to load a broken XML string:</p>
+<p><strong>Совет по обработке ошибок:</strong> Используйте функцию libxml, чтобы получить все ошибки XML при загрузке документа, а затем перебрать ошибки. В следующем примере попытка загрузить поврежденную строку XML:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code htmlHigh notranslate">
 &lt;?php<br>libxml_use_internal_errors(true);<br>$myXMLData =<br>&quot;&lt;?xml version='1.0' encoding='UTF-8'?&gt; <br>&lt;document&gt; <br>&lt;user&gt;John Doe&lt;/wronguser&gt; <br>&lt;email&gt;john@example.com&lt;/wrongemail&gt;
- <br>&lt;/document&gt;&quot;; <br><br>$xml = simplexml_load_string($myXMLData);<br>if ($xml === false) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Failed loading XML: &quot;;<br>&nbsp;&nbsp;&nbsp; foreach(libxml_get_errors() as $error) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&quot;, $error-&gt;message;<br>&nbsp;&nbsp;&nbsp; }<br>} else {<br>&nbsp;&nbsp;&nbsp; print_r($xml);<br>}<br>
+ <br>&lt;/document&gt;&quot;; <br><br>$xml = simplexml_load_string($myXMLData);<br>if ($xml === false) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Не удалось загрузить XML: &quot;;<br>&nbsp;&nbsp;&nbsp; foreach(libxml_get_errors() as $error) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&quot;, $error-&gt;message;<br>&nbsp;&nbsp;&nbsp; }<br>} else {<br>&nbsp;&nbsp;&nbsp; print_r($xml);<br>}<br>
 ?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_read_string_error">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_read_string_error">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
-<div class="w3-code w3-border notranslate"><div>
- Failed loading XML: <br>Opening and ending tag mismatch: user line 3 and wronguser<br>Opening and ending tag mismatch: email line 4 and wrongemail
-</div></div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
 
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
+<p>Вывод вышеприведенного кода будет:</p>
+<div class="w3-code w3-border notranslate">
+  <div>Не удалось загрузить XML: <br>Несоответствие открывающего и закрывающего тегов: user line 3 and wronguser<br> Несоответствие открывающего и заканчивающего тегов: email line 4 and wrongemail </div>
 </div>
 <hr>
 
-<h2>PHP SimpleXML - Read From File</h2>
-<p>The PHP <code class="w3-codespan">simplexml_load_file()</code> function is used to read XML data from a file.</p>
-<p>Assume we have an XML file called &quot;<a href="note.xml" target="_blank">note.xml</a>&quot;,
-that looks like this:</p>
+<h2>PHP SimpleXML - Читать из файла</h2>
+<p>PHP функция <code class="w3-codespan">simplexml_load_file()</code> используется для чтения данных XML из файла.</p>
+<p>Предположим, у нас есть файл XML с именем &quot;<a href="note.xml" target="_blank">note.xml</a>&quot;, который выглядит так:</p>
 <div class="w3-example">
 <div class="w3-code htmlHigh notranslate">
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
@@ -1170,34 +1159,31 @@ that looks like this:</p>
 &nbsp;
 &lt;heading&gt;Reminder&lt;/heading&gt;<br>
 &nbsp;
-&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>
+&lt;body&gt;Не забудь меня в эти выходные!&lt;/body&gt;<br>
 &lt;/note&gt;
 </div></div>
-<p>The example below shows how to use the <code class="w3-codespan">simplexml_load_file()</code> function to read
-XML data from a file:</p>
+<p>В приведенном ниже примере показано, как использовать функцию <code class="w3-codespan">simplexml_load_file()</code> для чтения данных XML из файла:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
 &lt;?php<br>
-$xml=simplexml_load_file(&quot;note.xml&quot;) or die(&quot;Error: Cannot create object&quot;);<br>
+$xml=simplexml_load_file(&quot;note.xml&quot;) or die(&quot;Ошибка: не удается создать объект&quot;);<br>
  print_r($xml);<br>
 ?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_read_file">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_read_file">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
- SimpleXMLElement Object ( [to] =&gt; Tove [from] =&gt; Jani [heading] =&gt; Reminder [body] =&gt; Don't forget me this weekend! )
+ SimpleXMLElement Object ( [to] =&gt; Tove [from] =&gt; Jani [heading] =&gt; Reminder [body] =&gt; Не забудь меня в эти выходные! )
 </div></div>
-<p><strong>Tip:</strong> The next chapter shows how to get/retrieve node values
-from an XML file with SimpleXML!</p>
+<p><strong>Примечание:</strong> В следующей главе показано, как получить/вернуть значения узлов из XML-файла с помощью SimpleXML!</p>
 <hr>
 
-<h2>More PHP SimpleXML</h2>
-<p>For more information about the PHP SimpleXML functions, visit our
-<a href="php_ref_simplexml.html">PHP SimpleXML Reference</a>.</p>
+<h2>Больше PHP SimpleXML</h2>
+<p>Для получения дополнительной информации о PHP-функциях SimpleXML посетите <a href="php_ref_simplexml.html">PHP SimpleXML Справочник</a> на нашем сайте.</p>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_parsers.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_simplexml_get.html">Next &#10095;</a>
@@ -1210,7 +1196,7 @@ from an XML file with SimpleXML!</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_xml_simplexml_read.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
