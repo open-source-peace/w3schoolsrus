@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP SimpleXML - Получить значения узлов/атрибутов. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="SimpleXML - это расширение PHP, которое позволяет нам легко манипулировать и получать данные XML. Как получить значения узлов / атрибутов? Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/php/page.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_xml_simplexml_get.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -1075,27 +1075,26 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP <span class="color_h1">SimpleXML - Get Node/Attribute Values</span></h1>
+<h1>PHP <span class="color_h1">SimpleXML - Получить значения узлов/атрибутов</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_simplexml_read.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_parser_expat.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">SimpleXML is a PHP extension that allows us to easily
-manipulate and get XML data.</p>
+<p class="intro">SimpleXML - это расширение PHP, которое позволяет нам легко манипулировать и получать данные XML.</p>
 <hr>
 
-<h2>PHP SimpleXML - Get Node Values</h2>
-<p>Get the node values from the &quot;<a href="note.xml" target="_blank">note.xml</a>&quot; file:</p>
+<h2>PHP SimpleXML - Получить значения узла</h2>
+<p>Получите значения узла из файла &quot;<a href="note.xml" target="_blank">note.xml</a>&quot;:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
- &lt;?php<br>$xml=simplexml_load_file(&quot;note.xml&quot;) or die(&quot;Error: Cannot create object&quot;);<br>echo $xml-&gt;to . &quot;&lt;br&gt;&quot;;<br>
+ &lt;?php<br>$xml=simplexml_load_file(&quot;note.xml&quot;) or die(&quot;ошибка: не удается создать объект&quot;);<br>echo $xml-&gt;to . &quot;&lt;br&gt;&quot;;<br>
  echo $xml-&gt;from . &quot;&lt;br&gt;&quot;;<br>echo $xml-&gt;heading . &quot;&lt;br&gt;&quot;;<br>echo $xml-&gt;body;<br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_one">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_one">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
 Tove<br>
 Jani<br>
@@ -1104,9 +1103,9 @@ Don't forget me this weekend!
 </div></div>
 <hr>
 
-<h2>Another XML File</h2>
-<p>Assume we have an XML file called &quot;<a href="books.xml" target="_blank">books.xml</a>&quot;,
-that looks like this:&nbsp;</p>
+<h2>Другой XML файл</h2>
+<p>Предположим, у нас есть файл XML с именем &quot;<a href="books.xml" target="_blank">books.xml</a>&quot;,
+который выглядит так:&nbsp;</p>
 <div class="w3-code w3-border notranslate"><div>
  &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br>&lt;bookstore&gt;<br>&nbsp; &lt;book category=&quot;COOKING&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;title lang=&quot;en&quot;&gt;Everyday Italian&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp; &lt;author&gt;Giada De Laurentiis&lt;/author&gt;<br>&nbsp;&nbsp;&nbsp; &lt;year&gt;2005&lt;/year&gt;<br>
  &nbsp;&nbsp;&nbsp;
@@ -1121,83 +1120,71 @@ that looks like this:&nbsp;</p>
  &lt;year&gt;2003&lt;/year&gt;<br>&nbsp;&nbsp;&nbsp; &lt;price&gt;39.95&lt;/price&gt;<br>&nbsp; &lt;/book&gt;<br>&lt;/bookstore&gt;
 </div></div>
 <hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
 
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
-<hr>
-
-<h2>PHP SimpleXML - Get Node Values of Specific Elements</h2>
-<p>The following example gets the node value of the &lt;title&gt; element in the first
-and second &lt;book&gt; elements in the &quot;books.xml&quot; file:&nbsp;</p>
+<h2>PHP SimpleXML - Получить значения узла определенных элементов</h2>
+<p>В следующем примере показано значение узла элемента &lt;title&gt; в первом и втором элементах &lt;book&gt; в файле &quot;books.xml&quot;:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
- &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Error: Cannot create object&quot;);<br>echo $xml-&gt;book[0]-&gt;title . &quot;&lt;br&gt;&quot;;<br>echo $xml-&gt;book[1]-&gt;title; <br>?&gt;
+ &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Ошибка: не удается создать объект&quot;);<br>echo $xml-&gt;book[0]-&gt;title . &quot;&lt;br&gt;&quot;;<br>echo $xml-&gt;book[1]-&gt;title; <br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_many1">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_many1">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
  Everyday Italian<br>Harry Potter
 </div></div>
 <hr>
 
-<h2>PHP SimpleXML - Get Node Values - Loop</h2>
-<p>The following example loops through all the &lt;book&gt; elements in the &quot;books.xml&quot; file,
-and gets the node values of the &lt;title&gt;, &lt;author&gt;, &lt;year&gt;, and &lt;price&gt; elements:</p>
+<h2>PHP SimpleXML - Получить значения узла - Цикл</h2>
+<p>В следующем примере выполняется циклический просмотр всех элементов &lt;book&gt; в файле &quot;books.xml&quot;,
+и получение значений узлов элементов &lt;title&gt;, &lt;author&gt;, &lt;year&gt; и &lt;price&gt;:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
- &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Error: Cannot create object&quot;);<br>foreach($xml-&gt;children() as $books) { <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;title . &quot;, &quot;; <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;author . &quot;, &quot;; <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;year . &quot;, &quot;;<br>&nbsp;&nbsp;&nbsp; echo $books-&gt;price . &quot;&lt;br&gt;&quot;; <br>} <br>?&gt;
+ &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Ошибка: не удается создать объект&quot;);<br>foreach($xml-&gt;children() as $books) { <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;title . &quot;, &quot;; <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;author . &quot;, &quot;; <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;year . &quot;, &quot;;<br>&nbsp;&nbsp;&nbsp; echo $books-&gt;price . &quot;&lt;br&gt;&quot;; <br>} <br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_many2">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_many2">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
  Everyday Italian, Giada De Laurentiis, 2005, 30.00<br>Harry Potter, J K. Rowling, 2005, 29.99<br>XQuery Kick Start, James McGovern, 2003, 49.99<br>
  Learning XML, Erik T. Ray, 2003, 39.95
 </div></div>
 <hr>
 
-<h2>PHP SimpleXML - Get Attribute Values</h2>
-<p>The following example gets the attribute value of the &quot;category&quot; attribute of
-the first &lt;book&gt; element and the attribute value of the &quot;lang&quot; attribute
-of the &lt;title&gt; element in the second &lt;book&gt; element:</p>
+<h2>PHP SimpleXML - Получить значения атрибутов</h2>
+<p>В следующем примере показано значение атрибута &quot;category&quot; первого элемента &lt;book&gt; и значение атрибута &quot;lang&quot; элемента &lt;title&gt; во втором элементе &lt;book&gt;:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
- &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Error: Cannot create object&quot;);<br>echo $xml-&gt;book[0]['category'] . &quot;&lt;br&gt;&quot;;<br>echo $xml-&gt;book[1]-&gt;title['lang']; <br>?&gt;
+ &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Ошибка: не удается создать объект&quot;);<br>echo $xml-&gt;book[0]['category'] . &quot;&lt;br&gt;&quot;;<br>echo $xml-&gt;book[1]-&gt;title['lang']; <br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_attr1">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_attr1">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
  COOKING<br>en</div></div>
 <hr>
 
-<h2>PHP SimpleXML - Get Attribute Values - Loop</h2>
-<p>The following example gets the attribute values of the &lt;title&gt; elements in the &quot;books.xml&quot; file:</p>
+<h2>PHP SimpleXML - Получить значения атрибутов - Цикл</h2>
+<p>В следующем примере показано получение значений атрибутов элементов &lt;title&gt; в файле &quot;books.xml&quot;:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
- &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Error: Cannot create object&quot;);<br>foreach($xml-&gt;children() as $books) { <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;title['lang'];<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&quot;; <br>} <br>?&gt;
+ &lt;?php<br>$xml=simplexml_load_file(&quot;books.xml&quot;) or die(&quot;Ошибка: не удается создать объект&quot;);<br>foreach($xml-&gt;children() as $books) { <br>&nbsp;&nbsp;&nbsp; echo $books-&gt;title['lang'];<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&quot;; <br>} <br>?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_attr2">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_simplexml_get_attr2">Запустить пример &raquo;</a>
 </div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
 en<br>en<br>en-us<br>en-us</div></div>
 <hr>
 
-<h2>More PHP SimpleXML</h2>
-<p>For more information about the PHP SimpleXML functions, visit our
-<a href="php_ref_simplexml.html">PHP SimpleXML Reference</a>.</p>
+<h2>Больше PHP SimpleXML</h2>
+<p>Для получения дополнительной информации о функциях PHP SimpleXML посетите <a href="php_ref_simplexml.html">PHP SimpleXML Справочник</a> на нашем сайте.</p>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_simplexml_read.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_parser_expat.html">Next &#10095;</a>
@@ -1210,7 +1197,7 @@ en<br>en<br>en-us<br>en-us</div></div>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_xml_simplexml_get.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
