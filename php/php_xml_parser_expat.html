@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP XML Парсер Expat. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="Встроенный парсер XML Expat позволяет обрабатывать XML-документы на PHP. Это event-based парсер (основанный на событиях, событийный). Инициализация XML Expat парсера. Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/php/page.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_xml_parser_expat.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -1075,41 +1075,39 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP <span class="color_h1">XML Expat Parser</span></h1>
+<h1>PHP <span class="color_h1">XML Парсер Expat</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_simplexml_get.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_dom.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">The built-in XML Expat Parser makes it possible to process XML
-documents in PHP.</p>
+<p class="intro">Встроенный парсер XML Expat позволяет обрабатывать XML-документы на PHP.</p>
 <hr>
 
-<h2>The XML Expat Parser</h2>
+<h2>XML Парсер Expat</h2>
 
-<p>The Expat parser is an event-based parser.</p>
-<p>Look at the following XML fraction:</p>
+<p>Парсер Expat - это event-based парсер (основанный на событиях, событийный).</p>
+<p>Посмотрите на следующую часть XML:</p>
 <div class="w3-code w3-border notranslate"><div>
 
 &lt;from&gt;Jani&lt;/from&gt;
 
 </div></div>
 
-<p>An event-based parser reports the XML above as a series of three events: </p>
+<p>Событийный парсер сообщает приведенный выше XML как последовательность из трех событий:</p>
 <ul>
-  <li>Start element: from</li>
-  <li>Start CDATA section, value: Jani</li>
-  <li>Close element: from</li>
+  <li>Начать элемент: from</li>
+  <li>Начать CDATA секцию, значение: Jani</li>
+  <li>Закрыть элемент: from</li>
 </ul>
 
-<p>The XML Expat Parser functions are part of the PHP core. There is no
-installation needed to use these functions.</p>
+<p>Функции XML Expat парсера являются частью ядра PHP. Для использования этих функций не требуется дополнительная установка.</p>
 <hr>
 
-<h2>The XML File</h2>
-<p>The XML file &quot;note.xml&quot; will be used in the example below:</p>
-<div class="w3-code w3-border notranslate"><div>
-
+<h2>XML файл</h2>
+<p>XML файл &quot;note.xml&quot; будет использоваться в примере ниже:</p>
+<div class="w3-code w3-border notranslate">
+  <div>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
 &lt;note&gt;<br>
 &lt;to&gt;Tove&lt;/to&gt;<br>
@@ -1117,31 +1115,21 @@ installation needed to use these functions.</p>
 &lt;heading&gt;Reminder&lt;/heading&gt;<br>
 &lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>
 &lt;/note&gt;
-
-</div></div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
+  </div>
 </div>
 <hr>
 
-<h2>Initializing the XML Expat Parser</h2>
-<p>We want to initialize the XML Expat Parser in PHP, define some handlers for different
-XML events, and then parse the XML file.</p>
-
+<h2>Инициализация XML Expat парсера</h2>
+<p>Мы хотим инициализировать XML Expat парсер в PHP, определить некоторые обработчики для различных XML событий, а затем проанализировать XML файл.</p>
 
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
 &lt;?php<br>
-// Initialize the XML parser<br>
+// Инициализировать XML парсер<br>
 $parser=xml_parser_create();<br>
 <br>
-// Function to use at the start of an element<br>
+// Функция для использования в начале элемента<br>
 function start($parser,$element_name,$element_attrs)&nbsp;{<br>
 &nbsp;&nbsp;switch($element_name)&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;case &quot;NOTE&quot;:<br>
@@ -1161,26 +1149,26 @@ function start($parser,$element_name,$element_attrs)&nbsp;{<br>
  &nbsp;&nbsp;}<br>
  }<br>
 <br>
-// Function to use at the end of an element<br>
+// Функция для использования в конце элемента<br>
 function stop($parser,$element_name)&nbsp;{<br>
 &nbsp;&nbsp;echo &quot;&lt;br&gt;&quot;;<br>
  }<br>
 <br>
-// Function to use when finding character data<br>
+// Функция для использования при поиске символьных данных<br>
 function char($parser,$data)&nbsp;{<br>
 &nbsp;&nbsp;echo $data;<br>
  }<br>
 <br>
-// Specify element handler<br>
+// Укажите обработчик элемента<br>
 xml_set_element_handler($parser,&quot;start&quot;,&quot;stop&quot;);<br>
 <br>
-// Specify data handler<br>
+// Укажите обработчик данных<br>
 xml_set_character_data_handler($parser,&quot;char&quot;);<br>
 <br>
-// Open XML file<br>
+// Открыть XML файл<br>
 $fp=fopen(&quot;note.xml&quot;,&quot;r&quot;);<br>
 <br>
-// Read data<br>
+// Прочитать данные<br>
 while ($data=fread($fp,4096))&nbsp;{<br>
 &nbsp;&nbsp;xml_parse($parser,$data,feof($fp)) or <br>
 &nbsp;&nbsp;die (sprintf(&quot;XML Error: %s at line %d&quot;, <br>
@@ -1188,29 +1176,29 @@ while ($data=fread($fp,4096))&nbsp;{<br>
 &nbsp;&nbsp;xml_get_current_line_number($parser)));<br>
  }<br>
 <br>
-// Free the XML parser<br>
+// Свободный XML парсер<br>
 xml_parser_free($parser);<br>
 ?&gt;
 </div>
-<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_xml">Run example &raquo;</a>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_xml">Запустить пример &raquo;</a>
 </div>
 
-<p>Example explained:</p>
+<p>Объяснение примера:</p>
 <ol>
-  <li>Initialize the XML parser with the <code class="w3-codespan">xml_parser_create()</code> function</li>
-  <li>Create functions to use with the different event handlers</li>
-  <li>Add the <code class="w3-codespan">xml_set_element_handler()</code> function to specify which function will be executed when the parser encounters the opening and closing tags</li>
-  <li>Add the <code class="w3-codespan">xml_set_character_data_handler()</code> function to specify which function will execute when the parser encounters character data</li>
-  <li>Parse the file &quot;note.xml&quot; with the <code class="w3-codespan">xml_parse()</code> function</li>
-  <li>In case of an error, add <code class="w3-codespan">xml_error_string()</code> function to convert an XML error to a textual description</li>
-  <li>Call the <code class="w3-codespan">xml_parser_free()</code> function to release the memory allocated with the <code class="w3-codespan">xml_parser_create()</code> function</li>
+  <li>Инициализация XML парсера с помощью функции <code class="w3-codespan">xml_parser_create()</code>;</li>
+  <li>Создание функций для использования с различными обработчиками событий;</li>
+  <li>Добавление функции <code class="w3-codespan">xml_set_element_handler()</code>, чтобы указать, какая функция будет выполняться при обнаружении парсером открывающих и закрывающих тегов;</li>
+  <li>Добавление функции <code class="w3-codespan">xml_set_character_data_handler()</code>, чтобы указать, какая функция будет выполняться, когда парсер встречает символьные данные;</li>
+  <li>Пропарсить (проанализировать) файл &quot;note.xml&quot; с помощью функции <code class="w3-codespan">xml_parse()</code>;</li>
+  <li>В случае ошибки добавьте функцию <code class="w3-codespan">xml_error_string()</code> чтобы преобразовать ошибку XML в текстовое описание;</li>
+  <li>Вызовите функцию <code class="w3-codespan">xml_parser_free()</code> чтобы освободить память, выделенную функцией <code class="w3-codespan">xml_parser_create()</code>.</li>
 </ol>
 <hr>
 
-<h2>More PHP XML Expat Parser</h2>
-<p>For more information about the PHP Expat functions, visit our <a href="php_ref_xml.html">PHP XML Parser Reference</a>.</p>
+<h2>Больше об PHP XML Expat парсере</h2>
+<p>Для получения дополнительной информации о функциях PHP Expat, посетите <a href="php_ref_xml.html">Справочник PHP XML Парсер</a> на нашем сайте.</p>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_simplexml_get.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_xml_dom.html">Next &#10095;</a>
@@ -1223,7 +1211,7 @@ xml_parser_free($parser);<br>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_xml_parser_expat.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
