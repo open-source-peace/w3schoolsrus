@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP XML DOM Парсер. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="Встроенный DOM парсер позволяет обрабатывать XML документы в PHP. DOM парсер - это tree-based (древовидный) парсер. Функции DOM парсера являются частью ядра PHP. Для использования этих функций не требуется дополнительная установка. Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/php/page.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_xml_dom.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -1075,35 +1075,35 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP <span class="color_h1">XML DOM Parser</span></h1>
+<h1>PHP <span class="color_h1">XML DOM Парсер</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_parser_expat.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_ajax_intro.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">The built-in DOM parser makes it possible to process XML documents in PHP.</p>
+<p class="intro">Встроенный DOM парсер позволяет обрабатывать XML документы в PHP.</p>
 <hr>
 
-<h2>The XML DOM Parser</h2>
-<p>The DOM parser is a tree-based parser.</p>
-<p>Look at the following XML document fraction:</p>
+<h2>XML DOM Парсер</h2>
+<p>DOM парсер - это tree-based (древовидный) парсер.</p>
+<p>Посмотрите на следующую часть документа XML:</p>
 <div class="w3-code w3-border notranslate"><div>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
 &lt;from&gt;Jani&lt;/from&gt;
 </div></div>
-<p>The DOM sees the XML above as a tree structure: </p>
+<p>DOM видит XML выше как древовидную структуру:</p>
 <ul>
-  <li>Level 1: XML Document</li>
-  <li>Level 2: Root element: &lt;from&gt;</li>
-  <li>Level 3: Text element: &quot;Jani&quot;</li>
+  <li>Уровень 1: XML документ</li>
+  <li>Уровень 2: Корневой элемент: &lt;from&gt;</li>
+  <li>Уровень 3: Текстовый элемент: &quot;Jani&quot;</li>
 </ul>
 <hr>
 
-<h2>Installation</h2>
-<p>The DOM parser functions are part of the PHP core. There is no installation needed to use these functions.</p>
+<h2>Установка</h2>
+<p>Функции DOM парсера являются частью ядра PHP. Для использования этих функций не требуется дополнительная установка.</p>
 <hr>
 
-<h2>The XML File</h2>
+<h2>XML файл</h2>
 <p>The XML file below (&quot;note.xml&quot;) will be used in our example:</p>
 <div class="w3-code w3-border notranslate"><div>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
@@ -1115,17 +1115,9 @@
 &lt;/note&gt;
 </div></div>
 <hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
 
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
-<hr>
-
-<h2>Load and Output XML</h2>
-<p>We want to initialize the XML parser, load the xml, and output it:</p>
+<h2>Загрузка и вывод XML</h2>
+<p>Мы хотим инициализировать XML парсер, загрузить xml и вывести его:</p>
 <div class="w3-example">
 <div class="w3-code htmlHigh notranslate">
 &lt;?php<br>
@@ -1135,11 +1127,11 @@ $xmlDoc-&gt;load(&quot;note.xml&quot;);<br>
 print $xmlDoc-&gt;saveXML();<br>
 ?&gt;
 </div></div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
 Tove Jani Reminder Don't forget me this weekend!
 </div></div>
-<p>If you select &quot;View source&quot; in the browser window, you will see the following HTML:</p>
+<p>Если вы выберете &quot;View source&quot; в окне браузера, вы увидите следующий HTML:</p>
 <div class="w3-code w3-border notranslate"><div>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
 &lt;note&gt;<br>
@@ -1149,12 +1141,12 @@ Tove Jani Reminder Don't forget me this weekend!
 &lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>
 &lt;/note&gt;
 </div></div>
-<p>The example above creates a DOMDocument-Object and loads the XML from &quot;note.xml&quot; into it.</p>
-<p>Then the saveXML() function puts the internal XML document into a string, so we can output it. </p>
+<p>В приведенном выше примере создается DOMDocument-Object и загружается в него XML-файл из &quot;note.xml&quot;.</p>
+<p>Затем функция saveXML() помещает внутренний XML-документ в строку, чтобы мы могли вывести его.</p>
 <hr>
 
-<h2>Looping through XML</h2>
-<p>We want to initialize the XML parser, load the XML, and loop through all elements of the &lt;note&gt; element:</p>
+<h2>Перебор посредством XML</h2>
+<p>Мы хотим инициализировать XML парсер, загрузить XML и перебрать все элементы файла &lt;note&gt;:</p>
 <div class="w3-example">
 <div class="w3-code htmlHigh notranslate">
 &lt;?php<br>
@@ -1167,7 +1159,7 @@ foreach ($x-&gt;childNodes AS $item) {<br>
  }<br>
 ?&gt;
 </div></div>
-<p>The output of the code above will be:</p>
+<p>Вывод вышеприведенного кода будет:</p>
 <div class="w3-code w3-border notranslate"><div>
 #text = <br>
 to = Tove<br>
@@ -1179,15 +1171,13 @@ heading = Reminder<br>
 body = Don't forget me this weekend!<br>
 #text =
 </div></div>
-<p>In the example above you see that there are empty text nodes between each element.</p>
-<p>When XML generates, it often contains white-spaces between the nodes. The XML
-DOM parser treats these as ordinary elements, and if you are not aware of them,
-they sometimes cause problems.</p>
+<p>В приведенном выше примере вы видите, что между каждым элементом есть пустые текстовые узлы.</p>
+<p>Когда генерируется XML, он часто содержит пробелы между узлами. XML DOM парсер рассматривает их как обычные элементы, и, если вы о них не знаете, они иногда вызывают проблемы.</p>
 <hr>
-<p>If you want to learn more about the XML DOM, please visit our
-<a href="https://www.w3schools.com/xml/default.asp">XML tutorial</a>.</p>
 
-<br>
+<p>Если вы хотите узнать больше об XML DOM, посетите <a href="../xml/default.html">XML Учебник</a> на нашем сайте.</p>
+
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="php_xml_parser_expat.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="php_ajax_intro.html">Next &#10095;</a>
@@ -1200,7 +1190,7 @@ they sometimes cause problems.</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_xml_dom.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
