@@ -4,11 +4,9 @@
 <title>CSS Блочная модель. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="HTML,CSS,w3c,w3schools,на русском,уроки,для начинающих,курс,основы,язык,стили,стилизация,блочная,модель,блок,блоки,тег,справочник,каскадные,таблицы,стилей,css3,примеры,упражнения,код">
 <meta name="description" content="Блочная модель в CSS. Как применяются блоки при создании веб-страницы с помощью CSS? Бесплатные уроки онлайн для начинающих веб-разработчиков. W3Schools на русском">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
-<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
 </head>
 
 <body>
@@ -45,11 +43,11 @@
       <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
       <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'>КНИГИ</a>
-      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>     
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
       <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
 
     </div>
-    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">   
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
       <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
       <div class='w3-row-padding' style="padding:24px 48px">
         <div class='w3-col l3 m6'>
@@ -350,8 +348,8 @@
 <a class="w3-left w3-btn" href="css_dimension.html">&#10094; Prev</a>
 <a class="w3-right w3-btn" href="css_outline.html">Next &#10095;</a>
 </div>
-
 <hr>
+
 <h2>CSS Box Model - Блочная модель</h2>
 <p>Все элементы <strong>HTML</strong> могут рассматриваться как блоки. В <strong>CSS</strong> термин &quot;блочная модель&quot; (&quot;box model&quot;) используется, когда речь идет о дизайне и верстке.</p>
 <p>Блочная модель CSS, по сути, представляет собой коробку (блок), которая охватывает каждый элемент HTML. Он состоит из: полей, границ, отступов и фактического содержимого. Изображение ниже иллюстрирует модель коробки:</p>
@@ -373,15 +371,13 @@
 </ul>
 <p>Блочная модель позволяет нам добавлять границы вокруг элементов и определять пространство между элементами.</p>
 
-<h3>Пример</h3>
-<p>Демонстрация блочной модели:&nbsp;</p>
 <div class="w3-example">
 <h3>Пример</h3>
   <p>Демонстрация блочной модели:</p>
 <div class="w3-code notranslate cssHigh">
-div {<br>&nbsp;&nbsp;width: 300px;<br>&nbsp;&nbsp;border: 15px solid 
-green;<br>&nbsp; 
-padding: 50px;<br>&nbsp; 
+div {<br>&nbsp;&nbsp;width: 300px;<br>&nbsp;&nbsp;border: 15px solid
+green;<br>&nbsp;
+padding: 50px;<br>&nbsp;
 margin: 20px;<br>}</div>
 <a target="_blank" href="tryita7e3.html?filename=trycss_boxmodel" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
@@ -449,7 +445,7 @@ margin: 0;
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / css / css_dimension.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / css / css_boxmodel.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
@@ -481,7 +477,7 @@ s.setAttribute('data-timestamp', +new Date());
     <h4><a href="../howto/default.html" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4>
   </div>
   <div class="w3-container w3-left-align w3-padding-16">
-    <a href="../howto/howto_js_tabs.html">Вкладки</a><br>    
+    <a href="../howto/howto_js_tabs.html">Вкладки</a><br>
     <a href="../howto/howto_css_dropdown.html">Выпадающее меню</a><br>
     <a href="../howto/howto_js_accordion.html">Меню аккордеон</a><br>
     <a href="../howto/howto_js_sidenav.html">Боковая навигация</a><br>
