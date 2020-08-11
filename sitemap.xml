@@ -1079,6 +1079,106 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://w3schoolsrus.github.io/css/css_boxmodel.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_outline.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_text.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_font.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_icons.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_link.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_list.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_table.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_display_visibility.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_max-width.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_positioning.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_overflow.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_float.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_inline-block.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_align.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_combinators.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_pseudo_classes.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_pseudo_elements.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_image_transparency.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_navbar.html</loc>
+  <lastmod>2020-08-10T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
   <loc>https://w3schoolsrus.github.io/bootstrap/bootstrap_ver.html</loc>
   <lastmod>2020-08-02T13:15:00+00:00</lastmod>
   <priority>1.00</priority>
