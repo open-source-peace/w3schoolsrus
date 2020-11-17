@@ -1330,6 +1330,161 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://w3schoolsrus.github.io/css/css3_flexbox.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css3_mediaqueries.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css3_mediaqueries_ex.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_intro.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_viewport.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_grid.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_mediaqueries.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_images.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_videos.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_frameworks.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_rwd_templates.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_grid.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_grid_container.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_grid_item.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_templates.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_examples.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_quiz.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/css_exam.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/default.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css3_browsersupport.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_selectors.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_functions.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_ref_aural.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_websafe_fonts.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_animatable.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_units.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_pxtoemconversion.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_colors.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_colors_legal.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_default_values.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://w3schoolsrus.github.io/cssref/css_entities.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
   <loc>https://w3schoolsrus.github.io/bootstrap/bootstrap_ver.html</loc>
   <lastmod>2020-08-02T13:15:00+00:00</lastmod>
   <priority>1.00</priority>
