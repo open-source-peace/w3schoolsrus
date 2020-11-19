@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/appml/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:27 GMT -->
+<!-- Mirrored from www.w3schools.com/appml/appml_methods.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:34 GMT -->
 <head>
-<title>AppML Tutorial</title>
+<title>AppML Methods and Properties</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -696,8 +696,8 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-<body>
 <div class='w3-container top'>
   <a class='w3schools-logo notranslate' href='http://www.w3schools.com/'>w3schools<span class='dotcom'>.com</span></a>
 
@@ -1033,155 +1033,145 @@ function w3_getStyleValue(elmnt,style) {
        
       </div>
 <body>
-<h1><span class="color_h1">AppML</span> Tutorial</h1>
+<h1><span class="color_h1">AppML API</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-button w3-green" href="https://www.w3schools.com/default.asp">&#10094; Home</a>
-<a class="w3-right w3-button w3-green" href="appml_howto.html">Next &#10095;</a>
+<a class="w3-left w3-button w3-green" href="appml_models.html">&#10094; Previous</a>
+<a class="w3-right w3-button w3-green" href="appml_cases.html">Next &#10095;</a>
 </div>
-
-<div class="w3-panel w3-info w3-center">
-<p style="font-size:35px">AppML Brings Data to HTML</p>
-<p style="font-size:25px">"No Nonsense Web Applications"</p>
-</div>
-
 
 <hr>
-<h2>Introduction</h2>
-<p>The Web is growing fast, and the amount of data in Cyberspace is growing even faster.</p>
-<p>Every day new information systems are developed, and every day new users are connected,
-and data can be accessed 24/7 from anywhere in the world.</p>
+<p class="intro">The AppML API defines the methods and properties of AppML</p>
+<hr>
 
-<p class="w3-large"><i>Faster and better software development methods are desperately needed</i>.</p>
-
-<p>Along these lines, W3Schools has developed a very flexible technique for retrieving, displaying, and manipulate data,
-without the need for traditional programming.</p>
-
-<p>Cooperating with Jan Egil Refsnes, W3schools has developed a vocabulary for defining Web applications.
-The vocabulary is called AppML (Application Modeling Language).</p>
-
-<p>AppML uses the most up-to-date techniques and ideas of modern Web development with focus on:</p>
+<h2>What Can Methods and Properties Do?</h2>
+<p>With methods and properties you can:</p>
 <ul type="square">
-  <li>Low Cost</li>
-  <li>Rapid and Agile Web Develoment</li>
-  <li>Optimized for Cloud Computing</li>
-  <li>High Speed and Low Bandwidth Consumption</li>
-  <li>MVC (Model Viev Controller) Architecture</li>
-  <li>Full Separation of Content from Presentation </li>
-  <li>Highly Scalable and Testable</li>
-  <li>Easy Configuration and Reconfiguration</li>
+    <li>Create AppML applications</li>
+    <li>Feed applications with data</li>
+    <li>Fetch application data for use in your web page</li>
 </ul>
-
-<p>AppML supports the functions you find in other frameworks like
-React, Angular, and Vue, but AppML is much easier to use, and much easier to understand.</p>
-
-<hr>
-<h2>What is AppML?</h2>
-<p>AppML stands for <strong>App</strong>lication <strong>M</strong>odeling 
-<strong>L</strong>anguage.</p>
-<p>AppML is not a programming language. It is descriptive language (a language for describing applications).</p>
-<p>It is built around familiar Web application concepts like:</p>
-<ul>
-<li>Forms</li>
-<li>Lists</li>
-<li>Reports</li>
-<li>Filters</li>
-<li>Functions</li>
-<li>Databases</li>
-</ul>
-
-<p>AppML runs in any HTML page. No installation is required. </p>
-<p>AppML is a tool for bringing data to HTML applications:</p>
-
-<ul>
-  <li>From Objects</li>
-  <li>From JSON files</li>
-  <li>From Text files</li>
-  <li>From XML files</li>
-  <li>From databases</li>
-</ul>
-
-<p>
-<a class="w3-btn" href="tryitd045.html?filename=tryappml_from_object" target="_blank">Objects</a>
-<a class="w3-btn" href="tryit9887.html?filename=tryappml_from_json" target="_blank">JSON Files</a><br><br>
-<a class="w3-btn" href="tryit48ea.html?filename=tryappml_from_txt" target="_blank">Text Files</a>
-<a class="w3-btn" href="tryit0065.html?filename=tryappml_from_xml" target="_blank">XML Files</a><br><br>
-<a class="w3-btn" href="tryitb8a9.html?filename=tryappml_customerslist_php" target="_blank">PHP/MySQL</a>
-<a class="w3-btn" href="tryitcfb3.html?filename=tryappml_customerslist_aspx" target="_blank">ASP.NET/SQL</a>
-</p>
 
 <hr>
 
-<h2>Why AppML?</h2>
+<h2>Example</h2>
+<p><strong>new AppML()</strong> creates a new AppML object.<strong><br>
+dataSource</strong> sets the data source of the AppML object.<strong><br>
+getData()</strong> gets the data.<strong><br>data.records</strong> contains the 
+data records.<strong> </strong></p>
+<p>You can loop the records and display the content in an HTML element:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+// Create an AppML object and fetch the data<br>
+ myObj = new AppML();<br>
+ myObj.dataSource = "https://www.w3schools.com/appml/customers.php";<br>
+ myObj.getData();<br><br>
+// Locate the data records<br>
+myArr = myObj.data.records;<br>len = myArr.length;<br><br>
+// Display the records<br>
+for (i = 0; i &lt; len; i++) {<br>
+&nbsp;&nbsp;&nbsp; txt += myArr[i].CustomerName + "&lt;br&gt;";<br>}<br>
+document.getElementById("demo").innerHTML = txt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryite900.html?filename=tryappml_methods_php" target="_blank">Try It Yourself &raquo;</a>
+</div>
 
-<p>HTML is not very suitable for describing web applications.</p>
-<p>AppML is made for web applications:</p>
-<ul>
- <li>AppML extends HTML with data <strong>attributes.</strong></li>
- <li>AppML adds <strong>controllers</strong> to HTML, to control the behavior of 
-HTML data.</li>
-</ul>
-<p>AppML is very easy to understand and extraordinarily quick to develop.</p>
-
-<hr>
-
-<h2>AppML Example</h2>
-
-<p>This example shows how easy AppML can bring data to HTML: </p>
 
 <div class="w3-example">
-<h3>AppML Example</h3>
-<div class="w3-code notranslate htmlHigh">
-&lt;!DOCTYPE html&gt;<br>
-&lt;html lang="en-US"&gt;<br><br>
-&lt;title&gt;Customers&lt;/title&gt;<br>
-&lt;link rel="stylesheet" href="style.css"&gt;<br>
-&lt;script src="https://www.w3schools.com/appml/2.0.3/appml.js"&gt;&lt;/script&gt;<br><br>
-&lt;body&gt;<br>
-&lt;h1&gt;Customers&lt;/h1&gt;<br><br>
-&lt;table appml-data="customers.js"&gt;<br>
-&lt;tr&gt;<br>&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>
-&lt;/tr&gt;<br>
-&lt;tr appml-repeat="records"&gt;<br>
-&nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
-&nbsp; &lt;td&gt;{{City}}&lt;/td&gt;<br>
-&nbsp; &lt;td&gt;{{Country}}&lt;/td&gt;<br>
-&lt;/tr&gt;<br>
-&lt;/table&gt;<br>
-<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</div>
-<a class="w3-btn w3-margin-bottom" href="tryit8392.html?filename=tryappml_intro" target="_blank">Try It Yourself &raquo;</a>
+<h3>Result</h3>
+<div class="w3-code notranslate jsHigh">
+Alfreds Futterkiste<br>Berglunds snabbköp<br>Centro comercial Moctezuma<br>
+Ernst Handel<br>FISSA Fabrica Inter. Salchichas S.A.<br>Galería del 
+gastrónomo<br>Island Trading<br>Königlich Essen<br>Laughing Bacchus Wine 
+Cellars<br>Magazzini Alimentari Riuniti<br>North/South<br>Paris spécialités<br>
+Rattlesnake Canyon Grocery<br>Simons bistro<br>The Big Cheese<br>
+Vaffeljernet<br>Wolski Zajazd</div>
 </div>
 
-<div class="w3-panel w3-note">
-  <p>AppML is a tool for easy, rapid, and agile web application development.</p>
-</div>
 <hr>
+<h2>Some AppML Methods</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th width="30%">Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>new AppML()</td>
+    <td>Creates a new AppML object</td>
+  </tr>
+  <tr>
+    <td>run()</td>
+    <td>Runs an application object</td>
+  </tr>
+  <tr>
+    <td>appml("name")</td>
+    <td>Returns the appml object with the specified name</td>
+  </tr>
+  <tr>
+    <td>displayMessage(text)</td>
+    <td>Displays a specified message.</td>
+  </tr>
+  <tr>
+    <td>setError(no, description)</td>
+    <td>Sets a specified error and error description.</td>
+  </tr>
+</table>
 
-<h2>Easy and Agile</h2>
+<hr>
+<h2>Some AppML Properties</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th width="30%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>appName</td>
+    <td>The application name (the container id)</td>
+  </tr>
+  <tr>
+    <td>container</td>
+    <td>The application container element</td>
+  </tr>
+  <tr>
+    <td>controller</td>
+    <td>The application controller</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>The application data object</td>
+  </tr>
+  <tr>
+    <td>dataSource</td>
+    <td>The application data source</td>
+  </tr>
+  <tr>
+    <td>message</td>
+    <td>The application message</td>
+  </tr>
+</table>
 
-<p>On today's market, there are many frameworks (tools or libraries) designed to 
-extend HTML.</p>
-<p>Most of these frameworks manipulate HTML, CSS or JavaScript in a way that 
-makes them difficult to use (especially when used in combination).</p>
-<p>AppML is different. You have 
-full HTML, CSS, and JavaScript freedom.</p>
-
-<p>AppML makes it easy to create Single Page Applications (SPA) in a very clean 
-and efficient way. </p>
-
-<p>Even if you have never worked with web development before, you will find AppML 
-very easy to use.</p>
-<p>If you are an experienced web developer, you will soon discover 
-the power of AppML.</p>
+<hr>
+<h2>Some Data Object Properties</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th width="30%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>data.model</td>
+    <td>The application data model</td>
+  </tr>
+  <tr>
+    <td>data.records</td>
+    <td>The application data records</td>
+  </tr>
+</table>
 
 <br>
+
 <div class="w3-clear nextprev">
-<a class="w3-left w3-button w3-green" href="https://www.w3schools.com/default.asp">&#10094; Home</a>
-<a class="w3-right w3-button w3-green" href="appml_howto.html">Next &#10095;</a>
+<a class="w3-left w3-button w3-green" href="appml_models.html">&#10094; Previous</a>
+<a class="w3-right w3-button w3-green" href="appml_cases.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -1687,5 +1677,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/appml/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:27 GMT -->
+<!-- Mirrored from www.w3schools.com/appml/appml_methods.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:34 GMT -->
 </html>

@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/appml/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:27 GMT -->
+<!-- Mirrored from www.w3schools.com/appml/appml_amazon_rds.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:54 GMT -->
 <head>
-<title>AppML Tutorial</title>
+<title>AppML using Amazon RDS</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -1032,157 +1032,231 @@ function w3_getStyleValue(elmnt,style) {
         <!-- adspace leaderboard -->
        
       </div>
-<body>
-<h1><span class="color_h1">AppML</span> Tutorial</h1>
+<h1><span class="color_h1">AppML using Amazon Database</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-button w3-green" href="https://www.w3schools.com/default.asp">&#10094; Home</a>
-<a class="w3-right w3-button w3-green" href="appml_howto.html">Next &#10095;</a>
+<a class="w3-left w3-button w3-green" href="appml_google_cloud_sql.html">&#10094; Previous</a>
+<a class="w3-right w3-button w3-green" href="appml_reference.html">Next &#10095;</a>
 </div>
-
-<div class="w3-panel w3-info w3-center">
-<p style="font-size:35px">AppML Brings Data to HTML</p>
-<p style="font-size:25px">"No Nonsense Web Applications"</p>
+<hr>
+<div class="jumbotron">
+  <img src="img_aws_logo.png" alt="Amazon Web Services Logo" style="float:left;margin-right:5%"><br>
+  <p>Amazon RDS is a database cloud service.</p>
+  <p>It is easy to set up and manage.</p>
+    <p>It is FREE to try!</p> 
 </div>
+<div class="w3-clear"></div>
 
-
+<h2>What is Amazon Relational Database Service (RDS)</h2>
+<p>Amazon Relational Database Service (RDS) is a cloud based database service.</p>
 <hr>
-<h2>Introduction</h2>
-<p>The Web is growing fast, and the amount of data in Cyberspace is growing even faster.</p>
-<p>Every day new information systems are developed, and every day new users are connected,
-and data can be accessed 24/7 from anywhere in the world.</p>
 
-<p class="w3-large"><i>Faster and better software development methods are desperately needed</i>.</p>
-
-<p>Along these lines, W3Schools has developed a very flexible technique for retrieving, displaying, and manipulate data,
-without the need for traditional programming.</p>
-
-<p>Cooperating with Jan Egil Refsnes, W3schools has developed a vocabulary for defining Web applications.
-The vocabulary is called AppML (Application Modeling Language).</p>
-
-<p>AppML uses the most up-to-date techniques and ideas of modern Web development with focus on:</p>
-<ul type="square">
-  <li>Low Cost</li>
-  <li>Rapid and Agile Web Develoment</li>
-  <li>Optimized for Cloud Computing</li>
-  <li>High Speed and Low Bandwidth Consumption</li>
-  <li>MVC (Model Viev Controller) Architecture</li>
-  <li>Full Separation of Content from Presentation </li>
-  <li>Highly Scalable and Testable</li>
-  <li>Easy Configuration and Reconfiguration</li>
-</ul>
-
-<p>AppML supports the functions you find in other frameworks like
-React, Angular, and Vue, but AppML is much easier to use, and much easier to understand.</p>
-
-<hr>
-<h2>What is AppML?</h2>
-<p>AppML stands for <strong>App</strong>lication <strong>M</strong>odeling 
-<strong>L</strong>anguage.</p>
-<p>AppML is not a programming language. It is descriptive language (a language for describing applications).</p>
-<p>It is built around familiar Web application concepts like:</p>
+<h2>Why use Amazon RDS?</h2>
+<p>Amazon RDS manages many of the challenges of running a database.</p>
+<p>With Amazon RDS you can scale performance and storage as you need it.</p>
+<p>Amazon RDS manages automated backups, patching, and recovery.</p>
+<p>It supports popular database products like:</p>
 <ul>
-<li>Forms</li>
-<li>Lists</li>
-<li>Reports</li>
-<li>Filters</li>
-<li>Functions</li>
-<li>Databases</li>
+    <li>MySQL</li>
+    <li>PostgreSQL</li>
+    <li>Oracle</li>
+    <li>Microsoft SQL Server</li>
+    <li>and the new, MySQL-compatible Amazon Aurora DB 
+engine</li>
 </ul>
-
-<p>AppML runs in any HTML page. No installation is required. </p>
-<p>AppML is a tool for bringing data to HTML applications:</p>
-
-<ul>
-  <li>From Objects</li>
-  <li>From JSON files</li>
-  <li>From Text files</li>
-  <li>From XML files</li>
-  <li>From databases</li>
-</ul>
-
-<p>
-<a class="w3-btn" href="tryitd045.html?filename=tryappml_from_object" target="_blank">Objects</a>
-<a class="w3-btn" href="tryit9887.html?filename=tryappml_from_json" target="_blank">JSON Files</a><br><br>
-<a class="w3-btn" href="tryit48ea.html?filename=tryappml_from_txt" target="_blank">Text Files</a>
-<a class="w3-btn" href="tryit0065.html?filename=tryappml_from_xml" target="_blank">XML Files</a><br><br>
-<a class="w3-btn" href="tryitb8a9.html?filename=tryappml_customerslist_php" target="_blank">PHP/MySQL</a>
-<a class="w3-btn" href="tryitcfb3.html?filename=tryappml_customerslist_aspx" target="_blank">ASP.NET/SQL</a>
-</p>
 
 <hr>
-
-<h2>Why AppML?</h2>
-
-<p>HTML is not very suitable for describing web applications.</p>
-<p>AppML is made for web applications:</p>
-<ul>
- <li>AppML extends HTML with data <strong>attributes.</strong></li>
- <li>AppML adds <strong>controllers</strong> to HTML, to control the behavior of 
-HTML data.</li>
-</ul>
-<p>AppML is very easy to understand and extraordinarily quick to develop.</p>
+<h2>Getting Started</h2>
+<p>Before you can start using RDS, you need to sign up for Amazon Web Services, 
+and set up a database user and security group.</p>
 
 <hr>
+<h2>Sign Up for Amazon Web Services</h2>
+<p>When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS, including Amazon RDS.</p>
+<p>If you are a new AWS customer, you can get started with Amazon RDS for 
+free.</p>
+<p>The AWS Free Tier is allows you to try AWS for free for 12 months after you sign up. 
+For more information, see
+<a href="https://aws.amazon.com/free/" target="_blank">AWS Free Usage Tier</a>.</p>
+<p>If you decide to continue with AWS after your free period (or if you need 
+more storage or performance than the free usage tier offers), you only pay for the resources you use.</p>
+<p>To create an AWS account
 
-<h2>AppML Example</h2>
+go to: <a href="https://aws.amazon.com/" target="_blank">https://aws.amazon.com/</a>, and then click Sign Up.</p>
+<p>Follow the on-screen instructions.
 
-<p>This example shows how easy AppML can bring data to HTML: </p>
+Note your AWS account number, because you'll need it later.</p>
+<hr>
+<h2>Create a MySQL Database Instance</h2>
+<p>In this example we will set up a free Database instance running MySQL. (This is 
+free because it is intended for testing).</p>
+<p>&nbsp;Create a MySQL DB instance:</p>
+<ol>
+    <li>Go to Amazon RDS console: 
+    <a href="https://console.aws.amazon.com/rds/" target="_blank">https://console.aws.amazon.com/rds/</a></li>
+    <li>In the navigation pane, click Instances.</li>
+    <li>Click Launch DB Instance</li>
+    <li>On the Select Engine page, click the MySQL icon and then click Select 
+    for the MySQL DB engine</li>
+    <li>On the Production? page, click checkbox next to "No, this instance is intended for use outside of production.......", and then click Next 
+    Step</li>
+    <li>On the Specify DB Details page follow the instructions (follow <a id="dbDetailsLink" href="javascript:void(0)">these 
+    instructions</a> for setting up a free test database)<div id="dbDetailsTable">
+    <table class="w3-table-all notranslate">
+        <tr><th style="width:25%">For this option:</th><th>Typical Input</th></tr>
+        <tr><td>License Model</td><td>general-public-license</td></tr>
+        <tr><td>DB Engine Version</td><td>Select the default version of MySQL</td></tr>
+        <tr><td>DB Instance Class</td><td>Select db.t2.micro to select a configuration that is eligible for free test usage</td></tr>
+        <tr><td>Multi-AZ Deployment</td><td>Select No</td></tr>
+        <tr><td>Storage Type</td><td>Magnetic (Standard)</td></tr>
+        <tr><td>Allocated Storage</td><td>5</td></tr>
+        <tr><td>DB Instance Identifier</td><td>Type the name of your database instance (this is not the name of your database)</td></tr>
+        <tr><td>Master Username</td><td>Type the master username for your database</td></tr>
+        <tr><td>Master Password</td><td>Type the password for your master user</td></tr>
+        <tr><td>Confirm Password</td><td>Conform the password</td></tr>
+    </table>
+    </div>
+</li>
+<li>On the Configure Advanced Settings page follow the instructions (follow <a id="dbAdvSettLink" href="javascript:void(0)">these 
+    instructions</a> for setting up a free test database)
+    <div id="dbAdvSettTable">
+    <table class="w3-table-all notranslate">
+        <tr><th style="width:25%">For this option:</th><th>Typical Input</th></tr>
+        <tr><td>VPC</td><td>Default VPC</td></tr>
+        <tr><td>Subnet Group</td><td>default</td></tr>
+        <tr><td>Publicly Accessible</td><td>Yes</td></tr>
+        <tr><td>Availability Zone</td><td>No Preference</td></tr>
+        <tr><td>VPC Security Group(s)</td><td>default</td></tr>
+        <tr><td>Database Name</td><td>Type the name of your database (in this example, we will show you how to create the northwind database we use for examples in the AppML tutorial)</td></tr>
+        <tr><td>Database Port</td><td>3306 (unless you need it to run on a specific port)</td></tr>
+        <tr><td>DB Parameter Group</td><td>Keep the default value</td></tr>
+        <tr><td>Option Group</td><td>Keep the default value</td></tr>
+        <tr><td>Enable Encryption</td><td>No</td></tr>
+        <tr><td>Backup Retention Period</td><td>7</td></tr>
+        <tr><td>Backup Window</td><td>No Preference</td></tr>
+        <tr><td>Auto Minor Version Upgrade</td><td>Yes</td></tr>
+        <tr><td>Maintenance Window</td><td>No Preference</td></tr>
+</table>
+</div>
+</li>
+<li>Click Launch DB Instance</li>
+<li>Click View Your DB Instances</li>
+    <li>The new DB instance appears in the list of DB instances (it will have a 
+    "creating" status until it is ready for use)</li>
+    <li>When the status changes to "available", you can connect to the database</li>
+    <li>Click the details icon to view details and copy the URL from "Endpoint", 
+    including the port</li>
+</ol>
 
 <div class="w3-example">
-<h3>AppML Example</h3>
-<div class="w3-code notranslate htmlHigh">
-&lt;!DOCTYPE html&gt;<br>
-&lt;html lang="en-US"&gt;<br><br>
-&lt;title&gt;Customers&lt;/title&gt;<br>
-&lt;link rel="stylesheet" href="style.css"&gt;<br>
-&lt;script src="https://www.w3schools.com/appml/2.0.3/appml.js"&gt;&lt;/script&gt;<br><br>
-&lt;body&gt;<br>
-&lt;h1&gt;Customers&lt;/h1&gt;<br><br>
-&lt;table appml-data="customers.js"&gt;<br>
-&lt;tr&gt;<br>&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>
-&lt;/tr&gt;<br>
-&lt;tr appml-repeat="records"&gt;<br>
-&nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
-&nbsp; &lt;td&gt;{{City}}&lt;/td&gt;<br>
-&nbsp; &lt;td&gt;{{Country}}&lt;/td&gt;<br>
-&lt;/tr&gt;<br>
-&lt;/table&gt;<br>
-<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-</div>
-<a class="w3-btn w3-margin-bottom" href="tryit8392.html?filename=tryappml_intro" target="_blank">Try It Yourself &raquo;</a>
+<h3>The Endpoint URL should look something like this:</h3>
+<div class="w3-code notranslate">
+<em>databasename</em>.<em>aaabbbcccddd</em>.<em>region</em>.rds.amazonaws.com:3306</div>
 </div>
 
-<div class="w3-panel w3-note">
-  <p>AppML is a tool for easy, rapid, and agile web application development.</p>
-</div>
 <hr>
+<h2>Configure Database Connection in AppML</h2>
+<p>To configure the database connection, edit the appml_config file:</p>
+<div class="w3-example">
+<h3>PHP example: appml_config.php</h3>
+<div class="w3-code notranslate">
+    &lt;?php echo("Access Forbidden");exit();?&gt;<br>{<br>"dateformat" : 
+    "yyyy-mm-dd",<br>"databases" : [{<br>"connection" : "<em>mydatabase</em>",<br>
+    "host" : "<em>yourDatabaseURL</em>",<br>"dbname" : "<em>yourDatabaseName</em>",<br>
+    "username" : "<em>yourUserName</em>",<br>"password" : "<em>yourPassword</em>"
+    <br>}]<br>}</div>
+</div>
 
-<h2>Easy and Agile</h2>
-
-<p>On today's market, there are many frameworks (tools or libraries) designed to 
-extend HTML.</p>
-<p>Most of these frameworks manipulate HTML, CSS or JavaScript in a way that 
-makes them difficult to use (especially when used in combination).</p>
-<p>AppML is different. You have 
-full HTML, CSS, and JavaScript freedom.</p>
-
-<p>AppML makes it easy to create Single Page Applications (SPA) in a very clean 
-and efficient way. </p>
-
-<p>Even if you have never worked with web development before, you will find AppML 
-very easy to use.</p>
-<p>If you are an experienced web developer, you will soon discover 
-the power of AppML.</p>
+<p>Edit the following:</p>
+<ol>
+    <li><em>mydatabase</em> - change to whatever you want the database 
+    connection to be called in your application</li>
+    <li><em>yourDatabaseURL</em> - change to the endpoint URL from the previous 
+    step</li>
+    <li><em>yourDatabaseName</em> - change to the name you specified for your 
+    database in Amazon RDS</li>
+    <li><em>yourUserName</em> - change to the username you specified for your 
+    database in Amazon RDS</li>
+    <li><em>yourPassword</em> - change to the password you specified for your 
+    database in Amazon RDS</li>
+</ol>
+<p>AppML should now be configured to connect to your Amazon RDS database.</p>
+<p>You can now fill your database with data:</p>
+<ul>
+    <li>If you have access to a PHP server, this is described in the
+    <a href="appml_php.html">AppML PHP chapter</a></li>
+    <li>If you have access to an ASP.NET server, this is described in the
+    <a href="appml_dotnet.html">AppML .NET chapter</a></li>
+</ul>
+<a href="javascript:void(0)"><p id="iamuser">Optional: Create an IAM User for increased security</p></a>
+<div id="iamuser_div">
+<p>Amazon RDS, require that you provide username and password when you access 
+it.</p>
+<p>You can access the account with your Amazon username, but for security 
+purposes 
+we recommend that you create an Identity and Access Management (IAM) user, for 
+your database.</p>
+<p>First, create the Administrators group:</p>
+<ol>
+    <li>Sign in to the AWS Management Console and open the IAM console at 
+    <a href="https://console.aws.amazon.com/iam/" target="_blank">https://console.aws.amazon.com/iam/</a></li>
+    <li>In the menu, click Groups, then click Create New Group</li>
+    <li>In the Group Name box, type Administrators and then click Next Step</li>
+    <li>In the list of policies, select the check box next to the 
+    AdministratorAccess policy</li>
+    <li>Click Next Step, then click Create Group</li>
+</ol>
+<p>Then create the IAM user, and add it to the Administrators group:</p>
+<ol>
+    <li>In the menu, click Users, then click Create New User</li>
+    <li>&nbsp;In box 1, enter a user name</li>
+    <li>Clear the check box next to "Generate an access key for each 
+    user", then click Create</li>
+    <li>In the list of users, click the name (not the check box) of the user you 
+    just created</li>
+    <li>In the Groups section, click Add User to Groups</li>
+    <li>Select the check box next to the Administrators group, then click Add to 
+    Groups</li>
+    <li>Scroll down to the Security Credentials section, and click Manage 
+    Password</li>
+    <li>Select Assign a custom password, then enter a password in the Password 
+    and Confirm Password boxes, click Apply</li>
+</ol>
+<p>To sign in as this new IAM user, sign out of the AWS console, then use the 
+following URL:</p>
+<div class="w3-example">
+<h3>Login with IAM</h3>
+<div class="w3-code notranslate">
+https://<em>your_aws_account_id</em>.signin.aws.amazon.com/console/
+</div>
+</div>
+<p>Replace <em>your_aws_account_id</em> with your AWS account number without the 
+hyphens (if your account number is 1234-5678-9012, your AWS account ID is 
+123456789012)</p>
+</div>
 
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-button w3-green" href="https://www.w3schools.com/default.asp">&#10094; Home</a>
-<a class="w3-right w3-button w3-green" href="appml_howto.html">Next &#10095;</a>
+<a class="w3-left w3-button w3-green" href="appml_google_cloud_sql.html">&#10094; Previous</a>
+<a class="w3-right w3-button w3-green" href="appml_reference.html">Next &#10095;</a>
 </div>
+
+<script>
+$(document).ready(function(){
+    $("#dbDetailsTable").hide();
+    $("#dbDetailsLink").click(function(){
+        $("#dbDetailsTable").slideToggle();
+    });
+    $("#dbAdvSettTable").hide();
+    $("#dbAdvSettLink").click(function(){
+        $("#dbAdvSettTable").slideToggle();
+    });
+    $("#iamuser_div").hide();
+    $("#iamuser").click(function(){
+        $("#iamuser_div").slideToggle();
+    });
+
+});
+</script>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
 
@@ -1687,5 +1761,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/appml/default.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:27 GMT -->
+<!-- Mirrored from www.w3schools.com/appml/appml_amazon_rds.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:55 GMT -->
 </html>
