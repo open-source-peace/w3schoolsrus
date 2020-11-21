@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Сетевые функции. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP Функции управления выводом. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="PHP Сетевые функции содержат различные сетевые функции и позволяют управлять информацией, отправляемой в браузер веб-сервером, до того, как будут отправлены другие выходные данные. Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="PHP Функции управления выводом. PHP предоставляет набор функций, которые управляют тем, какой контент и когда отправляется в браузер. Это называется управление выводом (output control). Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_ref_network.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_ref_output_control.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -1190,170 +1190,155 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP Сетевые функции</h1>
+<h1>PHP <span class="color_h1">Функции управления выводом</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_ref_mysqli.html">&#10094; Prev</a>
-  <a class="w3-right w3-btn" href="php_ref_output_control.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="php_ref_network.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="php_ref_regex.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>PHP Сеть. Введение</h2>
-<p>Сетевые функции содержат различные сетевые функции и позволяют управлять информацией, отправляемой в браузер веб-сервером, до того, как будут отправлены другие выходные данные.</p>
-<hr>
+<h2>PHP Функции управления выводом</h2>
+<p>PHP предоставляет набор функций, которые управляют тем, какой контент и когда отправляется в браузер. Это называется <strong>управление выводом</strong> (output control).</p>
+<p>Вывод может поступать из любого из следующих источников:</p>
+
+<ul>
+<li><code class="w3-codespan">echo</code>, <code class="w3-codespan">print</code>, <code class="w3-codespan">printf</code>, <code class="w3-codespan">print_r</code>... и другие подобные функции и инструкции</li>
+<li>Уведомления, предупреждения и ошибки от PHP</li>
+<li>Любой контент за пределами тегов <code class="w3-codespan">&lt;?php ?&gt;</code></li>
+</ul>
+
+<p>PHP и серверная часть, на которой он запущен, могут хранить вывод в буфере перед отправкой пользователю.</p>
+<p><strong>Примечание:</strong> Функции управления выводом могут создавать любое количество буферов вывода. Буферы вывода улавливают вывод, заданный программой. Каждый новый буфер вывода помещается в верхнюю часть стека буферов вывода, и любой вывод, который он обеспечивает, будет перехвачен буфером под ним. Функции управления выводом обрабатывают только самый верхний буфер, поэтому самый верхний буфер должен быть удален, чтобы управлять буферами под ним.</p>
 
 <h2>Установка</h2>
-<p>Сетевые функции являются частью ядра PHP. Для использования этих функций не требуется установка.</p>
+<p>Функции управления выводом PHP являются частью ядра PHP. Для использования этих функций не требуется установка.</p>
 <hr>
 
-<h2>PHP Сетевые функции</h2>
+<h2>Конфигурация среды выполнения</h2>
+<p>На поведение функций управления выводом влияют настройки в php.ini:</p>
+<div class="w3-responsive" style="margin-top:-16px;margin-bottom:-16px">
 <table class="w3-table-all notranslate">
   <tr>
-    <th style="width:32%">Функция</th>
-    <th style="width:68%">Описание</th>
+    <th style="width:22%">Название</th>
+    <th style="width:5%">По умолчанию</th>
+    <th style="width:58%">Описание</th>
+    <th style="width:15%">Версия</th>
   </tr>
   <tr>
-    <td><a href="func_network_checkdnsrr.html">checkdnsrr()</a></td>
-    <td>Проверяет записи DNS на предмет <em>type</em> соответствующего <em>host</em></td>
+    <td>output_buffering</td>
+    <td>"0"</td>
+    <td>По умолчанию включает буферизацию вывода для всех файлов PHP</td>
+    <td>4</td>
   </tr>
   <tr>
-    <td><a href="func_network_closelog.html">closelog()</a></td>
-    <td>Закрывает подключение системного логгера</td>
+    <td>output_handler</td>
+    <td>NULL</td>
+    <td>Задаёт имя функции по умолчанию, которая обрабатывает вывод всех выходных буферов</td>
+    <td>4</td>
   </tr>
   <tr>
-    <td>define_syslog_variables()</td>
-    <td><span class="deprecated">Устарело и удалено в PHP 5.4.</span>
-    Инициализирует переменные, используемые в функциях системного журнала</td>
+    <td>implicit_flush</td>
+    <td>"0"</td>
+    <td>Включает неявный сброс, который заставляет вывод отправляться непосредственно в браузер при каждой инструкции вывода</td>
+    <td>4</td>
   </tr>
   <tr>
-    <td><a href="func_network_dns_check_record.html">dns_check_record()</a></td>
-    <td>Псевдоним <a href="func_network_checkdnsrr.html">checkdnsrr()</a></td>
+    <td>url_rewriter.tags</td>
+    <td>"a=href,area=href,
+    frame=src,form=,fieldset="</td>
+    <td>Указывает, какие HTML-теги и атрибуты могут быть изменены с помощью средства перезаписи URL (функция output_add_rewrite_var() )</td>
+    <td>4.3</td>
   </tr>
   <tr>
-    <td><a href="func_network_dns_get_mx.html">dns_get_mx()</a></td>
-    <td>Псевдоним <a href="func_network_getmxrr.html">getmxrr()</a></td>
+    <td>url_rewriter.hosts</td>
+    <td>Текущее значение $_SERVER['HTTP_HOST']</td>
+    <td>Перезапись URL-адресов по умолчанию выполняется только для собственных URL-адресов сервера. Чтобы разрешить перезапись URL-адресов других веб-сайтов, установите здесь имена хостов других веб-сайтов.</td>
+    <td>7.1</td>
+  </tr>
+</table>
+</div>
+<hr>
+
+<h2>PHP Функции управления выводом</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:20%">Метод</th>
+    <th style="width:80%">Функция</th>
   </tr>
   <tr>
-    <td><a href="func_network_dns_get_record.html">dns_get_record()</a></td>
-    <td>Получает записи ресурсов DNS, связанные с указанным именем хоста</td>
+    <td><a href="ref_output_flush.html">flush()</a></td>
+    <td>Попытки отправить контент из выходного буфера системы в браузер</td>
   </tr>
   <tr>
-    <td><a href="func_network_fsockopen.html">fsockopen()</a></td>
-    <td>Открывает соединение с доменным сокетом в Интернете или Unix</td>
+    <td><a href="ref_output_ob_clean.html">ob_clean()</a></td>
+    <td>Удаляет все содержимое из самого верхнего выходного буфера</td>
+  </tr>
+    <tr>
+    <td><a href="ref_output_ob_end_clean.html">ob_end_clean()</a></td>
+    <td>Удаляет самый верхний выходной буфер и все его содержимое</td>
+    </tr>
+  <tr>
+    <td><a href="ref_output_ob_end_flush.html">ob_end_flush()</a></td>
+    <td>Удаляет самый верхний буфер вывода и выводит его содержимое</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostbyaddr.html">gethostbyaddr()</a></td>
-    <td>Возвращает доменное имя для данного IP-адреса</td>
+    <td><a href="ref_output_ob_flush.html">ob_flush()</a></td>
+    <td>Выводит содержимое самого верхнего буфера вывода и очищает буфер</td>
+  </tr>
+    <tr>
+    <td><a href="ref_output_ob_get_clean.html">ob_get_clean()</a></td>
+    <td>Возвращает все содержимое самого верхнего выходного буфера и очищает буфер</td>
+    </tr>
+  <tr>
+    <td><a href="ref_output_ob_get_contents.html">ob_get_contents()</a></td>
+    <td>Возвращает содержимое самого верхнего буфера вывода</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostbyname.html">gethostbyname()</a></td>
-    <td>Возвращает IPv4-адрес для заданного имени домена / хоста</td>
+    <td><a href="ref_output_ob_get_flush.html">ob_get_flush()</a></td>
+    <td>Выводит и возвращает содержимое самого верхнего выходного буфера, а затем удаляет буфер</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostbynamel.html">gethostbynamel()</a></td>
-    <td>Возвращает список IPv4-адресов для данного домена/имени хоста</td>
+    <td><a href="ref_output_ob_get_length.html">ob_get_length()</a></td>
+    <td>Возвращает количество байтов данных, находящихся в самом верхнем буфере вывода</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostname.html">gethostname()</a></td>
-    <td>Возвращает имя хоста</td>
+    <td><a href="ref_output_ob_get_level.html">ob_get_level()</a></td>
+    <td>Возвращает число, показывающее, сколько выходных буферов находится в стеке</td>
   </tr>
   <tr>
-    <td><a href="func_network_getmxrr.html">getmxrr()</a></td>
-    <td>Возвращает записи MX для указанного имени хоста в Интернете</td>
+    <td>ob_get_status()</td>
+    <td>Возвращает информацию о буферах вывода</td>
   </tr>
   <tr>
-    <td><a href="func_network_getprotobyname.html">getprotobyname()</a></td>
-    <td>Возвращает номер протокола для данного имени протокола</td>
+    <td><a href="ref_output_ob_gzhandler.html">ob_gzhandler()</a></td>
+    <td>Используется как функция обратного вызова для ob_start() для сжатия содержимого буфера при его отправке в браузер</td>
   </tr>
   <tr>
-    <td><a href="func_network_getprotobynumber.html">getprotobynumber()</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-    <td>Возвращает имя протокола для заданного номера протокола</td>
+    <td><a href="ref_output_ob_implicit_flush.html">ob_implicit_flush()</a></td>
+    <td>Включает или выключает скрытую промывку</td>
   </tr>
   <tr>
-    <td><a href="func_network_getservbyname.html">getservbyname()</a></td>
-    <td>Возвращает номер порта для данной интернет-службы и протокола</td>
+    <td><a href="ref_output_ob_list_handlers.html">ob_list_handlers()</a></td>
+    <td>Возвращает массив имен функций обратного вызова, которые используются самым верхним буфером вывода</td>
   </tr>
   <tr>
-    <td><a href="func_network_getservbyport.html">getservbyport()</a></td>
-    <td>Возвращает интернет-сервис для данного порта и протокола</td>
+    <td><a href="ref_output_ob_start.html">ob_start()</a></td>
+    <td>Создает новый буфер вывода и добавляет его в начало стека</td>
   </tr>
   <tr>
-    <td><a href="func_network_header_register_callback.html">header_register_callback()</a></td>
-    <td>Вызывает функцию заголовка</td>
+    <td><a href="ref_output_add_rewrite_var.html">output_add_rewrite_var()</a></td>
+    <td>Используется для добавления параметров строки запроса к любому URL-адресу в выводе</td>
   </tr>
   <tr>
-    <td><a href="func_network_header_remove.html">header_remove()</a></td>
-    <td>Удаляет заголовок HTTP, ранее установленный с помощью функции <a href="func_network_header.html">header()</a></td>
-  </tr>
-  <tr>
-    <td><a href="func_network_header.html">header()</a></td>
-    <td>Отправляет клиенту необработанный HTTP-заголовок</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_headers_list.html">headers_list()</a></td>
-    <td>Возвращает список заголовков ответов для отправки в браузер</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_headers_sent.html">headers_sent()</a></td>
-    <td>Проверяет, были ли отправлены заголовки/куда</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_http_response_code.html">http_response_code()</a></td>
-    <td>Устанавливает или возвращает код состояния ответа HTTP</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_inet_ntop.html">inet_ntop()</a></td>
-    <td>Преобразует 32-битный IPv4 или 128-битный IPv6-адрес в читаемый формат</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_inet_pton.html">inet_pton()</a></td>
-    <td>Преобразует читаемый IP-адрес в 32-битный формат IPv4 или 128-битный IPv6</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_ip2long.html">ip2long()</a></td>
-    <td>Преобразует IPv4-адрес в длинное целое число</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_long2ip.html">long2ip()</a></td>
-    <td>Преобразует длинный целочисленный адрес в строку в формате IPv4</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_openlog.html">openlog()</a></td>
-    <td>Открывает подключение системного логгера</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_pfsockopen.html">pfsockopen()</a></td>
-    <td>Открывает постоянное соединение с Интернетом или доменным сокетом Unix</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_setcookie.html">setcookie()</a></td>
-    <td>Определяет файл cookie, который будет отправлен вместе с остальными заголовками HTTP</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_setrawcookie.html">setrawcookie()</a></td>
-    <td>Определяет cookie (без кодировки URL), который будет отправлен вместе с остальными заголовками HTTP</td>
-  </tr>
-  <tr>
-    <td><a href="func_network_socket_get_status.html">socket_get_status()</a></td>
-    <td>Псевдоним <a href="php_ref_stream.html">stream_get_meta_data()</a></td>
-  </tr>
-  <tr>
-    <td><a href="func_network_socket_set_blocking.html">socket_set_blocking()</a></td>
-    <td>Псевдоним <a href="php_ref_stream.html">stream_set_blocking()</a></td>
-  </tr>
-  <tr>
-    <td><a href="func_network_socket_set_timeout.html">socket_set_timeout()</a></td>
-    <td>Псевдоним <a href="php_ref_stream.html">stream_set_timeout()</a></td>
-  </tr>
-  <tr>
-    <td><a href="func_network_syslog.html">syslog()</a></td>
-    <td>Создает сообщение системного журнала</td>
+    <td><a href="ref_output_reset_rewrite_vars.html">output_reset_rewrite_vars()</a></td>
+    <td>Удаляет все переменные, добавленные <a href="ref_output_add_rewrite_var.html">output_add_rewrite_var()</a></td>
   </tr>
 </table>
 
 <hr>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_ref_mysqli.html">&#10094; Prev</a>
-  <a class="w3-right w3-btn" href="php_ref_output_control.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="php_ref_network.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="php_ref_regex.html">Next &#10095;</a>
 </div>
 
 <hr>
@@ -1363,7 +1348,7 @@
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_ref_network.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_ref_output_control.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>PHP Сетевые функции. Уроки для начинающих. W3Schools на русском</title>
+<title>PHP Ключевые слова. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="PHP Сетевые функции содержат различные сетевые функции и позволяют управлять информацией, отправляемой в браузер веб-сервером, до того, как будут отправлены другие выходные данные. Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="PHP Ключевые слова представляют собой зарезервированные слова, которые нельзя использовать в качестве имен функций, имен классов или имен методов. Полный справочник ключевых слов в PHP с описанием. Учебник по PHP 7. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_ref_network.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/php/php_ref_keywords.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -1190,170 +1190,283 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../svg/php.svg" alt="PHP. Уроки для начинающих" class="w3-left" title="PHP для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1>PHP Сетевые функции</h1>
+<h1>PHP <span class="color_h1">Ключевые слова</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_ref_mysqli.html">&#10094; Prev</a>
-  <a class="w3-right w3-btn" href="php_ref_output_control.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="php_ref_json.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="php_ref_libxml.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>PHP Сеть. Введение</h2>
-<p>Сетевые функции содержат различные сетевые функции и позволяют управлять информацией, отправляемой в браузер веб-сервером, до того, как будут отправлены другие выходные данные.</p>
-<hr>
+<h2>PHP Ключевые слова</h2>
+<p>В PHP есть набор ключевых слов, которые представляют собой зарезервированные слова, которые нельзя использовать в качестве имен функций, имен классов или имен методов. До PHP 7 эти ключевые слова также нельзя было использовать в качестве имен свойств класса:</p>
 
-<h2>Установка</h2>
-<p>Сетевые функции являются частью ядра PHP. Для использования этих функций не требуется установка.</p>
-<hr>
-
-<h2>PHP Сетевые функции</h2>
 <table class="w3-table-all notranslate">
   <tr>
-    <th style="width:32%">Функция</th>
-    <th style="width:68%">Описание</th>
+    <th style="width:25%">Ключевое слово</th>
+    <th style="width:75%">Описание</th>
   </tr>
   <tr>
-    <td><a href="func_network_checkdnsrr.html">checkdnsrr()</a></td>
-    <td>Проверяет записи DNS на предмет <em>type</em> соответствующего <em>host</em></td>
+    <td><a href="keyword_abstract.html">abstract</a></td>
+    <td>Объявить класс абстрактным</td>
   </tr>
   <tr>
-    <td><a href="func_network_closelog.html">closelog()</a></td>
-    <td>Закрывает подключение системного логгера</td>
+    <td><a href="keyword_and.html">and</a></td>
+    <td>Логический оператор</td>
   </tr>
   <tr>
-    <td>define_syslog_variables()</td>
-    <td><span class="deprecated">Устарело и удалено в PHP 5.4.</span>
-    Инициализирует переменные, используемые в функциях системного журнала</td>
+    <td><a href="keyword_as.html">as</a></td>
+    <td>Используется в цикле foreach</td>
   </tr>
   <tr>
-    <td><a href="func_network_dns_check_record.html">dns_check_record()</a></td>
-    <td>Псевдоним <a href="func_network_checkdnsrr.html">checkdnsrr()</a></td>
+    <td><a href="keyword_break.html">break</a></td>
+    <td>Выход из циклов и переключение инструкций</td>
   </tr>
   <tr>
-    <td><a href="func_network_dns_get_mx.html">dns_get_mx()</a></td>
-    <td>Псевдоним <a href="func_network_getmxrr.html">getmxrr()</a></td>
+    <td><a href="keyword_callable.html">callable</a></td>
+    <td>Тип данных, который может быть выполнен как функция</td>
   </tr>
   <tr>
-    <td><a href="func_network_dns_get_record.html">dns_get_record()</a></td>
-    <td>Получает записи ресурсов DNS, связанные с указанным именем хоста</td>
+    <td><a href="keyword_case.html">case</a></td>
+    <td>Используется в условном переключателе</td>
   </tr>
   <tr>
-    <td><a href="func_network_fsockopen.html">fsockopen()</a></td>
-    <td>Открывает соединение с доменным сокетом в Интернете или Unix</td>
+    <td><a href="keyword_catch.html">catch</a></td>
+    <td>Используется в инструкции try..catch</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostbyaddr.html">gethostbyaddr()</a></td>
-    <td>Возвращает доменное имя для данного IP-адреса</td>
+    <td><a href="keyword_class.html">class</a></td>
+    <td>Объявить класс</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostbyname.html">gethostbyname()</a></td>
-    <td>Возвращает IPv4-адрес для заданного имени домена / хоста</td>
+    <td><a href="keyword_clone.html">clone</a></td>
+    <td>Создать копию объекта</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostbynamel.html">gethostbynamel()</a></td>
-    <td>Возвращает список IPv4-адресов для данного домена/имени хоста</td>
+    <td><a href="keyword_const.html">const</a></td>
+    <td>Определить константу класса</td>
   </tr>
   <tr>
-    <td><a href="func_network_gethostname.html">gethostname()</a></td>
-    <td>Возвращает имя хоста</td>
+    <td><a href="keyword_continue.html">continue</a></td>
+    <td>Перейти к следующей итерации цикла</td>
   </tr>
   <tr>
-    <td><a href="func_network_getmxrr.html">getmxrr()</a></td>
-    <td>Возвращает записи MX для указанного имени хоста в Интернете</td>
+    <td><a href="keyword_declare.html">declare</a></td>
+    <td>Установить директивы для блока кода</td>
   </tr>
   <tr>
-    <td><a href="func_network_getprotobyname.html">getprotobyname()</a></td>
-    <td>Возвращает номер протокола для данного имени протокола</td>
+    <td><a href="keyword_default.html">default</a></td>
+    <td>Используется в инструкции switch</td>
   </tr>
   <tr>
-    <td><a href="func_network_getprotobynumber.html">getprotobynumber()</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-    <td>Возвращает имя протокола для заданного номера протокола</td>
+    <td><a href="keyword_do.html">do</a></td>
+    <td>Создать цикл do...while</td>
   </tr>
   <tr>
-    <td><a href="func_network_getservbyname.html">getservbyname()</a></td>
-    <td>Возвращает номер порта для данной интернет-службы и протокола</td>
+    <td><a href="keyword_echo.html">echo</a></td>
+    <td>Вывести текст</td>
   </tr>
   <tr>
-    <td><a href="func_network_getservbyport.html">getservbyport()</a></td>
-    <td>Возвращает интернет-сервис для данного порта и протокола</td>
+    <td><a href="keyword_else.html">else</a></td>
+    <td>Используется в условных операторах</td>
   </tr>
   <tr>
-    <td><a href="func_network_header_register_callback.html">header_register_callback()</a></td>
-    <td>Вызывает функцию заголовка</td>
+    <td><a href="keyword_elseif.html">elseif</a></td>
+    <td>Используется в условных операторах</td>
   </tr>
   <tr>
-    <td><a href="func_network_header_remove.html">header_remove()</a></td>
-    <td>Удаляет заголовок HTTP, ранее установленный с помощью функции <a href="func_network_header.html">header()</a></td>
+    <td><a href="keyword_empty.html">empty</a></td>
+    <td>Проверить, пусто ли выражение</td>
   </tr>
   <tr>
-    <td><a href="func_network_header.html">header()</a></td>
-    <td>Отправляет клиенту необработанный HTTP-заголовок</td>
+    <td><a href="keyword_enddeclare.html">enddeclare</a></td>
+    <td>Завершить блок declare</td>
   </tr>
   <tr>
-    <td><a href="func_network_headers_list.html">headers_list()</a></td>
-    <td>Возвращает список заголовков ответов для отправки в браузер</td>
+    <td><a href="keyword_endfor.html">endfor</a></td>
+    <td>Завершить блок for</td>
   </tr>
   <tr>
-    <td><a href="func_network_headers_sent.html">headers_sent()</a></td>
-    <td>Проверяет, были ли отправлены заголовки/куда</td>
+    <td><a href="keyword_endforeach.html">endforeach</a></td>
+    <td>Завершить блок foreach</td>
   </tr>
   <tr>
-    <td><a href="func_network_http_response_code.html">http_response_code()</a></td>
-    <td>Устанавливает или возвращает код состояния ответа HTTP</td>
+    <td><a href="keyword_endif.html">endif</a></td>
+    <td>Завершить блок if или elseif</td>
   </tr>
   <tr>
-    <td><a href="func_network_inet_ntop.html">inet_ntop()</a></td>
-    <td>Преобразует 32-битный IPv4 или 128-битный IPv6-адрес в читаемый формат</td>
+    <td><a href="keyword_endswitch.html">endswitch</a></td>
+    <td>Завершить блок switch</td>
   </tr>
   <tr>
-    <td><a href="func_network_inet_pton.html">inet_pton()</a></td>
-    <td>Преобразует читаемый IP-адрес в 32-битный формат IPv4 или 128-битный IPv6</td>
+    <td>endwhile</td>
+    <td>Завершить блок while</td>
   </tr>
   <tr>
-    <td><a href="func_network_ip2long.html">ip2long()</a></td>
-    <td>Преобразует IPv4-адрес в длинное целое число</td>
+    <td><a href="keyword_extends.html">extends</a></td>
+    <td>Расширяет класс или интерфейс</td>
   </tr>
   <tr>
-    <td><a href="func_network_long2ip.html">long2ip()</a></td>
-    <td>Преобразует длинный целочисленный адрес в строку в формате IPv4</td>
+    <td><a href="keyword_final.html">final</a></td>
+    <td>Объявление класса, свойства или метода окончательным</td>
   </tr>
   <tr>
-    <td><a href="func_network_openlog.html">openlog()</a></td>
-    <td>Открывает подключение системного логгера</td>
+    <td><a href="keyword_finally.html">finally</a></td>
+    <td>Используется в инструкции try...catch</td>
   </tr>
   <tr>
-    <td><a href="func_network_pfsockopen.html">pfsockopen()</a></td>
-    <td>Открывает постоянное соединение с Интернетом или доменным сокетом Unix</td>
+    <td><a href="keyword_fn.html">fn</a></td>
+    <td>Объявить функцию arrow</td>
   </tr>
   <tr>
-    <td><a href="func_network_setcookie.html">setcookie()</a></td>
-    <td>Определяет файл cookie, который будет отправлен вместе с остальными заголовками HTTP</td>
+    <td><a href="keyword_for.html">for</a></td>
+    <td>Создать цикл for</td>
   </tr>
   <tr>
-    <td><a href="func_network_setrawcookie.html">setrawcookie()</a></td>
-    <td>Определяет cookie (без кодировки URL), который будет отправлен вместе с остальными заголовками HTTP</td>
+    <td><a href="keyword_foreach.html">foreach</a></td>
+    <td>Создать цикл foreach</td>
   </tr>
   <tr>
-    <td><a href="func_network_socket_get_status.html">socket_get_status()</a></td>
-    <td>Псевдоним <a href="php_ref_stream.html">stream_get_meta_data()</a></td>
+    <td><a href="keyword_function.html">function</a></td>
+    <td>Создать функцию</td>
   </tr>
   <tr>
-    <td><a href="func_network_socket_set_blocking.html">socket_set_blocking()</a></td>
-    <td>Псевдоним <a href="php_ref_stream.html">stream_set_blocking()</a></td>
+    <td><a href="keyword_global.html">global</a></td>
+    <td>Импортировать переменные из глобальной области видимости</td>
   </tr>
   <tr>
-    <td><a href="func_network_socket_set_timeout.html">socket_set_timeout()</a></td>
-    <td>Псевдоним <a href="php_ref_stream.html">stream_set_timeout()</a></td>
+    <td>goto</td>
+    <td>Перейти к строке кода</td>
   </tr>
   <tr>
-    <td><a href="func_network_syslog.html">syslog()</a></td>
-    <td>Создает сообщение системного журнала</td>
+    <td><a href="keyword_if.html">if</a></td>
+    <td>Создать условный оператор</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_implements.html">implements</a></td>
+    <td>Реализует интерфейс</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_include.html">include</a></td>
+    <td>Вставить код из другого файла</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_include_once.html">include_once</a></td>
+    <td>Вставить код из другого файла</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_instanceof.html">instanceof</a></td>
+    <td>Тестировать класс объекта</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_insteadof.html">insteadof</a></td>
+    <td>Разрешение конфликтов с трейтами</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_interface.html">interface</a></td>
+    <td>Объявить интерфейс</td>
+  </tr>
+  <tr>
+    <td><a href="func_var_isset.html">isset</a></td>
+    <td>Проверить, существует ли переменная и не равна ли она нулю</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_list.html">list</a></td>
+    <td>Назначает элементы массива переменным</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_namespace.html">namespace</a></td>
+    <td>Объявляет пространство имен</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_new.html">new</a></td>
+    <td>Создает объект</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_or.html">or</a></td>
+    <td>Логический оператор</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_print.html">print</a></td>
+    <td>Выводит текст</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_private.html">private</a></td>
+    <td>Объявление свойства, метода или константы как приватных</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_protected.html">protected</a></td>
+    <td>Объявление свойства, метода или константы как защищенных</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_public.html">public</a></td>
+    <td>Объявление свойства, метода или константы как публичных</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_require.html">require</a></td>
+    <td>Вставить код из другого файла</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_require_once.html">require_once</a></td>
+    <td>Вставить код из другого файла</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_return.html">return</a></td>
+    <td>Выйти из функции и вернуть значение</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_static.html">static</a></td>
+    <td>Объявить свойство или метод как статический</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_switch.html">switch</a></td>
+    <td>Создать блок switch</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_throw.html">throw</a></td>
+    <td>Бросить исключение</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_trait.html">trait</a></td>
+    <td>Объявить трейт</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_try.html">try</a></td>
+    <td>Создать структуру try...catch</td>
+  </tr>
+  <tr>
+    <td>unset</td>
+    <td>Удалить переменную или элемент массива</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_use.html">use</a></td>
+    <td>Использовать пространство имен</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_var.html">var</a></td>
+    <td>Объявить переменную</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_while.html">while</a></td>
+    <td>Создать цикл while или завершить цикл do...while</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_xor.html">xor</a></td>
+    <td>Логический оператор</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_yield.html">yield</a></td>
+    <td>Используется в функциях генератора</td>
+  </tr>
+  <tr>
+    <td><a href="keyword_yield_from.html">yield from</a></td>
+    <td>Используется в функциях генератора</td>
   </tr>
 </table>
 
 <hr>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="php_ref_mysqli.html">&#10094; Prev</a>
-  <a class="w3-right w3-btn" href="php_ref_output_control.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="php_ref_json.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="php_ref_libxml.html">Next &#10095;</a>
 </div>
 
 <hr>
@@ -1363,7 +1476,7 @@
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / php / php_ref_network.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / php / php_ref_keywords.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
@@ -1537,10 +1650,9 @@ s.setAttribute('data-timestamp', +new Date());
 
 <hr>
 <div class="w3-center w3-small w3-opacity">
-Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
+Этот сайт оптимизирован для обучения, тестирования и обучения. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
 <a href="../about/about_copyright.html">Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
-Также вы можете <a href="https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip" target="_blank"><strong>скачать офлайн версию сайта W3Schools на русском</strong></a> архивом с GitHub.<br>
-<a href="../w3css/default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
+ <a href="../w3css/default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
 <a href="../index.html">
 <img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
 </div>
