@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/howto_css_zig_zag_layout.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:45 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_css_list_without_bullets.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:35:07 GMT -->
 <head>
-<title>How To Create a Zig Zag Layout</title>
+<title>How To Create an Unordered List Without Bullets</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -774,8 +774,6 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
-<style>
-</style>
 </head>
 <body>
 <div class='w3-container top'>
@@ -1454,73 +1452,32 @@ function filterContent(elmnt) {
         </div>
        
       </div>
-<h1>How TO - Responsive Zig Zag Layout</h1>
+<h1>How TO - List Without Bullets</h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="howto_css_column_cards.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="howto_css_blog_layout.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_css_list_group.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="howto_css_responsive_text.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">Learn how to create a responsive zig zag (alternating) layout with CSS.</p>
-<hr>
-<iframe src="tryhow_css_zig_zag_layout.html" style="width:100%;xpadding:5px 10px;border:1px solid #ddd;height:400px;"></iframe>
-<p><a target="_blank" href="tryit5ba5.html?filename=tryhow_css_zig_zag_layout&amp;stacked=h" class="w3-btn">Try it Yourself &raquo;</a></p>
-
+<p class="intro">Learn how create an unordered list without bullets, using CSS.</p>
 <hr>
 
-<h2>How To Create a Zig Zag Layout</h2>
-
-<h5>Step 1) Add HTML:</h5>
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;container&quot;&gt;<br>&nbsp; &lt;div class=&quot;row&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div 
-  class=&quot;column-66&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; 
-  &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;column-33&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  ...<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;div 
-  class=&quot;container&quot;&gt;<br>&nbsp; &lt;div class=&quot;row&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div 
-  class=&quot;column-33&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; 
-  &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;column-66&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  ...<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;</div>
-</div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
-
-  <div id='div-gpt-ad-1493883843099-0' style="display: inline-block">
-    <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1493883843099-0'); });
-    </script>
-  </div>
-
-</div>
-<hr>
-<h5>Step 2) Add CSS:</h5>
+<h2>How To Create a List Without Bullets</h2>
+<p>The <code class="w3-codespan">list-style-type:none</code> property can be 
+used to remove the default markers/bullets in a list. Note that the list also has default margin 
+and padding. To remove this as well, add <code class="w3-codespan">margin:0</code> and <code class="w3-codespan">padding:0</code> to &lt;ul&gt;:</p>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate cssHigh">
-  * {<br>&nbsp; box-sizing: border-box;<br>}<br><br>.container {<br>&nbsp; 
-  padding: 64px;<br>}<br><br>/* Clear floats */<br>.row:after {<br>&nbsp; content: &quot;&quot;;<br>&nbsp; 
-  display: table;<br>&nbsp; clear: both<br>}<br><br>/* 2/3 column */<br>
-  .column-66 {<br>&nbsp; float: left;<br>&nbsp; width: 
-  66.66666%;<br>&nbsp; padding: 20px;<br>}<br><br>/* 1/3 column */<br>.column-33 
-  {<br>&nbsp; float: left;<br>&nbsp; width: 
-  33.33333%;<br>&nbsp; padding: 20px;<br>}<br><br>/* Add responsiveness - make 
-  the columns appear on top of each other instead of next to each other on small 
-  screens */<br>@media screen and (max-width: 1000px) {<br>&nbsp; .column-66,<br>&nbsp; .column-33 {<br>&nbsp;&nbsp;&nbsp; 
-  width: 100%;<br>&nbsp;&nbsp;&nbsp; text-align: center;<br>&nbsp; }<br>}</div>
-<a target="_blank" href="tryit5ba5.html?filename=tryhow_css_zig_zag_layout&amp;stacked=h" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+  ul.no-bullets {<br>&nbsp; list-style-type: none; /* Remove bullets */<br>&nbsp; padding: 
+  0; /* Remove padding */<br>&nbsp; margin: 0; /* Remove margins */<br>}</div>
+<a target="_blank" href="tryit144d.html?filename=tryhow_css_list_without_bullets" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
 
-<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/css/css_website_layout.asp">CSS Website Layout</a> Tutorial to learn more about 
-website layouts.</p>
-<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/css/css_rwd_intro.asp">CSS Responsive Web Design</a> Tutorial to learn more about 
-responsive web design and grids.</p>
-
+<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/css/css_list.asp">CSS List Tutorial</a> to learn more about HTML lists and how to style them.</p>
 <br>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="howto_css_column_cards.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="howto_css_blog_layout.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_css_list_group.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="howto_css_responsive_text.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -2022,5 +1979,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/howto_css_zig_zag_layout.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:46 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_css_list_without_bullets.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:35:07 GMT -->
 </html>
