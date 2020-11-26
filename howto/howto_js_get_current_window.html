@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/howto_js_navbar_sticky.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:32:51 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_js_get_current_window.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:17 GMT -->
 <head>
-<title>How To Create a Sticky Navbar</title>
+<title>How To Get The Current Screen Size/Browser Window</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -696,8 +696,6 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
-<style>
-</style>
 </head>
 <body>
 <div class='w3-container top'>
@@ -1376,76 +1374,35 @@ function filterContent(elmnt) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>How TO - Sticky/Affix Navbar</h1>
+<h1>How TO - Get The Current Screen Size</h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="howto_js_navbar_shrink_scroll.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="howto_css_navbar_image.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_js_get_url.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="howto_js_element_iframe.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">Learn how to create a "sticky" navbar with CSS and JavaScript.</p>
-<hr>
-<iframe src="tryhow_js_navbar_sticky.html" style="width:100%;border:3px solid #e9e9e9;height:400px;padding:0"></iframe>
-<p><a target="_blank" href="tryitf65c.html?filename=tryhow_js_navbar_sticky" class="w3-btn">Try it Yourself &raquo;</a></p>
+<p class="intro">Learn how to get the current screen size/browser window with JavaScript.</p>
 <hr>
 
-<h2>How To Create a Sticky Navbar</h2>
-<h5>Step 1) Add HTML:</h5>
-<p>Create a navigation bar:</p>
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate htmlHigh">
-  &lt;div id=&quot;navbar&quot;&gt;<br>&nbsp; &lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#news&quot;&gt;News&lt;/a&gt;<br>&nbsp; 
-  &lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;<br>&lt;/div&gt;</div>
-</div>
-<hr>
-<h5>Step 2) Add CSS:</h5>
-<p>Style the navigation bar:</p>
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate cssHigh">
-  /* Style the navbar */<br>#navbar {<br>&nbsp; overflow: hidden;<br>&nbsp; 
-  background-color: #333;<br>}<br><br>/* Navbar links */<br>#navbar a {<br>&nbsp; float: left;<br>&nbsp; 
-  display: block;<br>&nbsp; color: #f2f2f2;<br>&nbsp; text-align: center;<br>&nbsp; 
-  padding: 14px;<br>&nbsp; text-decoration: none;<br>}<br><br>/* Page content */<br>.content {<br>&nbsp; padding: 16px;<br>}<br><br>/* 
-  The sticky class is added to the navbar with JS when it reaches its scroll 
-  position */<br>.sticky {<br>&nbsp; 
-  position: fixed;<br>&nbsp; top: 0;<br>&nbsp; width: 100%;<br>}<br><br>/* Add 
-  some top padding to the page content to prevent sudden quick movement (as the 
-  navigation bar gets a new position at the top of the page (position:fixed and 
-  top:0) */<br>.sticky + .content {<br>&nbsp; 
-  padding-top: 60px;<br>}</div>
-</div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
+<h2>Current Screen Size</h2>
+<p>Use <code class="w3-codespan">window.innerWidth</code> and <code class="w3-codespan">window.innerHeight</code> 
+to get the current screen size of a page.</p>
+<p>This example displays the browser window's height and width (NOT including toolbars/scrollbars):
 
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
-<hr>
-
-<h5>Step 3) Add JavaScript:</h5>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate jsHigh">
-  // When the user scrolls the page, execute myFunction <br>window.onscroll = 
-  function() {myFunction()};<br><br>// Get the navbar<br>var navbar = document.getElementById(&quot;navbar&quot;);<br><br>// 
-  Get the offset position of the navbar<br>var sticky = navbar.offsetTop;<br>
-  <br>// Add the sticky class to the navbar when you reach its scroll position. 
-  Remove &quot;sticky&quot; when you leave the scroll position<br>function myFunction() {<br>&nbsp; 
-  if (window.pageYOffset &gt;= sticky) {<br>&nbsp;&nbsp;&nbsp; navbar.classList.add(&quot;sticky&quot;)<br>&nbsp; 
-  } else {<br>&nbsp;&nbsp;&nbsp; navbar.classList.remove(&quot;sticky&quot;);<br>&nbsp; }<br>
-  }</div>
-<a target="_blank" href="tryitf65c.html?filename=tryhow_js_navbar_sticky" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+  var w = window.innerWidth;<br>var h = window.innerHeight;</div>
+<a class="w3-btn w3-margin-bottom" href="tryit93ec.html?filename=tryhow_js_get_current_window" target="_blank">Try it Yourself &raquo;</a>
 </div>
 
+<div class="w3-note w3-panel">
+<p>Read more about the <code class="w3-codespan">window</code> object in our <a href="https://www.w3schools.com/js/js_window.asp">JavaScript Window Tutorial</a>.</p>
+</div>
 
 <br>
 <div class="w3-clear nextprev">
-    <a class="w3-left w3-btn" href="howto_js_navbar_shrink_scroll.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="howto_css_navbar_image.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_js_get_url.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="howto_js_element_iframe.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -1951,5 +1908,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/howto_js_navbar_sticky.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:32:52 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_js_get_current_window.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:18 GMT -->
 </html>
