@@ -1,8 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:49:18 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -16,55 +13,26 @@
 <link rel="stylesheet" href="../lib/codemirror.css">
 <script src="../lib/codemirror.js"></script>
 <script src="../lib/codemirror_jsx.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-3855518-1', 'auto');
-  ga('require', 'displayfeatures');
-  ga('send', 'pageview');
+
+
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
 </script>
-
-<script src="../../snigelweb-com.videoplayerhub.com/videoloader.js" async></script>
-
-<script type='text/javascript'>
-var k42 = false;
-var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
-
-k42 = true;
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
-
-var snhb = snhb || {}; snhb.queue = snhb.queue || [];
-snhb.options = {
-               logOutputEnabled : false,
-               autoStartAuction: false,
-               gdpr: {
-                     mainGeo: "us",
-                     reconsiderationAppealIntervalSeconds: 0
-                     }
-               };
-
-</script>
-<script src="../../static.h-bid.com/sncmp/sncmp_stub.min.js" type="text/javascript"></script>
-<script>
-			window.__cmp('setLogo', "../images/w3schoolscom_gray.gif", function(result){
-	       		snhb.console.log("Logo set");
-	    	});
-			window.__cmp('setPrivacyPolicy', "../about/about_privacy.html", function(result){
-	       		snhb.console.log("Privacy policy URI set");
-	    	});
-			window.__cmp('enableBanner', null, function(result) {
-	       		snhb.console.log("Banner mode enabled");
-			});
-			__cmp('enablePopupDismissable', null, function(result) {});
-			window.__cmp('disableBannerPrivacyPolicyButton', null, function(result) {
-	       		snhb.console.log("Banner mode without privacy policy button enabled");
-			});
-      window.__cmp('setTranslationFiles', { path: '//www.w3schools.com/lib/', locales: ["en"] }, function(result) {});
-      __cmp('setCSS', '../lib/cmp.css', function(result){} );
-</script>
-<script async type="text/javascript" src="../../static.h-bid.com/w3schools.com/20190327/snhb-w3schools.com.min8a4b.js?20190327"></script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
 <script>
   snhb.queue.push(function(){
 
@@ -73,9 +41,9 @@ snhb.options = {
    });
 </script>
 <script>
-if (window.addEventListener) {              
+if (window.addEventListener) {
     window.addEventListener("resize", browserResize);
-} else if (window.attachEvent) {                 
+} else if (window.attachEvent) {
     window.attachEvent("onresize", browserResize);
 }
 var xbeforeResize = window.innerWidth;
@@ -86,15 +54,15 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-        
+
         snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
-         
+
     }
     if (window.screen.availWidth <= 768) {
       restack(window.innerHeight > window.innerWidth);
     }
     fixDragBtn();
-    showFrameSize();    
+    showFrameSize();
 }
 var fileID = "";
 var loadSave = false;
@@ -115,16 +83,7 @@ function getSavedFile() {
             loadSave = false;
         }
     }
-    httpA.send(paramA);   
-}
-
-function retheme() {
-  var cc = document.body.className;
-  if (cc.indexOf("darktheme") > -1) {
-    document.body.className = cc.replace("darktheme", "");
-  } else {
-    document.body.className += " darktheme";
-  }
+    httpA.send(paramA);
 }
 </script>
 <style>
@@ -186,6 +145,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   position:absolute;
   top:138px;
   bottom:0;
+
   height:auto;
 }
 #textareacontainer, #iframecontainer {
@@ -201,11 +161,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 }
 #textarea {
   padding-left:10px;
-  padding-right:5px;  
+  padding-right:5px;
 }
 #iframe {
   padding-left:5px;
-  padding-right:10px;  
+  padding-right:10px;
 }
 #textareawrapper {
   width:100%;
@@ -230,7 +190,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   padding:8px;
   resize: none;
   border:none;
-  line-height:normal;    
+  line-height:normal;
 }
 .CodeMirror.cm-s-default {
   line-height:normal;
@@ -241,7 +201,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 #iframeResult, #iframeSource {
   background-color: #ffffff;
   height:100%;
-  width:100%;  
+  width:100%;
 }
 #stackV {background-color:#999999;}
 #stackV:hover {background-color:#BBBBBB !important;}
@@ -263,7 +223,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:100%;
   padding-right:10px;
   padding-bottom:10px;
-  padding-left:10px;  
+  padding-left:10px;
 }
 #container.horizontal{
   min-height:200px;
@@ -276,7 +236,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   height:90px;
 }
   .w3-dropdown-content {width:350px}
-  
+
 @media screen and (max-width: 727px) {
   .trytopnav {top:70px;}
   #container {top:108px;}
@@ -296,11 +256,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 
 @font-face {
 font-family: 'fontawesome';
-src:url('../lib/fonts/fontawesome8deb.eot?14663396');
-src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
-    url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
-    url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
-    url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
+src:url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396');
+src:url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
+    url('https://www.w3schools.com/lib/fonts/fontawesome.woff?14663396') format('woff'),
+    url('https://www.w3schools.com/lib/fonts/fontawesome.ttf?14663396') format('truetype'),
+    url('https://www.w3schools.com/lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
 font-weight:normal;
 font-style:normal;
 }
@@ -338,7 +298,7 @@ font-style:normal;
     100% { transform: rotate(360deg); }
 }
 #iframewrapper {
-	
+
 }
 
 body.darktheme {
@@ -380,7 +340,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
   <div id="snhb-try_it_leaderboard-0"></div>
   <!-- adspace tryit-->
- 
+
 </div>
 <script>globalURL = 'https://tryit.w3schools.com/code_datas.php';</script>
 <div id="saveModal" class="w3-modal" style="z-index:4">
@@ -389,7 +349,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
       <span onclick="hideAndResetModal()" class="w3-button w3-display-topright" style="font-weight:bold;">&times;</span>
       <div id="preSave" class="w3-panel">
         <h2>Save Your Code</h2>
-        <p>If you click the save button, your code will be saved, and you get an URL you can share with others.</p>
+        <p>If you click the save button, your code will be saved, and you get a URL you can share with others.</p>
         <div style="height:34px">
         <p>
             <button class="w3-btn w3-green" style="margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
@@ -397,11 +357,11 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
         </p>
         </div>
         <p>By clicking the "Save" button you agree to our <a href="javascript:void(0);" class="w3-hover-text-green" onclick="document.getElementById('saveDisclaimer').style.display='block';">terms and conditions</a>.</p>
-        <p><a href="../default.html" class="w3-button w3-light-grey" onclick="event.preventDefault();displayError()">Report Error</a></p>
+        <p><a href="https://www.w3schools.com/default.asp" class="w3-button w3-light-grey" onclick="event.preventDefault();displayError()">Report Error</a></p>
         <div id="saveDisclaimer" style="display:none;">
           <p>All code in shared files are supplied by users, and belongs to the poster.</p>
           <p>All shared files are made public. No license is enforced.</p>
-          <p>Any code can be removed without warning (if it is deemed offensive, damaging or for any other reason).</p>        
+          <p>Any code can be removed without warning (if it is deemed offensive, damaging or for any other reason).</p>
           <p>w3schools.com are not responsible or liable for any loss or damage of any kind during the usage of provided code.</p>
         </div>
       </div>
@@ -451,20 +411,20 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   </div>
 </div>
 
-
 <div class="trytopnav">
 <div class="w3-bar" style="overflow:auto">
-  <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
-  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu"class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
+  <a id="tryhome" href="https://www.w3schools.com/" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
+  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="click_savebtn()" title="Save" class="w3-button w3-bar-item topnav-icons fa fa-save" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="font-size:28px;margin-top:-2px"></a>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" style="font-size:16px" onclick="submitTryit(1);snhb.startAuction(['try_it_leaderboard']);">Run &raquo;</button>
-  <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" style="font-size:16px" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('https://www.w3schools.com/', ''); folder = folder.substr(0, folder.indexOf('https://www.w3schools.com/')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <span class="w3-right w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
 
 </div>
+
 <div id="shield"></div>
 
 <a href="javascript:void(0)" id="dragbar"></a>
@@ -479,8 +439,8 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
   </div>
   <footer class="w3-container w3-small w3-light-gray">
-  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2019</a></p>
+  <p><a style="display:inline;padding:0;" href="https://www.w3schools.com/about/about_privacy.asp" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and
+  <a style="display:inline;padding:0;" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2020</a></p>
   </footer>
 </div>
 <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
@@ -509,7 +469,7 @@ function includeHTML() {
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
         }
-      }      
+      }
       xhttp.open("GET.html", file, true);
       xhttp.send();
       /*exit the function:*/
@@ -520,16 +480,14 @@ function includeHTML() {
 </script>
 <body>
 
-<div w3-include-html="h1.html"></div> 
-<div w3-include-html="content.html"></div> 
+<div w3-include-html="h1.html"></div>
+<div w3-include-html="content.html"></div>
 
 <script>
 includeHTML();
 </script>
 
 </body>
-
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:49:18 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -550,9 +508,9 @@ includeHTML();
       <div class="w3-container w3-green">
         <h2>Report a Problem:</h2>
       </div>
-<form class="w3-container"> 
+<form class="w3-container">
 <p><label for="err_email">Your E-mail:</label>
-<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">   
+<input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">
 </p>
 <p>
 <label for="err_email">Page address:</label>
@@ -560,13 +518,34 @@ includeHTML();
 </p>
 <p>
 <label for="err_email">Description:</label>
-<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>   
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;resize:vertical"></textarea>
 </p>
 <button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Submit</button>
 </form>
 
   </div>
 </div>
+<style>
+#backtotutcontainer {
+  position:absolute;
+  bottom:0;
+  background-color:#f1f1f1;
+  width:100%;
+  height:50px;
+  padding-left:10px;
+  color:#555;
+}
+.w3-btn:hover.w3-blue, .w3-btn:active.w3-blue {
+  background-color: #0d8bf2!important;
+  color: #fff!important;
+  box-shadow: none;
+}
+body.darktheme #backtotutcontainer {
+  background-color:#616161;
+  color:#ddd;
+}
+</style>
+
 <script>
 submitTryit()
 
@@ -578,15 +557,16 @@ function submitTryit(n) {
   var ifr = document.createElement("iframe");
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
-  ifr.setAttribute("name", "iframeResult");  
+  ifr.setAttribute("name", "iframeResult");
+  ifr.setAttribute("allowfullscreen", "true");
   document.getElementById("iframewrapper").innerHTML = "";
   document.getElementById("iframewrapper").appendChild(ifr);
   if (loadSave == true ) {
-    ifr.setAttribute("src", "../code/opentext.html");
+    ifr.setAttribute("src", "https://www.w3schools.com/code/opentext.htm");
   } else if (fileID != "" && loadSave == false) {
     var t=text;
     t=t.replace(/=/gi,"w3equalsign");
-    t=t.replace(/\+/gi,"w3plussign");    
+    t=t.replace(/\+/gi,"w3plussign");
     var pos=t.search(/script/i)
     while (pos>0) {
       t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
@@ -601,11 +581,11 @@ function submitTryit(n) {
   } else {
     var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
     ifrw.document.open();
-    ifrw.document.write(text);  
+    ifrw.document.write(text);
     ifrw.document.close();
     //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
     //(and back to false to prevent the content from being editable)
-    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)
     if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
       ifrw.document.body.contentEditable = true;
       ifrw.document.body.contentEditable = false;
@@ -620,23 +600,23 @@ function restack(horizontal) {
     ic = document.getElementById("iframecontainer");
     t = document.getElementById("textarea");
     i = document.getElementById("iframe");
-    c = document.getElementById("container");    
+    c = document.getElementById("container");
     sv = document.getElementById("stackV");
     sh = document.getElementById("stackH");
     tc.className = tc.className.replace("horizontal", "");
-    ic.className = ic.className.replace("horizontal", "");        
-    t.className = t.className.replace("horizontal", "");        
-    i.className = i.className.replace("horizontal", "");        
-    c.className = c.className.replace("horizontal", "");                        
+    ic.className = ic.className.replace("horizontal", "");
+    t.className = t.className.replace("horizontal", "");
+    i.className = i.className.replace("horizontal", "");
+    c.className = c.className.replace("horizontal", "");
     if (sv) {sv.className = sv.className.replace("horizontal", "")};
     if (sv) {sh.className = sh.className.replace("horizontal", "")};
     stack = "";
     if (horizontal) {
         tc.className = tc.className + " horizontal";
-        ic.className = ic.className + " horizontal";        
-        t.className = t.className + " horizontal";        
-        i.className = i.className + " horizontal";                
-        c.className = c.className + " horizontal";                
+        ic.className = ic.className + " horizontal";
+        t.className = t.className + " horizontal";
+        i.className = i.className + " horizontal";
+        c.className = c.className + " horizontal";
         if (sv) {sv.className = sv.className + " horizontal"};
         if (sv) {sh.className = sh.className + " horizontal"};
         stack = " horizontal";
@@ -650,7 +630,7 @@ function restack(horizontal) {
         document.getElementById("iframecontainer").style.height = "100%";
         document.getElementById("textareacontainer").style.width = "50%";
         document.getElementById("iframecontainer").style.width = "50%";
-        currentStack=true;        
+        currentStack=true;
     }
     fixDragBtn();
     showFrameSize();
@@ -668,7 +648,7 @@ function fixDragBtn() {
   var textareawidth, leftpadding, dragleft, containertop, buttonwidth
   var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
   if (stack != " horizontal") {
-    document.getElementById("dragbar").style.width = "5px";    
+    document.getElementById("dragbar").style.width = "5px";
     textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
     leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
     buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
@@ -678,7 +658,7 @@ function fixDragBtn() {
     document.getElementById("dragbar").style.left = dragleft + "px";
     document.getElementById("dragbar").style.height = textareaheight;
     document.getElementById("dragbar").style.cursor = "col-resize";
-    
+
   } else {
     document.getElementById("dragbar").style.height = "5px";
     if (window.getComputedStyle) {
@@ -696,7 +676,7 @@ function fixDragBtn() {
     document.getElementById("dragbar").style.top = dragleft + "px";
     document.getElementById("dragbar").style.left = "5px";
     document.getElementById("dragbar").style.width = textareaheight;
-    document.getElementById("dragbar").style.cursor = "row-resize";        
+    document.getElementById("dragbar").style.cursor = "row-resize";
   }
 }
 function dragstart(e) {
@@ -705,9 +685,9 @@ function dragstart(e) {
   var main = document.getElementById("iframecontainer");
 }
 function dragmove(e) {
-  if (dragging) 
+  if (dragging)
   {
-    document.getElementById("shield").style.display = "block";        
+    document.getElementById("shield").style.display = "block";
     if (stack != " horizontal") {
       var percentage = (e.pageX / window.innerWidth) * 100;
       if (percentage > 5 && percentage < 98) {
@@ -726,17 +706,18 @@ function dragmove(e) {
         fixDragBtn();
       }
     }
-    showFrameSize();    
+    showFrameSize();
   }
 }
 function dragend() {
   document.getElementById("shield").style.display = "none";
   dragging = false;
-  if (window.editor) {
-    window.editor.refresh();
+  var vend = navigator.vendor;
+  if (window.editor && vend.indexOf("Apple") == -1) {
+      window.editor.refresh();
   }
 }
-if (window.addEventListener) {              
+if (window.addEventListener) {
   document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
   document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
   window.addEventListener("mousemove", function(e) {dragmove(e);});
@@ -762,8 +743,25 @@ function click_google_savebtn() {
 function click_google_loadbtn() {
   document.getElementById('driveLoadModal').style.display='block'
 }
-
-
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
 function colorcoding() {
   var ua = navigator.userAgent;
   //Opera Mini refreshes the page when trying to edit the textarea.
@@ -832,7 +830,7 @@ function onPickerApiLoad() {
         userAction="";
         document.getElementById('driveText').style.display='none';
         document.getElementById('driveSavedPanel').style.display='block';
-        createFileWithHTMLContent(document.getElementById('googleFileName').value,document.getElementById('textareaCode').value)     
+        createFileWithHTMLContent(document.getElementById('googleFileName').value,document.getElementById('textareaCode').value)
     }
     if (userAction=="open") {
         userAction="";
@@ -866,23 +864,14 @@ function pickerCallback(data) {
 
 //Get contents
 function getContentOfFile(theID){
-    gapi.client.request({'path': '/drive/v2/files/'+theID,'method': 'GET',callback: function ( theResponseJS, theResponseTXT ) {
+    gapi.client.request({'path': '/drive/v3/files/'+theID+'?alt=media&key='+developerKey,'method': 'GET',callback: function ( theResponseJS, theResponseTXT ) {
         var myToken = gapi.auth.getToken();
-        var myXHR   = new XMLHttpRequest();
-        myXHR.open('GET.html', theResponseJS.downloadUrl, true );
-        myXHR.setRequestHeader('Authorization', 'Bearer ' + myToken.access_token );
-        myXHR.onreadystatechange = function( theProgressEvent ) {
-            if (myXHR.readyState == 4) {
-                if ( myXHR.status == 200 ) {
-                    var code = myXHR.response;
-                    document.getElementById("textareaCode").value=code;
-                    window.editor.getDoc().setValue(code);
-                    submitTryit(1);
-                    resetDriveLoadModal();
-                }
-            }
-        }
-        myXHR.send();
+        var code = JSON.parse(theResponseTXT);
+        code = code.gapiRequest.data.body;
+        document.getElementById("textareaCode").value=code;
+        window.editor.getDoc().setValue(code);
+        submitTryit(1);
+        resetDriveLoadModal();
         }
     });
 }
@@ -945,10 +934,10 @@ function resetDriveLoadModal() {
 function saveFile(code) {
     document.getElementById('preSave').style.display='none';
     if (code.length>20000) {
-        document.getElementById('errorSave').style.display='block';    
+        document.getElementById('errorSave').style.display='block';
         return;
     }
-    document.getElementById('postSave').style.display='block';    
+    document.getElementById('postSave').style.display='block';
     var paramObj = {};
     paramObj.code = code;
     var paramB = JSON.stringify(paramObj);
@@ -961,8 +950,8 @@ function saveFile(code) {
     if(httpB.readyState == 4 && httpB.status == 200) {
         if(httpB.responseText.substr(0,2) == "OK" ) {
           var getId = httpB.responseText.substr(2);
-          document.getElementById("shareLink").href = "../code/tryit1b9e.html?filename=" + getId;
-          document.getElementById("shareLinkText").innerHTML = "../code/tryit1b9e.html?filename=" + getId;
+          document.getElementById("shareLink").href = "https://www.w3schools.com/code/tryit.asp?filename=" + getId;
+          document.getElementById("shareLinkText").innerHTML = "https://www.w3schools.com/code/tryit.asp?filename=" + getId;
           document.getElementById('saveLoader').style.display = "none";
           document.getElementById("saveModalSaved").style.display  = "block";
         }
@@ -973,7 +962,7 @@ function saveFile(code) {
 function hideAndResetModal() {
     document.getElementById("saveModal").style.display = "none";
     document.getElementById('preSave').style.display = "block";
-    document.getElementById('errorSave').style.display = "none";    
+    document.getElementById('errorSave').style.display = "none";
     document.getElementById('postSave').style.display = "none";
     document.getElementById("saveModalSaved").style.display = "none";
     document.getElementById('saveDisclaimer').style.display= "none";
@@ -1003,7 +992,7 @@ function sendErr() {
   } else {// code for IE6, IE5
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
-  xmlhttp.open("POST.html", "../err_sup.html", true);
+  xmlhttp.open("POST.html", "https://www.w3schools.com/err_sup.asp", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
   document.getElementById("err_desc").value = "";
@@ -1016,22 +1005,22 @@ function openMenu() {
     var z = document.getElementById("menuButton");
     if (z.className.indexOf("w3-text-gray") == -1) {
         z.className += " w3-text-gray";
-    } else { 
+    } else {
         z.className = z.className.replace(" w3-text-gray", "");
     }
     if (z.className.indexOf("w3-gray") == -1) {
         z.className += " w3-gray";
-    } else { 
+    } else {
         z.className = z.className.replace(" w3-gray", "");
     }
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else { 
+    } else {
         x.className = x.className.replace(" w3-show", "");
     }
     if (y.className.indexOf("w3-show") == -1) {
         y.className += " w3-show";
-    } else { 
+    } else {
         y.className = y.className.replace(" w3-show", "");
     }
 
@@ -1050,9 +1039,8 @@ window.onclick = function(event) {
     if (event.target == document.getElementById("menuOverlay")) {
         openMenu();
     }
-    
-}
 
+}
 </script>
 
 <script src="../../apis.google.com/js/clientba50.js?onload=checkAuth"></script>
