@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_section by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:50:32 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_section by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:22 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -23,48 +23,49 @@
   })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-3855518-1', 'auto');
   ga('require', 'displayfeatures');
+  ga('require', 'GTM-WJ88MZ5');
   ga('send', 'pageview');
 </script>
-
-<script src="../../snigelweb-com.videoplayerhub.com/videoloader.js" async></script>
 
 <script type='text/javascript'>
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
 k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("https://www.w3schools.com/", "");
+    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
+    return folder + "tryit";
+  })());
+});  
 (adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
-               autoStartAuction: false,
-               gdpr: {
-                     mainGeo: "us",
-                     reconsiderationAppealIntervalSeconds: 0
-                     }
+               autoStartAuction: false
                };
 
 </script>
-<script src="../../static.h-bid.com/sncmp/sncmp_stub.min.js" type="text/javascript"></script>
-<script>
-			window.__cmp('setLogo', "../images/w3schoolscom_gray.gif", function(result){
-	       		snhb.console.log("Logo set");
-	    	});
-			window.__cmp('setPrivacyPolicy', "../about/about_privacy.html", function(result){
-	       		snhb.console.log("Privacy policy URI set");
-	    	});
-			window.__cmp('enableBanner', null, function(result) {
-	       		snhb.console.log("Banner mode enabled");
-			});
-			__cmp('enablePopupDismissable', null, function(result) {});
-			window.__cmp('disableBannerPrivacyPolicyButton', null, function(result) {
-	       		snhb.console.log("Banner mode without privacy policy button enabled");
-			});
-      window.__cmp('setTranslationFiles', { path: '//www.w3schools.com/lib/', locales: ["en"] }, function(result) {});
-      __cmp('setCSS', '../lib/cmp.css', function(result){} );
+<script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4caf50!important;border-color: #4caf50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4caf50!important;color: #4caf50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4caf50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4caf50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4caf50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4caf50!important; }
+#adconsent-usp-link {border: 1px solid #4caf50!important;color: #4caf50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4caf50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4caf50!important;background-color: #4caf50!important;}
+</style>
+<script type="text/javascript">
+__cmp("setLogo", "../images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
 </script>
-<script async type="text/javascript" src="../../static.h-bid.com/w3schools.com/20190327/snhb-w3schools.com.min8a4b.js?20190327"></script>
+<script async type="text/javascript" src="../../cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
 <script>
   snhb.queue.push(function(){
 
@@ -116,15 +117,6 @@ function getSavedFile() {
         }
     }
     httpA.send(paramA);   
-}
-
-function retheme() {
-  var cc = document.body.className;
-  if (cc.indexOf("darktheme") > -1) {
-    document.body.className = cc.replace("darktheme", "");
-  } else {
-    document.body.className += " darktheme";
-  }
 }
 </script>
 <style>
@@ -186,6 +178,7 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
   position:absolute;
   top:138px;
   bottom:0;
+
   height:auto;
 }
 #textareacontainer, #iframecontainer {
@@ -296,11 +289,11 @@ a.w3schoolslink:hover,a.w3schoolslink:active {
 
 @font-face {
 font-family: 'fontawesome';
-src:url('../lib/fonts/fontawesome8deb.eot?14663396');
-src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
-    url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
-    url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
-    url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
+src:url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396');
+src:url('https://www.w3schools.com/lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
+    url('https://www.w3schools.com/lib/fonts/fontawesome.woff?14663396') format('woff'),
+    url('https://www.w3schools.com/lib/fonts/fontawesome.ttf?14663396') format('truetype'),
+    url('https://www.w3schools.com/lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
 font-weight:normal;
 font-style:normal;
 }
@@ -389,7 +382,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
       <span onclick="hideAndResetModal()" class="w3-button w3-display-topright" style="font-weight:bold;">&times;</span>
       <div id="preSave" class="w3-panel">
         <h2>Save Your Code</h2>
-        <p>If you click the save button, your code will be saved, and you get an URL you can share with others.</p>
+        <p>If you click the save button, your code will be saved, and you get a URL you can share with others.</p>
         <div style="height:34px">
         <p>
             <button class="w3-btn w3-green" style="margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
@@ -397,7 +390,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
         </p>
         </div>
         <p>By clicking the "Save" button you agree to our <a href="javascript:void(0);" class="w3-hover-text-green" onclick="document.getElementById('saveDisclaimer').style.display='block';">terms and conditions</a>.</p>
-        <p><a href="../default.html" class="w3-button w3-light-grey" onclick="event.preventDefault();displayError()">Report Error</a></p>
+        <p><a href="https://www.w3schools.com/default.asp" class="w3-button w3-light-grey" onclick="event.preventDefault();displayError()">Report Error</a></p>
         <div id="saveDisclaimer" style="display:none;">
           <p>All code in shared files are supplied by users, and belongs to the poster.</p>
           <p>All shared files are made public. No license is enforced.</p>
@@ -451,20 +444,20 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   </div>
 </div>
 
-
 <div class="trytopnav">
 <div class="w3-bar" style="overflow:auto">
-  <a id="tryhome" href="../index.html" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
-  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu"class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
+  <a id="tryhome" href="https://www.w3schools.com/" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="font-size:28px;margin-top:-2px"></a>
+  <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="click_savebtn()" title="Save" class="w3-button w3-bar-item topnav-icons fa fa-save" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="font-size:28px;margin-top:-2px"></a>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" style="font-size:16px" onclick="submitTryit(1);snhb.startAuction(['try_it_leaderboard']);">Run &raquo;</button>
-  <span class="w3-right w3-hide-medium w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" style="font-size:16px" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('https://www.w3schools.com/', ''); folder = folder.substr(0, folder.indexOf('https://www.w3schools.com/')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <span class="w3-right w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
 
 </div>
+
 <div id="shield"></div>
 
 <a href="javascript:void(0)" id="dragbar"></a>
@@ -479,8 +472,8 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
     <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
   </div>
   <footer class="w3-container w3-small w3-light-gray">
-  <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
-  <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2019</a></p>
+  <p><a style="display:inline;padding:0;" href="https://www.w3schools.com/about/about_privacy.asp" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Privacy policy</a> and 
+  <a style="display:inline;padding:0;" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank" onclick="openMenu();" class="w3-hover-none w3-hover-text-green">Copyright 1999-2020</a></p>
   </footer>
 </div>
 <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
@@ -589,7 +582,7 @@ input[type=submit]:hover {
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_section by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 08:50:32 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_section by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:22 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -627,6 +620,27 @@ input[type=submit]:hover {
 
   </div>
 </div>
+<style>
+#backtotutcontainer {
+  position:absolute;
+  bottom:0;
+  background-color:#f1f1f1;
+  width:100%;
+  height:50px;
+  padding-left:10px;
+  color:#555;
+}
+.w3-btn:hover.w3-blue, .w3-btn:active.w3-blue {
+  background-color: #0d8bf2!important;
+  color: #fff!important;
+  box-shadow: none;
+}
+body.darktheme #backtotutcontainer {
+  background-color:#616161;
+  color:#ddd;
+}
+</style>
+
 <script>
 submitTryit()
 
@@ -639,10 +653,11 @@ function submitTryit(n) {
   ifr.setAttribute("frameborder", "0");
   ifr.setAttribute("id", "iframeResult");
   ifr.setAttribute("name", "iframeResult");  
+  ifr.setAttribute("allowfullscreen", "true");  
   document.getElementById("iframewrapper").innerHTML = "";
   document.getElementById("iframewrapper").appendChild(ifr);
   if (loadSave == true ) {
-    ifr.setAttribute("src", "../code/opentext.html");
+    ifr.setAttribute("src", "https://www.w3schools.com/code/opentext.htm");
   } else if (fileID != "" && loadSave == false) {
     var t=text;
     t=t.replace(/=/gi,"w3equalsign");
@@ -792,8 +807,9 @@ function dragmove(e) {
 function dragend() {
   document.getElementById("shield").style.display = "none";
   dragging = false;
-  if (window.editor) {
-    window.editor.refresh();
+  var vend = navigator.vendor;
+  if (window.editor && vend.indexOf("Apple") == -1) {
+      window.editor.refresh();
   }
 }
 if (window.addEventListener) {              
@@ -822,8 +838,25 @@ function click_google_savebtn() {
 function click_google_loadbtn() {
   document.getElementById('driveLoadModal').style.display='block'
 }
-
-
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
 function colorcoding() {
   var ua = navigator.userAgent;
   //Opera Mini refreshes the page when trying to edit the textarea.
@@ -926,23 +959,14 @@ function pickerCallback(data) {
 
 //Get contents
 function getContentOfFile(theID){
-    gapi.client.request({'path': '/drive/v2/files/'+theID,'method': 'GET',callback: function ( theResponseJS, theResponseTXT ) {
+    gapi.client.request({'path': '/drive/v3/files/'+theID+'?alt=media&key='+developerKey,'method': 'GET',callback: function ( theResponseJS, theResponseTXT ) {
         var myToken = gapi.auth.getToken();
-        var myXHR   = new XMLHttpRequest();
-        myXHR.open('GET.html', theResponseJS.downloadUrl, true );
-        myXHR.setRequestHeader('Authorization', 'Bearer ' + myToken.access_token );
-        myXHR.onreadystatechange = function( theProgressEvent ) {
-            if (myXHR.readyState == 4) {
-                if ( myXHR.status == 200 ) {
-                    var code = myXHR.response;
-                    document.getElementById("textareaCode").value=code;
-                    window.editor.getDoc().setValue(code);
-                    submitTryit(1);
-                    resetDriveLoadModal();
-                }
-            }
-        }
-        myXHR.send();
+        var code = JSON.parse(theResponseTXT);
+        code = code.gapiRequest.data.body;
+        document.getElementById("textareaCode").value=code;
+        window.editor.getDoc().setValue(code);
+        submitTryit(1);
+        resetDriveLoadModal();
         }
     });
 }
@@ -1021,8 +1045,8 @@ function saveFile(code) {
     if(httpB.readyState == 4 && httpB.status == 200) {
         if(httpB.responseText.substr(0,2) == "OK" ) {
           var getId = httpB.responseText.substr(2);
-          document.getElementById("shareLink").href = "../code/tryit1b9e.html?filename=" + getId;
-          document.getElementById("shareLinkText").innerHTML = "../code/tryit1b9e.html?filename=" + getId;
+          document.getElementById("shareLink").href = "https://www.w3schools.com/code/tryit.asp?filename=" + getId;
+          document.getElementById("shareLinkText").innerHTML = "https://www.w3schools.com/code/tryit.asp?filename=" + getId;
           document.getElementById('saveLoader').style.display = "none";
           document.getElementById("saveModalSaved").style.display  = "block";
         }
@@ -1063,7 +1087,7 @@ function sendErr() {
   } else {// code for IE6, IE5
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
-  xmlhttp.open("POST.html", "../err_sup.html", true);
+  xmlhttp.open("POST.html", "https://www.w3schools.com/err_sup.asp", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
   document.getElementById("err_desc").value = "";
@@ -1112,7 +1136,6 @@ window.onclick = function(event) {
     }
     
 }
-
 </script>
 
 <script src="../../apis.google.com/js/clientba50.js?onload=checkAuth"></script>
