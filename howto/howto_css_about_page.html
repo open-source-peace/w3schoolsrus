@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/howto_css_contact_form.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:34:09 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_css_about_page.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:35 GMT -->
 <head>
-<title>How To Create a Contact Form with CSS</title>
+<title>How To Create an About Page</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -696,42 +696,6 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
-<style>
-input[type=text].test, select.test.test,textarea.test {
-    width: 100%;
-    padding: 12px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize:none;
-}
-.test {
-      margin: 6px 0 16px 0;
-
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit].test:hover {
-    background-color: #45a049;
-}
-
-div.test {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-}
-
-</style>
 </head>
 <body>
 <div class='w3-container top'>
@@ -1410,97 +1374,86 @@ function filterContent(elmnt) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>How TO - Contact Form</h1>
+<h1>How TO - About Page</h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="howto_css_checkout_form.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="howto_css_social_login.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_css_contact_section.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="howto_css_style_header.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">Learn how to create a contact form with CSS.</p>
+<p class="intro">Learn how to create an about page / about us page.</p>
 <hr>
-<div class="test" style="border-radius:5px;background-color:#f2f2f2;padding:30px;">
- <label for="fname" class="test">First Name</label>
-  <input type="text" class="test" id="fname" name="firstname" placeholder="Your name..">
+<h2>About Us</h2>
+<iframe src="tryhow_css_about_page.html" style="border:10px solid #f1f1f1;width:100%;height:800px"></iframe>
 
-  <label for="lname" class="test">Last Name</label>
-  <input type="text" class="test" id="lname" name="lastname" placeholder="Your last name..">
-
-  <label for="country" class="test">Country</label>
-  <select id="country" class="test" name="country">
-    <option value="usa">Australia</option>
-    <option value="usa">Canada</option>
-    <option value="usa">USA</option>
-  </select>
-  
-  <label for="subject" class="test">Subject</label>
-  <textarea class="test" placeholder="Write something.." style="height:200px"></textarea>
- 
-<a target="_blank" href="javascript:void(0)" class="w3-btn w3-padding w3-round">Submit</a>
-</div>
-<p><a target="_blank" href="tryit32cc.html?filename=tryhow_css_contact_form" class="w3-btn">Try it Yourself &raquo;</a></p>
+<a target="_blank" href="tryit6ade.html?filename=tryhow_css_about_page" class="w3-btn w3-margin-top">Try it Yourself &raquo;</a>
 <hr>
 
-<h2>How To Create a Contact Form</h2>
-<h5>Step 1) Add HTML</h5>
-<p>Use a &lt;form&gt; element to process the input. You can learn more about this in our <a href="https://www.w3schools.com/php/default.asp">PHP</a> tutorial. Then add 
-inputs (with a matching label) for each field:</p>
+<h2>Create an About Page</h2>
+<h5>Step 1) Add HTML:</h5>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;container&quot;&gt;<br>&nbsp; &lt;form action=&quot;action_page.php&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;fname&quot;&gt;First Name&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;input type=&quot;text&quot; 
-  id=&quot;fname&quot; name=&quot;firstname&quot; placeholder=&quot;Your name..&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;lname&quot;&gt;Last Name&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;input type=&quot;text&quot; 
-  id=&quot;lname&quot; name=&quot;lastname&quot; placeholder=&quot;Your last name..&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;select 
-  id=&quot;country&quot; name=&quot;country&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&quot;australia&quot;&gt;Australia&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  &lt;option value=&quot;canada&quot;&gt;Canada&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  &lt;option value=&quot;usa&quot;&gt;USA&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/select&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;subject&quot;&gt;Subject&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;textarea 
-  id=&quot;subject&quot; name=&quot;subject&quot; placeholder=&quot;Write something..&quot; 
-  style=&quot;height:200px&quot;&gt;&lt;/textarea&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;input 
-  type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br><br>&nbsp; &lt;/form&gt;<br>&lt;/div&gt;</div>
-</div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
+  &lt;div class=&quot;about-section&quot;&gt;<br>&nbsp; &lt;h1&gt;About Us Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;Some 
+  text about who we are and what we do.&lt;/p&gt;<br>&nbsp; &lt;p&gt;Resize the browser 
+  window to see that this page is responsive by the way.&lt;/p&gt;<br>&lt;/div&gt;<br><br>
+  &lt;h2 style=&quot;text-align:center&quot;&gt;Our Team&lt;/h2&gt;<br>&lt;div class=&quot;row&quot;&gt;<br>&nbsp; 
+  &lt;div class=&quot;column&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;card&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;img src=&quot;/w3images/team1.jpg&quot; alt=&quot;Jane&quot; style=&quot;width:100%&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;div class=&quot;container&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;Jane 
+  Doe&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p class=&quot;title&quot;&gt;CEO &amp; 
+  Founder&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Some text that 
+  describes me lorem ipsum ipsum lorem.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;jane@example.com&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;&lt;button class=&quot;button&quot;&gt;Contact&lt;/button&gt;&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;div 
+  class=&quot;column&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;card&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;img src=&quot;/w3images/team2.jpg&quot; alt=&quot;Mike&quot; style=&quot;width:100%&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;div class=&quot;container&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;Mike 
+  Ross&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p class=&quot;title&quot;&gt;Art 
+  Director&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Some text that 
+  describes me lorem ipsum ipsum lorem.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;mike@example.com&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;&lt;button class=&quot;button&quot;&gt;Contact&lt;/button&gt;&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;div 
+  class=&quot;column&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;card&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;img src=&quot;/w3images/team3.jpg&quot; alt=&quot;John&quot; style=&quot;width:100%&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;div class=&quot;container&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;John 
+  Doe&lt;/h2&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p 
+  class=&quot;title&quot;&gt;Designer&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;Some text that describes me lorem ipsum ipsum lorem.&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;john@example.com&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;p&gt;&lt;button class=&quot;button&quot;&gt;Contact&lt;/button&gt;&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;</div>
 </div>
 <hr>
 <h5>Step 2) Add CSS:</h5>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate cssHigh">
-  /* Style inputs with type=&quot;text&quot;, select elements and textareas */<br>input[type=text], select, textarea {<br>&nbsp;&nbsp;width: 100%; /* 
-  Full width */<br>&nbsp;&nbsp;padding: 12px; /* Some padding */&nbsp; <br>&nbsp; border: 1px solid #ccc; 
-  /* Gray border */<br>&nbsp; 
-  border-radius: 4px; /* Rounded borders */<br>&nbsp; box-sizing: border-box; 
-  /* Make sure that padding and width stays in place */<br>&nbsp; 
-  margin-top: 6px; /* Add a top margin */<br>&nbsp;&nbsp;margin-bottom: 16px; 
-  /* Bottom margin */<br>&nbsp;&nbsp;resize: vertical /* Allow the user 
-  to vertically resize the textarea (not horizontally) */<br>}<br>
-  <br>/* Style the submit button with a specific background color etc */<br>input[type=submit] {<br>&nbsp;&nbsp;background-color: #4CAF50;<br>&nbsp;&nbsp;color: white;<br>&nbsp;&nbsp;padding: 12px 20px;<br>&nbsp;&nbsp;border: none;<br>
-  &nbsp; border-radius: 4px;<br>&nbsp; 
-  cursor: pointer;<br>}<br><br>/* When moving the mouse over the submit button, 
-  add a darker green color */<br>input[type=submit]:hover {<br>&nbsp; 
-  background-color: #45a049;<br>}<br><br>/* Add a background color and some 
-  padding around the form */<br>.container {<br>&nbsp;&nbsp;border-radius: 5px;<br>&nbsp;&nbsp;background-color: #f2f2f2;<br>&nbsp;&nbsp;padding: 20px;<br>}</div>
-<a target="_blank" href="tryit32cc.html?filename=tryhow_css_contact_form" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+  body {<br>&nbsp; font-family: Arial, Helvetica, sans-serif;<br>&nbsp; margin: 
+  0;<br>}<br><br>html {<br>&nbsp; box-sizing: border-box;<br>}<br><br>*, 
+  *:before, *:after {<br>&nbsp; box-sizing: inherit;<br>}<br><br>.column {<br>&nbsp; 
+  float: left;<br>&nbsp; width: 33.3%;<br>&nbsp; margin-bottom: 16px;<br>&nbsp; 
+  padding: 0 8px;<br>}<br><br>.card {<br>&nbsp; box-shadow: 0 4px 8px 0 rgba(0, 
+  0, 0, 0.2);<br>&nbsp; margin: 8px;<br>}<br><br>.about-section {<br>&nbsp; 
+  padding: 50px;<br>&nbsp; text-align: center;<br>&nbsp; background-color: 
+  #474e5d;<br>&nbsp; color: white;<br>}<br><br>.container {<br>&nbsp; padding: 0 
+  16px;<br>}<br><br>.container::after, .row::after {<br>&nbsp; content: &quot;&quot;;<br>&nbsp; 
+  clear: both;<br>&nbsp; display: table;<br>}<br><br>.title {<br>&nbsp; color: 
+  grey;<br>}<br><br>.button {<br>&nbsp; border: none;<br>&nbsp; outline: 0;<br>&nbsp; 
+  display: inline-block;<br>&nbsp; padding: 8px;<br>&nbsp; color: white;<br>&nbsp; 
+  background-color: #000;<br>&nbsp; text-align: center;<br>&nbsp; cursor: 
+  pointer;<br>&nbsp; width: 100%;<br>}<br><br>.button:hover {<br>&nbsp; 
+  background-color: #555;<br>}<br><br>@media screen and (max-width: 650px) {<br>&nbsp; 
+  .column {<br>&nbsp;&nbsp;&nbsp; width: 100%;<br>&nbsp;&nbsp;&nbsp; display: 
+  block;<br>&nbsp; }<br>}</div>
+<a target="_blank" href="tryit6ade.html?filename=tryhow_css_about_page" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
-<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/html/html_forms.asp">HTML Form Tutorial</a> to learn 
-more about HTML Forms.</p>
-
-<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/css/css_form.asp">CSS Form Tutorial</a> to learn 
-more about how to style form elements.</p>
 
 <br>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="howto_css_checkout_form.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="howto_css_social_login.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_css_contact_section.html">&#10094; Previous</a>
+  <a class="w3-right w3-btn" href="howto_css_style_header.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -2006,5 +1959,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/howto_css_contact_form.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:34:09 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_css_about_page.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:36 GMT -->
 </html>

@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/howto_css_contact_form.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:34:09 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_css_delete_modal.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:34:41 GMT -->
 <head>
-<title>How To Create a Contact Form with CSS</title>
+<title>How To Create a Delete Confirmation Modal</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -697,38 +697,22 @@ function w3_getStyleValue(elmnt,style) {
 }
 </script>
 <style>
-input[type=text].test, select.test.test,textarea.test {
+.w3-btn {
+box-shadow: none;
+}
+.w3-modal input[type=text], .w3-modal input[type=password] {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
+    margin: 5px 0 16px 0;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize:none;
-}
-.test {
-      margin: 6px 0 16px 0;
-
+    border: none !important;
+    background: #f1f1f1;
 }
 
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit].test:hover {
-    background-color: #45a049;
-}
-
-div.test {
-    border-radius: 5px;
-    background-color: #f2f2f2;
+/* Add a background color when the inputs get focus */
+.w3-modal input[type=text]:focus, .w3-modal input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
 }
 
 </style>
@@ -1410,97 +1394,130 @@ function filterContent(elmnt) {
         <!-- adspace leaderboard -->
        
       </div>
-<h1>How TO - Contact Form</h1>
+<h1>How TO - Delete Modal</h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="howto_css_checkout_form.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="howto_css_social_login.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_css_modals.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="howto_css_timeline.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">Learn how to create a contact form with CSS.</p>
+<p class="intro">Learn how to create a delete confirmation modal with CSS.</p>
 <hr>
-<div class="test" style="border-radius:5px;background-color:#f2f2f2;padding:30px;">
- <label for="fname" class="test">First Name</label>
-  <input type="text" class="test" id="fname" name="firstname" placeholder="Your name..">
 
-  <label for="lname" class="test">Last Name</label>
-  <input type="text" class="test" id="lname" name="lastname" placeholder="Your last name..">
+<p>Click on the button to open the modal:</p>
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-blue w3-padding-large">Open Modal</button>
 
-  <label for="country" class="test">Country</label>
-  <select id="country" class="test" name="country">
-    <option value="usa">Australia</option>
-    <option value="usa">Canada</option>
-    <option value="usa">USA</option>
-  </select>
-  
-  <label for="subject" class="test">Subject</label>
-  <textarea class="test" placeholder="Write something.." style="height:200px"></textarea>
- 
-<a target="_blank" href="javascript:void(0)" class="w3-btn w3-padding w3-round">Submit</a>
+<div id="id01" class="w3-modal" style="cursor:pointer;background-color: rgba(0,0,0,0.75);">
+    <span onclick="document.getElementById('id01').style.display='none'" title="Close Modal"
+  class="w3-container w3-text-white w3-display-topright w3-xxxlarge" style="right:50px;">&times;</span>
+ <div class="w3-modal-content w3-card-4" style="max-width:600px;cursor:auto">
+
+    <div class="w3-container w3-padding-32 w3-center">
+    <h1>Delete Account</h1>
+      <p>Are you sure you want to delete your account?</p> 
+       <div class="w3-row">
+       <div class="w3-half"><button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-grey w3-padding-16 w3-hover-grey w3-opacity-min w3-hover-opacity-off">Cancel</button></div>
+      <div class="w3-half"><button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red w3-padding-16 w3-hover-red w3-opacity-min w3-hover-opacity-off">Delete</button></div>
 </div>
-<p><a target="_blank" href="tryit32cc.html?filename=tryhow_css_contact_form" class="w3-btn">Try it Yourself &raquo;</a></p>
+<br>
+    </div>
+
+  </div>
+</div>
+<p>
+<a target="_blank" href="tryita889.html?filename=tryhow_css_delete_modal" class="w3-btn">Try it Yourself &raquo;</a>
+</p>
 <hr>
 
-<h2>How To Create a Contact Form</h2>
-<h5>Step 1) Add HTML</h5>
-<p>Use a &lt;form&gt; element to process the input. You can learn more about this in our <a href="https://www.w3schools.com/php/default.asp">PHP</a> tutorial. Then add 
-inputs (with a matching label) for each field:</p>
+<h2>How To Create a Delete Modal</h2>
+<h5>Step 1) Add HTML:</h5>
 <div class="w3-example">
 <h3>Example</h3>
-<div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;container&quot;&gt;<br>&nbsp; &lt;form action=&quot;action_page.php&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;fname&quot;&gt;First Name&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;input type=&quot;text&quot; 
-  id=&quot;fname&quot; name=&quot;firstname&quot; placeholder=&quot;Your name..&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;lname&quot;&gt;Last Name&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;input type=&quot;text&quot; 
-  id=&quot;lname&quot; name=&quot;lastname&quot; placeholder=&quot;Your last name..&quot;&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;select 
-  id=&quot;country&quot; name=&quot;country&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;option value=&quot;australia&quot;&gt;Australia&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  &lt;option value=&quot;canada&quot;&gt;Canada&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  &lt;option value=&quot;usa&quot;&gt;USA&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/select&gt;<br><br>&nbsp;&nbsp;&nbsp; 
-  &lt;label for=&quot;subject&quot;&gt;Subject&lt;/label&gt;<br>&nbsp;&nbsp;&nbsp; &lt;textarea 
-  id=&quot;subject&quot; name=&quot;subject&quot; placeholder=&quot;Write something..&quot; 
-  style=&quot;height:200px&quot;&gt;&lt;/textarea&gt;<br><br>&nbsp;&nbsp;&nbsp; &lt;input 
-  type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br><br>&nbsp; &lt;/form&gt;<br>&lt;/div&gt;</div>
-</div>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
+  <div class="w3-code notranslate htmlHigh">
+    &lt;button onclick="document.getElementById('id01').style.display='block'"&gt;Open 
+    Modal&lt;/button&gt;<br><br>&lt;div id="id01" class="modal"&gt;<br>&nbsp; &lt;span 
+    onclick="document.getElementById('id01').style.display='none'" class="close" 
+    title="Close Modal"&gt;&amp;times;&lt;/span&gt;<br>&nbsp; &lt;form class="modal-content" 
+    action="/action_page.php"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class="container"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &lt;h1&gt;Delete Account&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Are you sure 
+    you want to delete your account?&lt;/p&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &lt;div class="clearfix"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button 
+    type="button"  
+    class="cancelbtn"&gt;Cancel&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &lt;button type="button" 
+    class="deletebtn"&gt;Delete&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; 
+    &lt;/div&gt;<br>&nbsp; &lt;/form&gt;<br>&lt;/div&gt;</div>
 </div>
 <hr>
 <h5>Step 2) Add CSS:</h5>
 <div class="w3-example">
 <h3>Example</h3>
 <div class="w3-code notranslate cssHigh">
-  /* Style inputs with type=&quot;text&quot;, select elements and textareas */<br>input[type=text], select, textarea {<br>&nbsp;&nbsp;width: 100%; /* 
-  Full width */<br>&nbsp;&nbsp;padding: 12px; /* Some padding */&nbsp; <br>&nbsp; border: 1px solid #ccc; 
-  /* Gray border */<br>&nbsp; 
-  border-radius: 4px; /* Rounded borders */<br>&nbsp; box-sizing: border-box; 
-  /* Make sure that padding and width stays in place */<br>&nbsp; 
-  margin-top: 6px; /* Add a top margin */<br>&nbsp;&nbsp;margin-bottom: 16px; 
-  /* Bottom margin */<br>&nbsp;&nbsp;resize: vertical /* Allow the user 
-  to vertically resize the textarea (not horizontally) */<br>}<br>
-  <br>/* Style the submit button with a specific background color etc */<br>input[type=submit] {<br>&nbsp;&nbsp;background-color: #4CAF50;<br>&nbsp;&nbsp;color: white;<br>&nbsp;&nbsp;padding: 12px 20px;<br>&nbsp;&nbsp;border: none;<br>
-  &nbsp; border-radius: 4px;<br>&nbsp; 
-  cursor: pointer;<br>}<br><br>/* When moving the mouse over the submit button, 
-  add a darker green color */<br>input[type=submit]:hover {<br>&nbsp; 
-  background-color: #45a049;<br>}<br><br>/* Add a background color and some 
-  padding around the form */<br>.container {<br>&nbsp;&nbsp;border-radius: 5px;<br>&nbsp;&nbsp;background-color: #f2f2f2;<br>&nbsp;&nbsp;padding: 20px;<br>}</div>
-<a target="_blank" href="tryit32cc.html?filename=tryhow_css_contact_form" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+  * {box-sizing: border-box}<br><br>/* Set a style for all buttons */<br>button 
+  {<br>&nbsp; background-color: #4CAF50;<br>&nbsp; color: white;<br>&nbsp; 
+  padding: 14px 20px;<br>&nbsp; margin: 8px 0;<br>&nbsp; border: none;<br>&nbsp; 
+  cursor: pointer;<br>&nbsp; width: 100%;<br>&nbsp; opacity: 0.9;<br>}<br><br>
+  button:hover {<br>&nbsp; opacity:1;<br>}<br><br>/* Float cancel and delete 
+  buttons and add an equal width */<br>.cancelbtn, .deletebtn {<br>&nbsp; float: 
+  left;<br>&nbsp; width: 50%;<br>}<br><br>/* Add a color to the cancel button */<br>
+  .cancelbtn {<br>&nbsp; background-color: #ccc;<br>&nbsp; color: black;<br>}<br>
+  <br>/* Add a color to the delete button */<br>.deletebtn {<br>&nbsp; 
+  background-color: #f44336;<br>}<br><br>/* Add padding and center-align text to 
+  the container */<br>.container {<br>&nbsp; padding: 16px;<br>&nbsp; 
+  text-align: center;<br>}<br><br>/* The Modal (background) */<br>.modal {<br>&nbsp; 
+  display: none; /* Hidden by default */<br>&nbsp; position: fixed; /* Stay in 
+  place */<br>&nbsp; z-index: 1; /* Sit on top */<br>&nbsp; left: 0;<br>&nbsp; 
+  top: 0;<br>&nbsp; width: 100%; /* Full width */<br>&nbsp; height: 100%; /* 
+  Full height */<br>&nbsp; overflow: auto; /* Enable scroll if needed */<br>&nbsp; 
+  background-color: #474e5d;<br>&nbsp; padding-top: 50px;<br>}<br><br>/* Modal 
+  Content/Box */<br>.modal-content {<br>&nbsp; background-color: #fefefe;<br>&nbsp; 
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered 
+  */<br>&nbsp; border: 1px solid #888;<br>&nbsp; width: 80%; /* Could be more or 
+  less, depending on screen size */<br>}<br><br>/* Style the horizontal ruler */<br>
+  hr {<br>&nbsp; border: 1px solid #f1f1f1;<br>&nbsp; margin-bottom: 25px;<br>}<br>
+  <br>/* The Modal Close Button (x) */<br>.close {<br>&nbsp; position: absolute;<br>&nbsp; 
+  right: 35px;<br>&nbsp; top: 15px;<br>&nbsp; font-size: 40px;<br>&nbsp; 
+  font-weight: bold;<br>&nbsp; color: #f1f1f1;<br>}<br><br>.close:hover,<br>
+  .close:focus {<br>&nbsp; color: #f44336;<br>&nbsp; cursor: pointer;<br>}<br>
+  <br>/* Clear floats */<br>.clearfix::after {<br>&nbsp; content: "";<br>&nbsp; 
+  clear: both;<br>&nbsp; display: table;<br>}<br><br>/* Change styles for cancel 
+  button and delete button on extra small screens */<br>@media screen and 
+  (max-width: 300px) {<br>&nbsp; .cancelbtn, .deletebtn {<br>&nbsp;&nbsp;&nbsp; 
+  width: 100%;<br>&nbsp; }<br>}</div>
+<a target="_blank" href="tryita889.html?filename=tryhow_css_delete_modal" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
 </div>
-<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/html/html_forms.asp">HTML Form Tutorial</a> to learn 
-more about HTML Forms.</p>
+<hr>
 
-<p><strong>Tip:</strong> Go to our <a href="https://www.w3schools.com/css/css_form.asp">CSS Form Tutorial</a> to learn 
-more about how to style form elements.</p>
 
-<br>
+<p><strong>Tip:</strong> You can also use the following javascript to close the modal by clicking outside of the modal content (and not just by using the "x" or "cancel" button to close it):</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;script&gt;<br>// Get the modal<br>var modal = document.getElementById('id01');<br>
+<br>// When the user clicks anywhere outside of the modal, close it<br>
+window.onclick = function(event) {<br>&nbsp;&nbsp;if (event.target == 
+modal) {<br>&nbsp;&nbsp;&nbsp;&nbsp;modal.style.display = 
+&quot;none&quot;;<br>&nbsp;&nbsp;}<br>}<br>
+&lt;/script&gt;</div>
+<a target="_blank" href="tryita889.html?filename=tryhow_css_delete_modal" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="howto_css_checkout_form.html">&#10094; Previous</a>
-  <a class="w3-right w3-btn" href="howto_css_social_login.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="howto_css_modals.html">&#10094; Previous</a>
+<a class="w3-right w3-btn" href="howto_css_timeline.html">Next &#10095;</a>
 </div>
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
@@ -2006,5 +2023,5 @@ function registerPoint(cc) {
 <![endif]-->
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/howto_css_contact_form.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:34:09 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/howto_css_delete_modal.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:34:41 GMT -->
 </html>
