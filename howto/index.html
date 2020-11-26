@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/howto_website_bootstrap.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:27 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:30:07 GMT -->
 <head>
-<title>How To Make a Website with Bootstrap</title>
+<title>W3Schools How TO - Code snippets for HTML, CSS and JavaScript</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,exercises,source code,colors,demos,tips">
@@ -592,15 +592,14 @@ ga('send', 'pageview');
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-k42 = true;
-googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("https://www.w3schools.com/", "");
-    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
-    return folder;
-  })());
-});  
-(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  gads.src = '../../www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -611,6 +610,85 @@ snhb.options = {
                allOutputEnabled: false,
                autoStartAuction: false,
                };
+
+// GPT slots
+var gptAdSlots = [];
+googletag.cmd.push(function() {
+  googletag.pubads().disableInitialLoad();               
+  googletag.pubads().enableSingleRequest();
+  var leaderMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [320, 50]). 
+    // Vertical Tablet ad
+    addSize([512, 0], [468, 60]). 
+    // Horizontal Tablet
+    addSize([812, 0], [728, 90]).
+    // Small Desktop
+    addSize([1025, 0], [468, 60]).
+    // Normal Desktop
+    addSize([1182, 0], [728, 90]).
+    // Large Desktop and bigger ad
+    addSize([1457, 0], [[728, 90], [970, 90]]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
+    defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  var skyMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [320, 50]). 
+    // Tablet ad
+    addSize([983, 0], [120, 600]). 
+    // Desktop
+    addSize([1143, 0], [160, 600]).   
+    // Large Desktop
+    addSize([1683, 0], [[160, 600], [300, 600], [300, 1050]]).build();
+  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
+    defineSizeMapping(skyMapping).addService(googletag.pubads());
+  var stickyMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], []). 
+    // Tablet ad
+    addSize([983, 0], [120, 600]). 
+    // Desktop
+    addSize([1143, 0], [160, 600]).   
+    // Large Desktop
+    addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
+  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
+    defineSizeMapping(stickyMapping).addService(googletag.pubads());
+  var mcontMapping = googletag.sizeMapping().
+    // Mobile ad
+    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
+    // Vertical Tablet ad
+    addSize([522, 0], [[300, 250], [336, 280], [468, 60]]). 
+    // Horizontal Tablet
+    addSize([782, 0], [728, 90]).
+    // Small Desktop
+    addSize([1025, 0], [[300, 250], [336, 280], [468, 60]]).
+    // Normal Desktop
+    addSize([1167, 0], [728, 90]).
+    // Large Desktop and bigger ad
+    addSize([1472, 0], [[728, 90], [970, 90], [970, 250]]).build();
+  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
+    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  var bmrMapping = googletag.sizeMapping().
+    // Smaller
+    addSize([0, 0], [[300, 250], [336, 280]]). 
+    // Large Desktop
+    addSize([1272, 0], [[300, 250], [336, 280], [970, 250]]).build();
+    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
+    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  var rbmrMapping = googletag.sizeMapping().
+    // Smaller
+    addSize([0, 0], []). 
+    // Large Desktop
+    addSize([1007, 0], [[300, 250], [336, 280]]).build();
+  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
+    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("https://www.w3schools.com/", "");
+    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
+    return folder;
+  })());
+});  
 
 </script>
 <script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
@@ -634,7 +712,7 @@ __cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
 <script>
   snhb.queue.push(function(){
 
-    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
+    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
 
   });
 </script>
@@ -696,8 +774,12 @@ function w3_getStyleValue(elmnt,style) {
   }
 }
 </script>
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'>
+<link href="howto.css" rel="stylesheet">
+<script src="howto.js"></script>
 </head>
-<body>
+<body style="font-family:Verdana,sans-serif!important;">
 <div class='w3-container top'>
   <a class='w3schools-logo notranslate' href='http://www.w3schools.com/'>w3schools<span class='dotcom'>.com</span></a>
 
@@ -1368,258 +1450,923 @@ function filterContent(elmnt) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-
-        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-        <div id="snhb-main_leaderboard-0"></div>
-        <!-- adspace leaderboard -->
+        
+        <div id='div-gpt-ad-1422003450156-2'>
+          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
+        </div>
        
       </div>
-<h1>How TO - Make a Website with Bootstrap</h1>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="howto_website.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="howto_website_bootstrap4.html">Next &#10095;</a>
-</div>
-<hr>
-<p class="intro">Learn how to create a responsive website with the Bootstrap CSS Framework.</p>
-<hr>
-<h2>Create a Website with Bootstrap</h2>
-<div class="w3-content" style="max-width:1500px">
-<iframe src="tryhow_website_bootstrap_ifr.html" class="w3-round" style="width:100%;border:5px solid #e9e9e9;height:600px"></iframe>
-<div class="w3-row-padding" style="margin:16px -16px 0 -16px">
-  <div class="w3-col m6">
-    <a href="tryhow_website_bootstrap.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey w3-block">Demo</a>
-  </div>
-  <div class="w3-col m6">
-    <a href="tryite06c.html?filename=tryhow_website_bootstrap&amp;stacked=h" target="_blank" class="w3-btn w3-padding-large w3-green w3-block">Try it Yourself</a>
-  </div>
-</div>
-</div>
-<div class="w3-note w3-panel" style="margin-top:24px">
-<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites. Bootstrap is completely free to download and use.</p>
-<p><strong>Note:</strong> If you don't know Bootstrap, <a href="https://www.w3schools.com/bootstrap/default.asp">we suggest that you read our Bootstrap Tutorial</a>.</p>
-</div>
-<!--
-<hr>
-<h2>A &quot;Layout Draft&quot;</h2>
-<p>It can be wise to draw a layout draft of the page design before creating a website:</p>
+<h1>W3Schools <span class="color_h1">How To</span></h1>
 
-<div class="w3-border">
-
-<div class="w3-display-container w3-dark-grey" style="height:250px">
-<div class="w3-display-middle w3-xlarge">Header</div>
-</div>
-
-<div class="w3-container w3-black w3-center">
-<h4>Navigation bar</h4>
-</div>
-
-<div class="w3-center w3-row">
-<div class="w3-col s4 w3-light-grey w3-padding" style="height:300px">
-<h3>Side Content</h3>
-<p>Some text some text..</p>
-</div>
-<div class="w3-col s8 w3-padding">
-<h3>Main Content</h3>
-<p>Some text some text..</p>
-<p>Some text some text..</p>
-<p>Some text some text..</p>
-</div>
-</div>
-
-<div class="w3-container w3-dark-grey w3-center">
-<h4>Footer</h4>
-</div>
-</div>
-<hr>
-<h2>First Step - Basic HTML Page</h2>
-<p>HTML is the standard markup language for creating websites and CSS is the language that describes the style of an HTML document. We will combine HTML and CSS to create a basic web page.</p>
-<p><strong>Note:</strong> If you don't know HTML and CSS, <a href="/html/default.asp">we suggest that you read out HTML Tutorial</a>.</p>
-<div class="w3-example">
-<h3>Example</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>&lt;meta 
-  charset=&quot;UTF-8&quot;&gt;<br>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, 
-  initial-scale=1&quot;&gt;<br>&lt;style&gt;<br>body {<br>&nbsp;&nbsp;&nbsp; 
-  font-family: Arial, Helvetica, sans-serif;<br>}<br>&lt;/style&gt;<br>
- &lt;/head&gt;<br>
-&lt;body&gt;<br><br>&lt;h1&gt;My Website&lt;/h1&gt;<br>&lt;p&gt;A website created by me.&lt;/p&gt;<br><br>
-    &lt;/body&gt;<br>&lt;/html&gt;
-</div>
-<a target="_blank" href="tryit.asp?filename=tryhow_make_a_website_intro" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-</div>
-<h3>Example Explained</h3>
-<ul>
-<li>The <code class="w3-codespan">&lt;!DOCTYPE html&gt;</code> declaration defines this document to be HTML5</li>
-<li>The <code class="w3-codespan">&lt;html&gt;</code> element is the root element of an HTML 
-page</li>
- <li>The <code class="w3-codespan">&lt;head&gt;</code> element contains meta information about the document</li>
- <li>The <code class="w3-codespan">&lt;title&gt;</code> element specifies a title for the document</li>
- <li>The <code class="w3-codespan">&lt;meta&gt;</code> element should define the character set to be UTF-8</li>
- <li>The <code class="w3-codespan">&lt;meta&gt;</code> element with name="viewport" makes the website look good on all devices and screen resolutions</li>
- <li>The <code class="w3-codespan">&lt;style&gt;</code> element contains the styles for the website (layout/design)</li>
- <li>The <code class="w3-codespan">&lt;body&gt;</code> element contains the visible page content</li>
- <li>The <code class="w3-codespan">&lt;h1&gt;</code> element defines a large heading</li>
- <li>The <code class="w3-codespan">&lt;p&gt;</code> element defines a paragraph</li>
-</ul>
-<hr>
-
-
-<h2>Creating Page Content</h2>
-<p>Inside the <code class="w3-codespan">&lt;body&gt;</code> element of our website, we will use our &quot;Layout 
-Draft&quot; 
-and create:</p>
-<ul>
- <li>A header</li>
- <li>A navigation bar</li>
- <li>Main content</li>
- <li>Side content</li>
- <li>A footer</li>
-</ul>
+<div class="howtopag"></div>
 
 <hr>
-<h2>Header</h2>
-
-<p>A header is usually located at the top of the website (or right below a top 
-navigation menu). It often contains a logo or the website name:</p>
-
-<div class="w3-example">
-<div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;header&quot;&gt;<br>&nbsp; &lt;h1&gt;My Website&lt;/h1&gt;<br>&nbsp; &lt;p&gt;A website 
-  created by me.&lt;/p&gt;<br>&lt;/div&gt;</div>
-<p>
-</div>
-
-<p>Then we use CSS to style the header:</p>
-<div class="w3-example">
-<div class="w3-code notranslate cssHigh">
-  .header {<br>&nbsp;&nbsp;&nbsp; padding: 80px; /* some padding */<br>&nbsp;&nbsp;&nbsp; 
-  text-align: center; /* center the text */<br>&nbsp;&nbsp;&nbsp; background: #1abc9c; 
-  /* green background */<br>&nbsp;&nbsp;&nbsp; 
-  color: white; /* white text color */<br>}<br><br>/* Increase the font size of the &lt;h1&gt; element */<br>
-  .header h1 {<br>&nbsp;&nbsp;&nbsp; font-size: 40px;<br>}</div>
-<p>
-<a class="w3-btn" href="tryit.asp?filename=tryhow_make_a_website_header" target="_blank">Try it Yourself &raquo;</a></p>
-</div>
-
+<p class="intro">Code snippets for HTML, CSS and JavaScript.</p>
+<div id="testtest">
 <hr>
 
-<h2>Navigation Bar</h2>
+<div class="howtocontainer">
+<div style="max-width:1000px;margin:auto;">
 
-<p>A navigation bar contains a list of links to help visitors navigating through 
-your website:</p>
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_slideshow.html" class="h2-anchor">Slideshow</a></h2>
+  <div style="position:relative">
 
-<div class="w3-example">
-<div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;navbar&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;<br>&nbsp; 
-  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;right&quot;&gt;Link&lt;/a&gt;<br>&lt;/div&gt;</div>
+<div class="mySlides slfade">
+  <div class="numbertext">1 / 4</div>
+  <img src="img_nature_wide.jpg" style="width:100%;min-height:100px;">
+  <div class="sltext">Caption Text</div>
 </div>
 
-<p>Use CSS to style the navigation bar:</p>
-<div class="w3-example">
-<div class="w3-code notranslate cssHigh">
-  /* Style the top navigation bar */<br>.navbar {<br>&nbsp;&nbsp;&nbsp; 
-  overflow: hidden; /* Hide overflow */<br>&nbsp;&nbsp;&nbsp; background-color: #333; 
-  /* Dark background color */<br>}<br><br>/* Style the navigation bar links */<br>.navbar 
-  a {<br>&nbsp;&nbsp;&nbsp; float: left; /* Make sure that the links stay 
-  side-by-side */<br>&nbsp;&nbsp;&nbsp; display: block; /* Change the display to 
-  block, for responsive reasons (see below) */<br>&nbsp;&nbsp;&nbsp; 
-  color: white; /* White text color */<br>&nbsp;&nbsp;&nbsp; text-align: center; 
-  /* Center the text */<br>&nbsp;&nbsp;&nbsp; 
-  padding: 14px 20px; /* Add some padding */<br>&nbsp;&nbsp;&nbsp; text-decoration: none; 
-  /* Remove underline */<br>}<br><br>/* 
-  Right-aligned link */<br>.navbar a.right {<br>&nbsp;&nbsp;&nbsp; float: right; 
-  /* Float a link to the right */<br>
-  }<br><br>/* 
-  Change color on hover/mouse-over */<br>.navbar a:hover {<br>&nbsp;&nbsp;&nbsp; 
-  background-color: #ddd; /* Grey background color */<br>&nbsp;&nbsp;&nbsp; color: black; 
-  /* Black text color */<br>}<br></div>
-<p>
-<a class="w3-btn" href="tryit.asp?filename=tryhow_make_a_website_navbar" target="_blank">Try it Yourself &raquo;</a></p>
-</div>
-<hr>
-
-<h2>Content</h2>
-
-<p>Create a 2-column layout, divided into a &quot;side content&quot; and a &quot;main content&quot;.</p>
-
-<div class="w3-example">
-<div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;row&quot;&gt;<br>&nbsp; &lt;div class=&quot;side&quot;&gt;...&lt;/div&gt;<br>&nbsp; &lt;div 
-  class=&quot;main&quot;&gt;...&lt;/div&gt;<br>&lt;/div&gt;</div>
+<div class="mySlides slfade">
+  <div class="numbertext">2 / 4</div>
+  <img src="img_snow_wide.jpg" style="width:100%;min-height:100px;">
+  <div class="sltext">Caption Two</div>
 </div>
 
-<p>We use CSS Flexbox to handle the layout:</p>
-<div class="w3-example">
-<div class="w3-code notranslate cssHigh">
-  /* Column container */<br>.row { <br>&nbsp;&nbsp;&nbsp; display: -ms-flexbox; 
-  /* IE10 */<br>&nbsp;&nbsp;&nbsp; display: flex;<br>&nbsp;&nbsp;&nbsp; -ms-flex-wrap: 
-  wrap; /* IE10 */<br>&nbsp;&nbsp;&nbsp; flex-wrap: wrap;<br>}<br><br>/* Create 
-  two unequal columns that sits next to each other */<br>/* Sidebar/left column 
-  */<br>.side {<br>&nbsp;&nbsp;&nbsp; flex: 30%; /* Set the width of the sidebar 
-  */<br>&nbsp;&nbsp;&nbsp; background-color: #f1f1f1; /* Grey background color 
-  */<br>&nbsp;&nbsp;&nbsp; padding: 20px; /* Some padding */<br>}<br><br>/* Main column */<br>.main {
-  <br>&nbsp;&nbsp;&nbsp; flex: 70%; /* Set the width of the main content */<br>&nbsp;&nbsp;&nbsp; 
-  background-color: white; /* White background color */<br>&nbsp;&nbsp;&nbsp; 
-  padding: 20px; /* Some padding */<br>}<br></div>
-<p>
-<a class="w3-btn" href="tryit.asp?filename=tryhow_make_a_website_content" target="_blank">Try it Yourself &raquo;</a></p>
+<div class="mySlides slfade">
+  <div class="numbertext">3 / 4</div>
+  <img src="img_mountains_wide.jpg" style="width:100%;min-height:100px;">
+  <div class="sltext">Caption Three</div>
 </div>
 
-<p>Then add media queries to make the layout responsive. This will make sure 
-that your website looks good on all devices (desktops, laptops, tablets and 
-phones). Resize the browser window to see the result.</p>
-<div class="w3-example">
-<div class="w3-code notranslate cssHigh">
-  /* Responsive layout - when the screen is less than 700px wide, make the two 
-  columns stack on top of each other instead of next to each other */<br>@media 
-  (max-width: 700px) {<br>&nbsp;&nbsp;&nbsp; .row { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  flex-direction: column;<br>&nbsp;&nbsp;&nbsp; }<br>}<br><br>/* 
-  Responsive layout - when the screen is less than 400px wide, make the 
-  navigation links stack on top of each other instead of next to each other */<br>
-  @media (max-width: 400px) {<br>&nbsp;&nbsp;&nbsp; .navbar a {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-  float: none;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width: 100%;<br>&nbsp;&nbsp;&nbsp; 
-  }<br>}<br></div>
-<p>
-<a class="w3-btn" href="tryit.asp?filename=tryhow_make_a_website_content_responsive" target="_blank">Try it Yourself &raquo;</a></p>
+<div class="mySlides slfade">
+  <div class="numbertext">4 / 4</div>
+  <img src="img_lights_wide.jpg" style="width:100%;min-height:100px;">
+  <div class="sltext">Caption Four</div>
 </div>
 
-<div class="w3-note w3-panel">
-<p><strong>Tip:</strong> To create a different kind of layout, just change the flex width (but make sure that it adds up to 100%).</p>
-<p><strong>Tip:</strong> Do you wonder how the @media rule works? <a href="/css/css3_mediaqueries.asp">Read more about 
-it in our CSS Media Queries chapter</a>.</p>
-<p><strong>Tip:</strong> To learn more about the Flexible Box Layout Module, <a href="/css/css3_flexbox.asp"> read our  
-CSS Flexbox chapter</a>.</p>
+
+<a class="slprev" onclick="plusSlides(-1)" style="z-index:0">&#10094;</a>
+<a class="slnext" onclick="plusSlides(1)" style="z-index:0">&#10095;</a>
+
 </div>
-<hr>
 
-
-<h2>Footer</h2>
-
-<p>At last, we will add a footer.</p>
-
-<div class="w3-example">
-<div class="w3-code notranslate htmlHigh">
-  &lt;div class=&quot;footer&quot;&gt;<br>&nbsp; &lt;h2&gt;Footer&lt;/h2&gt;<br>&lt;/div&gt;</div>
-<p>
-</div>
-<p>And style it:</p>
-<div class="w3-example">
-<div class="w3-code notranslate cssHigh">
-  .footer {<br>&nbsp;&nbsp;&nbsp; padding: 20px; /* Some padding */<br>&nbsp;&nbsp;&nbsp; 
-  text-align: center; /* Center text*/<br>&nbsp;&nbsp;&nbsp; background: #ddd; 
-  /* Grey background */<br>}</div>
-<p>
-<a class="w3-btn" href="tryit.asp?filename=tryhow_make_a_website_footer" target="_blank">Try it Yourself &raquo;</a></p>
-</div>
-<p>Congratulations! You have built a website from scratch.</p>
-
---><br>
 <br>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="howto_website.html">&#10094; Previous</a>
-<a class="w3-right w3-btn" href="howto_website_bootstrap4.html">Next &#10095;</a>
+
+<div style="text-align:center">
+  <a href="javascript:void(0)" class="sldot" onclick="currentSlide(1)" title="slide 1"></a> 
+  <a href="javascript:void(0)" class="sldot" onclick="currentSlide(2)" title="slide 2"></a> 
+  <a href="javascript:void(0)" class="sldot" onclick="currentSlide(3)" title="slide 3"></a> 
+  <a href="javascript:void(0)" class="sldot" onclick="currentSlide(4)" title="slide 4"></a> 
 </div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("sldot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("slideractive");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].classList.add("slideractive");
+}
+</script>
+<div class="howto-container">
+  <p><a href="howto_js_slideshow.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+</div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_login_form.html" class="h2-anchor">Login Form</a></h2>
+<button onclick="document.getElementById('loginModal').style.display='block'" class="w3-button w3-blue" style="font-size:17px;width:150px">Login</button>
+
+<div id="loginModal" class="w3-modal" style="cursor:pointer;">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px;cursor:auto">
+  
+    <div class="w3-center"><br>
+   <span onclick="document.getElementById('loginModal').style.display='none'" title="Close Modal"
+  class="w3-button w3-hover-text-grey w3-container w3-display-topright w3-xxlarge">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" style="width:40%" class="w3-circle w3-margin-top">
+    </div>
+
+    <div class="w3-container">
+      <div class="w3-section">
+        <label><b>Username</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username">
+
+        <label><b>Password</b></label>
+        <input class="w3-input w3-border" type="password" placeholder="Enter Password">
+        
+        <button class="w3-button w3-block w3-green w3-section w3-padding" onclick="document.getElementById('loginModal').style.display='none'">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+    </div>
+
+    <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+      <button onclick="document.getElementById('loginModal').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+      <span class="w3-right w3-padding w3-hide-small">Forgot <a href="javascript:void(0)" onclick="document.getElementById('loginModal').style.display='none'">password?</a></span>
+    </div>
+
+  </div>
+</div>
+<div class="howto-container">
+  <p><a href="howto_css_login_form.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+</div>
+<script>
+  // Get the modal
+var loginMod = document.getElementById('loginModal');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == loginMod) {
+        loginMod.style.display = "none";
+    }
+}
+</script>
+
+</div>
+<br>
+
+<div class="w3-card-4">
+  <div class="w3-container">
+   <h2><a href="howto_js_accordion.html" class="h2-anchor">Accordion</a></h2>
+<button class="accordion" id="myfirstAcc">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="howto-container">
+  <p><a href="howto_js_accordion.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+</div>
+
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+          this.classList.toggle("activeacc");
+          this.nextElementSibling.classList.toggle("showpanel");
+    }
+  }
+  </script>
+  <script>
+var myaccbtn = document.getElementById("myfirstAcc");
+myaccbtn.click();
+</script>
+
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_dropdown.html" class="h2-anchor">Hover Dropdowns</a></h2>
+  <div class="dropdown dropdown2">
+    <button class="dropbtn" style="background-color:#f4511e;">Hover</button>
+    <div class="dropdown-content">
+      <a href="javascript:void(0)">Link 1</a>
+      <a href="javascript:void(0)">Link 2</a>
+      <a href="javascript:void(0)">Link 3</a>
+    </div>
+  </div>  
+<div class="howto-container">
+  <p><a href="howto_css_dropdown.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+</div>
+</div>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+  <div id='div-gpt-ad-1493883843099-0' style="display: inline-block">
+    <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1493883843099-0'); });
+    </script>
+  </div>
+
+</div>
+<hr>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_dropdown.html" class="h2-anchor">Click Dropdowns</a></h2>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn" style="cursor:pointer">Click</button>
+    <div id="myDropdown" class="dropdown-content" >
+      <a href="javascript:void(0)">Link 1</a>
+      <a href="javascript:void(0)">Link 2</a>
+      <a href="javascript:void(0)">Link 3</a>
+    </div>
+  </div>
+<div class="howto-container">
+  <p><a href="howto_js_dropdown.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+</div>
+  <script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  function myFunction2() {
+      document.getElementById("myDropdown2").style.right = "0";
+      document.getElementById("myDropdown2").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_sidenav.html" class="h2-anchor">Side Navigation</a></h2>
+  <div id="myCanvasNav" class="overlay3" onclick="closeOffcanvas()"></div>
+
+  <div id="myOffcanvas" class="offcanvas">
+    <a href="javascript:void(0)" class="closeOffcanvas" onclick="closeOffcanvas()">&times;</a>
+    <a href="javascript:void(0)">About</a>
+    <a href="javascript:void(0)">Services</a>
+    <a href="javascript:void(0)">Clients</a>
+    <a href="javascript:void(0)">Contact</a>
+  </div>
+  <button class="w3-button w3-black w3-padding w3-margin-bottom" onclick="openOffcanvas1()">Sidenav overlay</button><br>
+  <button class="w3-button w3-black w3-padding w3-margin-bottom" onclick="openOffcanvas();">Sidenav push</button><br>
+  <button class="w3-button w3-black w3-padding" onclick="openNav3();openOffcanvas();">Sidenav push w/opacity</button>
+  <div class="howto-container">
+    <p><a href="howto_js_sidenav.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+<script>
+// Sidenavs
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  
+  function openNav2() {
+    document.getElementById("myNav2").style.height = "100%";
+  }
+  function closeNav2() {
+    document.getElementById("myNav2").style.height = "0%";
+  }
+  function openNav3() {
+    document.getElementById("myCanvasNav").style.width = "100%";
+    document.getElementById("myCanvasNav").style.opacity = "0.8";  
+  }
+
+  function openOffcanvas1() {
+    document.getElementById("myOffcanvas").style.width = "250px";
+  }
+
+  function openOffcanvas() {
+    document.getElementById("myOffcanvas").style.width = "250px";
+    document.getElementById("testtest").style.marginLeft = "50px";
+  }
+
+  function closeOffcanvas() {
+    document.getElementsByClassName("overlay3")[0].style.opacity = "0";
+    document.getElementById("myOffcanvas").style.width = "0%";
+    document.getElementById("testtest").style.marginLeft= "0%";
+    document.getElementById("myCanvasNav").style.width = "0%";
+  }
+</script>  
+
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_fixed_sidebar.html" class="h2-anchor">Fixed Sidebar</a></h2>
+<div class="w3-row-padding" style="margin:0 -16px 16px -16px">
+<div class="w3-col m6 s12">
+<iframe src="tryhow_css_sidenav_ifr.html" style="width:100%;border:5px solid #ddd;height:300px"></iframe>
+</div>
+<div class="w3-col m6 w3-hide-small">
+<iframe src="tryhow_css_sidenav_ifr2.html" style="width:100%;border:5px solid #ddd;height:300px"></iframe>
+</div>
+</div>
+  <div class="howto-container">
+    <p><a href="howto_css_fixed_sidebar.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_modals.html" class="h2-anchor">Modal Box</a></h2>
+  <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal w3-large w3-padding-large">Open Modal</button></p>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright" style="font-size:33px !important">&times;</span>
+      <h2>Modal Header</h2>
+    </header>
+    <div class="w3-container">
+      <p>Hello World!</p>
+      <p>Modals are awesome!</p>
+      <p>Go Back To <a href="default_page1.html" class="w3-button w3-teal">W3 How TO</a> Examples</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal Footer</p>
+    </footer>
+    </div>
+  </div>
+  <div class="howto-container">
+    <p><a href="howto_css_modals.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_modal_images.html" class="h2-anchor">Modal Image</a></h2>
+  <div class="imgmod">
+    <img id="eh" src="img_snow.jpg" alt="Snow" width="300" height="200">
+  </div>
+
+  <div id="myModal2" class="modal2">
+    <span class="closeimg" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+    <img class="modal-content2" id="img02">
+    <div id="caption"></div>
+  </div>
+  
+  <div class="howto-container">
+    <p><a href="howto_css_modal_images.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal2');
+var images = document.getElementById('eh');
+var modalImg = document.getElementById("img02");
+var captionText = document.getElementById("caption");
+images.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = images.src;
+    modalImg.alt = images.alt;
+    captionText.innerHTML = images.alt;
+}
+
+</script>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_lightbox.html" class="h2-anchor">Lightbox</a></h2>
+  <div class="w3-row-padding" style="margin:0 -16px">
+  <div class="w3-col s4">
+    <img src="img_nature.jpg" style="width:100%;cursor:pointer"
+    onclick="openLightboxModal();currentDivLightbox(1)" class="w3-hover-shadow cursor">
+  </div>
+  <div class="w3-col s4">
+    <img src="img_snow.jpg" style="width:100%;cursor:pointer"
+    onclick="openLightboxModal();currentDivLightbox(2)" class="w3-hover-shadow cursor">
+  </div>
+  <div class="w3-col s4">
+    <img src="img_mountains.jpg" style="width:100%;cursor:pointer"
+    onclick="openLightboxModal();currentDivLightbox(3)" class="w3-hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModalLightbox" class="w3-modal w3-black">
+ <span class="w3-text-white w3-xxxlarge w3-hover-text-grey w3-container w3-display-topright cursor" style="top:-12px" onclick="closeLightboxModal()">&times;</span>
+ <div class="w3-modal-content">
+
+  <div class="w3-content" style="max-width:1200px">
+   <img class="myLightbox" src="img_nature_wide.jpg" style="width:100%">
+   <img class="myLightbox" src="img_snow_wide.jpg" style="width:100%">
+   <img class="myLightbox" src="img_mountains_wide.jpg" style="width:100%">
+   <div class="w3-row w3-black w3-center">
+    <div class="w3-container w3-display-container">
+     <p id="lightboxCaption"></p>
+     <span class="w3-display-middle w3-hover-text-grey w3-large cursor" style="left:2%" onclick="plusDivsLightbox(-1)">&#10094;</span>
+     <span class="w3-display-middle w3-hover-text-grey w3-large cursor" style="left:98%" onclick="plusDivsLightbox(1)">&#10095;</span>
+    </div>
+
+    <div class="w3-col s4">
+     <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentDivLightbox(1)" alt="Nature and sunrise">
+    </div>
+    <div class="w3-col s4">
+     <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentDivLightbox(2)" alt="Snow">
+    </div>
+    <div class="w3-col s4">
+     <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentDivLightbox(3)" alt="Mountains and fjords">
+    </div>
+   </div> <!-- End row -->
+  </div> <!-- End w3-content -->
+  
+ </div> <!-- End modal content -->
+</div> <!-- End modal -->
+
+<script>
+function openLightboxModal() {
+  document.getElementById('myModalLightbox').style.display = "block";
+}
+
+function closeLightboxModal() {
+  document.getElementById('myModalLightbox').style.display = "none";
+}
+
+var slideIndexLightbox = 1;
+showDivsLightbox(slideIndexLightbox);
+
+function plusDivsLightbox(n) {
+  showDivsLightbox(slideIndexLightbox += n);
+}
+
+function currentDivLightbox(n) {
+  showDivsLightbox(slideIndexLightbox = n);
+}
+
+function showDivsLightbox(n) {
+  var i;
+  var x = document.getElementsByClassName("myLightbox");
+  var dots = document.getElementsByClassName("demolightbox");
+  var captionText = document.getElementById("lightboxCaption");
+  if (n > x.length) {slideIndexLightbox = 1}
+  if (n < 1) {slideIndexLightbox = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndexLightbox -1].style.display = "block";
+  dots[slideIndexLightbox -1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndexLightbox -1].alt;
+}
+</script>
+  <div class="howto-container">
+    <p><a href="howto_js_lightbox.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_slideshow_gallery.html" class="h2-anchor">Slideshow Gallery</a></h2>
+  
+  <div style="max-width:1000px;min-width:200px;position:relative;margin:auto;">
+
+<div class="slgcontainer">
+  <div class="slgmySlides">
+    <div class="slgnumbertext">1 / 6</div>
+    <img src="img_woods_wide.jpg" style="width:100%;margin-bottom:-6px">
+  </div>
+
+  <div class="slgmySlides">
+    <div class="slgnumbertext">2 / 6</div>
+    <img src="img_5terre_wide.jpg" style="width:100%;margin-bottom:-6px">
+  </div>
+
+  <div class="slgmySlides">
+    <div class="slgnumbertext">3 / 6</div>
+    <img src="img_mountains_wide.jpg" style="width:100%;margin-bottom:-6px">
+  </div>
+    
+  <div class="slgmySlides">
+    <div class="slgnumbertext">4 / 6</div>
+    <img src="img_lights_wide.jpg" style="width:100%;margin-bottom:-6px">
+  </div>
+
+  <div class="slgmySlides">
+    <div class="slgnumbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="width:100%;margin-bottom:-6px">
+  </div>
+    
+  <div class="slgmySlides">
+    <div class="slgnumbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="width:100%;margin-bottom:-6px">
+  </div>
+    
+  <a class="slgprev w3-text-white" onclick="slgplusSlides(-1)">&#10094;</a>
+  <a class="slgnext w3-text-white" onclick="slgplusSlides(1)">&#10095;</a>
+
+  <div class="slgcaption-container">
+    <p id="slgcaption"></p>
+  </div>
+
+  <div class="slgrow">
+    <div class="slgcolumn">
+      <img class="slgdemo cursor" src="img_woods.jpg" style="width:100%" onclick="slgcurrentSlide(1)" alt="The Woods">
+    </div>
+    <div class="slgcolumn">
+      <img class="slgdemo cursor" src="img_5terre.jpg" style="width:100%" onclick="slgcurrentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="slgcolumn">
+      <img class="slgdemo cursor" src="img_mountains.jpg" style="width:100%" onclick="slgcurrentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="slgcolumn">
+      <img class="slgdemo cursor" src="img_lights.jpg" style="width:100%" onclick="slgcurrentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="slgcolumn">
+      <img class="slgdemo cursor" src="img_nature.jpg" style="width:100%" onclick="slgcurrentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="slgcolumn">
+      <img class="slgdemo cursor" src="img_snow.jpg" style="width:100%" onclick="slgcurrentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+var slgslideIndex = 1;
+slgshowSlides(slgslideIndex);
+
+function slgplusSlides(slgn) {
+  slgshowSlides(slgslideIndex += slgn);
+}
+
+function slgcurrentSlide(slgn) {
+  slgshowSlides(slgslideIndex = slgn);
+}
+
+function slgshowSlides(slgn) {
+  var slgi;
+  var slgslides = document.getElementsByClassName("slgmySlides");
+  var slgdots = document.getElementsByClassName("slgdemo");
+  var slgcaptionText = document.getElementById("slgcaption");
+  if (slgn > slgslides.length) {slgslideIndex = 1}
+  if (slgn < 1) {slgslideIndex = slgslides.length}
+  for (slgi = 0; slgi < slgslides.length; slgi++) {
+      slgslides[slgi].style.display = "none";
+  }
+  for (slgi = 0; slgi < slgdots.length; slgi++) {
+      slgdots[slgi].className = slgdots[slgi].className.replace(" slgactive", "");
+  }
+  slgslides[slgslideIndex-1].style.display = "block";
+  slgdots[slgslideIndex-1].className += " slgactive";
+  slgcaptionText.innerHTML = slgdots[slgslideIndex-1].alt;
+}
+</script>
+</div>
+  <div class="howto-container">
+    <p><a href="howto_js_slideshow_gallery.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4">
+  <div class="w3-container">
+    <h2><a href="howto_css_image_overlay.html" class="h2-anchor">Image Hover Overlay</a></h2>
+    <div class="w3-light-grey">
+<div class="containerslidetop" style="margin:0 auto;max-width:400px">
+  <img src="../w3css/img_avatar3.png" alt="Avatar" class="imageslidetop">
+    <div class="overlayslidetop">
+      <div class="textslidetop">Hello World</div>
+  </div>
+</div>
+</div>
+
+  <div class="howto-container">
+    <p><a href="howto_css_image_overlay.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4">
+  <div class="w3-container">
+    <h2><a href="howto_js_tabs.html" class="h2-anchor">Tabs</a></h2>
+    
+    <ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity('London', event)">London</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity('Paris', event)">Paris</a></li>
+  <li><a href="javascript:void(0)" class="tablinks tokyotab" onclick="openCity('Tokyo', event)">Tokyo</a></li>
+</ul>
+
+<div style="border:1px solid #eee;border-top:none;">
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent tokyotab">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+
+<script>
+openCity("London")
+function openCity(cityName, evt) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].classList.remove("tabactive");
+    }
+    document.getElementById(cityName).style.display = "block";
+    if (evt) {evt.currentTarget.classList.add("tabactive");}
+}
+</script>
+<script>
+var mybtn = document.getElementsByClassName("tablinks")[0];
+mybtn.click();
+</script>
+  <div class="howto-container">
+    <p><a href="howto_js_tabs.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-hide-small">
+  <div class="w3-container">
+    <h2><a href="howto_js_vertical_tabs.html" class="h2-anchor">Vertical Tabs</a></h2>
+<iframe src="tryhow_js_vertical_tabs_ifr.html" style="width:100%;height:350px;border:none;margin:0 -8px">
+</iframe> 
+  <div class="howto-container">
+    <p><a href="howto_js_vertical_tabs.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_tab_img_gallery.html" class="h2-anchor">Tab Image Gallery</a></h2>
+<div class="w3-row-padding" style="margin:0 -16px">
+  <div class="w3-col s4 w3-container">
+  <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature');">
+    <img src="img_nature.jpg" alt="Nature" style="width:100%">
+  </a>
+  </div>
+  <div class="w3-col s4 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow');">
+      <img src="img_snow.jpg" alt="Snow" style="width:100%">
+    </a>
+  </div>
+  <div class="w3-col s4 w3-container">
+    <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+      <img src="img_lights.jpg" alt="Lights" style="width:100%">
+    </a>
+  </div>
+</div>
+
+<div id="Nature" class="picture w3-display-container w3-margin-top">
+  <img src="img_nature_wide.jpg" alt="Nature" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Nature</div>
+</div>
+
+<div id="Snow" class="picture w3-display-container w3-margin-top" style="display:none">
+  <img src="img_snow_wide.jpg" alt="Snow" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Snow</div>
+</div>
+
+<div id="Lights" class="picture w3-display-container w3-margin-top" style="display:none">
+  <img src="img_lights_wide.jpg" alt="Lights" style="width:100%">
+  <span onclick="this.parentElement.style.display='none'" 
+  class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+  <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Northern Lights</div>
+</div>
+
+<script>
+function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("picture");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
+</script>
+  <div class="howto-container">
+    <p><a href="howto_js_tab_img_gallery.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_alert_buttons.html" class="h2-anchor">Alert Buttons</a></h2>
+<button class="btnalert success">Success</button>
+<button class="btnalert info">Info</button>
+<button class="btnalert warning">Warning</button>
+<button class="btnalert danger">Danger</button>
+<button class="btnalert default">Default</button>  
+  <div class="howto-container">
+    <p><a href="howto_css_alert_buttons.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_outline_buttons.html" class="h2-anchor">Outline Buttons</a></h2>
+<button class="btnout outsuccess">Success</button>
+<button class="btnout outinfo">Info</button>
+<button class="btnout outwarning">Warning</button>
+<button class="btnout outdanger">Danger</button>
+<button class="btnout outdefault">Default</button> 
+  <div class="howto-container">
+    <p><a href="howto_css_outline_buttons.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_topnav.html" class="h2-anchor">Top Navigation</a></h2>
+<div class="w3-bar w3-black">
+  <a class="w3-bar-item w3-button w3-padding-16 w3-green w3-hover-green" href="javascript:void(0)">Home</a>
+  <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">News</a>
+  <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Contact</a>
+</div> 
+  <div class="howto-container">
+    <p><a href="howto_js_topnav.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_topnav_responsive.html" class="h2-anchor">Responsive Top Navigation</a></h2>
+  <p>Resize the browser window to see the effect:</p>
+  <p><iframe src="tryhow_js_topnav_iframe.html" style="width:100%;border:none;height:215px;overflow:hidden;"></iframe></p>
+  <div class="howto-container">
+    <p><a href="howto_js_topnav_responsive.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_js_fullscreen_overlay.html" class="h2-anchor">Fullscreen Navigation</a></h2>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtnOverlay" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="javascript:void(0)">About</a>
+      <a href="javascript:void(0)">Services</a>
+      <a href="javascript:void(0)">Clients</a>
+      <a href="javascript:void(0)">Contact</a>
+    </div>
+  </div>
+  <div id="myNav2" class="overlay2">
+    <a href="javascript:void(0)" class="closebtnOverlay" onclick="closeNav2()">&times;</a>
+    <div class="overlay-content">
+      <a href="javascript:void(0)">About</a>
+      <a href="javascript:void(0)">Services</a>
+      <a href="javascript:void(0)">Clients</a>
+      <a href="javascript:void(0)">Contact</a>
+    </div>
+  </div>
+  <button class="w3-button w3-black w3-padding" onclick="openNav()">Slide Right</button>
+  <button class="w3-button w3-black w3-padding" onclick="openNav2()">Slide Down</button>
+  <div class="howto-container">
+    <p><a href="howto_js_fullscreen_overlay.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<style>
+.topnav3 {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav3 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav3 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav3 a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav3 .login-container {
+  float: right;
+}
+
+.topnav3 input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:120px;
+}
+
+.topnav3 .login-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav3 .login-container button:hover {
+  background-color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav3 .login-container {
+    float: none;
+  }
+  .topnav3 a, .topnav3 input[type=text], .topnav3 .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav3 input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_login_form_navbar.html" class="h2-anchor">Login Form in Navbar</a></h2>
+<div class="topnav3">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">About</a>
+  <a href="javascript:void(0)">Contact</a>
+  <div class="login-container">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="button">Login</button>
+  </div>
+</div>
+  <div class="howto-container">
+    <p><a href="howto_css_login_form_navbar.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+<br>
+
+<div class="w3-card-4 w3-container">
+  <h2><a href="howto_css_bg_change_scroll.html" class="h2-anchor">Change Background on Scroll</a></h2>
+  <iframe src="tryhow_css_bg_change_scroll.html" style="width:100%;border:2px solid #f1f1f1;height:500px;"></iframe>
+  <div class="howto-container">
+    <p><a href="howto_css_bg_change_scroll.html" class="w3-button w3-green w3-padding">Learn How To &raquo;</a></p>
+  </div>
+</div>
+
+<!-- END INNER -->
+</div>
+</div>
+</div>
+<br>
+<br>
+
+<div class="howtopag">
+</div>
+<script>
+init_pagination();
+</script>
+
+
 <div id="mypagediv2" style="position:relative;text-align:center;"></div>
 <br>
 
@@ -1629,9 +2376,13 @@ CSS Flexbox chapter</a>.</p>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
-    <div id="snhb-wide_skyscraper-0"></div>
-    <!-- adspace wide-->
+    <div id="div-gpt-ad-1422003450156-5">
+      <script>
+      googletag.cmd.push(function() {
+      googletag.display('div-gpt-ad-1422003450156-5');
+      });
+      </script> 
+    </div>
   
   </div>
 </div>
@@ -1752,24 +2503,13 @@ CSS Flexbox chapter</a>.</p>
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
-      <div id="snhb-sidebar_sticky-0"></div>
-      <script>
-          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-            // adspace sticky
-            if (document.getElementById("snhb-mid_content-0")) {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
-            }
-            else {
-              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
-            }
-          }
-          else {
-              if (document.getElementById("snhb-mid_content-0")) {
-                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
-              }
-          }
-      </script>  
+        <script>
+        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+        document.write("<div id='div-gpt-ad-1472547360578-0'>");
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
+        document.write("</div>");
+        }
+        </script>
       
     </div>
   </div>
@@ -1787,14 +2527,17 @@ CSS Flexbox chapter</a>.</p>
 <hr>
 
 <div style="overflow:auto">
-  <div class="bottomad">
-    <!-- BottomMediumRectangle -->
-    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
-    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
-    <!-- adspace bmr -->
-    <!-- RightBottomMediumRectangle -->
-    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
-    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  <!-- BottomMediumRectangle -->
+  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
+    </script>
+  </div>
+  <!-- RightBottomMediumRectangle -->
+  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
+    </script>
   </div>
 </div>
 
@@ -2122,7 +2865,8 @@ function registerPoint(cc) {
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
 <![endif]-->
+
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/howto_website_bootstrap.asp by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:36:29 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:32:18 GMT -->
 </html>

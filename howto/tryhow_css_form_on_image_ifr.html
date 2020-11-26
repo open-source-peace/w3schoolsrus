@@ -1,21 +1,90 @@
 <!DOCTYPE html>
-<html lang=ru>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_css_form_on_image_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:05 GMT -->
 <head>
-<meta charset=utf-8>
-<title>Пример Форма входа на изображении. HTML, CSS, JavaScript</title>
-<meta name=viewport content="width=device-width, initial-scale=1">
-<style>body,html{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif}*{box-sizing:border-box}.bg-img{background-image:url("img_nature.jpg");min-height:380px;background-position:center;background-repeat:no-repeat;background-size:cover}.container{position:absolute;right:0;margin:20px;max-width:300px;padding:16px;background-color:white}input[type=text],input[type=password]{width:100%;padding:15px;margin:5px 0 22px 0;display:inline-block;border:0;background:#f1f1f1}input[type=text]:focus,input[type=password]:focus{background-color:#ddd;outline:0}.btn{background-color:#4caf50;color:white;padding:16px 20px;border:0;cursor:pointer;width:100%;opacity:.9}.btn:hover{opacity:1}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;margin:0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("img_nature.jpg");
+
+
+    min-height:380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Add padding to containers */
+.container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
 </head>
 <body>
-<div class=bg-img>
-<div class=container>
-<h1>Login</h1>
-<label for=email><b>Email</b></label>
-<input type=text placeholder="Enter Email" name=email>
-<label for=psw><b>Password</b></label>
-<input type=text placeholder="Enter Password" name=psw>
-<button type=button class=btn>Login</button>
+
+<div class="bg-img">
+    <div class="container">
+      <h1>Login</h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" >
+
+      <label for="psw"><b>Password</b></label>
+      <input type="text" placeholder="Enter Password" name="psw" >
+
+      <button type="button" class="btn">Login</button>
+    </div>
 </div>
-</div>
+
 </body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_css_form_on_image_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:05 GMT -->
 </html>
