@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-<meta charset="utf-8">
-<title>Пример Сетки изображений. Уроки для начинающих. HTML / CSS / JavaScript</title>
+<html>
 <style>
 * {
     box-sizing: border-box;
@@ -25,7 +23,7 @@ body {
     padding: 0 4px;
 }
 
-/* Создайте два одинаковых столбца, которые расположены рядом друг с другом */
+/* Create two equal columns that sits next to each other */
 .column {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -37,7 +35,7 @@ body {
     vertical-align: middle;
 }
 
-/* Стиль кнопок */
+/* Style the buttons */
 .btn {
     border: none;
     outline: none;
@@ -57,90 +55,91 @@ body {
 }
 </style>
 
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_image_grid_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:04 GMT -->
 <body>
 
 <!-- Header -->
 <div class="header" id="myHeader">
-  <h1>Сетка изображений</h1>
-  <p>Нажмите на кнопки, чтобы изменить вид сетки.</p>
+  <h1>Image Grid</h1>
+  <p>Click on the buttons to change the grid view.</p>
   <button class="btn" onclick="one()">1</button>
   <button class="btn active" onclick="two()">2</button>
   <button class="btn" onclick="four()">4</button>
 </div>
 
-<!-- Сетка фото -->
-<div class="row">
+<!-- Photo Grid -->
+<div class="row"> 
   <div class="column">
-    <img src="../w3images/wedding.jpg" style="width:100%" alt="">
-    <img src="../w3images/rocks.jpg" style="width:100%" alt="">
-    <img src="../w3images/falls2.jpg" style="width:100%" alt="">
-    <img src="../w3images/paris.jpg" style="width:100%" alt="">
-    <img src="../w3images/nature.jpg" style="width:100%" alt="">
-    <img src="../w3images/mist.jpg" style="width:100%" alt="">
-    <img src="../w3images/paris.jpg" style="width:100%" alt="">
+    <img src="../w3images/wedding.jpg" style="width:100%">
+    <img src="../w3images/rocks.jpg" style="width:100%">
+    <img src="../w3images/falls2.jpg" style="width:100%">
+    <img src="../w3images/paris.jpg" style="width:100%">
+    <img src="../w3images/nature.jpg" style="width:100%">
+    <img src="../w3images/mist.jpg" style="width:100%">
+    <img src="../w3images/paris.jpg" style="width:100%">
   </div>
   <div class="column">
-    <img src="../w3images/underwater.jpg" style="width:100%" alt="">
-    <img src="../w3images/ocean.jpg" style="width:100%" alt="">
-    <img src="../w3images/wedding.jpg" style="width:100%" alt="">
-    <img src="../w3images/mountainskies.jpg" style="width:100%" alt="">
-    <img src="../w3images/rocks.jpg" style="width:100%" alt="">
-    <img src="../w3images/underwater.jpg" style="width:100%" alt="">
+    <img src="../w3images/underwater.jpg" style="width:100%">
+    <img src="../w3images/ocean.jpg" style="width:100%">
+    <img src="../w3images/wedding.jpg" style="width:100%">
+    <img src="../w3images/mountainskies.jpg" style="width:100%">
+    <img src="../w3images/rocks.jpg" style="width:100%">
+    <img src="../w3images/underwater.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="../w3images/wedding.jpg" style="width:100%">
+    <img src="../w3images/rocks.jpg" style="width:100%">
+    <img src="../w3images/falls2.jpg" style="width:100%">
+    <img src="../w3images/paris.jpg" style="width:100%">
+    <img src="../w3images/nature.jpg" style="width:100%">
+    <img src="../w3images/mist.jpg" style="width:100%">
+    <img src="../w3images/paris.jpg" style="width:100%">
   </div>
   <div class="column">
-    <img src="../w3images/wedding.jpg" style="width:100%" alt="">
-    <img src="../w3images/rocks.jpg" style="width:100%" alt="">
-    <img src="../w3images/falls2.jpg" style="width:100%" alt="">
-    <img src="../w3images/paris.jpg" style="width:100%" alt="">
-    <img src="../w3images/nature.jpg" style="width:100%" alt="">
-    <img src="../w3images/mist.jpg" style="width:100%" alt="">
-    <img src="../w3images/paris.jpg" style="width:100%" alt="">
-  </div>
-  <div class="column">
-    <img src="../w3images/underwater.jpg" style="width:100%" alt="">
-    <img src="../w3images/ocean.jpg" style="width:100%" alt="">
-    <img src="../w3images/wedding.jpg" style="width:100%" alt="">
-    <img src="../w3images/mountainskies.jpg" style="width:100%" alt="">
-    <img src="../w3images/rocks.jpg" style="width:100%" alt="">
-    <img src="../w3images/underwater.jpg" style="width:100%" alt="">
+    <img src="../w3images/underwater.jpg" style="width:100%">
+    <img src="../w3images/ocean.jpg" style="width:100%">
+    <img src="../w3images/wedding.jpg" style="width:100%">
+    <img src="../w3images/mountainskies.jpg" style="width:100%">
+    <img src="../w3images/rocks.jpg" style="width:100%">
+    <img src="../w3images/underwater.jpg" style="width:100%">
   </div>
 </div>
 
 <script>
-// Получить элементы с class="column"
+// Get the elements with class="column"
 var elements = document.getElementsByClassName("column");
 
-// Объявить переменную цикла
+// Declare a loop variable
 var i;
 
-// Четыре изображения рядом
+// Four images side by side
 function four() {
     for (i = 0; i < elements.length; i++) {
-        elements[i].style.msFlex = "0 0 25%";
-        elements[i].style.flex = "0 0 25%";
+        elements[i].style.msFlex = "0 0 25%";       
+        elements[i].style.flex = "0 0 25%";       
         elements[i].style.maxWidth = "25%";
     }
 }
 
-// Два изображения рядом
+// Two images side by side
 function two() {
     for (i = 0; i < elements.length; i++) {
-        elements[i].style.msFlex = "0 0 50%";
+        elements[i].style.msFlex = "0 0 50%";       
         elements[i].style.flex = "0 0 50%";
         elements[i].style.maxWidth = "50%";
     }
 }
 
-// Полноразмерные изображения
+// Full-width images
 function one() {
     for (i = 0; i < elements.length; i++) {
-        elements[i].style.msFlex = "0 0 100%";
+        elements[i].style.msFlex = "0 0 100%";       
         elements[i].style.flex = "0 0 100%";
         elements[i].style.maxWidth = "100%";
     }
 }
 
-// Добавить активный класс к текущей кнопке (выделить её)
+// Add active class to the current button (highlight it)
 var header = document.getElementById("myHeader");
 var btns = header.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
@@ -153,4 +152,6 @@ for (var i = 0; i < btns.length; i++) {
 </script>
 
 </body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_image_grid_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:04 GMT -->
 </html>

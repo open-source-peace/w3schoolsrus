@@ -1,31 +1,104 @@
 <!DOCTYPE html>
-<html lang=ru>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_vertical_tabs.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:58 GMT -->
 <head>
-<meta charset=utf-8>
-<title>Пример Вертикальные вкладки. HTML, CSS, JavaScript</title>
-<meta name=viewport content="width=device-width, initial-scale=1">
-<style>*{box-sizing:border-box}body{font-family:"Lato",sans-serif}.tab{float:left;border:1px solid #ccc;background-color:#f1f1f1;width:30%;height:300px}.tab button{display:block;background-color:inherit;color:black;padding:22px 16px;width:100%;border:0;outline:0;text-align:left;cursor:pointer;transition:.3s;font-size:17px}.tab button:hover{background-color:#ddd}.tab button.active{background-color:#ccc}.tabcontent{float:left;padding:0 12px;border:1px solid #ccc;width:70%;border-left:none;height:300px}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
 </head>
 <body>
-<h2>Вертикальные вкладки</h2>
-<p>Нажмите на кнопки внутри меню с вкладками:</p>
-<div class=tab>
-<button class=tablinks onclick="openCity(event,'London')" id=defaultOpen>Лондон</button>
-<button class=tablinks onclick="openCity(event,'Paris')">Париж</button>
-<button class=tablinks onclick="openCity(event,'Tokyo')">Токио</button>
+
+<h2>Vertical Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 </div>
-<div id=London class=tabcontent>
-<h3>Лондон</h3>
-<p>Лондон - это столица Великобритании.</p>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
 </div>
-<div id=Paris class=tabcontent>
-<h3>Париж</h3>
-<p>Париж - это столица Франции.</p>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
 </div>
-<div id=Tokyo class=tabcontent>
-<h3>Токио</h3>
-<p>Токио - это столица Японии.</p>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
 </div>
-<script>function openCity(a,b){var d,e,c;e=document.getElementsByClassName("tabcontent");for(d=0;d<e.length;d++){e[d].style.display="none"}c=document.getElementsByClassName("tablinks");for(d=0;d<c.length;d++){c[d].className=c[d].className.replace(" active","")}document.getElementById(b).style.display="block";a.currentTarget.className+=" active"}document.getElementById("defaultOpen").click();</script>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_vertical_tabs.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:58 GMT -->
+</html> 

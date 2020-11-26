@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:58 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_hide_arrow_number by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:07 GMT -->
 <head>
 <title>Tryit Editor v3.6</title>
 <meta name="viewport" content="width=device-width">
@@ -31,46 +31,21 @@
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = '../../www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("https://www.w3schools.com/", "");
+    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
+    return folder + "tryit";
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
                logOutputEnabled : false,
                autoStartAuction: false
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();               
-googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-  // Mobile ad
-  addSize([0, 0], [320, 50]). 
-  // Vertical Tablet ad
-  addSize([468, 0], [468, 60]). 
-  // Horizontal Tablet
-  addSize([728, 0], [728, 90]).
-  // Desktop and bigger ad
-  addSize([970, 0], [[728, 90], [970, 90]]).build();
-  // addSize([970, 0], [728, 90]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
-  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
-  defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content","try" + (function () {
-    var folder = location.pathname;
-    folder = folder.replace("https://www.w3schools.com/", "");
-    folder = folder.substr(0, folder.indexOf("https://www.w3schools.com/"));
-    return folder;
-  })());
-});  
 
 </script>
 <script src="../../cdn.snigelweb.com/adconsent/adconsent.js"></script>
@@ -94,7 +69,7 @@ __cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["try_it_leaderboard"]);
 
    });
 </script>
@@ -112,10 +87,8 @@ function browserResize() {
         (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
         (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
         xbeforeResize = afterResize;
-              
-        googletag.cmd.push(function() {
-            googletag.pubads().refresh([gptAdSlots[0]]);
-        });
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
          
     }
     if (window.screen.availWidth <= 768) {
@@ -397,9 +370,9 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 <div id='tryitLeaderboard'>
 <!-- TryitLeaderboard -->
 
-  <div id='div-gpt-ad-1428407818244-0'>
-    <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1428407818244-0'); });</script>
-  </div>
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
  
 </div>
 <script>globalURL = 'https://tryit.w3schools.com/code_datas.php';</script>
@@ -448,7 +421,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
         <p>If you have a Google account, you can save this code to your Google Drive.</p>
         <p>Google will ask you to confirm Google Drive access.</p>
         <p><label class="w3-text-black"><b>Save file as:</b></label>
-        <input class="w3-input w3-border" type="text" id="googleFileName" value="tryhow_js_navbar_hide_scroll">
+        <input class="w3-input w3-border" type="text" id="googleFileName" value="tryhow_css_hide_arrow_number">
         <button class="w3-button w3-light-grey w3-hover-grey w3-hover-text-white w3-margin-top"  title="Save file to Google Drive" onclick="handleAuthClick(event,'save')"><img style="margin-right:5px" alt="Save file to Google Drive" title="Save file to Google Drive" src="../images/driveicon.png">Save file</button>
       </div>
       <div class="w3-panel w3-large loader" id="driveSavedPanel" style="display:none">
@@ -478,7 +451,7 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
   <a href="javascript:void(0);" onclick="click_savebtn()" title="Save" class="w3-button w3-bar-item topnav-icons fa fa-save" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="font-size:28px;margin-top:-2px"></a>
   <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="font-size:28px;margin-top:-2px"></a>
-  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" style="font-size:16px" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');">Run &raquo;</button>
+  <button class="w3-button w3-bar-item w3-green w3-hover-white w3-hover-text-green" style="font-size:16px" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('https://www.w3schools.com/', ''); folder = folder.substr(0, folder.indexOf('https://www.w3schools.com/')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
   <span class="w3-right w3-hide-small" style="padding:8px 8px 8px 8px;display:block"></span>
   <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
 </div>
@@ -512,69 +485,29 @@ body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  background-color: #f1f1f1;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-#navbar {
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: block;
-  transition: top 0.3s;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 </style>
 </head>
 <body>
 
-<div id="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>
+<h2>Hide Input Number Arrows</h2>
+<p><strong>Note:</strong> It is still possible to increment the number when you scroll inside the number input.</p>
 
-<div style="padding:15px 15px 2500px;font-size:30px;margin-top:30px;">
-  <p><b>This example demonstrates how to hide a navbar when the user starts to scroll the page.</b></p>
-  <p>Scroll down this frame to see the effect!</p>
-  <p>Scroll up to show the navbar.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<script>
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-</script>
+<input type="number" value="5">
 
 </body>
 
-<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:58 GMT -->
+<!-- Mirrored from www.w3schools.com/howto/tryit.asp?filename=tryhow_css_hide_arrow_number by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:07 GMT -->
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">

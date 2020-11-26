@@ -1,18 +1,59 @@
 <!DOCTYPE html>
-<html lang=ru>
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_svg_scrolldrawing.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:08 GMT -->
 <head>
-<meta charset=utf-8>
-<title>Пример Рисование при прокрутке странице. HTML, CSS, JavaScript</title>
-<meta name=viewport content="width=device-width, initial-scale=1">
-<style>body{height:2000px;background:#f1f1f1}#mySVG{position:fixed;top:15%;width:400px;height:210px;margin-left:-50px}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  height: 2000px;
+  background: #f1f1f1;
+}
+
+#mySVG {
+  position: fixed;
+  top: 15%;
+  width: 400px;
+  height: 210px;
+  margin-left:-50px;
+}
+</style>
 </head>
 <body>
-<h2>Прокрутите это окно, чтобы нарисовать треугольник.</h2>
-<p>Прокрутите вверх, чтобы стереть рисунок.</p>
-<svg id=mySVG>
-<path fill=none stroke=red stroke-width=3 id=triangle d="M150 0 L75 200 L225 200 Z" />
-Извините, ваш браузер не поддерживает встроенный SVG.
+
+<h2>Scroll down this window to draw a triangle.</h2>
+<p>Scroll back up to reverse the drawing.</p>
+
+<svg id="mySVG">
+  <path fill="none" stroke="red" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z" />
+  Sorry, your browser does not support inline SVG.
 </svg>
-<script>var triangle=document.getElementById("triangle");var length=triangle.getTotalLength();triangle.style.strokeDasharray=length;triangle.style.strokeDashoffset=length;window.addEventListener("scroll",myFunction);function myFunction(){var b=(document.body.scrollTop+document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight);var a=length*b;triangle.style.strokeDashoffset=length-a};</script>
+
+<script>
+// Get the id of the <path> element and the length of <path>
+var triangle = document.getElementById("triangle");
+var length = triangle.getTotalLength();
+
+// The start position of the drawing
+triangle.style.strokeDasharray = length;
+
+// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+triangle.style.strokeDashoffset = length;
+
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+  var draw = length * scrollpercent;
+  
+  // Reverse the drawing (when scrolling upwards)
+  triangle.style.strokeDashoffset = length - draw;
+}
+</script>
+
 </body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_svg_scrolldrawing.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:08 GMT -->
 </html>

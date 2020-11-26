@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_scroll_to_top.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:07 GMT -->
 <head>
-  <meta charset="utf-8">
-  <title>Пример Кнопка быстрой прокрутки страницы вверх. Уроки для начинающих. HTML, CSS, JavaScript</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="готовые,решения,сниппеты,заготовки,html,css,html5,css3,коды,фрагменты,кода,учебник,уроки,курс,для начинающих,основы,w3schools,на русском,кнопка,быстрой,прокрутки,страницы,вверх" name="Keywords">
-<meta content="Как сделать кнопку быстрой прокрутки веб-страницы вверх? Код кнопки. Скроллинг страницы с помощью HTML/CSS/JavaScript" name="Description">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -35,16 +33,17 @@ body {
 </head>
 <body>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Вверх</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<div style="background-color:black;color:white;padding:30px">Прокрутите страницу вниз</div>
-<div style="background-color:lightgrey;padding:30px 30px 2500px">В этом примере показано, как создать кнопку "прокрутка вверх", которая становится видимой <strong>, когда пользователь начинает прокручивать страницу</strong>.</div>
+<div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+<div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
+  <strong>when the user starts to scroll the page</strong>.</div>
 
 <script>
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
-// Когда пользователь прокрутит вниз на 20 пикселей сверху документа, отобразится кнопка
+// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -55,7 +54,7 @@ function scrollFunction() {
   }
 }
 
-// Когда пользователь нажимает на кнопку, страница прокрутится к началу документа
+// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -63,4 +62,6 @@ function topFunction() {
 </script>
 
 </body>
+
+<!-- Mirrored from www.w3schools.com/howto/tryhow_js_scroll_to_top.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:07 GMT -->
 </html>
