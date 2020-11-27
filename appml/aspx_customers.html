@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://w3schoolsrus.github.io/w3css/4/w3.css">
-<script src="https://w3schoolsrus.github.io/appml/2.0.3/appml.js"></script>
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<script src="2.0.3/appml.js"></script>
 </head>
 <body>
 <div class="w3-container w3-content">
 <h1>Клиенты</h1>
-<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="appml.aspx?model=model_customersform" appml-controller="myFormController" style="display:none;">
+<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="https://www.w3schools.com/appml/appml.aspx?model=model_customersform" appml-controller="myFormController" style="display:none;">
   <div appml-include-html="inc_formcommands.html"></div>
   <p>
     <label>CustomerName:</label>
@@ -35,7 +35,7 @@
   </p>
 </div>
 
-<div appml-data="appml.aspx?model=model_customerslist">
+<div appml-data="https://www.w3schools.com/appml/appml.aspx?model=model_customerslist">
   <div appml-include-html="inc_listcommands.html"></div>
   <div appml-include-html="inc_filter.html"></div>
   <table class="w3-table-all">
