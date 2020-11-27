@@ -301,33 +301,33 @@
 <p>Хорошим примером этого является включение стандартного нижнего колонтитула HTML на все ваши HTML-страницы.</p>
 <p>Это пример файла, содержащего стандартный нижний колонтитул:</p>
 <div class="w3-example">
-<h3>inc_footer.htm</h3>
+<h3>inc_footer.html</h3>
 <div class="w3-code notranslate htmlHigh">
 &lt;hr style="margin-top:10px;"&gt;<br>
 &lt;p style="font-size:11px"&gt;2016&amp;copy; W3Schools. All rights reserved.&lt;/p&gt;<br>
 &lt;hr&gt;</div>
 </div>
 
-<p>В этом примере атрибут appml-include-html используется для включения файла "inc_footer.htm": </p>
+<p>В этом примере атрибут appml-include-html используется для включения файла "inc_footer.html": </p>
 
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
 &lt;!DOCTYPE html&gt;<br>
-&lt;html lang="en-US"&gt;<br>
+&lt;html lang="ru"&gt;<br>
 <br>
-&lt;title&gt;Customers&lt;/title&gt;<br>
+&lt;title&gt;Клиенты&lt;/title&gt;<br>
 &lt;link rel="stylesheet" href="style.css"&gt;<br>
-&lt;script src="https://www.w3schools.com/appml/2.0.3/appml.js"&gt;&lt;/script&gt;<br>
+&lt;script src="2.0.3/appml.js"&gt;&lt;/script&gt;<br>
 <br>
 &lt;body&gt;<br>
 <br>
-&lt;h1&gt;Customers&lt;/h1&gt;<br>
+&lt;h1&gt;Клиенты&lt;/h1&gt;<br>
 &lt;table appml-data="customers.js"&gt;<br>
 &lt;tr&gt;<br>
-&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>
+&nbsp; &lt;th&gt;Клиент&lt;/th&gt;<br>
+&nbsp; &lt;th&gt;Город&lt;/th&gt;<br>
+&nbsp; &lt;th&gt;Страна&lt;/th&gt;<br>
 &lt;/tr&gt;<br>
 &lt;tr appml-repeat="records"&gt;<br>
 &nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
@@ -336,7 +336,7 @@
 &lt;/tr&gt;<br>
 &lt;/table&gt;<br>
 <br>
-&lt;div <strong>appml-include-html="inc_footer.htm"</strong>&gt;&lt;/div&gt;<br>
+&lt;div <strong>appml-include-html="inc_footer.html"</strong>&gt;&lt;/div&gt;<br>
 <br>
 &lt;/body&gt;<br>
 &lt;/html&gt;
