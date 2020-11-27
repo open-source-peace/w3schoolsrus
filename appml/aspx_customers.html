@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from www.w3schools.com/appml/aspx_customers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:10:59 GMT -->
 <head>
-<link rel="stylesheet" href="../w3css/4/w3.css">
-<script src="2.0.3/appml.js"></script>
+<link rel="stylesheet" href="https://w3schoolsrus.github.io/w3css/4/w3.css">
+<script src="https://w3schoolsrus.github.io/appml/2.0.3/appml.js"></script>
 </head>
 <body>
 <div class="w3-container w3-content">
-<h1>Customers</h1>
+<h1>Клиенты</h1>
 <div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="appml.aspx?model=model_customersform" appml-controller="myFormController" style="display:none;">
-  <div appml-include-html="inc_formcommands.html"></div>
+  <div appml-include-html="inc_formcommands.htm"></div>
   <p>
     <label>CustomerName:</label>
     <input id="customername" class="w3-input w3-border">
@@ -38,14 +36,14 @@
 </div>
 
 <div appml-data="appml.aspx?model=model_customerslist">
-  <div appml-include-html="inc_listcommands.html"></div>
-  <div appml-include-html="inc_filter.html"></div>
+  <div appml-include-html="inc_listcommands.htm"></div>
+  <div appml-include-html="inc_filter.htm"></div>
   <table class="w3-table-all">
     <tr>
     <th></th>
-    <th>Customer</th>
-    <th>City</th>
-    <th>Country</th>
+    <th>Клиент</th>
+    <th>Город</th>
+    <th>Страна</th>
     </tr>
     <tr appml-repeat="records">
     <td style="cursor:pointer;width:40px;" onclick="appml('Form01').run({{CustomerID}});">&#9998;</td>
@@ -67,6 +65,4 @@ function myFormController($appml) {
 </script>
 
 </body>
-
-<!-- Mirrored from www.w3schools.com/appml/aspx_customers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:00 GMT -->
 </html>
