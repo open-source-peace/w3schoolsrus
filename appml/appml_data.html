@@ -369,15 +369,15 @@
     {"CustomerName":"Comércio Mineiro","City":"São Paulo","Country":"Brazil"}<br>]<br>}</div>
 </div>
 
-<p>С помощью AppML вы можете указать файл JSON в качестве источника данных в атрибуте appml-data:</p>
+<p>С помощью AppML вы можете указать файл JSON ("customers.js") в качестве источника данных в атрибуте appml-data:</p>
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-    &lt;table <strong>appml-data="customers.js</strong>"&gt;<br>
+    &lt;table <strong>appml-data="customers.js"</strong>&gt;<br>
 &lt;tr&gt;<br>
-&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>&lt;/tr&gt;<br>
+&nbsp; &lt;th&gt;Клиент&lt;/th&gt;<br>
+&nbsp; &lt;th&gt;Город&lt;/th&gt;<br>
+&nbsp; &lt;th&gt;Страна&lt;/th&gt;<br>&lt;/tr&gt;<br>
 &lt;tr appml-repeat="records"&gt;<br>
 &nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
 &nbsp; &lt;td&gt;{{City}}&lt;/td&gt;<br>
@@ -387,6 +387,7 @@
 </div>
 <a class="w3-btn w3-margin-bottom" href="tryit9f17.html?filename=tryappml_data_json" target="_blank">Попробуйте сами &raquo;</a>
 </div>
+<p>Путь к файлу <i>customers.js</i> указывайте свой!</p>
 <hr>
 
 <h2>AppML с использованием базы данных</h2>
