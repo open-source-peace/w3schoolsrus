@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<!-- Mirrored from www.w3schools.com/appml/aspx_suppliers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:11 GMT -->
+<html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Suppliers</title>
+<title>Поставщики</title>
 <link rel="stylesheet" href="../w3css/4/w3.css">
 <script src="2.0.3/appml.js"></script>
 </head>
 <body>
 <div class="w3-container w3-content">
-<h1>Suppliers</h1>
+<h1>Поставщики</h1>
 <div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" style="display:none;"
-appml-data="appml.aspx?model=model_suppliersform" appml-controller="myFormController">
+appml-data="https://www.w3schools.com/appml/appml.aspx?model=model_suppliersform" appml-controller="myFormController">
   <div appml-include-html="inc_formcommands.html"></div>
   <p>
     <label>SupplierID:</label>
@@ -48,7 +46,7 @@ appml-data="appml.aspx?model=model_suppliersform" appml-controller="myFormContro
   </p>
 </div>
 
-<div appml-data="appml.aspx?model=model_supplierslist">
+<div appml-data="https://www.w3schools.com/appml/appml.aspx?model=model_supplierslist">
   <div appml-include-html="inc_listcommands.html"></div>
   <div appml-include-html="inc_filter.html"></div>
   <table class="w3-table-all">
@@ -69,7 +67,7 @@ appml-data="appml.aspx?model=model_suppliersform" appml-controller="myFormContro
   </table>
 </div>
 
-<div id="ProductsSection" class="w3-container w3-light-grey" appml-data="appml.aspx?model=model_productslist" appml-controller="myProductsController" style="display:none;padding:50px;margin-top:30px;">
+<div id="ProductsSection" class="w3-container w3-light-grey" appml-data="https://www.w3schools.com/appml/appml.aspx?model=model_productslist" appml-controller="myProductsController" style="display:none;padding:50px;margin-top:30px;">
   <span onclick="document.getElementById('ProductsSection').style.display='none';" class="w3-button w3-xlarge w3-right">&times;</span>
   <h2>{{records[0]['SupplierName']}}</h2>
   <table class="w3-table-all">
@@ -91,7 +89,7 @@ appml-data="appml.aspx?model=model_suppliersform" appml-controller="myFormContro
 <script>
 function openProducts(id) {
     appml("ProductsSection").clearQuery();
-    appml("ProductsSection").setQuery("Products.SupplierID", id);   
+    appml("ProductsSection").setQuery("Products.SupplierID", id);
     appml("ProductsSection").run();
 }
 function myFormController($appml) {
@@ -108,6 +106,4 @@ function myProductsController($appml) {
 }
 </script>
 </body>
-
-<!-- Mirrored from www.w3schools.com/appml/aspx_suppliers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:11 GMT -->
 </html>

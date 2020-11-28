@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<!-- Mirrored from www.w3schools.com/appml/php_suppliers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:09 GMT -->
+<html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Suppliers</title>
+<title>Поставщики</title>
 <link rel="stylesheet" href="../w3css/4/w3.css">
 <script src="2.0.3/appml.js"></script>
 </head>
 <body>
 <div class="w3-container w3-content">
-<h1>Suppliers</h1>
-<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="appml.php?model=model_suppliersform" appml-controller="myFormController" style="display:none;">
+<h1>Поставщики</h1>
+<div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" appml-data="https://www.w3schools.com/appml/appml.php?model=model_suppliersform" appml-controller="myFormController" style="display:none;">
   <div appml-include-html="inc_formcommands.html"></div>
   <p>
     <label>SupplierID:</label>
@@ -47,7 +45,7 @@
   </p>
 </div>
 
-<div appml-data="appmlee5a.json?model=model_supplierslist">
+<div appml-data="https://www.w3schools.com/appml/appmlee5a.json?model=model_supplierslist">
   <div appml-include-html="inc_listcommands.html"></div>
   <div appml-include-html="inc_filter.html"></div>
   <div class="w3-responsive">
@@ -70,9 +68,9 @@
   </div>
 </div>
 
-<div id="ProductsSection" class="w3-container w3-padding-large w3-light-grey w3-margin-top" appml-data="appml.php?model=model_productslist" appml-controller="myProductsController" style="display:none">
+<div id="ProductsSection" class="w3-container w3-padding-large w3-light-grey w3-margin-top" appml-data="https://www.w3schools.com/appml/appml.php?model=model_productslist" appml-controller="myProductsController" style="display:none">
   <span onclick="document.getElementById('ProductsSection').style.display='none';" class="w3-button w3-large w3-right">&times;</span>
-  
+
   <h2>{{records[0]['SupplierName']}}</h2>
   <div class="w3-responsive">
   <table class="w3-table-all">
@@ -95,9 +93,9 @@
 <script>
 function openProducts(id) {
     appml("ProductsSection").clearQuery();
-    appml("ProductsSection").setQuery("Products.SupplierID", id);   
+    appml("ProductsSection").setQuery("Products.SupplierID", id);
     appml("ProductsSection").run();
-    document.getElementById("ProductsSection").style.display = "";    
+    document.getElementById("ProductsSection").style.display = "";
 }
 function myFormController($appml) {
     if ($appml.message == "ready") {return -1;}
@@ -110,6 +108,4 @@ function myProductsController($appml) {
 }
 </script>
 </body>
-
-<!-- Mirrored from www.w3schools.com/appml/php_suppliers.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:11 GMT -->
 </html>
