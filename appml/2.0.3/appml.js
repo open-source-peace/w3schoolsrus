@@ -53,13 +53,13 @@ function AppML(container, appsrc, appmlname) {
     this.orderByDirections = [];
     this.maxRecords = 0;
     this.data = {};
-    this.data.keyField = "";    
+    this.data.keyField = "";
     this.data.filteritems = [];
     this.data.sortitems = [];
     this.invokeAppML = function () {
         var z, i, a, datasource, controller, appmlid, count, xmlhttp, att;
         z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i += 1) { //Manage Includes:
+        for (i = 0; i < z.length; i += 1) { //Управление включениями:
             if (z[i].getAttribute("appml-include-html")) {
                 a = z[i].cloneNode(false);
                 xmlhttp = this.xmlHttp(z[i].getAttribute("appml-include-html"), "", "GET", false);
@@ -68,7 +68,7 @@ function AppML(container, appsrc, appmlname) {
                 z[i].parentNode.replaceChild(a, z[i]);
             }
         }
-        for (i = 0; i < z.length; i += 1) { //Manage Appml Applications:
+        for (i = 0; i < z.length; i += 1) { //Управление Appml приложениями:
             if (z[i].hasAttributes && ((att = z[i].getAttribute("appml-controller")) !== null || (att = z[i].getAttribute("appml-data")) !== null)) {
                 controller = z[i].getAttribute("appml-controller");
                 datasource = z[i].getAttribute("appml-data");
@@ -81,12 +81,12 @@ function AppML(container, appsrc, appmlname) {
                         appmlObjects[count-1].controller = controller;
                     }
                }
-           } 
+           }
         }
         for (i = appmlObjects.length -1; i > -1; i -= 1) {
             if (appmlObjects[i].controller) {
                 if (typeof window[appmlObjects[i].controller] == "undefined") {
-                    window.alert("The controller " + controller + " does not exist");
+                    window.alert("Контроллер " + controller + " не существует");
                 } else {
                     appmlObjects[i].message = "ready";
                     if (window[appmlObjects[i].controller](appmlObjects[i]) == -1) {
@@ -118,7 +118,7 @@ function AppML(container, appsrc, appmlname) {
     };
     this.getData = function (nav, id) {
         var navigate = nav, fromrec, xmlhttp, xml = "", errmsg = null, i, cc, ext;
-        if (id) {this.appmlID = id; }       
+        if (id) {this.appmlID = id; }
         if (navigate === 1) {navigate = "first"; }
         if (!navigate || navigate === "") {navigate = "first"; }
         if (navigate === "first") {fromrec = 1; }
@@ -130,7 +130,7 @@ function AppML(container, appsrc, appmlname) {
         if (navigate === "last") {fromrec = -1; }
         if (navigate === "same") {fromrec = this.data.fromRec; }
         if (this.dataSource) {
-            if (this.dataSource.indexOf(".") == -1 && this.dataSource.indexOf("local?") == -1) {errmsg = "The datasource " + this.dataSource + " does not exist"; }
+            if (this.dataSource.indexOf(".") == -1 && this.dataSource.indexOf("local?") == -1) {errmsg = "Источник данных " + this.dataSource + " не существует"; }
             if (errmsg == null && this.dataSource.indexOf("?model=") > -1) {
             this.data.records = [];
             if (this.appmlID === "NULL") {fromrec = 0; }
@@ -160,19 +160,19 @@ function AppML(container, appsrc, appmlname) {
             } else if (errmsg == null) {
                 xmlhttp = this.xmlHttp(this.dataSource, "", "GET", false);
             }
-          //this.displayMessage("Answer from the server:\n" + xmlhttp.responseText);
+          //this.displayMessage("Ответ с сервера:\n" + xmlhttp.responseText);
             if (errmsg == null) {
                 try {
                 this.data = JSON.parse(xmlhttp.responseText);
                 } catch (er) {
                   errmsg = xmlhttp.responseText;
                 }
-                if (xmlhttp.status == 404) {errmsg = "The page cannot be found: " + this.dataSource; }
+                if (xmlhttp.status == 404) {errmsg = "Страница не найдена: " + this.dataSource; }
                 if (this.data.error) {errmsg = this.data.error; }
             }
             if (errmsg !== null) {
             errmsg = this.translate(errmsg);
-              if (errmsg === "") {errmsg = "Empty response."; }
+              if (errmsg === "") {errmsg = "Пустой ответ."; }
               try {
                   this.displayMessage(errmsg);
               } catch (er) {
@@ -184,7 +184,7 @@ function AppML(container, appsrc, appmlname) {
           this.data = window[this.dataObject];
         }
         this.data.dateFormat = (this.data.dateFormat || "dd.mm.yyyy");
-        this.rowsperpage = (this.rowsperpage || this.data.rowsperpage); 
+        this.rowsperpage = (this.rowsperpage || this.data.rowsperpage);
         if (this.data.records) {
             this.data.itemNames = [];
             i = -1;
@@ -202,7 +202,7 @@ function AppML(container, appsrc, appmlname) {
         if (!this.template) {manageTemplate(this); }
         if (!this.template) {return false; }
         if (this.template === null) {
-            this.displayMessage("The template does not exist.");
+            this.displayMessage("Шаблон не существует.");
             return false;
         }
         //if (this.data.records && this.data.records.length === 0) {this.container.innerHTML = ""; return false; }
@@ -220,7 +220,7 @@ function AppML(container, appsrc, appmlname) {
             arr[j].removeAttribute("appml-repeat");
             repeatObj = (eval("this.data." + repeat) || eval("this." + repeat));
             if (!repeatObj) {
-                this.displayMessage("appml-repeat must be an array.\n\n'" + repeat + "' is not an Array.\n\n");
+                this.displayMessage("appml-repeat должен быть массив.\n\n'" + repeat + "' не является массивом.\n\n");
                 return -1;
             }
             if (repeatObj && typeof repeatObj === "object" && repeatObj.length != "undefined") {
@@ -338,7 +338,7 @@ function AppML(container, appsrc, appmlname) {
           pos1 = pos1 + 1;
       }
         return rowClone;
-    };    
+    };
     this.replaceHTML = function (a, r, result, replaceFast) {
         var b, bb, l, lll, i, iii, iiii;
         if (a.hasAttributes()) {
@@ -384,7 +384,7 @@ function AppML(container, appsrc, appmlname) {
             }
         }
     };
-    this.getElement = function (id, parent) {//Search within a specified element, or the appml container if no parent is defined. Return the element with the specified id:
+    this.getElement = function (id, parent) {//Поиск внутри указанного элемента или контейнера appml, если родительский элемент не определен. Вернуть элемент с указанным id:
         var parentObj = (parent || this.container);
         if (!parentObj) {return false; }
         var y = parentObj.getElementsByTagName("*"), l = y.length, i, z = id.toUpperCase();
@@ -392,7 +392,7 @@ function AppML(container, appsrc, appmlname) {
             if (y[i].id.toUpperCase() === z) {return y[i]; }
         }
     };
-    this.getElementsByAttribute = function (x, att) {//Search within a specified element, and return all elements with the specified attribute
+    this.getElementsByAttribute = function (x, att) {//Искать в указанном элементе и возвращать все элементы с указанным атрибутом
         var arr = [], arrCount = -1, i, l, y = x.getElementsByTagName("*"), z = att.toUpperCase();
         l = y.length;
         for (i = -1; i < l; i += 1) {
@@ -454,7 +454,7 @@ function AppML(container, appsrc, appmlname) {
     this.disableFNPL = function (nav) {
         if (this.getElement("appmlbtn_" + nav)) {
             addClass(this.getElement("appmlbtn_" + nav), "disabled");
-            addClass(this.getElement("appmlbtn_" + nav), "w3-disabled");            
+            addClass(this.getElement("appmlbtn_" + nav), "w3-disabled");
             this.getElement("appmlbtn_" + nav).onclick = function () {return false; };
         }
     };
@@ -462,35 +462,35 @@ function AppML(container, appsrc, appmlname) {
         var obj = this;
         if (this.getElement("appmlbtn_" + nav)) {
             removeClass(this.getElement("appmlbtn_" + nav), "disabled");
-            removeClass(this.getElement("appmlbtn_" + nav), "w3-disabled");            
+            removeClass(this.getElement("appmlbtn_" + nav), "w3-disabled");
             this.getElement("appmlbtn_" + nav).onclick = function () {obj.fnpl(nav); };
         }
     };
     this.translate = function (txt) {
       var patt;
-      patt = /APPML_ERR_USN_OR_PWD_REQ/g; txt = txt.replace(patt, "Username or password required");
-      patt = /APPML_ERR_ACTION_REQ/g; txt = txt.replace(patt, "Action required");      
-      patt = /APPML_ERR_MODEL_REQ/g; txt = txt.replace(patt, "Model required");      
-      patt = /APPML_ERR_MODEL_ERR/g; txt = txt.replace(patt, "Error in Model");
-      patt = /APPML_ERR_NO_LOGIN/g; txt = txt.replace(patt, "You are not logged in");
-      patt = /APPML_ERR_NOT_AUTHORIZED/g; txt = txt.replace(patt, "You are not authorized to perform this action");      
-      patt = /APPML_ERR_DATASOURCE_REQ/g; txt = txt.replace(patt, "Datasource required");      
-      patt = /APPML_ERR_KEYFIELD_REQ/g; txt = txt.replace(patt, "Keyfield required");      
-      patt = /APPML_ERR_MAINTABLE_REQ/g; txt = txt.replace(patt, "Maintable required");      
-      patt = /APPML_ERR_ILLEGAL_ACTION/g; txt = txt.replace(patt, "Illegal action");      
-      patt = /APPML_ERR_DATAMODEL/g; txt = txt.replace(patt, "Error in datamodel");      
-      patt = /APPML_ERR_INPUT_MIN/g; txt = txt.replace(patt, "Minimum value error");      
-      patt = /APPML_ERR_INPUT_MAX/g; txt = txt.replace(patt, "Maximum value error");      
-      patt = /APPML_ERR_INPUT_REQ/g; txt = txt.replace(patt, "Required value error");      
-      patt = /APPML_ERR_ILLEGAL_QUERY/g; txt = txt.replace(patt, "Illegal query error");      
-      patt = /APPML_ERR_UKNOWN_DB/g; txt = txt.replace(patt, "Unknown database");      
-      patt = /APPML_ERR_UKNOWN_DB_FIELD/g; txt = txt.replace(patt, "Unknown database field");      
-      patt = /APPML_ERR_INVALID_KEY/g; txt = txt.replace(patt, "Invalid key");      
-      patt = /APPML_ERR_ERROR/g; txt = txt.replace(patt, "Error");      
-      patt = /APPML_MESSAGE_RECORD_UPDATED/g; txt = txt.replace(patt, "Record updated");      
-      patt = /APPML_MESSAGE_RECORD_ADDED/g; txt = txt.replace(patt, "Record added");
-      patt = /APPML_MESSAGE_RECORD_DELETED/g; txt = txt.replace(patt, "Record deleted");
-      patt = /APPML_MESSAGE_OF/g; txt = txt.replace(patt, "of");      
+      patt = /APPML_ERR_USN_OR_PWD_REQ/g; txt = txt.replace(patt, "Требуется имя пользователя или пароль");
+      patt = /APPML_ERR_ACTION_REQ/g; txt = txt.replace(patt, "Требуются действия");
+      patt = /APPML_ERR_MODEL_REQ/g; txt = txt.replace(patt, "Требуется модель");
+      patt = /APPML_ERR_MODEL_ERR/g; txt = txt.replace(patt, "Ошибка в модели");
+      patt = /APPML_ERR_NO_LOGIN/g; txt = txt.replace(patt, "Вы не авторизованы");
+      patt = /APPML_ERR_NOT_AUTHORIZED/g; txt = txt.replace(patt, "У вас нет прав на выполнение этого действия");
+      patt = /APPML_ERR_DATASOURCE_REQ/g; txt = txt.replace(patt, "Требуется источник данных");
+      patt = /APPML_ERR_KEYFIELD_REQ/g; txt = txt.replace(patt, "Требуется ключевое поле");
+      patt = /APPML_ERR_MAINTABLE_REQ/g; txt = txt.replace(patt, "Требуется Maintable");
+      patt = /APPML_ERR_ILLEGAL_ACTION/g; txt = txt.replace(patt, "Недопустимое действие");
+      patt = /APPML_ERR_DATAMODEL/g; txt = txt.replace(patt, "Ошибка в модели данных");
+      patt = /APPML_ERR_INPUT_MIN/g; txt = txt.replace(patt, "Ошибка минимального значения");
+      patt = /APPML_ERR_INPUT_MAX/g; txt = txt.replace(patt, "Ошибка максимального значения");
+      patt = /APPML_ERR_INPUT_REQ/g; txt = txt.replace(patt, "Ошибка обязательного значения");
+      patt = /APPML_ERR_ILLEGAL_QUERY/g; txt = txt.replace(patt, "Ошибка недопустимого запроса");
+      patt = /APPML_ERR_UKNOWN_DB/g; txt = txt.replace(patt, "Неизвестная база данных");
+      patt = /APPML_ERR_UKNOWN_DB_FIELD/g; txt = txt.replace(patt, "Неизвестное поле базы данных");
+      patt = /APPML_ERR_INVALID_KEY/g; txt = txt.replace(patt, "Неправильный ключ");
+      patt = /APPML_ERR_ERROR/g; txt = txt.replace(patt, "Ошибка");
+      patt = /APPML_MESSAGE_RECORD_UPDATED/g; txt = txt.replace(patt, "Запись обновлена");
+      patt = /APPML_MESSAGE_RECORD_ADDED/g; txt = txt.replace(patt, "Запись добавлена");
+      patt = /APPML_MESSAGE_RECORD_DELETED/g; txt = txt.replace(patt, "Запись удалена");
+      patt = /APPML_MESSAGE_OF/g; txt = txt.replace(patt, "выкл");
       return txt;
     };
     this.displayMessage = function (txt) {
@@ -524,7 +524,7 @@ function AppML(container, appsrc, appmlname) {
             if (window[this.controller](this) == -1) {return -1; }
         }
         if (action === "UPDATE") {
-            if (this.data.records[0][this.data.keyField] === "") {action = "ADD"; }            
+            if (this.data.records[0][this.data.keyField] === "") {action = "ADD"; }
         }
     this.app = {};
     this.app.action = action;
@@ -606,7 +606,7 @@ function AppML(container, appsrc, appmlname) {
         var httpObj, async = a;
         if (async !== true) {async = false; }
         if (method !== "GET" && method !== "POST") {
-            window.alert("The httpRequest requires GET or POST");
+            window.alert("httpRequest требует GET или POST");
             return false;
         }
         if (window.XMLHttpRequest) {
@@ -666,7 +666,7 @@ function AppML(container, appsrc, appmlname) {
         }
         return "";
     }
-    function checkReplaceInnerHTML(elmnt) { // checking how the browser replaces the innerHTML, IE has problems replacing the innerHTML of some elements, like TR
+    function checkReplaceInnerHTML(elmnt) { // проверяя, как браузер заменяет innerHTML, IE имеет проблемы с заменой innerHTML некоторых элементов, например TR
         var cc, cc1, cc2, cc3, x = 1;
         try {
             cc = elmnt.cloneNode(true);
@@ -767,7 +767,7 @@ function AppML(container, appsrc, appmlname) {
                             if (dateOK === 0) {
                                 window.alert("Illegal Date");
                                 fromDate = new Date("2012/01/01");
-                                toDate = new Date("2011/12/31");// does not return any result
+                                toDate = new Date("2011/12/31");// не возвращает никакого результата
                             }
                             fvalue = "#" + fromDate.getFullYear() + "/" + (fromDate.getMonth() + 1) + "/" + fromDate.getDate() + "#";
                             if (toDate !== "") {
@@ -828,7 +828,7 @@ function AppML(container, appsrc, appmlname) {
         x = this.getElement("appmlquery").getElementsByTagName("SELECT");
         l = x.length;
         for (i = 0; i < l; i += 1) {
-            if (x[i].id.substr(0, 12) === "appml_query_") {            
+            if (x[i].id.substr(0, 12) === "appml_query_") {
                 if (x[i].getAttribute("reset") !== "no") {x[i].value = ""; }
             }
         }
@@ -849,7 +849,7 @@ function AppML(container, appsrc, appmlname) {
         this.queryDisplayValues[l] = value;
         this.queryOperators[l] = 0;
         this.queryDisplayOperators[l] = 0;
-        this.data.totalRecCounter = 0;        
+        this.data.totalRecCounter = 0;
     };
     this.clearQuery = function () {
         this.queryFields = [];
@@ -858,7 +858,7 @@ function AppML(container, appsrc, appmlname) {
         this.queryTypes = [];
         this.queryOperators = [];
         this.queryDisplayOperators = [];
-        this.data.totalRecCounter = 0;        
+        this.data.totalRecCounter = 0;
     };
     this.adoptQuery = function (adoptObj) {
         this.queryFields = adoptObj.queryFields;
@@ -869,7 +869,7 @@ function AppML(container, appsrc, appmlname) {
         this.queryDisplayOperators = adoptObj.queryDisplayOperators;
         this.orderBys = adoptObj.orderBys;
         this.orderByDirections = adoptObj.orderByDirections;
-        this.data.totalRecCounter = 0;        
+        this.data.totalRecCounter = 0;
     };
     this.query = function (field, value, type) {
         this.setQuery(field, value, type);
@@ -892,7 +892,7 @@ function AppML(container, appsrc, appmlname) {
     function localStorage(obj, cb) {
         var xmlhttp;
         if (!w3schoolsWebSQLOK) {
-            obj.displayMessage("Your browser does not support Local Storage Database (WebSQL).");
+            obj.displayMessage("Ваш браузер не поддерживает базу данных локального хранилища (WebSQL).");
             return;
         }
         if (obj.app.action === "GET") {
