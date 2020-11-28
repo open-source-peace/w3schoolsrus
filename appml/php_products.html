@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<!-- Mirrored from www.w3schools.com/appml/php_products.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:04 GMT -->
+<html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Products</title>
+<title>Продукты</title>
 <link rel="stylesheet" href="../w3css/4/w3.css">
 <script src="2.0.3/appml.js"></script>
 </head>
 <body>
 <div class="w3-container w3-content">
-<h1>Products</h1>
+<h1>Продукты</h1>
 
 <div id="Form01" class="w3-container w3-light-grey w3-padding-large w3-margin-bottom" style="display:none;" appml-controller="myFormController">
   <div appml-include-html="inc_formcommands.html"></div>
@@ -20,7 +18,7 @@
   </p>
   <p>
     <label>Supplier:</label>
-    <div appml-data="appmlb2e4.json?model=model_dropdown_suppliers">
+    <div appml-data="https://www.w3schools.com/appml/appmlb2e4.json?model=model_dropdown_suppliers">
       <select id="SupplierID" class="w3-select w3-border">
         <option appml-repeat="records" value="{{SupplierID}}">{{SupplierName}}</option>
       </select>
@@ -28,7 +26,7 @@
   </p>
   <p>
     <label>Category:</label>
-    <div appml-data="appml2f42.json?model=model_dropdown_categories">
+    <div appml-data="https://www.w3schools.com/appml/appml2f42.json?model=model_dropdown_categories">
       <select id="CategoryID" class="w3-select w3-border">
         <option appml-repeat="records" value="{{CategoryID}}">{{CategoryName}}</option>
       </select>
@@ -44,7 +42,7 @@
   </p>
 </div>
 
-<div appml-data="appml.php?model=model_productslist" appml-controller="myListController">
+<div appml-data="https://www.w3schools.com/appml/appml.php?model=model_productslist" appml-controller="myListController">
   <div appml-include-html="inc_listcommands.html"></div>
   <div appml-include-html="inc_productsquery.html"></div>
   <table class="w3-table-all">
@@ -53,14 +51,14 @@
   <th>Product Name</th>
   <th>Category</th>
   <th>Supplier</th>
-  <th>Price</th>  
+  <th>Price</th>
   </tr>
   <tr appml-repeat="records">
   <td style="cursor:pointer" onclick="appml('Form01').run({{ProductID}})">&#9998;</td>
   <td>{{ProductName}}</td>
   <td>{{CategoryName}}</td>
   <td>{{SupplierName}}</td>
-  <td>{{Price}}</td>  
+  <td>{{Price}}</td>
   </tr>
   </table>
 </div>
@@ -96,23 +94,23 @@ function myListController($appml) {
 function myFormController($appml) {
     if ($appml.message == "ready") {
         $appml.appName = "Form01";
-        $appml.dataSource = "appml865d.json?model=model_productsform";
+        $appml.dataSource = "https://www.w3schools.com/appml/appml865d.json?model=model_productsform";
         return -1;
     }
     if ($appml.message == "loaded") {
         document.getElementById("Form01").style.display = "";
     }
     if ($appml.message == "submit") {
-        if (isNaN(document.getElementById("Price").value)) { 
-            $appml.setError(15, "Price must be a number");
-            return -1;            
+        if (isNaN(document.getElementById("Price").value)) {
+            $appml.setError(15, "Цена должна быть числом");
+            return -1;
         }
     }
     if ($appml.message == "validate") {
-        if ($appml.validate.item == "Price") { 
-            if (isNaN($appml.validate.value)) { 
-                $appml.setError(15, "Price must be a number");
-                return;                            
+        if ($appml.validate.item == "Price") {
+            if (isNaN($appml.validate.value)) {
+                $appml.setError(15, "Цена должна быть числом");
+                return;
             }
         }
     }
@@ -120,6 +118,4 @@ function myFormController($appml) {
 </script>
 
 </body>
-
-<!-- Mirrored from www.w3schools.com/appml/php_products.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 21:11:09 GMT -->
 </html>
