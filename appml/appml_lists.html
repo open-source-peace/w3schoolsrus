@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML Списки. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="AppML Списки. Как создать новую модель, включая определения фильтров и сортировки? Создание шаблона HTML-фильтра. Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_lists.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
@@ -299,13 +299,13 @@
 <hr>
 
 <div class="w3-panel w3-note">
-<p>The examples on this page use a local SQL database.<br>
-Local SQL databases does not work in IE or Firefox. Use Chrome or Safari.</p>
+<p>В примерах на этой странице используется локальная база данных SQL.<br>
+Локальные базы данных SQL не работают в IE или Firefox. Используйте Chrome или Safari.</p>
 </div>
 
-<h2>Create a New Model<br></h2>
- <p>In the previous chapter, you used a model to create a database.</p>
-<p>Now create a new model, including filter and sort definitions:</p>
+<h2>Создать новую модель<br></h2>
+<p>В предыдущем разделе вы использовали модель для создания базы данных.</p>
+<p>Теперь создайте новую модель, включая определения фильтров и сортировки:</p>
 
 <div class="w3-example">
 <h3>model_customerslist.js</h3>
@@ -331,19 +331,19 @@ Local SQL databases does not work in IE or Firefox. Use Chrome or Safari.</p>
 </div>
 </div>
 
-<p>Use the model in your application:</p>
+<p>Используйте модель в своем приложении:</p>
 
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
   &lt;div appml-data="<strong>local?model=model_customerslist</strong>"&gt;<br>
-  &lt;h1&gt;Customers&lt;/h1&gt;<br>
-  &lt;div appml-include-html="inc_listcommands.htm"&gt;&lt;/div&gt;<br>
+  &lt;h1&gt;Клиенты&lt;/h1&gt;<br>
+  &lt;div appml-include-html="inc_listcommands.html"&gt;&lt;/div&gt;<br>
   &lt;table class="w3-table-all"&gt;<br>
   &nbsp; &lt;tr&gt;<br>
-  &nbsp;&nbsp;&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-  &nbsp;&nbsp;&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-  &nbsp;&nbsp;&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>
+  &nbsp;&nbsp;&nbsp; &lt;th&gt;Клиент&lt;/th&gt;<br>
+  &nbsp;&nbsp;&nbsp; &lt;th&gt;Город&lt;/th&gt;<br>
+  &nbsp;&nbsp;&nbsp; &lt;th&gt;Страна&lt;/th&gt;<br>
   &nbsp; &lt;/tr&gt;<br>
   &nbsp; &lt;tr appml-repeat="records"&gt;<br>
   &nbsp;&nbsp;&nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
@@ -352,21 +352,18 @@ Local SQL databases does not work in IE or Firefox. Use Chrome or Safari.</p>
   &nbsp; &lt;/tr&gt;<br>
   &lt;/table&gt;<br>
   &lt;/div&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitce27.html?filename=tryappml_lists_1" target="_blank">
-  Try It Yourself »</a>
+<a class="w3-btn w3-margin-bottom" href="tryitce27.html?filename=tryappml_lists_1" target="_blank">Попробуйте сами »</a>
 </div>
-
-
 <hr>
-<h2>Create an HTML Filter Template</h2>
-<p>Create the HTML for your filters:</p>
+
+<h2>Создать шаблон HTML-фильтра</h2>
+<p>Создайте HTML для ваших фильтров:</p>
 <div class="w3-example">
-<h3>inc_filter.htm</h3>
+<h3>inc_filter.html</h3>
 <div class="w3-code notranslate htmlHigh">
   &lt;div id="appml_filtercontainer" class="w3-container w3-light-grey w3-section
   w3-padding-large" style="display:none;"&gt;<br>
-  &nbsp; &lt;span id="appmlbtn_queryClose"
-  onclick="this.parentNode.style.display='none';" class="w3-button w3-large
+  &nbsp; &lt;span id="appmlbtn_queryClose" onclick="this.parentNode.style.display='none';" class="w3-button w3-large
   w3-right"&gt;&amp;times;&lt;/span&gt;<br>
   &nbsp; &lt;h2&gt;Filter&lt;/h2&gt;<br>
   &nbsp; &lt;div id="appml_filter"&gt;<br>
@@ -412,26 +409,25 @@ Local SQL databases does not work in IE or Firefox. Use Chrome or Safari.</p>
   &nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
   &nbsp; &lt;/div&gt;<br>
   &nbsp; &lt;br&gt;<br>
-  &nbsp; &lt;button id="appmlbtn_queryOK" type="button" class="w3-btn
-  w3-green"&gt;OK&lt;/button&gt;<br>
+  &nbsp; &lt;button id="appmlbtn_queryOK" type="button" class="w3-btn w3-green"&gt;OK&lt;/button&gt;<br>
   &lt;/div&gt;
 </div>
 </div>
-<p>Save the filter HTML in a file with a proper name like "inc_filter.htm".</p>
-<p>Include the filter HTML in your prototype with <strong>appml-include-html</strong>:</p>
+<p>Сохраните HTML-код фильтра в файле с собственным именем, например "inc_filter.html".</p>
+<p>Включите HTML-фильтр в свой прототип с помощью <strong>appml-include-html</strong>:</p>
 
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
   &lt;div appml-data="local?model=model_customerslist"&gt;<br>
-  &lt;h1&gt;Customers&lt;/h1&gt;<br>
-  &lt;div appml-include-html="inc_listcommands.htm"&gt;&lt;/div&gt;<br>
-  &lt;div <strong>appml-include-html="inc_filter.htm"</strong>&gt;&lt;/div&gt;<br>
+  &lt;h1&gt;Клиенты&lt;/h1&gt;<br>
+  &lt;div appml-include-html="inc_listcommands.html"&gt;&lt;/div&gt;<br>
+  &lt;div <strong>appml-include-html="inc_filter.html"</strong>&gt;&lt;/div&gt;<br>
   &lt;table class="w3-table-all"&gt;<br>
   &nbsp; &lt;tr&gt;<br>
-  &nbsp;&nbsp;&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-  &nbsp;&nbsp;&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-  &nbsp;&nbsp;&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>
+  &nbsp;&nbsp;&nbsp; &lt;th&gt;Клиент&lt;/th&gt;<br>
+  &nbsp;&nbsp;&nbsp; &lt;th&gt;Город&lt;/th&gt;<br>
+  &nbsp;&nbsp;&nbsp; &lt;th&gt;Страна&lt;/th&gt;<br>
   &nbsp; &lt;/tr&gt;<br>
   &nbsp; &lt;tr appml-repeat="records"&gt;<br>
   &nbsp;&nbsp;&nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
@@ -440,8 +436,7 @@ Local SQL databases does not work in IE or Firefox. Use Chrome or Safari.</p>
   &nbsp; &lt;/tr&gt;<br>
   &lt;/table&gt;<br>
   &lt;/div&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit8c00.html?filename=tryappml_lists_2" target="_blank">
-  Try It Yourself »</a>
+<a class="w3-btn w3-margin-bottom" href="tryit8c00.html?filename=tryappml_lists_2" target="_blank">Попробуйте сами »</a>
 </div>
 
 <hr>
