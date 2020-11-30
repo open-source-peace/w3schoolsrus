@@ -64,21 +64,21 @@
 
           <!--Код на странице-->
 <textarea autocomplete="off" id="textareaCode" wrap="soft" spellcheck="false"><!DOCTYPE html>
-<html lang="en-US">
-<title>Customers</title>
+<html lang="ru">
+<title>Клиенты</title>
 <link rel="stylesheet" href="../w3css/4/w3.css">
 <script src="2.0.3/appml.js"></script>
 <body>
 
 <div class="w3-container" appml-data="local?model=model_customers">
-<h1>Customers</h1>
-<div appml-include-html="inc_listcommands.htm"></div>
-<div appml-include-html="inc_filter.htm"></div>
+<h1>Клиенты</h1>
+<div appml-include-html="inc_listcommands.html"></div>
+<div appml-include-html="inc_filter.html"></div>
 <table class="w3-table-all">
   <tr>
-    <th>Customer</th>
-    <th>City</th>
-    <th>Country</th>
+    <th>Клиент</th>
+    <th>Город</th>
+    <th>Страна</th>
   </tr>
   <tr appml-repeat="records">
     <td>{{CustomerName}}</td>

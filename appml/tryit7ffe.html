@@ -65,19 +65,19 @@
           <!--Код на странице-->
 <textarea autocomplete="off" id="textareaCode" wrap="soft" spellcheck="false"><!DOCTYPE html>
 <html lang="ru">
-<title>Customers</title>
+<title>Клиенты</title>
 <link rel="stylesheet" href="style.css">
 <script src="2.0.3/appml.js"></script>
 <body>
 
-<div appml-include-html="inc_header.htm"></div>
+<div appml-include-html="inc_header.html"></div>
 
-<h1>Customers</h1>
+<h1>Клиенты</h1>
 <table appml-data="customers.js" appml-controller="myController">
   <tr>
-    <th>Customer</th>
-    <th>City</th>
-    <th>Country</th>
+    <th>Клиент</th>
+    <th>Город</th>
+    <th>Страна</th>
   </tr>
   <tr appml-repeat="records">
     <td>{{CustomerName}}</td>
@@ -86,7 +86,7 @@
   </tr>
 </table>
 
-<div appml-include-html="inc_footer.htm"></div>
+<div appml-include-html="inc_footer.html"></div>
 
 <script>
 function myController($appml) {
