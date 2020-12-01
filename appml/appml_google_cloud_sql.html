@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML с использованием Google Cloud SQL. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="AppML с использованием Google Cloud SQL (Google Облако SQL). Google Cloud SQL - облачный сервис базы данных. Как использовать? Как создать экземпляр базы данных MySQL? Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_google_cloud_sql.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
@@ -288,103 +288,77 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../images/appml.jpg" alt="AppML. Уроки для начинающих" class="w3-left" title="Учебник AppML для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1><span class="color_h1">AppML using Google Cloud SQL</span></h1>
+<h1><span class="color_h1">AppML с использованием Google Cloud SQL (Google Облако SQL)</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-button w3-green" href="appml_dotnet.html">&#10094; Previous</a>
+  <a class="w3-left w3-button w3-green" href="appml_dotnet.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_amazon_rds.html">Next &#10095;</a>
 </div>
 <hr>
 <div class="jumbotron">
   <img src="img_gcs_logo.png" alt="Google Cloud Services" style="float:left;margin-right:5%;"><br>
-  <p>Google Cloud SQL is a database cloud service.</p>
-  <p>It is easy to set up and manage.</p>
-    <p>It is FREE to try!</p>
+  <p><strong>Google Cloud SQL</strong> - облачный сервис базы данных.</p>
+  <p>Легко настроить и управлять.</p>
+  <p>Это можно попробовать бесплатно!</p>
 </div>
 <div class="w3-clear"></div>
-<h2>What is Google Cloud SQL</h2>
-<p>Google Cloud SQL is a cloud based database service.</p>
+<h2>Что такое Google Cloud SQL</h2>
+<p><strong>Google Cloud SQL</strong> - это облачная служба баз данных.</p>
 <hr>
 
-<h2>Why use Google Cloud SQL?</h2>
-<p>Google Cloud SQL offers MySQL databases deployed in the cloud without a fuss.</p>
-<p>Google offers powerful databases that run fast, and flexible charging (pay
-per use).</p>
-<p>Google manages automated backups, patching, and recovery.</p>
-
+<h2>Зачем использовать Google Cloud SQL?</h2>
+<p>Google Cloud SQL предлагает базы данных MySQL, развернутые в облаке, без лишних хлопот.</p>
+<p>Google предлагает мощные базы данных, которые работают быстро, и гибкую тарификацию (оплата за использование).</p>
+<p>Google управляет автоматическим резервным копированием, установкой исправлений и восстановлением.</p>
 <hr>
-<h2>Getting Started</h2>
-<p>Before you can start using Google Cloud SQL, you need a Google account, and sign up for
-Google Developers Console.</p>
-<p>If you do not have a Google account you can sign up for one here:
-<a href="https://accounts.google.com/SignUp" target="_blank">Create your Google
-Account</a></p>
 
+<h2>Начало использования Google Cloud SQL</h2>
+<p>Прежде чем вы сможете начать использовать Google Cloud SQL, вам потребуется учетная запись Google и регистрация в Google Developers Console.</p>
+<p>Если у вас нет учетной записи Google, вы можете зарегистрироваться здесь:
+<a href="https://accounts.google.com/SignUp" target="_blank" rel="nofollow">Создайте свой аккаунт Google</a></p>
 <hr>
-<h2>Sign Up for Google Developers Console</h2>
-<p>When you sign up for Google Developers Console, your Google account is
-automatically signed up for all services in Google Cloud, including SQL.</p>
-<p>If you are a new Cloud Platform user, you can get started with a trial period
-for free.</p>
-<p>The Cloud Platform free trial allows you to try Cloud SQL for free for 60
-days.
-For more information, see
-<a href="https://cloud.google.com/free-trial/" target="_blank">Cloud Platform
-Free Trial</a>.</p>
-<p>If you decide to continue with Cloud Platform after your free period (or if you need
-more storage or performance than the free usage tier offers), you only pay for the resources you use.</p>
-<p>To create an Google Developers Console account
 
-go to: <a href="https://console.developers.google.com/freetrial" target="_blank">
-https://console.developers.google.com/freetrial</a>, and follow the on-screen
-instructions.</p>
+<h2>Зарегистрируйтесь в Google Developers Console</h2>
+<p>Когда вы регистрируетесь в Google Developers Console, ваша учетная запись Google автоматически регистрируется для всех сервисов в Google Cloud, включая SQL.</p>
+<p>Если вы новый пользователь Cloud Platform, вы можете бесплатно воспользоваться пробным периодом.</p>
+<p>Бесплатная пробная версия Cloud Platform позволяет вам бесплатно опробовать Cloud SQL в течение 60 дней. Для получения дополнительной информации смотрите <a href="https://cloud.google.com/free-trial/" target="_blank" rel="nofollow">Бесплатная пробная версия Cloud Platform</a>.</p>
+<p>Если вы решите продолжить использование Cloud Platform после окончания бесплатного периода (или если вам нужно больше места для хранения или производительности, чем предлагает уровень бесплатного использования), вы платите только за те ресурсы, которые используете.</p>
+<p>Чтобы создать учетную запись Google Developers Console, перейдите по ссылке: <a href="https://console.developers.google.com/freetrial" target="_blank" rel="nofollow">https://console.developers.google.com/freetrial</a>, и следуйте инструкциям на экране.</p>
 <hr>
-<h2>Create a MySQL Database Instance</h2>
-<p>In this example we will set up a Database instance running MySQL.</p>
-<p>&nbsp;Create a MySQL DB instance:</p>
+
+<h2>Создать экземпляр базы данных MySQL</h2>
+<p>В этом примере мы создадим экземпляр базы данных с MySQL.</p>
+<p>Создать экземпляр MySQL DB:</p>
 <ul>
-    <li>Once you have created your account Google will automatically create a
-    new project for you called "My First Project". In this example we will just
-    use that project.</li>
-    <li>In the menu, click "Storage", and then "Cloud SQL"</li>
-    <li>Click "Create an instance"</li>
-    <li>On the "Create Cloud SQL instance" page select a name, region and
-    performance tier for your DB instance. In this example we will skip the
-    advanced options.</li>
-    <li>Click "Create"</li>
-    <li>The new DB instance appears in the list of DB instances (when it has the
-    status "Runnable" it is ready for use)</li>
-    <li>Click on the name of the instance, and click "Access Control" on the
-    navigation pane</li>
-    <li>Click "IP address" in the sub-navigation pane, and click the "Request
-    IPv4 address" button</li>
-    <li>Keep this IP address, as it will be the IP address you use to connect to
-    your database</li>
-    <li>Click "Users" in the sub-navigation pane, and click the "New user"
-    button</li>
-    <li>Specify a username and password for your database</li>
-    <li>Click "Authorization" in the sub-navigation pane, and click the "+ Add
-    item" button under Allowed Networks</li>
-    <li>Here you can specify who has access to your database, It can be:<ul>
-        <li>Your own IP, or the IP of your server. This way only you have access
-        to your database</li>
-        <li>or 0.0.0.0/0, which allows all external IP addresses to connect
-        (this can be a security risk, and cause extra costs)</li>
-    </ul>
-    </li>
-    <li>Click "Save"</li>
-    <li>Click "Databases" in the navigation pane, and click the "New database"
-    button</li>
-    <li>Specify a name for your database (you can leave the other options as
-    they are unless you have specific requirements)</li>
+  <li>Как только вы создадите свою учетную запись, Google автоматически создаст для вас новый проект под названием "My First Project" ("Мой первый проект"). В этом примере мы просто будем использовать этот проект;</li>
+  <li>В меню выберите "Storage" ("Хранилице"), а затем "Cloud SQL" ("Облако SQL");</li>
+  <li>Кликните "Create an instance" ("Создать экземпляр");</li>
+  <li>На странице "Create Cloud SQL instance" ("Создать экземпляр Cloud SQL") выберите имя, регион и уровень производительности для своего экземпляра DB. В этом примере мы пропустим дополнительные параметры;</li>
+  <li>Кликните "Create" ("Создать");</li>
+  <li>Новый DB экземляр появится в списке DB экземпляров (когда он имеет статус "Runnable" ("Выполняется"), он готов к использованию)</li>
+  <li>Кликните имя экземпляра, и кликните "Access Control" ("Контроль доступа") на палели навигации;</li>
+  <li>Кликните "IP address" ("IP-адрес") на суб-навигационной панели и кликните кнопку "Request IPv4 address" ("Запросить IPv4 адрес");</li>
+  <li>Сохраните этот IP-адрес, так как это будет IP-адрес, который вы используете для подключения к вашей базе данных;</li>
+  <li>Кликните "Users" ("Пользователи") на суб-навигационной панели и кликните кнопку "New user" ("Новый пользователь");</li>
+  <li>Укажите имя пользователя и пароль для своей базы данных;</li>
+  <li>Кликните "Authorization" ("Авторизация") на суб-навигационной панели и кликните кнопку "+ Add item" ("Добавить элемент") в разделе Allowed Networks (Разрешенные сети);</li>
+  <li>Здесь вы можете указать, кто имеет доступ к вашей базе данных. Это может быть:
+    <ul>
+      <li>Ваш собственный IP или IP вашего сервера. Таким образом, только у вас есть доступ к вашей базе данных;</li>
+      <li>или 0.0.0.0/0, что позволяет подключать все внешние IP-адреса (это может представлять угрозу безопасности и вызывать дополнительные расходы).</li>
+  </ul>
+  </li>
+  <li>Кликните "Save" ("Сохранить")</li>
+  <li>Кликните "Databases" ("Базы данных") на панели навигации и кликните кнопку "New database" ("Новая база данных");</li>
+  <li>Укажите имя для своей базы данных (вы можете оставить другие параметры как есть, если у вас нет особых требований).</li>
 </ul>
 
-<p>Now you have a Google Cloud SQL database, with an IP that you can connect to.</p>
-
+<p>Теперь у вас есть база данных Google Cloud SQL с IP-адресом, к которому вы можете подключиться.</p>
 <hr>
-<h2>Configure Database Connection in AppML</h2>
-<p>To configure the database connection, edit the appml_config file:</p>
+
+<h2>Настроить подключение к базе данных в AppML</h2>
+<p>Чтобы настроить подключение к базе данных, отредактируйте файл appml_config:</p>
 <div class="w3-example">
-<h3>PHP example: appml_config.php</h3>
+<h3>PHP пример: appml_config.php</h3>
 <div class="w3-code notranslate">
     &lt;?php echo("Access Forbidden");exit();?&gt;<br>{<br>"dateformat" :
     "yyyy-mm-dd",<br>"databases" : [{<br>"connection" : "<em>mydatabase</em>",<br>
@@ -393,28 +367,22 @@ instructions.</p>
     <br>}]<br>}</div>
 </div>
 
-<p>Edit the following:</p>
+<p>Отредактируйте следующие:</p>
 <ol>
-    <li><em>mydatabase</em> - change to whatever you want the database
-    connection to be called in your application</li>
-    <li><em>yourDatabaseURL</em> - change to the IP from the previous
-    step, and add the port 3306 (like this <em>192.168.1.1</em>:3306)</li>
-    <li><em>yourDatabaseName</em> - change to the name of your
-    database instance in Google Cloud SQL</li>
-    <li><em>yourUserName</em> - change to the username you specified for your
-    database in Google Cloud SQL</li>
-    <li><em>yourPassword</em> - change to the password you specified for your
-    database in Google Cloud SQL</li>
+    <li><em>mydatabase</em> - измените на то, что вы хотите, чтобы соединение с базой данных вызывалось в вашем приложении</li>
+    <li><em>yourDatabaseURL</em> - измените IP-адрес с предыдущего шага и добавьте порт 3306 (например, <em>192.168.1.1</em>:3306)</li>
+    <li><em>yourDatabaseName</em> - измените имя вашего экземпляра базы данных в Google Cloud SQL</li>
+    <li><em>yourUserName</em> - измените имя пользователя, которое вы указали для своей базы данных в Google Cloud SQL</li>
+    <li><em>yourPassword</em> - измените пароль, который вы указали для своей базы данных в Google Cloud SQL</li>
 </ol>
-<p>AppML should now be configured to connect to your Google Cloud SQL database.</p>
-<p>You can now fill your database with data:</p>
+<p>AppML теперь должен быть настроен для подключения к вашей базе данных Google Cloud SQL.</p>
+<p>Теперь вы можете заполнить свою базу данных данными:</p>
 <ul>
-    <li>If you have access to a PHP server, this is described in the
-    <a href="appml_php.html">AppML PHP chapter</a></li>
-    <li>If you have access to an ASP.NET server, this is described in the
-    <a href="appml_dotnet.html">AppML .NET chapter</a></li>
+    <li>Если у вас есть доступ к PHP-серверу, это описано в разделе <a href="appml_php.html">AppML PHP</a></li>
+    <li>Если у вас есть доступ к серверу ASP.NET, это описано в разделе <a href="appml_dotnet.html">AppML .NET</a></li>
 </ul>
 
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-button w3-green" href="appml_dotnet.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_amazon_rds.html">Next &#10095;</a>
