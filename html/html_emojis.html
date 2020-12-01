@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>HTML Блочные и встроенные элементы. Уроки для начинающих. W3Schools на русском</title>
+<title>HTML Эмодзи/Эмоджи/Смайлы. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="Description" content="HTML Основы. Блочные и встроенные (строчные) элементы на веб-страницах. Как создать блочные и строчные элементы на веб-страницах? Теги div, span. W3Schools на русском. Учебник для начинающих">
-<link href="../favicon.ico" rel="icon" type="image/x-icon">
-<link href="../w3css/4/w3.css" rel="stylesheet">
-<style>
-.mylist {
-  float:left;
-  width:120px;
-}
-.mylist a:link,.mylist a:visited {
-  text-decoration:none;
-}
-.mylist a:hover,.mylist a:active {
-  text-decoration:underline;
-  text-decoration-color: mediumblue;
-}
-</style>
+<meta name="Description" content="Как создать эмодзи / эмоджи / смайлы с помощью HTML? Уроки по HTML для начинающих. Примеры кода смайликов. Полный справочник. Как создать сайт. W3Schools на русском">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
 <body>
@@ -357,160 +344,133 @@
     <div class='w3-col l10 m12' id='main'>
 <a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для начинающих" class="w3-left" title="HTML5 для начинающих" width="90"></a>
 
-<h1>HTML <span class="color_h1">Блочные и встроенные (строчные) элементы</span></h1>
+<h1>Использование эмодзи/эмоджи/смайлов в HTML</h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_lists.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_classes.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="html_symbols.html">&#10094; Prev</a>
+  <a class="w3-right w3-btn" href="html_charset.html">Next &#10095;</a>
 </div>
 <hr>
-<p class="intro">Каждый элемент HTML имеет отображаемое значение по умолчанию в зависимости от типа элемента.</p>
-<p class="intro">Два отображаемых значения: блочный и встроенный (строчный).</p>
-
+<p class="intro">Эмодзи (эмоджи, смайлы) - это символы из набора символов UTF-8: &#128516; &#128525; &#128151;</p>
 <hr>
-<h2>Блочные элементы</h2>
-<p><strong>Блочный элемент</strong> всегда начинается с новой строки и занимает всю доступную ширину (растягивается влево и вправо, насколько это возможно).</p>
-<div class="w3-theme-border" style="border-width:1px;border-style:solid;padding:5px;">
-Элемент &lt;div&gt; - это блочный элемент.</div>
+
+<h2>Что такое эмодзи/эмоджи/смайлы?</h2>
+<p>Эмодзи выглядят как изображения или значки, но на самом деле это не так.</p>
+<p>Это буквы (символы) из набора символов UTF-8 (Unicode).</p>
+
+<div class="w3-panel w3-note">
+<p>UTF-8 охватывает почти все символы и знаки в мире.</p>
+</div>
+<hr>
+
+<h2>HTML атрибут charset</h2>
+<p>Чтобы правильно отображать HTML-страницу, веб-браузер должен знать набор символов, используемый на странице.</p>
+<p>Это указано в теге <code class="w3-codespan">&lt;meta&gt;</code>:</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+</div>
+</div>
+<div class="w3-panel w3-note">
+<p>Если не указано, UTF-8 является набором символов по умолчанию в HTML.</p>
+</div>
+<hr>
+
+<h2>UTF-8 Символы</h2>
+<p>Многие символы UTF-8 нельзя ввести на клавиатуре, но они всегда могут отображаться с помощью чисел (называемых номерами сущностей/символов):</p>
+<ul>
+<li>A - это 65</li>
+<li>B - это 66</li>
+<li>C - это 67</li>
+</ul>
+
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-&lt;div&gt;Hello World&lt;/div&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit739b.html?filename=tryhtml_block_div" target="_blank">Попробуйте сами &raquo;</a>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+  &lt;head&gt;<br>&lt;meta charset=&quot;UTF-8&quot;&gt;<br>&lt;/head&gt;<br>
+&lt;body&gt;<br><br>
+&lt;p&gt;Я буду отображать A B C&lt;/p&gt;<br>
+&lt;p&gt;Я буду отображать &amp;#65; &amp;#66; &amp;#67;&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit37c6.html?filename=tryhtml_emojis_utf8" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 
-<p><strong>Блочные элементы в HTML</strong>:</p>
-<div class="w3-row htmlHigh" style="line-height:25px;font-family:Consolas,'Courier New', Courier, monospace;font-size:16px;">
-  <div class="mylist"><a href="../tags/tag_address.html">&lt;address&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_article.html">&lt;article&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_aside.html">&lt;aside&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_blockquote.html">&lt;blockquote&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_canvas.html">&lt;canvas&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_dd.html">&lt;dd&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_div.html">&lt;div&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_dl.html">&lt;dl&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_dt.html">&lt;dt&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_fieldset.html">&lt;fieldset&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_figcaption.html">&lt;figcaption&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_figure.html">&lt;figure&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_footer.html">&lt;footer&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_form.html">&lt;form&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_hn.html">&lt;h1&gt;-&lt;h6&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_header.html">&lt;header&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_hr.html">&lt;hr&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_li.html">&lt;li&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_main.html">&lt;main&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_nav.html">&lt;nav&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_noscript.html">&lt;noscript&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_ol.html">&lt;ol&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_p.html">&lt;p&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_pre.html">&lt;pre&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_section.html">&lt;section&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_table.html">&lt;table&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_tfoot.html">&lt;tfoot&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_ul.html">&lt;ul&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_video.html">&lt;video&gt;</a></div>
-</div>
-
+<h3>Объяснение примера</h3>
+<p>Элемент <code class="w3-codespan">&lt;meta charset=&quot;UTF-8&quot;&gt;</code> определяет набор символов.</p>
+<p>Символы A, B и C отображаются числами 65, 66 и 67.</p>
+<p>Чтобы браузер понял, что вы показываете символ, вы должны начинать номер объекта с &amp;# и заканчивать его ; (точка с запятой).</p>
 <hr>
 
-<h2>Встроенные (строчные) элементы</h2>
-<p><strong>Встроенный элемент</strong> не начинается с новой строки и занимает столько ширины, сколько необходимо.</p>
-<p>Это <span class="w3-theme-border" style="border-width:1px;border-style:solid;padding:5px">встроенный элемент &lt;span&gt; внутри</span> параграфа.</p>
+<h2>Эмодзи символы</h2>
+<p>Эмодзи также являются символами алфавита UTF-8:</p>
+<ul>
+<li>&#128516; - это 128516</li>
+<li>&#128525; - это 128525</li>
+<li>&#128151; - это 128151</li>
+</ul>
+
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-&lt;span&gt;Hello World&lt;/span&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitb8de.html?filename=tryhtml_inline_span" target="_blank">Попробуйте сами &raquo;</a>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+  &lt;head&gt;<br>&lt;meta charset=&quot;UTF-8&quot;&gt;<br>&lt;/head&gt;<br>
+&lt;body&gt;<br><br>
+&lt;h1&gt;Мой первый эмодзи&lt;/h1&gt;<br><br>
+&lt;p&gt;&amp;#128512;&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit41ca.html?filename=tryhtml_emojis" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 
-<p><strong>Встроенные элементы в HTML</strong>:</p>
-<div class="w3-row htmlHigh" style="line-height:25px;font-family:Consolas,'Courier New', Courier, monospace;font-size:16px;">
-  <div class="mylist"><a href="../tags/tag_a.html">&lt;a&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_abbr.html">&lt;abbr&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_acronym.html">&lt;acronym&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_b.html">&lt;b&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_bdo.html">&lt;bdo&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_big.html">&lt;big&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_br.html">&lt;br&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_button.html">&lt;button&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_cite.html">&lt;cite&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_code.html">&lt;code&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_dfn.html">&lt;dfn&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_em.html">&lt;em&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_i.html">&lt;i&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_img.html">&lt;img&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_input.html">&lt;input&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_kbd.html">&lt;kbd&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_label.html">&lt;label&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_map.html">&lt;map&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_object.html">&lt;object&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_output.html">&lt;output&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_q.html">&lt;q&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_samp.html">&lt;samp&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_script.html">&lt;script&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_select.html">&lt;select&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_small.html">&lt;small&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_span.html">&lt;span&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_strong.html">&lt;strong&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_sub.html">&lt;sub&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_sup.html">&lt;sup&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_textarea.html">&lt;textarea&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_time.html">&lt;time&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_tt.html">&lt;tt&gt;</a></div>
-  <div class="mylist"><a href="../tags/tag_var.html">&lt;var&gt;</a></div>
-</div>
-<hr>
-<h2>Элемент &lt;div&gt;</h2>
-<p>Элемент <code class="w3-codespan">&lt;div&gt;</code> часто используется в качестве контейнера для других элементов HTML.</p>
-<p>Элемент <code class="w3-codespan">&lt;div&gt;</code> не имеет обязательных атрибутов, но <code class="w3-codespan">style</code>, <code class="w3-codespan">class</code> и <code class="w3-codespan">id</code> являются общими.</p>
-<p>При использовании вместе с CSS, элемент <code class="w3-codespan">&lt;div&gt;</code> может использоваться для стилизации блоков контента:</p>
+<p>Поскольку эмодзи - это символы, их можно копировать, отображать и изменять размер, как и с любым другим символом в HTML.</p>
+
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-&lt;div style=&quot;background-color:black;color:white;padding:20px;&quot;&gt;<br>
- &nbsp; &lt;h2&gt;London&lt;/h2&gt;<br>&nbsp; &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;<br>
- &lt;/div&gt;
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+  &lt;head&gt;<br>&lt;meta charset=&quot;UTF-8&quot;&gt;<br>&lt;/head&gt;<br>
+&lt;body&gt;<br><br>
+&lt;h1&gt;Изменение размера эмодзи&lt;/h1&gt;<br><br>
+  &lt;p style=&quot;font-size:48px&quot;&gt;<br>&amp;#128512; &amp;#128516; &amp;#128525; &amp;#128151;<br>&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>&lt;/html&gt;
 </div>
-<a class="w3-btn w3-margin-bottom" href="tryit78bc.html?filename=tryhtml_div_capitals" target="_blank">Попробуйте сами &raquo;</a>
-</div>
-<hr>
-
-<h2>Элемент &lt;span&gt;</h2>
-<p>Элемент <code class="w3-codespan">&lt;span&gt;</code> часто используется в качестве контейнера для некоторого текста.</p>
-<p>Элемент <code class="w3-codespan">&lt;span&gt;</code> не имеет обязательных атрибутов, но <code class="w3-codespan">style</code>, <code class="w3-codespan">class</code> и <code class="w3-codespan">id</code> являются общими.</p>
-<p>При использовании вместе с CSS, элемент <code class="w3-codespan">&lt;span&gt;</code> может использоваться для стилизации частей текста:</p>
-<div class="w3-example">
-<h3>Пример</h3>
-<div class="w3-code notranslate htmlHigh">
-&lt;h1&gt;My &lt;span style=&quot;color:red&quot;&gt;Important&lt;/span&gt; Heading&lt;/h1&gt;<br>
-</div>
-<a class="w3-btn w3-margin-bottom" href="tryit1fcd.html?filename=tryhtml_span_red" target="_blank">Попробуйте сами &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit4724.html?filename=tryhtml_emojis_size" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
-<h2>HTML Группировка тегов</h2>
-<table class="w3-table-all notranslate">
+<h2>Некоторые эмодзи символы в UTF-8</h2>
+<div class="w3-responsive">
+<table class="w3-table-all">
 <tr>
-<th>Тег</th>
-<th>Описание</th>
+<th>Эмодзи</th>
+<th>Значение</th>
 </tr>
-<tr>
-<td><a href="../tags/tag_div.html">&lt;div&gt;</a></td>
-<td>Определяет раздел в документе (блочный элемент)</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_span.html">&lt;span&gt;</a></td>
-<td>Определяет раздел в документе (встроенный элемент)</td>
-</tr>
+<tr><td>&#128507;</td><td>#128507;</td></tr>
+<tr><td>&#128508;</td><td>#128508;</td></tr>
+<tr><td>&#128509;</td><td>#128509;</td></tr>
+<tr><td>&#128510;</td><td>#128510;</td></tr>
+<tr><td>&#128511;</td><td>#128511;</td></tr>
+<tr><td>&#128512;</td><td>#128512;</td></tr>
+<tr><td>&#128513;</td><td>#128513;</td></tr>
+<tr><td>&#128514;</td><td>#128514;</td></tr>
+<tr><td>&#128515;</td><td>#128515;</td></tr>
+<tr><td>&#128516;</td><td>#128516;</td></tr>
+<tr><td>&#128517;</td><td>#128517;</td></tr>
+
 </table>
-<div class="w3-note w3-panel">
-  <p>Для получения полного списка всех доступных HTML тегов, посетите наш <a href="../tags/default.html">HTML Справочник тегов</a>.</p>
 </div>
+
+<p>Полный список эмодзи можно найти в <a href="https://www.w3schools.com/charsets/ref_emoji.asp">HTML Эмодзи справочник</a> на нашем сайте.</p>
 
 <hr>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_lists.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_classes.html">Next &#10095;</a>
+  <a class="w3-left w3-btn" href="html_symbols.html">&#10094; Prev</a>
+  <a class="w3-right w3-btn" href="html_charset.html">Next &#10095;</a>
 </div>
 
 <hr>
@@ -520,7 +480,7 @@
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / html / html_blocks.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / html / html_emojis.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
