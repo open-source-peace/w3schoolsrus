@@ -502,10 +502,12 @@ src="img_sem_elements.gif" width="219" height="258">
 <p>Элемент <code class="w3-codespan">&lt;nav&gt;</code> определяет набор навигационных ссылок.</p>
 <div class="w3-panel w3-note">
 <p>Обратите внимание, что НЕ все ссылки документа должны быть внутри элемента <code class="w3-codespan">&lt;nav&gt;</code>. Элемент <code class="w3-codespan">&lt;nav&gt;</code> предназначен только для основного блока навигационных ссылок.</p>
+<p>Браузеры, такие как программы чтения с экрана для пользователей с ограниченными возможностями, могут использовать этот элемент, чтобы определить, следует ли пропустить начальную визуализацию этого содержимого.</p>
 </div>
 
 <div class="w3-example">
 <h3>Пример</h3>
+<p>Набор навигационных ссылок:</p>
 <div class="w3-code notranslate htmlHigh">
     &lt;nav&gt;<br>
  &nbsp;
@@ -537,6 +539,21 @@ src="img_sem_elements.gif" width="219" height="258">
  &lt;/aside&gt;
 </div>
 <a target="_blank" class="w3-btn w3-margin-bottom" href="tryited17.html?filename=tryhtml5_aside">Попробуйте сами &raquo;</a>
+</div>
+
+<div class="w3-example">
+<h3>Пример 2</h3>
+<p>Используйте CSS для стилизации элемента &lt;aside&gt;:</p>
+<div class="w3-code notranslate htmlHigh">
+  &lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>aside {<br>&nbsp; width: 30%;<br>&nbsp;
+  padding-left: 15px;<br>&nbsp; margin-left: 15px;<br>&nbsp; float: right;<br>&nbsp;
+  font-style: italic;<br>&nbsp; background-color: lightgray;<br>}<br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>
+  <br>&lt;p&gt;Этим летом мы с семьей посетили центр Epcot. Погода была хорошей, и Epcot был восхитителен! Я отлично провел лето вместе с семьей!&lt;/p&gt;<br><br>&lt;aside&gt;<br>
+  &lt;p&gt;Центр Epcot - это тематический парк на территории Walt Disney World Resort с захватывающими аттракционами, международными павильонами, отмеченными наградами фейерверками и сезонными специальными мероприятиями.&lt;/p&gt;<br>&lt;/aside&gt;<br><br>
+  &lt;p&gt;Этим летом мы с семьей посетили центр Epcot. Погода была хорошей, и Epcot был восхитителен! Я отлично провела лето вместе с семьей!&lt;/p&gt;<br>
+  &lt;p&gt;Этим летом мы с семьей посетили центр Epcot. Погода была хорошей, и Epcot был восхитителен! Я отлично провела лето вместе с семьей!&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+<a target="_blank" href="tryitd466.html?filename=tryhtml5_aside2" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
 </div>
 <hr>
 
