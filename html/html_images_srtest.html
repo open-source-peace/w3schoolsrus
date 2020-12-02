@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>HTML id. Идентификаторы. Уроки для начинающих. W3Schools на русском</title>
+<title>HTML Изображения. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Атрибут id. Идентификатор. Основы HTML. Что такое атрибуты html-элементов? Как задать оригинальный стиль для одного элемента? W3Schools на русском. Учебник для начинающих.">
+<meta name="description" content="HTML Основы. Изображения на веб-страницах. Как добавить изображение на сайте? Синтаксис, атрибуты, размеры. W3Schools на русском. Учебник для начинающих.">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
-<style>
-#myHeader {
-    background-color: lightblue;
-    padding: 40px;
-    text-align: center;
-}
-</style>
 </head>
 
 <body>
@@ -345,150 +338,272 @@
 </div>
 <!--/Left menu sidebar -->
 
-<!--CONTENT-->
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
   <div class='w3-row w3-white'>
     <div class='w3-col l10 m12' id='main'>
 <a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для начинающих" class="w3-left" title="HTML5 для начинающих" width="90"></a>
 
-<h1>HTML <span class="color_h1">атрибут id. Идентификатор</span></h1>
+<h1>HTML <span class="color_h1">Изображения</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_classes.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_iframe.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="html_links.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="html_images_imagemap.html">Next &#10095;</a>
 </div>
 <hr>
-<h2>Использование атрибута id</h2>
-<p>Атрибут <code class="w3-codespan">id</code> задает уникальный идентификатор для элемента HTML (значение должно быть уникальным в документе HTML).</p>
-<p>Значение id может использоваться CSS и JavaScript для выполнения определенных задач для элемента с определенным значением id.</p>
-<p>В CSS, чтобы выбрать элемент с определенным идентификатором, напишите символ хеша (#), за которым следует идентификатор элемента:</p>
+<p class="intro">Изображения могут улучшить дизайн и внешний вид веб-страницы.</p>
+<hr>
+
+<div class="w3-row" style="text-align:center">
+  <div class="w3-col m4" style="background-image:url('pic_trulli.jpg');background-size:cover;height:300px;">
+  </div>
+  <div class="w3-col m4" style="background-image:url('img_girl.jpg');background-size:cover;height:300px;">
+  </div>
+  <div class="w3-col m4" style="background-image:url('img_chania.jpg');background-size:cover;height:300px;">
+  </div>
+</div>
 
 <div class="w3-example">
 <h3>Пример</h3>
-<p>Используйте CSS для стилизации элемента с id "myHeader":</p>
 <div class="w3-code notranslate htmlHigh">
-  &lt;style&gt;<br>
-  <strong>#myHeader</strong> {<br>&nbsp; background-color: lightblue;<br>&nbsp;&nbsp;color: black;<br>&nbsp;&nbsp;padding:
-  40px;<br>&nbsp;&nbsp;text-align: center;<br>} <br>&lt;/style&gt;<br>
-  <br>&lt;h1 id=&quot;myHeader&quot;&gt;My Header&lt;/h1&gt;<br></div>
-  <p>Результат:</p>
-  <h1 id="myHeader">My Header</h1>
+ &lt;img src=&quot;pic_trulli.jpg&quot;
+alt=&quot;Italian Trulli&quot;&gt;<br>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit5ec9.html?filename=tryhtml_images_trulli" target="_blank">Попробуйте сами &raquo;</a>
+</div>
 
-<a class="w3-btn w3-margin-bottom" style="margin-top:8px" href="tryit89a7.html?filename=tryhtml_id_css" target="_blank">
- Попробуйте сами &raquo;</a>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+ &lt;img src=&quot;img_girl.jpg&quot;
+alt=&quot;Girl in a jacket&quot;&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryitb432.html?filename=tryhtml_images_girl" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+ &lt;img src=&quot;img_chania.jpg&quot;
+alt=&quot;Flowers in Chania&quot;&gt;<br>
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit308e.html?filename=tryhtml_images_chania" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<hr>
+
+<h2>HTML Синтаксис изображений</h2>
+<p>В HTML изображения определяются с помощью тега <code class="w3-codespan">&lt;img&gt;</code>.</p>
+<p>Тег <code class="w3-codespan">&lt;img&gt;</code> пустой, содержит только атрибуты и не имеет закрывающего тега.</p>
+<p>Атрибут <code class="w3-codespan">src</code> указывает URL (веб-адрес) изображения:</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;<i>url</i>&quot;&gt;
+</div></div>
+<hr>
+
+<h2>Атрибут alt</h2>
+<p>Атрибут <code class="w3-codespan">alt</code> предоставляет альтернативный текст для изображения, если пользователь по какой-либо причине не может его просмотреть: из-за медленного Интернет-соединения, ошибки в атрибуте src или если пользователь использует программу чтения с экрана (скринридер).</p>
+<p>Значение атрибута <code class="w3-codespan">alt</code> должно описывать изображение, т.е. то, что на нём изображено:</p>
+<div class="w3-example">
+  <h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;img_chania.jpg&quot; alt=&quot;Flowers in Chania&quot;&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit0aa4.html?filename=tryhtml_images_alt_chania" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<p>Если браузер не может найти изображение, он отображает значение атрибута <code class="w3-codespan">alt</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;wrongname.gif&quot; alt=&quot;Flowers in Chania&quot;&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit8e07.html?filename=tryhtml_images_wrongname" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<div class="w3-panel w3-note">
+  <p><strong>Примечание:</strong> Атрибут <code class="w3-codespan">alt</code> обязателен. Без него веб-страница не будет считаться валидной.</p>
+</div>
+<hr>
+
+<h2>Размер изображения - Width и Height - Ширина и Высота</h2>
+<p>Вы можете использовать атрибут <code class="w3-codespan">style</code> для указания ширины и высоты изображения.</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;img_girl.jpg&quot; alt=&quot;Girl in a jacket&quot; style=&quot;width:500px;height:600px;&quot;&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit975c.html?filename=tryhtml_images_size" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+
+<p>Кроме того, вы можете использовать атрибуты <code class="w3-codespan">width</code> и <code class="w3-codespan">height</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;img_girl.jpg&quot; alt=&quot;Girl in a jacket&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit6935.html?filename=tryhtml_images_attributes" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<p>Атрибуты <code class="w3-codespan">width</code> и <code class="w3-codespan">height</code> всегда определяют ширину и высоту изображения в пикселях.</p>
+
+<div class="w3-panel w3-note">
+  <p><strong>Примечание:</strong> Всегда указывайте ширину и высоту изображения. Если ширина и высота не указаны, то при загрузке изображения страница может мигать.</p>
+</div>
+<hr>
+
+<h2>Ширина и высота или стиль?</h2>
+<p>Атрибуты <code class="w3-codespan">width</code>, <code class="w3-codespan">height</code> и <code class="w3-codespan">style</code> валидны в HTML.</p>
+<p>Однако мы рекомендуем использовать атрибут <code class="w3-codespan">style</code>. Это препятствует тому, чтобы таблицы стилей изменили размер изображений:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+ &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>img { <br>&nbsp;&nbsp;width: 100%; <br>}<br>
+ &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;img src=&quot;html5.gif&quot; alt=&quot;HTML5 Icon&quot; width=&quot;128&quot; height=&quot;128&quot;&gt;<br>&lt;img src=&quot;html5.gif&quot; alt=&quot;HTML5 Icon&quot; style=&quot;width:128px;height:128px;&quot;&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryit19ca.html?filename=tryhtml_images_style" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<hr>
+
+<h2>Изображения в другой папке</h2>
+<p>Если не указано, браузер ожидает найти изображение в той же папке, в которой находится и веб-страница.</p>
+<p>Однако изображения обычно хранятся в подпапках (других папках). Затем вы должны включить имя папки в атрибут <code class="w3-codespan">src</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;/images/html5.gif&quot;
+alt=&quot;HTML5 Icon&quot; style=&quot;width:128px;height:128px;&quot;&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitd52f.html?filename=tryhtml_images_folder" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<div class="w3-panel w3-note">
+	<p>Обычно папкам с изображениями дают названия <b>img</b> или <b>images</b>.</p>
+</div>
+<hr>
+
+<h2>Изображения на другом сервере</h2>
+<p>Некоторые веб-сайты хранят свои изображения на специальных серверах изображений.</p>
+<p>На самом деле, вы можете получить доступ к изображениям с любого веб-адреса в мире, прописав полный путь к изображению:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;img src=&quot;https://www.w3schools.com/images/w3schools_green.jpg&quot; alt=&quot;W3Schools.com&quot;&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitb021.html?filename=tryhtml_images_w3schools" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 
 <div class="w3-panel w3-note">
-  <p><strong>Совет:</strong> Атрибут id можно использовать в <strong>любом</strong> HTML элементе.</p>
-  <p><strong>Примечание:</strong> Значение id чувствительно к регистру.</p>
-  <p><strong>Примечание:</strong> Значение id должно содержать как минимум <strong>один</strong> символ, и <strong>не должен</strong> содержать свободное место (пробелы, символы табуляции и т.д.).</p>
+<p>Вы можете прочитать больше о путях к файлам в главе <a href="html_filepaths.html">HTML Пути к файлам</a>.</p>
 </div>
 <hr>
 
-<h2>Разница между классом и ID</h2>
-<p>Элемент HTML может иметь только один уникальный идентификатор, который принадлежит этому единственному элементу, в то время как имя класса может использоваться несколькими элементами:</p>
+<h2>Анимированные изображения</h2>
+<p>HTML позволяет использовать анимированные GIF:</p>
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-  &lt;style&gt;<br>/* Стиль элемента с id "myHeader"
-  */<br>
-  <strong>#myHeader</strong> {<br>&nbsp; background-color: lightblue;<br>&nbsp;
-  color: black;<br>&nbsp;&nbsp;padding:
-  40px;<br>&nbsp;&nbsp;text-align: center;<br>}<br><br>/* Стиль всех элементов с именем класса "city" */<br><strong>.city
-  </strong>{<br>&nbsp; background-color: tomato;<br>&nbsp;&nbsp;color: white;<br>&nbsp;&nbsp;padding: 10px;<br>} <br>&lt;/style&gt;<br>
-  <br>&lt;!-- Уникальный элемент --&gt;<br>&lt;h1 id=&quot;myHeader&quot;&gt;My
-  Cities&lt;/h1&gt;<br><br>&lt;!-- Несколько похожих элементов --&gt;<br>&lt;h2 class=&quot;city&quot;&gt;London&lt;/h2&gt;<br>&lt;p&gt;London is the capital of England.&lt;/p&gt;<br><br>
-  &lt;h2 class=&quot;city&quot;&gt;Paris&lt;/h2&gt;<br>&lt;p&gt;Paris is the capital of France.&lt;/p&gt;<br><br>
-  &lt;h2 class=&quot;city&quot;&gt;Tokyo&lt;/h2&gt;<br>&lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;<br></div>
-<a class="w3-btn w3-margin-bottom" href="tryitf300.html?filename=tryhtml_id_class" target="_blank">
- Попробуйте сами &raquo;</a>
+&lt;img src=&quot;programming.gif&quot; alt=&quot;Computer Man&quot; style=&quot;width:48px;height:48px;&quot;&gt;
 </div>
+<a class="w3-btn w3-margin-bottom" href="tryite923.html?filename=tryhtml_images_hackman" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+<hr>
+
+<h2>Изображение как ссылка</h2>
+<p>Чтобы использовать изображение в качестве ссылки, поставьте тег <code class="w3-codespan">&lt;img&gt;</code> внутри тега <code class="w3-codespan">&lt;a&gt;</code>:</p>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;a href=&quot;default.asp&quot;&gt;<br>&nbsp; &lt;img src=&quot;smiley.gif&quot; alt=&quot;HTML tutorial&quot;
+style=&quot;width:42px;height:42px;border:0;&quot;&gt;<br>&lt;/a&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit991b.html?filename=tryhtml_images_link" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+
 <div class="w3-panel w3-note">
-  <p><strong>Совет:</strong> Вы можете узнать больше о CSS в нашем <a href="../css/default.html">CSS Учебнике</a>.</p>
+<p><strong>Примечание:</strong> <code class="w3-codespan">border:0;</code> добавлено, чтобы IE9 (и более ранние версии) не отображал рамку вокруг изображения (когда изображение является ссылкой).</p>
 </div>
 <hr>
 
-<h2>Закладки с идентификатором и ссылками</h2>
-<p>HTML-закладки используются, чтобы позволить читателям переходить к определенным частям веб-страницы.</p>
-<p>Закладки могут быть полезны, если ваша веб-страница очень длинная.</p>
-<p>Чтобы сделать закладку, сначала необходимо создать закладку, а затем добавить ссылку на нее..</p>
-<p>При нажатии на ссылку страница прокручивается до места с закладкой.</p>
-<h2>Пример</h2>
-<p>Сначала создайте закладку с атрибутом <code class="w3-codespan">id</code>:</p>
-<div class="w3-example">
-<div class="w3-code notranslate htmlHigh">
-&lt;h2 id=&quot;C4&quot;&gt;Chapter 4&lt;/h2&gt;</div>
-</div>
-<p>Затем добавьте ссылку на закладку (&quot;Перейти к разделу 4&quot;) на той же странице:</p>
-<div class="w3-example">
-<div class="w3-code notranslate htmlHigh">
- &lt;a href=&quot;#C4&quot;&gt;Jump to Chapter 4&lt;/a&gt;
-</div>
-</div>
-<p>Или добавьте ссылку на закладку (&quot;Перейти к разделу 4&quot;) с другой страницы:</p>
+<h2>Плавающее изображение</h2>
+<p>Используйте CSS свойство <code class="w3-codespan">float</code> позволяющее изображению плавать вправо или влево от текста:</p>
 <div class="w3-example">
 <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-&lt;a href=&quot;html_demo.html#C4&quot;&gt;Jump to Chapter 4&lt;/a&gt;
-</div>
-<a target="_blank" href="tryit3864.html?filename=tryhtml_links_bookmark" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
-</div>
-<hr>
-
-<h2>Использование атрибута id в JavaScript</h2>
-<p>JavaScript может получить доступ к элементу с указанным идентификатором, используя метод <code class="w3-codespan">getElementById()</code>:</p>
-
-<div class="w3-example">
-<h3>Пример</h3>
-  <p>Используйте атрибут id для управления текстом с помощью JavaScript:</p>
-<div class="w3-code notranslate htmlHigh">
-  &lt;script&gt;<br>function displayResult() {<br>&nbsp;&nbsp;document.getElementById(&quot;myHeader&quot;).innerHTML = &quot;Have a nice day!&quot;;<br>}<br>
-  &lt;/script&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit16e1.html?filename=tryhtml_id_js" target="_blank">
- Попробуйте сами &raquo;</a>
+&lt;p&gt;&lt;img src=&quot;smiley.gif&quot; alt=&quot;Smiley face&quot;
+style=&quot;float:right;width:42px;height:42px;&quot;&gt;<br>
+ The image will float to the right of
+the text.&lt;/p&gt;<br><br>&lt;p&gt;&lt;img src=&quot;smiley.gif&quot; alt=&quot;Smiley face&quot;
+style=&quot;float:left;width:42px;height:42px;&quot;&gt;<br>
+ The image will float to the left of
+the text.&lt;/p&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryitd67c.html?filename=tryhtml_images_float" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 <div class="w3-note w3-panel">
-<p><strong>Совет:</strong> Узнайте больше про JavaScript в <a href="html_scripts.html">HTML JavaScript</a> разделе или в нашем <a href="../js/default.html">JavaScript Учебнике</a>.</p>
+<p><strong>Совет:</strong> Чтобы узнать больше о CSS Float, прочитайте наш <a href="../css/css_float.html">CSS Float Учебник</a>.<br></p>
+</div>
+
+<hr>
+<h2>HTML Считыватели экрана (скринридеры)</h2>
+<p>Программа чтения с экрана - это программа, которая читает код HTML, преобразует текст и позволяет пользователю &quot;прослушивать&quot; контент. Программы чтения с экрана полезны для людей с нарушениями зрения или для обучения.</p>
+<hr>
+
+<h2>Резюме раздела</h2>
+<ul>
+  <li>Используйте HTML элемент <code class="w3-codespan">&lt;img&gt;</code> для определения изображения</li>
+  <li>Используйте HTML атрибут <code class="w3-codespan">src</code> для определения URL изображения</li>
+  <li>Используйте HTML атрибут <code class="w3-codespan">alt</code> для определения альтернативного текста для изображения, если он не может быть отображен</li>
+  <li>Используйте HTML атрибуты <code class="w3-codespan">width</code> и <code class="w3-codespan">height</code> для определения размера изображения</li>
+  <li>Используйте CSS свойства <code class="w3-codespan">width</code> и <code class="w3-codespan">height</code> для определения размера изображения (альтернативно)</li>
+  <li>Используйте CSS свойство <code class="w3-codespan">float</code>, чтобы позволить изображению плавать</li>
+  <li>Используйте HTML элемент <code class="w3-codespan">&lt;map&gt;</code> для определения изображения-карты</li>
+  <li>Используйте HTML элемент <code class="w3-codespan">&lt;area&gt;</code> для определения интерактивных областей на изображении-карте</li>
+  <li>Используйте для HTML элемента <code class="w3-codespan">&lt;img&gt;</code> атрибут <code class="w3-codespan">usemap</code> указывающий на изображение-карту</li>
+  <li>Используйте HTML элемент <code class="w3-codespan">&lt;picture&gt;</code> для отображения разных изображений для разных устройств</li>
+</ul>
+<div class="w3-panel w3-note">
+<p><strong>Примечание:</strong> Загрузка изображений занимает некоторое время. Большие изображения могут замедлить вашу страницу. Используйте изображения умеренно, при возможности максимально уменьшая их размеры.</p>
 </div>
 <hr>
 <h2>HTML Упражнения</h2>
-<form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_id1" method="post" target="_blank">
-<h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
+<form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_images1" method="post" target="_blank">
+<h2 class="heading">Проверьте себя с помощью упражнений</h2>
 <div class="exercisewindow">
 <h2>Упражнение:</h2>
-<p>Добавьте корректный HTML-атрибут, чтобы сделать элемент H1 красным.</p>
+<p>Используйте атрибуты HTML изображения, чтобы установить размер изображения 250 пикселей в ширину и 400 пикселей в высоту.</p>
 <div class="exerciseprecontainer">
-&lt;!DOCTYPE html&gt;
-<br>
-&lt;html&gt;
-<br>
-&lt;head&gt;
-<br>
-&lt;style&gt;
-<br>
-#myheader {color:red;}
-<br>
-&lt;/style&gt;
-<br>
-&lt;/head&gt;
-<br>
-&lt;body&gt;
-<br><br>
-&lt;h1 <input name="ex1" spellcheck="false" maxlength="13" style="width: 135px;">&gt;My Home Page&lt;/h1&gt;
-<br><br>
-&lt;/body&gt;
-<br>
-&lt;/html&gt;
+&lt;img src="scream.png" <input name="ex1" spellcheck="false" maxlength="5" style="width: 56px;">="250" <input name="ex2" spellcheck="false" maxlength="6" style="width: 66px;">="400"&gt;
 </div>
 <br>
 <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
-<p><a target="_blank" href="exercise4d98.html?filename=exercise_html_id1">Начать упражнение</a></p>
+<p><a target="_blank" href="exercisea5bb.html?filename=exercise_html_images1">Начать упражнение</a></p>
 </div>
 </form>
+<hr>
+
+<h2>HTML теги изображений</h2>
+<table class="w3-table-all notranslate">
+<tr>
+<th>Тег</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><a href="../tags/tag_img.html">&lt;img&gt;</a></td>
+<td>определяет изображение</td>
+</tr>
+<tr>
+<td><a href="../tags/tag_map.html">&lt;map&gt;</a></td>
+<td>Определяет изображение-карту</td>
+</tr>
+<tr>
+<td><a href="../tags/tag_area.html">&lt;area&gt;</a></td>
+<td>Определяет кликабельную площадь внутри изображения-карты</td>
+</tr>
+<tr>
+<td><a href="../tags/tag_picture.html">&lt;picture&gt;</a></td>
+<td>Определяет контейнер для нескольких ресурсов изображения</td>
+</tr>
+</table>
+<div class="w3-note w3-panel">
+  <p>Для получения полного списка всех доступных HTML тегов, посетите наш <a href="../tags/default.html">HTML Справочник тегов</a>.</p>
+</div>
 
 <hr>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_classes.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_iframe.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="html_links.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="html_images_imagemap.html">Next &#10095;</a>
 </div>
 
 <hr>
@@ -498,7 +613,7 @@
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / html / html_id.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / html / html_.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
