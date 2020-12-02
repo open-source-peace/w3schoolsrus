@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML Справочник. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="Учебник по AppML. Атрибуты. Сообщения. Модели. Свойства модели. Безопасность приложений. Частные модели. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
@@ -294,53 +294,53 @@
 <a class="w3-right w3-button w3-green" href="appml_ref_files.html">Next &#10095;</a>
 </div>
 <hr>
+
 <h2>AppML HTML Атрибуты</h2>
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate htmlHigh">
-    &lt;div appml-include-html="inc_header.htm"&gt;&lt;/div&gt;<br><br>&lt;h1&gt;Customers&lt;/h1&gt;<br>&lt;table
+    &lt;div appml-include-html="inc_header.html"&gt;&lt;/div&gt;<br><br>&lt;h1&gt;Клиенты&lt;/h1&gt;<br>&lt;table
     appml-data="customers.js" appml-controller="myController"&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;
-    &lt;th&gt;Customer&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;City&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;
-    &lt;th&gt;Country&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr appml-repeat="records"&gt;<br>&nbsp;&nbsp;&nbsp;
+    &lt;th&gt;Клиент&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Город&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;
+    &lt;th&gt;Страна&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr appml-repeat="records"&gt;<br>&nbsp;&nbsp;&nbsp;
     &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;{{City}}&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;
     &lt;td&gt;{{Country}}&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&lt;/table&gt;<br><br>
-    &lt;div appml-include-html="inc_footer.htm"&gt;&lt;/div&gt;
+    &lt;div appml-include-html="inc_footer.html"&gt;&lt;/div&gt;
 </div>
 <a class="w3-btn w3-margin-bottom" href="tryit7ffe.html?filename=tryappml_ref_attributes" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 <table class="w3-table-all notranslate">
   <tr>
-    <th width="25%">Attribute</th>
-    <th>Description</th>
-    <th width="25%">Explained</th>
+    <th style="width:25%">Атрибут</th>
+    <th>Описание</th>
+    <th style="width:25%">Объяснение</th>
   </tr>
   <tr>
     <td>appml-controller</td>
-    <td>Defines an AppML controller</td>
-    <td><a href="appml_controllers.html">AppML Controllers</a></td>
+    <td>Определяет контроллер AppML</td>
+    <td><a href="appml_controllers.html">AppML Контроллеры</a></td>
   </tr>
   <tr>
     <td>appml-data</td>
-    <td>Defines the data source for an application</td>
-    <td><a href="appml_data.html">AppML Data</a></td>
+    <td>Определяет источник данных для приложения</td>
+    <td><a href="appml_data.html">AppML Данные</a></td>
   </tr>
   <tr>
     <td>appml-include-html</td>
-    <td>Defines HTML to be included</td>
-    <td><a href="appml_includes.html">AppML Includes</a></td>
+    <td>Определяет HTML для включения</td>
+    <td><a href="appml_includes.html">AppML Включения</a></td>
   </tr>
   <tr>
     <td>appml-repeat</td>
-    <td>Defines an HTML element to be repeated</td>
-    <td><a href="appml_howto.html">AppML Howto</a></td>
+    <td>Определяет повторяющийся элемент HTML</td>
+    <td><a href="appml_howto.html">AppML Как работает</a></td>
   </tr>
 </table>
-
 <hr>
 
-<h2>AppML Messages</h2>
+<h2>AppML Сообщения</h2>
 <div class="w3-example">
- <h3>Example</h3>
+ <h3>Пример</h3>
 <div class="w3-code notranslate jsHigh">
 function myController($appml) {<br>
 &nbsp;&nbsp;&nbsp; if ($appml.message == "display") {<br>
@@ -355,46 +355,41 @@ function myController($appml) {<br>
 
 <table class="w3-table-all notranslate">
   <tr>
-    <th width="25%">Message</th>
-    <th>Sent</th>
+    <th style="width:25%">Сообщение</th>
+    <th>Отправляет</th>
   </tr>
   <tr>
     <td>ready</td>
-    <td>After AppML is initiated, and ready to load data.</td>
+    <td>После запуска AppML и готовности к загрузке данных</td>
   </tr>
     <tr>
     <td>loaded</td>
-    <td>After AppML is fully loaded, ready to display data.</td>
+    <td>После полной загрузки AppML готов к отображению данных</td>
     </tr>
     <tr>
     <td>display</td>
-    <td>Before AppML displays a data item.</td>
+    <td>Перед тем, как AppML отобразит элемент данных</td>
     </tr>
   <tr>
     <td>done</td>
-    <td>After AppML is done (finished displaying).</td>
+    <td>После того, как AppML завершен (отображение завершено)</td>
   </tr>
     <tr>
     <td>submit</td>
-    <td>Before AppML submits data.</td>
+    <td>Прежде чем AppML отправит данные</td>
     </tr>
   <tr>
     <td>error</td>
-    <td>After AppML has encountered an error.</td>
+    <td>После того, как AppML обнаружил ошибку</td>
   </tr>
 </table>
 
-
-<p>AppML messages are explained in the chapter about
-<a href="appml_messages.html">AppML messages</a>.</p>
-
-
+<p>Сообщения AppML описаны в разделе <a href="appml_messages.html">AppML сообщения</a>.</p>
 <hr>
 
-<h2>AppML Models</h2>
-
+<h2>AppML Модели</h2>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate jsHigh">
 {<br>"security": "admin",<br>
  "rowsperpage" : 10,<br>
@@ -409,48 +404,46 @@ function myController($appml) {<br>
 &nbsp;&nbsp;&nbsp; {"item" : "Country"}]<br>}
 </div>
 </div>
-
-
 <hr>
-<h2>AppML Model Properties</h2>
+
+<h2>AppML Свойства модели</h2>
 <table class="w3-table-all notranslate">
   <tr>
-    <th style="width:30%">Element</th>
-    <th>Description</th>
+    <th style="width:30%">Элемент</th>
+    <th>Описание</th>
   </tr>
   <tr>
     <td>"data"</td>
-    <td>Defines a flat file source for the model</td>
+    <td>Определяет источник flat файла для модели</td>
   </tr>
   <tr>
     <td>"database"</td>
-    <td>Defines a database source for the model</td>
+    <td>Определяет источник базы данных для модели</td>
   </tr>
   <tr>
     <td>"filteritems"</td>
-    <td>Defines filter restrictions</td>
+    <td>Определяет ограничения фильтра</td>
   </tr>
   <tr>
     <td>"rowsperpage"</td>
-    <td>Defines number of rows to be fetched per page</td>
+    <td>Определяет количество строк, которые нужно выбрать на странице</td>
   </tr>
   <tr>
     <td>"security"</td>
-    <td>Defines the security for the model</td>
+    <td>Определяет безопасность для модели</td>
   </tr>
   <tr>
     <td>"sortitems"</td>
-    <td>Defines sorting restrictions</td>
+    <td>Определяет ограничения сортировки</td>
   </tr>
 </table>
-
 <hr>
-<h2>Application Security</h2>
-<p>You have to be logged in as a member of the "admin" group, to access this
-application:</p>
+
+<h2>Безопасность приложений</h2>
+<p>Вы должны войти в систему как член группы "admin", чтобы получить доступ к этому приложению:</p>
 
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate jsHigh">
 {<br>"security": "admin",<br>
 "database": {<br>&nbsp;&nbsp;&nbsp; "connection": "mysql",<br>&nbsp;&nbsp;&nbsp;
@@ -458,29 +451,28 @@ application:</p>
 "orderby"&nbsp;&nbsp; : "CustomerName"}<br>}
 </div>
 </div>
-
 <hr>
-<h2>Private Models</h2>
-<p>You can add your own private data to the model.</p>
-<p>This example suggests restrictions to data:</p>
+
+<h2>Частные модели</h2>
+<p>Вы можете добавить в модель свои личные данные.</p>
+<p>В этом примере предлагаются ограничения на данные:</p>
 
 <div class="w3-example">
- <h3>Example</h3>
+ <h3>Пример</h3>
  <div class="w3-code notranslate jsHigh">
     "restrictions" : {<br>&nbsp;&nbsp;&nbsp;
     "fname" : {"maxlength": 40},<br>&nbsp;&nbsp;&nbsp;
     "price" : {"max": 999,"min": 100}<br>&nbsp;&nbsp;&nbsp; }
 </div>
 </div>
-<p>Model data can be used by server applications, and by your AppML controller.</p>
-<p>This example uses model data to validate input:</p>
+<p>Данные модели могут использоваться серверными приложениями и вашим контроллером AppML.</p>
+<p>В этом примере используются данные модели для проверки ввода:</p>
 
 <div class="w3-example">
  <h3>Пример</h3>
 <div class="w3-code notranslate jsHigh">
     function myController($appml) {<br>&nbsp;&nbsp;&nbsp;
-    if ($appml.message == "submit") {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var price = document.getElementById("price").value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (price &lt; $appml.model.restrictions.price.min) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $appml.displayError(15, "Price
-    too low!");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+    if ($appml.message == "submit") {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var price = document.getElementById("price").value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (price &lt; $appml.model.restrictions.price.min) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $appml.displayError(15, "Цена слишком низкая!");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
     }<br>
 </div>
 </div>
@@ -498,7 +490,7 @@ application:</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / appml / appml_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / appml / appml_reference.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
