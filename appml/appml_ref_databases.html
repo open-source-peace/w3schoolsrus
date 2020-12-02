@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML Справочник - Базы данных. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="AppML Справочник - Базы данных. Свойство database определяет базу данных как источник данных. Данные из базы данных. Ограничения фильтра. Ограничения сортировки. Подключения к базе данных. Учебник по AppML. W3Schools на русском">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_ref_databases.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -296,7 +296,7 @@
 <hr>
 
 <h2>Свойство "database"</h2>
-<p>The "database" property defines a database as the data source. It has the following sub properties:</p>
+<p>Свойство "database" определяет базу данных как источник данных. Он имеет следующие вспомогательные свойства:</p>
 <table class="w3-table-all notranslate">
   <tr>
     <th style="width:30%">Элемент</th>
@@ -304,36 +304,35 @@
   </tr>
   <tr>
     <td>"connection"</td>
-    <td>The name of a database connection</td>
+    <td>Имя подключения к базе данных</td>
   </tr>
   <tr>
     <td>"execute"</td>
-    <td>Array of SQL statements to be executed before data retrieval (optional) </td>
+    <td>Массив операторов SQL, выполняемых перед извлечением данных (необязательно)</td>
   </tr>
   <tr>
     <td>"keyfield"</td>
-    <td>The key field for the main table (optional)</td>
+    <td>Ключевое поле для основной таблицы (необязательно)</td>
   </tr>
   <tr>
     <td>"maintable"</td>
-    <td>The main table for this application (optional)</td>
+    <td>Основная таблица для этого приложения (необязательно)</td>
   </tr>
   <tr>
     <td>"orderby"</td>
-    <td>A fixed SQL orderby clause for the application (optional)</td>
+    <td>Фиксированный SQL-запрос для приложения (необязательно)</td>
   </tr>
   <tr>
     <td>"sql"</td>
-    <td>The SQL statement for retrieving data</td>
+    <td>Оператор SQL для получения данных</td>
   </tr>
   </table>
-
 <hr>
-<h2>Data From a Database</h2>
-<p>This model fetches records containing Customer, City, and Country from a
-Customer table in an SQL database:</p>
+
+<h2>Данные из базы данных</h2>
+<p>Эта модель извлекает записи, содержащие Customer, City и Country, из таблицы Customer в базе данных SQL:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate jsHigh">
  {<br>"database": {<br>&nbsp;&nbsp;&nbsp; "connection": "mysql",<br>
 &nbsp;&nbsp;&nbsp;
@@ -344,11 +343,10 @@ Customer table in an SQL database:</p>
 }<br>}
 </div>
 </div>
-
 <hr>
 
-<h2>Filter Restrictions</h2>
-<p>To allow users to filter data, you can add filter information to the model:</p>
+<h2>Ограничения фильтра</h2>
+<p>Чтобы пользователи могли фильтровать данные, вы можете добавить информацию о фильтре в модель:</p>
 <div class="w3-example">
 <div class="w3-code notranslate jsHigh">
 "filteritems" : [<br>
@@ -359,9 +357,8 @@ Customer table in an SQL database:</p>
 </div>
 <hr>
 
-<h2>Sorting Restrictions</h2>
-
-<p>To allow users to sort data, you can add sort information&nbsp;to the model:</p>
+<h2>Ограничения сортировки</h2>
+<p>Чтобы пользователи могли сортировать данные, вы можете добавить в модель информацию о сортировке:</p>
 <div class="w3-example">
 <div class="w3-code notranslate jsHigh">
 "sortitems" : [<br>
@@ -370,13 +367,12 @@ Customer table in an SQL database:</p>
 &nbsp;&nbsp;&nbsp; {"item" : "Country"}]
 </div>
 </div>
-
 <hr>
-<h2>Update Restrictions</h2>
-<p>To allow users to update data, you can include update information in the
-model:&nbsp; </p>
+
+<h2>Обновить ограничения</h2>
+<p>Чтобы пользователи могли обновлять данные, вы можете включить информацию об обновлении в модель:</p>
 <div class="w3-example">
-<h3>Example</h3>
+<h3>Пример</h3>
 <div class="w3-code notranslate jsHigh">"updateItems" : [<br>
 &nbsp;&nbsp;&nbsp; {"item" : "CustomerName"},<br>&nbsp;&nbsp;&nbsp;
  {"item" : "Address"},<br>&nbsp;&nbsp;&nbsp; {"item" : "PostalCode"},<br>&nbsp;&nbsp;&nbsp;
@@ -385,13 +381,12 @@ model:&nbsp; </p>
 </div>
 
 <div class="w3-panel w3-note">
-  <p>By default, AppML will let you filter, sort, or update data, only it is
-specified in the model.</p>
+  <p>По умолчанию AppML позволяет фильтровать, сортировать или обновлять данные, только они указаны в модели.</p>
 </div>
-
 <hr>
-<h2>Database Connections</h2>
-<p>Database connections are defined in <strong>appml_config.php</strong>:</p>
+
+<h2>Подключения к базе данных</h2>
+<p>Подключения к базе данных определены в <strong>appml_config.php</strong>:</p>
 <div class="w3-example">
 <h3>appml_config.php</h3>
 <div class="w3-code notranslate">
@@ -420,28 +415,28 @@ specified in the model.</p>
 </div>
 </div>
 <div class="w3-panel w3-note">
-  <p>The configuration file can contain many database connections.</p>
+  <p>Файл конфигурации может содержать множество подключений к базе данных.</p>
 </div>
-
 <hr>
-<h2>Creating Databases</h2>
-<p>Since AppML allows you to execute SQL statements before the application is
-started, you can use this to create a database if needed:</p>
+
+<h2>Создание баз данных</h2>
+<p>Поскольку AppML позволяет выполнять операторы SQL перед запуском приложения, вы можете использовать его для создания базы данных при необходимости:</p>
 <div class="w3-example">
-<h3>Model</h3>
+<h3>Модель</h3>
 <div class="w3-code notranslate jsHigh">
  {<br>"database" : {<br>"connection" : "myCDs",<br>"execute" : [<br>"DROP
  TABLE IF EXISTS CD_Catalog",<br>"CREATE TABLE IF NOT EXISTS CD_Catalog (CDID
  INT NOT NULL AUTO_INCREMENT,PRIMARY KEY (CDID),Title NVARCHAR(255),Artist NVARCHAR(255),Country NVARCHAR(255),Price
  NUMBER)"<br>]<br>}}</div>
 </div>
-<p>Perfect for rapid prototyping!</p>
+<p>Идеально подходит для быстрого прототипирования!</p>
 
 <hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-button w3-green" href="appml_ref_files.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_ref_api.html">Next &#10095;</a>
 </div>
+
 <hr>
 <!--Комментарии от Disqus-->
 <iframe class="predisqus" src="../pages/predisqus.html"></iframe>
@@ -449,7 +444,7 @@ started, you can use this to create a database if needed:</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / appml / appml_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / appml / appml_ref_databases.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
