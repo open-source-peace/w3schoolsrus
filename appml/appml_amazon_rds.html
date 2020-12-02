@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML с использованием базы данных Amazon. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="AppML с использованием базы данных Amazon. Облачная служба баз данных. Зачем использовать Amazon RDS? Как зарегистрироваться в Amazon Web Services. Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_amazon_rds.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
@@ -288,7 +288,7 @@
     <div class='w3-col l10 m12' id='main'>
 	<a href="default.html"><img src="../images/appml.jpg" alt="AppML. Уроки для начинающих" class="w3-left" title="Учебник AppML для начинающих" style="width:120px;padding: 10px;"></a>
 
-<h1><span class="color_h1">AppML using Amazon Database</span></h1>
+<h1><span class="color_h1">AppML с использованием базы данных Amazon</span></h1>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-button w3-green" href="appml_google_cloud_sql.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_reference.html">Next &#10095;</a>
@@ -297,124 +297,107 @@
 
 <div class="jumbotron">
   <img src="img_aws_logo.png" alt="Amazon Web Services Logo" style="float:left;margin-right:5%"><br>
-  <p>Amazon RDS is a database cloud service.</p>
-  <p>It is easy to set up and manage.</p>
-    <p>It is FREE to try!</p>
+  <p>Amazon RDS - облачный сервис баз данных.</p>
+  <p>Легко настроить и управлять.</p>
+  <p>Это можно попробовать БЕСПЛАТНО!</p>
 </div>
 <div class="w3-clear"></div>
 
-<h2>What is Amazon Relational Database Service (RDS)</h2>
-<p>Amazon Relational Database Service (RDS) is a cloud based database service.</p>
+<h2>Что такое Amazon Relational Database Service (RDS)</h2>
+<p>Amazon Relational Database Service (RDS) - это облачная служба баз данных.</p>
 <hr>
 
-<h2>Why use Amazon RDS?</h2>
-<p>Amazon RDS manages many of the challenges of running a database.</p>
-<p>With Amazon RDS you can scale performance and storage as you need it.</p>
-<p>Amazon RDS manages automated backups, patching, and recovery.</p>
-<p>It supports popular database products like:</p>
+<h2>Зачем использовать Amazon RDS?</h2>
+<p>Amazon RDS решает многие проблемы, связанные с запуском базы данных.</p>
+<p>Amazon RDS позволяет масштабировать производительность и объем хранилища по мере необходимости.</p>
+<p>Amazon RDS управляет автоматическим резервным копированием, установкой исправлений и восстановлением.</p>
+<p>Он поддерживает популярные продукты баз данных, такие как:</p>
 <ul>
     <li>MySQL</li>
     <li>PostgreSQL</li>
     <li>Oracle</li>
     <li>Microsoft SQL Server</li>
-    <li>and the new, MySQL-compatible Amazon Aurora DB
-engine</li>
+    <li>и новый MySQL-совместимый движок Amazon Aurora DB</li>
 </ul>
-
 <hr>
-<h2>Getting Started</h2>
-<p>Before you can start using RDS, you need to sign up for Amazon Web Services,
-and set up a database user and security group.</p>
 
+<h2>Начиная использовать...</h2>
+<p>Прежде чем вы сможете начать использовать RDS, вам необходимо зарегистрироваться в Amazon Web Services и настроить пользователя базы данных и группу безопасности.</p>
 <hr>
-<h2>Sign Up for Amazon Web Services</h2>
-<p>When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS, including Amazon RDS.</p>
-<p>If you are a new AWS customer, you can get started with Amazon RDS for
-free.</p>
-<p>The AWS Free Tier is allows you to try AWS for free for 12 months after you sign up.
-For more information, see
-<a href="https://aws.amazon.com/free/" target="_blank">AWS Free Usage Tier</a>.</p>
-<p>If you decide to continue with AWS after your free period (or if you need
-more storage or performance than the free usage tier offers), you only pay for the resources you use.</p>
-<p>To create an AWS account
 
-go to: <a href="https://aws.amazon.com/" target="_blank">https://aws.amazon.com/</a>, and then click Sign Up.</p>
-<p>Follow the on-screen instructions.
-
-Note your AWS account number, because you'll need it later.</p>
+<h2>Зарегистрируйтесь в Amazon Web Services</h2>
+<p>Когда вы регистрируетесь в Amazon Web Services (AWS), ваша учетная запись AWS автоматически регистрируется для всех сервисов в AWS, включая Amazon RDS.</p>
+<p>Если вы новый клиент AWS, вы можете начать работу с Amazon RDS бесплатно.</p>
+<p>Уровень бесплатного пользования AWS позволяет вам пробовать AWS бесплатно в течение 12 месяцев после регистрации. Для получения дополнительной информации смотрите <a href="https://aws.amazon.com/free/" target="_blank" rel="nofollow">Уровень бесплатного использования AWS</a>.</p>
+<p>Если вы решите продолжить использование AWS по истечении бесплатного периода (или если вам нужно больше места для хранения или производительности, чем предлагает уровень бесплатного использования), вы платите только за те ресурсы, которые используете.</p>
+<p>Чтобы создать учетную запись AWS, перейдите на: <a href="https://aws.amazon.com/" target="_blank" rel="nofollow">https://aws.amazon.com/</a>, а затем нажмите Зарегистрироваться.</p>
+<p>Следуйте инструкциям на экране. Запишите номер своей учетной записи AWS, потому что он понадобится вам позже.</p>
 <hr>
-<h2>Create a MySQL Database Instance</h2>
-<p>In this example we will set up a free Database instance running MySQL. (This is
-free because it is intended for testing).</p>
-<p>&nbsp;Create a MySQL DB instance:</p>
+
+<h2>Создать экземпляр базы данных MySQL</h2>
+<p>В этом примере мы настроим бесплатный экземпляр базы данных с MySQL. (Это бесплатно, потому что предназначено для тестирования).</p>
+<p>Создать экземпляр БД MySQL:</p>
 <ol>
-    <li>Go to Amazon RDS console:
-    <a href="https://console.aws.amazon.com/rds/" target="_blank">https://console.aws.amazon.com/rds/</a></li>
-    <li>In the navigation pane, click Instances.</li>
-    <li>Click Launch DB Instance</li>
-    <li>On the Select Engine page, click the MySQL icon and then click Select
-    for the MySQL DB engine</li>
-    <li>On the Production? page, click checkbox next to "No, this instance is intended for use outside of production.......", and then click Next
-    Step</li>
-    <li>On the Specify DB Details page follow the instructions (follow <a id="dbDetailsLink" href="javascript:void(0)">these
-    instructions</a> for setting up a free test database)<div id="dbDetailsTable">
+    <li>Перейти в консоль Amazon RDS: <a href="https://console.aws.amazon.com/rds/" target="_blank" rel="nofollow">https://console.aws.amazon.com/rds/</a></li>
+    <li>На панели навигации кликните Instances (Экземпляры).</li>
+    <li>Кликните Launch DB Instance (Запустить DB экземпляр)</li>
+    <li>На странице Select Engine щелкните значок MySQL, а затем нажмите Select для механизма MySQL DB.</li>
+    <li>На Production? странице, установите флажок рядом с "Нет, этот экземпляр предназначен для использования вне производственной среды.......", а затем кликните Next Step (следующий шаг)</li>
+    <li>На странице Specify DB Details следуйте инструкциям (следуйте <a id="dbDetailsLink" href="javascript:void(0)">этим инструкциям</a> для создания бесплатной тестовой базы данных)<div id="dbDetailsTable">
     <table class="w3-table-all notranslate">
-        <tr><th style="width:25%">For this option:</th><th>Typical Input</th></tr>
-        <tr><td>License Model</td><td>general-public-license</td></tr>
-        <tr><td>DB Engine Version</td><td>Select the default version of MySQL</td></tr>
-        <tr><td>DB Instance Class</td><td>Select db.t2.micro to select a configuration that is eligible for free test usage</td></tr>
-        <tr><td>Multi-AZ Deployment</td><td>Select No</td></tr>
-        <tr><td>Storage Type</td><td>Magnetic (Standard)</td></tr>
+        <tr><th style="width:25%">Для этого варианта:</th><th>Типичный Input</th></tr>
+        <tr><td>Лицензия модели</td><td>general-public-license</td></tr>
+        <tr><td>DB Engine Version</td><td>Выберите версию MySQL по умолчанию</td></tr>
+        <tr><td>DB Instance Class</td><td>Выберите db.t2.micro, чтобы выбрать конфигурацию, подходящую для бесплатного тестового использования</td></tr>
+        <tr><td>Multi-AZ Deployment</td><td>Выберите No</td></tr>
+        <tr><td>Storage Type</td><td>Magnetic (Стандарт)</td></tr>
         <tr><td>Allocated Storage</td><td>5</td></tr>
-        <tr><td>DB Instance Identifier</td><td>Type the name of your database instance (this is not the name of your database)</td></tr>
-        <tr><td>Master Username</td><td>Type the master username for your database</td></tr>
-        <tr><td>Master Password</td><td>Type the password for your master user</td></tr>
-        <tr><td>Confirm Password</td><td>Conform the password</td></tr>
+        <tr><td>DB Instance Identifier</td><td>Введите имя экземпляра вашей базы данных (это не имя вашей базы данных)</td></tr>
+        <tr><td>Master Username</td><td>Введите главное имя пользователя для своей базы данных</td></tr>
+        <tr><td>Master Password</td><td>Введите пароль для своего главного пользователя</td></tr>
+        <tr><td>Confirm Password</td><td>Подтвердите пароль</td></tr>
     </table>
     </div>
 </li>
-<li>On the Configure Advanced Settings page follow the instructions (follow <a id="dbAdvSettLink" href="javascript:void(0)">these
-    instructions</a> for setting up a free test database)
+<li>На странице "Настройка дополнительных параметров" следуйте инструкциям (следуйте <a id="dbAdvSettLink" href="javascript:void(0)">эти инструкции</a> для создания бесплатной тестовой базы данных)
     <div id="dbAdvSettTable">
     <table class="w3-table-all notranslate">
-        <tr><th style="width:25%">For this option:</th><th>Typical Input</th></tr>
-        <tr><td>VPC</td><td>Default VPC</td></tr>
-        <tr><td>Subnet Group</td><td>default</td></tr>
-        <tr><td>Publicly Accessible</td><td>Yes</td></tr>
-        <tr><td>Availability Zone</td><td>No Preference</td></tr>
-        <tr><td>VPC Security Group(s)</td><td>default</td></tr>
-        <tr><td>Database Name</td><td>Type the name of your database (in this example, we will show you how to create the northwind database we use for examples in the AppML tutorial)</td></tr>
-        <tr><td>Database Port</td><td>3306 (unless you need it to run on a specific port)</td></tr>
-        <tr><td>DB Parameter Group</td><td>Keep the default value</td></tr>
-        <tr><td>Option Group</td><td>Keep the default value</td></tr>
-        <tr><td>Enable Encryption</td><td>No</td></tr>
-        <tr><td>Backup Retention Period</td><td>7</td></tr>
-        <tr><td>Backup Window</td><td>No Preference</td></tr>
-        <tr><td>Auto Minor Version Upgrade</td><td>Yes</td></tr>
-        <tr><td>Maintenance Window</td><td>No Preference</td></tr>
+      <tr><th style="width:25%">Для этого варианта:</th><th>Typical Input</th></tr>
+      <tr><td>VPC</td><td>Default VPC</td></tr>
+      <tr><td>Subnet Group</td><td>default</td></tr>
+      <tr><td>Publicly Accessible</td><td>Yes</td></tr>
+      <tr><td>Availability Zone</td><td>No Preference</td></tr>
+      <tr><td>VPC Security Group(s)</td><td>default</td></tr>
+      <tr><td>Database Name</td><td>Введите имя своей базы данных (в этом примере мы покажем вам, как создать базу данных Northwind, которую мы используем для примеров в руководстве по AppML)</td></tr>
+      <tr><td>Database Port</td><td>3306 (если вам не нужно, чтобы он работал на определенном порту)</td></tr>
+      <tr><td>DB Parameter Group</td><td>Оставить значение по умолчанию</td></tr>
+      <tr><td>Option Group</td><td>Оставить значение по умолчанию</td></tr>
+      <tr><td>Enable Encryption</td><td>No</td></tr>
+      <tr><td>Backup Retention Period</td><td>7</td></tr>
+      <tr><td>Backup Window</td><td>Нет предпочтений</td></tr>
+      <tr><td>Auto Minor Version Upgrade</td><td>Yes</td></tr>
+      <tr><td>Maintenance Window</td><td>Нет предпочтений</td></tr>
 </table>
 </div>
 </li>
-<li>Click Launch DB Instance</li>
-<li>Click View Your DB Instances</li>
-    <li>The new DB instance appears in the list of DB instances (it will have a
-    "creating" status until it is ready for use)</li>
-    <li>When the status changes to "available", you can connect to the database</li>
-    <li>Click the details icon to view details and copy the URL from "Endpoint",
-    including the port</li>
+  <li>Кликните Запустить DB экземпляр</li>
+  <li>Кликните Просмотр ваших DB экземпляров</li>
+  <li>Новый экземпляр БД появится в списке экземпляров БД (он будет иметь статус "создается", пока не будет готов к использованию)</li>
+  <li>Когда статус изменится на "доступен", вы можете подключиться к базе данных</li>
+  <li>Кликните значок сведений, чтобы просмотреть сведения и скопировать URL-адрес из "Конечной точки", включая порт.</li>
 </ol>
 
 <div class="w3-example">
-<h3>The Endpoint URL should look something like this:</h3>
+<h3>URL-адрес конечной точки должен выглядеть примерно так:</h3>
 <div class="w3-code notranslate">
 <em>databasename</em>.<em>aaabbbcccddd</em>.<em>region</em>.rds.amazonaws.com:3306</div>
 </div>
-
 <hr>
-<h2>Configure Database Connection in AppML</h2>
-<p>To configure the database connection, edit the appml_config file:</p>
+
+<h2>Настройка подключения к базе данных в AppML</h2>
+<p>Чтобы настроить подключение к базе данных, отредактируйте файл appml_config:</p>
 <div class="w3-example">
-<h3>PHP example: appml_config.php</h3>
+<h3>PHP пример: appml_config.php</h3>
 <div class="w3-code notranslate">
     &lt;?php echo("Access Forbidden");exit();?&gt;<br>{<br>"dateformat" :
     "yyyy-mm-dd",<br>"databases" : [{<br>"connection" : "<em>mydatabase</em>",<br>
@@ -423,75 +406,55 @@ free because it is intended for testing).</p>
     <br>}]<br>}</div>
 </div>
 
-<p>Edit the following:</p>
+<p>Отредактируйте следующее:</p>
 <ol>
-    <li><em>mydatabase</em> - change to whatever you want the database
-    connection to be called in your application</li>
-    <li><em>yourDatabaseURL</em> - change to the endpoint URL from the previous
-    step</li>
-    <li><em>yourDatabaseName</em> - change to the name you specified for your
-    database in Amazon RDS</li>
-    <li><em>yourUserName</em> - change to the username you specified for your
-    database in Amazon RDS</li>
-    <li><em>yourPassword</em> - change to the password you specified for your
-    database in Amazon RDS</li>
+    <li><em>mydatabase</em> - изменить на то, что вы хотите, чтобы соединение с базой данных вызывалось в вашем приложении</li>
+    <li><em>yourDatabaseURL</em> - изменить URL-адрес конечной точки с предыдущего шага</li>
+    <li><em>yourDatabaseName</em> - изменить имя, указанное вами для своей базы данных в Amazon RDS</li>
+    <li><em>yourUserName</em> - изменить имя пользователя, указанное вами для своей базы данных в Amazon RDS</li>
+    <li><em>yourPassword</em> - изменить пароль, который вы указали для своей базы данных в Amazon RDS</li>
 </ol>
-<p>AppML should now be configured to connect to your Amazon RDS database.</p>
-<p>You can now fill your database with data:</p>
+<p>AppML теперь должен быть настроен для подключения к вашей базе данных Amazon RDS.</p>
+<p>Теперь вы можете заполнить свою базу данных данными:</p>
 <ul>
-    <li>If you have access to a PHP server, this is described in the
-    <a href="appml_php.html">AppML PHP chapter</a></li>
-    <li>If you have access to an ASP.NET server, this is described in the
-    <a href="appml_dotnet.html">AppML .NET chapter</a></li>
+    <li>Если у вас есть доступ к серверу PHP, это описано в разделе <a href="appml_php.html">AppML PHP</a></li>
+    <li>Если у вас есть доступ к серверу ASP.NET, это описано в разделе <a href="appml_dotnet.html">AppML .NET</a></li>
 </ul>
-<a href="javascript:void(0)"><p id="iamuser">Optional: Create an IAM User for increased security</p></a>
+<a href="javascript:void(0)"><p id="iamuser">Необязательно: создайте пользователя IAM для повышения безопасности</p></a>
 <div id="iamuser_div">
-<p>Amazon RDS, require that you provide username and password when you access
-it.</p>
-<p>You can access the account with your Amazon username, but for security
-purposes
-we recommend that you create an Identity and Access Management (IAM) user, for
-your database.</p>
-<p>First, create the Administrators group:</p>
+<p>Amazon RDS, требует, чтобы вы указали имя пользователя и пароль при доступе к нему.</p>
+<p>Вы можете получить доступ к учетной записи со своим именем пользователя Amazon, но в целях безопасности мы рекомендуем вам создать пользователя Identity and Access Management (IAM) для своей базы данных.</p>
+<p>Сначала создайте группу администраторов:</p>
 <ol>
-    <li>Sign in to the AWS Management Console and open the IAM console at
+    <li>Войдите в Консоль управления AWS и откройте консоль IAM по адресу
     <a href="https://console.aws.amazon.com/iam/" target="_blank">https://console.aws.amazon.com/iam/</a></li>
-    <li>In the menu, click Groups, then click Create New Group</li>
-    <li>In the Group Name box, type Administrators and then click Next Step</li>
-    <li>In the list of policies, select the check box next to the
-    AdministratorAccess policy</li>
-    <li>Click Next Step, then click Create Group</li>
+    <li>В меню кликните Группы, затем кликните Создать новую группу</li>
+    <li>В поле "Имя группы" введите "Администраторы" и нажмите "Далее"</li>
+    <li>В списке политик установите флажок рядом с политикой AdministratorAccess.</li>
+    <li>Кликните Следующий шаг, затем кликните Создать групу</li>
 </ol>
-<p>Then create the IAM user, and add it to the Administrators group:</p>
+<p>Затем создайте пользователя IAM и добавьте его в группу администраторов:</p>
 <ol>
-    <li>In the menu, click Users, then click Create New User</li>
-    <li>&nbsp;In box 1, enter a user name</li>
-    <li>Clear the check box next to "Generate an access key for each
-    user", then click Create</li>
-    <li>In the list of users, click the name (not the check box) of the user you
-    just created</li>
-    <li>In the Groups section, click Add User to Groups</li>
-    <li>Select the check box next to the Administrators group, then click Add to
-    Groups</li>
-    <li>Scroll down to the Security Credentials section, and click Manage
-    Password</li>
-    <li>Select Assign a custom password, then enter a password in the Password
-    and Confirm Password boxes, click Apply</li>
+    <li>В меню кликните "Пользователи", затем кликните "Создать нового пользователя"</li>
+    <li>В поле 1 введите имя пользователя</li>
+    <li>Снимите флажок "Создать ключ доступа для каждого пользователя" и нажмите "Создать"</li>
+    <li>В списке пользователей кликните имя (а не флажок) только что созданного пользователя</li>
+    <li>В разделе "Группы" нажмите "Добавить пользователя в группы"</li>
+    <li>Установите флажок рядом с группой "Администраторы", затем нажмите "Добавить в группы"</li>
+    <li>Прокрутите вниз до раздела "Учетные данные безопасности" и нажмите "Управление паролем"</li>
+    <li>Выберите "Назначить собственный пароль", затем введите пароль в поля "Пароль" и "Подтверждение пароля", нажмите "Применить"</li>
 </ol>
-<p>To sign in as this new IAM user, sign out of the AWS console, then use the
-following URL:</p>
+<p>Чтобы войти в систему как новый пользователь IAM, выйдите из консоли AWS и используйте следующий URL-адрес:</p>
 <div class="w3-example">
-<h3>Login with IAM</h3>
+<h3>Залогиниться с IAM</h3>
 <div class="w3-code notranslate">
 https://<em>your_aws_account_id</em>.signin.aws.amazon.com/console/
 </div>
 </div>
-<p>Replace <em>your_aws_account_id</em> with your AWS account number without the
-hyphens (if your account number is 1234-5678-9012, your AWS account ID is
-123456789012)</p>
+<p>Замените <em>your_aws_account_id</em> номером своей учетной записи AWS без дефисов (если номер вашей учетной записи 1234-5678-9012, идентификатор вашей учетной записи AWS - 123456789012)</p>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-button w3-green" href="appml_google_cloud_sql.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_reference.html">Next &#10095;</a>
