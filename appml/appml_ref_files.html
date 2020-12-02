@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML Справочник - Файлы данных. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="AppML Справочник - Файлы данных. Свойство data определяет файл данных как источник данных. Данные из текстового, XML, JSON файла. Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_.html" />
+<link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_ref_files.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -296,7 +296,7 @@
 <hr>
 
 <h2>Свойство "data"</h2>
-<p>The "data" property defines a data file as the data source. It has the following <strong>sub properties</strong>:</p>
+<p>Свойство "data" определяет файл данных как источник данных. Он имеет следующие <strong>субсвойства</strong>:</p>
 <table class="w3-table-all notranslate">
   <tr>
     <th style="width:30%">Элемент</th>
@@ -304,28 +304,27 @@
   </tr>
   <tr>
     <td>"type"</td>
-    <td>The type of data file ("csvfile", "xmlfile", or "jsonfile") </td>
+    <td>Тип файла данных ("csvfile", "xmlfile", or "jsonfile") </td>
   </tr>
   <tr>
     <td>"filename"</td>
-    <td>The name of the file </td>
+    <td>Имя файла</td>
   </tr>
   <tr>
     <td>"record"</td>
-    <td>The name of the XML data node (if xmlfile)</td>
+    <td>Имя узла данных XML (если xmlfile)</td>
   </tr>
   <tr>
     <td>"items"</td>
-    <td>The data items</td>
+    <td>Элементы данных</td>
   </tr>
 </table>
-
 <hr>
-<h2>Data From a Text File</h2>
-<p>This model fetches records containing Title, Artist, and Price (as item 1, 2,
-and 5) from a comma separated text file: </p>
+
+<h2>Данные из текстового файла</h2>
+<p>Эта модель извлекает записи, содержащие Title, Artist и Price (как элементы 1, 2 и 5) из текстового файла, разделенного запятыми:</p>
 <div class="w3-example">
-<h3>Model</h3>
+<h3>Модель</h3>
  <div class="w3-code notranslate jsHigh">
     {<br>"data": {<br>&nbsp;&nbsp;&nbsp; "type"&nbsp;&nbsp;&nbsp; : "csvfile",<br>&nbsp;&nbsp;&nbsp;
     "filename": "cd_catalog.txt",<br>&nbsp;&nbsp;&nbsp; "items"&nbsp;&nbsp; : [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -333,17 +332,16 @@ and 5) from a comma separated text file: </p>
     {"name": "Artist","index": 2},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {"name": "Price", "index": 5}<br>&nbsp;&nbsp;&nbsp; ]<br>}<br>}
 </div>
-<a class="w3-btn w3-margin-bottom" href="tryit2029.html?filename=tryappml_from_txt_php" target="_blank">Try It Yourself &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit2029.html?filename=tryappml_from_txt_php" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 
-<p>Example explained: <a href="appml_case_txt.html">Case Text Files</a>.</p>
-
+<p>Объяснение примера: <a href="appml_case_txt.html">Кейс Текстовые файлы</a>.</p>
 <hr>
-<h2>Data From an XML File</h2>
-<p>This model fetches records containing Title, Artist, and Price from CD nodes
-in an XML file: </p>
+
+<h2>Данные из XML файла</h2>
+<p>Эта модель извлекает записи, содержащие Title, Artist и Price из узлов CD в файле XML:</p>
 <div class="w3-example">
-<h3>Model</h3>
+<h3>Модель</h3>
 <div class="w3-code notranslate jsHigh">
     {<br>"data": {<br>&nbsp;&nbsp;&nbsp; "type"&nbsp;&nbsp;&nbsp; : "xmlfile",<br>&nbsp;&nbsp;&nbsp;
     "filename": "cd_catalog.xml",<br>&nbsp;&nbsp;&nbsp; "record"&nbsp; : "CD",<br>&nbsp;&nbsp;&nbsp;
@@ -351,18 +349,16 @@ in an XML file: </p>
     "nodename": "ARTIST"},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {"name": "Title",&nbsp; "nodename": "TITLE"},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {"name": "Country","nodename": "COUNTRY"}<br>&nbsp;&nbsp;&nbsp; ]<br>}<br>}</div>
-<a class="w3-btn w3-margin-bottom" href="tryit3bb0.html?filename=tryappml_from_xml_php" target="_blank">Try It Yourself &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit3bb0.html?filename=tryappml_from_xml_php" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 
-<p>Example explained: <a href="appml_case_xml.html">Case XML Files</a>.</p>
-
+<p>Объяснение примера: <a href="appml_case_xml.html">Кейс XML файлы</a>.</p>
 <hr>
-<h2>Data From a JSON File</h2>
-<p>This model fetches records containing Title, Artist, and Price from an array
-of CD objects
-in a JSON file: </p>
+
+<h2>Данные из JSON файла</h2>
+<p>Эта модель извлекает записи, содержащие Title, Artist и Price из массива CD объектов в файле JSON:</p>
 <div class="w3-example">
-<h3>Model</h3>
+<h3>Модель</h3>
 <div class="w3-code notranslate jsHigh">
     {<br>"data" : {<br>&nbsp;&nbsp;&nbsp; "type" : "jsonfile",<br>&nbsp;&nbsp;&nbsp;
     "filename" : "cd_catalog.js",<br>&nbsp;&nbsp;&nbsp; "record" : "cd",<br>&nbsp;&nbsp;&nbsp;
@@ -371,14 +367,12 @@ in a JSON file: </p>
     : "Artist", "nodename" : "artist"},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     {"name" : "Price", "nodename" : "price"}<br>&nbsp;&nbsp;&nbsp; ]<br>}<br>}
 </div>
-<a class="w3-btn w3-margin-bottom" href="tryit9c20.html?filename=tryappml_from_json_php" target="_blank">Try It Yourself &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit9c20.html?filename=tryappml_from_json_php" target="_blank">Попробуйте сами &raquo;</a>
 </div>
 
+<p>Объяснение примера: <a href="appml_case_json.html">Кейс JSON файлы</a>.</p>
 
-<p>Example explained: <a href="appml_case_json.html">Case JSON Files</a>.</p>
-
-
-<br>
+<hr>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-button w3-green" href="appml_reference.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_ref_databases.html">Next &#10095;</a>
@@ -391,7 +385,7 @@ in a JSON file: </p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / appml / appml_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / appml / appml_ref_files.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
