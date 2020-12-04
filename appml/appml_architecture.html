@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>AppML Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>AppML Архитектура. Уроки для начинающих. W3Schools на русском</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
+<meta name="description" content="AppML Архитектура. AppML сочетает в себе самые современные техники и идеи современной веб-разработки. AppML ориентирован на скорость, простоту и низкую стоимость. Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://w3schoolsrus.github.io/appml/appml_.html" />
 <link rel="stylesheet" href="../w3css/4/w3.css">
 </head>
 
@@ -295,56 +294,51 @@
 </div>
 <hr>
 
-<h2>Modern Web Architecture</h2>
-
-<p>AppML combines the most up-to-date techniques and ideas of modern web development.</p>
-<p>AppML focus on speed, simplicity, and low cost:</p>
+<h2>Современная веб-архитектура</h2>
+<p>AppML сочетает в себе самые современные техники и идеи современной веб-разработки.</p>
+<p>AppML ориентирован на скорость, простоту и низкую стоимость:</p>
 
 <ul style="list-style-type:square;">
-  <li>Low Cost</li>
-  <li>Rapid and Agile Web Develoment</li>
-  <li>Optimized for Cloud Computing</li>
-  <li>High Speed and Low Bandwidth Consumption</li>
-  <li>MVC (Model Viev Controller) Architecture</li>
-  <li>Full Separation of Content from Presentation </li>
-  <li>Highly Scalable and Testable</li>
-  <li>Easy Configuration and Reconfiguration</li>
-  <li>Reconfiguration while applications are running</li>
-  <li>Smart Support for User Accounts and Roles</li>
+  <li>Низкая стоимость</li>
+  <li>Быстрая и гибкая веб-разработка</li>
+  <li>Оптимизирован для облачных вычислений</li>
+  <li>Высокая скорость и низкое потребление полосы пропускания</li>
+  <li>Архитектура MVC (Model Viev Controller)</li>
+  <li>Полное отделение содержания от презентации</li>
+  <li>Высокая масштабируемость и тестируемость</li>
+  <li>Простая настройка и реконфигурация</li>
+  <li>Изменение конфигурации во время работы приложений</li>
+  <li>Интеллектуальная поддержка учетных записей и ролей пользователей</li>
 </ul>
-
 <hr>
 
 <table><tr>
 <td style="vertical-align:top">
 
-<h2>MVC Architecture</h2>
+<h2>MVC Архитектура</h2>
 <p>&nbsp;</p>
-<p><strong>AppML uses an MVC Architecture</strong></p>
-<p>MVC stands for Model, View, Controller</p>
-<p>The <strong>Model</strong> describes your application.</p>
-<p>The <strong>View</strong> displays your data.</p>
-<p>The <strong>Controller</strong> controls your application (of course).</p>
-<p>&nbsp;</p>
-<p><strong>Wikipedia:</strong>
-<a target="_blank" href="https://en.wikipedia.org/wiki/Model view controller">
-Model, View, Controller</a></p>
+<p><strong>AppML использует MVC Архитектуру</strong>.</p>
+<p>MVC означает Model, View, Controller (Модель, Представление (Вид), Контроллер).</p>
+<p><strong>Model</strong> описывает ваше приложение.</p>
+<p><strong>View</strong> отображает ваши данные.</p>
+<p><strong>Controller</strong> контролирует ваше приложение (конечно же!).</p>
+
+<p><strong>Читать на Википедии:</strong>
+<a target="_blank" href="https://ru.wikipedia.org/wiki/Model-View-Controller">Model, View, Controller</a></p>
 
 </td>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td><img alt="MVC" height="314" src="pic_mvc.jpg" width="327"></td>
 </tr></table>
-
 <hr>
-<h2>The MODEL - Just JSON</h2>
-<p>The model describes the application.</p>
-<p>The model is reusable on different hardware
-and software platforms (Server, PC, iPhone, Tablets, etc.).</p>
-<p>The model is not concerned with presentation or user
-interface (UI).</p>
-<p>The model is written in JSON:</p>
+
+<h2>MODEL (Модель) - Просто JSON</h2>
+<p>Модель описывает приложение.</p>
+<p>Модель многоразового использования на различных аппаратных и программных платформах (Сервер, ПК, iPhone, планшеты и т. д.).</p>
+<p>Модель не связана с презентацией или пользовательским интерфейсом (UI).</p>
+<p>Модель написана в JSON:</p>
 <div class="w3-example">
-<h3>Model</h3>
+<h3>Модель</h3>
 <div class="w3-code notranslate jsHigh">
 {<br>
 &quot;rowsperpage&quot; : 10,<br>
@@ -366,30 +360,30 @@ interface (UI).</p>
 }
 </div>
 </div>
-
 <hr>
-<h2>The VIEW - Just HTML</h2>
-<p>The view is the UI (User Interface) for displaying (and input) data.</p>
-<p>The view is written in HTML and CSS:</p>
+
+<h2>VIEW (Представление) - просто HTML</h2>
+<p>Представление - это UI (пользовательский интерфейс) для отображения (и ввода) данных.</p>
+<p>Представление написано на HTML и CSS:</p>
 
 <div class="w3-example">
-<h3>HTML View</h3>
+<h3>HTML Представление</h3>
 <div class="w3-code notranslate htmlHigh">
-&lt;!DOCTYPE html&gt;<br>&lt;html lang="en-US"&gt;<br>
-&lt;title&gt;Customers&lt;/title&gt;<br>
-&lt;link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt;<br>
-&lt;script src="https://www.w3schools.com/appml/2.0.3/appml.js"&gt;&lt;/script&gt;<br>
+&lt;!DOCTYPE html&gt;<br>&lt;html lang="ru"&gt;<br>
+&lt;title&gt;Клиенты&lt;/title&gt;<br>
+&lt;link rel="stylesheet" href="../w3css/4/w3.css"&gt;<br>
+&lt;script src="2.0.3/appml.js"&gt;&lt;/script&gt;<br>
 &lt;body&gt;<br>
 <br>
 &lt;div class="w3-container" appml-data="local?model=model_customers"&gt;<br>
-&lt;h1&gt;Customers&lt;/h1&gt;<br>
-&lt;div appml-include-html="inc_listcommands.htm"&gt;&lt;/div&gt;<br>
-&lt;div appml-include-html="inc_filter.htm"&gt;&lt;/div&gt;<br>
+&lt;h1&gt;Клиенты&lt;/h1&gt;<br>
+&lt;div appml-include-html="inc_listcommands.html"&gt;&lt;/div&gt;<br>
+&lt;div appml-include-html="inc_filter.html"&gt;&lt;/div&gt;<br>
 &lt;table class="w3-table-all"&gt;<br>
 &nbsp; &lt;tr&gt;<br>
-&nbsp;&nbsp;&nbsp; &lt;th&gt;Customer&lt;/th&gt;<br>
-&nbsp;&nbsp;&nbsp; &lt;th&gt;City&lt;/th&gt;<br>
-&nbsp;&nbsp;&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;th&gt;Клиент&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;th&gt;Город&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;th&gt;Страна&lt;/th&gt;<br>
 &nbsp; &lt;/tr&gt;<br>
 &nbsp; &lt;tr appml-repeat="records"&gt;<br>
 &nbsp;&nbsp;&nbsp; &lt;td&gt;{{CustomerName}}&lt;/td&gt;<br>
@@ -401,180 +395,121 @@ interface (UI).</p>
 <br>
 &lt;/body&gt;<br>
 &lt;/html&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit4ff4.html?filename=tryappml_architecture_1" target="_blank">Try It Yourself &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit4ff4.html?filename=tryappml_architecture_1" target="_blank">Попробуйте сами &raquo;</a>
 </div>
-
 <hr>
-<h2>The CONTROLLER - Client and/or Server Scripts</h2>
-<p>A client script in the web page can control the application:</p>
-<ul type="square">
-    <li>AppML can display data as defined in the model</li>
-    <li>AppML can display data as defined by HTML attributes.</li>
-    <li>AppML applications can run independent of HTML (hidden)</li>
-    <li>(Optionally) AppML can request model data from a web server (SQL
-    server)</li>
-    <li>(Optionally) AppML users can edit data</li>
-    <li>(Optionally) AppML can send data to a web server</li>
+
+<h2>CONTROLLER - клиентские и/или серверные скрипты</h2>
+<p>Клиентский скрипт на веб-странице может управлять приложением:</p>
+<ul style="list-style-type:square;">
+    <li>AppML может отображать данные, как определено в модели</li>
+    <li>AppML может отображать данные в соответствии с атрибутами HTML</li>
+    <li>Приложения AppML могут работать независимо от HTML (скрытые)</li>
+    <li>(Необязательно) AppML может запрашивать данные модели с веб-сервера (SQL-сервера)</li>
+    <li>(Необязательно) пользователи AppML могут редактировать данные</li>
+    <li>(Необязательно) AppML может отправлять данные на веб-сервер</li>
 </ul>
 
-<p>A server script can control the application by:</p>
-<ul type="square">
-    <li>Receiving requests from the client (browser)</li>
-    <li>Returning data to the client</li>
-    <li>Receiving data from the client</li>
-    <li>Updating data on the server</li>
-    <li>Taking care of authentication and security</li>
+<p>Серверный скрипт может управлять приложением с помощью:</p>
+<ul style="list-style-type:square;">
+    <li>Получение запросов от клиента (браузера)</li>
+    <li>Возврат данных клиенту</li>
+    <li>Получение данных от клиента</li>
+    <li>Обновление данных на сервере</li>
+    <li>Забота об аутентификации и безопасности</li>
 </ul>
-
 <hr>
-<h2>The Art of Programming</h2>
-<p>Keeping application size and complexity low, is the main problem of all
-programming. </p>
-<p>Controlling computer application complexity, is the true art of
-programming.</p>
 
+<h2>Искусство программирования</h2>
+<p>Уменьшение размера и сложности приложения - основная проблема всего программирования.</p>
+<p>Управление сложностью компьютерных приложений - настоящее искусство программирования.</p>
 <hr>
-<h2>Declarative Programming</h2>
-<p>Software development often breaks deadlines and budgets. Finished software is
-often full of coding errors. This is because computer code is difficult to
-develop, test, and maintain.</p>
 
-
-
-<p>Coding is <strong>Out</strong>. You should describe more <strong>What</strong>
-to do, less <strong>How</strong> to do it.</p>
-<p>With AppML you <strong>Declare</strong> your application in the
-<strong>Model</strong> and in the
-<strong>View</strong>.</p>
-<p>With <span class="strong">AppML</span> there is <strong>less (sometimes nothing)
-to code</strong>.</p>
-
-
-
-<p><strong>Wikipedia:</strong>
-<a target="_blank" href="https://en.wikipedia.org/wiki/Declarative_language">
-Declarative Programming</a></p>
-
-
-
+<h2>Декларативное программирование</h2>
+<p>Разработка программного обеспечения часто нарушает сроки и бюджеты. Готовая программа часто полна ошибок кода. Это потому, что компьютерный код сложно разрабатывать, тестировать и поддерживать.</p>
+<p>Кодированию - <strong>Нет</strong>. Вы должны больше описывать <strong>Что</strong> делать, а не <strong>Как</strong> делать.</p>
+<p>С помощью AppML вы <strong>Объявляете</strong> своё приложение в <strong>Модели</strong> и в <strong>Представлении</strong>.</p>
+<p>С <span class="strong">AppML</span> получается <strong>меньше кода (иногда его отсутствие)</strong>.</p>
+<p><strong>Читать на Википедии:</strong> <a target="_blank" href="https://en.wikipedia.org/wiki/Declarative_language" target="_blank" rel="nofollow">Декларативное программирование</a></p>
 <hr>
-<h2>Rapid and Agile Application Development</h2>
-<p>Controlling computer application complexity is the true art of programming.</p>
-<p>Keeping application size and complexity under under control is the main
-problem of all programming. </p>
-<p>RAD is a software development method that uses minimal planning in favor of
-rapid prototyping.</p>
-<p>
-AppML delivers super-fast prototyping, up to 100 times faster than traditional
-development methods.</p>
-<p>
-Application prototypes can run directly from the application model, without any
-coding.</p>
 
-
-
-<p>
-<a target="_blank" href="https://en.wikipedia.org/wiki/Rapid_application_development">
-Wikipedia: Rapid Application Development</a></p>
-
-<p>Agile software development is a method based on step-by-step development,
-where solutions are created by users and developers in collaboration.</p>
-<p>With AppML, applications can be written step by step, in small increments,
-from prototypes to full applications.</p>
-
-
-
-<p>
-<a target="_blank" href="https://en.wikipedia.org/wiki/Agile_software_development">
-Wikipedia: Agile Software Development</a></p>
-
-
-
+<h2>Быстрая и гибкая разработка приложений</h2>
+<p>Управление сложностью компьютерных приложений - настоящее искусство программирования.</p>
+<p>Сдерживание размера и сложности приложения под контролем - основная проблема всего программирования.</p>
+<p>RAD - это метод разработки программного обеспечения, использующий минимальное планирование в пользу быстрого прототипирования.</p>
+<p>AppML обеспечивает сверхбыстрое создание прототипов, до 100 раз быстрее, чем традиционные методы разработки.</p>
+<p>Прототипы приложений могут запускаться непосредственно из модели приложения без какого-либо программирования.</p>
+<p><strong>Читать на Википедии:</strong> <a target="_blank" href="https://en.wikipedia.org/wiki/Rapid_application_development">Быстрая разработка приложений</a></p>
+<p>Гибкая разработка программного обеспечения - это метод, основанный на пошаговой разработке, при котором решения создаются пользователями и разработчиками в сотрудничестве.</p>
+<p>С помощью AppML приложения можно писать шаг за шагом, небольшими приращениями, от прототипов до полных приложений.</p>
+<p><strong>Читать на Википедии:</strong> <a target="_blank" href="https://en.wikipedia.org/wiki/Agile_software_development">Гибкая разработка программного обеспечения</a></p>
 <hr>
-<h2>Code First</h2>
 
-
-
-<p>A web application can be developed in two different ways:</p>
-<p>1. Code First: Using pre-programmed, pre-tested code, adding only new
-application descriptions.</p>
-<p>2. Contract First: Coding the application from scratch using the full
-application requirement description.</p>
-<p><span class="strong">AppML</span> uses the most rational concept:
-<strong>Code First</strong>.</p>
-
+<h2>Сначала код</h2>
+<p>Веб-приложение можно разработать двумя способами:</p>
+<p>1. Сначала код: использование предварительно запрограммированного, предварительно протестированного кода, добавление только новых описаний приложений.</p>
+<p>2. Сначала контракт: Написание приложения с нуля с использованием полного описания требований приложения.</p>
+<p><span class="strong">AppML</span> использует наиболее рациональную концепцию: <strong>Сначала код</strong>.</p>
 <hr>
-<h2>Service Oriented Architecture (SOA)</h2>
 
-<p><strong>Service Oriented Architecture (SOA)</strong> is an architecture for
-building web applications.</p>
-<p><strong>SOA</strong> offers low development costs and high flexibility.</p>
-<p>With <strong>SOA</strong>, applications can be created from scratch, or from existing IT
-infrastructures, and be used, by different applications, on different hardware
-and software.</p>
-<p><strong>SOA</strong> is a perfect fit for <strong>MVC</strong> and <strong>Declarative Programming</strong>, where
-data can be easily consumed without the concern about how. </p>
-
+<h2>Service Oriented Architecture (SOA) - Сервис-Ориентированная Архитектура</h2>
+<p><strong>Сервис-Ориентированная Архитектура (SOA)</strong> - это архитектура для создания веб-приложений.</p>
+<p><strong>SOA</strong> предлагает низкие затраты на разработку и высокую гибкость.</p>
+<p>С помощью <strong>SOA</strong>, приложения могут быть созданы с нуля или из существующей ИТ-инфраструктуры и использоваться различными приложениями на разном оборудовании и программном обеспечении.</p>
+<p><strong>SOA</strong> идеально подходит для <strong>MVC</strong> и <strong>декларативного программирования</strong>, где данные могут быть легко использованы, не беспокоясь о том, как это сделать.</p>
 <hr>
-<h2>Web Services</h2>
-<p>A <strong>Web Service</strong> is an interface to data, identified by a URL,
-just like a web page.</p>
-<p>A <strong>Web Service</strong> differs from a web page, only in the way it
-communicates information. </p>
-<p>A typical <strong>Web Service</strong> only provides data to a web page.</p>
-<p>With AppML, HTML is the user interface, a <strong>Web Service</strong> provides the
-data.</p>
-<p><strong>Original Web Services</strong> were designed to use XML standards
-like SOAP, WSDL, and UDDI.</p>
-<p><strong>Modern Web Services</strong> like AppML are much easier to use. </p>
+
+<h2>Веб-сервисы (Веб-службы)</h2>
+<p><strong>Веб-служба</strong> - это интерфейс к данным, идентифицируемый URL-адресом, как веб-страница.</p>
+<p><strong>Веб-служба</strong> отличается от веб-страницы только способом передачи информации.</p>
+<p>Типичная <strong>веб-служба</strong> предоставляет данные только веб-странице.</p>
+<p>В AppML HTML - это пользовательский интерфейс, а <strong>веб-служба</strong> предоставляет данные.</p>
+<p><strong>Оригинальные веб-службы</strong> были разработаны для использования стандартов XML, таких как SOAP, WSDL и UDDI.</p>
+<p><strong>Современные веб-службы</strong> - такие, как AppML намного проще в использовании:</p>
 <ul>
-    <li>Simpler to understand - Can be read by humans</li>
-    <li>Lightweight - no unnecessary code or markup</li>
-    <li>Easy to implement - no development tools required</li>
+  <li>Легче для понимания - могут быть прочитаны людьми</li>
+  <li>Легковесность - без ненужного кода или разметки</li>
+  <li>Простота реализации - инструменты разработки не требуются</li>
 </ul>
-
 <hr>
-<h2>Benefits of Web Services</h2>
+
+<h2>Преимущества веб-служб</h2>
 
 <ul>
-    <li>Web services are small units of code</li>
-    <li>Web services are designed to handle a limited set of tasks</li>
-    <li>Web services use HTTP based communicating protocols</li>
-    <li>Web services are independent of operating systems</li>
-    <li>Web services are independent of programming languages</li>
-    <li>Web services can connect different applications, systems, and devices</li>
-    <li>Web Services makes it easy to distribute information</li>
-    <li>Web Services favors rapid application development</li>
+  <li>Веб-службы - это небольшие блоки кода</li>
+  <li>Веб-службы предназначены для решения ограниченного набора задач</li>
+  <li>Веб-службы используют протоколы связи на основе HTTP</li>
+  <li>Веб-службы не зависят от операционных систем</li>
+  <li>Веб-службы не зависят от языков программирования</li>
+  <li>Веб-службы могут соединять различные приложения, системы и устройства</li>
+  <li>Веб-службы упрощают распространение информации</li>
+  <li>Веб-службы способствуют быстрой разработке приложений</li>
 </ul>
-<p>Example: A small program designed to supply other
-applications with the stock exchange prices.</p>
-<p>Example: Flight schedules and ticket reservation systems.</p>
+<p>Пример: Небольшая программа, предназначенная для предоставления другим приложениям биржевых цен.</p>
+<p>Пример: Расписание рейсов и системы бронирования билетов.</p>
+<p>Поскольку веб-службы используют HTTP, они не зависят как от операционных систем, так и от языков программирования.</p>
+<hr>
 
-<p>Since web services use HTTP, they are independent of both operating systems and programming languages.</p>
+<h2>Облачные вычисления</h2>
+<p><strong>Облачные вычисления</strong> является расширением SOA: приложение как услуга, хранилище как услуга, данные как услуга.</p>
+
+<p>Для большинства людей облачные вычисления - это хранение данных в Интернете:</p>
+<ul style="list-style-type:square;">
+    <li>Электронная почта и календари</li>
+    <li>Документы и таблицы</li>
+    <li>Книги, заметки и списки дел</li>
+    <li>Музыка, картинки и фильмы</li>
+    <li>Базы данных и приложения</li>
+</ul>
+<p>Причины использования довольно очевидны:</p>
+<ul style="list-style-type:square;">
+    <li>Чтобы иметь доступ к данным отовсюду</li>
+    <li>Чтобы поделиться моими данными с другими</li>
+    <li>Чтобы выжить при изменении оборудования или сбоях</li>
+</ul>
+<p>С AppML очень легко размещать базы данных и приложения в облаке.</p>
 
 <hr>
-<h2>Cloud Computing</h2>
-
-<p><strong>Cloud Computing</strong> is an extension of SOA: Application-as-a service,
-Storage-as-a-service, Data-as-a-service.</p>
-
-<p>For most people, Cloud Computing is about storing data on the web:</p>
-<ul type="square">
-    <li>Emails and calendars</li>
-    <li>Documents and spreadsheets</li>
-    <li>Books, notes, and to do lists</li>
-    <li>Music, pictures and movies</li>
-    <li>Databases and applications</li>
-</ul>
-<p>The reasons are pretty obvious:</p>
-<ul type="square">
-    <li>To have access to data from everywhere</li>
-    <li>To share my data with others</li>
-    <li>To survive hardware changes or crashes </li>
-</ul>
-<p>With AppML, it is very easy to put both databases and applications in the
-cloud.</p>
-<br>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-button w3-green" href="appml_ref_api.html">&#10094; Prev</a>
 <a class="w3-right w3-button w3-green" href="appml_history.html">Next &#10095;</a>
@@ -587,7 +522,7 @@ cloud.</p>
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsrus.github.io; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io / appml / appml_.html; // уникальный идентификатор страницы
+this.page.identifier = w3schoolsrus.github.io / appml / appml_architecture.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
