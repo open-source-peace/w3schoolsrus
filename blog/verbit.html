@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Словарь начинающего программиста. W3Schools на русском</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Словарь терминов начинающего программиста и IT-разработчика. Что нужно знать. Популярные слова и выражения. W3Schools на русском языке для начинающих">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link href="../w3css/4/w3.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="mainContent">
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.на русском</span></a>
+  <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ</div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+<div style="overflow:auto;">
+  <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+    <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+    <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../default.html' title='Главная'></a>
+    <a class='w3-bar-item w3-button' href='../html/default.html' title='HTML Учебник'>HTML</a>
+    <a class='w3-bar-item w3-button' href='../css/default.html' title='CSS Учебник'>CSS</a>
+    <a class='w3-bar-item w3-button' href='../js/default.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+    <a class='w3-bar-item w3-button' href='../sql/default.html' title='SQL Учебник'>SQL</a>
+    <a class='w3-bar-item w3-button' href='../python/default.html' title='Python Учебник'>PYTHON</a>
+    <a class='w3-bar-item w3-button' href='../php/default.html' title='PHP Учебник'>PHP</a>
+    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+    <a class='w3-bar-item w3-button' href='../howto/default.html' title='Как сделать Учебник'>КАК СДЕЛАТЬ</a>
+    <a class='w3-bar-item w3-button' href='../w3css/default.html' title='W3.CSS Учебник'>W3.CSS</a>
+    <a class='w3-bar-item w3-button' href='../jquery/default.html' title='jQuery Учебник'>JQUERY</a>
+    <a class='w3-bar-item w3-button' href='../xml/default.html' title='XML Учебник'>XML</a>
+    <a class='w3-bar-item w3-button' href='javascript:void(0);' id='topnavbtn_tutorials' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+    <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключить на тёмный код'>&#9681;</a>
+    <a class='w3-bar-item w3-button w3-right' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' target='_blank' title='Подборка книг для бесплатного скачивания с Google-диска'>КНИГИ</a>
+    <a class='w3-bar-item w3-button w3-right' href='javascript:void(0);' id='topnavbtn_exercises' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    <a class='w3-bar-item w3-button w3-right' href='javascript:void(0);' id='topnavbtn_references' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+  </div>
+  <div class='w3-bar-block w3-card-2' id='nav_tutorials' style='display:none;'>
+    <span class='w3-button w3-xlarge w3-right' onclick='w3_close_nav("tutorials")' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+  <div class='w3-row-padding' style='padding:24px 48px'>
+      <div class='w3-col l3 m6'>
+        <h3>HTML и CSS</h3><a class='w3-bar-item w3-button' href='../html/default.html'>Выучить HTML</a>
+        <a class='w3-bar-item w3-button' href='../css/default.html'>Выучить CSS</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+        <a class='w3-bar-item w3-button' href='../w3css/default.html'>Выучить W3.CSS</a>
+        <a class='w3-bar-item w3-button' href='../colors/default.html'>Выучить Colors</a>
+        <a class='w3-bar-item w3-button' href='../icons/default.html'>Выучить Icons</a>
+        <a class='w3-bar-item w3-button' href='../graphics/default.html'>Выучить Graphics</a>
+        <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+        <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+        <a class='w3-bar-item w3-button' href='default.html'>Выучить How To</a>
+        <a class='w3-bar-item w3-button' href='../sass/default.html'>Выучить Sass</a>
+        <div class='w3-hide-large w3-hide-small'>
+          <h3>XML</h3><a class='w3-bar-item w3-button' href='../xml/default.html'>Выучить XML</a>
+          <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+          <a class='w3-bar-item w3-button' href="../xml/dom_intro.html">Выучить XML DOM</a>
+          <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+          <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+          <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+          <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+          <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+        </div>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>JavaScript</h3>
+        <a class='w3-bar-item w3-button' href='../js/default.html'>Выучить JavaScript</a>
+        <a class='w3-bar-item w3-button' href='../jquery/default.html'>Выучить jQuery</a>
+        <a class='w3-bar-item w3-button' href='../react/default.html'>Выучить React</a>
+        <a class='w3-bar-item w3-button' href='../angular/default.html'>Выучить AngularJS</a>
+        <a class='w3-bar-item w3-button' href="../js/js_json_intro.html">Выучить JSON</a>
+        <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+        <a class='w3-bar-item w3-button' href='../appml/default.html'>Выучить AppML</a>
+        <a class='w3-bar-item w3-button' href="../w3js/default.html">Выучить W3.JS</a>
+        <h3>Программирование</h3>
+        <a class='w3-bar-item w3-button' href='../python/default.html'>Выучить Python</a>
+        <a class='w3-bar-item w3-button' href='../java/default.html'>Выучить Java</a>
+        <a class='w3-bar-item w3-button' href='../cpp/default.html'>Выучить C++</a>
+        <a class='w3-bar-item w3-button' href='../cs/default.html'>Выучить C#</a>
+        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+	<a class='w3-bar-item w3-button' href='../datascience/default.html'>Выучить Наука о данных</a>
+        <div class="w3-hide-small">
+          <br class="w3-hide-medium w3_hide-small">
+          <br class="w3-hide-medium w3_hide-small">
+        </div>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>Серверная сторона</h3>
+        <a class='w3-bar-item w3-button' href='../sql/default.html'>Выучить SQL</a>
+        <a class='w3-bar-item w3-button' href='../php/default.html'>Выучить PHP</a>
+        <a class='w3-bar-item w3-button' href='../asp/default.html'>Выучить ASP</a>
+        <a class='w3-bar-item w3-button' href='../nodejs/default.html'>Выучить Node.js</a>
+        <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+        <h3>Веб-строительство</h3>
+        <a class='w3-bar-item w3-button' href="../w3css/w3css_templates.html">Веб-шаблоны</a>
+        <a class='w3-bar-item w3-button' href='../browsers/default.html'>Веб-статистика</a>
+        <a class='w3-bar-item w3-button' href='../cert/default.html'>Веб-сертификаты</a>
+        <a class='w3-bar-item w3-button' href='../tryit/default.html'>Веб-редактор</a>
+        <a class='w3-bar-item w3-button' href="../whatis/default.html">Веб-разработка</a>
+        <a class='w3-bar-item w3-button' href="https://www.w3schools.com/typingspeed/default.asp" target="_blank" rel="nofollow">Проверить скорость печати</a>
+      </div>
+      <div class='w3-col l3 m6 w3-hide-medium'>
+        <h3>XML</h3><a class='w3-bar-item w3-button' href='../xml/default.html'>Выучить XML</a>
+        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+        <a class='w3-bar-item w3-button' href="../xml/dom_intro.html">Выучить XML DOM</a>
+        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+      </div>
+    </div><br>
+  </div>
+  <div class='w3-bar-block w3-card-2' id='nav_references'>
+    <span class='w3-button w3-xlarge w3-right' onclick='w3_close_nav("references")' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+    <div class='w3-row-padding' style="padding:24px 48px">
+      <div class='w3-col l3 m6'>
+        <h3>HTML</h3>
+        <a class='w3-bar-item w3-button' href='../tags/default.html'>HTML Справочник тегов</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+        <a class='w3-bar-item w3-button' href='../colors/default.html'>HTML Справочник цветов</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+        <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+        <a class='w3-bar-item w3-button' href='../charsets/default.html'>HTML Наборы символов</a>
+        <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+        <h3>CSS</h3>
+        <a class='w3-bar-item w3-button' href='../cssref/default.html'>CSS Справочник</a>
+        <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+        <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Selector Справочник</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+        <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+        <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Icon Справочник</a>
+        <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>JavaScript</h3>
+        <a class='w3-bar-item w3-button' href='../jsref/default.html'>JavaScript Справочник</a>
+        <a class='w3-bar-item w3-button' href='../jsref/default.html'>HTML DOM Справочник</a>
+        <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+        <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+        <a class='w3-bar-item w3-button' href="../w3js/w3js_references.html">W3.JS Справочник</a>
+        <h3>Программирование</h3>
+        <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+        <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>Серверная сторона</h3>
+        <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+        <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+        <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+        <h3>XML</h3>
+        <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Справочник</a>
+        <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+        <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+        <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+      </div>
+      <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+        <h3>Наборы символов</h3>
+        <a class='w3-bar-item w3-button' href='../charsets/default.html'>HTML Наборы символов</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+      </div>
+    </div><br>
+  </div>
+  <div class='w3-bar-block w3-card-2' id='nav_exercises'>
+    <span class='w3-button w3-xlarge w3-right' onclick='w3_close_nav("exercises")' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+    <div class='w3-row-padding' style="padding:24px 48px">
+      <div class='w3-col l4 m6'>
+        <h3>Упражнения</h3>
+        <a class='w3-bar-item w3-button' href="../html/html_exercises.html">HTML Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../css/css_exercises.html">CSS Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../js/js_exercises.html">JavaScript Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../sql/sql_exercises.html">SQL Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../php/php_exercises.html">PHP Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../python/python_exercises.html">Python Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../jquery/jquery_exercises.html">jQuery Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../bootstrap/bootstrap_exercises.html">Bootstrap Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../java/java_exercises.html">Java Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../cpp/cpp_exercises.html">C++ Упражнения</a>
+      </div>
+      <div class='w3-col l4 m6'>
+        <h3>Викторины</h3>
+        <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+        <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+        <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+        <a class='w3-bar-item w3-button' href="../sql/sql_quiz.html" target='_top'>SQL Викторина</a>
+        <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+        <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+        <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+        <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+      </div>
+      <div class='w3-col l4 m12'>
+        <h3>Сертификаты</h3>
+        <a class='w3-bar-item w3-button' href="../cert/cert_html_new.html" target='_top'>HTML Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_css.html" target='_top'>CSS Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_javascript.html" target='_top'>JavaScript Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_sql.html" target='_top'>SQL Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_php.html" target='_top'>PHP Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_python.html" target='_top'>Python Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_jquery.html" target='_top'>jQuery Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_bootstrap.html" target='_top'>Bootstrap Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_xml.html" target='_top'>XML Сертификат</a>
+      </div>
+    </div><br>
+  </div>
+</div>
+</div><!--/Top menu-->
+
+  <!-- Left Sidebar -->
+  <div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+      <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <h2 class="left"><span class="left_h2">Блог</span> админа</h2>
+        <a href="default.html" target="_top">Блог W3Schools на русском</a>
+        <a href="whatsites.html" target="_top">Какие бывают сайты?</a>
+        <a href="seo_optimization.html" target="_top">SEO. Поисковая оптимизация</a>
+        <a href="imitation.html" target="_top">Подражание или плагиат</a>
+        <a href="free_img_placeholder_services.html" target="_top">Фиктивные изображения</a>
+        <a href="140_web_colors.html" target="_top">140 веб цветов</a>
+        <a href="adblockplus.html" target="_top">Как отключить рекламу?</a>
+        <a href="atom_edit_rus.html" target="_top">Как русифицировать редактор Atom?</a>
+        <a href="apache_install.html" target="_top">Как установить сервер Apache?</a>
+        <a href="mysql_install.html" target="_top">Как установить сервер MySQL?</a>
+        <a href="youtube_responsive.html" target="_top">Как сделать адаптивным видео с YouTube?</a>
+        <a href="top_freelance.html" target="_top">Топ самых популярных бирж фриланса</a>
+        <a href="html6_news.html" target="_top">HTML6 Что нового</a>
+        <a href="wordpress_readme.html" target="_top">Установка WordPress. Readme</a>
+        <a href="verbit.html" target="_top">Словарь начинающего IT-шника</a>
+      </div>
+    </div>
+  </div><!-- / Left Sidebar -->
+
+  <!--CONTENT-->
+  <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+      <div class='w3-col l10 m12' id='main'>
+  <a href="../index.html"><img src="verbit.jpg" alt="Словарь начинающего веб-программиста" class="w3-left w3-padding" title="Ликбез для начинающих IT-шников" width="140"></a>
+
+  <h1>Словарь программиста<span class="color_h1"> Начало</span></h1>
+  <div class="w3-clear nextprev">
+    <a class="w3-left w3-btn" href="wordpress_readme.html">&#10094; Prev</a>
+    <a class="w3-right w3-btn" href="default.html">Next &#10095;</a>
+  </div>
+  <hr>
+
+  <div class="author">
+      <p>Original: <strong>&quot;<a href="https://tpverstak.ru/programming-terms/" target="_blank" rel="nofollow">Словарь программиста: мини-словарь для начинающих разработчиков</a>&quot;</strong>,<br><i>Adaptation by WebSunSey - <time datetime="2020-12-04">04.12.2020</time></i></p>
+  </div>
+  <hr>
+
+<p><strong>Ликбез</strong> для начинающих программистов. Словарь часто употребляемых слов в среде IT-разработчиков.</p>
+<hr>
+<h2>Что нужно знать начинающему программисту?</h2>
+<p>Слова и фразы в словаре отсортированы по алфавиту. Кстати, словарь можно дополнять. Пиши в комментариях термины, с которыми вы сталкивались на работе.</p>
+<h2>А</h2>
+<p><strong>Аджайл</strong> — от англ. Agile. Общий термин, описывает ценности и принципы гибкой разработки программного обеспечения, а также практические подходы к разработке. Понятие Agile стало популярным после публикации Манифеста гибкой разработки программного обеспечения в 2001 году.</p>
+<p><strong>Айдишник</strong> — id, идентификатор.</p>
+<p><strong>Альфа</strong> — этап разработки программного обеспечения, на котором разработчики добавляют в программу новые функции, а тестировщики испытывают программу. Это внутренний или непубличный этап.</p>
+<p><strong>Апишка</strong> — API, программный интерфейс приложения или интерфейс прикладного программирования.</p>
+<p><strong>Аутсорс</strong> — аутсорсинг, передача компанией части операционной деятельности другой компании.</p>
+<p><strong>Адаптив</strong> — адаптивный дизайн, адаптация интерфейса к использованию на разных экранах.</p>
+<h2>Б</h2>
+<p><strong>Баг</strong> — от англ. Bug — жучок, клоп. Ошибка в программе.</p>
+<p><strong>Бахнуть</strong> — что-то быстро сделать, изменить или дополнить функциональность приложения.</p>
+<p><strong>Бета</strong> — бета-версия, приложение на стадии публичного тестирования.</p>
+<p><strong>Бот</strong> — сокращение от «робот». Ботом называют программу, которая автоматизирует интерфейс. Пример — автоответчик в чате.</p>
+<p><strong>Бэкэнд</strong> — от англ. Back-end. Программно-аппаратная или серверная часть приложения, невидимая обычным пользователям.</p>
+<p><strong>Бэкап, бэкапить</strong> — резервная копия или процесс создания резервной копии приложения.</p>
+<h2>В</h2>
+<p><strong>Ворнинг</strong> — от англ. Warning — предупреждение. Предупреждающее сообщение в интерфейсе.</p>
+<p><strong>Войтивайти</strong> (т.е. войти в IT) — обозначает процесс переквалификации далёкого от сферы IT специалиста в IT-разработчика.</p>
+<p><strong>Выкатить</strong> — сделать доступным для пользователей. Например, «выкатили новую версию сайта» значит сделали новую версию сайта доступной для пользователей.</p>
+<p><strong>Выпадашка</strong> — выпадающее меню (раскрывающееся), то же, что и "дропдаун" (от dropdown).</p>
+<h2>Г</h2>
+<p><strong>Галера</strong> — компания, в которой платят низкие зарплаты и не ценят разработчиков.</p>
+<p><strong>Гит</strong> — система контроля версий Git или сервис GitHub.</p>
+<p><strong>Говнокод</strong> — плохо написанный, неправильно отформатированный, некачественный код.</p>
+<p><strong>Говнокодер</strong> — тот, кто пишет говнокод.</p>
+<p><strong>Градиент</strong> — плавный переход из одного цвета в другой.</p>
+<h2>Д</h2>
+<p><strong>Движок сайта</strong> (или СиЭмЭс) — в веб-разработке так называют системы управления контентом (CMS).</p>
+<p><strong>Дебажить</strong> — поиск и устранение ошибок, багов в коде.</p>
+<p><strong>Деплой, деплоить</strong> — развёртывание, публикация рабочей версии приложения. Пример: задеплоить сайт — перенести сайт с тестового на рабочий сервер, сделать его доступным для пользователей.</p>
+<p><strong>Джун, джуниор</strong> — от англ. Junior. Младший (юный) разработчик. Специалист без опыта или с минимальным опытом работы.</p>
+<p><strong>Десигнер</strong> — презрительно-снисходительное название дизайнера.</p>
+<p><strong>Драй</strong> — от англ DRY, don’t repeat yourself. Принцип программирования, предлагающий избегать повторений кода.</p>
+<p><strong>Дропдаун</strong> — (от dropdown) выпадающее меню, то же, что и «выпадашка».</p>
+<h2>Ж</h2>
+<p><strong>Жаба</strong> (Джава) — язык программирования Java.</p>
+<p><strong>Жабаскрипт</strong> (Джава-скрипт) — язык программирования JavaScript.</p>
+<h2>З</h2>
+<p><strong>Залить</strong> — загрузить. Например, «залить файлы на сервер».</p>
+<p><strong>Запилить</strong> — сделать что-то, добавить какую-то функциональность.</p>
+<p><strong>Змея</strong> (или удав, питон) — язык программирования Python.</p>
+<h2>И</h2>
+<p><strong>Исходник</strong> — файлы, в которых находится исходный код приложения, или сам исходный код.</p>
+<p><strong>Итерация</strong> — повторение. «Мы сделали несколько итераций» — мы повторили шаг несколько раз.</p>
+<h2>К</h2>
+<p><strong>Коммит, коммитить</strong> — от англ. To commit — совершать. В контексте работы над приложением — сохранять код в репозитории.</p>
+<p><strong>Конфа</strong> — конференция.</p>
+<p><strong>Костыль</strong> — код, который нужен, чтобы исправить несовершенство ранее написанного кода.</p>
+<h2>Л</h2>
+<p><strong>Либа</strong> — от англ. Library — библиотека. Речь идет о библиотеках кода, например, React.</p>
+<p><strong>Линтер</strong> — общее нарицательное название программ, которые анализируют код и предупреждают разработчика об ошибках.</p>
+<p><strong>Лист</strong> — от англ. List — список.</p>
+<p><strong>Локалка</strong> — локальный. Например, локальный сервер или сеть.</p>
+<h2>М</h2>
+<p><strong>Мидл</strong> — от англ. Middle — средний. Уровень разработчика, следующий за джуниором. Опыт и уровень знаний миддла позволяет ему самостоятельно решать серьезные задачи.</p>
+<p><strong>Мёржить</strong> — от англ. Merge - склеивать. Речь идет об объединении или слиянии веток кода.</p>
+<p><strong>Меншить</strong> — от англ. Mention — упоминание. Речь идёт об упоминаниях в чатах или соцсетях. «Менши меня, когда будет готово» значит «упомяни меня, когда будет готово».</p>
+<p><strong>Ментор</strong> (наставник) — опытный профессионал, который помогает менее опытному человеку в учебе, работе, даёт советы, подсказки и т.д.</p>
+<h2>Н</h2>
+<p><strong>Навбар</strong> — (navbar) навигационный блок на сайте или в интерфейсе программы.</p>
+<p><strong>Накатить</strong> — внести изменения, задеплоить новую версию приложения. Противоположное термину «откатить».</p>
+<h2>О</h2>
+<p><strong>Овертайм</strong> (от англ. «overtime») — переработка после окончания рабочего дня. Сверхурочные часы.</p>
+<p><strong>Околоайтишник</strong> — человек, который не является айтишником/программистом, но работает в сфере IT/программирования. Например, специалист по кадрам (HR), бухгалтер, финансист.</p>
+<p><strong>ООП</strong> (сокр. от «Объектно-Ориентированное Программирование») — методология/парадигма программирования, в которой основными концепциями являются объекты и классы.</p>
+<p><strong>Опенсурс</strong> (от англ. «open source software») — программное обеспечение/софт с открытым исходным кодом, который может использовать/дополнять/изменять любой желающий. В большинстве случаев это программное обеспечение является некоммерческим проектом.</p>
+<p><strong>Опенспейс</strong> (от англ. «open space») — офис открытого типа, где сотрудники работают в одном помещении (относительно большом) без каких-либо перегородок/стен.</p>
+<p><strong>Оперативка</strong> (или оператива) — оперативная память, она же «RAM» = «Random Access Memory», она же «ОЗУ» = «Оперативное Запоминающее Устройство».</p>
+<p><strong>ОС</strong> (или Ось - «операционка», сокр. «OS» от англ. «Operating System») = Операционная Система — программное обеспечение, которое позволяет управлять аппаратной частью компьютеров/ноутбуков/смартфонов и т.д. (например, Windows, MacOS, Linux, Android и т.п.)</p>
+<p><strong>Откатить</strong> — удалить изменения, вернуть предыдущую версию приложения. Противоположное термину «накатить».</p>
+<p><strong>Отладка</strong> (или дебаг) — этап в разработке программного обеспечения, на котором выполняется поиск и исправление ошибок.</p>
+<p><strong>Отладчик</strong> (или «дебаггер», от англ. «debugger») — программа, с помощью которой выполняется отладка.</p>
+<p><strong>Ось</strong> — операционная система.</p>
+<p><strong>Оффтоп</strong> (или «оффтопик», от англ. «off topic») — любое сообщение мимо кассы (т.е. не по теме).</p>
+<h2>П</h2>
+<p><strong>Падаван</strong> — ироничное название стажёра или джуниора.</p>
+<p><strong>Пилот</strong> — пробная (пилотная) версия продукта.</p>
+<p><strong>Питон</strong> — язык программирования Python.</p>
+<p><strong>Подвал</strong> — то же, что и «футер». Элемент структуры страницы, который находится в нижней части и содержит служебную информацию.</p>
+<p><strong>Поплыла вёрстка</strong> — некорректное отображение страницы в браузере.</p>
+<p><strong>Продакшн или продакшен (продакшн-код)</strong> — обозначение кода для рабочей версии приложении.</p>
+<p><strong>Пушить</strong> — использовать команду push, публиковать что-то.</p>
+<p><strong>Пэхапэ</strong> — язык программирования PHP, то же, что и «пыха».</p>
+<p><strong>Пыха</strong> — язык программирования PHP, то же, что и «пэхапэ».</p>
+<p><strong>ПэХаПэшник</strong> — тот, кто пишет код на языке PHP. Считается низшим сословием в среде программистов.</p>
+<h2>Р</h2>
+<p><strong>Релиз</strong> — программное обеспечение на стадии публичного использования. Стабильная версия программы, которая прошла тестирование.</p>
+<p><strong>Рекурсия</strong> — описание процесса с помощью самого процесса. Например, выражение «рекурсивный вызов функции» описывает ситуацию, в которой функция вызывает сама себя.</p>
+<p><strong>Репа</strong> — репозиторий, хранилище данных. Например, код программы можно хранить в репозитории на GitHub.</p>
+<p><strong>Ридми</strong> — файл Readme, в котором содержится информация о программе.</p>
+<p><strong>Ругаться, например, линтер ругается</strong> — сообщения об ошибках в коде, работе сервиса и так далее.</p>
+<h2>С</h2>
+<p><strong>Сабж</strong> — от английского Subject — (субъект), тема, предмет. «По сабжу» — по теме обсуждения.</p>
+<p><strong>Свитч</strong> — (от switch) - переключатель. Также - устройство-коммутатор, т.е. распределительный узел для сетевых устройств, но с расширенными функциями.</p>
+<p><strong>Сетка</strong> — модульная сетка, используется для дизайна и вёрстки страниц.</p>
+<p><strong>Сеньйор, синьор</strong> — от англ. Senior — старший разработчик, программист (после джуниора и мидла).</p>
+<p><strong>Скрипткиды</strong> — (от script kiddie) - термин, используемый для описания любителей, кто пользуется скриптами или программами, разработанными другими, для атаки компьютерных систем и сетей или дефейсу сайтов, не понимая механизма их действия.</p>
+<p><strong>Слетело</strong> — сломалось.</p>
+<p><strong>Снести</strong> — удалить.</p>
+<p><strong>Стэк</strong> — изначально абстрактный тип данных. В разговорной речи используется для обозначения списка технологий, которые использует разработчик или компания. Пример: «Наш стек — HTML/CSS, JavaScript, React».</p>
+<p><strong>Собес</strong> — собеседование.</p>
+<p><strong>Софт</strong> — от англ. Software — программное обеспечение.</p>
+<p><strong>Софт-скилы</strong> — от англ. Soft skills — знания и качества специалиста, прямо не связанные с профессиональной деятельностью. Примеры: коммуникабельность, проактивность.</p>
+<h2>Т</h2>
+<p><strong>Темплейт</strong> — от английского template — шаблон.</p>
+<p><strong>Тестировщик</strong> — специалист по тестированию программного обеспечения.</p>
+<p><strong>Тимлид</strong> — сокращенно от английского Team leader — командный лидер, руководитель. Координатор группы программистов.</p>
+<p><strong>Туториал</strong> (от англ. tutorial) — сборник уроков для обучения чему-либо, учебник, руководство.</p>
+<h2>У</h2>
+<p><strong>Убить</strong> — удалить что-то. Например, «убить профиль» означает удалить профиль.</p>
+<p><strong>Утилита</strong> (или «утилитка», от англ. «utility») — вспомогательное программное обеспечение, предназначенное для выполнения вспомогательных работ, настройки системного оборудования, операционных систем и прочего. Другими словами, программа, которая помогает что-то сделать.</p>
+<h2>Ф</h2>
+<p><strong>Фаервол</strong> (от англ. «firewall») — антивирус (антивирусник), который защищает компьютер от вирусов. С английского означает «горящая стена» — здесь следует понимать стену, которая защищает другие здания от распространения пожара. Другое название — Brandmauer (в переводе с немецкого тоже означает «горящая стена»).</p>
+<p><strong>Факап</strong> (от англ. «fuck up») — неудача, провал, облом. Зачастую подразумеваются более-менее серьёзные ошибки.</p>
+<p><strong>Фидбек</strong> — от англ. Feedback — обратная связь.</p>
+<p><strong>Фича</strong> — функция, возможность. От англ. Feature.</p>
+<p><strong>Фрикинг</strong> — (от phreaking) - взлом телефонов и мобильных сетей с целью получения бесплатных звонков.</p>
+<p><strong>Фриланс</strong> (от англ. «freelance») — работа из дому, вне штата, иногда на себя, которая приносит деньги и в которой нет постоянного заказчика/начальника.</p>
+<p><strong>Фрилансер</strong> (от англ. «freelancer») — свободнозанятый человек, который работает на себя, т.е. занимается фрилансом.</p>
+<p><strong>Фреймворк</strong> — от англ. Framework — каркас. Инструмент разработки, набор типовых шаблонных решений, упрощающих работу программиста. Примеры: Laravel, Bootstrap.</p>
+<p><strong>Фронтэнд</strong> — от англ. Front-end — клиентская часть веб-приложения или сайта (обычно написаны на HTML/CSS/JS).</p>
+<p><strong>Фронтэндер</strong> — человек, который занимается клиентской частью веб-приложения или веб-сайта (обычно должен знать как минимум HTML/CSS/JavaScript).</p>
+<h2>Х</h2>
+<p><strong>Хакатон</strong> (от англ. «hack marathon») — мероприятие, на котором собираются специалисты из разных отраслей разработки программного обеспечения (чаще всего программисты, но могут быть и дизайнеры, тестеры) для разработки определённого решения/проекта/приложения/программы. Другими словами, марафоны программирования, на которые собираются программисты попрограммировать.</p>
+<p><strong>Хакер</strong> — (англ. Hacker, от to hack — рубать) - особа, которая пытается получить несанкционированный доступ к компьютерным системам, как правило, с целью получения секретной (скрытой от посторонних) информации.</p>
+<p><strong>Хатэмээль, хатээмэль, хтмл</strong> — HTML, язык гипертекстовой разметки, используется для написания сайтов.</p>
+<p><strong>Хард скиллы</strong> (от англ. «hard skills») — технические знания и навыки.</p>
+<p><strong>Хардкодить</strong> — статически прописывать в коде данные, которые должны вычисляться динамически. Плохая практика, антипаттерн в программировании.</p>
+<p><strong>Хацкер, кулхацкер</strong> — ироничное название начинающего специалиста, который считает себя опытным программистом. От английского hacker и cool hacker.</p>
+<p><strong>Хедер, хэдер</strong> — header — элемент структуры веб-страницы, находится в верхней части и обычно содержит логотип, меню, служебную информацию.</p>
+<h2>Ц</h2>
+<p><strong>ЦП</strong> — центральный процессор (он же «проц» или «процик»).</p>
+<p><strong>Цэмээс, цээмэс</strong> (СиЭмЭс) — от англ. CMS — content management system, система управления контентом.</p>
+<p><strong>ЦээСэС</strong> — от англ. CSS — Cascading Style Sheets, каскадные таблицы стилей, используются для стилизации (визуального оформления) веб-страниц.</p>
+<h2>Э</h2>
+<p><strong>Эксплойт</strong> (от англ. «exploit») — вредоносная программа, способная выполнять свой код через найденную уязвимость в другой программе.</p>
+<p><strong>Эникей</strong> (от англ. «any key») — любая кнопка. Часто, при установке или загрузке чего-либо, нас просят “Press any key” — отсюда и термин.</p>
+<p><strong>Эникейщик</strong> — неопытный пользователь, который не знает, что ему нужно делать — ищет кнопку «эникей». Или низкоквалифицированный IT-специалист (очень редко программист), который занимается рутинными, несложными заданиями.</p>
+<h2>Ю</h2>
+<p><strong>Юзать</strong> — от английского to use — использовать.</p>
+<p><strong>Юзер</strong> (или «юзверь», от англ. «user») — пользователь (обычно любитель тратить время, сидя за ПК).</p>
+<h2>Я</h2>
+<p><strong>Ява</strong> (или джава )— язык программирования Java.</p>
+<p><strong>Яваскрипт</strong> — (или джава-скрипт) язык программирования JavaScript.</p>
+<p><strong>ЯП</strong> — язык программирования.</p>
+
+<!--/CONTENT-->
+
+  <hr>
+  <div class="w3-clear nextprev">
+    <a class="w3-left w3-btn" href="wordpress_readme.html">&#10094; Prev</a>
+    <a class="w3-right w3-btn" href="default.html">Next &#10095;</a>
+  </div>
+
+  <hr>
+  <!--Комментарии от Disqus-->
+  <iframe class="predisqus" src="../pages/predisqus.html"></iframe>
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  this.page.url = w3schoolsrus.github.io/blog/verbit.html; // канонический URL страницы
+  this.page.identifier = w3schoolsrus.github.io/blog/verbit.html; // уникальный идентификатор страницы
+  };
+  (function() { // Не редактировать ниже этой линии
+  var d = document, s = d.createElement('script');
+  s.src = 'https://w3schoolsrus-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев, предоставленных Disqus.</a></noscript>
+  <!--/ Комментарии от Disqus-->
+  <hr>
+
+  </div>
+
+  <!--Right sidebar-->
+  <div class="w3-col l2 m12" id="right">
+   <iframe class="frame-source" src="../pages/source.html"></iframe>
+  </div>
+  <!--/Right sidebar-->
+
+  </div>
+
+  <!--FOOTER-->
+  <div id="footer" class="footer w3-container w3-white">
+  <hr>
+
+  <div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+  <div class="w3-col l3 m3 s12">
+  <a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
+  </div>
+  <div class="w3-col l3 m3 s12">
+  <a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
+  </div>
+  <div class="w3-col l3 m3 s12">
+  <a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
+  </div>
+  <div class="w3-col l3 m3 s12">
+  <a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
+  </div>
+  </div>
+  <hr>
+  <div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+  <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+  <h2>Ваше предложение:</h2>
+  <form>
+  <div class="w3-section">
+  <label for="err_email">Ваш E-mail:</label>
+  <input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+  </div>
+  <div class="w3-section">
+  <label for="err_email">Адрес страницы:</label>
+  <input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+  </div>
+  <div class="w3-section">
+  <label for="err_email">Описание:</label>
+  <textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+  </div>
+  <div class="form-group">
+  <button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
+  </div>
+  <br>
+  </form>
+  </div>
+  <div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+  <span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+  <h2>Спасибо за Вашу помощь!</h2>
+  <p>Ваше сообщение было отправлено в W3Schools.</p>
+  </div>
+
+  <div class="w3-row w3-center">
+  <iframe class="toplist" src="../pages/toplist.html"></iframe>
+  </div>
+
+  <hr>
+  <iframe class="footerpage" src="../pages/footerpage.html"></iframe>
+  <br>
+  </div>
+
+  </div>
+  <script src="../lib/w3schools_footer.js"></script>
+  <!--[if lt IE 9]>
+  <script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
+  <script src="../cdn/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  </div>
+  </body>
+  </html>
