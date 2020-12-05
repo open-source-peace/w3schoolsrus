@@ -67,11 +67,11 @@
 <body>
 
 <?php
-echo "My first PHP script!";
+$txt = "PHP";
+echo "I love $txt!";
 ?>
 
 </body>
-
 </html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
@@ -88,22 +88,22 @@ echo "My first PHP script!";
 <html>
 <body>
 
-My first PHP script!
+I love PHP!
 
 </body>
 </html>
 </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
 <!--блок Сообщить о проблеме-->
 <div id="err_form" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-display-container">
-      <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
-      <div class="w3-container w3-green">
-        <h2>Сообщить о проблеме:</h2>
-      </div>
+<div class="w3-modal-content w3-display-container">
+<span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-text-white w3-padding w3-green" style="font-weight:bold;">&times;</span>
+<div class="w3-container w3-green">
+<h2>Сообщить о проблеме:</h2>
+</div>
 <form class="w3-container">
 <p><label for="err_email">Ваш E-mail:</label>
 <input class="w3-input w3-border" type="text" style="width:100%" id="err_email" name="err_email">
@@ -119,7 +119,7 @@ My first PHP script!
 <button class="w3-btn w3-right w3-green w3-margin-bottom" type="button" onclick="sendErr()">Отправить</button>
 </form>
 
-  </div>
+</div>
 </div>
 <!--/блок Сообщить о проблеме-->
 
