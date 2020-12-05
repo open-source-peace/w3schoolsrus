@@ -7,6 +7,40 @@
 <meta name="description" content="Установка PHP. Что для этого нужно? Веб-хостинг с поддержкой PHP. Какие локальные серверы лучше всего использовать для разработки сайтов? OpenServer, XAMPP, MAMP, WampServer. Как установить PHP на компьютер? W3Schools на русском языке. Уроки онлайн для начинающих бесплатно">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../w3css/4/w3.css">
+<style>
+.editor-container {display: -ms-flexbox;display:flex;justify-content: space-between;margin-top:-16px;margin-bottom:-8px;}
+.editor-container .editor-child {width:49.6%;float:left;}
+.editor-container .editor-edit {margin-right:5px;}
+.editor-container .editor-view {color:white;font-family:Arial !important;text-align:center;background:black;  margin:16px 0;margin-left:5px;padding:20px;}
+@media only screen and (max-width: 768px) {.editor-container {margin-bottom:0;display:block;}
+  .editor-container .editor-child {margin:0;width:100%;}
+  .editor-container .editor-view {margin-bottom:8px;}
+}
+.mq {border:1px solid #ddd;}
+@media only screen and (max-width: 600px) {}
+.mq {border:none!important;}
+.fa-home:before {content: '\e800'; }
+.fa-save:before {content: '\e804'; }
+.fa-bars:before {content: '\f0c9'; }
+.fa-rotate:before {content: '\e813'; }
+.fa-menu:before { content: '\f0c9'; }
+.w3-hover-none {cursor:default;}
+.containerm {position: relative;}
+.middlem {opacity: 0;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);-ms-transform:translate(-50%, -50%); text-align: center;}
+.containerm:hover .middlem {opacity: 1;}
+.trytopnav {background-color: #f1f1f1;}
+body.darktheme .trytopnav {background-color: #616161;color: #dddddd;}
+.trytopnav a.w3-bar-item {color:#999999!important;}
+body.darktheme .trytopnav a.w3-bar-item {color: #dddddd!important;}
+.w3-border {border: 1px solid #ccc!important;}
+.editor-brown {color: brown;}
+.editor-blue {color: mediumblue}
+body.darktheme .w3-border {border: 1px solid #616161!important;}
+.darktheme .htmlHigh {color: #88c999;}
+.darktheme .editor-brown {color: #ff9999}
+.darktheme .editor-blue {color: #88c999;}
+.darktheme .editor-white {color: white;}
+</style>
 </head>
 
 <body>
@@ -1105,6 +1139,39 @@
 </ul>
 <p>Официальный PHP веб-сайт (PHP.net) имеет инструкции по установке PHP:
 <a href="https://www.php.net/manual/ru/install.php" target="_blank" rel="nofollow">https://www.php.net/manual/ru/install.php</a></p>
+<hr>
+
+<h2>PHP Онлайн компилятор / Редактор</h2>
+<p>С помощью онлайн-компилятора PHP от w3schools вы можете редактировать PHP-код и просматривать результат в своем браузере.</p>
+<br class="w3-hide-large w3-hide-medium">
+<div class="mq">
+<div id="editorEl" class="trytopnav" style="background-color:#f1f1f1;margin-left:-16px;margin-right:-16px;">
+ <div class="w3-bar w3-hide-small" style="overflow:hidden;">
+  <a href="javascript:void(0);" class="w3-button w3-bar-item topnav-icons fa fa-home w3-hover-none" style="font-size:28px!important;margin-right:4px;margin-bottom:-4px;"></a>
+  <a href="javascript:void(0);" class="w3-button w3-bar-item topnav-icons fa fa-bars w3-hover-none" style="font-size:28px!important;margin-right:4px;margin-bottom:-4px;"></a>
+  <a href="javascript:void(0);" class="w3-button w3-bar-item topnav-icons fa fa-rotate w3-hover-none" style="font-size:28px!important;margin-right:4px;margin-bottom:-4px;"></a>
+  <a href="javascript:void(0);" class="w3-button w3-bar-item topnav-icons fa fa-adjust w3-hover-none" style="font-size:28px!important;margin-bottom:-4px;"></a>
+  <a href="phptryitc454.html?filename=tryphp_compiler" class="w3-button w3-bar-item w3-green w3-hover-green" style="color:white!important;padding:16px 17px;margin-left:4px;margin-bottom:-4px;margin-top:-2px" target="_blank">Выполнить &raquo;</a>
+</div>
+<div class="editor-container w3-container">
+<div class="editor-child editor-edit">
+<h3 class="w3-hide-large w3-hide-medium">Пример</h3>
+<div  class="xw3-white notranslate htmlHigh w3-code " style="border-left:none;padding:20px 16px">
+&lt;?php<br>
+$txt = "PHP";<br>
+echo "I love <span style="color:white!important;">$txt!</span>";<br>
+?&gt;
+</div>
+</div>
+
+<div id="editorEdit" class="w3-container editor-child editor-view w3-border w3-left-align" style="padding:20px 16px;">
+<code>I love PHP!</code><br>
+</div>
+</div>
+<a class="w3-btn" style="margin-left:16px;margin-top:8px;margin-bottom:16px" href="phptryitc454.html?filename=tryphp_compiler" target="_blank">Попробуйте сами &raquo;</a>
+</div>
+</div>
+<p>Кликните на кнопку &quot;Попробуйте сами&quot;, чтобы увидеть, как она работает.</p>
 <hr>
 
 <h2>Локальные веб-серверы</h2>
