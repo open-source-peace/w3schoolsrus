@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Переменные. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass Переменные - это способ хранения информации, которую вы можете использовать позже. Синтаксис. Для объявления переменных Sass использует символ $, за которым следует имя переменной и её значение. Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -268,28 +268,27 @@
 <hr>
 
 <h2>Sass Переменные</h2>
-<p>Переменные - это способ хранения информации, которую вы можете использовать позже..</p>
+<p>Переменные - это способ хранения информации, которую вы можете использовать позже.</p>
 <p>С помощью Sass вы можете хранить информацию в переменных, например:</p>
 <ul>
-  <li>strings</li>
-  <li>numbers</li>
-  <li>colors</li>
-  <li>booleans</li>
-  <li>lists</li>
-  <li>nulls</li>
+  <li>строки</li>
+  <li>числа</li>
+  <li>цвета</li>
+  <li>булевы</li>
+  <li>списки</li>
+  <li>нули</li>
 </ul>
-<p>Sass uses the $ symbol, followed by a name, to declare variables:</p>
+<p>Для объявления переменных Sass использует символ $, за которым следует имя:</p>
 <div class="w3-example">
-<p>Sass Variable Syntax:</p>
+<p>Синтаксис переменных Sass:</p>
 <div class="w3-code notranslate xcssHigh">
-$<i>variablename</i>: <em>value</em>;
+$<i>имяПеременной</i>: <em>значение</em>;
 </div>
 </div>
 
-<p>The following example declares 4 variables named myFont, myColor, myFontSize, and myWidth.
-After the variables are declared, you can use the variables wherever you want:</p>
+<p>В следующем примере объявляются 4 переменные с именами myFont, myColor, myFontSize и myWidth. После объявления переменных вы можете использовать переменные где угодно:</p>
 <div class="w3-example">
-<p>SCSS Syntax:</p>
+<p>SCSS Синтаксис:</p>
 <div class="w3-code notranslate cssHigh">
   $myFont: Helvetica, sans-serif;<br>$myColor: red;<br>$myFontSize: 18px;<br>
   $myWidth: 680px;<br><br>body {<br>
@@ -299,15 +298,13 @@ After the variables are declared, you can use the variables wherever you want:</
   width: $myWidth;<br>}
 </div>
 <p>
-<a target="_blank" class="w3-btn" href="showsassdaab.html?filename=demo_sass_var1">Run Example &raquo;</a>
+<a target="_blank" class="w3-btn" href="showsassdaab.html?filename=demo_sass_var1">Выполнить пример &raquo;</a>
 </p>
 </div>
 
-<p>So, when the Sass file is transpiled, it takes the variables (myFont, myColor,
-etc.) and outputs normal CSS with the variable values placed in the CSS, like
-this:</p>
+<p>Итак, когда файл Sass переносится, он принимает переменные (myFont, myColor и т.д.) и выводит обычный CSS со значениями переменных, помещенными в CSS, например:</p>
 <div class="w3-example">
-<p>CSS Output:</p>
+<p>CSS Вывод:</p>
 <div class="w3-code notranslate cssHigh">
   body {<br>
   &nbsp;
@@ -318,18 +315,12 @@ this:</p>
 <br>
 </div>
 <hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-</div><hr>
 
-<h2>Sass Variable Scope</h2>
-<p>Sass variables are only available at the level of nesting where they are defined.</p>
-<p>Look at the following example:</p>
+<h2>Sass Область действия переменной</h2>
+<p>Переменные Sass доступны только на уровне вложенности, на котором они определены.</p>
+<p>Посмотрите на следующий пример:</p>
 <div class="w3-example">
-<p>SCSS Syntax:</p>
+<p>SCSS Синтаксис:</p>
 <div class="w3-code notranslate cssHigh">
   $myColor: red;<br><br>h1 {<br>
   &nbsp;
@@ -337,18 +328,16 @@ this:</p>
   color: $myColor;<br>}
 </div>
 <p>
-<a target="_blank" class="w3-btn" href="showsass835a.html?filename=demo_sass_var2">Run Example &raquo;</a>
+<a target="_blank" class="w3-btn" href="showsass835a.html?filename=demo_sass_var2">Выполнить пример &raquo;</a>
 </p>
 </div>
 
-<p>Will the color of the text inside a <code class="w3-codespan">&lt;p&gt;</code> tag be red or green? It will be red!</p>
-<p>The other definition, $myColor: green; is inside the
-<code class="w3-codespan">&lt;h1&gt;</code> rule, and will only
-be available there!</p>
-<p>So, the CSS output will be:</p>
+<p>Будет ли цвет текста внутри тега <code class="w3-codespan">&lt;p&gt;</code> красным или зеленым? Он будет красным!</p>
+<p>Другое определение, $myColor: green; находится внутри правила <code class="w3-codespan">&lt;h1&gt;</code> и будет доступен только там!</p>
+<p>Таким образом, вывод CSS будет таким:</p>
 
 <div class="w3-example">
-  <p>CSS Output:</p>
+  <p>CSS вывод:</p>
 <div class="w3-code notranslate cssHigh">
   h1 {<br>
   &nbsp; color: green;<br>}<br><br>p {<br>&nbsp;
@@ -357,19 +346,16 @@ be available there!</p>
 <br>
 </div>
 
-<p>Ok, that is the default behavior for variable scope.</p>
-
+<p>Хорошо, это поведение по умолчанию для области переменной.</p>
 <hr>
-<h2>Using Sass !global</h2>
-<p>The default behavior for variable scope can be overridden by using the
-<code class="w3-codespan">!global</code> switch.</p>
+
+<h2>Использование Sass !global</h2>
+<p>Поведение по умолчанию для области действия переменной можно изменить с помощью переключателя <code class="w3-codespan">!global</code>.</p>
 <p>
-<code class="w3-codespan">!global</code> indicates that a variable is global,
-which means that it is accessible on all levels.</p>
-<p>Look at the following example (same as above; but with
-<code class="w3-codespan">!global</code> added):</p>
+<code class="w3-codespan">!global</code> указывает, что переменная является глобальной, что означает, что она доступна на всех уровнях.</p>
+<p>Посмотрите на следующий пример (такой же, как и выше, но с добавлением <code class="w3-codespan">!global</code>):</p>
 <div class="w3-example">
-<p>SCSS Syntax:</p>
+<p>SCSS Синтаксис:</p>
 <div class="w3-code notranslate cssHigh">
   $myColor: red;<br><br>h1 {<br>
   &nbsp;
@@ -377,15 +363,15 @@ which means that it is accessible on all levels.</p>
   color: $myColor;<br>}
 </div>
 <p>
-<a target="_blank" class="w3-btn" href="showsass8147.html?filename=demo_sass_var3">Run Example &raquo;</a>
+<a target="_blank" class="w3-btn" href="showsass8147.html?filename=demo_sass_var3">Выполнить пример &raquo;</a>
 </p>
 </div>
 
-<p>Now the color of the text inside a <code class="w3-codespan">&lt;p&gt;</code> tag will be green!</p>
-<p>So, the CSS output will be:</p>
+<p>Теперь цвет текста внутри тега <code class="w3-codespan">&lt;p&gt;</code> будет зеленым!</p>
+<p>Таким образом, вывод CSS будет:</p>
 
 <div class="w3-example">
-  <p>CSS Output:</p>
+  <p>CSS вывод:</p>
 <div class="w3-code notranslate cssHigh">
   h1 {<br>
   &nbsp; color: green;<br>}<br><br>p {<br>&nbsp;
@@ -394,12 +380,10 @@ which means that it is accessible on all levels.</p>
 </div>
 
 <div class="w3-panel w3-note">
-<p><strong>Tip:</strong> Global variables should be defined outside any rules. It could be
-wise to define all global variables in its own file, named &quot;_globals.scss&quot;, and
-include the file with the <a href="sass_mixin_include.html">@include</a> keyword.</p>
+<p><strong>Примечание:</strong> Глобальные переменные следует определять вне каких-либо правил. Было бы разумно определить все глобальные переменные в отдельном файле с именем &quot;_globals.scss&quot;, и включением файла с ключевым словом <a href="sass_mixin_include.html">@include</a>.</p>
 </div>
 
-<br>
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="sass_installation.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_nesting.html">Next &#10095;</a>
@@ -411,8 +395,8 @@ include the file with the <a href="sass_mixin_include.html">@include</a> keyword
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_variables.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_variables.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
