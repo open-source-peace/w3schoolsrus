@@ -81,7 +81,8 @@ margin:0 0 -30px 0 !important;
 @media screen and (max-width:768px){.w3-sidebar.w3-collapse,.barex,.navex{display:none !important;}.w3-bar-block .w3-bar-item{text-align:center !important;padding:2px 0;}h1,.w3-jumbo{font-size:60px !important;}}
 @media screen and (max-width:545px){.certoverlay{padding:10px;height:100%;}.certoverlay h3{font-size:15px;}}
 @media screen and (max-width:380px){.getcert{position:absolute;text-align:center;left:50%;bottom:50%;font-size:13px;}}
-@media only screen and (max-width: 1366px){.w3-hide-device{display:none;}}
+@media only screen and (max-device-width: 1366px){.w3-hide-device{display:none;}}
+@media screen and (max-width:1080px){#cert_navbtn{display:none;}}
 
 /* Customize main.css */
 body {background: #F5F5DC; position:relative;min-height:100%;}
