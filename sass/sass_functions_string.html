@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Строковые функции. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass Строковые функции используются для управления строками и получения информации о них. Строки Sass начинаются с 1. Первый символ в строке имеет индекс 1, а не 0. Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,86 +260,76 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">String Functions</span></h1>
+<h1>Sass <span class="color_h1">Строковые функции</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="sass_extend.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="sass_extend.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_numeric.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass String Functions</h2>
-<p>The string functions are used to manipulate and get information about
-strings.</p>
-<p>Sass strings are 1-based. The first character in a string is at index 1, not
-0.</p>
-<p>The following table lists all string functions in Sass:</p>
+<h2>Sass Строковые функции</h2>
+<p>Строковые функции используются для управления строками и получения информации о них.</p>
+<p>Строки Sass начинаются с 1. Первый символ в строке имеет индекс 1, а не 0.</p>
+<p>В следующей таблице перечислены все строковые функции в Sass:</p>
 
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>quote(<em>string</em>)</td>
-    <td>Adds quotes to <em>string</em>, and returns the result.<br><br>
-    <strong>Example:</strong><br>quote(Hello world!)<br>Result: &quot;Hello world!&quot;</td>
+    <td>Добавляет кавычки в <em>строку</em>, и возвращает результат.<br><br>
+    <strong>Пример:</strong><br>quote(Hello world!)<br>Результат: &quot;Hello world!&quot;</td>
   </tr>
   <tr>
     <td>str-index(<em>string</em>,<em> substring</em>)</td>
-    <td>Returns the index of the first occurrence of the <em>substring</em> within
-    <em>string</em>.<br><br>
-    <strong>Example:</strong><br>str-index(&quot;Hello world!&quot;, &quot;H&quot;)<br>Result: 1</td>
+    <td>Возвращает индекс первого вхождения <em>подстроки</em> в <em>строке</em>.<br><br>
+    <strong>Пример:</strong><br>str-index(&quot;Hello world!&quot;, &quot;H&quot;)<br>Результат: 1</td>
   </tr>
   <tr>
     <td>str-insert(<em>string</em>, <em>insert</em>, <em>index</em>)</td>
-    <td>Returns <em>string</em> with <em>insert</em> inserted at the specified
-    <em>index</em> position.<br><br>
-    <strong>Example:</strong><br>str-insert(&quot;Hello world!&quot;, &quot; wonderful&quot;, 6)<br>Result: &quot;Hello
+    <td>Возвращает <em>строку</em> со <em>вставкой</em>, вставленной в указанную позицию <em>index</em>.<br><br>
+    <strong>Пример:</strong><br>str-insert(&quot;Hello world!&quot;, &quot; wonderful&quot;, 6)<br>Результат: &quot;Hello
     wonderful world!&quot;</td>
   </tr>
   <tr>
     <td>str-length(<em>string</em>)</td>
-    <td>Returns the length of <em>string</em> (in characters).<br><br>
-    <strong>Example:</strong><br>str-length(&quot;Hello world!&quot;)<br>Result: 12</td>
+    <td>Возвращает длину <em>строки</em> (в символах).<br><br>
+    <strong>Пример:</strong><br>str-length(&quot;Hello world!&quot;)<br>Результат: 12</td>
   </tr>
   <tr>
     <td>str-slice(<em>string</em>, <em>start</em>, <em>end</em>)</td>
-    <td>Extracts characters from <em>string</em>; start at <em>start</em>
-    and end at <em>end</em>, and returns the slice.<br><br>
-    <strong>Example:</strong><br>str-slice(&quot;Hello world!&quot;, 2,
-    5)<br>Result: &quot;ello&quot;</td>
+    <td>Извлекает символы из <em>строки</em>; начало на <em>start</em> и конец на <em>end</em>, и возвращает слайс (обрезок).<br><br>
+    <strong>Пример:</strong><br>str-slice(&quot;Hello world!&quot;, 2,
+    5)<br>Результат: &quot;ello&quot;</td>
   </tr>
   <tr>
     <td>to-lower-case(<em>string</em>)</td>
-    <td>Returns a copy of <em>string</em> converted to lower case.<br><br>
-    <strong>Example:</strong><br>to-lower-case(&quot;Hello
-    World!&quot;)<br>Result: &quot;hello world!&quot;</td>
+    <td>Возвращает копию <em>строки</em>, преобразованную в нижний регистр.<br><br>
+    <strong>Пример:</strong><br>to-lower-case(&quot;Hello World!&quot;)<br>Результат: &quot;hello world!&quot;</td>
   </tr>
   <tr>
     <td>to-upper-case(<em>string</em>)</td>
-    <td>Returns a copy of <em>string</em> converted to upper case.<br><br>
-    <strong>Example:</strong><br>to-upper-case(&quot;Hello
-    World!&quot;)<br>Result: &quot;HELLO WORLD!&quot;</td>
+    <td>Возвращает копию <em>строки</em>, преобразованную в верхний регистр.<br><br>
+    <strong>Пример:</strong><br>to-upper-case(&quot;Hello
+    World!&quot;)<br>Результат: &quot;HELLO WORLD!&quot;</td>
   </tr>
   <tr>
     <td>unique-id()</td>
-    <td>Returns a unique randomly generated unquoted string (guaranteed to be
-    unique within the current sass session).<br><br>
-    <strong>Example:</strong><br>unique-id()<br>Result:
-    tyghefnsv</td>
+    <td>Возвращает уникальную случайно сгенерированную строку без кавычек (гарантированно уникальную в рамках текущего сеанса sass).<br><br>
+    <strong>Пример:</strong><br>unique-id()<br>Результат: tyghefnsv</td>
   </tr>
   <tr>
     <td>unquote(<em>string</em>)</td>
-    <td>Removes quotes around <em>string</em> (if any), and returns the result.<br>
-    <br>
-    <strong>Example:</strong><br>unquote(&quot;Hello world!&quot;)<br>Result: Hello world!</td>
+    <td>Удаляет кавычки вокруг <em>строки</em> (если есть), и возвращает результат.<br><br>
+    <strong>Пример:</strong><br>unquote(&quot;Hello world!&quot;)<br>Результат: Hello world!</td>
   </tr>
   </table>
 </div>
 
-
-<br>
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="sass_extend.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_numeric.html">Next &#10095;</a>
@@ -351,8 +341,8 @@ strings.</p>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_functions_string.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_functions_string.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
