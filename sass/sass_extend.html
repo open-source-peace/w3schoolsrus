@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass @extend и наследование. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass @extend и наследование. Директива @extend позволяет передавать набор свойств CSS от одного селектора к другому. Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,56 +260,41 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">@extend and Inheritance</span></h1>
+<h1>Sass <span class="color_h1">@extend и наследование</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="sass_mixin_include.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="sass_mixin_include.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_string.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass @extend Directive</h2>
-<p>The <code class="w3-codespan">@extend</code> directive lets you share a set
-of CSS properties from one selector to another. </p>
-<p>The <code class="w3-codespan">@extend</code> directive is useful if
-you have almost identically styled elements that only differ in some
-small details.</p>
-<p>The following Sass example first creates a basic style for buttons (this
-style will be
-used for most buttons). Then, we create one style for a &quot;Report&quot; button and one
-style for a &quot;Submit&quot; button. Both &quot;Report&quot; and &quot;Submit&quot; button inherit all the
-CSS properties from the .button-basic class, through the <code class="w3-codespan">@extend</code> directive. In
-addition, they have their own colors defined:</p>
+<h2>Sass @extend директива</h2>
+<p>Директива <code class="w3-codespan">@extend</code> позволяет передавать набор свойств CSS от одного селектора к другому.</p>
+<p>Директива <code class="w3-codespan">@extend</code> полезна, если у вас есть элементы с почти одинаковым стилем, которые отличаются только некоторыми мелкими деталями.</p>
+<p>В следующем примере Sass сначала создается базовый стиль для кнопок (этот стиль будет использоваться для большинства кнопок). Затем мы создаем один стиль для кнопки &quot;Report&quot; и один стиль для кнопки &quot;Submit&quot;. И кнопка &quot;Report&quot; и кнопка &quot;Submit&quot; наследуют все свойства CSS от класса .button-basic через директиву <code class="w3-codespan">@extend</code>. Кроме того, для них определены собственные цвета:</p>
 <div class="w3-example">
-<p>SCSS Syntax:</p>
+<p>SCSS Синтаксис:</p>
 <div class="w3-code notranslate cssHigh">
   .button-basic&nbsp; {<br>&nbsp; border: none;<br>&nbsp; padding: 15px 30px;<br>&nbsp;
   text-align: center;<br>&nbsp; font-size: 16px;<br>&nbsp; cursor: pointer;<br>}<br>
   <br>.button-report&nbsp; {<br>&nbsp; @extend .button-basic;<br>&nbsp;
   background-color: red;<br>}<br><br>.button-submit&nbsp; {<br>&nbsp; @extend
   .button-basic;<br>&nbsp; background-color: green;<br>&nbsp; color: white;<br>}</div>
-<br>
 </div>
 
-<p>After compilation, the CSS will look like this:</p>
+<p>После компиляции CSS будет выглядеть так:</p>
 <div class="w3-example">
 <p>CSS Output:</p>
 <div class="w3-code notranslate cssHigh">
   .button-basic, .button-report, .button-submit {<br>&nbsp; border: none;<br>&nbsp;
   padding: 15px 30px;<br>&nbsp; text-align: center;<br>&nbsp; font-size: 16px;<br>&nbsp;
-  cursor: pointer;<br>}<br><br>
-  .button-report&nbsp; {<br>&nbsp; background-color: red;<br>}<br><br>
-  .button-submit&nbsp; {<br>&nbsp; background-color: green;<br>&nbsp; color:
-  white;<br>}</div>
-<br>
+  cursor: pointer;<br>}<br><br>.button-report&nbsp; {<br>&nbsp; background-color: red;<br>}<br><br>
+  .button-submit&nbsp; {<br>&nbsp; background-color: green;<br>&nbsp; color: white;<br>}</div>
 </div>
 
-<p>By using the <code class="w3-codespan">@extend</code> directive, you do not need to
-specify several classes for an element in your HTML code, like this: &lt;button
-class=&quot;button-basic button-report&quot;&gt;Report this&lt;/button&gt;. You just need to specify .button-report to get both sets of styles.</p>
+<p>Используя директиву <code class="w3-codespan">@extend</code> вам не нужно указывать несколько классов для элемента в вашем HTML-коде, например: &lt;button class=&quot;button-basic button-report&quot;&gt;Сообщить об этом&lt;/button&gt;. Вам просто нужно указать .button-report, чтобы получить оба набора стилей.</p>
+<p>Директива <code class="w3-codespan">@extend</code> помогает сохранить ваш код Sass очень DRY (чистым).</p>
 
-<p>The <code class="w3-codespan">@extend</code> directive helps keep your Sass code very DRY.</p>
-
-<br>
+<hr>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="sass_mixin_include.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_string.html">Next &#10095;</a>
