@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Функции списка. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass Функции списка используются для доступа к значениям в списке, объединения списков и добавления элементов в списки. Списки Sass неизменяемы. Списки Sass начинаются с 1. Первый элемент списка имеет индекс 1, а не 0. Учебник по Sass. W3Schools на русском'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,82 +260,75 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">List Functions</span></h1>
+<h1>Sass <span class="color_h1">Функции списка</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="sass_functions_numeric.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="sass_functions_numeric.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_map.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass List Functions</h2>
-<p>The list functions are used to access values in a list, combine lists, and
-add items to lists.</p>
-<p>Sass lists are immutable (they cannot change). So, the list functions that return a
-list, will
-return a new list, and not change the original list.</p>
-<p>Sass lists are 1-based. The first list item in a list is at index 1, not 0.</p>
-<p>The following table lists all list functions in Sass:</p>
+<h2>Sass Функции списка</h2>
+<p>Функции списка используются для доступа к значениям в списке, объединения списков и добавления элементов в списки.</p>
+<p>Списки Sass неизменяемы (они не могут быть изменены). Т.о., функции списка, возвращающие список, будут
+возвращать новый список и не изменять исходный список.</p>
+<p>Списки Sass начинаются с 1. Первый элемент списка имеет индекс 1, а не 0.</p>
+<p>В следующей таблице перечислены все функции списков в Sass:</p>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>append(<em>list</em>, <em>value</em>, [<em>separator</em>])</td>
-    <td>Adds a single <em>value</em> to the end of the list. <em>separator</em>
-    can be auto, comma, or space. auto is default.<br><br>
-    <strong>Example:<br></strong>append((a b c), d)<br>Result: a b c d<br>append((a b c), (d), comma)<br>
-    Result: a, b, c, d</td>
+    <td>Добавляет одно <em>значение</em> в конец списка. <em>separator</em> может быть auto, запятая или пробел. Auto является по умолчанию.<br><br>
+    <strong>Пример:<br></strong>append((a b c), d)<br>Результат: a b c d<br>append((a b c), (d), comma)<br>
+    Результат: a, b, c, d</td>
   </tr>
   <tr>
     <td>index(<em>list</em>, <em>value</em>)</td>
-    <td>Returns the index position for the <em>value</em> in list.<br><br>
-    <strong>Example:</strong><br>index(a b c, b)<br>Result: 2<br>index(a b c, f)<br>Result: null</td>
+    <td>Возвращает позицию index для <em>значения</em> в списке.<br><br>
+    <strong>Пример:</strong><br>index(a b c, b)<br>Результат: 2<br>index(a b c, f)<br>Результат: null</td>
   </tr>
   <tr>
     <td>is-bracketed(<em>list</em>)</td>
-    <td>Checks whether the list has square brackets.<br><br>
-    <strong>Example:</strong><br>is-bracketed([a b c])<br>Result: true <br>is-bracketed(a b c)<br>Result:
+    <td>Проверяет, есть ли в списке квадратные скобки.<br><br>
+    <strong>Пример:</strong><br>is-bracketed([a b c])<br>Результат: true <br>is-bracketed(a b c)<br>Результат:
     false</td>
   </tr>
   <tr>
     <td>join(<em>list1</em>, <em>list2</em>, [<em>separator, bracketed</em>])</td>
-    <td>Appends <em>list2</em> to the end of <em>list1</em>. <em>separator</em>
-    can be auto, comma, or space. auto is default (will use the separator in the
-    first list). <em>bracketed</em> can be auto, true, or false. auto is default.<br>
-    <br>
-    <strong>Example:</strong><br>join(a b c, d e f)<br>Result: a b c d e f<br>join((a b c), (d e f),
-    comma)<br>Result: a, b, c, d, e, f<br>join(a b c, d e f, $bracketed: true)<br>Result:
+    <td>Добавляет <em>list2</em> в конец <em>list1</em>. <em>separator</em> может быть auto, запятая или пробел. Auto является по умолчанию (будет использоваться разделитель в первом списке). Заключенные в <em>квадратные скобки</em> могут быть auto, true и false. Auto является по умолчанию.<br><br>
+    <strong>Пример:</strong><br>join(a b c, d e f)<br>Результат: a b c d e f<br>join((a b c), (d e f),
+    comma)<br>Результат: a, b, c, d, e, f<br>join(a b c, d e f, $bracketed: true)<br>Результат:
     [a b c d e f]</td>
   </tr>
   <tr>
     <td>length(<em>list</em>)</td>
-    <td>Returns the length of the list.<br><br>
-    <strong>Example:</strong><br>length(a b c)<br>Result: 3</td>
+    <td>Возвращает длину списка.<br><br>
+    <strong>Пример:</strong><br>length(a b c)<br>Результат: 3</td>
   </tr>
   <tr>
     <td>list-separator(<em>list</em>)</td>
-    <td>Returns the list separator used, as a string. Can be either space or
-    comma.<br><br>
-    <strong>Example:</strong><br>list-separator(a b c)<br>Result: &quot;space&quot;<br>list-separator(a, b, c)<br>
-    Result: &quot;comma&quot;</td>
+    <td>Возвращает используемый разделитель списка в виде строки. Может быть либо пробелом, либо запятой.<br><br>
+    <strong>Пример:</strong><br>list-separator(a b c)<br>Результат: &quot;space&quot;<br>list-separator(a, b, c)<br>
+    Результат: &quot;comma&quot;</td>
   </tr>
   <tr>
     <td>nth(<em>list</em>, <em>n</em>)</td>
-    <td>Returns the <em>n</em>th element in the list.<br><br>
-    <strong>Example:</strong><br>nth(a b c, 3)<br>Result: c</td>
+    <td>Возвращает <em>n</em>-й элемент в списке.<br><br>
+    <strong>Пример:</strong><br>nth(a b c, 3)<br>Результат: c</td>
   </tr>
   <tr>
     <td>set-nth(<em>list</em>, <em>n</em>, <em>value</em>)</td>
-    <td>Sets the <em>n</em>th list element to the <em>value</em> specified.<br>
+    <td>Устанавливает для <em>n</em>-го элемента списка указанное <em>значение</em>.<br>
     <br>
-    <strong>Example:</strong><br>set-nth(a b c, 2, x)<br>Result: a x c</td>
+    <strong>Пример:</strong><br>set-nth(a b c, 2, x)<br>Результат: a x c</td>
   </tr>
   <tr>
     <td>zip(<em>lists</em>)</td>
-    <td>Combines lists into a single multidimensional list.<br><br>
-    <strong>Example:</strong><br>zip(1px 2px 3px, solid dashed dotted, red green blue)<br>Result: 1px
+    <td>Объединяет списки в один многомерный список.<br><br>
+    <strong>Пример:</strong><br>zip(1px 2px 3px, solid dashed dotted, red green blue)<br>Результат: 1px
     solid red, 2px dashed green, 3px dotted blue</td>
   </tr>
   </table>
@@ -353,8 +346,8 @@ return a new list, and not change the original list.</p>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_functions_list.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_functions_list.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
