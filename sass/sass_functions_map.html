@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Функции карты. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass Функции карты. В Sass тип данных карты представляет одну или несколько пар ключ/значение. Карты Sass неизменны. Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,65 +260,57 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">Map Functions</span></h1>
+<h1>Sass <span class="color_h1">Функции карты</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="sass_functions_list.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_selector.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass Map Functions</h2>
-<p>In Sass, the map data type represents one or more key/value pairs.</p>
-<p><strong>Tip:</strong> It is also possible to use the
-<a href="sass_functions_list.html">List functions</a> from the previous page,
-with maps.&nbsp;Then the map will be treated as a list with two elements.</p>
-<p>Sass maps are immutable (they cannot change). So, the map functions that return a
-map, will
-return a new map, and not change the original map.</p>
-<p>The following table lists all map functions in Sass:</p>
+<h2>Sass Функции карты</h2>
+<p>В Sass тип данных карты представляет одну или несколько пар ключ/значение.</p>
+<p><b>Совет:</b> Также можно использовать <a href="sass_functions_list.html">Функции списка</a> с предыдущей страницы с картами. Тогда карта будет рассматриваться как список с двумя элементами.</p>
+<p>Карты Sass неизменны (они не могут быть изменены). Итак, функции карты, которые возвращают карту, вернут новую карту и не изменят исходную карту.</p>
+<p>В следующей таблице перечислены все функции карты в Sass:</p>
 
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>map-get(<em>map</em>, <em>key</em>)</td>
-    <td>Returns the value for the specified <em>key </em>in the map.<br><br>
-    <strong>Example:</strong><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-get($font-sizes,
-    &quot;small&quot;)<br>Result: 12px</td>
+    <td>Возвращает значение для указанного <em>key</em> на карте.<br><br>
+    <b>Пример:</b><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-get($font-sizes, &quot;small&quot;)<br><b>Результат:</b> 12px</td>
   </tr>
   <tr>
     <td>map-has-key(<em>map</em>, <em>key</em>)</td>
-    <td>Checks whether <em>map</em> has the specified <em>key</em>. Returns true or
-    false.<br><br><strong>Example:</strong><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-has-key($font-sizes,
-    &quot;big&quot;)<br>Result: false</td>
+    <td>Проверяет, есть ли на <em>map</em> указанный <em>key</em>. Возвращает true или false.<br><br>
+      <b>Пример:</b><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-has-key($font-sizes, &quot;big&quot;)<br><b>Результат:</b> false</td>
   </tr>
   <tr>
     <td>map-keys(<em>map</em>)</td>
-    <td>Returns a list of all keys in <em>map</em>.<br><br><strong>Example:</strong><br>
-    $font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-keys($font-sizes)<br>Result:
-    &quot;small&quot;, &quot;normal, &quot;large&quot;</td>
+    <td>Возвращает список всех ключей в <em>map</em>.<br><br>
+      <b>Пример:</b><br> $font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-keys($font-sizes)<br><b>Результат:</b> &quot;small&quot;, &quot;normal, &quot;large&quot;</td>
   </tr>
   <tr>
     <td>map-merge(<em>map1</em>, <em>map2</em>)</td>
-    <td>Appends <em>map2</em> to the end of <em>map1</em>.<br><br><strong>
-    Example:</strong><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>
+    <td>Добавляет <em>map2</em> в конец <em>map1</em>.<br><br><b>Пример:</b>
+      <br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>
     $font-sizes2: (&quot;x-large&quot;: 30px, &quot;xx-large&quot;: 36px)<br>map-merge($font-sizes,
-    $font-sizes2)<br>Result: &quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px,
+    $font-sizes2)<br><b>Результат:</b> &quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px,
     &quot;x-large&quot;: 30px, &quot;xx-large&quot;: 36px</td>
   </tr>
   <tr>
     <td>map-remove(<em>map</em>, <em>keys...</em>)</td>
-    <td>Removes the specified keys from <em>map</em>.<br><br><strong>Example:</strong><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-remove($font-sizes,
-    &quot;small&quot;)<br>Result: (&quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-remove($font-sizes,
-    &quot;small&quot;, &quot;large&quot;)<br>Result: (&quot;normal&quot;: 18px)</td>
+    <td>Удаляет указанные ключи из <em>map</em>.<br><br><b>Пример:</b><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-remove($font-sizes,
+    &quot;small&quot;)<br><b>Результат:</b> (&quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-remove($font-sizes,
+    &quot;small&quot;, &quot;large&quot;)<br><b>Результат:</b> (&quot;normal&quot;: 18px)</td>
   </tr>
   <tr>
     <td>map-values(<em>map</em>)</td>
-    <td>Returns a list of all values in <em>map</em>.<br><br><strong>Example:</strong><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-values($font-sizes)<br>Result:
-    12px, 18px, 24px</td>
+    <td>Возвращает список всех значений в <em>map</em>.<br><br><b>Пример:</b><br>$font-sizes: (&quot;small&quot;: 12px, &quot;normal&quot;: 18px, &quot;large&quot;: 24px)<br>map-values($font-sizes)<br><b>Результат:</b> 12px, 18px, 24px</td>
   </tr>
   </table>
 </div>
@@ -335,8 +327,8 @@ return a new map, and not change the original map.</p>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_functions_map.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_functions_map.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
