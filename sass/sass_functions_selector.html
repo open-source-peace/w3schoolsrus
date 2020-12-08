@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Селекторные функции. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass Селекторные функции используются для проверки и управления селекторами. Описание и примеры селекторных функций. Полный справочник. Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,36 +260,34 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">Selector Functions</span></h1>
+<h1>Sass <span class="color_h1">Селекторные функции</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="sass_functions_map.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="sass_functions_map.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_introspection.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass Selector Functions</h2>
-<p>The selector functions are used to check and manipulate selectors.&nbsp;</p>
-<p>The following table lists all selector functions in Sass:</p>
+<h2>Sass Селекторные функции</h2>
+<p><strong>Селекторные функции</strong> используются для проверки и управления селекторами.</p>
+<p>В следующей таблице перечислены все селекторные функции в Sass:</p>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>is-superselector(<em>super</em>, <em>sub</em>)</td>
-    <td>Checks whether the <em>super</em> selector matches all the elements that
-    <em>sub</em> matches.<br><br>
-    <strong>Example:</strong><br>is-superselector(&quot;div&quot;, &quot;div.myInput&quot;)<br>Result: true<br>is-superselector(&quot;div.myInput&quot;,
-    &quot;div&quot;)<br>Result: false<br>is-superselector(&quot;div&quot;,
-    &quot;div&quot;)<br>Result: true</td>
+    <td>Проверяет, соответсвует ли селектор <em>super</em> всем элементам <em>sub</em>.<br><br>
+    <b>Пример:</b><br>is-superselector(&quot;div&quot;, &quot;div.myInput&quot;)<br><b>Результат:</b> true<br>is-superselector(&quot;div.myInput&quot;,
+    &quot;div&quot;)<br><b>Результат:</b> false<br>is-superselector(&quot;div&quot;,
+    &quot;div&quot;)<br><b>Результат:</b> true</td>
   </tr>
   <tr>
     <td>selector-append(<em>selectors</em>)</td>
-    <td>Appends the second (and third/fourth etc.) selector to the first
-    selector.<br><br>
-    <strong>Example:</strong><br>selector-append(&quot;div&quot;, &quot;.myInput&quot;)<br>Result: div.myInput<br>selector-append(&quot;.warning&quot;,
-    &quot;__a&quot;)<br>Result: .warning__a</td>
+    <td>Добавляет второй (и третий/четвертый и т.д.) селектор к первому селектору.<br><br>
+    <b>Пример:</b><br>selector-append(&quot;div&quot;, &quot;.myInput&quot;)<br><b>Результат:</b> div.myInput<br>selector-append(&quot;.warning&quot;,
+    &quot;__a&quot;)<br><b>Результат:</b> .warning__a</td>
   </tr>
   <tr>
     <td>selector-extend(<em>selector</em>, <em>extendee</em>, <em>extender</em>)</td>
@@ -297,37 +295,33 @@
   </tr>
   <tr>
     <td>selector-nest(<em>selectors</em>)</td>
-    <td>Returns a new selector containing a nested list of CSS selectors based
-    on the list provided.<br><br>
-    <strong>Example:</strong><br>selector-nest(&quot;ul&quot;, &quot;li&quot;)<br>Result: ul li<br>selector-nest(&quot;.warning&quot;,
-    &quot;alert&quot;, &quot;div&quot;)<br>Result: .warning div, alert div</td>
+    <td>Возвращает новый селектор, содержащий вложенный список селекторов CSS на основе предоставленного списка.<br><br>
+    <b>Пример:</b><br>selector-nest(&quot;ul&quot;, &quot;li&quot;)<br><b>Результат:</b> ul li<br>selector-nest(&quot;.warning&quot;,
+    &quot;alert&quot;, &quot;div&quot;)<br><b>Результат:</b> .warning div, alert div</td>
   </tr>
   <tr>
     <td>selector-parse(<em>selector</em>)</td>
-    <td>Returns a list of strings contained in <em>selector</em> using the same
-    format as the parent selector.<br><br>
-    <strong>Example:<br></strong>selector-parse(&quot;h1 .myInput .warning&quot;)<br>Result: ('h1' '.myInput'
+    <td>Возвращает список строк, содержащихся в <em>selector</em>, используя тот же формат, что и родительский селектор.<br><br>
+    <b>Пример:</b><br>selector-parse(&quot;h1 .myInput .warning&quot;)<br><b>Результат:</b> ('h1' '.myInput'
     '.warning')</td>
   </tr>
   <tr>
     <td>selector-replace(<em>selector</em>, <em>original</em>, <em>replacement</em>)</td>
-    <td>Returns a new selector with the selectors specified in <em>replacement</em>
-    in place of selectors specified in <em>original</em>.<br><br>
-    <strong>Example:</strong><br>selector-replace(&quot;p.warning&quot;, &quot;p&quot;, &quot;div&quot;)<br>Result: div.warning</td>
+    <td>Возвращает новый селектор с селекторами, указанными в <em>replacement</em> вместо селекторов, указанных в <em>original</em>.<br><br>
+    <b>Пример:</b><br>selector-replace(&quot;p.warning&quot;, &quot;p&quot;, &quot;div&quot;)<br><b>Результат:</b> div.warning</td>
   </tr>
   <tr>
     <td>selector-unify(<em>selector1</em>, <em>selector2</em>)</td>
-    <td>Returns a new selector that matches only elements matched by both <em>
-    selector1</em> and <em>selector2</em>.<br><br>
-    <strong>Example:</strong><br>selector-unify(&quot;myInput&quot;, &quot;.disabled&quot;)<br>Result: myInput.disabled<br>
-    selector-unify(&quot;p&quot;, &quot;h1&quot;)<br>Result: null</td>
+    <td>Возвращает новый селектор, который соответствует только элементам, соответствующим как <em>selector1</em> так и <em>selector2</em>.<br><br>
+    <b>Пример:</b><br>selector-unify(&quot;myInput&quot;, &quot;.disabled&quot;)<br><b>Результат:</b> myInput.disabled<br>
+    selector-unify(&quot;p&quot;, &quot;h1&quot;)<br><b>Результат:</b> null</td>
   </tr>
   <tr>
     <td>simple-selectors(<em>selectors</em>)</td>
-    <td>Returns a list of the individual selectors in <em>selectors</em>.<br>
+    <td>Возвращает список отдельных селекторов в <em>selectors</em>.<br>
     <br>
-    <strong>Example:</strong><br>simple-selectors(&quot;div.myInput&quot;)<br>Result: div, .myInput<br>
-    simple-selectors(&quot;div.myInput:before&quot;)<br>Result: div, .myInput,
+    <b>Пример:</b><br>simple-selectors(&quot;div.myInput&quot;)<br><b>Результат:</b> div, .myInput<br>
+    simple-selectors(&quot;div.myInput:before&quot;)<br><b>Результат:</b> div, .myInput,
     :before</td>
   </tr>
   </table>
@@ -335,7 +329,7 @@
 
 <hr>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="sass_functions_map.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="sass_functions_map.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_introspection.html">Next &#10095;</a>
 </div>
 
@@ -345,8 +339,8 @@
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_functions_selector.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_functions_selector.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');

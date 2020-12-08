@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Цветовые функции. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Sass Цветовые функции: установки цвета, получения цвета и управления цветом. Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,229 +260,183 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">Color Functions</span></h1>
+<h1>Sass <span class="color_h1">Цветовые функции</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="sass_functions_introspection.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="default.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass Color Functions</h2>
-<p>We have divided the color functions in Sass into three parts: Set color
-functions, Get color functions, and Manipulate color functions:</p>
-<h3>Sass Set Color Functions</h3>
+<h2>Sass Цветовые функции</h2>
+<p>Мы разделили цветовые функции в Sass на три части: функции установки цвета, функции получения цвета и функции управления цветом:</p>
+<h3>Sass Функции установки цвета</h3>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>rgb(<em>red</em>, <em>green</em>, <em>blue</em>)</td>
-    <td>Sets a color using the Red-Green-Blue (RGB) model. An RGB color value is
-    specified with: rgb(red, green, blue). Each parameter defines the intensity
-    of that color and can be an integer between 0 and 255, or a percentage value
-    (from 0% to 100%).<br><br>
-    <strong>Example:</strong><br>rgb(0, 0, 255); // rendered as blue because the
-    blue parameter is set to its highest value (255) and the others are set to 0</td>
+    <td>Устанавливает цвет с использованием модели Красный-Зеленый-Синий (Red-Green-Blue - RGB). Значение цвета RGB задается с помощью: rgb(red, green, blue). Каждый параметр определяет интенсивность этого цвета и может быть целым числом от 0 до 255 или процентным значением (от 0% до 100%).<br><br>
+    <b>Пример:</b><br>rgb(0, 0, 255); // отображается как синий, потому что для синего параметра установлено максимальное значение (255), а для остальных установлено значение 0</td>
   </tr>
   <tr>
     <td>rgba(<em>red</em>, <em>green</em>, <em>blue</em>, <em>alpha</em>)</td>
-    <td>Sets a color using the Red-Green-Blue-Alpha (RGBA) model. RGBA color
-    values are an extension of RGB color values with an alpha channel - which
-    specifies the opacity of the color. The alpha parameter is a number between
-    0.0 (fully transparent) and 1.0 (fully opaque).<br><br>
-    <strong>Example:</strong><br>rgba(0, 0, 255, 0.3); // rendered as blue with
-    opacity</td>
+    <td>Устанавливает цвет с использованием модели Красный-Зеленый-Синий-Альфа (Red-Green-Blue-Alpha - RGBA). Значения цвета RGBA являются расширением значений цвета RGB с альфа-каналом, который определяет непрозрачность цвета. Параметр альфа - это число от 0,0 (полностью прозрачный) до 1,0 (полностью непрозрачный).<br><br>
+    <b>Пример:</b><br>rgba(0, 0, 255, 0.3); // отображается как синий с непрозрачностью</td>
   </tr>
   <tr>
     <td>hsl(<em>hue</em>, <em>saturation</em>, <em>lightness</em>)</td>
-    <td>Sets a color using the Hue-Saturation-Lightness (HSL) model - and
-    represents a cylindrical-coordinate representation of colors. Hue is a
-    degree on the color wheel (from 0 to 360) - 0 or 360 is red, 120 is green,
-    240 is blue. Saturation is a percentage value; 0% means a shade of gray and
-    100% is the full color. Lightness is also a percentage; 0% is black, 100% is
-    white.<br><br>
-    <strong>Example:</strong><br>hsl(120, 100%, 50%); // green<br>hsl(120, 100%,
-    75%); // light green<br>hsl(120, 100%, 25%); // dark green<br>hsl(120, 60%,
-    70%); // pastel green <br></td>
+    <td>Устанавливает цвет с использованием модели оттенка-насыщенности-яркости (Hue-Saturation-Lightness - HSL) и представляет представление цветов в цилиндрических координатах. Оттенок - это градус на цветовом круге (от 0 до 360) - 0 или 360 - красный, 120 - зеленый, 240 - синий. Насыщенность - это процентное значение; 0% означает оттенок серого, а 100% - полный цвет. Яркость тоже в процентах; 0% черный, 100% белый.<br><br>
+    <b>Пример:</b><br>hsl(120, 100%, 50%); // зеленый<br>hsl(120, 100%, 75%); // светло-зеленый<br>hsl(120, 100%, 25%); // темно-зеленый<br>hsl(120, 60%, 70%); // пастельно-зеленый <br></td>
   </tr>
   <tr>
     <td>hsla(<em>hue</em>, <em>saturation</em>, <em>lightness</em>, <em>alpha</em>)</td>
-    <td>Sets a color using the Hue-Saturation-Lightness-Alpha (HSLA) model. HSLA
-    color values are an extension of HSL color values with an alpha channel -
-    which specifies the opacity of the color. The alpha parameter is a number
-    between 0.0 (fully transparent) and 1.0 (fully opaque).<br><br>
-    <strong>Example:</strong><br>hsl(120, 100%, 50%, 0.3); // green with opacity<br>
-    hsl(120, 100%, 75%, 0.3); // light green with opacity</td>
+    <td>Устанавливает цвет с использованием модели оттенка-насыщенности-яркости-альфа (Hue-Saturation-Lightness-Alpha - HSLA). Значения цвета HSLA являются расширением значений цвета HSL с альфа-каналом, который определяет непрозрачность цвета. Параметр альфа - это число от 0,0 (полностью прозрачный) до 1,0 (полностью непрозрачный).<br><br>
+    <b>Пример:</b><br>hsl(120, 100%, 50%, 0.3); // зеленый с непрозрачностью<br> hsl(120, 100%, 75%, 0.3); // светло-зеленый с непрозрачностью</td>
   </tr>
   <tr>
     <td>grayscale(<em>color</em>)</td>
-    <td>Sets a gray color with the same lightness as <em>color</em>.<br><br>
-    <strong>Example:</strong><br>grayscale(#7fffd4);<br>Result: #c6c6c6</td>
+    <td>Устанавливает серый цвет с такой же яркостью, как <em>color</em>.<br><br>
+    <b>Пример:</b><br>grayscale(#7fffd4);<br><b>Результат:</b> #c6c6c6</td>
   </tr>
   <tr>
     <td>complement(<em>color</em>)</td>
-    <td>Sets a color that is the complementary color of <em>color</em>.<br><br>
-    <strong>Example:</strong><br>complement(#7fffd4);<br>Result: #ff7faa</td>
+    <td>Устанавливает цвет, который является дополнительным цветом <em>color</em>.<br><br>
+    <b>Пример:</b><br>complement(#7fffd4);<br><b>Результат:</b> #ff7faa</td>
   </tr>
   <tr>
     <td>invert(<em>color</em>, <em>weight</em>)</td>
-    <td>Sets a color that is the inverse or negative color of <em>color</em>.
-    The <em>weight</em> parameter is optional and must be a number between 0%
-    and 100%. Default is 100%.<br><br>
-    <strong>Example:</strong><br>invert(white);<br>Result: black</td>
+    <td>Устанавливает цвет, который является инверсным или отрицательным цветом <em>color</em>. Параметр <em>weight</em> (толщина) является необязательным и должен быть числом от 0% до 100%. По умолчанию 100%.<br><br>
+    <b>Пример:</b><br>invert(white);<br><b>Результат:</b> black</td>
   </tr>
   </table>
 </div>
 
-<h3>Sass Get Color Functions</h3>
+<h3>Sass Функции получения цвета</h3>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>red(<em>color</em>)</td>
-    <td>Returns the red value of <em>color</em> as a number between 0 and 255.<br><br>
-    <strong>Example:</strong><br>red(#7fffd4);<br>Result: 127<br>red(red);<br>Result:
+    <td>Возвращает значение красного <em>color</em> в виде числа между 0 и 255.<br><br>
+    <b>Пример:</b><br>red(#7fffd4);<br><b>Результат:</b> 127<br>red(red);<br><b>Результат:</b>
     255</td>
   </tr>
   <tr>
     <td>green(<em>color</em>)</td>
-    <td>Returns the green value of <em>color</em> as a number between 0 and 255.<br><br>
-    <strong>Example:</strong><br>green(#7fffd4);<br>Result: 255<br>green(blue);<br>Result:
+    <td>Возвращает значение зеленого цвета <em>color</em> в виде числа между 0 и 255.<br><br>
+    <b>Пример:</b><br>green(#7fffd4);<br><b>Результат:</b> 255<br>green(blue);<br><b>Результат:</b>
     0</td>
   </tr>
   <tr>
     <td>blue(<em>color</em>)</td>
-    <td>Returns the blue value of <em>color</em> as a number between 0 and 255.<br><br>
-    <strong>Example:</strong><br>blue(#7fffd4);<br>Result: 212<br>blue(blue);<br>Result: 255</td>
+    <td>Возвращает значение синего цвета <em>color</em> в виде числа между 0 и 255.<br><br>
+    <b>Пример:</b><br>blue(#7fffd4);<br><b>Результат:</b> 212<br>blue(blue);<br><b>Результат:</b> 255</td>
   </tr>
   <tr>
     <td>hue(<em>color</em>)</td>
-    <td>Returns the hue of <em>color</em> as a number between 0deg and 255deg.<br><br>
-    <strong>Example:</strong><br>hue(#7fffd4);<br>Result: 160deg</td>
+    <td>Возвращает оттенок <em>color</em> как число от 0 до 255 градусов.<br><br>
+    <b>Пример:</b><br>hue(#7fffd4);<br><b>Результат:</b> 160deg</td>
   </tr>
   <tr>
     <td>saturation(<em>color</em>)</td>
-    <td>Returns the HSL saturation of <em>color</em> as a number between 0% and
-    100%.<br><br>
-    <strong>Example:</strong><br>saturation(#7fffd4);<br>Result: 100%</td>
+    <td>Возвращает насыщенность HSL для <em>color</em> как число от 0% до 100%.<br><br>
+    <b>Пример:</b><br>saturation(#7fffd4);<br><b>Результат:</b> 100%</td>
   </tr>
   <tr>
     <td>lightness(<em>color</em>)</td>
-    <td>Returns the HSL lightness of <em>color</em> as a number between 0% and
-    100%.<br><br>
-    <strong>Example:</strong><br>lightness(#7fffd4);<br>Result: 74.9%</td>
+    <td>Возвращает яркость HSL <em>color</em> в виде числа от 0% до 100%.<br><br>
+    <b>Пример:</b><br>lightness(#7fffd4);<br><b>Результат:</b> 74.9%</td>
   </tr>
   <tr>
     <td>alpha(<em>color</em>)</td>
-    <td>Returns the alpha channel of <em>color</em> as a number between 0 and 1.<br><br>
-    <strong>Example:</strong><br>alpha(#7fffd4);<br>Result: 1</td>
+    <td>Возвращает альфа-канал <em>color</em> как число от 0 до 1.<br><br>
+    <b>Пример:</b><br>alpha(#7fffd4);<br><b>Результат:</b> 1</td>
   </tr>
   <tr>
     <td>opacity(<em>color</em>)</td>
-    <td>Returns the alpha channel of <em>color</em> as a number between 0 and 1.<br><br>
-    <strong>Example:</strong><br>opacity(rgba(127, 255, 212, 0.5));<br>Result:
-    0.5</td>
+    <td>Возвращает альфа-канал <em>color</em> как число от 0 до 1.<br><br>
+    <b>Пример:</b><br>opacity(rgba(127, 255, 212, 0.5));<br><b>Результат:</b> 0.5</td>
   </tr>
   </table>
 </div>
 
-<h3>Sass Manipulate Color Functions</h3>
+<h3>Sass Функции управления цветом</h3>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>mix(<em>color1</em>, <em>color2</em>, <em>weight</em>)</td>
-    <td>Creates a color that is a mix of <em>color1</em> and <em>color2</em>.
-    The <em>weight</em> parameter must be between 0% and 100%. A larger weight
-    means that more of color1 should be used. A smaller weight means that more
-    of color2 should be used. Default is 50%.</td>
+    <td>Создает цвет, представляющий собой смесь <em>color1</em> и <em>color2</em>.
+    Параметр <em>weight</em> (вес) должен находиться в диапазоне от 0% до 100%. Больший вес означает, что нужно использовать больше color1. Меньший вес означает, что нужно использовать больше color2. По умолчанию 50%.</td>
   </tr>
   <tr>
     <td>adjust-hue(<em>color</em>, <em>degrees</em>)</td>
-    <td>Adjusts the <em>color</em>'s hue with a degree from -360deg to 360deg.<br><br>
-    <strong>Example:</strong><br>adjust-hue(#7fffd4, 80deg);<br>Result: #8080ff</td>
+    <td>Регулирует оттенок <em>color</em> в диапазоне от -360 до 360 градусов.<br><br>
+    <b>Пример:</b><br>adjust-hue(#7fffd4, 80deg);<br><b>Результат:</b> #8080ff</td>
   </tr>
   <tr>
     <td>adjust-color(<em>color</em>, <em>red</em>, <em>green</em>, <em>blue</em>,
     <em>hue</em>, <em>saturation</em>, <em>lightness</em>, <em>alpha</em>)</td>
-    <td>Adjusts one or more parameters by the specified amount. This function
-    adds or subtracts the specified amount to/from the existing color value.<br>
-    <br>
-    <strong>Example:</strong><br>adjust-color(#7fffd4, blue: 25);<br>Result:</td>
+    <td>Регулирует один или несколько параметров на указанную величину. Эта функция добавляет или вычитает указанное количество к/из существующего значения цвета.<br><br>
+    <b>Пример:</b><br>adjust-color(#7fffd4, blue: 25);<br><b>Результат:</b></td>
   </tr>
   <tr>
     <td>change-color(<em>color</em>, <em>red</em>, <em>green</em>, <em>blue</em>,
     <em>hue</em>, <em>saturation</em>, <em>lightness</em>, <em>alpha</em>)</td>
-    <td>Sets one or more parameters of a <em>color</em> to new values.<br><br>
-    <strong>Example:</strong><br>change-color(#7fffd4, red: 255);<br>Result:
+    <td>Устанавливает для одного или нескольких параметров <em>color</em> новые значения.<br><br>
+    <b>Пример:</b><br>change-color(#7fffd4, red: 255);<br><b>Результат:</b>
     #ffffd4</td>
   </tr>
   <tr>
     <td>scale-color(<em>color</em>, <em>red</em>, <em>green</em>, <em>blue</em>,&nbsp;
     <em>saturation</em>, <em>lightness</em>, <em>alpha</em>)</td>
-    <td>Scales one or more parameters of <em>color</em>.</td>
+    <td>Масштабирует один или несколько параметров <em>color</em>.</td>
   </tr>
   <tr>
     <td>rgba(<em>color</em>, <em>alpha</em>)</td>
-    <td>Creates a new color of <em>color</em> with the given <em>alpha</em>
-    channel.<br><br><strong>Example:</strong><br>rgba(#7fffd4, 30%);<br>Result:
-    rgba(127, 255, 212, 0.3)</td>
+    <td>Создает новый цвет <em>color</em> с заданным <em>alpha</em> каналом.<br><br>
+    <b>Пример:</b><br>rgba(#7fffd4, 30%);<br><b>Результат:</b> rgba(127, 255, 212, 0.3)</td>
   </tr>
   <tr>
     <td>lighten(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a lighter color of <em>color</em> with an <em>amount</em>
-    between 0% and 100%. The amount parameter increases the HSL lightness by
-    that percent.</td>
+    <td>Создает более светлый цвет <em>color</em> с <em>amount</em> (величиной) от 0% до 100%. Параметр amount увеличивает яркость HSL на этот процент.</td>
   </tr>
   <tr>
     <td>darken(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a darker color of <em>color</em> with an <em>amount</em> between
-    0% and 100%. The amount parameter decreases the HSL lightness by that
-    percent.</td>
+    <td>Создает более темный цвет <em>color</em> с <em>amount</em> от 0% до 100%. Параметр количества уменьшает яркость HSL на этот процент.</td>
   </tr>
   <tr>
     <td>saturate(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a more saturated color of <em>color</em> with an <em>amount</em>
-    between 0% and 100%. The amount parameter increases the HSL saturation by
-    that percent.</td>
+    <td>Создает более насыщенный цвет <em>color</em> с <em>amount</em> от 0% до 100%. Параметр количества увеличивает насыщенность HSL на этот процент.</td>
   </tr>
   <tr>
     <td>desaturate(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a less saturated color of <em>color</em> with an <em>amount</em>
-    between 0% and 100%. The amount parameter decreases the HSL saturation by
-    that percent.</td>
+    <td>Создает менее насыщенный цвет <em>color</em> с <em>amount</em> от 0% до 100%. Параметр количества уменьшает насыщенность HSL на этот процент.</td>
   </tr>
   <tr>
     <td>opacify(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a more opaque color of <em>color</em> with an <em>amount</em>
-    between 0 and 1. The amount parameter increases the alpha channel by that
-    amount.</td>
+    <td>Создает более непрозрачный цвет <em>color</em> с <em>amount</em> от 0 до 1. Параметр amount увеличивает альфа-канал на эту величину.</td>
   </tr>
   <tr>
     <td>fade-in(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a more opaque color of <em>color</em> with an <em>amount</em>
-    between 0 and 1. The amount parameter increases the alpha channel by that
-    amount.</td>
+    <td>Создает более непрозрачный цвет <em>color</em> с <em>amount</em> от 0 до 1. Параметр amount увеличивает альфа-канал на эту величину.</td>
   </tr>
   <tr>
     <td>transparentize(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a more transparent color of <em>color</em> with an <em>amount</em>
-    between 0 and 1. The amount parameter decreases the alpha channel by that
-    amount.</td>
+    <td>Создает более прозрачный цвет <em>color</em> с <em>amount</em> от 0 до 1. Параметр amount уменьшает альфа-канал на эту величину.</td>
   </tr>
   <tr>
     <td>fade-out(<em>color</em>, <em>amount</em>)</td>
-    <td>Creates a more transparent color of <em>color</em> with an <em>amount</em>
-    between 0 and 1. The amount parameter decreases the alpha channel by that
-    amount.</td>
+    <td>Создает более прозрачный цвет <em>color</em> с <em>amount</em> от 0 до 1. Параметр amount уменьшает альфа-канал на эту величину.</td>
   </tr>
   </table>
 </div>
@@ -499,8 +453,8 @@ functions, Get color functions, and Manipulate color functions:</p>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_functions_color.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_functions_color.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');

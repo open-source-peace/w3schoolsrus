@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
-<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<title>Sass Функции самоанализа. Уроки для начинающих. W3Schools на русском</title>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<meta name='description' content='Функции самоанализа (Introspection) редко используются при построении таблицы стилей. Однако они полезны, если что-то не работает правильно - чтобы выяснить, что происходит: например, функции отладки (дебаггинг). Учебник по Sass. W3Schools на русском'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../w3css/4/w3.css'>
 </head>
@@ -260,84 +260,78 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">Introspection Functions</span></h1>
+<h1>Sass <span class="color_h1">Функции самоанализа</span></h1>
 <div class="w3-clear nextprev">
-  <a class="w3-left w3-btn" href="sass_functions_selector.html">&#10094; Previous</a>
+  <a class="w3-left w3-btn" href="sass_functions_selector.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_functions_color.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>Sass Introspection Functions</h2>
-<p>The introspection functions are rarely used when building a stylesheet.
-However, they are valuable if something does not work properly - to figure out
-what's going on: like debugging functions. </p>
-<p>The following table lists all introspection functions in Sass:</p>
+<h2>Sass Функции самоанализа</h2>
+<p><strong>Функции самоанализа</strong> (Introspection) редко используются при построении таблицы стилей. Однако они полезны, если что-то не работает должным образом - чтобы выяснить, что происходит: например, функции отладки (дебаггинг).</p>
+<p>В следующей таблице перечислены все функции самоанализа в Sass:</p>
 <div class="w3-responsive">
 <table class="w3-table-all notranslate">
   <tr>
-    <th>Function</th>
-    <th>Description &amp; Example</th>
+    <th>Функция</th>
+    <th>Описание &amp; Пример</th>
   </tr>
   <tr>
     <td>call(<em>function</em>, <em>arguments</em>...)</td>
-    <td>Calls a function with arguments, and returns the result.</td>
+    <td>Вызывает функцию с аргументами и возвращает результат.</td>
   </tr>
   <tr>
     <td>content-exists()</td>
-    <td>Checks whether the current mixin was passed a @content block.</td>
+    <td>Проверяет, прошел ли текущий миксин блок @content.</td>
   </tr>
   <tr>
     <td>feature-exists(<em>feature</em>)</td>
-    <td>Checks whether <em>feature</em> is supported by the current Sass
-    implementation.<br><br>
-    <strong>Example:</strong><br>feature-exists(&quot;at-error&quot;);<br>Result: true</td>
+    <td>Проверяет, поддерживается ли <em>feature</em> (функция) текущей реализацией Sass.<br><br>
+    <b>Пример:</b><br>feature-exists(&quot;at-error&quot;);<br><b>Результат:</b> true</td>
   </tr>
   <tr>
     <td>function-exists(<em>functionname</em>)</td>
-    <td>Checks whether the specified function exists.<br><br>
-    <strong>Example:</strong><br>function-exists(&quot;nonsense&quot;)<br>Result: false</td>
+    <td>Проверяет, существует ли указанная функция.<br><br>
+    <b>Пример:</b><br>function-exists(&quot;nonsense&quot;)<br><b>Результат:</b> false</td>
   </tr>
   <tr>
     <td>get-function(<em>functionname</em>, css: false)</td>
-    <td>Returns the specified function. If css is true, it returns a plain CSS
-    function instead.</td>
+    <td>Возвращает указанную функцию. Если css - true, вместо этого возвращается простая функция CSS.</td>
   </tr>
   <tr>
     <td>global-variable-exists(<em>variablename</em>)</td>
-    <td>Checks whether the specified global variable exists.<br><br>
-    <strong>Example:</strong><br>variable-exists(a)<br>Result: true</td>
+    <td>Проверяет, существует ли указанная глобальная переменная.<br><br>
+    <b>Пример:</b><br>variable-exists(a)<br><b>Результат:</b> true</td>
   </tr>
   <tr>
     <td>inspect(<em>value</em>)</td>
-    <td>Returns a string representation of <em>value</em>.</td>
+    <td>Возвращает строковое представление <em>value</em> (значение).</td>
   </tr>
   <tr>
     <td>mixin-exists(<em>mixinname</em>)</td>
-    <td>Checks whether the specified mixin exists.<br><br>
-    <strong>Example:</strong><br>mixin-exists(&quot;important-text&quot;)<br>Result: true</td>
+    <td>Проверяет, существует ли указанный миксин.<br><br>
+    <b>Пример:</b><br>mixin-exists(&quot;important-text&quot;)<br><b>Результат:</b> true</td>
   </tr>
   <tr>
     <td>type-of(<em>value</em>)</td>
-    <td>Returns the type of <em>value</em>. Can be number, string, color, list,
-    map, bool, null, function, arglist.<br><br>
-    <strong>Example:</strong><br>type-of(15px)<br>Result: number<br>type-of(#ff0000)<br>Result: color</td>
+    <td>Возвращает тип <em>value</em> (значение). Может быть числом, строкой, цветом, списком, картой, bool, null, функцией, списком аргументов.<br><br>
+    <b>Пример:</b><br>type-of(15px)<br><b>Результат:</b> number<br>type-of(#ff0000)<br><b>Результат:</b> color</td>
   </tr>
   <tr>
     <td>unit(<em>number</em>)</td>
-    <td>Returns the unit associated with a number.<br><br>
-    <strong>Example:</strong><br>unit(15px)<br>Result: px</td>
+    <td>Возвращает единицу измерения, связанную с number (числом).<br><br>
+    <b>Пример:</b><br>unit(15px)<br><b>Результат:</b> px</td>
   </tr>
   <tr>
     <td>unitless(<em>number</em>)</td>
-    <td>Checks whether the specified number has a unit associated with it.<br>
-    <br>
-    <strong>Example:</strong><br>unitless(15px)<br>Result: false<br>unitless(15)<br>Result: true</td>
+    <td>Проверяет, связана ли с указанным number (числом) единица измерения.<br><br>
+    <b>Пример:</b><br>unitless(15px)<br><b>Результат:</b> false<br>unitless(15)<br><b>Результат:</b> true</td>
   </tr>
   <tr>
     <td>variable-exists(<em>variablename</em>)</td>
-    <td>Checks whether the specified variable exists in the current scope.<br>
+    <td>Проверяет, существует ли указанная переменная в текущей области.<br>
     <br>
-    <strong>Example:</strong><br>variable-exists(b)<br>Result: true</td>
+    <b>Пример:</b><br>variable-exists(b)<br><b>Результат:</b> true</td>
   </tr>
   </table>
 </div>
@@ -354,8 +348,8 @@ what's going on: like debugging functions. </p>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_functions_introspection.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_functions_introspection.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
