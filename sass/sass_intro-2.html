@@ -260,48 +260,43 @@
     <div class='w3-col l10 m12' id='main'>
       <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
 
-<h1>Sass <span class="color_h1">Introduction</span></h1>
+<h1>Sass <span class="color_h1">Введение</span></h1>
 <div class="w3-clear nextprev">
   <a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
   <a class="w3-right w3-btn" href="sass_installation.html">Next &#10095;</a>
 </div>
 <hr>
 
-<h2>What You Should Already Know</h2>
-<p>Before you continue you should have a basic understanding of the following:</p>
+<h2>Что необходимо знать перед изучением Sass?</h2>
+<p>Прежде чем приступить к изучению Sass, вы должны иметь общее представление о следующих технологиях:</p>
 <ul>
-  <li>HTML</li>
-  <li>CSS</li>
+  <li><a href="../html/default.html" target="_blank" title="Перейти к изучению HTML">HTML</a> - язык разметки веб-страниц;</li>
+  <li><a href="../css/default.html" target="_blank" title="Перейти к изучению CSS">CSS</a> - язык стилизации и визуального оформления веб-страниц.</li>
 </ul>
-<p>If you want to study these subjects first, find the tutorials on our
-<a href="https://www.w3schools.com/default.asp">Home page</a>.</p>
+<p>Если вы ещё не знаете эти технологии, то найдите уроки по <strong>HTML</strong> и <strong>CSS</strong> на <a href="../default.html">Главной странице</a> нашего сайта.</p>
 <hr>
 
-<h2>What is Sass?</h2>
+<h2>Что такое Sass?</h2>
+<p><strong>Sass</strong> - самый популярный, стабильный и мощный язык CSS-расширений профессионального уровня в мире.</p>
 <ul>
-  <li><strong>Sass</strong> stands for <strong>S</strong>yntactically <strong>A</strong>wesome
-  <strong>S</strong>tyle<strong>s</strong>heet</li>
-  <li>Sass is an extension to CSS</li>
-  <li>Sass is a CSS pre-processor</li>
-  <li>Sass is completely compatible with all versions of CSS</li>
-  <li>Sass reduces repetition of CSS and therefore saves time</li>
-  <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in
-  2006</li>
-  <li>Sass is free to download and use</li>
+  <li><strong>Sass</strong> - это сокращение от <strong>S</strong>yntactically <strong>A</strong>wesome
+  <strong>S</strong>tyle<strong>S</strong>heet - Синтаксически отличная таблица стилей</li>
+  <li>Sass - это расширение CSS</li>
+  <li>Sass - это CSS пре-процессор</li>
+  <li>Sass полностью совместим со всеми версиями CSS</li>
+  <li>Sass уменьшает повторение CSS и, следовательно, экономит время для его написания</li>
+  <li>Sass был спроектирован Хэмптоном Кэтлином и разработан Натали Вайценбаум в 2006 году</li>
+  <li>Sass можно загрузить с официального сайта и использовать бесплатно</li>
 </ul>
 <hr>
 
-<h2>Why Use Sass?</h2>
-<p>Stylesheets are getting larger, more complex,
-and harder to maintain. This is where a CSS pre-processor can help.</p>
-<p>Sass lets
-you use features that do not exist in CSS, like variables, nested rules, mixins,
-imports,
-inheritance, built-in functions, and other stuff.</p>
+<h2>Зачем использовать Sass?</h2>
+<p>Таблицы стилей становятся больше, всё сложнее и сложнее в обслуживании. Здесь может помочь препроцессор CSS.</p>
+<p>Sass позволяет использовать функции, которых нет в CSS, такие как переменные, вложенные правила, миксины, импорт, наследование, встроенные функции и прочее.</p>
 <hr>
 
-<h2>A Simple Example why Sass is Useful</h2>
-<p>Let's say we have a website with three main colors:</p>
+<h2>Простой пример, почему Sass полезен</h2>
+<p>Допустим, у нас есть сайт с тремя основными цветами:</p>
 
 <div class="w3-section">
   <div class="w3-container" style="background-color:#a2b9bc;color:#000">
@@ -315,58 +310,44 @@ inheritance, built-in functions, and other stuff.</p>
   </div>
 </div>
 
-<p>So, how many times do you need to type those HEX values? A LOT of times. And
-what about variations of the same colors? </p>
-<p>Instead of typing the above values a lot of times, you can use Sass and write this:</p>
+<p>Итак, сколько раз вам нужно вводить эти шестнадцатеричные значения? Много раз. А как насчет вариаций одних и тех же цветов?</p>
+<p>Вместо того, чтобы много раз вводить вышеуказанные значения, вы можете использовать Sass и написать это:</p>
 <div class="w3-example">
-<h3>Sass Example</h3>
+<h3>Sass Пример</h3>
 <div class="w3-code notranslate cssHigh">
-  /* define variables for the primary colors */<br>$primary_1: #a2b9bc;<br>
+  /* определить переменные для основных цветов */<br>$primary_1: #a2b9bc;<br>
   $primary_2: #b2ad7f;<br>$primary_3:
   #878f99;<br><br>/*
-  use the variables */<br>.main-header
+  использовать переменные */<br>.main-header
 {<br>&nbsp; background-color: $primary_1;<br>}<br><br>.menu-left
 {<br>&nbsp; background-color: $primary_2;<br>}<br><br>.menu-right
 {<br>&nbsp; background-color: $primary_3;<br>}<br></div>
 <br></div>
-<p>So, when using Sass, and the primary color changes, you only need to change
-it in one place.</p>
-<hr>
-<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-<!-- MidContent -->
-<!-- <p class="adtext">Advertisement</p> -->
-
-  <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-  <div id="snhb-mid_content-0"></div>
-
-</div>
+<p>Итак, при использовании Sass и изменении основного цвета вам нужно изменить его только в одном месте.</p>
 <hr>
 
-<h2>How Does Sass Work?</h2>
-<p>A browser does not understand Sass code. Therefore, you will need a Sass
-pre-processor to convert Sass code into standard CSS.</p>
-<p>This process is called transpiling. So, you need to give a transpiler
-(some kind of program) some Sass code and then get some CSS code back.</p>
+<h2>Как работает Sass?</h2>
+<p>Браузер не понимает код Sass. Следовательно, вам понадобится препроцессор Sass для преобразования кода Sass в стандартный CSS.</p>
+<p>Этот процесс называется транспилированием. Итак, вам нужно дать транспилятору (какой-то программе) некоторый код Sass, а затем вернуть код CSS.</p>
 
 <div class="w3-panel w3-note">
-  <p><strong>Tip:</strong> Transpiling is a term for taking a source code written in one language
-and transform/translate it into another language.</p>
+  <p><strong>Совет:</strong> Транспилирование - это термин, обозначающий использование исходного кода, написанного на одном языке, и его преобразования/перевода на другой язык.</p>
 </div>
 <hr>
-<h2>Sass File Type</h2>
-<p>Sass files has the &quot;.scss&quot; file extension. </p>
+
+<h2>Sass Тип файла</h2>
+<p>Sass-файлы имеют расширение файла <em>.scss</em>.</p>
 <hr>
 
-<h2>Sass Comments</h2>
-<p>Sass supports standard CSS comments <code class="w3-codespan">/* comment */</code>,
-and in addition it supports inline comments <code class="w3-codespan">// comment</code>:</p>
+<h2>Sass Комментарии</h2>
+<p>Sass поддерживает стандартные CSS комментарии <code class="w3-codespan">/* comment */</code> и, кроме того, он поддерживает встроенные комментарии <code class="w3-codespan">// comment</code>:</p>
 <div class="w3-example">
-<h3>Sass Example</h3>
+<h3>Sass пример</h3>
 <div class="w3-code notranslate cssHigh">
-  /* define primary colors */<br>$primary_1: #a2b9bc;<br>
+  /* определить основные цвета */<br>$primary_1: #a2b9bc;<br>
   $primary_2: #b2ad7f;<br><br>/*
-  use the variables */<br>.main-header
-{<br>&nbsp; background-color: $primary_1; // here you can put an inline comment<br>}</div>
+  использовать переменные */<br>.main-header
+{<br>&nbsp; background-color: $primary_1; // здесь вы можете поместить встроенный комментарий<br>}</div>
 <br></div>
 
 <hr>
@@ -381,8 +362,8 @@ and in addition it supports inline comments <code class="w3-codespan">// comment
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = w3schoolsrus.github.io/sass/sass_.html; // канонический URL страницы
-this.page.identifier = w3schoolsrus.github.io/sass/sass_.html; // уникальный идентификатор страницы
+this.page.url = w3schoolsrus.github.io/sass/sass_intro2.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_intro2.html; // уникальный идентификатор страницы
 };
 (function() { // Не редактировать ниже этой линии
 var d = document, s = d.createElement('script');
