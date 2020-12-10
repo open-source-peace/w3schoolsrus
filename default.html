@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="styles/w3.css">
 <link rel="stylesheet" href="styles/main.css">
 <link rel="stylesheet" href="styles/140colors.css">
-<link rel="stylesheet" href="cdn/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="cdn/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--GoogleAdSense-->
 <script data-ad-client="ca-pub-6358227327561384" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -749,7 +749,9 @@ WHERE Country='Mexico';
  </div>
  <p class="w3-medium">
  W3Schools оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность всего содержания. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли наши <a href="about/about_copyright.html" class="w3-hover-text-green">условия использования</a>, <a href="about/about_privacy.html" class="w3-hover-text-green">cookie и политику конфиденциальности</a>.<br>
- <a href="about/about_copyright.html" class="w3-hover-text-green">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>Перевод на русский язык - <a href="https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg" target="_blank" class="w3-hover-text-amber">websunsey</a>.<br>Также вы можете посетить <a href="https://w3schoolsua.github.io/" class="w3-hover-text-green" target="_blank" title="Сайт на украинском языке - разрабатывается">W3Schools на украинском языке</a><br>
+ <a href="about/about_copyright.html" class="w3-hover-text-green">Copyright 1999-2020</a> by Refsnes Data. All Rights Reserved.<br>
+ Перевод на русский язык - <a href="https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg" target="_blank" class="w3-hover-text-amber">websunsey</a>.<br>
+ Также вы можете посетить <a href="https://w3schoolsua.github.io/" class="w3-hover-text-green" target="_blank" title="Сайт на украинском языке - разрабатывается">W3Schools на украинском языке</a><br>
  Также вы можете абсолютно <a href="https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip" target="_blank" class="w3-hover-text-green">бесплатно скачать офлайн версию сайта W3Schools на русском</a> архивом с GitHub и пользоваться локально на своём компьютере.<br>
  <div style="background: inherit; padding: 0">
 <a href="https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg" target="_blank"><img src="svg/youtube.svg" width="60" alt="Видеоуроки по HTML, CSS, JavaScript, PHP, Python для начинающих" title="Канал на YouTube"></a>
@@ -776,59 +778,7 @@ screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
 </div>
 
 <!--Скрипт для верхнего меню -->
-
-<script>
-function w3_open() {
-  var x = document.getElementById("myAccordion");
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
-  }
-}
-function w3_close() {
-  document.getElementById("myAccordion").style.display = "none";
-}
-function open_xs_menu(x) {
-  if (document.getElementById("sectionxs_" + x).innerHTML == "") {
-    document.getElementById("sectionxs_" + x).innerHTML = document.getElementById("nav_" + x).innerHTML;
-  } else {
-    document.getElementById("sectionxs_" + x).innerHTML = "";
-  }
-}
-function w3_open_nav(x) {
-  if (document.getElementById("nav_" + x).style.display == "block") {
-    w3_close_nav(x);
-  } else {
-    w3_close_nav("tutorials");
-    w3_close_nav("references");
-    w3_close_nav("examples");
-    w3_close_nav("exercises");
-    document.getElementById("nav_" + x).style.display = "block";
-    if (document.getElementById("navbtn_" + x)) {
-      document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
-      document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "inline";
-    }
-    if (x == "search") {
-      if (document.getElementById("gsc-i-id1")) {document.getElementById("gsc-i-id1").focus(); }
-    }
-  }
-}
-function w3_close_all_nav() {
-  w3_close_nav("tutorials");
-  w3_close_nav("references");
-  w3_close_nav("examples");
-  w3_close_nav("exercises");
-  w3_close();
-}
-function w3_close_nav(x) {
-  document.getElementById("nav_" + x).style.display = "none";
-  if (document.getElementById("navbtn_" + x)) {
-    document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
-    document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "none";
-  }
-}
-</script>
+<script src="scripts/index_topmenu.js"></script>
 <!-- / Скрипт для верхнего меню -->
 
 <!-- Скрипт подсветки кода -->
@@ -836,8 +786,6 @@ function w3_close_nav(x) {
 <script>w3CodeColor();</script>
 <!-- / Скрипт подсветки кода -->
 
-
-<link rel="stylesheet" href="styles/main.css">
 <!--[if lt IE 9]>
 <script src="cdn/html5shiv/3.7.3/html5shiv.js"></script>
 <script src="cdn/respond/1.4.2/respond.min.js"></script>
