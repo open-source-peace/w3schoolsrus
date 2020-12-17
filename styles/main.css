@@ -5,7 +5,7 @@ text-decoration:none;
 line-height: 1;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
-font-size:36px;
+font-size:37px;
 letter-spacing:3px;
 color:green;
 display:block;
@@ -14,8 +14,8 @@ text-shadow: 1px 1px .5px #000
 }
 
 .w3schools-logo:hover {color:#32CD32; text-shadow: 1.2px 1.2px .5px #000}
-.dotcom {color:#0048ff;font-family:arial black, sans-serif; font-size:.8em;text-shadow: 1.1px 1.1px .5px #000}
-.dotcom:hover {color:red;text-shadow: 1.1px 1.1px 1px #000}
+.dotcom {color:#f10b0b;font-size:.8em;text-shadow: 1.1px 1.1px .5px #000}
+.dotcom:hover {color:orange;text-shadow: 1.1px 1.1px 1px #000}
 
 /* Customize W3.CSS */
 #nav_tutorials,#nav_references,#nav_examples,#nav_exercises {
@@ -33,7 +33,7 @@ font-size:16px;
 padding:15px 10px;
 height:260px;
 }
-.w3-theme {color:#fff !important;background-color: #4CAF50; !important;}
+.w3-theme {color:#fff !important;background-color:#008B8B !important;}
 .w3-main {margin-left:230px;}
 .w3-sidebar {
 z-index:3;
@@ -55,9 +55,9 @@ font-size:17px;
 font-family:"Segoe UI",Arial,sans-serif;
 }
 h1 {
-font-size:60px;
+font-size:80px;
 color:#555555;
-margin:0 0 -30px 0 !important;
+margin:2px 0 -20px 0 !important;
 }
 .certoverlay {
   position:absolute;
@@ -81,8 +81,9 @@ margin:0 0 -30px 0 !important;
 @media screen and (max-width:768px){.w3-sidebar.w3-collapse,.barex,.navex{display:none !important;}.w3-bar-block .w3-bar-item{text-align:center !important;padding:2px 0;}h1,.w3-jumbo{font-size:60px !important;}}
 @media screen and (max-width:545px){.certoverlay{padding:10px;height:100%;}.certoverlay h3{font-size:15px;}}
 @media screen and (max-width:380px){.getcert{position:absolute;text-align:center;left:50%;bottom:50%;font-size:13px;}}
-@media only screen and (max-device-width: 1366px){.w3-hide-device{display:none;}}
-@media screen and (max-width:1080px){#cert_navbtn{display:none;}}
+@media only screen and (max-width: 1366px){.w3-hide-device{display:none;}}
+
+
 
 /* Customize main.css */
 body {background: #F5F5DC; position:relative;min-height:100%;}
@@ -91,13 +92,3 @@ body {background: #F5F5DC; position:relative;min-height:100%;}
 .box-h70 {height:70px}
 .picker {width:150px;height:128px;margin-top:16px}
 .pro {font-size:.1em;color:#fff}
-p.small {font-size:.8em; line-height: 1.1;}
-
-.shadow-black-01 {text-shadow: .1px .1px .1px #000}
-.shadow-black-02 {text-shadow: .2px .2px .2px #000}
-.shadow-black-03 {text-shadow: .3px .3px .3px #000}
-.shadow-black-04 {text-shadow: .4px .4px .4px #000}
-.shadow-black-05 {text-shadow: .5px .5px .5px #000}
-.shadow-black-1 {text-shadow: 1px 1px 1px #000}
-.shadow-black-2 {text-shadow: 2px 2px 2px #000}
-.shadow-black-3 {text-shadow: 3px 3px 3px #000}

@@ -4,7 +4,6 @@ body {color: #000000; margin: 0px; font-size: 100%;}
 
 .trytopnav a {color: #999999;}
 .w3-bar .w3-bar-item:hover {color: #757575 !important;}
-.w3-bar-item {color: #666;}
 a.w3schoolslink {padding: 0 !important;display: inline !important;}
 a.w3schoolslink:hover, a.w3schoolslink:active {text-decoration: underline !important; background-color: transparent !important;}
 #dragbar {position: absolute;cursor: col-resize; z-index: 3; padding: 5px;}
