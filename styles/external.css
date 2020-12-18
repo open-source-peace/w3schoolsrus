@@ -145,8 +145,8 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
 .pagemenu hr {border-top: 1px solid #fff;margin:20px 0;}
 .pagemenu a {display:block;text-decoration:none!important;}
 .pagemenu a:hover,.learnmore a:active {color:#000;}
-#w3-exerciseform {background-color:#555555;padding:16px;color:#ffffff;}
-#w3-exerciseform .exercisewindow {background-color:#ffffff;padding:16px;color:#000000;}
+#w3-exerciseform {background-color:#555;padding:16px;color:#fff;}
+#w3-exerciseform .exercisewindow {background-color:#fff;padding:0 16px;color:#000;}
 #w3-exerciseform .exerciseprecontainer {background-color:#f1f1f1;padding:16px;font-size:120%;font-family:Consolas,"Courier New", Courier, monospace;}
 #w3-exerciseform .exerciseprecontainer pre[class*="language-"] {padding:1px;}
 #w3-exerciseform .exerciseprecontainer pre {display: block;}
