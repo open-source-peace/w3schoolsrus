@@ -3,7 +3,7 @@ document.getElementById("bluebtn").addEventListener("click", addbtn);
 function addbtn() {
   var el, x;
   el = document.createElement("div");
-  el.innerText = "Нажми меня";
+  el.innerText = "Натисни мене";
   el.setAttribute("class", "redbtn");
   el.addEventListener("click", displaytime);
   x = document.getElementById("bluebtn");
@@ -11,7 +11,7 @@ function addbtn() {
   x.innerHTML = "&nbsp;";
   x.style.cursor = "auto";
   x.removeEventListener("click", addbtn);
-  document.getElementById("exampletext").innerHTML = "Нажмите красную кнопку:";
+  document.getElementById("exampletext").innerHTML = "Натисніть червону кнопку:";
 }
 function formatnumber(n) {
   if (n <= 9) n = "0" + n;
@@ -24,6 +24,6 @@ function displaytime() {
   s = formatnumber(d.getSeconds());
   ct =  h + ":" + m + ":" + s;
   document.getElementById("clickgame").innerHTML = "<div class='timediv'>" + ct + "</div>";
-  document.getElementById("exampletext").innerHTML = "Текущее время:";
+  document.getElementById("exampletext").innerHTML = "Поточний час:";
   window.setTimeout(displaytime, 1000);
 }
