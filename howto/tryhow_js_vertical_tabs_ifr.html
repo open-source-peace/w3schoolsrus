@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
-
-<!-- Mirrored from www.w3schools.com/howto/tryhow_js_vertical_tabs_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:25 GMT -->
+<html lang='ru'>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 <style>
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
+/* Стиль вкладки */
 div.tab {
     float: left;
     border: 1px solid #ccc;
@@ -16,8 +14,7 @@ div.tab {
     width: 35%;
     height: 300px;
 }
-
-/* Style the links inside the tab */
+/* Стиль ссылок внутри вкладки */
 div.tab a {
     display: block;
     color: black;
@@ -26,18 +23,15 @@ div.tab a {
     transition: 0.3s;
     font-size: 17px;
 }
-
-/* Change background color of links on hover */
+/* Изменить цвет фона ссылок при наведении */
 div.tab a:hover {
     background-color: #ddd;
 }
-
-/* Create an active/current tablink class */
+/* Создайте активный / текущий класс tablink */
 div.tab a:focus, .active {
     background-color: #ccc;
 }
-
-/* Style the tab content */
+/* Стиль содержимого вкладки */
 .tabcontent {
     float: left;
     padding: 0px 12px;
@@ -50,27 +44,27 @@ div.tab a:focus, .active {
 </head>
 <body>
 
-<p>Click on the buttons inside the tabbed menu:</p>
+<p>Нажмите на кнопки внутри меню с вкладками:</p>
 
 <div class="tab">
-  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</a>
-  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">Paris</a>
-  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Лондон</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">Париж</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Токио</a>
 </div>
 
 <div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+  <h3>Лондон</h3>
+  <p>Лондон - это столица Англии.</p>
 </div>
 
 <div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <h3>Париж</h3>
+  <p>Париж - это столица Франции.</p>
 </div>
 
 <div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <h3>Токио</h3>
+  <p>Токио - это столица Японии.</p>
 </div>
 
 <script>
@@ -87,12 +81,9 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
-// Get the element with id="defaultOpen" and click on it
+// Получите элемент с id = "defaultOpen" и кликните по нему.
 document.getElementById("defaultOpen").click();
 </script>
      
 </body>
-
-<!-- Mirrored from www.w3schools.com/howto/tryhow_js_vertical_tabs_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:25 GMT -->
 </html> 

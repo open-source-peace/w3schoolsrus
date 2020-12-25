@@ -1,42 +1,37 @@
 <!DOCTYPE html>
-<html>
-
-<!-- Mirrored from www.w3schools.com/howto/tryhow_css_bg_change_scroll.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:25 GMT -->
+<html lang="ru">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 <style>
 body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 * {
   box-sizing: border-box;
 }
-
 .bg-image {
-  /* Full height */
-  height: 50%; 
-  
-  /* Center and scale the image nicely */
+  /* Полная высота */
+  height: 50%;
+  /* Центрируйте и красиво масштабируйте изображение */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* Использованные изображения */
+.img1 { background-image: url("../images/img_snow.jpg"); }
+.img2 { background-image: url("../images/img_girl.jpg"); }
+.img3 { background-image: url("../images/img_lights.jpg"); }
+.img4 { background-image: url("../images/img_nature.jpg"); }
+.img5 { background-image: url("../images/img_forest.jpg"); }
+.img6 { background-image: url("../images/img_woods.jpg"); }
 
-/* Images used */
-.img1 { background-image: url("img_snow.jpg"); }
-.img2 { background-image: url("img_girl.jpg"); }
-.img3 { background-image: url("img_lights.jpg"); }
-.img4 { background-image: url("img_nature.jpg"); }
-.img5 { background-image: url("img_forest.jpg"); }
-.img6 { background-image: url("img_woods.jpg"); }
-
-/* Position text in the middle of the page/image */
+/* Расположите текст посередине страницы/изображения */
 .bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgb(0,0,0); /* Резервный цвет */
+  background-color: rgba(0,0,0, 0.4); /* Черный с/непрозрачностью/прозрачностью */
   color: white;
   font-weight: bold;
   font-size: 80px;
@@ -61,9 +56,6 @@ body, html {
 <div class="bg-image img5"></div>
 <div class="bg-image img6"></div>
 
-<div class="bg-text">TEXT</div>
-
+<div class="bg-text">ТЕКСТ</div>
 </body>
-
-<!-- Mirrored from www.w3schools.com/howto/tryhow_css_bg_change_scroll.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:37:25 GMT -->
 </html>
