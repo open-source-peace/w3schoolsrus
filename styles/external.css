@@ -545,6 +545,7 @@ hr {
 .shadow-black-2 {text-shadow: 2px 2px 2px #000}
 .shadow-black-3 {text-shadow: 3px 3px 3px #000}
 
+.box-shadow-black-05 {box-shadow: .5px .5px 2px .5px #000;}
 .box-shadow-black-1 {box-shadow: 1px 1px 5px 1px #000;} /* Сдвиг x, сдвиг y, размытие, растяжение, цвет*/
 .box-shadow-black-2 {box-shadow: 2px 2px 5px 2px #000;}
 .box-shadow-white-1 {box-shadow: 1px 1px 5px 1px #fff;}
