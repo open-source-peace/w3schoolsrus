@@ -1,52 +1,45 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>Пример Таймер обратного отсчёта на сайте. Уроки для начинающих. HTML, CSS, JavaScript</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="таймер,жизни,обратного,отсчета,жизни,путина,смерть,умереть,умрёт,хуйло,война,месть,осталось,жить,сколько" name="Keywords">
-  <meta content="Сколько осталось жить Путину? Таймер обратного отсчёта жизни Путина. Когда умрёт Путин? Предсказания Ванги и Нострадамуса. Конец жизни хуйла!" name="Description">
-<style>
-p {
-  text-align: center;
-  font-size: 56px;
-  margin-top: 0px;
-}
-</style>
-</head>
+<title>Форма регистрации на сайте. Как сделать? W3Schools на русском</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <style>
+        h1 {text-align: center; margin: 0;}
+        p {text-align: center;font-size: 2.2em;margin: 0;}
+    </style>
 <body>
-<div style="text-align:center" title="Предсказание"><strong>До смерти Путина осталось:</strong></div>
+<h1>Сколько осталось Путину?</h1>
 <p id="demo"></p>
-
 <script>
-// Установите дату, на которую мы рассчитываем
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    // Установите дату, до которой ведётся отсчет
+    var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
 
-// Обновлять отсчет каждую 1 секунду
-var x = setInterval(function() {
+    // Обновляйте обратный отсчет каждую секунду
+    var x = setInterval(function() {
 
-  // Получить сегодняшнюю дату и время
-  var now = new Date().getTime();
+        // Получите сегодняшнюю дату и время
+        var now = new Date().getTime();
 
-  // Найти расстояние между сейчас и датой обратного отсчета
-  var distance = countDownDate - now;
+        // Найдите расстояние между настоящим моментом и датой обратного отсчета
+        var distance = countDownDate - now;
 
-  // Расчет времени по дням, часам, минутам и секундам
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Расчет времени в днях, часах, минутах и секундах
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Выведите результат в элемент с id="demo"
-  document.getElementById("demo").innerHTML = days + "дн. " + hours + "час. "
-  + minutes + "мин. " + seconds + "сек. ";
+        // Выведите результат в элементе с id="demo"
+        document.getElementById("demo").innerHTML = days + " дней " + hours + " часов "
+            + minutes + " минут " + seconds + " секунд ";
 
-  // Если обратный отсчет закончен, напишите какой-нибудь текст
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "ОТСЧЁТ ЗАКОНЧЕН";
-  }
-}, 1000);
+        // Если обратный отсчет закончился, напишите текст
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "ВРЕМЯ ВЫШЛО...";
+        }
+    }, 1000);
 </script>
 
 </body>
