@@ -2,32 +2,32 @@
   var pagescount, i, txt = "", activePage, fromPos, toPos, x, prevPage, nextPage, able = "";
   pagescount = 8;
   activePage = window.location.pathname;
-  if (activePage.indexOf(".asp") == -1) {activePage = "default.html";}
-  if (activePage.indexOf("default.html") > -1) {
+  if (activePage.indexOf(".html") == -1) {activePage = "index.html";}
+  if (activePage.indexOf("index.html") > -1) {
     activePage = 1;
   } else {
-    fromPos = activePage.indexOf("default_page") + 12;
-    toPos = activePage.indexOf(".asp");
+    fromPos = activePage.indexOf("index_page") + 12;
+    toPos = activePage.indexOf(".html");
     activePage = activePage.substring(fromPos, toPos);
   }
   if (activePage == 1) {
     able = " pagdisabled"
-    prevPage = "default.html"
+    prevPage = "index.html"
   } else if (activePage == 2) {
-    prevPage = "default.html";
+    prevPage = "index.html";
   } else {
-    prevPage = "default_page" + (activePage - 1) + ".asp";
+    prevPage = "index_page" + (activePage - 1) + ".html";
   }
   if (activePage == pagescount) {
-    nextPage = "default.html";
+    nextPage = "index.html";
   } else {
-    nextPage = "default_page" + (parseInt(activePage) + 1) + ".asp";
+    nextPage = "index_page" + (parseInt(activePage) + 1) + ".html";
   }
   for (i = 1; i <= pagescount; i++) {
-    defPage = "default_page" + i + ".asp";
+    defPage = "index_page" + i + ".html";
     if (i == 1) {
       txt += "<a class='howtopag_item" + able + "' href='" + prevPage + "'>&#10094;</a>";
-      defPage = "default.html";
+      defPage = "index.html";
     }
     txt += "<a class='howtopag_item' href='" + defPage + "'>" + i + "</a>";
     if (i == pagescount) {
