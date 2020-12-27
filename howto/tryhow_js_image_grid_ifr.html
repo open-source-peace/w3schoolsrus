@@ -1,118 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<title>Сетка изображений. Как сделать? W3Schools на русском</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial;
-}
-
-.header {
-    text-align: center;
-    padding: 32px;
-}
-
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-/* Create two equal columns that sits next to each other */
-.column {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-
-/* Style the buttons */
-.btn {
-    border: none;
-    outline: none;
-    padding: 10px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.btn:hover {
-    background-color: #ddd;
-}
-
-.btn.active {
-    background-color: #666;
-    color: white;
-}
+* {box-sizing: border-box;}
+body {margin: 0;font-family: Arial,sans-serif;}
+.header {text-align: center;padding: 32px;}
+.row {display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;padding: 0 4px;}
+/* Создайте два одинаковых столбца, которые будут располагаться рядом друг с другом */
+.column {-ms-flex: 0 0 50%;flex: 0 0 50%;padding: 0 4px;}
+.column img {margin-top: 8px;vertical-align: middle;}
+/* Стиль кнопок */
+.btn {border: none;outline: none;padding: 10px 16px;background-color: #f1f1f1;cursor: pointer;font-size: 18px;}
+.btn:hover {background-color: #ddd;}
+.btn.active {background-color: #666;color: white;}
 </style>
-
-<!-- Mirrored from www.w3schools.com/howto/tryhow_js_image_grid_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:04 GMT -->
 <body>
-
 <!-- Header -->
 <div class="header" id="myHeader">
-  <h1>Image Grid</h1>
-  <p>Click on the buttons to change the grid view.</p>
+  <h1>Сетка изображений</h1>
+  <p>Нажмите на кнопки, чтобы изменить вид сетки.</p>
   <button class="btn" onclick="one()">1</button>
   <button class="btn active" onclick="two()">2</button>
   <button class="btn" onclick="four()">4</button>
 </div>
 
-<!-- Photo Grid -->
+<!-- Сетка фото -->
 <div class="row"> 
   <div class="column">
-    <img src="../w3images/wedding.jpg" style="width:100%">
-    <img src="../w3images/rocks.jpg" style="width:100%">
-    <img src="../w3images/falls2.jpg" style="width:100%">
-    <img src="../w3images/paris.jpg" style="width:100%">
-    <img src="../w3images/nature.jpg" style="width:100%">
-    <img src="../w3images/mist.jpg" style="width:100%">
-    <img src="../w3images/paris.jpg" style="width:100%">
+    <img src="../images/wedding.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/rocks.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/falls2.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/paris.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/nature.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/mist.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/paris.jpg" style="width:100%" alt="Сетка изображений">
   </div>
   <div class="column">
-    <img src="../w3images/underwater.jpg" style="width:100%">
-    <img src="../w3images/ocean.jpg" style="width:100%">
-    <img src="../w3images/wedding.jpg" style="width:100%">
-    <img src="../w3images/mountainskies.jpg" style="width:100%">
-    <img src="../w3images/rocks.jpg" style="width:100%">
-    <img src="../w3images/underwater.jpg" style="width:100%">
+    <img src="../images/underwater.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/ocean.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/wedding.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/mountainskies.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/rocks.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/underwater.jpg" style="width:100%" alt="Сетка изображений">
   </div>  
   <div class="column">
-    <img src="../w3images/wedding.jpg" style="width:100%">
-    <img src="../w3images/rocks.jpg" style="width:100%">
-    <img src="../w3images/falls2.jpg" style="width:100%">
-    <img src="../w3images/paris.jpg" style="width:100%">
-    <img src="../w3images/nature.jpg" style="width:100%">
-    <img src="../w3images/mist.jpg" style="width:100%">
-    <img src="../w3images/paris.jpg" style="width:100%">
+    <img src="../images/wedding.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/rocks.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/falls2.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/paris.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/nature.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/mist.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/paris.jpg" style="width:100%" alt="Сетка изображений">
   </div>
   <div class="column">
-    <img src="../w3images/underwater.jpg" style="width:100%">
-    <img src="../w3images/ocean.jpg" style="width:100%">
-    <img src="../w3images/wedding.jpg" style="width:100%">
-    <img src="../w3images/mountainskies.jpg" style="width:100%">
-    <img src="../w3images/rocks.jpg" style="width:100%">
-    <img src="../w3images/underwater.jpg" style="width:100%">
+    <img src="../images/underwater.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/ocean.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/wedding.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/mountainskies.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/rocks.jpg" style="width:100%" alt="Сетка изображений">
+    <img src="../images/underwater.jpg" style="width:100%" alt="Сетка изображений">
   </div>
 </div>
 
 <script>
-// Get the elements with class="column"
+// Получить элементы с помощью class="column"
 var elements = document.getElementsByClassName("column");
-
-// Declare a loop variable
+// Объявить переменную цикла
 var i;
-
-// Four images side by side
+// Четыре изображения рядом
 function four() {
     for (i = 0; i < elements.length; i++) {
         elements[i].style.msFlex = "0 0 25%";       
@@ -120,8 +78,7 @@ function four() {
         elements[i].style.maxWidth = "25%";
     }
 }
-
-// Two images side by side
+// Два изображения рядом
 function two() {
     for (i = 0; i < elements.length; i++) {
         elements[i].style.msFlex = "0 0 50%";       
@@ -129,8 +86,7 @@ function two() {
         elements[i].style.maxWidth = "50%";
     }
 }
-
-// Full-width images
+// Изображения в полную ширину
 function one() {
     for (i = 0; i < elements.length; i++) {
         elements[i].style.msFlex = "0 0 100%";       
@@ -138,8 +94,7 @@ function one() {
         elements[i].style.maxWidth = "100%";
     }
 }
-
-// Add active class to the current button (highlight it)
+// Добавить активный класс к текущей кнопке (выделить его)
 var header = document.getElementById("myHeader");
 var btns = header.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
@@ -150,8 +105,5 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-
 </body>
-
-<!-- Mirrored from www.w3schools.com/howto/tryhow_js_image_grid_ifr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Nov 2020 14:38:04 GMT -->
 </html>
