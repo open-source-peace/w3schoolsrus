@@ -563,8 +563,9 @@ p {line-height: 1.4;}
 .predisqus {border:none; width:100%;}
 .frame-source {height: 632px;max-width: 100%;border:0;}
 .right-sidebar-list {list-style: none; padding: 0;font-size:.9em;}
-.author {font-size:.9em; font-family: calibri;}
+.author {font-size:.9em; font-family: calibri, sans-serif;}
 .img-responsive {max-width:100%;height:auto;border:0;}
+figcaption {padding: 10px 0; font-family: calibri, sans-serif;}
 
 .videowrap {max-width: 720px; margin: 0 auto;}
 .videoblock {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;}
