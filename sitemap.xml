@@ -17,10 +17,75 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://w3schoolsrus.github.io/html/default.html</loc>
+  <loc>https://w3schoolsrus.github.io/html/index.html</loc>
   <lastmod>2020-08-29T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://w3schoolsrus.github.io/css/index.html</loc>
+  <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/js/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/sql/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/python/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/php/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/bootstrap/bootstrap_ver.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/bootstrap4/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/howto/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/w3css/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/appml/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/tags/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/cssref/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://w3schoolsrus.github.io/jsref/index.html</loc>
+    <lastmod>2020-08-29T12:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
 <url>
   <loc>https://w3schoolsrus.github.io/html/html_intro.html</loc>
   <lastmod>2020-08-29T12:00:00+00:00</lastmod>
