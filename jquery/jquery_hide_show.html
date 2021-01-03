@@ -6,9 +6,22 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
-  <title>jQuery Учебник. Селекторы. W3Schools на русском</title>
-  <meta name='description' content='Учебник по jQuery. Селекторы - элемента, #id, .class. Примеры. Уроки онлайн для начинающих бесплатно. W3Schools на русском'>
-  <link rel='canonical' href='https://w3schoolsrus.github.io/jquery/jquery_selectors.html' />
+  <title>jQuery Эффекты. Скрыть/Показать. W3Schools на русском</title>
+  <meta name='description' content='Учебник по jQuery. Эффект Скрыть/Показать. Уроки онлайн для начинающих бесплатно. W3Schools на русском'>
+  <link rel='canonical' href='https://w3schoolsrus.github.io/jquery/jquery_hide_show.html' />
+  <script src="../cdn/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $(".flip").click(function(){
+              $(".panel").toggle();
+          });
+      });
+  </script>
+  <style>
+      div.panel,p.flip {line-height: 30px;margin:auto;font-size:16px;padding:5px;text-align:center;background:#555;border:solid 1px #666;color:#ffffff;border-radius:3px;user-select:none}
+      div.panel {display:none;}
+      p.flip {cursor:pointer;}
+  </style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -315,203 +328,107 @@
             </script>
             <a href='index.html'><img src='../svg/jquery_icon.svg' alt='jQuery. Уроки для начинающих' class='w3-left w3-padding' title='jQuery для начинающих. W3Schools на русском' style='width:120px;'></a>
   <article>
-    <h1>jQuery <span class='color_h1'>Селекторы</span></h1>
+    <h1>jQuery Эффекты - <span class="color_h1">Скрыть и Показать</span></h1>
     <div class='w3-clear nextprev'>
-      <a class='w3-left w3-btn' href='jquery_syntax.html'>&#10094; Prev</a>
-      <a class='w3-right w3-btn' href='jquery_events.html'>Next &#10095;</a>
+      <a class='w3-left w3-btn' href='jquery_events.html' title='Предыдущая страница'>&#10094; Prev</a>
+      <a class='w3-right w3-btn' href='jquery_fade.html' title='Следующая страница'>Next &#10095;</a>
     </div>
     <hr>
-    <p class='intro'><strong>Селекторы jQuery</strong> - одна из самых важных частей библиотеки jQuery.</p>
-    <hr>
-
-    <h2>jQuery Селекторы</h2>
-    <p>Селекторы jQuery позволяют выбирать элементы HTML и управлять ими.</p>
-    <p>jQuery селекторы используются для &quot;поиска&quot; (или выбора) HTML элементов на основе их имени, id, классов, типов, атрибутов, значений атрибутов и многого другого. Они основаны на существующих <a href="../cssref/css_selectors.html">CSS селекторах</a>, и кроме того, имеют несколько собственных настраиваемых селекторов.</p>
-    <p>Все селекторы в jQuery начинаются со знака доллара и скобок: $().</p>
-    <hr>
-
-    <h2>Селектор элемента</h2>
-    <p>Селектор элементов jQuery выбирает элементы на основе имени элемента.</p>
-    <p>Вы можете выбрать все элементы <code class='w3-codespan'>&lt;p&gt;</code> на странице, например так:</p>
-    <div class="w3-code w3-border notranslate jsHigh">
-      <div>
-        $(&quot;p&quot;)
-      </div>
+    <p class="intro">Скрыть, показать, переключить, сдвинуть, исчезнуть и анимировать. ВОТ ЭТО ДА!</p>
+    <p class="flip">Кликните, чтобы показать/скрыть панель</p>
+    <div class="panel">
+      <p>Поскольку время ценно, мы быстро и легко обучаемся.</p>
+      <p>В W3Schools вы можете изучить все, что вам нужно, в доступном и удобном формате.</p>
     </div>
-    <p><b>Пример</b></p>
-    <p>Когда пользователь нажимает кнопку, все элементы <code class='w3-codespan'>&lt;p&gt;</code> будут скрыты:</p>
+    <hr>
+
+    <h2>Примеры</h2>
+    <p><a target='_blank' href="tryit.html?filename=tryjquery_hide">jQuery hide()</a><br>
+      Демонстрирует простой метод jQuery hide().</p>
+    <p><a target='_blank' href="tryit.html?filename=tryjquery_hide_explanations">jQuery hide()</a><br>
+      Еще одна демонстрация hide(). Как скрыть части текста.</p>
+    <hr>
+
+    <h2>jQuery hide() и show()</h2>
+    <p>С помощью jQuery вы можете скрывать и отображать элементы HTML с помощью методов <code class='w3-codespan'>hide()</code> и <code class='w3-codespan'>show()</code>:</p>
     <div class='w3-example'>
       <h3>Пример</h3>
-      <div class='w3-code notranslate jsHigh'>
-        $(document).ready(function(){<br>
-        &nbsp;&nbsp;$(&quot;button&quot;).click(function(){<br>
-        &nbsp;&nbsp;&nbsp; $(&quot;p&quot;).hide();<br>
-        &nbsp;&nbsp;});<br>
-        });
-      </div>
-      <a target='_blank' class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryjquery_hide_p">Попробуйте сами &raquo;</a>
+      <div class="w3-code notranslate jsHigh">
+        $(&quot;#hide&quot;).click(function(){<br>
+        &nbsp;&nbsp;$(&quot;p&quot;).hide();<br>
+        });<br>
+        <br>
+        $(&quot;#show&quot;).click(function(){<br>
+        &nbsp;&nbsp;$(&quot;p&quot;).show();<br>
+        });</div>
+      <a target='_blank' class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryjquery_hide_show">Попробуйте сами &raquo;</a>
     </div>
-    <hr>
-
-    <h2>Селектор #id</h2>
-    <p>jQuery селектор <code class='w3-codespan'>#<em>id</em></code> использует атрибут id тега HTML для поиска конкретного элемента.</p>
-    <p>Идентификатор (id) должен быть уникальным на странице, поэтому вы должны использовать селектор #id, когда хотите найти единственный уникальный элемент.</p>
-    <p>Чтобы найти элемент с определенным идентификатором, напишите символ решетки, за которым следует идентификатор элемента HTML:</p>
-    <div class="w3-code w3-border notranslate jsHigh">
-      <div>
-        $(&quot;#test&quot;)
-      </div>
-    </div>
-    <p><b>Пример</b></p>
-    <p>Когда пользователь нажимает кнопку, элемент с id=&quot;test&quot; будет скрыт:</p>
+    <p><b>Синтаксис:</b></p>
+    <div class="w3-code w3-border notranslate jsHigh"><div>
+        $(<i>selector</i>).hide(<i>speed,callback</i>);<br>
+        <br>
+        $(<i>selector</i>).show(<i>speed,callback</i>);
+      </div></div>
+    <p>Необязательный параметр скорости указывает скорость скрытия / отображения и может принимать следующие значения: &quot;slow&quot; (медленно), &quot;fast&quot; (быстро), или миллисекунды.</p>
+    <p>Необязательный параметр обратного вызова - это функция, которая должна выполняться после завершения метода <code class='w3-codespan'>hide()</code> или <code class='w3-codespan'>show()</code> method completes  (вы узнаете больше о функциях обратного вызова в следующей главе).</p>
+    <p>В следующем примере демонстрируется параметр скорости с <code class='w3-codespan'>hide()</code>:</p>
     <div class='w3-example'>
       <h3>Пример</h3>
-      <div class='w3-code notranslate jsHigh'>
-        $(document).ready(function(){<br>
-        &nbsp;&nbsp;$(&quot;button&quot;).click(function(){<br>
-        &nbsp;&nbsp;&nbsp; $(&quot;#test&quot;).hide();<br>
-        &nbsp; });<br>
-        });
-      </div>
-      <a target='_blank' class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryjquery_hide_id">Попробуйте сами &raquo;</a>
+      <div class="w3-code notranslate jsHigh">
+        $(&quot;button&quot;).click(function(){<br>
+        &nbsp; $(&quot;p&quot;).hide(1000);<br>
+        });</div>
+      <a target='_blank' class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryjquery_hide_slow">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Селектор .class</h2>
-    <p>jQuery селектор <code class='w3-codespan'><em>.class</em></code> находит элементы с определенным классом.</p>
-    <p>Чтобы найти элементы с определенным классом, напишите символ точки, за которым следует имя класса:</p>
-    <div class="w3-code w3-border notranslate jsHigh">
-      <div>
-        $(&quot;.test&quot;)
-      </div>
-    </div>
-
-    <p><b>Пример</b></p>
-    <p>Когда пользователь нажимает кнопку, элементы с class=&quot;test&quot; будут скрыты:</p>
+    <h2>jQuery метод toggle()</h2>
+    <p>Вы также можете переключаться между скрытием и отображением элемента с помощью метода <code class='w3-codespan'>toggle()</code>.</p>
+    <p>Показанные элементы скрыты, а скрытые элементы показаны:</p>
     <div class='w3-example'>
       <h3>Пример</h3>
-      <div class='w3-code notranslate jsHigh'>
-        $(document).ready(function(){<br>
-        &nbsp; $(&quot;button&quot;).click(function(){<br>
-        &nbsp;&nbsp;&nbsp; $(&quot;.test&quot;).hide();<br>
-        &nbsp;&nbsp;});<br>
-        });
-      </div>
-      <a target='_blank' class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryjquery_hide_class">Попробуйте сами &raquo;</a>
+      <div class="w3-code notranslate jsHigh">
+        $(&quot;button&quot;).click(function(){<br>
+        &nbsp; $(&quot;p&quot;).toggle();<br>
+        });</div>
+      <a target='_blank' class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryjquery_toggle">Попробуйте сами &raquo;</a>
     </div>
+
+    <p><b>Синтаксис:</b></p>
+    <div class="w3-code w3-border notranslate jsHigh"><div>
+        $(<i>selector</i>).toggle(<i>speed,callback</i>);
+      </div></div>
+    <p>Необязательный параметр скорости может принимать следующие значения: &quot;slow&quot; (медленно), &quot;fast&quot; (быстро) или миллисекунды.</p>
+    <p>Необязательный параметр обратного вызова - это функция, которая должна выполняться после завершения <code class='w3-codespan'>toggle()</code>.</p>
     <hr>
 
-    <h2>Больше примеров jQuery селекторов</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all notranslate">
-        <tr>
-          <th style="width:25%">Синтаксис</th>
-          <th style="width:65%">Описание</th>
-          <th>Пример</th>
-        </tr>
-        <tr>
-          <td>$(&quot;*&quot;)</td>
-          <td>Выбирает все элементы</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_all2">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(this)</td>
-          <td>Выбирает текущий элемент HTML</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_this">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;p.intro&quot;)</td>
-          <td>Выбирает все &lt;p&gt; элементы с class=&quot;intro&quot;</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_pclass">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;p:first&quot;)</td>
-          <td>Выбирает первый &lt;p&gt; элемент</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_pfirst">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;ul li:first&quot;)</td>
-          <td>Выбирает первый элемент &lt;li&gt; из первого &lt;ul&gt;</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_ullifirst">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;ul li:first-child&quot;)</td>
-          <td>Выбирает первый элемент &lt;li&gt; из каждого &lt;ul&gt;</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_ullifirstchild">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;[href]&quot;)</td>
-          <td>Выбирает все элементы с атрибутом href</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_hrefattr">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;a[target='_blank']&quot;)</td>
-          <td>Выбирает все &lt;a&gt; элементы с атрибутом target со значением &quot;_blank&quot;</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_hrefattrblank">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;a[target!='_blank']&quot;)</td>
-          <td>Выбирает все &lt;a&gt; элементы с атрибутом target со значением НЕ &quot;_blank&quot;</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_hrefattrnotblank">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;:button&quot;)</td>
-          <td>Выбирает все &lt;button&gt; элементы и &lt;input&gt; элементы с type=&quot;button&quot;</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_button2">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;tr:even&quot;)</td>
-          <td>Выбирает все четные &lt;tr&gt; элементы</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_even">Попробуй это</a></td>
-        </tr>
-        <tr>
-          <td>$(&quot;tr:odd&quot;)</td>
-          <td>Выбирает все нечетные &lt;tr&gt; элементы</td>
-          <td><a target='_blank' class="w3-btn" href="tryit.html?filename=tryjquery_sel_odd">Попробуй это</a></td>
-        </tr>
-      </table>
-    </div>
-    <p>Воспользуйтесь нашим <a target='_blank' href="trysel.html">Тестер селектора jQuery</a> чтобы продемонстрировать различные селекторы.</p>
-    <p>Полный справочник по всем селекторам jQuery см. в <a href="jquery_ref_selectors.html">Справочник jQuery селекторов</a>.</p>
-    <hr>
-
-    <h2>Функции в отдельном файле</h2>
-    <p>Если ваш веб-сайт содержит много страниц и вы хотите, чтобы ваши функции jQuery было легко поддерживать, вы можете поместить свои функции jQuery в отдельный файл .js.</p>
-    <p>Когда мы демонстрируем jQuery в этом учебнике, функции добавляются непосредственно в раздел <code class='w3-codespan'>&lt;head&gt;</code>. Однако иногда предпочтительнее поместить их в отдельный файл, например этот (используйте атрибут src для ссылки на файл .js):</p>
-
-    <div class='w3-example'>
-      <h3>Пример</h3>
-      <div class='w3-code notranslate htmlHigh'>
-        &lt;head&gt;<br>
-        &lt;script
-        src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;<br>
-        <span class="marked">&lt;script src=&quot;my_jquery_functions.js&quot;&gt;&lt;/script&gt;</span><br>
-        &lt;/head&gt;
-      </div>
-    </div>
-      <p><b>Примечание.</b> Название файла функций с расширением .js можете придумать своё.</p>
-    <hr>
-
-    <h2>jQuery Примеры</h2>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/jquery/exercise_jq.asp?filename=exercise_jq_selectors1" method="post" target='_blank'>
-      <h2>Проверьте себя с помощью упражнений</h2>
+    <h2>jQuery Упражнения</h2>
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/jquery/exercise_jq.asp?filename=exercise_jq_hide_show1" method="post" target='_blank'>
+      <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
       <div class="exercisewindow">
         <h2>Упражнение:</h2>
-        <p>Используйте корректный <strong>селектор</strong>, чтобы скрыть все &lt;p&gt; элементы.</p>
+        <p>Используйте метод jQuery, чтобы <strong>скрыть</strong> элемент &lt;p&gt; при клике на него.</p>
         <div class="exerciseprecontainer">
 <pre style="background-color:transparent;border:none;">
-$("<input name="ex1" maxlength="1" style="width: 17px;">").hide();
+
+$("p").click(function(){
+  $(this).<input name="ex1" maxlength="4" style="width: 45px;">();
+});
 </pre>
         </div>
         <br>
         <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
       </div>
     </form>
+    <hr>
+
+    <h2>jQuery Справочник эффектов</h2>
+    <p>Чтобы получить полный обзор всех эффектов jQuery, перейдите на <a href='jquery_ref_effects.html'>jQuery Справочник эффектов</a> на нашем сайте W3Schools.</p>
 
     <hr>
     <div class='w3-clear nextprev'>
-      <a class='w3-left w3-btn' href='jquery_syntax.html'>&#10094; Prev</a>
-      <a class='w3-right w3-btn' href='jquery_events.html'>Next &#10095;</a>
+      <a class='w3-left w3-btn' href='jquery_events.html' title='Предыдущая страница'>&#10094; Prev</a>
+      <a class='w3-right w3-btn' href='jquery_fade.html' title='Следующая страница'>Next &#10095;</a>
     </div>
   </article>
   </div>
