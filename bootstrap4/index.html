@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../styles/w3.css">
 <link rel="stylesheet" href="../styles/external.css"><title>Bootstrap 4 Учебник. Уроки для начинающих. W3Schools на русском</title>
 <meta name='description' content='Bootstrap 4. Самый полный и лучший учебник для начинающих. Здесь вы можете выучить Бутстрап 4 за 1 час! Бесплатные уроки онлайн для новичков W3Schools на русском языке'>
-
+    <link rel='stylesheet' href='../styles/bigbtn.css'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -25,8 +25,7 @@
 <div class='w3-card-2 topnav notranslate' id='topnav'>
     <div style='overflow:auto;'>
         <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
-            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);'
-               onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
             <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Главная'></a>
             <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Учебник'>HTML</a>
             <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Учебник'>CSS</a>
@@ -34,33 +33,21 @@
             <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Учебник'>SQL</a>
             <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Учебник'>PYTHON</a>
             <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Учебник'>PHP</a>
-            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'
-               title='Bootstrap Учебник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
             <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>КАК СДЕЛАТЬ</a>
             <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Учебник'>W3.CSS</a>
             <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Учебник'>JQUERY</a>
             <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Учебник'>XML</a>
             <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Учебник'>JAVA</a>
-            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);'
-               onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i
-                        class='fa fa-caret-up' style='display:none'></i></a>
-            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);'
-               onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
-            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);'
-               onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
-            <a class='w3-bar-item w3-button w3-right' target='_blank'
-               href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'
-               title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
-            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);'
-               onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i
-                        class='fa fa-caret-up' style='display:none'></i></a>
-            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);'
-               onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i
-                        class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
         </div>
         <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
-            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right'
-                  style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
             <div class='w3-row-padding' style="padding:24px 48px">
                 <div class='w3-col l3 m6'>
                     <h3>HTML и CSS</h3>
@@ -106,8 +93,7 @@
                     <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
                     <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
                     <a class='w3-bar-item w3-button' href='../python/pandas_tutorial.html'>Выучить Pandas</a>
-                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br
-                                class='w3-hide-medium w3_hide-small'></div>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
                 </div>
                 <div class='w3-col l3 m6'>
                     <h3>Серверная сторона</h3>
@@ -139,8 +125,7 @@
             <br>
         </div>
         <div id='nav_references' class='w3-bar-block w3-card-2'>
-            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right'
-                  style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
             <div class='w3-row-padding' style="padding:24px 48px">
                 <div class='w3-col l3 m6'>
                     <h3>HTML</h3>
@@ -199,8 +184,7 @@
             <br>
         </div>
         <div id='nav_exercises' class='w3-bar-block w3-card-2'>
-            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right'
-                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
             <div class='w3-row-padding' style='padding:24px 48px'>
                 <div class='w3-col l4 m6'>
                     <h3>Упражнения</h3>
@@ -325,64 +309,75 @@
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
+            <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+            <!-- media_horizontally_header -->
+            <ins class='adsbygoogle'
+                 style='display:block'
+                 data-ad-client='ca-pub-6358227327561384'
+                 data-ad-slot='5801943678'
+                 data-ad-format='auto'
+                 data-full-width-responsive='true'></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
             <a href='index.html'><img alt='Уроки по Bootstrap для начинающих. W3Schools на русском' class='w3-left w3-padding'
-                                     src='../svg/bootstrap_icon.svg' width='120'
+                                     src='../svg/bootstrap_icon1.svg' style='width: 100px'
                                      title='Уроки по Bootstrap. W3Schools на русском'></a>
 
 <article>
-    <h1>Bootstrap 4 <span class="color_h1">Учебник</span></h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="bootstrap_get_started.html">Next &#10095;</a>
+    <h1>Bootstrap 4 <span class='color_h1'>Учебник</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-right w3-btn' href='bootstrap_get_started.html'>Next &#10095;</a>
     </div>
 
-    <div class="w3-panel w3-info intro w3-padding-16">
-        <p style="margin-top:15px;">Bootstrap 4 - это версия* <a href="../bootstrap/index.html">Bootstrap</a>, которая является самой популярной платформой HTML, CSS и JavaScript для разработки адаптивных мобильных сайтов.</p>
-        <p>Фреймворк Bootstrap 4 полностью бесплатен для загрузки и использования!</p>
-        <p><a href="bootstrap_get_started.html" class="w3-btn w3-padding-large w3-hide-small shadow-black-05 box-shadow-black-05">Начать изучение Bootstrap 4 &raquo;</a></p>
-        <p><a href="bootstrap_get_started.html" class="w3-btn w3-block w3-hide-large w3-hide-medium" style="padding:8px 16px">Выучить Bootstrap 4</a></p>
-        <p><b>Примечание*.</b> По состоянию на декабрь 2020 года вышла новая версия <a href="https://getbootstrap.com/" target="_blank" rel="nofollow" title="Перейти на официальный сайт Bootstrap">Bootstrap 5</a>.</p>
+    <div class='w3-panel w3-info intro w3-padding-16'>
+        <p style='margin-top:15px;'><strong>Bootstrap 4</strong> - это версия* <a href='../bootstrap/index.html'>Bootstrap</a>, которая является самой популярной платформой HTML, CSS и JavaScript для разработки адаптивных мобильных сайтов.</p>
+        <p>Фреймворк <strong>Bootstrap 4</strong> полностью бесплатен для загрузки и использования!</p>
+        <p><a href='bootstrap_get_started.html' class='w3-btn w3-padding-large w3-hide-small shadow-black-05 box-shadow-black-05'>Начать изучение Bootstrap 4 &raquo;</a></p>
+        <p><a href='bootstrap_get_started.html' class='w3-btn w3-block w3-hide-large w3-hide-medium' style='padding:8px 16px'>Выучить Bootstrap 4</a></p>
+        <p><b>Примечание*.</b> По состоянию на декабрь 2020 года вышла новая версия <a href='https://getbootstrap.com/' target='_blank' rel='nofollow' title='Перейти на официальный сайт Bootstrap'><strong>Bootstrap 5</strong></a>.</p>
     </div>
     <hr>
 
-    <h2>Примеры Попробуйте сами</h2>
+    <h2>Примеры "Попробуйте сами"</h2>
     <p>Этот учебник Bootstrap 4 содержит сотни примеров Bootstrap 4.</p>
-    <p>С помощью нашего онлайн-редактора вы можете отредактировать код и, нажав на кнопку, сразу просмотреть результат.</p>
-    <img src="../images/imgdefault.jpg" alt="Адаптивная Bootstrap страница" style="width:95%;margin:16px auto;display:block">
+    <p>С помощью нашего онлайн-редактора <b>"Попробуйте сами"</b> вы можете отредактировать код и, нажав на кнопку, сразу просмотреть результат.</p>
+    <img src='../images/imgdefault.jpg' alt='Адаптивная Bootstrap страница' style='width:95%;margin:16px auto;display:block'>
 
-    <div class="w3-example">
+    <div class='w3-example'>
         <h3>Bootstrap 4 Пример</h3>
-        <div class="w3-code notranslate htmlHigh">
+        <div class='w3-code notranslate htmlHigh'>
             &lt;div class=&quot;jumbotron text-center&quot;&gt;<br>&nbsp;&nbsp;&lt;h1&gt;Моя первая Bootstrap страница&lt;/h1&gt;<br>&nbsp; &lt;p&gt;Измените размер этой адаптивной страницы, чтобы увидеть эффект!&lt;/p&gt; <br>&lt;/div&gt;<br><br>&lt;div class=&quot;container&quot;&gt;<br>&nbsp; &lt;div class=&quot;row&quot;&gt;<br>
             &nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Столбец 1&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem ipsum
             dolor..&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Столбец 2&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem ipsum
             dolor..&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Столбец 3&lt;/h3&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem ipsum
             dolor..&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;</div>
-        <a target="_blank" href="tryit689b.html?filename=trybs_default&amp;stacked=h" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a></div>
-    <div class="w3-panel w3-note">
-        <p style="margin-bottom:8px">Нажмите на кнопку &quot;Попробуйте сами&quot; чтобы увидеть, как это работает.</p>
+        <a target='_blank' href='tryit689b.html?filename=trybs_default&amp;stacked=h' class='w3-btn w3-margin-bottom'>Попробуйте сами &raquo;</a></div>
+    <div class='w3-panel w3-note'>
+        <p style='margin-bottom:8px'>Нажмите на кнопку <b>&quot;Попробуйте сами&quot;</b> чтобы увидеть, как это работает.</p>
     </div>
     <hr>
 
     <h2>Bootstrap 3 vs. Bootstrap 4</h2>
-    <p>Bootstrap 4 - новейшая версия Bootstrap; с новыми компонентами, более быстрой таблицей стилей и большей отзывчивостью (адаптивностью).</p>
+    <p>Bootstrap 4 - более новая версия Bootstrap; с новыми компонентами, более быстрой таблицей стилей и большей отзывчивостью (адаптивностью).</p>
     <p>Bootstrap 4 поддерживает последние стабильные выпуски всех основных браузеров и платформ. Однако Internet Explorer 9 и более ранние версии не поддерживаются.</p>
-    <div class="w3-panel w3-note">
-        <p style="margin-bottom:8px"><strong>Если вам требуется поддержка IE8-9, используйте <a href="../bootstrap/index.html">Bootstrap 3.</a></strong> Это самая стабильная версия Bootstrap, и она все ещё поддерживается группой для критических исправлений и изменений в документации. Тем не менее, новые функции не будут добавлены к нему.</p>
+    <div class='w3-panel w3-note'>
+        <p style='margin-bottom:8px'><strong>Если вам требуется поддержка IE8-9, используйте <a href='../bootstrap/index.html'>Bootstrap 3.</a></strong> Это самая стабильная версия Bootstrap, и она все ещё поддерживается группой для критических исправлений и изменений в документации. Тем не менее, новые функции не будут добавлены к нему.</p>
     </div>
-    <a href="../bootstrap/index.html" class="w3-btn w3-dark-grey">Перейти к изучению Bootstrap 3 &raquo;</a>
+    <a href='../bootstrap/index.html' class='w3-btn w3-dark-grey shadow-black-1'>Перейти к изучению Bootstrap 3 &raquo;</a>
     <hr>
 
     <h2>Bootstrap 4 Основной шаблон</h2>
     <p>Мы создали адаптивный начальный шаблон с Bootstrap 4. Вы можете свободно изменять, сохранять, делиться и использовать его в своих проектах:</p>
-    <div class="w3-content" style="max-width:1500px">
-        <iframe src="../howto/tryhow_website_bootstrap4_ifr.html" class="w3-round" style="width:100%;border:5px solid #e9e9e9;height:600px"></iframe>
-        <div class="w3-row-padding" style="margin:16px -16px 0 -16px">
-            <div class="w3-col m6">
-                <a href="trybs_template1.html" target="_blank" class="w3-btn w3-padding-large w3-dark-grey w3-block">Демо</a>
+    <div class='w3-content' style='max-width:1500px'>
+        <iframe src='../howto/tryhow_website_bootstrap4_ifr.html' class='w3-round' style='width:100%;border:5px solid #e9e9e9;height:600px'></iframe>
+        <div class='w3-row-padding' style='margin:16px -16px 0 -16px'>
+            <div class='w3-col m6'>
+                <a href='trybs_template1.html' target='_blank' class='w3-btn w3-padding-large w3-dark-grey w3-block'>Демо</a>
             </div>
-            <div class="w3-col m6">
-                <a href="tryit0874.html?filename=trybs_template1" target="_blank" class="w3-btn w3-padding-large w3-green w3-block">Попробуйте сами</a>
+            <div class='w3-col m6'>
+                <a href='tryit0874.html?filename=trybs_template1' target='_blank' class='w3-btn w3-padding-large w3-green w3-block'>Попробуйте сами</a>
             </div>
         </div>
     </div>
@@ -390,129 +385,152 @@
 
     <h2>Bootstrap Справочники</h2>
     <p>Полный список всех CSS-классов Bootstrap 4 с описанием и примерами:</p>
-    <div class="w3-bar-block" style="margin-bottom:12px">
-        <a class="w3-button w3-bar-item w3-light-grey" href="bootstrap_ref_all_classes.html">Все CSS классы Bootstrap <span class="w3-tag w3-blue" style="margin-left:5px">Popular</span></a>
+    <div class='w3-bar-block' style='margin-bottom:12px'>
+        <a class='w3-button w3-bar-item w3-light-grey' href='bootstrap_ref_all_classes.html'>Все CSS классы Bootstrap <span class='w3-tag w3-blue' style='margin-left:5px'>Popular</span></a>
     </div>
-    <p>Если вы хотите сделать больше с компонентами Bootstrap, посмотрите наш полный справочник по Bootstrap 4 JavaScript / jQuery - все с примерами &quot;Попробуйте сами&quot;:</p>
-    <div class="w3-bar-block">
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_alert.html">Bootstrap JS Оповещение</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_button.html">Bootstrap JS Кнопка</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_carousel.html">Bootstrap JS Карусель</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_collapse.html">Bootstrap JS Свертывание</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_dropdown.html">Bootstrap JS Dropdown</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_modal.html">Bootstrap JS Модал</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_popover.html">Bootstrap JS Popover</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_scrollspy.html">Bootstrap JS Scrollspy</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_tab.html">Bootstrap JS Вкладка</a>
-        <a class="w3-button w3-bar-item w3-light-grey w3-border-bottom" href="bootstrap_ref_js_toasts.html">Bootstrap JS Toast</a>
-        <a class="w3-button w3-bar-item w3-light-grey" href="bootstrap_ref_js_tooltip.html">Bootstrap JS Подсказка</a>
+    <p>Если вы хотите сделать больше с компонентами Bootstrap, посмотрите наш полный справочник по Bootstrap 4 - JavaScript/jQuery - все с примерами <b>&quot;Попробуйте сами&quot;</b>:</p>
+    <div class='w3-bar-block'>
+        <a class='bigbtn' href='bootstrap_ref_js_alert.html'>Bootstrap JS Оповещение</a>
+        <a class='bigbtn' href='bootstrap_ref_js_button.html'>Bootstrap JS Кнопка</a>
+        <a class='bigbtn' href='bootstrap_ref_js_carousel.html'>Bootstrap JS Карусель</a>
+        <a class='bigbtn' href='bootstrap_ref_js_collapse.html'>Bootstrap JS Свертывание</a>
+        <a class='bigbtn' href='bootstrap_ref_js_dropdown.html'>Bootstrap JS Dropdown</a>
+        <a class='bigbtn' href='bootstrap_ref_js_modal.html'>Bootstrap JS Модал</a>
+        <a class='bigbtn' href='bootstrap_ref_js_popover.html'>Bootstrap JS Popover</a>
+        <a class='bigbtn' href='bootstrap_ref_js_scrollspy.html'>Bootstrap JS Scrollspy</a>
+        <a class='bigbtn' href='bootstrap_ref_js_tab.html'>Bootstrap JS Вкладка</a>
+        <a class='bigbtn' href='bootstrap_ref_js_toasts.html'>Bootstrap JS Toast</a>
+        <a class='bigbtn' href='bootstrap_ref_js_tooltip.html'>Bootstrap JS Подсказка</a>
     </div>
     <hr>
 
-    <h2>А вы знаете?</h2>
+    <h2>Знаете ли вы?</h2>
     <p><strong>W3.CSS</strong> - это отличная альтернатива Bootstrap 4.</p>
     <p><strong>W3.CSS</strong> меньше, быстрее и проще в использовании.</p>
-    <p>Если вы хотите изучить <strong>W3.CSS</strong>, переходите в <a href="../w3css/index.html">W3.CSS Учебник</a> на нашем сайте.</p>
+    <p>Если вы хотите изучить <strong>W3.CSS</strong>, переходите в <a href='../w3css/index.html'>W3.CSS Учебник</a> на нашем сайте.</p>
 
     <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="bootstrap_get_started.html">Next &#10095;</a>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-right w3-btn' href='bootstrap_get_started.html'>Next &#10095;</a>
     </div>
 </article>
+<hr>
+<script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<!-- media_horizontally_header -->
+<ins class='adsbygoogle'
+     style='display:block'
+     data-ad-client='ca-pub-6358227327561384'
+     data-ad-slot='5801943678'
+     data-ad-format='auto'
+     data-full-width-responsive='true'></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<!--Right sidebar CSS-->
+<div class='w3-col l2 m12' id='right'>
 
-</div>
-<!--Right sidebar HTML-->
-<div class="w3-col l2 m12" id="right">
-
-    <div class="sidesection w3-light-grey" style="padding-bottom: 5px">
-        <h4><a href="../colors/colors_picker.html">ПАЛИТРА ЦВЕТОВ</a></h4>
-        <a href="../colors/colors_picker.html">
-            <img src="../images/colorpicker.gif" alt="colorpicker"></a>
+    <div class='sidesection w3-light-grey' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
+        <a href='../colors/colors_picker.html'>
+            <img src='../images/colorpicker.gif' alt='colorpicker'></a>
     </div>
 
-    <div class="sidesection">
+    <div class='sidesection'>
         <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
-        <div class="w3-text-grey sharethis">
-            <a href="https://www.facebook.com/websunsay" target="_blank"><img src="../svg/facebook_icon.svg" alt="Facebook страница" title="Перейти на Facebook страницу" style="width:35px;height:35px;"></a>
-            <a href="https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg" target="_blank"><img src="../svg/youtube_icon.svg" alt="Канал на YouTube" title="Перейти на YouTube канал" style="width:35px;height:35px;"></a>
-            <a href="https://t.me/websunsey" target="_blank"><img src="../svg/telegram_icon.svg" alt="Telegram канал" title="Перейти на Telegram канал" style="width:35px;height:35px;"></a>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px;height:35px;'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на YouTube канал' style='width:35px;height:35px;'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px;'></a>
         </div>
     </div>
 
-    <div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
-        <div class="w3-container w3-dark-grey">
-            <h4><a href="../blog/index.html" class="w3-hover-text-white">БЛОГ</a></h4>
+    <div class='sidesection w3-light-grey' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <div class='w3-container w3-dark-grey'>
+            <h4><a href='../blog/index.html' class='w3-hover-text-white'>БЛОГ</a></h4>
         </div>
-        <div class="w3-container w3-left-align w3-padding-16">
-            <a href="../blog/index.html">Блог Админа</a><br>
-            <a href="../blog/whatsites.html">Какие бывают сайты?</a><br>
-            <a href="../blog/seo_optimization.html">SEO. Поисковая оптимизация</a><br>
-            <a href="../blog/imitation.html">Наследование или плагиат</a><br>
-            <a href="../blog/free_img_placeholder_services.html">Фиктивные изображения</a><br>
-            <a href="../blog/140_web_colors.html">140 веб-цветов</a><br>
-            <a href="../blog/adblockplus.html">Как отключить рекламу?</a><br>
-            <a href="../blog/atom_edit_rus.html">Как русифицировать редактор Atom?</a><br>
-            <a href="../blog/apache_install.html">Как установить сервер Apache?</a><br>
-            <a href="../blog/mysql_install.html">Как установить сервер MySQL?</a><br>
-            <a href="../blog/youtube_responsive.html">Как сделать адаптивным видео с YouTube?</a><br>
-            <a href="../blog/top_freelance.html">ТОП самых популярных бирж фриланса</a><br>
-            <a href="../blog/html6_news.html">Что нового в HTML6?</a><br>
-            <a href="../blog/wordpress_readme.html">Начальная установка WordPress</a><br>
-            <a href="../blog/verbit.html">Словарь IT-начинающего</a>
-        </div>
-    </div>
-
-    <div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
-        <div class="w3-container w3-dark-grey">
-            <h4><a href="../howto/index.html" class="w3-hover-text-white">КАК СДЕЛАТЬ?..</a></h4>
-        </div>
-        <div class="w3-container w3-left-align w3-padding-16">
-            <a href="../howto/howto_js_tabs.html">Вкладки</a><br>
-            <a href="../howto/howto_css_dropdown.html">Выпадающие меню</a><br>
-            <a href="../howto/howto_js_accordion.html">Аккордеоны</a><br>
-            <a href="../howto/howto_js_sidenav.html">Боковая навигация</a><br>
-            <a href="../howto/howto_js_topnav.html">Верхняя навигация</a><br>
-            <a href="../howto/howto_css_modals.html">Модальные блоки</a><br>
-            <a href="../howto/howto_js_progressbar.html">Прогресс-бары</a><br>
-            <a href="../howto/howto_css_parallax.html">Паралакс</a><br>
-            <a href="../howto/howto_css_login_form.html">Форма входа</a><br>
-            <a href="../howto/howto_html_include.html">HTML включения</a><br>
-            <a href="../howto/howto_google_maps.html">Google карты</a><br>
-            <a href="../howto/howto_js_rangeslider.html">Ползунки диапазона</a><br>
-            <a href="../howto/howto_css_tooltip.html">Всплывающие подсказки</a><br>
-            <a href="../howto/howto_js_slideshow.html">Слайдшоу</a><br>
-            <a href="../howto/howto_js_filter_lists.html">Фильтрованный список</a><br>
-            <a href="../howto/howto_js_sort_list.html">Сортированный список</a><br>
+        <div class='w3-container w3-left-align w3-padding-16'>
+            <a href='../blog/index.html'>Блог Админа</a><br>
+            <a href='../blog/whatsites.html'>Какие бывают сайты?</a><br>
+            <a href='../blog/seo_optimization.html'>SEO. Поисковая оптимизация</a><br>
+            <a href='../blog/imitation.html'>Наследование или плагиат</a><br>
+            <a href='../blog/free_img_placeholder_services.html'>Фиктивные изображения</a><br>
+            <a href='../blog/140_web_colors.html'>140 веб-цветов</a><br>
+            <a href='../blog/adblockplus.html'>Как отключить рекламу?</a><br>
+            <a href='../blog/atom_edit_rus.html'>Как русифицировать редактор Atom?</a><br>
+            <a href='../blog/apache_install.html'>Как установить сервер Apache?</a><br>
+            <a href='../blog/mysql_install.html'>Как установить сервер MySQL?</a><br>
+            <a href='../blog/youtube_responsive.html'>Как сделать адаптивным видео с YouTube?</a><br>
+            <a href='../blog/top_freelance.html'>ТОП самых популярных бирж фриланса</a><br>
+            <a href='../blog/html6_news.html'>Что нового в HTML6?</a><br>
+            <a href='../blog/wordpress_readme.html'>Начальная установка WordPress</a><br>
+            <a href='../blog/verbit.html'>Словарь IT-начинающего</a>
         </div>
     </div>
 
-    <div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
-        <div class="w3-container w3-dark-grey">
-            <h5><a href="../cert/index.html" class="w3-hover-text-white">СЕРТИФИКАТЫ</a></h5>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+        <!-- admedia_vertical_rightbar -->
+        <ins class='adsbygoogle'
+             style='display:block'
+             data-ad-client='ca-pub-6358227327561384'
+             data-ad-slot='1902033594'
+             data-ad-format='auto'
+             data-full-width-responsive='true'></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class='sidesection w3-light-grey' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <div class='w3-container w3-dark-grey'>
+            <h4><a href='../howto/index.html' class='w3-hover-text-white'>КАК СДЕЛАТЬ?..</a></h4>
         </div>
-        <div class="w3-border">
-            <a href="../cert/cert_html.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
-            <a href="../cert/cert_css.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">CSS</a>
-            <a href="../cert/cert_javascript.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">JavaScript</a>
-            <a href="../cert/cert_frontend.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Front End</a>
-            <a href="../cert/cert_python.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Python</a>
-            <a href="../cert/cert_jquery.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">jQuery</a>
-            <a href="../cert/cert_sql.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">SQL</a>
-            <a href="../cert/cert_php.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">PHP</a>
-            <a href="../cert/cert_bootstrap.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">Bootstrap</a>
-            <a href="../cert/cert_xml.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">XML</a>
+        <div class='w3-container w3-left-align w3-padding-16'>
+            <a href='../howto/howto_make_a_website.html'>Сделать веб-сайт</a>
+            <a href='../howto/howto_website.html'>Сделать веб-сайт (W3.CSS)</a>
+            <a href='../howto/howto_website_bootstrap.html'>Сделать веб-сайт (BS3)</a>
+            <a href='../howto/howto_website_bootstrap4.html'>Сделать веб-сайт (BS4)</a>
+            <a href='../howto/howto_make_a_webbook.html'>Сделать WebBook</a>
+            <a href='../howto/howto_css_center_website.html'>Центрировать веб-сайт</a>
+            <a href='../howto/howto_css_contact_section.html'>Раздел контактов</a>
+            <a href='../howto/howto_css_about_page.html'>Про страницу</a>
+            <a href='../howto/howto_css_style_header.html'>Большой заголовок</a>
+            <a href='../howto/howto_css_example_website.html'>Пример веб-сайта</a>
+            <a href='../howto/howto_css_two_columns.html'>Макет 2 колонки</a>
+            <a href='../howto/howto_css_three_columns.html'>Макет 3 колонки</a>
+            <a href='../howto/howto_css_four_columns.html'>Макет 4 колонки</a>
+            <a href='../howto/howto_js_expanding_grid.html'>Расширяющаяся сетка</a>
+            <a href='../howto/howto_js_list_grid_view.html'>Список в виде сетки</a>
+            <a href='../howto/howto_css_mixed_columns.html'>Макет смешанных колонок</a>
+            <a href='../howto/howto_css_column_cards.html'>Колонки карт</a>
+            <a href='../howto/howto_css_zig_zag_layout.html'>Зигзаг макет</a>
+            <a href='../howto/howto_css_blog_layout.html'>Макет блога</a>
         </div>
+    </div>
+
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+        <!-- admedia_vertical_rightbar -->
+        <ins class='adsbygoogle'
+             style='display:block'
+             data-ad-client='ca-pub-6358227327561384'
+             data-ad-slot='1902033594'
+             data-ad-format='auto'
+             data-full-width-responsive='true'></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 </div>
-<!--/Right sidebar HTML-->
+<!--/Right sidebar-->
 </div><!--FOOTER-->
 <div id='footer' class='footer w3-container w3-white'>
   <hr>
 
   <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>СООБЩИТЬ ОБ ОШИБКЕ</a>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ОБРАТНАЯ СВЯЗЬ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
       <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПЕЧАТЬ СТРАНИЦЫ</a>
@@ -525,34 +543,12 @@
     </div>
   </div>
   <hr>
-  <div class='w3-light-grey w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative'>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
     <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
-    <h2>Ваше предложение:</h2>
-    <form>
-      <div class='w3-section'>
-        <label for='err_email'>Ваш E-mail:</label>
-        <input class='w3-input w3-border' type='text' style='margin-top:5px;width:100%' id='err_email' name='err_email'>
-      </div>
-      <div class='w3-section'>
-        <label for='err_email'>Адрес страницы:</label>
-        <input class='w3-input w3-border' type='text' style='width:100%;margin-top:5px' id='err_url' name='err_url' disabled='disabled'>
-      </div>
-      <div class='w3-section'>
-        <label for='err_email'>Описание:</label>
-        <textarea rows='10' class='w3-input w3-border' id='err_desc' name='err_desc' style='width:100%;margin-top:5px;resize:vertical;'></textarea>
-      </div>
-      <div class='form-group'>
-        <button type='button' class='w3-button w3-dark-grey' onclick='sendErr()'>Отправить</button>
-      </div>
-      <br>
-    </form>
+      <h2>Связь с админом</h2>
+      <p>Если вы хотите сообщить об ошибке, а также внести предложение о работе сайта, добавить объявление или рекламу на сайт, не стесняйтесь отправить админу электронное письмо на email:</p>
+      <p>w3schoolsrus@gmail.com</p>
   </div>
-  <div class='w3-container w3-light-grey w3-padding' id='err_sent' style='display:none;position:relative'>
-    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright'>&times;</span>
-    <h2>Благодарим за Вашу помощь!</h2>
-    <p>Ваше сообщение было отправлено в W3Schools.</p>
-  </div>
-
   <div class='w3-row w3-center w3-small'>
     <div class='w3-col l3 m6 s12'>
       <div class='top10'>
@@ -560,15 +556,18 @@
         <a href='../html/index.html'>HTML Учебник</a><br>
         <a href='../css/index.html'>CSS Учебник</a><br>
         <a href='../js/index.html'>JavaScript Учебник</a><br>
-        <a href='../howto/index.html'>Как сделать? Учебник</a><br>
         <a href='../sql/index.html'>SQL Учебник</a><br>
         <a href='../python/index.html'>Python Учебник</a><br>
-        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
-        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
         <a href='../php/index.html'>PHP Учебник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
         <a href='../jquery/index.html'>jQuery Учебник</a><br>
+        <a href='../angular/index.html'>Angular Учебник</a><br>
         <a href='../java/index.html'>Java Учебник</a><br>
         <a href='../cpp/index.html'>C++ Учебник</a><br>
+        <a href='../cs/index.html'>C# Учебник</a><br>
+        <a href='../r/index.html'>R Учебник</a><br>
+        <a href='../howto/index.html'>Как сделать? Учебник</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
@@ -579,42 +578,48 @@
         <a href='../jsref/index.html'>JavaScript Справочник</a><br>
         <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
         <a href='../python/python_reference.html'>Python Справочник</a><br>
-        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
-        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap Справочник</a><br>
         <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
-        <a href='../colors/colors_names.html'>HTML Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap Справочник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
         <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
-        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
         <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
+        <a href='../cpp/cpp_references.html'>C++ Справочник</a><br>
+        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
       <div class='top10'>
         <h4>Топ Примеры</h4>
-        <a href='html_examples.html'>HTML Примеры</a><br>
+        <a href='../html/html_examples.html'>HTML Примеры</a><br>
         <a href='../css/css_examples.html'>CSS Примеры</a><br>
         <a href='../js/js_examples.html'>JavaScript Примеры</a><br>
-        <a href='../howto/index.html'>Как сделать Примеры</a><br>
         <a href='../sql/sql_examples.html'>SQL Примеры</a><br>
         <a href='../python/python_examples.html'>Python Примеры</a><br>
-        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
-        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
         <a href='../php/php_examples.html'>PHP Примеры</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
         <a href='../jquery/jquery_examples.html'>jQuery Примеры</a><br>
+        <a href='../angular/angular_examples.html'>Angular Примеры</a><br>
         <a href='../java/java_examples.html'>Java Примеры</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Примеры</a><br>
+        <a href='../cs/cs_examples.html'>C# Примеры</a><br>
         <a href='../xml/xml_examples.html'>XML Примеры</a><br>
+        <a href='../howto/index.html'>Как сделать? Примеры</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
       <div class='top10'>
         <h4><a href='../cert/index.html'>Веб Сертификаты</a></h4>
-        <a href='../cert/cert_html_new.html'>HTML Сертификат</a><br>
+        <a href='../cert/cert_html.html'>HTML Сертификат</a><br>
         <a href='../cert/cert_css.html'>CSS Сертификат</a><br>
         <a href='../cert/cert_javascript.html'>JavaScript Сертификат</a><br>
         <a href='../cert/cert_frontend.html'>Front End Сертификат</a><br>
-        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
         <a href='../cert/cert_python.html'>Python Сертификат</a><br>
         <a href='../cert/cert_jquery.html'>jQuery Сертификат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
         <a href='../cert/cert_php.html'>PHP Сертификат</a><br>
         <a href='../cert/cert_bootstrap.html'>Bootstrap Сертификат</a><br>
         <a href='../cert/cert_xml.html'>XML Сертификат</a><br>
@@ -636,13 +641,13 @@
   <br><br>
 
 <!--InArtikle HTML GoogleAdSense-->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6358227327561384"
-     data-ad-slot="1121788057"></ins>
+<script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<ins class='adsbygoogle'
+     style='display:block; text-align:center;'
+     data-ad-layout='in-article'
+     data-ad-format='fluid'
+     data-ad-client='ca-pub-6358227327561384'
+     data-ad-slot='1121788057'></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
