@@ -6,9 +6,9 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
-<title>C++ Учебник. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='C++ Учебник. Что такое язык программирования C++? Уроки для начинающих. W3Schools на русском'>
-    <link rel="canonical" href="https://w3schoolsrus.github.io/cpp/index.html" />
+<title>C++ Справочники. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='C++ Справочники. Создание справочников. Уроки для начинающих. W3Schools на русском'>
+    <link rel='canonical' href='https://w3schoolsrus.github.io/cpp/cpp_references.html' />
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -379,71 +379,37 @@
             </script>
             <a href='index.html'><img src='../svg/cpp_icon.svg' alt='Язык программирования C++. Уроки для начинающих' class="w3-left w3-padding" title='C++ для начинающих. W3Schools на русском' style='width:120px'></a>
   <article>
-      <h1>C++ <span class='color_h1'>Учебник</span></h1>
+      <h1>C++ <span class='color_h1'>Ссылки</span></h1>
       <div class='w3-clear nextprev'>
-          <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
-          <a class='w3-right w3-btn' href='cpp_intro.html'>Next &#10095;</a>
-      </div>
-
-      <div class='w3-panel w3-info intro'>
-          <p><strong>C++</strong> - это популярный язык программирования.</p>
-          <p><strong>C++</strong> используется для создания компьютерных программ.</p>
-          <a class='w3-btn w3-margin-bottom shadow-black-1' href='cpp_intro.html'>Начать изучение C++ немедленно &raquo;</a>
+          <a class='w3-left w3-btn' href='cpp_arrays_omit.html'>&#10094; Prev</a>
+          <a class='w3-right w3-btn' href='cpp_references_memory.html'>Next &#10095;</a>
       </div>
       <hr>
 
-      <h2>Примеры в каждой главе</h2>
-      <p>Наш редактор <span style="color:darkblue"><b>&quot;Попробуйте сами&quot;</b></span> упрощает изучение C++. Вы можете редактировать код C++ и просматривать результат в своём браузере.</p>
+      <h2>Создание ссылок</h2>
+      <p>Ссылочная переменная - это &quot;ссылка&quot; на существующую переменную, и она создается с помощью оператора <code class='w3-codespan'>&amp;</code>:</p>
+      <div class='w3-example'>
+          <div class='w3-code notranslate javaHigh'>
+              string food = &quot;Pizza&quot;;&nbsp; // переменная food<br>string &amp;meal = food;&nbsp;&nbsp;&nbsp;
+              // ссылка на food<br>
+          </div>
+      </div>
+
+      <p>Теперь мы можем использовать либо имя переменной <code class='w3-codespan'>food</code>, либо ссылочное имя <code class='w3-codespan'>meal</code> для ссылки на <code class='w3-codespan'>food</code> переменную:</p>
 
       <div class='w3-example'>
           <h3>Пример</h3>
           <div class='w3-code notranslate javaHigh'>
-              #include &lt;iostream&gt;<br>using namespace std;<br><br>int main() {<br>&nbsp;
-              cout &lt;&lt; &quot;Hello World!&quot;;<br>&nbsp; return 0;<br>}</div>
-          <a target='_blank' class='w3-btn w3-margin-bottom' href='trycpp.html?filename=demo_helloworld'>Попробуйте сами &raquo;</a>
+              string food = &quot;Pizza&quot;;<br>string &amp;meal = food;<br><br>
+              cout &lt;&lt; food &lt;&lt; &quot;\n&quot;;&nbsp;
+              // Выведет Pizza<br>cout &lt;&lt; meal &lt;&lt; &quot;\n&quot;;&nbsp; // Выведет Pizza<br>
+          </div>
+          <a target='_blank' class='w3-btn w3-margin-bottom' href='trycpp.html?filename=demo_reference'>Попробуйте сами &raquo;</a>
       </div>
-
-      <p><b>Кликните на кнпоку &quot;Выполнить пример&quot; чтобы увидеть, как она работает.</b></p>
-      <div class='w3-panel w3-note'>
-          <p>Мы рекомендуем изучать темы этого учебника в последовательности, указанной в левом меню (или открыв меню бургер, если вы пользуетесь мобильными гаджетами).</p>
-          <p><strong>C++</strong> - объектно-ориентированный язык, и некоторые концепции могут быть новыми. При необходимости делайте перерывы и просматривайте примеры столько раз, сколько необходимо.</p>
-      </div>
-      <hr>
-
-      <div>
-          <h2>C++ Упражнения</h2>
-          <form autocomplete='off' spellcheck='false' id='w3-exerciseform' action='https://www.w3schools.com/cpp/exercise.asp?filename=exercise_syntax1' method='post' target='_blank'>
-              <h2 class='shadow-black-1'>Проверьте себя с помощью упражнений</h2>
-              <div class='exercisewindow'>
-                  <h2>Упражнение:</h2>
-                  <p>Вставьте недостающую часть кода ниже для вывода "Hello World".</p>
-                  <div class='exerciseprecontainer'>
-<pre style='overflow: auto;'>
-int main() {
-  <input name="ex1" maxlength="4" style="width: 45px;"> &lt;&lt; "Hello World!";
-  return 0;
-}
-</pre>
-                  </div>
-                  <br>
-                  <button type='submit' class='w3-btn w3-margin-bottom'>Отправить ответ &raquo;</button>
-              </div>
-          </form>
-          <hr>
-      </div>
-
-      <h2>Учиться на примерах</h2>
-      <p>Учитесь на примерах! Этот учебник дополняет все пояснения поясняющими примерами.</p>
-      <p><a href='cpp_examples.html' class='w3-button w3-light-grey'>Смотреть все C++ Примеры</a></p>
-      <hr>
-
-      <h2>C++ Викторина</h2>
-      <p>Учитесь, пройдя викторину! Викторина даст вам сигнал о том, насколько хорошо вы знаете или не знаете C++.</p>
-      <p><a href='cpp_quiz.html' class='w3-button w3-blue shadow-black-1'>Начать C++ Викторину</a></p>
       <hr>
       <div class='w3-clear nextprev'>
-          <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
-          <a class='w3-right w3-btn' href='cpp_intro.html'>Next &#10095;</a>
+          <a class='w3-left w3-btn' href='cpp_arrays_omit.html'>&#10094; Prev</a>
+          <a class='w3-right w3-btn' href='cpp_references_memory.html'>Next &#10095;</a>
       </div>
   </article>
 <hr>
@@ -586,13 +552,13 @@ int main() {
         <a href='../php/index.html'>PHP Учебник</a><br>
         <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
         <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
+        <a href='../appml/index.html'>AppML Учебник</a><br>
         <a href='../jquery/index.html'>jQuery Учебник</a><br>
         <a href='../angular/index.html'>Angular Учебник</a><br>
+        <a href='../sass/index.html'>Sass Учебник</a><br>
         <a href='../java/index.html'>Java Учебник</a><br>
         <a href='../cpp/index.html'>C++ Учебник</a><br>
         <a href='../cs/index.html'>C# Учебник</a><br>
-        <a href='../r/index.html'>R Учебник</a><br>
-        <a href='../howto/index.html'>Как сделать? Учебник</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
@@ -604,15 +570,15 @@ int main() {
         <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
         <a href='../python/python_reference.html'>Python Справочник</a><br>
         <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
-        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a><br>
         <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
         <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
         <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
         <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
-        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
         <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
-        <a href='../cpp/cpp_references.html'>C++ Справочник</a><br>
-        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
+        <a href='../colors/index.html'>Цвета Справочник</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
