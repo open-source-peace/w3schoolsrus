@@ -584,6 +584,15 @@ figcaption {padding: 10px 0; font-family: calibri, sans-serif;}
 .shortcut__plus {
  color: #aaa
 }
+.important {
+ background-color: #FFF5EE;
+ padding: 0 20px;
+ margin: 0 -10px;
+ border: 3px solid #eee;
+ border-radius: 6px
+}
+.warning_sign {color:orange;font-size:2em;margin-right:10px}
+.info_sign {background-color: #6EACEF;color:#fff;font-size:1.5em;margin-right:10px}
 
 
 
