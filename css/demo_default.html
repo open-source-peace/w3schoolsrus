@@ -409,12 +409,10 @@ a:hover {
          document.styleSheets[2].disabled = true;
          document.styleSheets[3].disabled = true;
       }
-
       function reStyle(n) {
          noStyles()
          document.styleSheets[n].disabled = false;
       }
-
       function closeBlackdiv() {
          var blackdiv, stylediv;
          blackdiv = document.getElementById("blackdiv")
@@ -422,7 +420,6 @@ a:hover {
          stylediv = document.getElementById("stylediv")
          stylediv.parentNode.removeChild(stylediv);
       }
-
       function showStyle(n) {
          var div, text, blackdiv;
          blackdiv = document.createElement("DIV");
