@@ -12,7 +12,7 @@ table.w3-table-all{margin:20px 0}
  z-index:2;
 }
 .w3schools-logo {
- font-family:Impact;
+ font-family:Impact, sans-serif;
  text-decoration:none;
  line-height:1;
  -webkit-font-smoothing:antialiased;
@@ -152,7 +152,7 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
 #w3-exerciseform .exerciseprecontainer pre {display: block;}
 #w3-exerciseform .exerciseprecontainer textarea {width:100%;border:none;overflow:hidden}
 #w3-exerciseform .exerciseprecontainer input {padding:1px;border: 1px solid transparent;height:1.3em;}
-.w3-theme {color:#fff !important;background-color:#73AD21 !important;background-color:#4CAF50 !important}
+.w3-theme {color:#fff !important;background-color:#73AD21 !important;}
 .w3-theme-border {border-color:#4CAF50 !important}
 .sharethis a:hover {color:inherit;}
 .fa-facebook-square,.fa-instagram,.fa-linkedin-square {padding:0 2px;}
@@ -164,7 +164,7 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
 #googleSearch {color:#000000;}
 #googleSearch a {padding:0 !important;}
 .searchdiv {max-width:400px;margin:auto;text-align:left;font-size:16px}
-div.cse .gsc-control-cse, div.gsc-control-cse {background-color:transparent;border:none;padding:6px;margin:0px}
+div.cse .gsc-control-cse, div.gsc-control-cse {background-color:transparent;border:none;padding:6px;margin:0}
 td.gsc-search-button input.gsc-search-button {background-color:#4CAF50;border-color:#4CAF50}
 td.gsc-search-button input.gsc-search-button:hover {background-color:#46a049;}
 input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
@@ -253,7 +253,7 @@ span.marked, span.deprecated {
  color:#e80000;
  background-color:transparent;
 }
-.w3-codeline{background-color:#f1f1f1;color:#000;font-family: Consolas,"courier new";padding:15px;}
+.w3-codeline{background-color:#f1f1f1;color:#000;font-family: Consolas,'courier new', sans-serif;padding:15px;}
 #nav_login {background-color:#f1f1f1;color:#000;}
 .loginmodalform {margin:auto;width:100%;max-width:700px;text-align:left;padding:20px 40px;}
 .loginmodaldiv input {width:100%;border:1px solid #ccc;padding:8px 12px;}
@@ -370,8 +370,7 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 .darktheme .sqlstringcolor{color:#88c999/*green*/!important}
 .darktheme .sqlnumbercolor{color:yellowgreen}
 @media only screen and (max-device-width: 480px) {
- .w3-code,w3-codeline,.w3-codespan,#w3-exerciseform .exerciseprecontainer {font-family: 'Source Code Pro',Menlo,Consolas,monospace;}
- .w3-code,w3-codeline {font-size:14px;}
+ .w3-code,.w3-codespan,#w3-exerciseform .exerciseprecontainer {font-family: 'Source Code Pro',Menlo,Consolas,monospace;font-size:14px;}
  .w3-codespan {font-size:15px;}
  #w3-exerciseform .exerciseprecontainer {font-size:15px;}
  #w3-exerciseform .exerciseprecontainer input {padding:0;height:1.5em}
@@ -488,15 +487,12 @@ hr {
  margin-top: 1em;
  margin-bottom: 1em;
 }
-.w3-code,w3-codeline{
- font-size:15px;
-}
+.w3-code{font-size:15px;}
 #midcontentadcontainer,#mainLeaderboard {
  text-align:center;
  margin-left:-20px;
  margin-right:-20px;
 }
-
 .adtext {
  font-family: "Segoe UI",Arial,sans-serif;
  font-size: 12px;
@@ -506,11 +502,9 @@ hr {
  padding-top:0;
  padding-bottom:0;
 }
-
 @media screen and (max-width:600px) {
  .w3-example, #w3-exerciseform {margin-left:-32px;margin-right:-32px;}
 }
-
 @media only screen and (max-device-width: 480px) {
  #main {padding:24px}
  h1 {
