@@ -63,8 +63,17 @@
 <body>
 
 <?php
-$txt = "W3Schools";
-echo "I love $txt!";
+function myTest() {
+  static $x = 0;
+  echo $x;
+  $x++;
+}
+
+myTest();
+echo "<br>";
+myTest();
+echo "<br>";
+myTest();
 ?>
 
 </body>
@@ -83,7 +92,7 @@ echo "I love $txt!";
                 <div id="iframeResult" style="white-space:nowrap;overflow:auto;"><!DOCTYPE html>
                     <html>
                     <body>
-                    I love W3Schools!
+                    0<br>1<br>2
                     </body>
                     </html>
                 </div>

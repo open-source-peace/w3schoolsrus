@@ -63,8 +63,16 @@
 <body>
 
 <?php
-$txt = "W3Schools";
-echo "I love $txt!";
+$x = 5;
+$y = 10;
+
+function myTest() {
+  global $x, $y;
+  $y = $x + $y;
+}
+
+myTest();  // функция запуска
+echo $y; // выводит новое значение переменной $y
 ?>
 
 </body>
@@ -83,7 +91,7 @@ echo "I love $txt!";
                 <div id="iframeResult" style="white-space:nowrap;overflow:auto;"><!DOCTYPE html>
                     <html>
                     <body>
-                    I love W3Schools!
+                    15
                     </body>
                     </html>
                 </div>

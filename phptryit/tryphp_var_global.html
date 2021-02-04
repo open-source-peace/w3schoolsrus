@@ -63,8 +63,15 @@
 <body>
 
 <?php
-$txt = "W3Schools";
-echo "I love $txt!";
+$x = 5; // global scope
+
+function myTest() {
+  // использование x внутри этой функции вызовет ошибку
+  echo "<p>Переменная x внутри функции: $x</p>";
+}
+myTest();
+
+echo "<p>Переменная x вне функции: $x</p>";
 ?>
 
 </body>
@@ -83,7 +90,7 @@ echo "I love $txt!";
                 <div id="iframeResult" style="white-space:nowrap;overflow:auto;"><!DOCTYPE html>
                     <html>
                     <body>
-                    I love W3Schools!
+                    <p>Переменная x внутри функции: </p><p>Переменная x вне функции: 5</p>
                     </body>
                     </html>
                 </div>
