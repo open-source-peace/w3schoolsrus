@@ -62,15 +62,20 @@
         <!--Код на сторінці-->
         <textarea autocomplete='off' id='textareaCode' wrap='soft' spellcheck='false'><!DOCTYPE html>
 <html>
+<title>W3.CSS</title>
 <style>
-div {
-    height: 400px;
-    background: linear-gradient(to bottom, #ff6600 0%, #cc99ff 100%)
-}
+div {padding:16px;}
 </style>
 <body>
 
-<div></div>
+<div data-w3-color="cmyk(100%, 0%, 0%, 0%)">
+<h1>Лондон - столиця Англії.</h1>
+<p>Це найбільш густонаселене місто Сполученого Королівства,
+з агломерацією понад 13 мільйонів жителів.</p>
+</div>
+
+<script src="/lib/w3color.js"></script>
+<script>w3SetColorsByAttribute();</script>
 
 </body>
 </html>

@@ -62,15 +62,23 @@
         <!--Код на сторінці-->
         <textarea autocomplete='off' id='textareaCode' wrap='soft' spellcheck='false'><!DOCTYPE html>
 <html>
+<head>
 <style>
-div {
-    height: 400px;
-    background: linear-gradient(to bottom, #ff6600 0%, #cc99ff 100%)
+#myDIV {
+  color: blue;
+  border: 10px solid currentcolor;
 }
 </style>
+</head>
 <body>
 
-<div></div>
+<h2>Ключевое слово currentcolor</h2>
+<p>Ключевое слово currentcolor ссылается на значение свойства цвета элемента.</p>
+<p>Цвет границ следующего элемента div будет синим, поскольку цвет текста элемента div является синим:</p>
+
+<div id="myDIV">
+Этот элемент div имеет синий цвет текста и синюю границу.
+</div>
 
 </body>
 </html>
