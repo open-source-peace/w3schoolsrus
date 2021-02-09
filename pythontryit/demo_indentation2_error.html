@@ -59,7 +59,10 @@
         <div id='textarea'>
             <div id='textareawrapper'>
 
-        <textarea autocomplete='off' id='textareaCode' wrap='soft' spellcheck='false'>print('Hello, World!')
+        <textarea autocomplete='off' id='textareaCode' wrap='soft' spellcheck='false'>
+if 5 > 2:
+ print("Пять больше чем два!")
+        print("Пять больше чем два!")
         </textarea>
 
                 <form id='codeForm' autocomplete='off' style='margin:0;display:none;'>
@@ -73,7 +76,10 @@
             <div id='runloadercontainer'><div id='runloader'></div></div>
             <div id='iframewrapper'>
                 <div id='iframeResult' style='white-space:nowrap;overflow:auto;'>
-                    Hello, World!
+                    &nbsp;&nbsp;File "demo_indentation2_error.py", line 3<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print("Пять больше чем два!")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                    IndentationError: unexpected indent
                 </div>
             </div>
         </div>
