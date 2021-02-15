@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Переменные JavaScript. Современный учебник. Уроки для начинающих</title>
-<meta name='description' content='Строгий режим JavaScript - use strict. Консоль браузера. Всегда ли нужно использовать строгий режим? Современный онлайн учебник по JavaScript на русском языке'>
+<meta name='description' content='Переменные в JavaScript. Различия между var и let. Объявление переменных. Современный онлайн учебник по JavaScript на русском языке'>
 <link rel='stylesheet' href='../styles/accordion.css'>
 
 <div class='w3-container top'>
@@ -372,17 +372,19 @@
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
-            <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-            <!-- media_horizontally_header -->
-            <ins class='adsbygoogle'
-                 style='display:block'
-                 data-ad-client='ca-pub-6358227327561384'
-                 data-ad-slot='5801943678'
-                 data-ad-format='auto'
-                 data-full-width-responsive='true'></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class='w3-hide-small w3-hide-medium'>
+                <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+                <!-- media_horizontally_header -->
+                <ins class='adsbygoogle'
+                     style='display:block'
+                     data-ad-client='ca-pub-6358227327561384'
+                     data-ad-slot='5801943678'
+                     data-ad-format='auto'
+                     data-full-width-responsive='true'></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
             <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <article>
@@ -777,80 +779,27 @@
 
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
-
-    <div class='sidesection w3-light-grey' style='padding-bottom: 5px'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
         <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
-        <a href='../colors/colors_picker.html'>
-            <img src='../images/colorpicker.gif' alt='colorpicker'></a>
-    </div>
-
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-        <!-- admedia_vertical_rightbar -->
-        <ins class='adsbygoogle'
-             style='display:block'
-             data-ad-client='ca-pub-6358227327561384'
-             data-ad-slot='1902033594'
-             data-ad-format='auto'
-             data-full-width-responsive='true'></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
     </div>
 
     <div class='sidesection'>
         <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
         <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px;height:35px;'></a>
-
-            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на YouTube канал' style='width:35px;height:35px;'></a>
-
-            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на YouTube канал' style='width:60px;height:60px;'></a>
-
-            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px;'></a>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
         </div>
     </div>
 
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-        <!-- admedia_vertical_rightbar -->
-        <ins class='adsbygoogle'
-             style='display:block'
-             data-ad-client='ca-pub-6358227327561384'
-             data-ad-slot='1902033594'
-             data-ad-format='auto'
-             data-full-width-responsive='true'></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <div class='sidesection w3-light-grey' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <div class='w3-container w3-dark-grey'>
-            <h4><a href='../howto/index.html' class='w3-hover-text-white'>КАК СДЕЛАТЬ?..</a></h4>
-        </div>
-        <div class='w3-container w3-left-align w3-padding-16'>
-            <a href='../howto/howto_css_parallax.html'>Паралакс</a><br>
-            <a href='../howto/howto_css_aspect_ratio.html'>Соотношение сторон</a><br>
-            <a href='../howto/howto_css_responsive_iframes.html'>Адаптивный фреймы</a><br>
-            <a href='../howto/howto_js_toggle_like.html'>Переключатель лайк/дизлайк</a><br>
-            <a href='../howto/howto_js_toggle_hide_show.html'>Переключатель скрыть/показать</a><br>
-            <a href='../howto/howto_js_toggle_dark_mode.html'>Переключатель в тёмный режим</a><br>
-            <a href='../howto/howto_js_toggle_text.html'>Переключатель текста</a><br>
-            <a href='../howto/howto_js_toggle_class.html'>Переключатель класса</a><br>
-            <a href='../howto/howto_js_add_class.html'>Добавить класс</a><br>
-            <a href='../howto/howto_js_remove_class.html'>Удалить класс</a><br>
-            <a href='../howto/howto_js_active_element.html'>Активный класс</a><br>
-            <a href='../howto/howto_js_treeview.html'>В виде дерева</a><br>
-            <a href='../howto/howto_js_remove_property_object.html'>Удалить свойство</a><br>
-            <a href='../howto/howto_js_offline_detection.html'>Оффлайн обнаружение</a><br>
-            <a href='../howto/howto_js_check_hidden.html'>Найти скрытый элемент</a><br>
-            <a href='../howto/howto_js_redirect_webpage.html'>Перенаправить веб-страницу</a><br>
-            <a href='../howto/howto_css_zoom_hover.html'>Zoom при наведении</a><br>
-            <a href='../howto/howto_css_flip_box.html'>Флип-бокс</a><br>
-            <a href='../howto/howto_css_center-vertical.html'>Центрировать по вертикали</a><br>
-            <a href='../howto/howto_css_center_button.html'>Центрировать кнопку в DIV</a>
-        </div>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
     </div>
 
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
@@ -880,9 +829,11 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+
 </div>
 <!--/Right sidebar-->
-</div><!--FOOTER-->
+</div>
+<!--FOOTER-->
 <div id='footer' class='footer w3-container w3-white'>
   <hr>
 
