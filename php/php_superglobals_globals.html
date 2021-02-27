@@ -5,8 +5,8 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
-<link rel='stylesheet' href='../styles/external.css'><title>PHP Глобальные переменные - Суперглобальные. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='PHP Глобальные переменные - Суперглобальные. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
+<link rel='stylesheet' href='../styles/external.css'><title>PHP Суперглобальные - $GLOBALS. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='PHP Суперглобальные - $GLOBALS. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -1205,34 +1205,32 @@
         <div class='w3-col l10 m12' id='main'>
             <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1>PHP <span class="color_h1">Глобальные переменные</span> - Суперглобальные</h1>
+    <h1>PHP Суперглобальные - $GLOBALS</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_arrays_sort.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_superglobals_globals.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_superglobals.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_superglobals_server.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro"><strong>Суперглобальные переменные</strong> были введены в PHP 4.1.0 и представляют собой встроенные переменные, которые всегда доступны во всех областях.</p>
+    <p class="intro"><strong>Суперглобальные переменные</strong> - это встроенные переменные, которые всегда доступны во всех областях.</p>
     <hr>
 
-    <h2>PHP Глобальные переменные - Суперглобальные</h2>
-    <p>Некоторые предопределенные переменные в PHP являются «суперглобальными», что означает, что они всегда доступны, независимо от области видимости, и вы можете получить к ним доступ из любой функции, класса или файла, не делая ничего особенного.</p>
-    <p>Суперглобальные переменные PHP:</p>
-    <ul>
-        <li>$GLOBALS</li>
-        <li>$_SERVER</li>
-        <li>$_REQUEST</li>
-        <li>$_POST</li>
-        <li>$_GET</li>
-        <li>$_FILES</li>
-        <li>$_ENV</li>
-        <li>$_COOKIE</li>
-        <li>$_SESSION</li>
-    </ul>
-    <p>В следующих главах будут описаны некоторые суперглобальные переменные, а остальные будут объяснены в следующих главах.</p>
+    <h2>PHP $GLOBALS</h2>
+    <p>$GLOBALS - это суперглобальная переменная PHP, которая используется для доступа к глобальным переменным из любого места PHP скрипта (также из функций или методов).</p>
+    <p>PHP хранит все глобальные переменные в массиве с именем $GLOBALS[<i>index</i>]. Значение <em>index</em> содержит имя переменной.</p>
+    <p>В приведенном ниже примере показано, как использовать суперглобальную переменную $GLOBALS:</p>
+
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php <br>$x = 75; <br>$y = 25;<br>&nbsp;<br>function addition() { <br>&nbsp;&nbsp;$GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y']; <br>}<br>&nbsp;<br>addition(); <br>echo $z; <br>?&gt; </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_global_global.html">Попробуйте сами &raquo;</a>
+    </div>
+
+    <p>В приведенном выше примере, поскольку z - это переменная, присутствующая в массиве $GLOBALS, она также доступна вне функции!</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_arrays_sort.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_superglobals_globals.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_superglobals.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_superglobals_server.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small"></div></div>
