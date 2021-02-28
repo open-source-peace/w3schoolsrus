@@ -5,8 +5,8 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
-<link rel='stylesheet' href='../styles/external.css'><title>PHP Суперглобальные - $_SERVER. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='PHP Суперглобальные - $_SERVER. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
+<link rel='stylesheet' href='../styles/external.css'><title>PHP Суперглобальные - $_REQUEST. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='PHP Суперглобальные - $_REQUEST. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -20,7 +20,7 @@
   <div class='gcse-search'></div>
 </div>
 <!--/GoogleSearch-->
- 
+
 <!--Top menu-->
 <div class='w3-card-2 topnav notranslate' id='topnav'>
     <div style='overflow:auto;'>
@@ -1205,134 +1205,37 @@
         <div class='w3-col l10 m12' id='main'>
             <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1>PHP Суперглобальные - $_SERVER</h1>
+    <h1>PHP Суперглобальные - $_REQUEST</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_superglobals_globals.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_superglobals_request.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_superglobals_server.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_superglobals_post.html">Next &#10095;</a>
     </div>
     <hr>
     <p class="intro"><strong>Суперглобальные переменные</strong> - это встроенные переменные, которые всегда доступны во всех областях.</p>
     <hr>
 
-    <h2>PHP $_SERVER</h2>
-    <p>$_SERVER - это суперглобальная переменная PHP, которая содержит информацию о заголовках, путях и расположении скриптов.</p>
-    <p>В приведенном ниже примере показано, как использовать некоторые элементы в $_SERVER:</p>
-
+    <h2>PHP $_REQUEST</h2>
+    <p>PHP $_REQUEST - это суперглобальная переменная PHP, которая используется для сбора данных после отправки HTML-формы.</p>
+    <p>В приведенном ниже примере показана форма с полем ввода и кнопкой отправки. Когда пользователь отправляет данные, нажимая &quot;Отправить&quot;, данные формы отправляются в файл, указанный в атрибуте действия формы тега &lt;form&gt;. В этом примере мы указываем на этот файл для обработки данных формы. Если вы хотите использовать другой файл PHP для обработки данных формы, замените его именем файла по вашему выбору. Затем можно использовать суперглобальную переменную $_REQUEST для сбора значения поля ввода:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php <br>echo $_SERVER['PHP_SELF'];<br>echo &quot;&lt;br&gt;&quot;;<br>
-            echo $_SERVER['SERVER_NAME'];<br>echo &quot;&lt;br&gt;&quot;;<br>echo $_SERVER['HTTP_HOST'];<br>
-            echo &quot;&lt;br&gt;&quot;;<br>echo $_SERVER['HTTP_REFERER'];<br>echo &quot;&lt;br&gt;&quot;;<br>echo $_SERVER['HTTP_USER_AGENT'];<br>echo &quot;&lt;br&gt;&quot;;<br>echo $_SERVER['SCRIPT_NAME'];<br>?&gt; </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.html?filename=demo_global_server">Попробуйте сами &raquo;</a>
+            &lt;html&gt;<br>
+            &lt;body&gt;<br>
+            <br>
+            &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER['PHP_SELF'];?&gt;&quot;&gt;<br>&nbsp; Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;<br>&nbsp; &lt;input type=&quot;submit&quot;&gt;<br>
+            &lt;/form&gt;<br><br>&lt;?php<br>if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {<br>&nbsp; // собирать значение поля ввода<br>&nbsp;&nbsp;$name = $_REQUEST['fname'];<br>
+            &nbsp; if (empty($name)) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Name is empty&quot;;<br>&nbsp;&nbsp;} else {<br>
+            &nbsp;&nbsp;&nbsp; echo $name;<br>&nbsp;&nbsp;}<br>}<br>?&gt;<br>
+            <br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;</div>
+        <a class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.html?filename=demo_global_request" target="_blank" rel="nofollow">Попробуйте сами &raquo;</a>
     </div>
-    <p>В следующей таблице перечислены наиболее важные элементы, которые могут быть внутри $_SERVER:</p>
-    <table class="w3-table-all notranslate">
-        <tr>
-            <th style="width:35%">Элемент/Код</th>
-            <th style="width:65%">Описание</th>
-        </tr>
-        <tr>
-            <td>$_SERVER['PHP_SELF']</td>
-            <td>Возвращает имя файла исполняемого в данный момент скрипта</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['GATEWAY_INTERFACE']</td>
-            <td>Возвращает версию Common Gateway Interface (CGI), которую использует сервер</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_ADDR']</td>
-            <td>Возвращает IP-адрес хост-сервера</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_NAME']</td>
-            <td>Возвращает имя хост-сервера (например, www.w3schools.com)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_SOFTWARE']</td>
-            <td>Возвращает строку идентификации сервера (например, Apache/2.2.24)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_PROTOCOL']</td>
-            <td>Возвращает имя и версию информационного протокола (например, HTTP/1.1)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['REQUEST_METHOD']</td>
-            <td>Возвращает метод запроса, используемый для доступа к странице (например, POST)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['REQUEST_TIME']</td>
-            <td>Возвращает отметку времени начала запроса (например, 1377687496)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['QUERY_STRING']</td>
-            <td>Возвращает строку запроса, если к странице обращаются через строку запроса</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['HTTP_ACCEPT']</td>
-            <td>Возвращает заголовок Accept из текущего запроса</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['HTTP_ACCEPT_CHARSET']</td>
-            <td>Возвращает заголовок Accept_Charset из текущего запроса (например, utf-8,ISO-8859-1)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['HTTP_HOST']</td>
-            <td>Возвращает заголовок Host из текущего запроса</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['HTTP_REFERER']</td>
-            <td>Возвращает полный URL-адрес текущей страницы (ненадежно, потому что не все пользовательские агенты поддерживают его)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['HTTPS']</td>
-            <td>Запрашивается ли скрипт через безопасный протокол HTTP</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['REMOTE_ADDR']</td>
-            <td>Возвращает IP-адрес, с которого пользователь просматривает текущую страницу</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['REMOTE_HOST']</td>
-            <td>Возвращает имя хоста, с которого пользователь просматривает текущую страницу</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['REMOTE_PORT']</td>
-            <td>Возвращает порт, используемый на машине пользователя для связи с веб-сервером</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SCRIPT_FILENAME']</td>
-            <td>Возвращает абсолютный путь к исполняемому в данный момент скрипту</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_ADMIN']</td>
-            <td>Возвращает значение, указанное в директиве SERVER_ADMIN в файле конфигурации веб-сервера (если ваш скрипт выполняется на виртуальном хосте, это будет значение, определенное для этого виртуального хоста) (например, someone@w3schools.com)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_PORT']</td>
-            <td>Возвращает порт на сервере, который используется веб-сервером для связи (например, 80)</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SERVER_SIGNATURE']</td>
-            <td>Возвращает версию сервера и имя виртуального хоста, которые добавляются на сгенерированные сервером страницы</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['PATH_TRANSLATED']</td>
-            <td>Возвращает путь к текущему скрипту на основе файловой системы</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SCRIPT_NAME']</td>
-            <td>Возвращает путь к текущему скрипту</td>
-        </tr>
-        <tr>
-            <td>$_SERVER['SCRIPT_URI']</td>
-            <td>Returns the URI of the current page</td>
-        </tr>
-    </table>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_superglobals_globals.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_superglobals_request.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_superglobals_server.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_superglobals_post.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small"></div></div>
