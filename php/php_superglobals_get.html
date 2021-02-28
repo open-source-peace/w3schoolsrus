@@ -5,8 +5,8 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
-<link rel='stylesheet' href='../styles/external.css'><title>PHP Суперглобальные - $_POST. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='PHP Суперглобальные - $_POST. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
+<link rel='stylesheet' href='../styles/external.css'><title>PHP Суперглобальные - $_GET. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='PHP Суперглобальные - $_GET. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -1205,38 +1205,47 @@
         <div class='w3-col l10 m12' id='main'>
             <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1>PHP Суперглобальные - $_POST</h1>
+    <h1>PHP Суперглобальные - $_GET</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_superglobals_request.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_superglobals_get.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_superglobals_post.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_regex.html">Next &#10095;</a>
     </div>
     <hr>
     <p class="intro"><strong>Суперглобальные переменные</strong> - это встроенные переменные, которые всегда доступны во всех областях.</p>
     <hr>
 
-    <h2>PHP $_POST</h2>
-    <p>PHP $_POST - это суперглобальная переменная PHP, которая используется для сбора данных формы после отправки HTML-формы с помощью <code class="w3-codespan">method="post"</code>. $_POST также широко используется для передачи переменных.</p>
-    <p>В приведенном ниже примере показана форма с полем ввода и кнопкой отправки. Когда пользователь отправляет данные, нажимая &quot;Отправить&quot;, данные формы отправляются в файл, указанный в атрибуте формы action тега <code class="w3-codespan">&lt;form&gt;</code>. В этом примере мы указываем на сам файл для обработки данных формы. Если вы хотите использовать другой файл PHP для обработки данных формы, замените его именем файла по вашему выбору. Затем можно использовать суперглобальную переменную $_POST для сбора значения поля ввода:</p>
+    <h2>PHP $_GET</h2>
+    <p>PHP $_GET - это суперглобальная переменная PHP, которая используется для сбора данных формы после отправки HTML-формы с помощью <code class="w3-codespan">method=&quot;get&quot;</code>.</p>
+    <p>$_GET также может собирать данные, отправленные в URL.</p>
+    <p>Предположим, у нас есть HTML-страница, содержащая гиперссылку с параметрами:</p>
+    <div class="w3-code w3-border notranslate"><div>
+            &lt;html&gt;<br>
+            &lt;body&gt;<br><br>
+            &lt;a href=&quot;test_get.html?subject=PHP&amp;web=W3schools.com&quot;&gt;Test $GET&lt;/a&gt;<br><br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div></div>
+    <p>Когда пользователь кликает на ссылку &quot;Test $GET&quot;, параметры &quot;subject&quot; и &quot;web&quot; отправляются в &quot;test_get.html&quot;, после чего вы можете получить доступ к их значениям в &quot;test_get.html&quot; с помощью $_GET.</p>
+    <p>В приведенном ниже примере показан код в &quot;test_get.html&quot;:</p>
+
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code htmlHigh notranslate">
             &lt;html&gt;<br>
             &lt;body&gt;<br>
             <br>
-            &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER['PHP_SELF'];?&gt;&quot;&gt;<br>&nbsp; Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;<br>&nbsp; &lt;input type=&quot;submit&quot;&gt;<br>
-            &lt;/form&gt;<br><br>&lt;?php<br>if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {<br>&nbsp;&nbsp;// collect value of input field<br>
-            &nbsp; $name = $_POST['fname'];<br>&nbsp; if (empty($name)) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Name is empty&quot;;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;echo $name;<br>
-            &nbsp;&nbsp;}<br>}<br>?&gt;<br>
+            &lt;?php <br>echo &quot;Study &quot; . $_GET['subject'] . &quot; at &quot; . $_GET['web'];<br>?&gt;<br>
             <br>
             &lt;/body&gt;<br>
             &lt;/html&gt;</div>
-        <a class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.html?filename=demo_global_post" target="_blank" rel="nofollow">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.html?filename=demo_global_get" target="_blank" rel="nofollow">Попробуйте сами &raquo;</a>
     </div>
     <p><b>Совет:</b> Вы узнаете больше о $_POST в главе <a href="php_forms.html">PHP Формы</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
-    <hr>
+
+    <br>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_superglobals_request.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_superglobals_get.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_superglobals_post.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_regex.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small"></div></div>
