@@ -5,8 +5,8 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
-<link rel='stylesheet' href='../styles/external.css'><title>PHP Cookies / Куки. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='PHP Cookies / Куки. Что такое куки? Файл cookie - это небольшой файл, который сервер встраивает на компьютер пользователя. Каждый раз, когда один и тот же компьютер запрашивает страницу в браузере, он также отправляет cookie. С помощью PHP вы можете создавать и получать значения файлов cookie. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
+<link rel='stylesheet' href='../styles/external.css'><title>PHP Сессии. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='PHP Сессии. Что такое PHP сессия? - Это способ хранения информации (в переменных) для использования на нескольких страницах. Старт сессии. Получить значения переменной. Изменить и уничтожить сессию. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -1213,95 +1213,103 @@
     </script>
 </div>            <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1>PHP <span class="color_h1">Cookies / Куки</span></h1>
+    <h1>PHP <span class="color_h1">Сессии</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_file_upload.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_sessions.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_cookies.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_filter.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Что такое Cookie / Куки? </h2>
-    <p>Файл cookie часто используется для идентификации пользователя. <strong>Файл cookie - это небольшой файл, который сервер встраивает на компьютер пользователя.</strong> Каждый раз, когда один и тот же компьютер запрашивает страницу в браузере, он также отправляет cookie. С помощью PHP вы можете создавать и получать значения файлов cookie.</p>
-    <hr>
-    <div class="w3-panel w3-note">Cookie - в пер. с анг. - Печенька.</div>
+    <p class="intro"><strong>Сессия</strong> - это способ хранения информации (в переменных) для использования на нескольких страницах.</p>
+    <p class="intro">В отличие от куки, информация не хранится на компьютере пользователя.</p>
     <hr>
 
-    <h2>Создание cookie в PHP</h2>
-    <p>Cookie в PHP создаются с помощью функции <code class="w3-codespan">setcookie()</code>.</p>
+    <h2>Что такое PHP сессия?</h2>
+    <p>Когда вы работаете с приложением, вы открываете его, вносите некоторые изменения, а затем закрываете его. Это очень похоже на сессию. Компьютер знает, кто вы. Он знает, когда вы запускаете приложение и когда вы заканчиваете работать с ним. Но в Интернете есть одна проблема: веб-сервер не знает, кто вы и чем занимаетесь, потому что HTTP-адрес не поддерживает состояние.</p>
+    <p>Переменные сессии решают эту проблему путем хранения пользовательской информации, которая будет использоваться на нескольких страницах (например, имя пользователя, любимый цвет и т.д.). По умолчанию переменные сессии сохраняются до тех пор, пока пользователь не закроет браузер.</p>
+    <p>Т.о., переменные сессии содержат информацию об одном пользователе и доступны для всех страниц в одном приложении.</p>
 
-    <h3>Синтаксис</h3>
-    <div class="w3-code w3-border notranslate"><div>
-            setcookie(<em>name, value, expire, path, domain, secure, httponly</em>);</div></div>
-
-    <p>Только параметр <em>name</em> является обязательным. Все другие параметры опциональны (необязательны).</p>
+    <div class="w3-panel w3-note">
+        <p><strong>Совет:</strong> Если вам нужно постоянное хранилище, вы можете сохранить данные в
+            <a href="php_mysql_intro.html">базе данных</a>.</p>
+    </div>
     <hr>
 
-    <h2>PHP Создать/Получить Cookie</h2>
-    <p>В следующем примере создается файл cookie с именем &quot;user&quot; со значением &quot;John Doe&quot;. Срок действия файла cookie истекает через 30 дней (86400 * 30). Символ &quot;/&quot; означает, что файл cookie доступен на всем веб-сайте (в противном случае выберите каталог, который вы предпочитаете).</p>
-    <p>Затем мы получаем значение cookie "user" (используя глобальную переменную $_COOKIE). Мы также используем функцию <code class="w3-codespan">isset()</code> чтобы узнать, установлен ли cookie:</p>
+    <h2>Старт PHP сессии</h2>
+    <p>Сессия запускается с помощью функии <code class="w3-codespan">session_start()</code>.</p>
+    <p>Переменные сессии устанавливаются с помощью глобальной PHP переменной: $_SESSION.</p>
+    <p>Теперь давайте создадим новую страницу с именем &quot;demo_session1.html&quot;. На этой странице мы начинаем новую сессию PHP и устанавливаем некоторые переменные сессии:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$cookie_name = &quot;user&quot;;<br>$cookie_value = &quot;John Doe&quot;;<br>setcookie($cookie_name, $cookie_value, time() + (86400 * 30), &quot;/&quot;); // 86400 = 1 день<br>?&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>if(!isset($_COOKIE[$cookie_name])) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Cookie named '&quot; . $cookie_name . &quot;' is not set!&quot;;<br>} else {<br>&nbsp;&nbsp;&nbsp; echo &quot;Cookie '&quot; . $cookie_name . &quot;' is set!&lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; echo &quot;Value is: &quot; . $_COOKIE[$cookie_name];<br>}<br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;?php<br>// Старт сессии<br>session_start();<br>?&gt;<br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>// Установить переменные сессии<br>$_SESSION[&quot;favcolor&quot;] = &quot;green&quot;;<br>$_SESSION[&quot;favanimal&quot;] = &quot;cat&quot;;<br>echo &quot;Переменные сессии установлены.&quot;;<br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_cookie1" rel="nofollow">Запустить пример &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_session1" rel="nofollow">Запустить пример &raquo;</a>
     </div>
-
-    <div class="w3-panel w3-note"><p>
-        <p><strong><b>Примечание:</b></strong> Функция <code class="w3-codespan">setcookie()</code> должна появляться ПЕРЕД тегом &lt;html&gt;.</p>
+    <div class="w3-panel w3-note">
+        <p><strong><b>Примечание:</b></strong> Функция <code class="w3-codespan">session_start()</code> должна находиться в самом начале документа. Перед любыми тегами HTML.</p>
     </div>
-
-    <p><b>Примечание:</b> Значение файла cookie автоматически кодируется URL-адресом при отправке файла cookie и автоматически декодируется при получении (для предотвращения кодирования URL-адреса используйте вместо него функцию <code class="w3-codespan">setrawcookie()</code>).</p>
     <hr>
 
-    <h2>Изменение значения Cookie</h2>
-    <p>Чтобы изменить cookie, просто установите (снова) cookie, используя функцию <code class="w3-codespan">setcookie()</code>:</p>
+    <h2>Получить значения переменной PHP сессии</h2>
+    <p>Далее мы создаем еще одну страницу под названием &quot;demo_session2.html&quot;. На этой странице мы получим доступ к информации о сессии, которую мы установили на первой странице (&quot;demo_session1.html&quot;).</p>
+    <p>Обратите внимание, что переменные сессии не передаются по отдельности каждой новой странице, а извлекаются из сессии, которую мы открываем в начале каждой страницы (<code class="w3-codespan">session_start()</code>).</p>
+    <p>Также обратите внимание, что все значения переменных сессии хранятся в глобальной переменной $_SESSION:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$cookie_name = &quot;user&quot;;<br>$cookie_value = &quot;Alex Porter&quot;;<br>
-            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), &quot;/&quot;);<br>?&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>if(!isset($_COOKIE[$cookie_name])) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Cookie named '&quot; . $cookie_name . &quot;' is not set!&quot;;<br>} else {<br>&nbsp;&nbsp;&nbsp; echo &quot;Cookie '&quot; . $cookie_name . &quot;' is set!&lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp; echo &quot;Value is: &quot; . $_COOKIE[$cookie_name];<br>}<br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;?php<br>session_start();<br>?&gt;<br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+            &lt;body&gt;<br><br>&lt;?php<br>// Echo переменных сессии, которые были установлены на предыдущей странице<br>echo &quot;Favorite color is &quot; . $_SESSION[&quot;favcolor&quot;] . &quot;.&lt;br&gt;&quot;;<br>echo &quot;Favorite animal is &quot; . $_SESSION[&quot;favanimal&quot;] . &quot;.&quot;;<br>?&gt;<br><br>
+            &lt;/body&gt;<br>&lt;/html&gt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_cookie3" rel="nofollow">Запустить пример &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_session2" rel="nofollow">Запустить пример &raquo;</a>
     </div>
-    <hr>
-
-    <h2>Удаление Cookie</h2>
-    <p>Чтобы удалить cookie, используйте функцию <code class="w3-codespan">setcookie()</code> с датой истечения срока действия в прошлом:</p>
+    <p>Другой способ показать все значения переменных сессии для пользовательской сессии - запустить следующий код:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>// установить срок действия до часа назад<br>setcookie(&quot;user&quot;, &quot;&quot;, time() - 3600);<br>?&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>echo &quot;Cookie 'user' удален.&quot;;<br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;?php<br>session_start();<br>?&gt;<br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>
+            print_r($_SESSION);<br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_cookie4" rel="nofollow">Запустить пример &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_session3" rel="nofollow">Запустить пример &raquo;</a>
+    </div>
+
+    <div class="w3-panel w3-note">
+        <p><strong>Как это работает? Как он узнал, что это я?</strong><br><br>Большинство сессий устанавливают на компьютере пользователя ключ пользователя, который выглядит примерно так: 765487cf34ert8dede5a562e4f3a7e12. Затем, когда сессия открывается на другой странице, он сканирует компьютер на предмет наличия ключа пользователя. Если есть совпадение, он получает доступ к этой сессии, если нет, он начинает новую сессию.</p>
     </div>
     <hr>
 
-    <h2>Проверьте, включены ли файлы cookie</h2>
-    <p>В следующем примере создается небольшой скрипт, который проверяет, включены ли файлы cookie. Сначала попробуйте создать тестовый файл cookie с помощью функции <code class="w3-codespan">setcookie()</code>, а затем подсчитайте переменную массива $_COOKIE:</p>
+    <h2>Изменить переменную PHP сессии</h2>
+    <p>Чтобы изменить переменную сессии, просто перезапишите её:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>setcookie(&quot;test_cookie&quot;, &quot;test&quot;, time() + 3600, '/');<br>?&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>if(count($_COOKIE) &gt; 0) {<br>&nbsp;&nbsp;&nbsp; echo &quot;Cookie включены.&quot;;<br>} else {<br>&nbsp;&nbsp;&nbsp; echo &quot;Cookie отключены.&quot;;<br>}<br>
-            ?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;?php<br>session_start();<br>?&gt;<br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>// чтобы изменить переменную сессии, просто перезапишите её <br>$_SESSION[&quot;favcolor&quot;] = &quot;yellow&quot;;<br>print_r($_SESSION);<br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_cookie5" rel="nofollow">Запустить пример &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_session4" rel="nofollow">Запустить пример &raquo;</a>
     </div>
     <hr>
 
-    <h2>Полный справочник по PHP Network</h2>
-    <p>Для получения более полной информации о сетевых функциях, перейдите в полный
-        <a href="php_ref_network.html">Справочник PHP Network</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <h2>Уничтожить PHP сессию</h2>
+    <p>Чтобы удалить все глобальные переменные сессии и уничтожить сессию, используйте <code class="w3-codespan">session_unset()</code> и <code class="w3-codespan">session_destroy()</code>:</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>session_start();<br>?&gt;<br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php<br>// удалить все переменные сессии<br>session_unset(); <br><br>// уничтожить сессию <br>session_destroy(); <br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://tryphp.w3schools.com/showphp.php?filename=demo_session5" rel="nofollow">Запустить пример &raquo;</a>
+    </div>
     <hr>
 
     <h2>PHP Упражнения</h2>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/php/exercise.asp?filename=exercise_advanced4" method="post" target="_blank">
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/php/exercise.asp?filename=exercise_advanced5" method="post" target="_blank">
         <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
             <h2>Упражнение:</h2>
-            <p>Создайте cookie с именем "username".</p>
+            <p>Создайте переменную сессии с именем "favcolor".</p>
             <div class="exerciseprecontainer">
 <pre>
-<input name="ex1" maxlength="9" style="width: 100px;">("username", "John", time() + (86400 * 30), "/");
+session_start();
+<input name="ex1" maxlength="9" style="width: 96px;">["favcolor"] = "green";
 </pre>
             </div>
             <br>
@@ -1310,8 +1318,8 @@
     </form>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_file_upload.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_sessions.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_cookies.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_filter.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small">
