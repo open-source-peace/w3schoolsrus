@@ -1213,65 +1213,56 @@
     </script>
 </div>            <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1>PHP <span class="color_h1">Расширенные фильтры</span></h1>
+    <h1>PHP <span class="color_h1">Функции обратного вызова (callback)</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_filter.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_callback_functions.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_filter_advanced.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_json.html">Next &#10095;</a>
     </div>
     <hr>
 
-    <h2>Проверка целого числа в диапазоне</h2>
-    <p>В следующем примере функция <code class="w3-codespan">filter_var()</code> используется для проверки, имеет ли переменная тип INT и диапазон от 1 до 200:</p>
+    <h2>Функции обратного вызова (callback)</h2>
+    <p><strong>Функция обратного вызова</strong> (часто называемая просто <strong>&quot;callback&quot;</strong> - &quot;обратным вызовом&quot;) - это функция, которая передается в качестве аргумента другой функции.</p>
+    <p>Любая существующая функция может использоваться как функция обратного вызова. Чтобы использовать функцию в качестве функции обратного вызова, передайте строку, содержащую имя функции, в качестве аргумента другой функции:</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Передайте обратный вызов функции PHP <code class="w3-codespan">array_map()</code>, чтобы вычислить длину каждой строки в массиве:</p>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>function my_callback($item) {<br>&nbsp; return strlen($item);<br>}<br><br>
+            $strings = [&quot;apple&quot;, &quot;orange&quot;,
+            &quot;banana&quot;, &quot;coconut&quot;];<br>$lengths =
+            array_map(&quot;my_callback&quot;, $strings);<br>print_r($lengths);<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_callback_functions.html">Попробуйте сами &raquo;</a>
+    </div>
+
+    <p>Начиная с версии 7, PHP может передавать анонимные функции как функции обратного вызова:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
+        <p>Используйте анонимную функцию в качестве обратного вызова для PHP функции <code class="w3-codespan">array_map()</code>:</p>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$int = 122;<br>$min = 1;<br>$max = 200;<br><br>if (filter_var($int, FILTER_VALIDATE_INT, array(&quot;options&quot; =&gt; array(&quot;min_range&quot;=&gt;$min, &quot;max_range&quot;=&gt;$max))) === false) {<br>&nbsp;&nbsp;&nbsp; echo(&quot;Значение переменной находится вне допустимого диапазона&quot;);<br>} else {<br>&nbsp;&nbsp;&nbsp; echo(&quot;Значение переменной находится в допустимом диапазоне&quot;);<br>}<br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_filter_adv1.html">Попробуйте сами &raquo;</a>
+            &lt;?php<br>$strings = [&quot;apple&quot;, &quot;orange&quot;, &quot;banana&quot;, &quot;coconut&quot;];<br>$lengths =
+            array_map( function($item) { return strlen($item); } , $strings);<br>
+            print_r($lengths);<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_callback_functions2.html">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Проверить IPv6 адрес</h2>
-    <p>В следующем примере используется функция <code class="w3-codespan">filter_var()</code> чтобы проверить, является ли переменная $ip действительным IPv6 адресом:</p>
+    <h2>Обратные вызовы в пользовательских функциях</h2>
+    <p>Пользовательские функции и методы также могут принимать функции обратного вызова в качестве аргументов. Чтобы использовать функции обратного вызова внутри пользовательской функции или метода, вызовите их, добавив круглые скобки к переменной и передав аргументы, как с обычными функциями:</p>
     <div class="w3-example">
         <h3>Пример</h3>
+        <p>Запустите обратный вызов из пользовательской функции:</p>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$ip = &quot;2001:0db8:85a3:08d3:1319:8a2e:0370:7334&quot;;<br><br>if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) === false) {<br>&nbsp;&nbsp;&nbsp; echo(&quot;$ip является действительным IPv6 адресом&quot;);<br>} else {<br>&nbsp;&nbsp;&nbsp; echo(&quot;$ip является недействительным IPv6 адресом&quot;);<br>}<br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_filter_adv2.html">Попробуйте сами &raquo;</a>
+            &lt;?php<br>function exclaim($str) {<br>&nbsp; return $str . &quot;! &quot;;<br>}<br>
+            <br>function ask($str) {<br>&nbsp; return $str . &quot;? &quot;;<br>}<br><br>function
+            printFormatted($str, $format) {<br>&nbsp; // Вызов функции обратного вызова $format<br>&nbsp; echo $format($str);<br>}<br><br>// Передайте &quot;exclaim&quot; и &quot;ask&quot; как callback-функции для printFormatted()<br>printFormatted(&quot;Hello world&quot;, &quot;exclaim&quot;);<br>
+            printFormatted(&quot;Hello world&quot;, &quot;ask&quot;);<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_callback_functions3.html">Попробуйте сами &raquo;</a>
     </div>
-    <hr>
-
-    <h2>Проверить URL - должен содержать QueryString</h2>
-    <p>В следующем примере функция <code class="w3-codespan">filter_var()</code> используется для проверки, является ли переменная $url URL-адресом со строкой запроса:</p>
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$url = "https://www.w3schools.com";<br><br>if (!filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED) === false) {<br>&nbsp;&nbsp;&nbsp; echo("$url является действительным URL со строкой запроса");<br>} else {<br>&nbsp;&nbsp;&nbsp; echo("$url является недействительным URL со строкой запроса");<br>}<br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_filter_adv3.html">Попробуйте сами &raquo;</a>
-    </div>
-    <hr>
-
-    <h2>Удалить символы со значением ASCII &gt; 127</h2>
-    <p>В следующем примере функция <code class="w3-codespan">filter_var()</code> используется для очистки строки. Она удалит все HTML теги и все символы со значением &gt; 127 из строки:</p>
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$str = "&lt;h1&gt;Hello WorldÆØÅ!&lt;/h1&gt;";<br><br>$newstr = filter_var($str, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);<br>echo $newstr;<br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_filter_adv4.html">Попробуйте сами &raquo;</a>
-    </div>
-    <hr>
-
-    <h2>Полный справочник PHP Фильтров</h2>
-    <p>Для более полного ознакомления со всеми функциями PHP фильтров, перейдите в <a href="php_ref_filter.html">Справочник PHP фильтров.</a> Проверьте каждый фильтр, чтобы увидеть, какие параметры и флажки доступны.</p>
-    <p>Справочник содержит краткое описание и примеры использования для каждой функции!</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_filter.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_callback_functions.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_filter_advanced.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_json.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small">
