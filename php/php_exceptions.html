@@ -5,8 +5,8 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
-<link rel='stylesheet' href='../styles/external.css'><title>PHP и JSON. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='PHP и JSON. Что такое JSON? - означает JavaScript Object Notation (обозначение объектов JavaScript) и является синтаксисом для хранения и обмена данными. PHP имеет несколько встроенных функций для обработки JSON, например json_encode(), json_decode(). Доступ к декодированным значениям. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
+<link rel='stylesheet' href='../styles/external.css'><title>PHP Исключения. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='PHP Исключения. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -1213,119 +1213,176 @@
     </script>
 </div>            <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1><span class="color_h1">PHP и </span>JSON</h1>
+    <h1>PHP <span class="color_h1">Исключения</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_filter_advanced.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_exceptions.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>Что такое JSON?</h2>
-    <p><strong>JSON</strong> означает <em>JavaScript Object Notation</em> (обозначение объектов JavaScript) и является синтаксисом для хранения и обмена данными.</p>
-    <p>Поскольку формат JSON представляет собой текстовый формат, его можно легко отправлять на сервер и с сервера и использовать в качестве формата данных на любом языке программирования.</p>
-    <hr>
-
-    <h2>PHP и JSON</h2>
-    <p>PHP имеет несколько встроенных функций для обработки JSON.</p>
-    <p>Сначала мы рассмотрим следующие две функции:</p>
-    <ul>
-        <li>
-            <span class="w3-codespan">json_encode()</span></li>
-        <li>
-            <span class="w3-codespan">json_decode()</span> </li>
-    </ul>
-    <hr>
-
-    <h2>PHP - json_encode()</h2>
-    <p>Функция <span class="w3-codespan">json_encode()</span> используется для кодирования значения в формате JSON.</p>
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <p>В этом примере показано, как кодировать ассоциативный массив в объект JSON:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$age = array(&quot;Peter&quot;=&gt;35, &quot;Ben&quot;=&gt;37, &quot;Joe&quot;=&gt;43);<br>
-            <br>echo json_encode($age);<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_encode1.html">Запустить пример &raquo;</a>
-    </div>
-
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <p>В этом примере показано, как кодировать индексированный массив в массив JSON:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Toyota&quot;);<br><br>echo json_encode($cars);<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_encode2.html">Запустить пример &raquo;</a>
+        <a class="w3-left w3-btn" href="php_json.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_oop_what_is.html">Next &#10095;</a>
     </div>
     <hr>
 
-    <h2>PHP - json_decode()</h2>
-    <p>Функция <span class="w3-codespan">json_decode()</span> используется для декодирования объекта JSON в объект PHP или ассоциативный массив.</p>
+    <h2>Что такое исключения?</h2>
+    <p><strong>Исключением</strong> является объект, описывающий ошибку или непредвиденное поведение PHP скрипта.</p>
+    <p>Многие функции и классы PHP создают исключения.</p>
+    <p>Пользовательские функции и классы также могут вызывать исключения.</p>
+    <p>Исключения - хороший способ остановить функцию, когда она обнаруживает данные, которые она не может использовать.</p>
+    <hr>
+
+    <h2>Выброс исключения</h2>
+    <p>Оператор <code class="w3-codespan">throw</code> позволяет определяемой пользователем функции или методу вызывать исключение. Когда генерируется исключение, следующий за ним код не будет выполняться.</p>
+    <p>Если исключение не обнаружено, произойдет фатальная ошибка с сообщением о &quot;Неперехваченном исключении&quot; (&quot;Uncaught Exception&quot;).</p>
+    <p>Попробуем сгенерировать исключение, не улавливая его:</p>
+
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>Этот пример декодирует данные JSON в объект PHP:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>var_dump(json_decode($jsonobj));<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode1.html">Запустить пример &raquo;</a>
+        <div class="w3-code htmlHigh notranslate w3-border-red">
+            &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0)
+            {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Деление на ноль&quot;);<br>&nbsp; }<br>&nbsp;
+            return $dividend / $divisor;<br>}<br><br>echo divide(5, 0);<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_throw.html">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Функция <span class="w3-codespan">json_decode()</span> возвращает объект по умолчанию. Функция <span class="w3-codespan">json_decode()</span> имеет второй параметр, и при значении true объекты JSON декодируются в ассоциативные массивы.</p>
+    <p>Результат будет выглядеть примерно так:</p>
+    <div class="w3-code w3-border notranslate">
+            <b>Fatal error</b>: <strong>Uncaught Exception</strong>: Деление на ноль в C:\webfolder\test.html:4<br>
+            Stack trace: #0 C:\webfolder\test.html(9):<br>
+            divide(5, 0) #1 {main} thrown in <b>C:\webfolder\test.html</b> on line <b>4</b>
+        </div>
+    <hr>
+
+    <h2>Инструкция try...catch</h2>
+    <p>Чтобы избежать ошибки из приведенного выше примера, мы можем использовать инструкцию <code class="w3-codespan">try...catch</code> для перехвата исключений и продолжения процесса.</p>
+
+    <h3>Синтаксис</h3>
+    <div class="w3-code w3-border notranslate jsHigh"><div>
+            try {<br>&nbsp; код, который может генерировать исключения<br>} catch(Exception $e) {<br>&nbsp;
+            код, который запускается при обнаружении исключения<br>}</div>
+    </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>Этот пример декодирует данные JSON в ассоциативный массив PHP:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>var_dump(json_decode($jsonobj,
-            true));<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode2.html">Запустить пример &raquo;</a>
+        <p>Показывать сообщение при возникновении исключения:</p>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor ==
+            0) {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Деление на ноль&quot;);<br>&nbsp;
+            }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo
+            divide(5, 0);<br>} catch(Exception $e) {<br>&nbsp; echo &quot;Unable to divide.&quot;;<br>
+            }<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_try_catch.html">Попробуйте сами &raquo;</a>
+    </div>
+    <p>Блок catch указывает, какой тип исключения следует перехватить, и имя переменной, которая может использоваться для доступа к исключению. В приведенном выше примере тип исключения - <code class="w3-codespan">Exception</code>, а имя переменной - <code class="w3-codespan">$e</code>.</p>
+    <hr>
+
+    <h2>Инструкция try...catch...finally</h2>
+    <p>Инструкция <code class="w3-codespan">try...catch...finally</code> может использоваться для перехвата исключений. Код в блоке <code class="w3-codespan">finally</code> будет всегда выполняться независимо от того, было ли обнаружено исключение. Если присутствует <code class="w3-codespan">finally</code>, блок <code class="w3-codespan">catch</code> является необязательным.</p>
+
+    <h3>Синтаксис</h3>
+    <div class="w3-code w3-border notranslate jsHigh"><div>
+            try {<br>&nbsp; код, который может генерировать исключения<br>} catch(Exception $e) {<br>&nbsp;
+            код, который запускается при обнаружении исключения<br>} finally {<br>&nbsp;
+            код, который всегда выполняется независимо от того, было ли обнаружено исключение<br>}</div>
+    </div>
+
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Показать сообщение при возникновении исключения, а затем указать, что процесс завершен:</p>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor
+            == 0) {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Деление на ноль&quot;);<br>&nbsp;
+            }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo
+            divide(5, 0);<br>} catch(Exception $e) {<br>&nbsp; echo "Unable to
+            divide. ";<br>} finally {<br>&nbsp; echo "Process complete.";<br>}<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_finally.html">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Вывести строку, даже если исключение не было обнаружено:</p>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0)
+            {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Деление на ноль&quot;);<br>&nbsp; }<br>&nbsp;
+            return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo divide(5, 0);<br>} finally {<br>&nbsp; echo
+            "Процесс завершен.";<br>}<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_finally2.html">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>PHP - Доступ к декодированным значениям</h2>
-    <p>Вот два примера того, как получить доступ к декодированным значениям из объекта и из ассоциативного массива:</p>
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <p>В этом примере показано, как получить доступ к значениям из объекта PHP:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>
-            $obj = json_decode($jsonobj);<br><br>echo $obj-&gt;Peter;<br>echo $obj-&gt;Ben;<br>
-            echo $obj-&gt;Joe;<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode3.html">Запустить пример &raquo;</a>
+    <h2>Объект исключения</h2>
+    <p>Объект исключения содержит информацию об ошибке или неожиданном поведении, с которым столкнулась функция.</p>
+    <h3>Синтаксис</h3>
+    <div class="w3-code w3-border notranslate"><div>
+            new Exception(message, code, previous)</div>
     </div>
 
+    <h3>Значения параметров</h3>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th style="width:20%">Параметр</th>
+            <th style="width:80%">Описание</th>
+        </tr>
+        <tr>
+            <td>message</td>
+            <td>Необязательный. Строка, описывающая, почему было сгенерировано исключение</td>
+        </tr>
+        <tr>
+            <td>code</td>
+            <td>Необязательный. Целое число, которое можно использовать, чтобы легко отличить это исключение от других того же типа</td>
+        </tr>
+        <tr>
+            <td>previous</td>
+            <td>Необязательный. Если это исключение было сгенерировано в блоке catch другого исключения, рекомендуется передать это исключение в этот параметр</td>
+        </tr>
+    </table>
+
+    <h3>Методы</h3>
+    <p>При перехвате исключения в следующей таблице показаны некоторые методы, которые можно использовать для получения информации об исключении:</p>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th style="width:20%">Метод</th>
+            <th style="width:80%">Описание</th>
+        </tr>
+        <tr>
+            <td>getMessage()</td>
+            <td>Возвращает строку, описывающую, почему было сгенерировано исключение</td>
+        </tr>
+        <tr>
+            <td>getPrevious()</td>
+            <td>Если это исключение было инициировано другим, этот метод возвращает предыдущее исключение. Если нет, то возвращается <em>null</em></td>
+        </tr>
+        <tr>
+            <td>getCode()</td>
+            <td>Возвращает код исключения</td>
+        </tr>
+        <tr>
+            <td>getFile()</td>
+            <td>Возвращает полный путь к файлу, в котором возникло исключение</td>
+        </tr>
+        <tr>
+            <td>getLine()</td>
+            <td>Возвращает номер строки кода, вызвавшего исключение</td>
+        </tr>
+    </table>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>В этом примере показано, как получить доступ к значениям из ассоциативного массива PHP:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>
-            $arr = json_decode($jsonobj, true);<br><br>echo $arr[&quot;Peter&quot;];<br>echo $arr[&quot;Ben&quot;];<br>
-            echo $arr[&quot;Joe&quot;];<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode4.html">Запустить пример &raquo;</a>
+        <p>Вывести информацию о сгенерированном исключении:</p>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0)
+            {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Деление на ноль&quot;, 1);<br>&nbsp;
+            }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo
+            divide(5, 0);<br>} catch(Exception $ex) {<br>&nbsp; $code = $ex-&gt;getCode();<br>&nbsp;
+            $message = $ex-&gt;getMessage();<br>&nbsp; $file = $ex-&gt;getFile();<br>&nbsp;
+            $line = $ex-&gt;getLine();<br>&nbsp; echo &quot;Exception thrown in $file on line
+            $line: [Code $code]<br>&nbsp; $message&quot;;<br>}<br>?&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_obj_info.html">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>PHP - Перебирание значений</h2>
-    <p>Вы также можете перебирать значения с помощью цикла <span class="w3-codespan">foreach()</span>:</p>
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <p>В этом примере показано, как перебрать значения объекта PHP:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>
-            $obj = json_decode($jsonobj);<br><br>foreach($obj
-            as $key =&gt; $value) {<br>&nbsp; echo $key . &quot; =&gt; &quot; . $value . &quot;&lt;br&gt;&quot;;<br>}<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode5.html">Запустить пример &raquo;</a>
-    </div>
-
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <p>В этом примере показано, как перебрать значения ассоциативного массива PHP:</p>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>
-            $arr = json_decode($jsonobj, true);<br><br>foreach($arr as $key =&gt; $value) {<br>&nbsp; echo $key . &quot; =&gt; &quot; . $value
-            . &quot;&lt;br&gt;&quot;;<br>}<br>?&gt;<br></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode6.html">Запустить пример &raquo;</a>
-    </div>
+    <h2>Полный справочник исключений</h2>
+    <p>Для получения более полной информации перейдите на <a href="php_ref_exception.html">Полный справочник PHP исключений</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <p>Справочник содержит описания и примеры всех методов PHP исключений.</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_filter_advanced.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_exceptions.html">Next &#10095;</a>
-    </div>    
+        <a class="w3-left w3-btn" href="php_json.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_oop_what_is.html">Next &#10095;</a>
+    </div>
 </article>
 <div class="w3-hide-medium w3-hide-small">
     <hr>
