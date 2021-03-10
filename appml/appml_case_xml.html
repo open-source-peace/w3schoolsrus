@@ -6,9 +6,9 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
-  <title>AppML XML файлы. Уроки для начинающих. W3Schools на русском</title>
-  <meta name='description' content='Как использовать XML файлы при создании AppML приложения? Учебник по AppML. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
-  <link rel='canonical' href='https://w3schoolsrus.github.io/appml/appml_cases_xml.html' />
+  <title>AppML Текстовые файлы. Уроки для начинающих. W3Schools на русском</title>
+  <meta name='description' content='AppML кейс - Текстовые файлы. Как применять текстовые файлы для создания приложений AppML? Учебник по AppML. Уроки для начинающих. W3Schools на русском'>
+  <link rel='canonical' href='https://w3schoolsrus.github.io/appml/appml_cases_txt.html' />
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -288,23 +288,20 @@
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
-            <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-            <!-- media_horizontally_header -->
-            <ins class='adsbygoogle'
-                 style='display:block'
-                 data-ad-client='ca-pub-6358227327561384'
-                 data-ad-slot='5801943678'
-                 data-ad-format='auto'
-                 data-full-width-responsive='true'></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <a href='index.html'><img src='../images/appml.jpg' alt='AppML. Уроки для начинающих' class='w3-left w3-padding' title='AppML для начинающих. W3Schools на русском' style='width:120px;'></a>
+          <div class='w3-hide-small w3-hide-medium'>
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+    <!-- media_horizontally_header -->
+    <ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-6358227327561384'
+         data-ad-slot='5801943678' data-ad-format='auto' data-full-width-responsive='true'></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>            <a href='index.html'><img src='../images/appml.jpg' alt='AppML. Уроки для начинающих' class='w3-left w3-padding' title='AppML для начинающих. W3Schools на русском' style='width:120px;'></a>
   <article>
-    <h1><span class='color_h1'>AppML кейс - XML файлы</span></h1>
+    <h1><span class='color_h1'>AppML кейс - Текстовые файлы</span></h1>
     <div class='w3-clear nextprev'>
-      <a class='w3-left w3-button w3-green' href='appml_case_txt.html'>&#10094; Prev</a>
-      <a class='w3-right w3-button w3-green' href='appml_case_json.html'>Next &#10095;</a>
+      <a class='w3-left w3-button w3-green' href='appml_cases.html'>&#10094; Prev</a>
+      <a class='w3-right w3-button w3-green' href='appml_case_xml.html'>Next &#10095;</a>
     </div>
     <hr>
 
@@ -312,21 +309,21 @@
     <p>Это HTML ресурс:</p>
     <div class='w3-example'>
       <div class='w3-code notranslate htmlHigh'>
-        &lt;!DOCTYPE html&gt;<br>&lt;html lang="ru"&gt;<br>&lt;head&gt;<br>&lt;meta charset="utf-8"&gt;<br>
+        &lt;!DOCTYPE html&gt;<br>&lt;html lang="en-US"&gt;<br>
         &lt;link rel="stylesheet" href="../w3css/4/w3.css"&gt;<br>
         &lt;script src="2.0.3/appml.js"&gt;&lt;/script&gt;<br>
-        &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;div class="w3-container"
-        appml-data="https://www.w3schools.com/appml/appml.html?model=model_cd_from_xml"&gt;<br>
-        &lt;h1&gt;CD Коллекция&lt;/h1&gt;<br>&lt;h3&gt;Извлечено из файла XML&lt;/h3&gt;<br><br>&lt;div
-        appml-include-html="inc_listcommands_nofilter.html"&gt;&lt;/div&gt;<br>&lt;table
-        class="w3-table-all"&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Title&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Artist&lt;/th&gt;<br>
-        &nbsp;&nbsp;&nbsp; &lt;th&gt;Country&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr appml-repeat="records"&gt;<br>&nbsp;&nbsp;&nbsp;
-        &lt;td&gt;{{Title}}&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;{{Artist}}&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;{{Country}}&lt;/td&gt;<br>
-        &nbsp; &lt;/tr&gt;<br>
+        &lt;body&gt;<br><br>
+        &lt;div class="w3-container" appml-data="https://www.w3schools.com/appml/appml.php?model=model_cd_from_txt"&gt;<br>
+        &lt;h1&gt;CD Коллекция&lt;/h1&gt;<br>&lt;h3&gt;Извлечено из текстового файла, разделенного запятыми&lt;/h3&gt;<br><br>&lt;div
+        appml-include-html="inc_listcommands_nofilter.html"&gt;&lt;/div&gt;<br>
+        &lt;table class="w3-table-all"&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Title&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;
+        &lt;th&gt;Artist&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Price&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr
+        appml-repeat="records"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;{{Title}}&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;{{Artist}}&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp; &lt;td&gt;{{Price}}&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>
         &lt;/table&gt;<br>&lt;/div&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
-      <a class='w3-btn w3-margin-bottom' href='tryit3bb0.html?filename=tryappml_from_xml_php' target='_blank'>
+      <a class="w3-btn w3-margin-bottom" href="tryappml_from_txt_php.html" target="_blank">
         PHP »</a>&nbsp;&nbsp;
-      <a class='w3-btn w3-margin-bottom' href='tryit8dc3.html?filename=tryappml_from_xml_aspx' target='_blank'>
+      <a class="w3-btn w3-margin-bottom" href="tryappml_from_txt_aspx.html" target="_blank">
         .NET »</a>&nbsp;&nbsp;
     </div>
     <hr>
@@ -336,225 +333,117 @@
     <div class='w3-example'>
       <h3>Модель</h3>
       <div class='w3-code notranslate jsHigh'>
-        {<br>&nbsp; "rowsperpage" : 7,<br>&nbsp; "data" : {<br>&nbsp;&nbsp;&nbsp; "type" : "xmlfile",<br>
-        &nbsp;&nbsp;&nbsp; "filename" : "cd_catalog.xml",<br>&nbsp;&nbsp;&nbsp; "record" : "CD",<br>&nbsp;&nbsp;&nbsp;
-        "items" : [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"name" : "Artist", "nodename" : "ARTIST"},<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"name" : "Title", "nodename" : "TITLE"},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"name" :
-        "Country", "nodename" : "COUNTRY"}<br>&nbsp;&nbsp;&nbsp; ]<br>&nbsp; }<br>}
+        {<br>&nbsp; "rowsperpage" : 7,<br>&nbsp; "data" : {<br>&nbsp;&nbsp;&nbsp; "type" : "csvfile",<br>
+        &nbsp;&nbsp;&nbsp; "filename" : "cd_catalog.txt",<br>&nbsp;&nbsp;&nbsp; "items" : [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"name" :
+        "Title", "index" : 1},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"name" : "Artist", "index" : 2},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {"name" : "Price", "index" : 5}<br>&nbsp;&nbsp;&nbsp; ]<br>&nbsp; }<br>}
       </div>
     </div>
     <hr>
 
     <h2>Файл</h2>
-    <p>Это XML файл: </p>
+    <p>Это текстовый файл, разделенный запятыми:</p>
     <div class='w3-example'>
-      <h3>cd_catalog.xml</h3>
-      <div class='w3-code notranslate htmlHigh'>
-        &lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;<br>&lt;CATALOG&gt;<br>&lt;CD&gt;<br>
-        &lt;TITLE&gt;Empire Burlesque&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Bob Dylan&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;<br>
-        &lt;PRICE&gt;10.90&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1985&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>
-        &lt;TITLE&gt;Hide your heart&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Bonnie Tyler&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;CBS Records&lt;/COMPANY&gt;<br>
-        &lt;PRICE&gt;9.90&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1988&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>
-        &lt;TITLE&gt;Greatest Hits&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Dolly Parton&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;RCA&lt;/COMPANY&gt;<br>&lt;PRICE&gt;9.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1982&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Still got the
-        blues&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Gary Moore&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Virgin records&lt;/COMPANY&gt;<br>&lt;PRICE&gt;10.20&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1990&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Eros&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Eros Ramazzotti&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;EU&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;BMG&lt;/COMPANY&gt;<br>&lt;PRICE&gt;9.90&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1997&lt;/PUBLISHED&gt;<br>
-        &lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;One night only&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Bee Gees&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;Polydor&lt;/COMPANY&gt;<br>&lt;PRICE&gt;10.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1998&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Sylvias
-        Mother&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Dr.Hook&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;CBS&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.10&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1973&lt;/PUBLISHED&gt;<br>
-        &lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Maggie May&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Rod Stewart&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;Pickwick&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.50&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1990&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Romanza&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Andrea Bocelli&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;EU&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Polydor&lt;/COMPANY&gt;<br>
-        &lt;PRICE&gt;10.80&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1996&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>
-        &lt;TITLE&gt;When a man loves a woman&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Percy Sledge&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;Atlantic&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.70&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1987&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Black angel&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Savage Rose&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;EU&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Mega&lt;/COMPANY&gt;<br>&lt;PRICE&gt;10.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1995&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;1999 Grammy
-        Nominees&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Many&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Grammy&lt;/COMPANY&gt;<br>&lt;PRICE&gt;10.20&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1999&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;For the good
-        times&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Kenny Rogers&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Mucik Master&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.70&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1995&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Big Willie
-        style&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Will Smith&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;<br>&lt;PRICE&gt;9.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1997&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Tupelo Honey&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Van Morrison&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Polydor&lt;/COMPANY&gt;<br>
-        &lt;PRICE&gt;8.20&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1971&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>
-        &lt;TITLE&gt;Soulsville&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Jorn Hoel&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;Norway&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;WEA&lt;/COMPANY&gt;<br>&lt;PRICE&gt;7.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1996&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;The very best
-        of&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Cat Stevens&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Island&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1990&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Stop&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Sam Brown&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;A and
-        M&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.90&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1988&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>
-        &lt;CD&gt;<br>&lt;TITLE&gt;Bridge of Spies&lt;/TITLE&gt;<br>&lt;ARTIST&gt;T'Pau&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;Siren&lt;/COMPANY&gt;<br>&lt;PRICE&gt;7.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1987&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Private
-        Dancer&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Tina Turner&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Capitol&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1983&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Midt om
-        natten&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Kim Larsen&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;EU&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Medley&lt;/COMPANY&gt;<br>&lt;PRICE&gt;7.80&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1983&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Pavarotti Gala
-        Concert&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Luciano Pavarotti&lt;/ARTIST&gt;<br>
-        &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>&lt;COMPANY&gt;DECCA&lt;/COMPANY&gt;<br>&lt;PRICE&gt;9.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1991&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;The dock of the
-        bay&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Otis Redding&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Atlantic&lt;/COMPANY&gt;<br>&lt;PRICE&gt;7.90&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1987&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Picture book&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;Simply Red&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;EU&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;Elektra&lt;/COMPANY&gt;<br>&lt;PRICE&gt;7.20&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1985&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Red&lt;/TITLE&gt;<br>
-        &lt;ARTIST&gt;The Communards&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;London&lt;/COMPANY&gt;<br>&lt;PRICE&gt;7.80&lt;/PRICE&gt;<br>
-        &lt;PUBLISHED&gt;1987&lt;/PUBLISHED&gt;<br>&lt;/CD&gt;<br>&lt;CD&gt;<br>&lt;TITLE&gt;Unchain my
-        heart&lt;/TITLE&gt;<br>&lt;ARTIST&gt;Joe Cocker&lt;/ARTIST&gt;<br>&lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;<br>
-        &lt;COMPANY&gt;EMI&lt;/COMPANY&gt;<br>&lt;PRICE&gt;8.20&lt;/PRICE&gt;<br>&lt;PUBLISHED&gt;1987&lt;/PUBLISHED&gt;<br>
-        &lt;/CD&gt;<br>&lt;/CATALOG&gt;
+      <h3>cd_catalog.txt</h3>
+      <div class='w3-code notranslate'>
+        Empire Burlesque,Bob Dylan,USA,Columbia,10.90,1985<br>Hide your heart,Bonnie
+        Tyler,UK,CBS Records,9.90,1988<br>Greatest Hits,Dolly
+        Parton,USA,RCA,9.90,1982<br>Still got the blues,Gary Moore,UK,Virgin
+        records,10.20,1990<br>Eros,Eros Ramazzotti,EU,BMG,9.90,1997<br>One night
+        only,Bee Gees,UK,Polydor,10.90,1998<br>Sylvias
+        Mother,Dr.Hook,UK,CBS,8.10,1973<br>Maggie May,Rod
+        Stewart,UK,Pickwick,8.50,1990<br>Empire Burlesque,Bob
+        Dylan,USA,Columbia,10.90,1985<br>Hide your heart,Bonnie Tyler,UK,CBS
+        Records,9.90,1988<br>Greatest Hits,Dolly Parton,USA,RCA,9.90,1982<br>Still
+        got the blues,Gary Moore,UK,Virgin records,10.20,1990<br>Eros,Eros
+        Ramazzotti,EU,BMG,9.90,1997<br>One night only,Bee Gees,UK,Polydor,10.90,1998<br>
+        Sylvias Mother,Dr.Hook,UK,CBS,8.10,1973<br>Maggie May,Rod
+        Stewart,UK,Pickwick,8.50,1990<br>Empire Burlesque,Bob
+        Dylan,USA,Columbia,10.90,1985<br>Hide your heart,Bonnie Tyler,UK,CBS
+        Records,9.90,1988<br>Greatest Hits,Dolly Parton,USA,RCA,9.90,1982<br>Still
+        got the blues,Gary Moore,UK,Virgin records,10.20,1990<br>Eros,Eros
+        Ramazzotti,EU,BMG,9.90,1997<br>One night only,Bee Gees,UK,Polydor,10.90,1998<br>
+        Sylvias Mother,Dr.Hook,UK,CBS,8.10,1973<br>Maggie May,Rod
+        Stewart,UK,Pickwick,8.50,1990<br>Empire Burlesque,Bob
+        Dylan,USA,Columbia,10.90,1985<br>Hide your heart,Bonnie Tyler,UK,CBS
+        Records,9.90,1988<br>Greatest Hits,Dolly Parton,USA,RCA,9.90,1982<br>Still
+        got the blues,Gary Moore,UK,Virgin records,10.20,1990<br>Eros,Eros
+        Ramazzotti,EU,BMG,9.90,1997<br>One night only,Bee Gees,UK,Polydor,10.90,1998<br>
+        Sylvias Mother,Dr.Hook,UK,CBS,8.10,1973<br>Maggie May,Rod
+        Stewart,UK,Pickwick,8.50,1990
       </div>
     </div>
     <hr>
     <div class='w3-clear nextprev'>
-      <a class='w3-left w3-button w3-green' href='appml_case_txt.html'>&#10094; Prev</a>
-      <a class='w3-right w3-button w3-green' href='appml_case_json.html'>Next &#10095;</a>
+      <a class='w3-left w3-button w3-green' href='appml_cases.html'>&#10094; Prev</a>
+      <a class='w3-right w3-button w3-green' href='appml_case_xml.html'>Next &#10095;</a>
     </div>
   </article>
-  </div>
-<!--Right sidebar HTML-->
+<div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+    <!-- media_horizontally_header -->
+    <ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-6358227327561384'
+         data-ad-slot='5801943678' data-ad-format='auto' data-full-width-responsive='true'></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>  </div>
+<!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
-
-    <div class='sidesection w3-light-grey' style='padding-bottom: 5px'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
         <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
-        <a href='../colors/colors_picker.html'>
-            <img src='../images/colorpicker.gif' alt='colorpicker'></a>
-    </div>
-
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-        <!-- admedia_vertical_rightbar -->
-        <ins class='adsbygoogle'
-             style='display:block'
-             data-ad-client='ca-pub-6358227327561384'
-             data-ad-slot='1902033594'
-             data-ad-format='auto'
-             data-full-width-responsive='true'></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
     </div>
 
     <div class='sidesection'>
         <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
         <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px;height:35px;'></a>
-            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на YouTube канал' style='width:35px;height:35px;'></a>
-            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px;'></a>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
         </div>
     </div>
 
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-        <!-- admedia_vertical_rightbar -->
-        <ins class='adsbygoogle'
-             style='display:block'
-             data-ad-client='ca-pub-6358227327561384'
-             data-ad-slot='1902033594'
-             data-ad-format='auto'
-             data-full-width-responsive='true'></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
     </div>
-
-    <div class='sidesection w3-light-grey' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <div class='w3-container w3-dark-grey'>
-            <h4><a href='../howto/index.html' class='w3-hover-text-white'>КАК СДЕЛАТЬ?..</a></h4>
-        </div>
-        <div class='w3-container w3-left-align w3-padding-16'>
-            <a href='../howto/howto_js_tabs.html'>Вкладки</a><br>
-            <a href='../howto/howto_css_dropdown.html'>Выпадающие меню</a><br>
-            <a href='../howto/howto_js_accordion.html'>Аккордеоны</a><br>
-            <a href='../howto/howto_js_sidenav.html'>Боковая навигация</a><br>
-            <a href='../howto/howto_js_topnav.html'>Верхняя навигация</a><br>
-            <a href='../howto/howto_css_modals.html'>Модальные блоки</a><br>
-            <a href='../howto/howto_js_progressbar.html'>Прогресс-бары</a><br>
-            <a href='../howto/howto_css_parallax.html'>Паралакс</a><br>
-            <a href='../howto/howto_css_login_form.html'>Форма входа</a><br>
-            <a href='../howto/howto_html_include.html'>HTML включения</a><br>
-            <a href='../howto/howto_google_maps.html'>Google карты</a><br>
-            <a href='../howto/howto_js_rangeslider.html'>Ползунки диапазона</a><br>
-            <a href='../howto/howto_css_tooltip.html'>Всплывающие подсказки</a><br>
-            <a href='../howto/howto_js_slideshow.html'>Слайдшоу</a><br>
-            <a href='../howto/howto_js_filter_lists.html'>Фильтрованный список</a><br>
-            <a href='../howto/howto_js_sort_list.html'>Сортированный список</a><br>
-        </div>
-    </div>
-
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-        <!-- admedia_vertical_rightbar -->
-        <ins class='adsbygoogle'
-             style='display:block'
-             data-ad-client='ca-pub-6358227327561384'
-             data-ad-slot='1902033594'
-             data-ad-format='auto'
-             data-full-width-responsive='true'></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <div class='w3-container w3-dark-grey'>
-            <h5><a href='../cert/index.html' class='w3-hover-text-white'>СЕРТИФИКАТЫ</a></h5>
-        </div>
-        <div class='w3-border'>
-            <a href='../cert/cert_html.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>HTML</a>
-            <a href='../cert/cert_css.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>CSS</a>
-            <a href='../cert/cert_javascript.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>JavaScript</a>
-            <a href='../cert/cert_frontend.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>Front End</a>
-            <a href='../cert/cert_python.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>Python</a>
-            <a href='../cert/cert_jquery.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>jQuery</a>
-            <a href='../cert/cert_sql.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>SQL</a>
-            <a href='../cert/cert_php.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>PHP</a>
-            <a href='../cert/cert_bootstrap.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>Bootstrap</a>
-            <a href='../cert/cert_xml.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>XML</a>
-        </div>
-    </div>
-
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
-        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-        <!-- admedia_vertical_rightbar -->
-        <ins class='adsbygoogle'
-             style='display:block'
-             data-ad-client='ca-pub-6358227327561384'
-             data-ad-slot='1902033594'
-             data-ad-format='auto'
-             data-full-width-responsive='true'></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-6358227327561384'
+         data-ad-slot='1902033594' data-ad-format='auto' data-full-width-responsive='true'></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </div>
-<!--/Right sidebar HTML-->
-</div><!--FOOTER-->
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-6358227327561384'
+         data-ad-slot='1902033594' data-ad-format='auto' data-full-width-responsive='true'></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class='adsbygoogle' style='display:block' data-ad-client='ca-pub-6358227327561384'
+         data-ad-slot='1902033594' data-ad-format='auto' data-full-width-responsive='true'></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+</div>
+<!--/Right sidebar-->
+</div>
+<!--FOOTER-->
 <div id='footer' class='footer w3-container w3-white'>
   <hr>
 
@@ -671,22 +560,19 @@
     <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
   </div>
   <br><br>
-
-<!--InArtikle HTML GoogleAdSense-->
-<script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
-<ins class='adsbygoogle'
-     style='display:block; text-align:center;'
-     data-ad-layout='in-article'
-     data-ad-format='fluid'
-     data-ad-client='ca-pub-6358227327561384'
-     data-ad-slot='1121788057'></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!--/InArtikle HTML GoogleAdSense-->
+    <!--InArtikle HTML GoogleAdSense-->
+    <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+    <ins class='adsbygoogle' style='display:block; text-align:center;' data-ad-layout='in-article'
+         data-ad-format='fluid' data-ad-client='ca-pub-6358227327561384' data-ad-slot='1121788057'></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <!--/InArtikle HTML GoogleAdSense-->
 </div>
 </div>
-
+<!--AdSense-auto-w3schoolsrus-->
+<script data-ad-client="ca-pub-4060216941760396" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--/AdSense-auto-w3schoolsrus-->
 <script src='../lib/w3schools_footer.js'></script>
 <!--[if lt IE 9]>
 <script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
