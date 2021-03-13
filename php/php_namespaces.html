@@ -5,8 +5,8 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
-<link rel='stylesheet' href='../styles/external.css'><title>PHP Статические свойства. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='PHP Статические свойства могут быть вызваны напрямую - без создания экземпляра класса, объявляются с помощью ключевого слова static. Для доступа к статическому свойству используйте имя класса, двойное двоеточие (::) и имя свойства. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
+<link rel='stylesheet' href='../styles/external.css'><title>PHP Пространства имён. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='PHP Пространства имён. Объявляются в начале файла с помощью ключевого слова namespace. Синтаксис. Использование. Псевдоним. Современный учебник по языку PHP. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -1213,78 +1213,108 @@
     </script>
 </div>            <a href='index.html'><img src='../svg/php.svg' alt='PHP. Уроки для начинающих' class='w3-left w3-padding' title='PHP для начинающих. W3Schools на русском' style='width: 120px'></a>
 <article>
-    <h1>PHP <span class="color_h1">ООП - Статические свойства</span></h1>
+    <h1>PHP <span class="color_h1">Пространства имён</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_oop_static_methods.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_namespaces.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_oop_static_properties.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_iterables.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>PHP - Статические свойства</h2>
-    <p>Статические свойства могут быть вызваны напрямую - без создания экземпляра класса.</p>
-    <p>Статические свойства объявляются с помощью ключевого слова <code class="w3-codespan">static</code>:</p>
+    <h2>PHP Пространства имён</h2>
+    <p>Пространства имён - это квалификаторы, которые решают две разные проблемы:</p>
+    <ol>
+        <li>Они позволяют улучшить организацию, группируя классы, которые работают вместе для выполнения задачи</li>
+        <li>Они позволяют использовать одно и то же имя для нескольких классов</li>
+    </ol>
 
+    <p>Например, у вас может быть набор классов, описывающих HTML таблицу, например Table, Row и Cell, а также другой набор классов для описания мебели, например Table, Chair и Bed. Пространства имен можно использовать для организации классов в две разные группы, а также для предотвращения смешивания двух классов Table и Table.</p>
+    <hr>
+
+    <h2>Объявление пространства имен</h2>
+    <p>Пространства имен объявляются в начале файла с помощью ключевого слова <code class="w3-codespan">namespace</code>:</p>
     <div class="w3-example">
         <h3>Синтаксис</h3>
+        <p>Объявите пространство имен под названием Html:</p>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>
-            class ClassName {<br>&nbsp; public static $staticProp = &quot;W3Schools&quot;;<br>}<br>?&gt;
-        </div>
+            <span style="color:mediumblue;">namespace</span> Html;</div>
     </div>
 
-    <p>Для доступа к статическому свойству используйте имя класса, двойное двоеточие (::) и имя свойства:</p>
+    <div class="w3-note w3-panel">
+        <p><strong>Примечание:</strong> Объявление <code class="w3-codespan">namespace</code> должно быть первым делом в файле PHP. Следующий код будет недействительным:</p>
+        <div class="w3-example w3-pale-red">
+            <div class="w3-code htmlHigh notranslate w3-border-red">
+                &lt;?php<br>echo &quot;Hello World!&quot;;<br>namespace Html;<br>...<br>?&gt;</div>
+        </div>
 
+    </div>
+
+    <p>Константы, классы и функции, объявленные в этом файле, будут принадлежать пространству имен <strong>Html</strong>:</p>
+
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Создайте класс таблицы в пространстве имен Html:</p>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;?php<br>namespace Html;<br>class Table {<br>&nbsp; public $title = &quot;&quot;;<br>&nbsp; public
+            $numRows = 0;<br>&nbsp; public function message() {<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;p&gt;Table
+            '{$this-&gt;title}' has {$this-&gt;numRows} rows.&lt;/p&gt;&quot;;<br>&nbsp; }<br>}<br>$table = new
+            Table();<br>$table-&gt;title = &quot;My table&quot;;<br>$table-&gt;numRows = 5;<br>?&gt;<br>
+            <br>&lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php <br>$table-&gt;message(); <br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_namespace1.html">Попробуйте сами &raquo;</a>
+    </div>
+
+    <p>Для дальнейшей организации можно иметь вложенные пространства имен:</p>
     <div class="w3-example">
         <h3>Синтаксис</h3>
-        <div class="w3-code htmlHigh notranslate">
-            ClassName::staticProp();</div>
+        <p>Объявите пространство имен Html внутри пространства имен Code:</p>
+        <div class="w3-code notranslate">
+            <span style="color:mediumblue;">namespace</span> Code\Html;</div>
     </div>
-
-    <p>Давайте посмотрим на пример:</p>
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>class
-            pi {<br>&nbsp; public static $value = 3.14159;<br>}<br>
-            <br>// Получить статическое свойство<br>
-            echo pi::$value;<br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_static_prop.html">Попробуйте сами &raquo;</a>
-    </div>
-    <h3>Объяснение примера</h3>
-    <p>Здесь мы объявляем статическое свойство: $value. Затем мы отображаем значение статического свойства, используя имя класса, двойное двоеточие (::) и имя свойства (без предварительного создания класса).</p>
     <hr>
 
-    <h2>PHP - Подробнее о статических свойствах</h2>
-    <p>Класс может иметь как статические, так и нестатические свойства. Доступ к статическому свойству можно получить из метода того же класса, используя ключевое слово <code class="w3-codespan">self</code> и двойное двоеточие (::):</p>
+    <h2>Использование пространств имен</h2>
+    <p>Любой код, следующий за объявлением <code class="w3-codespan">namespace</code>, работает внутри пространства имен, поэтому классы, принадлежащие к пространству имен, могут быть созданы без каких-либо квалификаторов. Чтобы получить доступ к классам из-за пределов пространства имен, к классу необходимо присоединить пространство имен.</p>
+
     <div class="w3-example">
         <h3>Пример</h3>
-        <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>class
-            pi {<br>&nbsp; public static $value=3.14159;<br>&nbsp; public function
-            staticValue() {<br>&nbsp;&nbsp;&nbsp; return self::$value;<br>&nbsp; }<br>}<br>
-            <br>$pi = new pi();<br>echo $pi-&gt;staticValue(); <br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_static_prop2.html">Попробуйте сами &raquo;</a>
+        <p>Используйте классы из пространства имен Html:</p>
+        <div class="w3-code jsHigh notranslate">
+            $table = new Html\Table()<br>$row = new Html\Row();</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/php/showphp_classes.asp?filename=demo_classesphp" rel="nofollow">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Чтобы вызвать статическое свойство из дочернего класса, используйте ключевое слово <code class="w3-codespan">parent</code> внутри дочернего класса:</p>
+    <p>Когда много классов из одного и того же пространства имен используются одновременно, проще использовать ключевое слово <code class="w3-codespan">namespace</code>:</p>
+
     <div class="w3-example">
         <h3>Пример</h3>
-        <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>class
-            pi {<br>&nbsp; public static $value=3.14159;<br>}<br>
-            <br>class x extends pi {<br>&nbsp;
-            public function xStatic() {<br>&nbsp;&nbsp;&nbsp; return
-            parent::$value;<br>&nbsp; } <br>}<br><br>// Получить значение статического свойства напрямую через дочерний класс<br>
-            echo x::$value;<br><br>// или получить значение статического свойства с помощью метода xStatic()<br>$x = new x();<br>echo $x-&gt;xStatic(); <br>?&gt;
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_static_prop3.html">Попробуйте сами &raquo;</a>
+        <p>Используйте классы из пространства имен Html без Html\квалификатора:</p>
+        <div class="w3-code jsHigh notranslate">
+            namespace Html;<br>$table = new Table();<br>$row = new Row();</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/php/showphp_classes.asp?filename=demo_classesphp_qual" rel="nofollow">Попробуйте сами &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Псевдоним пространства имен</h2>
+    <p>Может быть полезно присвоить пространству имен или классу псевдоним, чтобы упростить запись. Это делается с помощью ключевого слова <code class="w3-codespan">use</code>:</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Дайте пространству имен псевдоним:</p>
+        <div class="w3-code notranslate">
+            <span style="color:mediumblue">use</span> Html <span style="color:mediumblue">as</span> H;<br>$table = <span style="color:mediumblue">new</span> H\Table();</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/php/showphp_classes.asp?filename=demo_classesphp_alias" rel="nofollow">Попробуйте сами &raquo;</a>
     </div>
 
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Дайте классу псевдоним:</p>
+        <div class="w3-code notranslate">
+            <span style="color:mediumblue">use</span> Html\Table <span style="color:mediumblue">as</span>
+            T;<br>$table = <span style="color:mediumblue">new</span> T();</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/php/showphp_classes.asp?filename=demo_classesphp_alias_class" rel="nofollow">Попробуйте сами &raquo;</a>
+    </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_oop_static_methods.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_namespaces.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_oop_static_properties.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_iterables.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small">
