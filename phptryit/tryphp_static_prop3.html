@@ -63,13 +63,23 @@
 <body>
 
 <?php
-$cars = array("Volvo", "BMW", "Toyota");
-$arrlength = count($cars);
-
-for($x = 0; $x < $arrlength; $x++) {
-  echo $cars[$x];
-  echo "<br>";
+class pi {
+  public static $value=3.14159;
 }
+
+class x extends pi {
+  public function xStatic() {
+    return parent::$value;
+  }
+}
+
+// Получить значение статического свойства напрямую через дочерний класс
+echo x::$value;
+
+
+// Получить значение статического свойства с помощью метода xStatic()
+$x = new x();
+echo $x->xStatic();
 ?>
 
 </body>
@@ -86,9 +96,7 @@ for($x = 0; $x < $arrlength; $x++) {
             <div id="runloadercontainer"><div id="runloader"></div></div>
             <div id="iframewrapper">
                 <div id="iframeResult" style="white-space:nowrap;overflow:auto;">
-                    Volvo<br>
-                    BMW<br>
-                    Toyota
+                    3.141593.14159
                 </div>
             </div>
         </div>
