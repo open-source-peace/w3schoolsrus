@@ -64,17 +64,23 @@
 <html>
 <head>
 <style>
-h1::after {
-  content: url(../images/smiley.gif);
+div {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  -ms-transform: scale(2,3); /* IE 9 */
+  transform: scale(2,3); /* Стандартный синтаксис */
 }
 </style>
 </head>
 <body>
 
-<h1>Это заголовок</h1>
-<p>Псевдоэлемент ::after вставляет содержимое после содержимого элемента.</p>
+<h1>Метод scale()</h1>
+<p>Метод scale() увеличивает или уменьшает размер элемента.</p>
 
-<h1>Это заголовок</h1>
+<div>Этот элемент div в два раза больше его исходной ширины и в три раза больше его исходной высоты.</div>
 
 </body>
 </html>

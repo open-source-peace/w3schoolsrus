@@ -64,17 +64,34 @@
 <html>
 <head>
 <style>
-h1::after {
-  content: url(../images/smiley.gif);
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv1 {
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+  transform: matrix(1, -0.3, 0, 1, 0, 0); /* Стандартный синтаксис */
+}
+
+div#myDiv2 {
+  -ms-transform: matrix(1, 0, 0.5, 1, 150, 0); /* IE 9 */
+  transform: matrix(1, 0, 0.5, 1, 150, 0); /* Стандартный синтаксис */
 }
 </style>
 </head>
 <body>
 
-<h1>Это заголовок</h1>
-<p>Псевдоэлемент ::after вставляет содержимое после содержимого элемента.</p>
+<h1>Метод matrix()</h1>
+<p>Метод matrix() объединяет все методы 2D-преобразования в один.</p>
 
-<h1>Это заголовок</h1>
+<div>Это обычный div элемент.</div>
+
+<div id="myDiv1">Использование метода matrix().</div>
+
+<div id="myDiv2">Другое использование метода matrix().</div>
 
 </body>
 </html>

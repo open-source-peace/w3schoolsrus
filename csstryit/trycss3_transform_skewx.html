@@ -64,17 +64,27 @@
 <html>
 <head>
 <style>
-h1::after {
-  content: url(../images/smiley.gif);
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv {
+  -ms-transform: skewX(20deg); /* IE 9 */
+  transform: skewX(20deg); /* Стандартный синтаксис */
 }
 </style>
 </head>
 <body>
 
-<h1>Это заголовок</h1>
-<p>Псевдоэлемент ::after вставляет содержимое после содержимого элемента.</p>
+<h1>Метод skewX()</h1>
+<p>Метод skewX() наклоняет элемент по оси X на заданный угол.</p>
 
-<h1>Это заголовок</h1>
+<div>Это обычный div элемент.</div>
+
+<div id="myDiv">Этот элемент div наклонен на 20 градусов по оси X.</div>
 
 </body>
 </html>

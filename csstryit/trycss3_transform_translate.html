@@ -64,17 +64,22 @@
 <html>
 <head>
 <style>
-h1::after {
-  content: url(../images/smiley.gif);
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  -ms-transform: translate(50px,100px); /* IE 9 */
+  transform: translate(50px,100px); /* Стандартный синтаксис */
 }
 </style>
 </head>
 <body>
 
-<h1>Это заголовок</h1>
-<p>Псевдоэлемент ::after вставляет содержимое после содержимого элемента.</p>
+<h1>Метод translate()</h1>
+<p>Метод translate() перемещает элемент из его текущей позиции:</p>
 
-<h1>Это заголовок</h1>
+<div>Этот элемент div перемещается на 50 пикселей вправо и на 100 пикселей вниз от его текущего положения.</div>
 
 </body>
 </html>
