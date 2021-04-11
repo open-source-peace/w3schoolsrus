@@ -7,28 +7,24 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>CSS Flexbox Адаптивность. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='CSS Flexbox адаптивность. Адаптивный (отзывчивый) flexbox. Современный учебник по CSS3. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='CSS Flexbox адаптивность. Адаптивный (отзывчивый) flexbox. Адаптивная галерея изображений с использованием Flexbox. Адаптивный веб-сайт с использованием Flexbox. Современный учебник по CSS3. Уроки для начинающих. W3Schools на русском'>
     <style>
         .anchor-container a {
             position:absolute;
             top:-100px;
         }
-
         .flex-containerresp {
             display: flex;
             flex-direction: row;
             font-size: 30px;
             text-align: center;
         }
-
         .flex-item-leftresp {
             background-color: #f1f1f1;
             padding: 10px;
             border:1px solid #ddd;
-
             flex: 50%;
         }
-
         .flex-item-rightresp {
             background-color: #f1f1f1;
             border-top:1px solid #ddd;
@@ -490,11 +486,11 @@
     <hr>
 
     <h2>Адаптивный Flexbox</h2>
-    <p>You learned from the <a href="css3_mediaqueries.html">CSS Media Queries</a> chapter that you can use media queries to create different layouts for different screen sizes and devices.</p>
+    <p>Вы узнали из главы <a href="css3_mediaqueries.html">CSS Медиа запросы</a>, что можно использовать медиа-запросы для создания различных макетов для разных размеров экрана и устройств.</p>
 
     <div class="w3-row-padding w3-border" style="margin-left:-16px;margin-right:-16px">
         <div class="w3-col s6">
-            <p>Laptop and Desktops:</p>
+            <p>Ноутбуки и настольные компьютеры:</p>
             <div class="flex-containerresp">
                 <div class="flex-item-leftresp">1</div>
                 <div class="flex-item-rightresp">2</div>
@@ -503,7 +499,7 @@
         </div>
 
         <div class="w3-col s6">
-            <p>Mobile <span class="w3-hide-small">phones</span> and Tablets:</p>
+            <p>Мобильные <span class="w3-hide-small">телефоны</span> и планшеты:</p>
             <div class="flex-containerresp" style="flex-direction: column;">
                 <div class="flex-item-leftresp">1</div>
                 <div class="flex-item-rightresp" style="border-top:none;border-bottom:none">2</div>
@@ -513,46 +509,41 @@
         </div>
     </div>
 
-    <p>For example, if you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets), you can change the <code class="w3-codespan">flex-direction</code> from <code class="w3-codespan">row</code> to <code class="w3-codespan">column</code> at a specific breakpoint (800px in the example below):</p>
+    <p>Например, если вы хотите создать макет с двумя столбцами для большинства размеров экрана и макет с одним столбцом для экранов небольших размеров (например, телефонов и планшетов), вы можете изменить <code class="w3-codespan">flex-direction</code> из <code class="w3-codespan">row</code> в <code class="w3-codespan">column</code> в определенной точке останова (800 пикселей в примере ниже):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate cssHigh">
-            .flex-container {<br>&nbsp; display: flex;<br>&nbsp; flex-direction: row;<br>}<br>
-            <br>/* Responsive layout - makes a one column layout instead of a two-column
-            layout */<br>@media (max-width: 800px) {<br>&nbsp; .flex-container {<br>&nbsp;&nbsp;&nbsp;
+            .flex-container {<br>&nbsp; display: flex;<br>&nbsp; flex-direction: row;<br>}<br><br>
+            /* Адаптивный макет - делает макет с одним столбцом вместо макета с двумя столбцами */<br>
+            @media (max-width: 800px) {<br>&nbsp; .flex-container {<br>&nbsp;&nbsp;&nbsp;
             flex-direction: column;<br>&nbsp; }<br>}</div>
         <p>
             <a class="w3-btn" target="_blank" href="../csstryit/trycss3_flexbox_responsive.html">Попробуйте сами &raquo;</a>
         </p>
     </div>
-    <p>Another way is to change the percentage of the <code class="w3-codespan">flex</code> property of the flex items
-        to create different layouts for different screen sizes. Note that we
-        also have to include <code class="w3-codespan">flex-wrap: wrap;</code> on the flex container for this example to
-        work:</p>
+    <p>Другой способ - изменить процентное значение свойства <code class="w3-codespan">flex</code> гибких элементов, чтобы создать разные макеты для разных размеров экрана. Обратите внимание, что необходимо также включить <code class="w3-codespan">flex-wrap: wrap;</code> в гибкий контейнер, чтобы этот пример работал:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate cssHigh">
             .flex-container {<br>&nbsp; display: flex;<br>&nbsp; flex-wrap: wrap;<br>}<br>
             <br>.flex-item-left {<br>&nbsp; flex: 50%;<br>}<br><br>.flex-item-right {<br>&nbsp;
             flex: 50%;<br>}<br>
-            <br>/* Responsive layout - makes a one column layout instead of a two-column
-            layout */<br>@media (max-width: 800px) {<br>&nbsp; .flex-item-right,
-            .flex-item-left {<br>&nbsp;&nbsp;&nbsp; flex: 100%;<br>&nbsp; }<br>}</div>
+            <br>/* Адаптивный макет - делает макет с одним столбцом вместо макета с двумя столбцами */<br>
+            @media (max-width: 800px) {<br>&nbsp; .flex-item-right, .flex-item-left {<br>&nbsp;&nbsp;&nbsp; flex: 100%;<br>&nbsp; }<br>}</div>
         <p>
             <a class="w3-btn" target="_blank" href="../csstryit/trycss3_flexbox_responsive2.html">Попробуйте сами &raquo;</a>
         </p>
     </div>
-
     <hr>
-    <h2>Responsive Image Gallery using Flexbox</h2>
-    <p>Use flexbox to create a responsive image gallery that varies between four,
-        two or full-width images, depending on screen size:</p>
+
+    <h2>Адаптивная галерея изображений с использованием Flexbox</h2>
+    <p>Используйте flexbox для создания адаптивной галереи изображений, которая может варьироваться от четырех, двух или полноразмерных изображений, в зависимости от размера экрана:</p>
     <iframe src="../howto/tryhow_css_image_grid_responsive.html" style="border:6px solid #f1f1f1;width:100%;height:600px;"></iframe>
     <a class="w3-btn w3-margin-top" target="_blank" href="../csstryit/trycss3_flexbox_image_gallery.html">Попробуйте сами &raquo;</a>
     <hr>
 
-    <h2>Responsive Website using Flexbox</h2>
-    <p>Use flexbox to create a responsive website, containing a flexible navigation bar and flexible content:</p>
+    <h2>Адаптивный веб-сайт с использованием Flexbox</h2>
+    <p>Используйте flexbox для создания адаптивного веб-сайта, содержащего гибкую панель навигации и гибкий контент:</p>
     <iframe src="../csstryit/trycss3_flexbox_website_ifr.html" style="border:6px solid #eee;width:100%;height:630px;"></iframe>
     <a class="w3-btn w3-margin-top" target="_blank" href="../csstryit/trycss3_flexbox_website2.html">Попробуйте сами &raquo;</a>
     <hr>
