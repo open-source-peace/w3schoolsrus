@@ -47,12 +47,12 @@ table.w3-table-all{margin:20px 0}
  padding:10px 15px 9px 15px !important;
 }
 .topnav .w3-bar a:hover,.topnav .w3-bar a:focus{
- background-color:#000000 !important;
- color:#ffffff !important;
+ background-color:#000 !important;
+ color:#fff !important;
 }
 .topnav .w3-bar a.active {
  background-color:#008B8B; /*фон верхнього навбару*/
- color:#ffffff;
+ color:#fff;
 }
 a.topnav-icons {
  width:52px !important;
@@ -75,8 +75,8 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
  width:204px;
 }
 #sidenav a {font-family:"Segoe UI",Arial,sans-serif;text-decoration:none;display:block;padding:2px 1px 1px 16px}
-#sidenav a:hover,#sidenav a:focus {color:#000000;background-color:#cccccc;}
-#sidenav a.active {background-color:#4CAF50;color:#ffffff}
+#sidenav a:hover,#sidenav a:focus {color:#000;background-color:#ccc;}
+#sidenav a.active {background-color:#4CAF50;color:#fff}
 #sidenav a.activesub:link,#sidenav a.activesub:visited {background-color:#ddd;color:#000;}
 #sidenav a.activesub:hover,#sidenav a.activesub:active {background-color:#ccc;color:#000;}
 #leftmenuinner {
@@ -137,8 +137,8 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
 #sidenav a.activesub:hover,#sidenav a.activesub:active {background-color:#ccc;color:#000;}
 #sidenav a.active_overview:link,#sidenav a.active_overview:visited {background-color:#ccc;color:#000;}
 .w3-example{background-color:#f1f1f1;padding:0.01em 16px;margin:20px 0;box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
-.nextprev a {font-size:17px;border:1px solid #cccccc;}
-.nextprev a:link,.nextprev a:visited {background-color:#ffffff;color:#000000;}
+.nextprev a {font-size:17px;border:1px solid #ccc;}
+.nextprev a:link,.nextprev a:visited {background-color:#fff;color:#000;}
 .w3-example a:focus,.nextprev a:focus{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
 .nextprev a.w3-right,.nextprev a.w3-left {background-color:#4CAF50;color:#ffffff;border-color:#4CAF50}
 .pagemenu{margin-left:-20px;margin-right:-20px;padding:20px;background-color:#d4edda;line-height:2.8em;color:#555;}
@@ -277,15 +277,15 @@ span.marked, span.deprecated {
  background-color:rgb(40,44,52)!important;color:white;
 }
 .intro {font-size:1.1em;background-color:#eee;padding: 15px 15px;box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);}
-.w3-btn, .w3-btn:link, .w3-btn:visited {color:#FFFFFF;background-color:#4CAF50}
+.w3-btn, .w3-btn:link, .w3-btn:visited {color:#fff;background-color:#4CAF50}
 a.w3-btn[href*="exercise.asp"],a.w3-btn[href*="exercise_js.asp"] {margin:10px 5px 0 0}
 a.btnplayit,a.btnplayit:link,a.btnplayit:visited {background-color:#FFAD33;padding:1px 10px 2px 10px}
-a.btnplayit:hover,a.btnplayit:active {background-color:#ffffff;color:#FFAD33}
+a.btnplayit:hover,a.btnplayit:active {background-color:#fff;color:#FFAD33}
 a.btnplayit:hover {box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);}
 a.btnsmall:link,a.btnsmall:visited,a.btnsmall:active,a.btnsmall:hover {
  float:right;padding:1px 10px 2px 10px;font:15px Verdana, sans-serif;}
 a.btnsmall:hover {box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);}
-a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
+a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#fff}
 .tagcolor{color:mediumblue}
 .tagnamecolor{color:brown}
 .attributecolor{color:red}
@@ -451,6 +451,7 @@ h1 {
 h2 {
  font-size: 32px;
 }
+
 .w3-btn:hover,.w3-btn:active,.w3-example a:focus,.nextprev a:focus {
  box-shadow: none;
  background-color: #46a049!important;

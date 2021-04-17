@@ -1,7 +1,7 @@
 #scssfiletab, #cssfiletab, #htmlfiletab, #resttab {
   position:absolute;
   z-index:2;
-  font-family:arial;
+  font-family:arial,sans-serif;
   padding:4px 12px;
   width:70px;
   cursor:pointer;
