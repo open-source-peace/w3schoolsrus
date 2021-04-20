@@ -46,25 +46,33 @@
 
         <div id="scssfile">
 <pre style="margin:0" class="codewindow language-scss"><code>
-/* Определите стандартные переменные и значения для веб-сайта */
-$bgcolor: lightblue;
-$textcolor: darkblue;
-$fontsize: 18px;
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
 
-/* Используйте переменные */
 body {
-  background-color: $bgcolor;
-  color: $textcolor;
-  font-size: $fontsize;
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
 }</code></pre>
         </div>
 
         <div id="cssfile" style="display:none">
 <pre style="margin:0" class="codewindow language-css"><code>
 body {
-  background-color: lightblue;
-  color: darkblue;
+  font-family: Helvetica, sans-serif;
   font-size: 18px;
+  color: red;
+}
+
+#container {
+  width: 680px;
+  border: 1px blue double;
 }</code></pre>
         </div>
 
@@ -79,9 +87,12 @@ body {
 
 &lt;p&gt;Это параграф.&lt;/p&gt;
 
+&lt;div id="container"&gt;Это текст внутри контейнера.&lt;/div&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         </div>
+
 
       </div>
     </div>
@@ -93,7 +104,7 @@ body {
           <div class="localhostcontainer">
             Результат:
           </div>
-          <iframe style="width:100%;height:100%;border:none;padding-top:31px;" src='demo_sass_first_ifr.html'></iframe>
+          <iframe style="width:100%;height:100%;border:none;padding-top:31px;" src='demo_sass_var1_ifr.html'></iframe>
         </div>
       </div>
     </div>

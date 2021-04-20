@@ -46,25 +46,26 @@
 
         <div id="scssfile">
 <pre style="margin:0" class="codewindow language-scss"><code>
-/* Определите стандартные переменные и значения для веб-сайта */
-$bgcolor: lightblue;
-$textcolor: darkblue;
-$fontsize: 18px;
+$myColor: red;
 
-/* Используйте переменные */
-body {
-  background-color: $bgcolor;
-  color: $textcolor;
-  font-size: $fontsize;
+h1 {
+  $myColor: green;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
 }</code></pre>
         </div>
 
         <div id="cssfile" style="display:none">
 <pre style="margin:0" class="codewindow language-css"><code>
-body {
-  background-color: lightblue;
-  color: darkblue;
-  font-size: 18px;
+h1 {
+  color: green;
+}
+
+p {
+  color: red;
 }</code></pre>
         </div>
 
@@ -93,7 +94,7 @@ body {
           <div class="localhostcontainer">
             Результат:
           </div>
-          <iframe style="width:100%;height:100%;border:none;padding-top:31px;" src='demo_sass_first_ifr.html'></iframe>
+          <iframe style="width:100%;height:100%;border:none;padding-top:31px;" src='demo_sass_var2_ifr.html'></iframe>
         </div>
       </div>
     </div>
