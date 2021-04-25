@@ -228,7 +228,7 @@ body.darktheme #tryitLeaderboard{
 }
 body.darktheme .trytopnav{
   background-color:#616161;
-  color:#dddddd;
+  color:#ddd;
 }
 body.darktheme #container {
   background-color:#616161;
@@ -237,7 +237,7 @@ body.darktheme .trytopnav a {
   color:#dddddd;
 }
 body.darktheme #filenamecontainer span {
-  background-color:#555555;
+  background-color:#555;
   color:#f1f1f1;
 }
 body.darktheme .codewindow {
