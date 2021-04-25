@@ -92,7 +92,7 @@ h2 {
 
 /* Customize main.css */
 body {background: #F5F5DC; position:relative;min-height:100%;}
-
+.shadow-black-1 {text-shadow: 1px 1px 1px #000}
 
 .box-h70 {height:70px}
 .picker {width:150px;height:128px;margin-top:16px}
