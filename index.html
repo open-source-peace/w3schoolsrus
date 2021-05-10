@@ -181,7 +181,7 @@
 </div>
 <!--/menu top-->
 
-<!--menu left-->
+<!--раскрывающееся menu top-->
 <nav id="nav_tutorials" class="w3-light-grey w3-card-2 w3-hide-small navex">
     <span onclick="w3_close_nav('tutorials')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
     <div class='w3-row-padding w3-bar-block'>
@@ -198,6 +198,12 @@
             <a class='w3-bar-item w3-button' href='graphics/canvas_intro.html'>Выучить Canvas</a>
             <a class='w3-bar-item w3-button' href='howto/index.html'>Выучить Как сделать</a>
             <a class='w3-bar-item w3-button' href='sass/index.html'>Выучить Sass</a>
+            <h3 class='w3-margin-top'>Программирование</h3>
+            <a class='w3-bar-item w3-button' href='python/index.html'>Выучить Python</a>
+            <a class='w3-bar-item w3-button' href='java/index.html'>Выучить Java</a>
+            <a class='w3-bar-item w3-button' href='cpp/index.html'>Выучить C++</a>
+            <a class='w3-bar-item w3-button' href='cs/index.html'>Выучить C#</a>
+            <a class='w3-bar-item w3-button' href='r/index.html'>Выучить R</a>
             <div class="w3-hide-large w3-hide-small">
                 <h3 class='w3-margin-top'>XML Учебники</h3>
                 <a class='w3-bar-item w3-button' href='xml/index.html'>Выучить XML</a>
@@ -222,13 +228,6 @@
             <a class='w3-bar-item w3-button' href='appml/index.html'>Выучить AppML</a>
             <a class='w3-bar-item w3-button' href='w3js/index.html'>Выучить W3.JS</a>
 
-            <h3 class='w3-margin-top'>Программирование</h3>
-            <a class='w3-bar-item w3-button' href='python/index.html'>Выучить Python</a>
-            <a class='w3-bar-item w3-button' href='java/index.html'>Выучить Java</a>
-            <a class='w3-bar-item w3-button' href='cpp/index.html'>Выучить C++</a>
-            <a class='w3-bar-item w3-button' href='cs/index.html'>Выучить C#</a>
-            <a class='w3-bar-item w3-button' href='r/index.html'>Выучить R</a>
-
             <h3 class='w3-margin-top'>Искусственный интеллект</h3>
             <a class='w3-bar-item w3-button' href='ai/index.html'>Выучить Искусственный интеллект</a>
             <a class='w3-bar-item w3-button' href='python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
@@ -246,7 +245,6 @@
             <a class='w3-bar-item w3-button' href='nodejs/index.html'>Выучить Node.js</a>
             <a class='w3-bar-item w3-button' href='nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
             <a class='w3-bar-item w3-button' href='git/index.html'>Выучить Git</a>
-
 
             <h3 class='w3-margin-top'>Веб-строительство</h3>
             <a class='w3-bar-item w3-button' href='w3css/w3css_templates.html'>Веб-шаблоны</a>
@@ -342,7 +340,7 @@
             <a class='w3-bar-item w3-button' href='css/css_examples.html'>CSS Примеры</a>
             <a class='w3-bar-item w3-button' href='w3css/w3css_examples.html'>W3.CSS Примеры</a>
             <a class='w3-bar-item w3-button' href='bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a>
-            <a class='w3-bar-item w3-button' href='howto/index.html'>Як зробити Примеры</a>
+            <a class='w3-bar-item w3-button' href='howto/index.html'>Как сделать Примеры</a>
             <a class='w3-bar-item w3-button' href='graphics/svg_examples.html'>SVG Примеры</a>
             <a class='w3-bar-item w3-button' href='w3css/w3css_templates.html'>Веб-шаблони</a>
             <div class="w3-hide-large w3-hide-small">
@@ -485,7 +483,7 @@
                     &lt;/html&gt;
                 </div>
                 <a href="htmltryit/tryitfb35.html?filename=tryhtml_default" target='_blank'
-                   class="w3-button w3-theme w3-hover-green w3-hover-shadow">Попробуйте сами &raquo;</a>
+                   class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
             </div>
         </div>
     </div>
@@ -504,7 +502,7 @@
                 &nbsp; font-size: 20px;<br>}
             </div>
             <a href="csstryit/trycss_default.html?filename=trycss_default" target='_blank'
-               class="w3-button w3-theme w3-hover-green w3-hover-shadow">Попробуйте сами &raquo;</a>
+               class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
         </div>
         <div class="w3-col l6 w3-center" style="padding:3%">
             <h2 title="CSS (от англ. Cascading Style Sheets - каскадные таблицы стилей) - формальный язык описания внешнего вида документа, написанного с использованием языка разметки HTML. Преимущественно используется как средство описания, оформления внешнего вида веб-страниц (стилизации), написанных с помощью языков разметки HTML и XHTML, но может также применяться к любым XML-документам, например, к SVG или XUL">
@@ -536,14 +534,13 @@
                 &nbsp; font-size: 20px;<br>}
             </div>
             <a href="csstryit/trycss_default.html?filename=trycss_default" target='_blank'
-               class="w3-button w3-theme w3-hover-green w3-hover-shadow">Попробуйте сами &raquo;</a>
+               class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
         </div>
     </div>
 
     <div class="w3-row">
         <div class="w3-col l6 w3-center" style="padding:3%">
-            <h2 class="w3-jumbo"
-                title="JavaScript (аббр. JS) — компилируемый язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стиль. Есть реализацией языка ECMAScript (стандарт ECMA-262). JavaScript обычно используется как встроенный язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.">
+            <h2 class="w3-jumbo" title="JavaScript (аббр. JS) — компилируемый язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стиль. Есть реализацией языка ECMAScript (стандарт ECMA-262). JavaScript обычно используется как встроенный язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.">
                 JavaScript</h2>
             <p class="w3-xlarge w3-text-dark-grey">Язык для программирования веб-страниц</p>
             <p><strong>JavaScript (JS)</strong> - язык программирования, третья составляющая (вместе с <strong>HTML</strong> и <strong>CSS</strong>) стандартных веб-технологий, применяется для создания веб-сайтов. <strong>JavaScript</strong> превращает статические веб-страницы в динамические, изменчивые и взаимодействующие с пользователем. Язык программирования <strong>JavaScript</strong> управляет мультимедиа, анимирует изображения, меняет текст на веб-странице и многое другое.</p>
@@ -565,7 +562,7 @@
                     </div>
                 </div>
                 <a href="jstryit/tryjs_default.html" target='_blank'
-                   class="w3-button w3-theme w3-hover-green w3-hover-shadow">Попробуйте сами &raquo;</a>
+                   class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
             </div>
         </div>
     </div>
@@ -578,7 +575,7 @@
                 WHERE Country='Mexico';
             </div>
             <a href="sqltryit/trysql_select_where.html" target='_blank'
-               class="w3-button w3-theme w3-hover-green w3-hover-shadow">Попробуйте сами &raquo;</a>
+               class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
         </div>
         <div class="w3-col l6 w3-center" style="padding:3%">
             <h2 title="SQL (от англ. structured query language - язык структурированных запросов) - декларативный язык программирования, применяемый для создания, модификации и управления данными в реляционной базе данных, управляемой соответствующей системой управления базами данных. Является прежде всего информационно-логическим языком, предназначенным для описания, изменения и удаления данных, хранящихся в реляционных базах данных. Сначала язык SQL был основным способом работы пользователя с базой данных.">
@@ -604,53 +601,79 @@
                 WHERE Country='Ukraine';
             </div>
             <a href="sqltryit/trysql_select_where.html" target='_blank'
-               class="w3-button w3-theme w3-hover-green w3-hover-shadow">Попробуйте сами &raquo;</a>
+               class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
+        </div>
+    </div>
+
+    <div class="w3-row">
+        <div class="w3-col l6 w3-center" style="padding:3%">
+            <h2 class="w3-jumbo" title="Python (Пайтон) — высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и чтения кода. Применяется для программирования как общих приложений, так и в веб-программировании (создание сайтов). Рекомендуется для изучения начинающими, изучающих веб-программирование, а также как первый язык программирования для новичков благодаря своей простоте и доступности.">Python</h2>
+            <p class="w3-xlarge w3-text-dark-grey">Популярный язык программирования</p>
+            <p><strong>Python (Пайтон)</strong> - высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и чтения кода. Применяется для программирования как общих приложений, так и в веб-программировании (создание сайтов). Рекомендуется для изучения начинающими, изучающих веб-программирование, а также как первый язык программирования для новичков благодаря своей простоте и доступности.</p>
+            <a href="python/index.html" class="w3-button w3-dark-grey">Выучить PYTHON</a>
+            <a href="python/python_reference.html" class="w3-button w3-dark-grey">PYTHON Справочник</a>
+        </div>
+        <div class="w3-col l6" style="padding:3%">
+            <div class="w3-hide-small w3-card-2 w3-light-grey" style="padding:16px;">
+                <h3>Python Пример:</h3>
+                <div class="w3-code notranslate w3-card-2 w3-border-green">
+                    <div class="jsHigh">
+                        if 5 > 2:<br>
+                        print("Five is greater than two!")'
+                    </div>
+                </div>
+                <a href="pythontryit/demo_indentation.html" target='_blank'
+                   class="w3-button w3-theme tryit-button w3-hover-shadow">Попробуйте сами &raquo;</a>
+            </div>
         </div>
     </div>
 
     <div class="w3-row w3-dark-grey w3-padding-32">
+
         <div class="w3-col l6 w3-center" style="padding:2% 3%;">
-            <div class="w3-card-2 w3-white w3-padding" style="padding-bottom:24px!important">
-                <h2 class="w3-xxlarge">Python</h2>
-                <div class='box-h70'>
-                    <h4 class="w3-text-dark-grey">Язык программирования</h4>
-                    <p class="pro"><strong>Python (Пайтон)</strong> - высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и чтения кода. Применяется для программирования как общих приложений, так и в веб-программировании (создание сайтов). Рекомендуется для изучения начинающими, изучающих веб-программирование, а также как первый язык программирования для новичков благодаря своей простоте и доступности. Язык программирования Python вы можете <strong>Выучить онлайн</strong> на сайте <strong>w3schools на русском</strong>.</p>
-                </div>
-                <a href="python/index.html" class="w3-button w3-dark-grey">Выучить PYTHON</a>
-            </div>
-        </div>
-        <div class="w3-col l6 w3-center" style="padding:2% 3%;">
-            <div class="w3-card-2 w3-white w3-padding" style="padding-bottom:24px!important">
+            <div class="w3-card-2 w3-padding" style="padding-bottom:24px!important;background-color:#FFC0C7;">
                 <h2 class="w3-xxlarge">PHP</h2>
                 <div class='box-h70'>
                     <h4 class="w3-text-dark-grey">Язык программирования веб-сервера</h4>
-                    <p class="pro"><strong>PHP</strong> (препроцессор гипертекста) - скриптовый язык общего назначения, применяется для разработки веб-приложений. Поддерживается абсолютным большинством хостинг-провайдеров и является одним из основных языков, которые применяются для создания динамических веб-сайтов. С помощью <strong>PHP</strong> часто создают <strong>CMS</strong> - систему управления контентом (движок сайта). PHP работает на стороне сервера (backend), обеспечивая взаимодействие с пользователем. На PHP созданы такие сайты, как Facebook, Yahoo, Вконтакте, Википедия, движок Wordpress и др. Язык программирования PHP вы можете <strong>Выучить онлайн</strong> на сайте <strong>w3schools на русском</strong>.</p>
+                    <p class="pro" style="color:#FFC0C7;"><strong>PHP</strong> (препроцессор гипертекста) - скриптовый язык общего назначения, применяется для разработки веб-приложений. Поддерживается абсолютным большинством хостинг-провайдеров и является одним из основных языков, которые применяются для создания динамических веб-сайтов. С помощью <strong>PHP</strong> часто создают <strong>CMS</strong> - систему управления контентом (движок сайта). PHP работает на стороне сервера (backend), обеспечивая взаимодействие с пользователем. На PHP созданы такие сайты, как Facebook, Yahoo, Вконтакте, Википедия, движок Wordpress и др. Язык программирования PHP вы можете <strong>Выучить онлайн</strong> на сайте <strong>w3schools на русском</strong>.</p>
                 </div>
                 <a href="php/index.html" class="w3-button w3-dark-grey">Выучить PHP</a>
             </div>
-
         </div>
+
         <div class="w3-col l6 w3-center" style="padding:2% 3%;">
-            <div class="w3-card-2 w3-white w3-padding" style="padding-bottom:24px!important">
+            <div class="w3-card-2 w3-padding" style="padding-bottom:24px!important;background-color:#FFF4A3;">
                 <h2 class="w3-xxlarge">jQuery</h2>
                 <div class='box-h70'>
                     <h4 class="w3-text-dark-grey">Библиотека JavaScript для разработки веб-страниц</h4>
-                    <p class="pro"><strong>jQuery</strong> - популярная <strong>JavaScript</strong> библиотека с открытым кодом. Синтаксис <strong>jQuery</strong> разработан, чтобы сделать ориентирование в навигации удобным благодаря выбору элементов DOM, создание анимации, обработки событий и разработке AJAX-приложений. Помогает созданию мощных динамических веб-страниц. Пройти полный <strong>курс онлайн</strong> по библиотеке <strong>jQuery</strong> вы можете на сайте <strong>w3schools на русском</strong>.</p>
+                    <p class="pro" style="color:#FFF4A3;"><strong>jQuery</strong> - популярная <strong>JavaScript</strong> библиотека с открытым кодом. Синтаксис <strong>jQuery</strong> разработан, чтобы сделать ориентирование в навигации удобным благодаря выбору элементов DOM, создание анимации, обработки событий и разработке AJAX-приложений. Помогает созданию мощных динамических веб-страниц. Пройти полный <strong>курс онлайн</strong> по библиотеке <strong>jQuery</strong> вы можете на сайте <strong>w3schools на русском</strong>.</p>
                 </div>
                 <a href="jquery/index.html" class="w3-button w3-dark-grey">Выучить JQUERY</a>
             </div>
         </div>
 
         <div class="w3-col l6 w3-center" style="padding:2% 3%;">
-            <div class="w3-card-2 w3-white w3-padding" style="padding-bottom:24px!important">
+            <div class="w3-card-2 w3-padding" style="padding-bottom:24px!important;background-color:#F3ECEA;">
                 <h2 class="w3-xxlarge">Java</h2>
                 <div class='box-h70'>
                     <h4 class="w3-text-dark-grey">Язык программирования</h4>
-                    <p class="pro"><strong>Java</strong> - объектно-ориентированный язык программирования. Используется для написания клиентских приложений и серверного программного обеспечения. Пройти <strong>полный курс онлайн</strong> по языку программирования <strong>Java</strong> вы можете на сайте <strong>w3schools на русском</strong>.</p>
+                    <p class="pro" style="color:#F3ECEA;"><strong>Java</strong> - объектно-ориентированный язык программирования. Используется для написания клиентских приложений и серверного программного обеспечения. Пройти <strong>полный курс онлайн</strong> по языку программирования <strong>Java</strong> вы можете на сайте <strong>w3schools на русском</strong>.</p>
                 </div>
                 <a href="java/index.html" class="w3-button w3-dark-grey">Выучить JAVA</a>
             </div>
         </div>
+
+        <div class="w3-col l6 w3-center" style="padding:2% 3%;">
+            <div class="w3-card-2 w3-padding" style="padding-bottom:24px!important;background-color:#D9EEE1;">
+                <h2 class="w3-xxlarge">C++</h2>
+                <div class='box-h70'>
+                    <h4 class="w3-text-dark-grey">Язык программирования</h4>
+                    <p class="pro" style="color:#D9EEE1;"><strong>C++</strong> - компилируемый, статически типизированный язык программирования общего назначения. C++ используется для написания компьютерных программ, игр, операционных систем и многого другого. <strong>Выучить язык программирования C++</strong> вы можете онлайн на сайте <strong>w3schools на русском</strong>.</p>
+                </div>
+                <a href="cpp/index.html" class="w3-button w3-dark-grey">Выучить C++</a>
+            </div>
+        </div>
+
     </div>
     <div class="w3-row w3-white" style="padding-top:40px;padding-bottom:40px">
         <div class="w3-col l4 w3-center" style="padding:3%;">
