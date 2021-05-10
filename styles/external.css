@@ -534,6 +534,61 @@ hr {
  }
 }
 
+/* NYE farger */
+
+.ws-black {
+ background-color:#282A35!important;
+ color: white!important;
+}
+.ws-hover-black:hover {
+ background-color:#000!important;
+ color: white!important;
+}
+.ws-grey {
+ background-color:#E7E9EB!important;
+ color: black!important;
+}
+.ws-yellow {
+ background-color:#FFF4A3!important;
+ color: black!important;
+}
+.ws-green {
+ background-color:#04AA6D!important;
+ color: white!important;
+}
+.ws-text-green {
+ color: #04AA6D!important;
+}
+.ws-hover-green:hover {
+ background-color:#059862!important;
+ color: white!important;
+}
+.ws-hover-text-green:hover {
+ color:#059862!important;
+}
+.ws-light-green {
+ background-color:#D9EEE1!important;
+ color: black!important;
+}
+.ws-turquoise {
+ background-color:#96D4D4!important;
+ color: black!important;
+}
+.ws-pink {
+ background-color:#FFC0C7!important;
+ color: black!important;
+}
+.ws-light-pink {
+ background-color:#FFC0C7!important;
+ color: black!important;
+}
+.ws-btn {border:none;border-radius:5px;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;;text-align:center;cursor:pointer;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#04AA6D;color:#fff}
+
+.ws-btn:hover,.ws-btn:active {
+ background-color: #059862 !important;
+ color: #ffffff;
+}
+
 /* Style Plus */
 .shadow-black-01 {text-shadow: .1px .1px .1px #000}
 .shadow-black-02 {text-shadow: .2px .2px .2px #000}
