@@ -6,7 +6,7 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'><title>Учебник по кибербезопасности. Сетевой транспорт. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Учебник по кибербезопасности. Сетевой транспорт. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Учебник по кибербезопасности. Углубленный транспортный и канальный уровни. TCP. Трехстороннее рукопожатие. Спуфинг (обман) трафика. UDP. Коммутируемые сети. ARP. VLAN. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -326,64 +326,64 @@
     <p>На картинке ниже мы можем увидеть TCP-пакет и то, как он будет выглядеть для любого, кто проверяет трафик в сети.</p>
     <p><img src="../images/img_tcp-header.png" alt="TCP заголовок" style="width:100%;max-width:1280px"></p>
 
-    <p>We can see the graphic showing 16 bits for both source and destination ports, this is the same for for UDP. The Sequence and Acknowledgement numbers are used in the three-way handshake and to reliably transfer data. We can also see the control bits used to indicate what kind of packet it is. The other headers also play an important part, but outside of the security course.</p>
+    <p>Мы можем видеть график, показывающий 16 бит для портов источника и назначения, это то же самое для UDP. Номера последовательности и подтверждения используются в 3-Way-Handshake (трехстороннем рукопожатии) и для надежной передачи данных. Мы также можем видеть контрольные биты, используемые для обозначения того, что это за пакет. Другие заголовки также играют важную роль, но за пределами курса безопасности.</p>
     <hr>
 
-    <h2>TCP 3-Way-Handshake</h2>
-    <p>TCP uses a three-way handshake to allow two systems to engage in communications. The handshake uses 32 bits of PRNG ("Pseudo Random Number Generator") numbers to establish the handshake. The handshake enforces that both parties intends to communicate.</p>
-    <p>Here is a graphic to illustrate:</p>
+    <h2>TCP 3-Way-Handshake - 3-стороннее рукопожатие</h2>
+    <p>TCP использует трехстороннее рукопожатие, чтобы две системы могли взаимодействовать. Рукопожатие использует 32 бита чисел ГПСЧ (&quot;генератор псевдослучайных чисел&quot;), чтобы установить рукопожатие. Рукопожатие означает, что обе стороны намерены общаться.</p>
+    <p>Вот рисунок для иллюстрации:</p>
     <p><img src="../svg/img_tcp-handshake-1.svg" alt="TCP Handshake" style="width:100%;max-width:1280px"></p>
-    <p>Explanation on how TCP engages in communications:</p>
+    <p>Объяснение того, как TCP участвует в обмене данными:</p>
     <ol>
-        <li>Client initiates the communication by sending a packet with the control bit SYN set in the header, a PRNG number in the Sequence number field and a target destination port. The Network Layer (Layer 3) allows the packet to be sent to a remote system. This packet is referred to as a SYN packet.</li>
-        <li>Server receives the packet, reads the Sequence Number from the Client and crafts a response. The response sets the Acknowledgement field with the Sequencer number of the client with the number 1 added to it. Furthermore the response contains the controls bits SYN and ACK set and the Sequence number is set to the Servers PRNG number. This packet is referred to as a SYN/ACK packet.</li>
-        <li>The Client receives the SYN-ACK packet and to complete the handshake returns a packet with the ACK control bit set. The final packet also confirms the PRNG number from the Server by returning it in the Acknowledgement field of the header.</li>
+        <li>Клиент инициирует обмен данными, отправляя пакет с битом управления SYN, установленным в заголовке, номером PRNG в поле порядкового номера и целевым портом назначения. Сетевой уровень (уровень 3) позволяет отправлять пакет в удаленную систему. Этот пакет называется SYN-пакетом. </li>
+        <li>Сервер получает пакет, считывает порядковый номер от клиента и формирует ответ. Ответ устанавливает поле Acknowledgment (Подтверждение) с номером Sequencer (Последовательность) клиента с добавленным к нему номером 1. Кроме того, ответ содержит набор управляющих битов SYN и ACK, а порядковый номер установлен на номер сервера PRNG. Этот пакет называется пакетом SYN/ACK.</li>
+        <li>Клиент получает пакет SYN-ACK и для завершения квитирования возвращает пакет с установленным битом управления ACK. Последний пакет также подтверждает номер ГПСЧ от сервера, возвращая его в поле Acknowledgment (Подтверждение) заголовка.</li>
     </ol>
-    <p>This process is commonly referred to as the SYN, SYN/ACK, ACK 3-way handshake.</p>
-    <p>In the following picture we can see two hosts performing the 3-way handshake:&nbsp;</p>
-    <p><img src="../images/img_wireshark-handshake-1.png" alt="Handshake in Wireshark" style="width:100%;max-width:1280px"></p>
-    <p>The screenshot shows the tool Wireshark being used to capture and inspect packets. Wireshark is a very good utility because it allows us to visualize packets and inspect them more in-depth. The screenshot shows 3 packets representing the 3-way handshake. Notice the source and destination columns representing the two parties communicating. The Info field shows source and destination port, including (within the square brackets) the SYN, SYN/ACK and ACK.</p>
-    <p>The next screenshot shows data being communicated between the parties after the 3-way handshake. The data inside of the TCP packet has been highlighted near the bottom of the picture.</p>
-    <p><img src="../images/img_tcp-data.png" alt="TCP Data" style="width:100%;max-width:1280px"></p>
+    <p>Этот процесс обычно называют трехсторонним рукопожатием SYN, SYN/ACK, ACK.</p>
+    <p>На следующем рисунке мы видим, как два хоста выполняют трехстороннее рукопожатие:</p>
+    <p><img src="../images/img_wireshark-handshake-1.png" alt="Рукопожатие в Wireshark" style="width:100%;max-width:1280px"></p>
+    <p>На снимке экрана показан инструмент Wireshark, используемый для захвата и проверки пакетов. Wireshark - очень хорошая утилита, потому что она позволяет нам визуализировать пакеты и исследовать их более глубоко. На снимке экрана показаны 3 пакета, представляющие трехстороннее рукопожатие. Обратите внимание на столбцы источника и назначения, представляющие взаимодействующие стороны. В поле &quot;Информация&quot; отображается порт источника и назначения, включая (в квадратных скобках) SYN, SYN/ACK и ACK.</p>
+    <p>На следующем снимке экрана показаны данные, передаваемые между сторонами после трехстороннего рукопожатия. Данные внутри пакета TCP были выделены в нижней части изображения.</p>
+    <p><img src="../images/img_tcp-data.png" alt="TCP Данные" style="width:100%;max-width:1280px"></p>
     <div class="w3-panel w3-note">
-        <p>A message to W3School students is shown in the screenshot above. Can you see it?</p>
+        <p>Сообщение для учеников W3School показано на скриншоте выше. Видишь?</p>
     </div>
     <hr>
 
-    <h2>Spoofing Traffic</h2>
-    <p>There are few restrictions on networks today for anyone to create packets as they desire. Anyone can create packets with any of the fields of the headers set to whatever value they desire. This is called spoofing, allowing attackers to send traffic on behalf of others.</p>
+    <h2>Spoofing Traffic - Спуфинг (обман) трафика</h2>
+    <p>Сегодня существует несколько ограничений для сетей, позволяющих создавать пакеты по своему усмотрению. Кто угодно может создавать пакеты с любым из полей заголовков, установленным на любое желаемое значение. Это называется спуфингом, позволяющим злоумышленникам отправлять трафик от имени других.</p>
     <p><img src="../svg/img_spoofing-2.svg" alt="Spoofing" style="width:100%;max-width:1280px"></p>
-
-    <p>TCP has security built into the protocol, but it relies on the strength of the PRNG ("Pseudo Random Number Generator") number generators. If the Sequence numbers of the communicating parties can be guessed, the security of TCP can be compromised in the sense that an attacker can engage in spoofed communications via TCP.</p>
-    <p>Many protocols are easily spoofed, but TCP offers some resiliency against this. Protocols such as UDP and ICMP does not offer similar protection.</p>
-    <p>Spoofing packets is typically done by attackers with root / system capabilities, i.e. the highest privileges on the Operating System. The reason being that Operating Systems enforces the use of API's which forces the user to conform to the rules of communications as specified in RFC's ("Request For Comments"). If the attacker does not have the highest privileges, they will not be able to craft their own packets on the network.</p>
+    <p>Протокол TCP имеет встроенную безопасность, но он полагается на мощь генераторов чисел PRNG (&quot;Pseudo Random Number Generator&quot; - &quot;Генератор псевдослучайных чисел&quot;). Если порядковые номера взаимодействующих сторон можно угадать, безопасность TCP может быть скомпрометирована в том смысле, что злоумышленник может участвовать в ложных сообщениях через TCP.</p>
+    <p>Многие протоколы легко подделать, но TCP предлагает некоторую устойчивость к этому. Такие протоколы, как UDP и ICMP, не обеспечивают аналогичной защиты.</p>
+    <p>Подмена пакетов обычно выполняется злоумышленниками с полномочиями root/system, то есть наивысшими привилегиями в операционной системе. Причина в том, что операционные системы предписывают использование API, что заставляет пользователя соблюдать правила связи, указанные в RFC (&quot;Request For Comments&quot; - &quot;Запрос комментариев&quot;). Если злоумышленник не имеет наивысших привилегий, он не сможет создавать свои собственные пакеты в сети.</p>
     <hr>
 
-    <h2>UDP ("User Datagram Protocol")</h2>
-    <p>UDP is used for traffic which does not need the resilience and security of TCP, typically applications such as VOIP, but in the modern world more applications are using UDP to support fast packet transfer with resiliency and security built into the higher levels of the OSI model; QUIC is an example of this.</p>
-    <p>Looking at the UDP Header we can see the same Source and Destination ports in use, but no Sequence numbers or Control bits. The protocol has much less overhead, leading to faster transmission of data.</p>
-    <p><img src="../images/img_udp-header.png" alt="UDP Header" style="width:100%;max-width:1280px"></p>
-    <p>Because UDP does not have features such as the 3-Way-Handshake, UDP can be easily spoofed.</p>
+    <h2>UDP (&quot;User Datagram Protocol&quot; - &quot;Протокол пользовательских датаграмм&quot;)</h2>
+    <p>UDP используется для трафика, который не требует устойчивости и безопасности TCP, как правило, таких приложений, как VOIP, но в современном мире большее количество приложений используют UDP для поддержки быстрой передачи пакетов с отказоустойчивостью и безопасностью, встроенными в более высокие уровни модели OSI; QUIC является примером этого.</p>
+    <p>Глядя на заголовок UDP, мы видим, что используются те же порты источника и назначения, но нет порядковых номеров или управляющих битов. Протокол имеет гораздо меньше накладных расходов, что приводит к более быстрой передаче данных.</p>
+    <p><img src="../images/img_udp-header.png" alt="UDP Заголовок" style="width:100%;max-width:1280px"></p>
+    <p>Поскольку UDP не имеет таких функций, как трехстороннее рукопожатие, UDP можно легко подделать.</p>
     <hr>
 
-    <h2>Switched Networks</h2>
-    <p>Systems are connected to a LAN ("Local Area Network") through a Switch. Switches uses MAC ("Media Access Control") addresses for addressing, not the more well-known IP address. Switches forward traffic across Local Area Networks, i.e. your home-network or within branches of your organization. MAC Addresses are designed to be unique, but anyone can change their MAC Address as long as they have administrator rights.</p>
-    <p>The MAC address defined by 6 octets, for example: FC:F8:AE:12:34:56</p>
-    <p>The first three octets represent the organization which manufactured the device communicating, called OUI ("Organizational Unique Identifier"). The above MAC address is assigned to Intel Corporate. You can search for MAC Addresses in many places, for example: https://www.adminsub.net/mac-address-finder/intel.</p>
-    <p>The last three octets is determined by the manufacturer.</p>
+    <h2>Коммутируемые сети</h2>
+    <p>Системы подключаются к LAN (&quot;Local Area Network&quot; - &quot;Локальная сеть&quot;) через коммутатор. Коммутаторы используют для адресации MAC-адреса (&quot;Media Access Control&quot; - &quot;Управление доступом к среде&quot;), а не более известный IP-адрес. Коммутатор пересылает трафик через локальные сети, то есть в вашу домашнюю сеть или в филиалы вашей организации. MAC-адреса разработаны так, чтобы быть уникальными, но любой может изменить свой MAC-адрес, если у него есть права администратора.</p>
+    <p>MAC-адрес, определяемый 6 октетами, например: FC:F8:AE:12:34:56</p>
+    <p>Первые три октета представляют организацию, которая произвела устройство для связи, и называется OUI (&quot;Organizational Unique Identifier&quot; - &quot;Уникальный идентификатор организации&quot;). Вышеупомянутый MAC-адрес назначен Intel Corporate. Вы можете искать MAC-адреса во многих местах, например:
+        <a href="https://www.adminsub.net/mac-address-finder/intel" target="_blank" rel="nofollow">https://www.adminsub.net/mac-address-finder/intel</a>.</p>
+    <p>Последние три октета определяются производителем.</p>
     <hr>
 
     <h2>ARP</h2>
-    <p>ARP ("Address Resolution Protocol") is the protocol which allows computer systems to know which MAC address belongs to which IP address. If the traffic has to be routed, the computer system will forward traffic to the Default Gateway configured on the system.</p>
-    <p>ARP, like DNS, is a protocol which resolves one address into another. Every time a system tries to communicate to an IP address which is on the LAN it will check its ARP cache to see if has recently been resolved.</p>
-    <p>You can inspect your own ARP. Simply run the command <code>arp -a</code> on both Linux or Windows. This reveals which systems your system has recently communicated with.</p>
+    <p>ARP (&quot;Address Resolution Protocol&quot; - &quot;Протокол разрешения адресов&quot;) - это протокол, который позволяет компьютерным системам знать, какой MAC-адрес принадлежит какому IP-адресу. Если трафик необходимо маршрутизировать, компьютерная система будет перенаправлять трафик на шлюз по умолчанию, настроенный в системе.</p>
+    <p>ARP, как и DNS, - это протокол, преобразующий один адрес в другой. Каждый раз, когда система пытается связаться с IP-адресом, находящимся в локальной сети, она проверяет свой кэш ARP, чтобы узнать, не было ли разрешено недавно.</p>
+    <p>Вы можете проверить свой собственный ARP. Просто запустите команду <code>arp -a</code> как в Linux, так и в Windows. Это показывает, с какими системами ваша система недавно взаимодействовала.</p>
     <div class="w3-code w3-border notranslate">
-        Alice: Does anyone know the MAC address of 192.168.10.10?<br>
-        Bob: Sure thing Alice, here is my MAC Address.</div>
+        Alice: Кто-нибудь знает MAC-адрес 192.168.10.10?<br>
+        Bob: Конечно, Alice, вот мой MAC-адрес.</div>
     <hr>
 
-    <h2>VLAN ("Virtual LAN")</h2>
-    <p>VLAN, often called Private VLAN's, is a way for a Switch to embed tags (or a VLAN ID) within the Frame. Multiple Switches can then make sure that computer systems on the LAN can only communicate to certain other systems, i.e. other systems on with the same VLAN ID.</p>
+    <h2>VLAN (&quot;Virtual LAN&quot; - &quot;Виртуальная локальная сеть&quot;)</h2>
+    <p>VLAN, часто называемая частной VLAN, позволяет коммутатору встраивать теги (или идентификатор VLAN) во фрейм. Затем несколько коммутаторов могут гарантировать, что компьютерные системы в локальной сети могут связываться только с определенными другими системами, то есть с другими системами с тем же идентификатором VLAN.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cybersecurity_network_layer.html">&#10094; Prev</a>
