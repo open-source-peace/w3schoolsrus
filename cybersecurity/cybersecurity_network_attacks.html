@@ -6,7 +6,7 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'><title>Учебник по кибербезопасности. Сетевые атаки. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Сетевые атаки. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Сетевые атаки. Переполнение буфера. Сканеры уязвимостей. Выполнение кода. Сетевой мониторинг. Одноранговый трафик. Боковое движение и поворот. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -316,22 +316,23 @@
         <a class="w3-right w3-btn" href="cybersecurity_web_applications_attacks.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Network Attacks</h2>
-    <p>Attacks on protocols and applications hosted on the Network are plentiful. Web Applications are covered in its own section in this course.</p>
-    <p>Services can have inherent bugs in them allowing them to be exploited by attackers. These attacks typically involve using special instructions to the Operating System, via the vulnerable service, to take control of the process operating the network service. Buffer Overflows is a category of such attacks.</p>
-    <p>A network typically holds many applications, some which holds simple logins and others with complex functionality. One way to gain an overview of the attack surface, and also map out easy to exploit vulnerabilities, is to port scan all the assets in the target environment, then screenshot them.</p>
-    <p>Tools like EyeWitness (https://github.com/FortyNorthSecurity/EyeWitness) accomplish this. The tool allows us to quickly get an overview of which assets are represented on the network, then provides screenshots of each service. By having the screenshots we can easily look and assess quickly which systems we should take a closer look at.</p>
-    <p>Exploiting a service means to abuse the service in ways it was not intended to. Often this exploitation activity means the attackers are capable of running their own code, this is called RCE ("Remote Code Execution").&nbsp;</p>
+    <h2>Сетевые атаки</h2>
+    <p>Атаки на протоколы и приложения, размещенные в Сети, многочисленны. Веб-приложения рассматриваются в отдельном разделе этого курса.</p>
+    <p>Сервисы могут иметь изначальные ошибки, позволяющие злоумышленникам использовать их. Эти атаки обычно включают использование специальных инструкций для операционной системы через уязвимую службу, чтобы взять под контроль процесс, управляющий сетевой службой. Переполнение буфера - это категория таких атак.</p>
+    <p>Сеть обычно содержит множество приложений, некоторые из которых содержат простые учётные записи, а другие - со сложной функциональностью. Один из способов получить общее представление о поверхности атаки, а также наметить уязвимости, которые легко использовать, - это сканирование портов всех активов в целевой среде, а затем их снимки экрана.</p>
+    <p>Такие инструменты, как EyeWitness (Глаз-свидетель) (https://github.com/FortyNorthSecurity/EyeWitness), позволяют это сделать. Инструмент позволяет нам быстро получить представление о том, какие активы представлены в сети, а затем предоставляет снимки экрана (скриншоты) для каждой службы. Имея снимки экрана, мы можем легко посмотреть и быстро оценить, какие системы нам следует рассмотреть поближе.</p>
+    <p>Использование сервиса означает злоупотребление сервисом не по назначению. Часто эта эксплуатационная деятельность означает, что злоумышленники могут запускать свой собственный код, это называется RCE (&quot;Remote Code Execution&quot; - &quot;Удаленное выполнение кода&quot;).</p>
     <hr>
 
-    <h2>Buffer Overflow</h2>
-    <p>Exploitation of network services sometimes involve abusing memory management functions of an application. Memory management? Yes, applications need to move around data within the computers memory in order to make the application work. When programming languages give the developer control of memory, problems like Buffer Overflow might exist. There exists many similar vulnerabilities, and in this section we review Buffer Overflows.</p>
-    <p>Programming language C and C++ allows developers very much control of how memory is managed. This is ideal for applications which requires developers to program very closely to the hardware, but opens up for vulnerabilities. Programming languages like Java, JavaScript, C#, Ruby, Python and others does not easily allow developers to make these mistakes, making Buffer Overflows less likely in applications written in these languages.&nbsp;</p>
-    <p>Buffer Overflows happen when un-sanitized input is placed into variables. These variables are represented on the Operating System via a memory structure called a Stack. The attacker can then overwrite a portion of the stack called the Return Pointer.</p>
-    <div class="w3-note w3-panel"><strong>Note</strong>: The stack memory structure is simply where a program stores variables and information it needs to run. The stack will be located within a computers RAM ("Random Access Memory")</div>
-    <p>The Return Pointer decides where the CPU ("Central Processing Unit") should execute code next. The CPU simply controls which instructions the system should perform at any given moment. The return pointer is simply an address in memory where execution should happen. The CPU must always be told where to execute code, and this is what the return pointer allows it to do.&nbsp;</p>
-    <p>When attacker is able to control the Return Pointer, it means the attacker can control which instructions the CPU should execute!</p>
-    <p>For example consider the following code C example (do not worry, you do not have to be a C developer, but do your best to try understand what this simple application does):</p>
+    <h2>Переполнение буфера</h2>
+    <p>Эксплуатация сетевых служб иногда включает злоупотребление функциями управления памятью приложения. Управление памятью? Да, приложениям необходимо перемещать данные в памяти компьютера, чтобы приложение работало. Когда языки программирования предоставляют разработчику контроль над памятью, могут возникнуть проблемы, подобные переполнению буфера. Существует много подобных уязвимостей, и в этом разделе мы рассмотрим переполнение буфера.</p>
+    <p>Язык программирования C и C++ позволяет разработчикам полностью контролировать управление памятью. Это идеально подходит для приложений, которые требуют от разработчиков очень близкого программирования к оборудованию, но при этом открыты для уязвимостей. Такие языки программирования, как Java, JavaScript, C#, Ruby, Python и другие не позволяют разработчикам допускать подобные ошибки, что снижает вероятность переполнения буфера в приложениях, написанных на этих языках.</p>
+    <p>Переполнение буфера происходит, когда необработанный ввод помещается в переменные. Эти переменные представлены в операционной системе через структуру памяти, называемую стеком. Затем злоумышленник может перезаписать часть стека, называемую указателем возврата.</p>
+
+    <div class="w3-note w3-panel"><b>Примечание</b>. Структура памяти стека - это просто место, где программа хранит переменные и информацию, необходимую для запуска. Стек будет расположен в RAM (&quot;Random Access Memory&quot; - &quot;Оперативная память компьютера&quot;).</div>
+    <p>Указатель возврата определяет, где CPU (&quot;Central Processing Unit&quot; - &quot;Центральный процессор компьютера&quot;) должен выполнять код следующим. ЦП просто контролирует, какие инструкции система должна выполнять в любой момент. Указатель возврата - это просто адрес в памяти, по которому должно произойти выполнение. ЦП всегда нужно указывать, где выполнять код, и это то, что ему позволяет делать указатель возврата.</p>
+    <p>Когда злоумышленник может контролировать указатель возврата, это означает, что злоумышленник может контролировать, какие инструкции должен выполнять ЦП!</p>
+    <p>Например, рассмотрим следующий пример кода C (не беспокойтесь, вам не обязательно быть разработчиком C, но постарайтесь понять, что делает это простое приложение):</p>
     <div class="w3-example">
         <div class="w3-code notranslate">#include &lt;string.h&gt;<br>
             void storeName (char *input) {<br>
@@ -344,81 +345,79 @@
             &nbsp;&nbsp;return 0;<br>
             }<br>
         </div></div>
-    <p>In many programming languages, including C, the application starts within a function called main. This is indicated in the code above where it says <code>int main (int argc, char **argv) {</code>. Inside the curly brackets { and } the program simply runs a function called <code>storeName(argv[1]);</code>. This will simply accept whatever the user has typed into the program and provides it to the storeName function.</p>
-    <p>The application has 11 lines of code, but focus your attention on the line that reads <code>strcpy(name, input);</code>. This is a function which tries to copy text from input into the variable called name. Name can hold maximum 12 characters as indicated by the line saying <code>char name[12];</code>. Is there any place in the code that prevents the name supplied being longer than 12 characters? The name variable is supplied by the user whom is using the application and is passed directly into the storeName function.&nbsp;</p>
-    <p>In this application there is no cleaning or sanitization, making sure the length of the inputs are what the application expects. Anyone running the program can easily input a value larger than what the name variable can hold as a maximum. The name variable holds 12 characters, but what happens when the CPU is told to write more than 12 characters? It will simply perform what is has been told to, overwriting as much memory as it needs to!</p>
-    <p>When a larger than expected value is attempted written, the CPU will still attempt to write this value into memory. This effectively causes the CPU to overwrite other things in-memory, for example the Return Pointer allowing attackers to control the CPU. Again, if the attacker can overwrite and control the Return Pointer, the attacker controls which code the CPU should execute.&nbsp;</p>
-    <p>A graphical example shows Alice writing her name into the application we used in the example above:</p>
-    <p><img src="img_bufferoverflow.png" alt="Buffer Overflow" style="width:100%;max-width:1280px"></p>
-    <p>Alice behaves nicely and provides a name which causes the application to behave as it should. She provides her name Alice and it is simply written into the applications memory.&nbsp;</p>
-    <p>Eve however sends too many characters into the application. What happens then? The CPU effectively takes her input and writes the input into memory, also overwriting other values that exists!</p>
-    <p><img src="img_bufferoverflow-exploited.png" alt="Exploit Buffer Overflow" style="width:100%;max-width:1280px"></p>
-    <p>Eve's input caused the CPU to write much more data than what the application expected, and it caused the return pointer to be overwritten. When the CPU tries to execute the next instruction, it is now told to execute code at the location of <em>AAAAAAA</em>...</p>
-    <p>If Eve were to take control of this server, instead of writing A's, she would
-        instead have to provide code that the CPU can understand into the memory. Next she would make the return pointer have a value which tells the CPU to execute Eve's own CPU code.&nbsp;&nbsp;</p>
-    <div class="w3-panel w3-note"><strong>Note</strong>: Simply put, buffer overflows allows attackers to take control of a victims CPU by carefully overwriting the memory of the victim.&nbsp;</div>
+    <p>Во многих языках программирования, включая C, приложение запускается в функции, называемой main. Это указано в приведенном выше коде, где указано <code>int main (int argc, char **argv) {</code>. В фигурных скобках {and} программа просто запускает функцию с именем <code>storeName (argv[1]);</code>. Она просто примет всё, что пользователь ввёл в программу, и предоставит это функции storeName.</p>
+    <p>В приложении 11 строк кода, но обратите внимание на строку, которая читает <code>strcpy(name, input);</code>. Это функция, которая пытается скопировать текст из ввода в переменную с именем name. Имя может содержать не более 12 символов, как указано в строке <code>char name[12];</code>. Есть ли в коде место, которое препятствует тому, чтобы указанное имя было длиннее 12 символов? Переменная name предоставляется пользователем, который использует приложение, и передается непосредственно в функцию storeName.</p>
+    <p>В этом приложении нет очистки или дезинфекции, чтобы убедиться, что длина входных данных соответствует ожиданиям приложения. Любой, кто запускает программу, может легко ввести значение, превышающее максимальное значение переменной name. Переменная name содержит 12 символов, но что произойдет, если ЦП прикажут записать более 12 символов? Он просто выполнит то, что было сказано, перезаписав столько памяти, сколько потребуется!</p>
+    <p>При попытке записи значения, превышающего ожидаемое, ЦП все равно будет пытаться записать это значение в память. Это фактически заставляет ЦП перезаписывать другие данные в памяти, например, указатель возврата, позволяющий злоумышленникам управлять ЦП. Опять же, если злоумышленник может перезаписать указатель возврата и управлять им, он контролирует, какой код должен выполнять ЦП.</p>
+    <p>Графический пример показывает, как Алиса записывает своё имя в приложение, которое мы использовали в примере выше:</p>
+    <p><img src="../images/img_bufferoverflow.png" alt="Переполнение буфера" style="width:100%;max-width:1280px"></p>
+    <p>Алиса ведёт себя хорошо и даёт имя, которое заставляет приложение вести себя должным образом. Она сообщает своё имя Алиса, и оно просто записывается в память приложения.</p>
+    <p>Однако Ева отправляет в приложение слишком много символов. Что тогда происходит? ЦП эффективно принимает её входные данные и записывает их в память, а также перезаписывает другие существующие значения!</p>
+    <p><img src="../images/img_bufferoverflow-exploited.png" alt="Использовать переполнение буфера" style="width:100%;max-width:1280px"></p>
+    <p>Ввод Евы заставил ЦП записать гораздо больше данных, чем ожидало приложение, и это привело к перезаписи указателя возврата. Когда ЦП пытается выполнить следующую инструкцию, ему теперь предлагается выполнить код в местоположении <em>AAAAAAA</em>...</p>
+    <p>Если бы Ева взяла на себя управление этим сервером, вместо того, чтобы писать A, ей пришлось бы вместо этого предоставить код, который ЦП может понять в памяти. Затем она заставит указатель возврата иметь значение, которое говорит ЦП выполнить собственный код ЦП Евы.</p>
+    <div class="w3-panel w3-note"><b>Примечание</b>: Проще говоря, переполнение буфера позволяет злоумышленникам взять под контроль ЦП жертвы, тщательно перезаписав память жертвы.</div>
     <hr>
 
-    <h2>Vulnerability Scanners</h2>
-    <p>A vulnerability scanner looks for common vulnerabilities in software and configurations across the network, automatically. It is not designed to find new classes of vulnerabilities, but instead uses a list of pre-defined plugins (or modules) to scan services for issues and vulnerabilities. It does not necessarily hunt for zero-day vulnerabilities! A zero-day vulnerability is a brand new vulnerability which is previously unknown to the vendor of the software and the defenders; for a zero-day vulnerability there currently exists no known patches for the problem.&nbsp;</p>
-    <p>The scanners have network mapping and port scanning features, including ways to explore and find vulnerabilities in the different applications it encounters.</p>
-    <p>A vulnerability scanner often supports configuration with credentials, allowing it to log onto systems and assess vulnerabilities instead of finding them from an unauthenticated perspective.</p>
-    <div class="w3-panel w3-note"><strong>Note:</strong> Vulnerability scanners are mostly looking for known vulnerabilities and mis-configurations, not zero-day vulnerabilities!</div>
+    <h2>Сканеры уязвимостей</h2>
+    <p>Сканер уязвимостей автоматически ищет распространенные уязвимости в программном обеспечении и конфигурациях в сети. Он не предназначен для поиска новых классов уязвимостей, но вместо этого использует список предопределенных плагинов (или модулей) для сканирования служб на предмет проблем и уязвимостей. Необязательно искать уязвимости нулевого дня! Уязвимость нулевого дня - это совершенно новая уязвимость, о которой ранее не знали ни поставщик программного обеспечения, ни защитники; для уязвимости нулевого дня в настоящее время не существует известных исправлений проблемы.</p>
+    <p>Сканеры имеют функции сетевого сопоставления и сканирования портов, включая способы исследования и поиска уязвимостей в различных приложениях, с которыми они сталкиваются.</p>
+    <p>Сканер уязвимостей часто поддерживает конфигурацию с учётными данными, что позволяет ему входить в систему и оценивать уязвимости вместо того, чтобы находить их с неавторизованной точки зрения.</p>
+    <div class="w3-panel w3-note"><b>Примечание:</b> Сканеры уязвимостей в основном ищут известные уязвимости и неправильные конфигурации, а не уязвимости нулевого дня!</div>
     <hr>
 
-    <h2>Code Execution</h2>
-    <p>When attackers have found a vulnerability which they are capable of exploiting, they need to decide on what payload they want to run. The payload is the code the attacker wants to have delivered through an exploit.</p>
-    <p>There are many different payloads an attacker can decide to use, here are some examples:</p>
+    <h2>Выполнение кода</h2>
+    <p>Когда злоумышленники обнаруживают уязвимость, которую они могут использовать, им необходимо решить, какую полезную нагрузку они хотят запустить. Полезная нагрузка - это код, который злоумышленник хочет доставить с помощью эксплойта.</p>
+    <p>Злоумышленник может решить использовать множество различных полезных данных. Вот несколько примеров:</p>
     <ul>
-        <li>Make the victim register with a C2 ("Command and Control") server accepting commands from attackers</li>
-        <li>Create a new backdoor user account on the system so the attacker can use it later</li>
-        <li>Open a GUI ("Graphical User Interface") with the victim so the attacker can remotely control it</li>
-        <li>Receive a command line terminal, a shell, which attacker can send commands through</li>
+        <li>Заставить жертву зарегистрироваться на сервере C2 (&quot;"Command and Control&quot; - &quot;Командование и контроль&quot;), принимающем команды от злоумышленников.</li>
+        <li>Создайте новую учетную запись пользователя бэкдора в системе, чтобы злоумышленник мог использовать её позже.</li>
+        <li>Откройте GUI (&quot;Graphical User Interface&quot; - &quot;Графический Интерфейс Пользователя&quot;) с жертвой, чтобы злоумышленник мог удалённо управлять ею.</li>
+        <li>Получите терминал командной строки, оболочку, через которую злоумышленник может отправлять команды.</li>
     </ul>
-    <p>A payload common by attackers is a bind-shell. It causes the victim to listen on a port, and when the attacker connects they receive a shell.</p>
-    <p><img src="img_bind-shell.svg" alt="Bind Shell" style="width:100%;max-width:1280px"></p>
-    <p>Firewalls are helpful in preventing attackers from connecting to victims. A firewall would effectively deny incoming connections to the victim as long as the port is not allowed. Only one application can listen on a port, so attackers can not listen on ports that are already in use unless they disable that service.</p>
-    <p>To circumvent this defensive measure, attackers will instead try make the victim connect to the attacker, making the victim serve up access to the payload. Many firewalls unfortunately are not configured to deny egress traffic, making this attack very viable for attackers.</p>
-    <p>In this example we see an attacker using a reverse-shell to make the victim connect to the attacker.</p>
-    <p><img src="img_reverse-shell.svg" alt="Reverse Shell" style="width:100%;max-width:1280px"></p>
-    <div class="w3-panel w3-note"><strong>Note:</strong> Code executions means attackers can run their code on the victims system. What code they choose to deploy is up to them, but it often involves attackers having a way to run commands on the victims system long term.&nbsp;</div>
-
+    <p> Обычно злоумышленники используют bind-shell. Это заставляет жертву прослушивать порт, и когда злоумышленник подключается, они получают оболочку.</p>
+    <p><img src="../svg/img_bind-shell.svg" alt="Привязать оболочку" style="width:100%;max-width:1280px"></p>
+    <p>Файерволы помогают предотвратить подключение злоумышленников к жертвам. Файервол будет эффективно отклонять входящие соединения с жертвой, пока порт не разрешен. Только одно приложение может прослушивать порт, поэтому злоумышленники не могут прослушивать порты, которые уже используются, если они не отключат эту службу.</p>
+    <p>Чтобы обойти эту защитную меру, злоумышленники вместо этого попытаются заставить жертву подключиться к злоумышленнику, заставляя жертву предоставить доступ к полезной нагрузке. К сожалению, многие файерволы (брандмауэры) не настроены для запрета исходящего трафика, что делает эту атаку очень реальной для злоумышленников.</p>
+    <p>В этом примере мы видим, как злоумышленник использует обратную оболочку, чтобы заставить жертву подключиться к злоумышленнику.</p>
+    <p><img src="../svg/img_reverse-shell.svg" alt="Обратная оболочка" style="width:100%;max-width:1280px"></p>
+    <div class="w3-panel w3-note"><b>Примечание:</b> Выполнение кода означает, что злоумышленники могут запустить свой код в системе жертвы. Какой код они выберут для развертывания, зависит от них, но это часто связано с тем, что злоумышленники имеют возможность запускать команды в системе жертвы в долгосрочной перспективе.</div>
     <hr>
-    <h2>Network Monitoring</h2>
-    <p>Attackers require the network in most cases to remotely control a target. When attackers are capable of remotely controlling a target, this is done via a Command and Control channel, often called C&amp;C or C2.</p>
-    <p>There exists compromises via malware which is pre-programmed with payloads which does not need C2. This kind of malware is capable of compromising even air-gapped networks.</p>
-    <p>Detecting compromises can often be done via finding the C2 channel. C2 can take any form, for example:</p>
+
+    <h2>Сетевой мониторинг</h2>
+    <p>Злоумышленникам в большинстве случаев требуется, чтобы сеть удаленно контролировала цель. Когда злоумышленники могут удаленно контролировать цель, это осуществляется через канал управления и контроля (Command and Control), часто называемый C&amp;C или C2.</p>
+    <p>Существуют компромиссы с помощью вредоносного ПО, которое заранее запрограммировано с полезными нагрузками, которым не нужен C2. Вредоносные программы такого типа способны взломать даже сети с воздушным зазором.</p>
+    <p>Обнаружение компрометации часто может быть выполнено путем обнаружения канала C2. C2 может принимать любую форму, например:</p>
     <ul>
-        <li>Using HTTPS to communicate to attacker servers. This makes the C2 look like network browsing</li>
-        <li>Using Social Networks to post and read messages automatically</li>
-        <li>Systems like Google Docs to add and edit commands to victims</li>
+        <li>Использование HTTPS для связи с серверами злоумышленников. Это делает C2 похожим на просмотр сети</li>
+        <li>Использование социальных сетей для автоматической публикации и чтения сообщений</li>
+        <li>Такие системы, как Google Docs, для добавления и редактирования команд жертвам</li>
     </ul>
-    <p><img src="img_networkmonitoring-beacon.png" alt="Network Monitoring Beacon" style="width:100%;max-width:1280px"></p>
-    <p>Only an attackers ingenuity sets the limit for C2. When considering how to stop attackers with clever C2 channels, we must often rely on detecting statistical anomalies and discrepancies on the network. For example network monitoring tools can detect:</p>
+    <p><img src="../images/img_networkmonitoring-beacon.png" alt="Маяк мониторинга сети" style="width:100%;max-width:1280px"></p>
+    <p>Только изобретательность атакующего устанавливает предел для C2. При рассмотрении того, как остановить злоумышленников с помощью умных каналов C2, мы часто должны полагаться на обнаружение статистических аномалий и расхождений в сети. Например, инструменты сетевого мониторинга могут обнаруживать:</p>
     <ul>
-        <li>long connections used by C2, but which is unnatural for the protocol in question. HTTP is one of those protocols where it is not very common to have long connections, but an attacker using it for remote control might.&nbsp;</li>
-        <li>Beacons used by C2 to indicate the victim is alive and ready for commands. Beacons are used by many kinds of software, not just attackers, but knowing which beacons exists and which you expect is good practice.&nbsp;</li>
-        <li>Strobes of data suddenly bursting from the network. This might indicate a large upload from an application, or an attacker stealing data. Try understand which application and user is causing strobes of data happening and apply context to it. Is it normal or not?&nbsp;</li>
+        <li>Длинные соединения, используемые C2, что неестественно для рассматриваемого протокола. HTTP - один из тех протоколов, где длинные соединения не очень распространены, но злоумышленник, использующий его для удаленного управления, может его применять.</li>
+        <li>Маяки, используемые C2, чтобы указать, что жертва жива и готова к командам. Маяки используются многими видами программного обеспечения, не только злоумышленниками, но знание того, какие маяки существуют и чего вы ожидаете, является хорошей практикой.</li>
+        <li>Из сети внезапно появляются вспышки данных. Это может указывать на большую загрузку из приложения или на кражу данных злоумышленником. Попытайтесь понять, какое приложение и пользователь вызывает появление вспышек данных, и примените к ним контекст. Это нормально или нет?</li>
     </ul>
-    <p>There exists many ways defenders can try to find anomalies. These anomalies should be further correlated with data from the source system sending the data.</p>
-    <p>For network monitoring, context should be applied to help determine noise from signal. That means that a SOC ("Security Operations Center") should try to enrich data, for example Source and Destination IP Addresses with context to help make the data more valuable.</p>
-    <p>Applying context can be described with the following scenario: An attack arrives from the Internet but it tries to exploit a Linux vulnerability against a Windows service. This would typically be considered as noise and could safely be ignored; unless, what if the IP address doing the attack is an IP address from your own network or a provider whom you trust? The context which we can apply can then provide valuable insight into us exploring the attack further.
-        After all, we don't want systems we trust launching any attacks!</p>
+    <p>Есть много способов, которыми защитники могут попытаться найти аномалии. Эти аномалии следует дополнительно сопоставить с данными из исходной системы, отправляющей данные.</p>
+    <p>Для мониторинга сети следует применять контекст, чтобы определить шум по сигналу. Это означает, что SOC (&quot;Security Operations Center - &quot;Центр управления безопасностью&quot;) должен попытаться дополнить данные, например IP-адреса источника и назначения, контекстом, чтобы сделать данные более ценными.</p>
+    <p>Применение контекста можно описать следующим образом: атака приходит из Интернета, но пытается использовать уязвимость Linux в службе Windows. Обычно это рассматривается как шум, и его можно безопасно игнорировать; разве что, если IP-адрес, выполняющий атаку, является IP-адресом вашей собственной сети или провайдера, которому вы доверяете? Контекст, который мы можем применить, может дать ценную информацию о том, как мы исследуем атаку дальше. В конце концов, мы не хотим, чтобы системы, которым мы доверяли, запускали какие-либо атаки!</p>
     <hr>
 
-    <h2>Peer to peer traffic</h2>
-    <p>Most networks are configured in a client to server fashion. Client access the servers for information, and when clients need to interact with one another they typically do it via a server.</p>
-    <p>An attacker however will likely want to use peer-to-peer, i.e. client to client, communications to leverage low hanging fruits like re-using credentials or exploiting weak or vulnerable clients.</p>
-    <p>For example port 445, used by SMB, is a good indicator to use for detecting compromise. Clients should not be talking to one another via SMB in most environments, however during a compromise it is likely an attacker will try use SMB to further compromise systems.</p>
-    <p><img src="img_peer-to-peer.svg" alt="Peer-to-Peer" style="width:100%;max-width:1280px"></p>
+    <h2>Peer to peer traffic - Одноранговый трафик</h2>
+    <p>Большинство сетей настроены по принципу &quot;клиент-сервер&quot;. Клиент получает доступ к серверам для получения информации, и когда клиентам необходимо взаимодействовать друг с другом, они обычно делают это через сервер.</p>
+    <p>Однако злоумышленник, скорее всего, захочет использовать одноранговую связь, то есть связь от клиента к клиенту, чтобы использовать низко висящие плоды, такие как повторное использование учетных данных или использование слабых или уязвимых клиентов.</p>
+    <p>Например, порт 445, используемый SMB, является хорошим индикатором для обнаружения взлома. Клиенты не должны общаться друг с другом через SMB в большинстве сред, однако во время компрометации злоумышленник, скорее всего, попытается использовать SMB для дальнейшей компрометации систем.</p>
+    <p><img src="../svg/img_peer-to-peer.svg" alt="Peer-to-Peer - Одноранговый трафик" style="width:100%;max-width:1280px"></p>
     <hr>
 
-    <h2>Lateral Movement and Pivoting</h2>
-    <p>Once a system is compromised, an attacker can leverage that system to explore additional networks the compromised system has access to. This would be possible in an environment where a compromised system has more privileges through the firewall, or the system has access to other networks through e.g. an additional network card.</p>
-    <p>Pivoting means an attacker uses a compromised host to reach into other networks. An illustration of this is shown here where Eve has compromised one system and is using it to scan and discover others:</p>
-    <p><img src="img_pivoting-lateral-movement.svg" alt="Pivoting Lateral Movement" style="width:100%;max-width:1280px"></p>
-    <p>Lateral Movement is the act of taking advantage of the pivot and exploit another system using the pivot. This new system can now be further used to do pivoting and more lateral movement. Eve in this example uses Server X to further discover System B.</p>
-    <p><img src="img_pivoting-lateral-movement2.svg" alt="Pivoting Lateral Movement" style="width:100%;max-width:1280px"></p>
+    <h2>Боковое движение и поворот</h2>
+    <p>После взлома системы злоумышленник может использовать эту систему для исследования дополнительных сетей, к которым у взломанной системы есть доступ. Это было бы возможно в среде, где скомпрометированная система имеет больше привилегий через файервол или система имеет доступ к другим сетям, например, через дополнительную сетевую карту.</p>
+    <p>Поворот означает, что злоумышленник использует взломанный хост для доступа в другие сети. Здесь показана иллюстрация этого, где Ева взломала одну систему и использует её для сканирования и обнаружения других:</p>
+    <p><img src="../svg/img_pivoting-lateral-movement.svg" alt="Поворотное боковое движение" style="width:100%;max-width:1280px"></p>
+    <p>Боковое движение - это действие, в котором используется поворотная точка и другая система с её помощью. Эту новую систему теперь можно использовать для поворотов и боковых движений. Ева в этом примере использует Сервер X для дальнейшего обнаружения Системы B.</p>
+    <p><img src="../svg/img_pivoting-lateral-movement2.svg" alt="Поворотное боковое движение" style="width:100%;max-width:1280px"></p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cybersecurity_mapping_port_scanning.html">&#10094; Prev</a>
