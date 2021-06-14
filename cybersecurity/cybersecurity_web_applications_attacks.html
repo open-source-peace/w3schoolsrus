@@ -6,7 +6,7 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'><title>Учебник по кибербезопасности. Атаки на веб-приложения. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Атаки на веб-приложения. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Атаки на веб-приложения. IDOR. Избегайте &quot;Волшебных чисел&quot;. SQL-инъекция. XSS - Межсайтовый скриптинг. HTML Кодирование. CSP - Политика безопасности контента. Сканирование веб-приложений. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -317,22 +317,22 @@
     </div>
     <hr>
 
-    <p class="intro">Web applications are everywhere today, and they are used to control just about everything you can imagine. In this section we will look into web application attacks and security.&nbsp;</p>
+    <p class="intro"><strong>Веб-приложения</strong> сегодня повсюду, и они используются для управления практически всем, что вы можете себе представить. В этой главе мы рассмотрим <strong>атаки и безопасность веб-приложений</strong>.</p>
     <hr>
 
-    <h2>IDOR ("Insecure Direct Object Reference")</h2>
-    <p>IDOR vulnerabilities happen when developers have not implemented authorization requirements to access resources.</p>
+    <h2>IDOR (&quot;Insecure Direct Object Reference&quot; - &quot;Небезопасная прямая ссылка на объект&quot;)</h2>
+    <p>IDOR уязвимости возникают, когда разработчики не реализовали требования авторизации для доступа к ресурсам.</p>
     <p><img src="../svg/img_idor.svg" alt="IDOR" style="width:100%;max-width:1280px"></p>
-    <p>Eve, by simply changing an identifier, e.g. the document Rest parameter, she can access Alice's documents.</p>
-    <p>This happens when the web application does not enforce authorization between objects, allowing attackers to enumerate values and test access to other points of data.</p>
-    <p>For example we might have the following pseudo-code showing no signs of authorization:</p>
+    <p>Ева, просто изменив идентификатор, например параметр документа Rest, может получить доступ к документам Алисы.</p>
+    <p>Это происходит, когда веб-приложение не обеспечивает авторизацию между объектами, позволяя злоумышленникам перечислять значения и проверять доступ к другим точкам данных.</p>
+    <p>Например, у нас может быть следующий псевдокод, не показывающий никаких признаков авторизации:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">$id = getInputFromUser();<br>
             $doc = getDocument($id);<br>
             return $doc;
         </div></div>
-    <p>The code above asks for input from user, performs no validation or sanitization, then performs a lookup with the getDocument function directly and returns the document in question.</p>
-    <p>A better implementation would be to check the privileges:</p>
+    <p>Приведенный выше код запрашивает ввод от пользователя, не выполняет проверку или дезинфекцию, затем выполняет поиск напрямую с помощью функции getDocument и возвращает рассматриваемый документ.</p>
+    <p>Лучшей реализацией будет проверка привилегий:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">$id = getInputFromUser();<br>
             $user = findUsername();<br>
@@ -340,36 +340,35 @@
             if (hasAccessToDocument($user, $id)) {<br>
             &nbsp;&nbsp;$doc = getDocument($id);<br>
             } else {<br>
-            &nbsp;&nbsp;$doc = "Not authorized for this document";<br>
+            &nbsp;&nbsp;$doc = "Не авторизован для этого документа";<br>
             }<br>
             return $doc;<br>
         </div></div>
-    <p>Vulnerabilities like these are easy to find as you can simply change a simple number and see if you get access to someone
-        else's data. Checking if the user is authorized first prevents this vulnerability.&nbsp;</p>
-    <div class="w3-panel w3-note"><strong>Note</strong>: Pseudo code simply means code which resembles real code, but might not actually work. It is used to make an example of actual code.</div>
+    <p>Подобные уязвимости легко найти, поскольку вы можете просто изменить простое число и посмотреть, получите ли вы доступ к чужим данным. Проверка того, авторизован ли пользователь в первую очередь, предотвращает эту уязвимость.</p>
+    <div class="w3-panel w3-note"><b>Примечание</b>: Псевдокод просто означает код, который похож на реальный код, но на самом деле может не работать. Он используется для создания примера реального кода.</div>
     <hr>
 
-    <h2>Avoiding "Magic Numbers"</h2>
-    <p>An application want to avoid using sequences of numbers when referencing data. In the IDOR example, the documents had identifiers from 1000 to 1002. Sometimes these numbers are called "Magic Numbers" as they directly point to a resource on the server, e.g. via database, and all values can easily be enumerated. For example an attacker can check all document identifiers from 0 all the way to 10000 and record any results which provides access to data.</p>
-    <p>While authorization should be properly implemented, it is also helpful to use GUID ("Globally Unique Identifier") or UUID ("Universally Unique Identifier") when referencing data. These identifiers are designed to be globally unique and impossible to enumerate because of the built-in entropy of the generation of the numbers.</p>
-    <p>This is what a GUID can look like:</p>
+    <h2>Избегайте &quot;Волшебных чисел&quot;</h2>
+    <p>Приложение хочет избежать использования последовательностей чисел при обращении к данным. В примере IDOR документы имели идентификаторы от 1000 до 1002. Иногда эти числа называют &quot;волшебными (магическими) числами&quot;, поскольку они напрямую указывают на ресурс на сервере, например, через базу данных, и все значения могут быть легко перечислены. Например, злоумышленник может проверить все идентификаторы документов от 0 до 10000 и записать любые результаты, обеспечивающие доступ к данным.</p>
+    <p>Хотя авторизация должна быть правильно реализована, также полезно использовать GUID (&quot;Globally Unique Identifier&quot; - &quot;Глобальный уникальный идентификатор&quot;) или UUID (&quot;Universally Unique Identifier&quot; - &quot;Универсальный уникальный идентификатор&quot;) при обращении к данным. Эти идентификаторы разработаны так, чтобы быть глобально уникальными и их невозможно перечислить из-за встроенной энтропии генерации чисел.</p>
+    <p>Вот как может выглядеть GUID:</p>
     <ul>
         <li>3377d5a6-236e-4d68-be9c-e91b22afd216</li>
     </ul>
 
-    <div class="w3-note w3-panel"><strong>Note:</strong> If you were to look at the mathematics behind guessing the number above, we would quickly see it is not easy to enumerate. Enumeration is a technique which can be used to walk through all possible options of a value, the GUID or UUID prevents this.&nbsp;</div>
+    <div class="w3-note w3-panel"><b>Примечание:</b> Если вы посмотрите на математику, стоящую за угадыванием числа, указанного выше, мы быстро увидим, что это нелегко пересчитать. Перечисление - это метод, который можно использовать для просмотра всех возможных вариантов значения, GUID или UUID предотвращают это.</div>
     <hr>
 
-    <h2>SQL Injection</h2>
-    <p>Many web applications are connected to a database. The database holds all the information the web application wish to store and use.</p>
-    <p>SQL Injection is a technique which allows attackers to manipulate the SQL ("Structured Query Language") the developer of the web application is using. This typically happens because of lack of data sanitization. SQL is used regularly by developers to access database resources.&nbsp;</p>
+    <h2>SQL-инъекция</h2>
+    <p>Многие веб-приложения подключены к базе данных. База данных содержит всю информацию, которую веб-приложение желает хранить и использовать. </p>
+    <p>SQL-инъекция - это метод, позволяющий злоумышленникам манипулировать языком SQL (&quot;Structured Query Language&quot; - &quot;Язык структурированных запросов&quot;), который использует разработчик веб-приложения. Обычно это происходит из-за отсутствия очистки данных. SQL регулярно используется разработчиками для доступа к ресурсам базы данных.</p>
     <p>
-        <img src="https://mycourses.w3schools.com/courses/195/files/12663/preview" alt="sqlinjection.svg" data-api-endpoint="https://mycourses.w3schools.com/api/v1/courses/195/files/12663" data-api-returntype="File" />&nbsp;&nbsp;
+        <img src="https://mycourses.w3schools.com/courses/195/files/12663/preview" alt="sqlinjection.svg" data-api-endpoint="https://mycourses.w3schools.com/api/v1/courses/195/files/12663" data-api-returntype="File" />
     </p>
     <p><img src="../svg/img_peer-to-peer.svg" alt="Peer-to-Peer" style="width:100%;max-width:1280px"></p>
-    <p>In the request Eve makes in the graphic above, we see she inputs the value: 1000' OR '1'='1</p>
-    <p>This causes the resulting SQL Query to return all rows of the table because the database evaluates the statement as always true.&nbsp; Think about it: the database receives a request where the value can be either 1000 OR 1 is equal to 1; it will return a value every time! There are many different SQL functions and operations we can use to manipulate the syntax, and this example is just one of very many.</p>
-    <p>Below is a pseudo-code example which contains a SQL Injection vulnerability.</p>
+    <p>В запросе Евы на рисунке выше мы видим, что она вводит значение: 1000' OR '1'='1</p>
+    <p>Это приводит к тому, что результирующий SQL-запрос возвращает все строки таблицы, поскольку база данных оценивает этот оператор как всегда истинный. Подумайте об этом: база данных получает запрос, в котором значение может быть либо 1000, либо 1 равно 1; он будет возвращать значение каждый раз! Существует множество различных функций и операций SQL, которые мы можем использовать для управления синтаксисом, и этот пример - лишь один из очень многих.</p>
+    <p>Ниже приведен пример псевдокода, который содержит уязвимость SQL-инъекции.</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             $username =  getUserName();<br>
@@ -380,17 +379,18 @@
             } else {<br>
             &nbsp;&nbsp;$loggedIn = False;<br>
             }
-        </div></div>
-    We can see there is no sanitization on both the username and password variables; instead they are used directly in the SQL causing the vulnerability to occur. The code allows the $loggedIn variable to be set if the query returns anything.
-    <p>For an attacker to exploit this, they could simply craft a URL against the target domain with the attack in it like this:</p>
+        </div>
+    </div>
+    <p>Мы видим, что нет никакой дезинфекции как для переменных имени пользователя, так и для переменных пароля; вместо этого они используются непосредственно в SQL, вызывая уязвимость. Код позволяет установить переменную $loggedIn, если запрос что-либо возвращает.</p>
+    <p>Чтобы злоумышленник мог воспользоваться этим, он может просто создать URL-адрес целевого домена с атакой в нём следующим образом:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">/login?username=admin&amp;password=password' OR '1'='1
         </div></div>
-    <p>The password variable is set to contain the SQL characters, causing the resulting SQL string to return a row, even if the password is unknown to us. The resulting SQL query would be:</p>
+    <p>Переменная пароля содержит символы SQL, в результате чего результирующая строка SQL возвращает строку, даже если пароль нам неизвестен. Результирующий SQL-запрос будет:</p>
     <div class="w3-example">
-        <div class="w3-code notranslate">SELECT * FROM userTable WHERE username = 'admin' AND password = 'password' OR '1'='1'
-        </div></div>
-    <p>Parameterized queries is the recommended solution to defeat SQL Injections. Within a parameterized query, the developers carefully ensure each input to the query is defined as a specific value and type. Here is an example from the above code which is considered a secure implementation:&nbsp;</p>
+        <div class="w3-code notranslate">SELECT * FROM userTable WHERE username = 'admin' AND password = 'password' OR '1'='1'</div>
+    </div>
+    <p>Параметризованные запросы - это рекомендуемое решение для защиты от SQL-инъекций. В параметризованном запросе разработчики тщательно следят за тем, чтобы каждый ввод запроса был определен как конкретное значение и тип. Вот пример из приведенного выше кода, который считается безопасной реализацией:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             $username = getUserName();<br>
@@ -404,44 +404,44 @@
             } else {<br>
             &nbsp; &nbsp; $loggedIn = False;<br>
             }</div></div>
-    <p>In the above example, the developer has carefully said that parameter 1 should be a string and contain the username, and the password in the second parameter.</p>
-    <div class="w3-panel w3-note"><strong>Note:</strong> SQL Injection is made possible because developers are not carefully sanitizing the input from users, and thus allows an attacker to fool the application and database into running unauthorized SQL code.</div>
+    <p>В приведенном выше примере разработчик тщательно сказал, что параметр 1 должен быть строкой и содержать имя пользователя и пароль во втором параметре.</p>
+    <div class="w3-panel w3-note"><b>Примечание:</b> SQL-инъекция стала возможной, потому что разработчики тщательно не очищают ввод от пользователей и, таким образом, позволяют злоумышленнику обмануть приложение и базу данных, чтобы запустить неавторизованный код SQL.</div>
     <hr>
 
-    <h2>XSS ("Cross-Site Scripting")</h2>
-    <p>XSS uses the server to attack visitors of the server. The attack does not target the server itself, but instead the users.</p>
-    <p>The server is simply used to reflect attackers values, typically JavaScript, against visitors who then run the attackers data in their own browser. The attacker has to craft an input which the server does not clean and sanitize, that way when a visitor clicks a link containing the attackers values, or visits a resource on the webpage which the attacker has used in their attack, the user runs code which the attacker supplied.</p>
-    <p>Here is a graphical example of Eve sending a link to Alice which contains the XSS attack:</p>
+    <h2>XSS (&quot;Cross-Site Scripting&quot; - &quot;Межсайтовый скриптинг&quot;)</h2>
+    <p>XSS использует сервер для атаки посетителей сервера. Атака нацелена не на сам сервер, а на пользователей.</p>
+    <p>Сервер просто используется для отражения значений злоумышленников, обычно JavaScript, против посетителей, которые затем запускают данные злоумышленников в своём собственном браузере. Злоумышленник должен создать ввод, который сервер не очищает и не дезинфицирует, таким образом, когда посетитель кликает ссылку, содержащую значения злоумышленников, или посещает ресурс на веб-странице, который злоумышленник использовал в своей атаке, пользователь запускает код, который - предоставил злоумышленник.</p>
+    <p>Вот графический пример того, как Ева отправляет Алисе ссылку, содержащую XSS-атаку:</p>
     <p><img src="../svg/img_xss.svg" alt="XSS" style="width:100%;max-width:1280px"></p>
-    <p>This attack is called a Reflected XSS and involves Eve finding the vulnerability, then sending a link containing the attack to an unsuspecting user and having them click the link. The link contains the attack and makes the webserver return the attack to the victim clicking the link.</p>
-    <p>The code behind this could be something simple as this pseudo-code example:</p>
+    <p>Эта атака называется отраженным XSS и предполагает, что Ева обнаруживает уязвимость, затем отправляет ссылку, содержащую атаку, ничего не подозревающему пользователю и заставляет его кликнуть ссылку. Ссылка содержит атаку и заставляет веб-сервер возвращать атаку жертве, кликнув ссылку.</p>
+    <p>Код, стоящий за этим, может быть чем-то простым, как этот пример псевдокода:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             $nickname = etNickName();<br>
-            echo "Greeting $nickname, nice to meet you!";
+            echo "Привет $nickname, приятно познакомиться!";
         </div></div>
-    <p>Another kind of XSS is called a Stored XSS attack. In Stored XSS attacks the attacker is capable of saving content on the webpage which is reflected every time someone visits the website. It does not require someone to click a link necessarily.</p>
-    <p>This graphic describes how Eve is able to store malicious JavaScript to be executed in anyone's browser when the visit the resource:</p>
-    <p><img src="../svg/img_stored-xss.svg" alt="Stored XSS" style="width:100%;max-width:1280px"></p>
-    <p>XSS attacks can accomplish many things, for example:</p>
+    <p>Другой вид XSS-атаки называется хранимой XSS-атакой. В атаках Stored XSS злоумышленник может сохранять контент на веб-странице, который отражается каждый раз, когда кто-то посещает веб-сайт. Необязательно, чтобы кто-то кликнул ссылку.</p>
+    <p>На этом рисунке показано, как Ева может сохранять вредоносный код JavaScript для выполнения в любом браузере при посещении ресурса:</p>
+    <p><img src="../svg/img_stored-xss.svg" alt="Сохранённый XSS" style="width:100%;max-width:1280px"></p>
+    <p>XSS-атаки могут многое сделать, например:</p>
     <ul>
-        <li>Stealing cookies which can be used for authentication</li>
-        <li>Defacing the website, presenting content which the webserver did not intend to</li>
-        <li>Phishing users in leaving credentials in fake login forms</li>
+        <li>Кража файлов cookie, которые могут использоваться для аутентификации;</li>
+        <li>Дезинфекция веб-сайта, представление содержимого, которое веб-сервер не намеревался;</li>
+        <li>Фишинговые пользователи, оставляющие учётные данные в поддельных формах входа.</li>
     </ul>
-    <p>To defend against XSS there are several best-practices to follow:</p>
+    <p>Для защиты от XSS есть несколько рекомендаций:</p>
     <ul>
-        <li>Let the webserver return CSP ("Content Security Policy") headers which strictly decides where and how JavaScript is executed from</li>
-        <li>Safely encode the output the webserver returns to users, effectively turning HTML characters into encoded safe characters</li>
+        <li>Разрешить веб-серверу возвращать заголовки CSP (&quot;Content Security Policy&quot; - &quot;Политика безопасности контента&quot;), которые строго решают, где и как выполняется JavaScript.</li>
+        <li>Безопасно кодируйте выходные данные, которые веб-сервер возвращает пользователям, эффективно превращая символы HTML в закодированные безопасные символы.</li>
     </ul>
     <hr>
 
-    <h2>HTML Encoding</h2>
-    <p>HTML encoding allows the web application to return typically unsafe characters in a safe manner. For example the following special characters can be encoded into their respective counterpart:</p>
+    <h2>HTML Кодирование</h2>
+    <p>HTML кодирование позволяет веб-приложению безопасно возвращать обычно небезопасные символы. Например, следующие специальные символы могут быть закодированы в их соответствующие аналоги:</p>
     <table class="w3-table-all notranslate">
         <tr>
-            <th>Special Character</th>
-            <th>HTML Entity</th>
+            <th>Специальные символы</th>
+            <th>HTML объект</th>
         </tr>
         <tr>
             <td>&lt;</td>
@@ -452,32 +452,31 @@
             <td>&gt;</td>
         </tr>
         <tr>
-            <td>"</td>
-            <td>"</td>
+            <td>&quot;</td>
+            <td>&quot;</td>
         </tr>
         <tr>
             <td>&amp;</td>
             <td>&amp;</td>
         </tr>
         <tr>
-            <td>'</td>
-            <td>'</td>
+            <td>&rsquo;</td>
+            <td>&rsquo;</td>
         </tr>
     </table>
-    <p>This produces output which can be displayed safely. We can then use the JavaScript on the client-side to safely turn the HTML entities into values.</p>
+    <p>Это даёт результат, который можно безопасно отображать. Затем мы можем использовать JavaScript на стороне клиента, чтобы безопасно превращать объекты HTML в значения.</p>
     <hr>
 
-    <h2>CSP ("Content Security Policy")</h2>
-    <p>The webserver can control what kind of JavaScript is allowed to run on the website. This does not remove vulnerabilities but adds
-        defense in depth for when there is an unknown vulnerability.</p>
-    <p>A common and strict CSP is to provide the users of the web-application with a list of all accepted JavaScript source files.</p>
-    <p>In addition, it is typical for CSP to prevent execution of in-line JavaScript.</p>
-    <p>To allow for easier implementation and detection of on-going attacks, CSP allows for clients to report CSP violations to a URL provided by the server</p>
+    <h2>CSP (&quot;Content Security Policy&quot; - &quot;Политика безопасности контента&quot;)</h2>
+    <p>Веб-сервер может контролировать, какой JavaScript разрешен для запуска на веб-сайте. Это не устраняет уязвимости, но добавляет глубокую защиту на случай неизвестной уязвимости.</p>
+    <p>Обычный и строгий CSP - предоставить пользователям веб-приложения список всех принятых исходных файлов JavaScript.</p>
+    <p>Кроме того, для CSP типично предотвращать выполнение встроенного JavaScript.</p>
+    <p>Чтобы упростить реализацию и обнаружение продолжающихся атак, CSP позволяет клиентам сообщать о нарушениях CSP на URL-адрес, предоставленный сервером.</p>
     <hr>
 
-    <h2>Web-Application Scanning</h2>
-    <p>There are many web application scanners out there. These allow for applications to be scanned for vulnerabilities such as SQL Injection and XSS. Contrary to a network vulnerability scanner, a web-application scanner is typically built on heuristics instead of signatures and lists of known vulnerabilities.</p>
-    <p>Web application scanners are useful, especially when built into development processes such as CI ("Continuous Integration") and CD ("Continuous Delivery")</p>
+    <h2>Сканирование веб-приложений</h2>
+    <p>Существует множество сканеров веб-приложений. Это позволяет сканировать приложения на наличие уязвимостей, таких как SQL-инъекция и XSS. В отличие от сканера сетевых уязвимостей, сканер веб-приложений обычно строится на эвристике, а не на сигнатурах и списках известных уязвимостей.</p>
+    <p>Сканеры веб-приложений полезны, особенно когда они встроены в процессы разработки, такие как CI (&quot;Continuous Integration&quot; - &quot;Непрерывная интеграция&quot;) и CD (&quot;Continuous Delivery&quot; - &quot;Непрерывная доставка&quot;).</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cybersecurity_network_attacks.html">&#10094; Prev</a>
