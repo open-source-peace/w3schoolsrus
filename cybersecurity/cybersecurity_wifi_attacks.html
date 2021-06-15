@@ -6,7 +6,7 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'><title>Учебник по кибербезопасности. Wi-Fi атаки. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Wi-Fi атаки. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='WiFi атаки. Основы. Безопасность. Открытые сети Wi-Fi. Скрытый SSID. Фильтрация MAC-адресов. PSK - Общий ключ. Корпоративная аутентификация. Поддельные точки доступа WIFI. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -317,70 +317,70 @@
     </div>
     <hr>
 
-    <p class="intro">A potent and important area to computer security is WIFI. Devices and systems are no longer required to be interconnected via physical cables, but can instead be reached by anyone within signal radius. WIFI enables many new devices to be capable of networking.</p>
+    <p class="intro">Мощной и важной областью компьютерной безопасности является WIFI. Устройства и системы больше не требуется соединять между собой физическими кабелями, вместо этого они могут быть доступны любому в радиусе действия сигнала. WIFI позволяет многим новым устройствам подключаться к сети.</p>
     <hr>
 
-    <h2>WIFI Basics</h2>
-    <p>WIFI as most people know it stems from the IEEE 802.11 protocol. There are other protocols which uses radio for signaling too, for example:</p>
+    <h2>WIFI Основы</h2>
+    <p>WIFI, как известно большинству людей, происходит от протокола IEEE 802.11. Существуют и другие протоколы, которые также используют радио для передачи сигналов, например:</p>
     <ul>
-        <li>Bluetooth, for communicating with devices we carry, typically smartphones, headphones etc.</li>
-        <li>NFC ("Near Field Communications"), implemented in access badges and credit cards for wireless transmission of data.</li>
-        <li>RFID ("Radio Frequency Identification"), used for access cards and other devices, for example a car which can wirelessly transmit its identifier to a toll-road system.</li>
-        <li>ZigBee and Z-Wave, used for enterprise and home automation.</li>
+        <li>Bluetooth для связи с устройствами, которые мы носим с собой, обычно со смартфонами, наушниками и т.д.;</li>
+        <li>NFC (&quot;Near Field Communications&quot; - &quot;Связь ближнего поля&quot;), реализованный в бейджах доступа и кредитных картах для беспроводной передачи данных;</li>
+        <li>RFID (&quot;Radio Frequency Identification&quot; - &quot;Радиочастотная идентификация&quot;), используется для карт доступа и других устройств, например автомобиля, который может передавать свой идентификатор по беспроводной сети в систему платных дорог;</li>
+        <li>ZigBee и Z-Wave, используемые для автоматизации предприятий и дома.</li>
     </ul>
-    <p>Wireless communication is typically done via an AP ("Access Point"), a wireless base station which acts as a switch and router between clients that wish to communicate. Peer-to-peer communications are also possible, but less typical.</p>
-    <p>The name of a wireless network is known as the SSID ("Service Set Identifier").</p>
-    <p>Because WIFI signals reach everyone in the vicinity it enables attackers to easily use an antenna to "sniff" communications for anyone transmitting. Sniffing simply means to listen for packets which the network interface can see.</p>
-    <p>WIFI sometimes allow users to reach internal applications, increasing attack potential. Furthermore, WIFI devices have management interfaces and firmware which can hold vulnerabilities, sometimes not always patched as timely as other assets in the enterprise.</p>
+    <p>Беспроводная связь обычно осуществляется через AP (&quot;Access Point&quot; - &quot;Точку доступа&quot;), беспроводную базовую станцию, которая действует как коммутатор и маршрутизатор между клиентами, которые хотят общаться. Одноранговая связь также возможна, но менее типична.</p>
+    <p>Имя беспроводной сети известно как SSID (&quot;Service Set Identifier&quot; - &quot;Идентификатор набора услуг&quot;);</p>
+    <p>Поскольку сигналы Wi-Fi достигают всех, кто находится поблизости, злоумышленники могут легко использовать антенну для &quot;прослушивания&quot; сообщений любого, кто передает. &quot;Прослушивание&quot; означает просто прослушивание пакетов, которые может видеть сетевой интерфейс.</p>
+    <p>Wi-Fi иногда позволяет пользователям получить доступ к внутренним приложениям, что увеличивает вероятность атаки. Кроме того, устройства WIFI имеют интерфейсы управления и прошивки, которые могут содержать уязвимости, которые иногда не всегда исправляются так же своевременно, как другие активы на предприятии.</p>
     <hr>
 
-    <h2>WIFI Security</h2>
-    <p>WIFI have the option of</p>
+    <h2>WIFI Безопасность</h2>
+    <p>WIFI имеет опции</p>
     <ul>
-        <li>No security</li>
-        <li>Access list based on MAC addresses</li>
-        <li>PSK ("Pre-Shared Key")</li>
-        <li>Enterprise authentication</li>
+        <li>Нет безопасности</li>
+        <li>Список доступа на основе MAC-адресов</li>
+        <li>PSK (&quot;Pre-Shared Key&quot; - &quot;Общий ключ&quot;)</li>
+        <li>Корпоративная аутентификация</li>
     </ul>
-    <p>Many WIFI attacks rely on network cards with two primary features, namely:</p>
+    <p>Многие атаки WIFI полагаются на сетевые карты с двумя основными функциями, а именно:</p>
     <ul>
-        <li>Monitor Mode: Makes the network card forward packets destined to all MAC addresses to the Operating System, not just its own.</li>
-        <li>Packet Injection: The network card supports crafting packets with a different source MAC address than its own.</li>
+        <li>Режим мониторинга: заставляет сетевую карту пересылать пакеты, предназначенные для всех MAC-адресов, операционной системе, а не только её собственные.</li>
+        <li>Внедрение пакетов: сетевая карта поддерживает создание пакетов с исходным MAC-адресом, отличным от её собственного.</li>
     </ul>
     <hr>
 
-    <h2>Open WIFI Networks</h2>
-    <p>An open WIFI network is a network with no password on it. Communication between AP and Clients is not encrypted and everyone has to rely on their own sources of encryption to protect their traffic. These kinds of networks are very convenient and accessible for users, but makes security compromises.</p>
-    <p>An attacker on these kinds of networks can easily see what everyone else is doing by simply sniffing packets. Such packets can contain sensitive details or simply details about what the users are doing on the network.</p>
-    <p><img src="../svg/img_wifi-open.svg" alt="WIFI Open" style="width:100%;max-width:1280px"></p>
+    <h2>Открытые сети Wi-Fi</h2>
+    <p>Открытая сеть WIFI - это сеть без пароля. Связь между точкой доступа и клиентами не шифруется, и каждый должен полагаться на свои собственные источники шифрования для защиты своего трафика. Такие сети очень удобны и доступны для пользователей, но создают угрозу безопасности.</p>
+    <p>Злоумышленник в таких сетях может легко увидеть, что делают все остальные, просто перехватывая пакеты. Такие пакеты могут содержать конфиденциальные данные или просто сведения о том, что пользователи делают в сети.</p>
+    <p><img src="../svg/img_wifi-open.svg" alt="WIFI открытые сети" style="width:100%;max-width:1280px"></p>
     <hr>
 
-    <h2>Hidden SSID</h2>
-    <p>AP's can often turn off broadcasting the name of the wireless network. This requires clients to demonstrate knowledge of the SSID to join the network. It is not considered best-practice to enable hidden SSID, because the name of the network is exposed anytime a client joins. Furthermore, the clients now need to ask and broadcast information about the network they want to join, everywhere they travel. An attacker could then sniff the WIFI traffic of clients and potentially learn more information about whom the clients are and where they have joined networks before.</p>
-    <p><img src="../svg/img_wifi-hidden-ssid.svg" alt="WIFI Hidden SSID" style="width:100%;max-width:1280px"></p>
+    <h2>Скрытый SSID</h2>
+    <p>AP часто могут отключить широковещательную передачу имени беспроводной сети. Для этого клиенты должны продемонстрировать знание SSID для подключения к сети. Не рекомендуется включать скрытый SSID, потому что имя сети отображается каждый раз, когда клиент подключается. Кроме того, теперь клиентам необходимо запрашивать и транслировать информацию о сети, к которой они хотят присоединиться, везде, где бы они ни находились. Затем злоумышленник может перехватить WIFI-трафик клиентов и потенциально узнать больше информации о том, кем являются клиенты и где они ранее присоединялись к сетям.</p>
+    <p><img src="../svg/img_wifi-hidden-ssid.svg" alt="WIFI скрытый SSID" style="width:100%;max-width:1280px"></p>
     <hr>
 
-    <h2>MAC Address Filtering</h2>
-    <p>Some AP's support access control based on MAC Addresses. The AP can create an allow-list of which MAC addresses should be allowed to join and communicate on the network.</p>
-    <p>This approach is in-secure. An attacker can sniff and observe other systems communicating on the network already. Then record their MAC addresses and update the attackers own MAC address to be one which is already allowed. This effectively bypasses the MAC Address Filtering requirement.</p>
+    <h2>Фильтрация MAC-адресов</h2>
+    <p>Некоторые точки доступа поддерживают управление доступом на основе MAC-адресов. Точка доступа может создать список разрешенных MAC-адресов, которым разрешено подключаться и взаимодействовать в сети.</p>
+    <p>Этот подход небезопасен. Злоумышленник может обнюхивать и наблюдать за другими системами, уже взаимодействующими в сети. Затем запишите их MAC-адреса и обновите собственный MAC-адрес злоумышленников, чтобы он был уже разрешен. Это эффективно обходит требование фильтрации MAC-адресов.</p>
     <hr>
 
-    <h2>PSK ("Pre-Shared Key")</h2>
-    <p>PSK simply means the network is configured with a password. PSK protection is typically implemented via a protocol called WPA ("WIFI Protected Access"). Older protocols for authentication can also be used, for example WEP ("Wired Equivalent Privacy") but has for a long time been considered obsolete as it is highly in-secure and easy for attackers to crack.</p>
-    <p>WPA comes in different forms with WPA3 being the latest standard as of the year 2021. WPA is not entirely safe against attackers either, but offers much more protection than WEP. To break into a WPA enabled network the attacker must try to crack the password with a password cracker. This is considered an expensive process in terms of time if the password is reasonably strong.</p>
-    <p>If an attacker can observe (sniff) anyone whom authenticates to the network, they have enough to engage in password cracking activities. Tools like aircrack-ng ("https://www.aircrack-ng.org/") supports cracking WIFI passwords.</p>
+    <h2>PSK (&quot;Pre-Shared Key&quot; - &quot;Общий ключ&quot;)</h2>
+    <p>PSK просто означает, что сеть настроена с паролем. Защита PSK обычно реализуется через протокол WPA (&quot;WIFI Protected Access&quot; - &quot;Защищенный доступ WIFI&quot;). Для аутентификации также можно использовать более старые протоколы, например WEP (&quot;Wired Equivalent Privacy&quot; - &quot;Конфиденциальность, эквивалентная проводной сети&quot;), но долгое время считалось устаревшим, поскольку он очень небезопасен и его легко взломать.</p>
+    <p>WPA существует в различных формах, причем WPA3 является последним стандартом с 2021 года. WPA также не полностью безопасен от злоумышленников, но предлагает гораздо большую защиту, чем WEP. Чтобы взломать сеть с включенным WPA, злоумышленник должен попытаться взломать пароль с помощью взломщика паролей. Это считается дорогостоящим с точки зрения времени процессом, если пароль достаточно надежный.</p>
+    <p>Если злоумышленник может наблюдать (прослушивать) любого, кто проходит аутентификацию в сети, у него достаточно средств для взлома паролей. Такие инструменты, как aircrack-ng (<a href="https://www.aircrack-ng.org/" target="_blank" rel="nofollow">https://www.aircrack-ng.org/</a>), поддерживают взлом паролей WIFI.</p>
     <p><img src="../svg/img_wifi-psk.svg" alt="WIFI PSK" style="width:100%;max-width:1280px"></p>
     <hr>
 
-    <h2>Enterprise Authentication</h2>
-    <p>Enterprise Access Points can also support authenticating clients based on certificates, which requires PKI ("Public Key Infrastructure") or enterprise credentials by integrating to a centralized authentication service.</p>
-    <p>This has some benefits, especially the concept of key management. With a PSK network, the inherent challenge is how passwords are distributed, rotated and revoked.</p>
-    <p>While Enterprise Authentication provides better security management regarding keys, it also involves a more complex infrastructure and offers other opportunities for attackers.</p>
+    <h2>Enterprise Authentication - Корпоративная аутентификация</h2>
+    <p>Корпоративные точки доступа также могут поддерживать аутентификацию клиентов на основе сертификатов, для чего требуется PKI (&quot;Public Key Infrastructure&quot; - &quot;Инфраструктура открытых ключей&quot;) или корпоративные учетные данные, путем интеграции с централизованной службой аутентификации.</p>
+    <p>В этом есть некоторые преимущества, особенно концепция управления ключами. В сети PSK неотъемлемая проблема заключается в том, как пароли распределяются, меняются и отзываются.</p>
+    <p>Хотя Enterprise Authentication обеспечивает лучшее управление безопасностью ключей, она также включает более сложную инфраструктуру и предлагает другие возможности для злоумышленников.</p>
     <hr>
 
-    <h2>Fake WIFI Access Points</h2>
-    <p>Attackers can easily start broadcasting networks pretending to be other networks. Often clients will automatically connect to networks in range if they present themselves with the appropriate SSID. This allows attackers to make clients connect to the attackers network, allowing them to sniff and change traffic as the attacker wishes.</p>
-    <p><img src="../svg/img_wifi-fake-ap.svg" alt="WIFI Fake AP" style="width:100%;max-width:1280px"></p>
+    <h2>Поддельные точки доступа WIFI</h2>
+    <p>Злоумышленники могут легко начать трансляцию сетей, выдавая себя за другие сети. Часто клиенты автоматически подключаются к сетям в пределах досягаемости, если они представятся с соответствующим SSID. Это позволяет злоумышленникам подключать клиентов к сети злоумышленников, позволяя им прослушивать и изменять трафик по желанию злоумышленника.</p>
+    <p><img src="../svg/img_wifi-fake-ap.svg" alt="WIFI Поддельные точки доступа" style="width:100%;max-width:1280px"></p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cybersecurity_web_applications_attacks.html">&#10094; Prev</a>
