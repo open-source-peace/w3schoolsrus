@@ -6,7 +6,7 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>    <title>Учебник по кибербезопасности. Безопасность операций. Уроки для начинающих. W3Schools на русском</title>
-    <meta name='description' content='Безопасность операций. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
+    <meta name='description' content='Безопасность операций. SIEM - Управление информационными событиями безопасности. SOC Кадровое обеспечение. Цепочки эскалации. Классификация происшествий. SOAR - Обеспечение безопасности, автоматизация и реагирование. Что контролировать (мониторить)? Как защитить компьютерную систему от хакеров? Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -337,104 +337,101 @@
         <li>Хост</li>
         <li>Приложения</li>
     </ul>
-    <p>События из сети являются наиболее типичными, но наименее ценными, поскольку они не охватывают весь контекст того, что произошло. Сеть обычно показывает, кто, где, по каким протоколам и когда общается, но не подробные детали о том, что произошло, с кем и почему. </p>
-    <p> События организатора дают больше информации о том, что на самом деле произошло и с кем. Такие проблемы, как шифрование, больше не размываются, и становится понятнее, что происходит. Многие SIEM содержат подробную информацию о том, что происходит на самих хостах, а не только в сети. </p>
-    <p> События из приложения - это то место, где SOC обычно лучше всего понимает, что происходит. Эти события предоставляют информацию о Triple A, AAA («Аутентификация, авторизация и учетная запись»), включая подробную информацию о том, как работает приложение и что делают пользователи. </p>
-    <p> Для SIEM, чтобы понять события от приложений, обычно требуется работа группы SOC, чтобы заставить SIEM понимать эти события, поскольку поддержка часто не включается «из коробки». Многие приложения являются собственностью организации, и SIEM еще не понимает, какие данные передают приложения.</p>
+    <p>События из сети являются наиболее типичными, но наименее ценными, поскольку они не охватывают весь контекст того, что произошло. Сеть обычно показывает, кто, где, по каким протоколам и когда общается, но не подробные детали о том, что произошло, с кем и почему.</p>
+    <p>События организатора дают больше информации о том, что на самом деле произошло и с кем. Такие проблемы, как шифрование, больше не размываются, и становится понятнее, что происходит. Многие SIEM содержат подробную информацию о том, что происходит на самих хостах, а не только в сети.</p>
+    <p>События из приложения - это то место, где SOC обычно лучше всего понимает, что происходит. Эти события предоставляют информацию о тройном A, AAA (Authentication, Authorization и Account - Аутентификация, авторизация и аккаунт), включая подробную информацию о том, как работает приложение и что делают пользователи.</p>
+    <p>Для SIEM, чтобы понять события от приложений, обычно требуется работа группы SOC, чтобы заставить SIEM понимать эти события, поскольку поддержка часто не включается &quot;из коробки&quot;. Многие приложения являются собственностью организации, и SIEM ещё не понимает, какие данные передают приложения.</p>
     <hr>
 
-    <h2>SOC Staffing</h2>
-    <p>How a SOC is staffed greatly varies based on the requirements and structure of an organization. In this section we take a quick look at typical roles involved in operating a SOC. An overview of potential roles:</p>
-    <p><img src="img_soc-organization.svg" alt="SOC Organization" style="width:100%;max-width:1280px"></p>
-    <p>As in most organized teams, a role is appointed to lead the department. The SOC Chief determines the strategy and tactics involved to counter threats against the organization.</p>
-    <p>The SOC Architect is responsible for ensuring the systems, platforms and overall architecture is capable of delivering what the team members require to perform their duties. A SOC Architect will help build correlation rules across multiple points of data and ensures incoming data conforms to the platform requirements.</p>
-    <p>Analyst Lead is responsible that processes, or playbooks, are developed and maintained to ensure analysts are capable to find the information necessary to conclude alerts and potential incidents.</p>
-    <p>Level 1 Analysts serve as the first responders to alerts. Their duty is, within their capabilities, to conclude alerts and forward any troubles to a higher level analyst.</p>
-    <p>Level 2 Analysts are distinguished by having more experience and technical knowledge. They should also ensure any troubles in resolving alerts are forwarded to the Analyst Lead to aid the continuous improvement of the SOC. The Level 2, together with the Analyst Lead, escalates incidents to the Incident Response Team.</p>
-    <p>The IRT ("Incident Response Team") is a natural extension to the SOC Team. The IRT team is deployed to remediate and solve the issues impacting the organization.</p>
-    <p>Penetration Testers ideally also support the defense. Penetration Testers have intricate knowledge of how attackers operate and can help in root cause analysis and understanding how break-ins occur. Merging attack and defense teams is often referred to as Purple Teaming and is considered a best-practice operation.</p>
+    <h2>SOC Кадровое обеспечение</h2>
+    <p>Состав SOC сильно зависит от требований и структуры организации. В этом разделе мы кратко рассмотрим типичные роли, задействованные в работе SOC. Обзор потенциальных ролей:</p>
+    <p><img src="../svg/img_soc-organization.svg" alt="SOC Организация" style="width:100%;max-width:1280px"></p>
+    <p>Как и в большинстве организованных команд, назначается роль руководителя отдела. Начальник SOC определяет стратегию и тактику противодействия угрозам организации.</p>
+    <p>Архитектор SOC отвечает за обеспечение того, чтобы системы, платформы и общая архитектура могли предоставлять то, что требуется членам команды для выполнения своих обязанностей. Архитектор SOC поможет построить правила корреляции между несколькими точками данных и обеспечит соответствие входящих данных требованиям платформы.</p>
+    <p>Ведущий аналитик отвечает за разработку и поддержание процессов или сценариев, чтобы аналитики могли находить информацию, необходимую для вывода предупреждений и потенциальных инцидентов.</p>
+    <p>Аналитики уровня 1 первыми реагируют на предупреждения. Их обязанность, в пределах их возможностей, заключать оповещения и направлять любые проблемы аналитику более высокого уровня.</p>
+    <p>Аналитики 2-го уровня отличаются большим опытом и техническими знаниями. Они также должны гарантировать, что любые проблемы, связанные с устранением предупреждений, будут отправлены руководителю аналитика, чтобы помочь непрерывному совершенствованию SOC. Уровень 2 вместе с ведущим аналитиком передает инциденты в группу реагирования на инциденты.</p>
+    <p>IRT (Incident Response Team - Группа реагирования на инциденты) является естественным продолжением группы SOC. Команда IRT направлена на исправление и решение проблем, влияющих на организацию.</p>
+    <p>В идеале тестеры на проникновение также поддерживают защиту. Тестеры на проникновение обладают глубокими знаниями о том, как действуют злоумышленники, и могут помочь в анализе первопричин и понимании того, как происходят взломы. Объединение атакующих и защитных команд часто называют &quot;Purple Teaming&quot; (&quot;Фиолетовая команда&quot;) и считается передовой практикой.</p>
     <hr>
 
-    <h2>Escalation Chains</h2>
-    <p>Some alerts require immediate actions. It is important for the SOC to have defined a process of whom to contact when different incidents occur. Incidents can occur across many different business units, the SOC should know who to contact, when and on which communication mediums.</p>
-    <p>Example of an escalation chain for incidents impacting one part of a organization:</p>
+    <h2>Цепочки эскалации</h2>
+    <p>Некоторые оповещения требуют немедленных действий. Для SOC важно определить процесс, с которым следует связываться при возникновении различных инцидентов. Инциденты могут происходить в самых разных бизнес-подразделениях, SOC должен знать, с кем связываться, когда и по каким средствам связи.</p>
+    <p>Пример цепочки эскалации инцидентов, затрагивающих одну часть организации:</p>
     <ol>
-        <li>Create an Incident in the appointed Incident Tracking System, assigning it to correct department or person(s)</li>
-        <li>If no direct action happens from department/person(s): send SMS and Email to primary contact</li>
-        <li>If still no direct action: phone call primary contact</li>
-        <li>If still no direct action: call secondary contact</li>
+        <li>Создайте инцидент в назначенной системе отслеживания инцидентов, назначив его нужному отделу или лицам;</li>
+        <li>Если никаких прямых действий со стороны отдела / человека(-ов) не происходит: отправьте SMS и электронное письмо основному контактному лицу;</li>
+        <li>Если прямых действий по-прежнему нет: позвоните основному контактному лицу;</li>
+        <li>Если по-прежнему нет прямых действий: позвоните второму контактному лицу.</li>
     </ol>
     <hr>
 
-    <h2>Classification of Incidents</h2>
-    <p>Incidents should be classified according to their:</p>
+    <h2>Классификация происшествий</h2>
+    <p>Инциденты следует классифицировать в соответствии с их:</p>
     <ul>
-        <li>Category</li>
-        <li>Criticality</li>
-        <li>Sensitivity</li>
+        <li>Категория</li>
+        <li>Критичность</li>
+        <li>Чувствительность</li>
     </ul>
-    <p>Depending on the incidents classification and how it is attributed, the SOC might take different measures to solve the issue at hand.</p>
-    <p>The category of incident will determine how to respond. There exists many kinds of incident and it is important for the SOC to understand what each incident type means for the organization. Example incidents are listed below:</p>
+    <p>В зависимости от классификации инцидентов и их атрибуции SOC может принимать различные меры для решения возникшей проблемы.</p>
+    <p>Категория инцидента определяет, как реагировать. Существует много видов инцидентов, и SOC важно понимать, что каждый тип инцидента означает для организации. Примеры инцидентов перечислены ниже:</p>
     <ul>
-        <li>Inside Hacking</li>
-        <li>Malware on Client workstation</li>
-        <li>Worm spreading across the network</li>
-        <li>Distributed Denial of Service Attack</li>
-        <li>Leaked Credentials</li>
+        <li>Взлом изнутри</li>
+        <li>Вредоносное ПО на клиентской рабочей станции</li>
+        <li>Червь распространяется по сети</li>
+        <li>Распределенная атака отказа в обслуживании</li>
+        <li>Утечка учетных данных </li>
     </ul>
-    <p>The criticality of an incident is determined based on how many systems is impacted, the potential impact of not stopping the incident, the systems involved and many other things. It is important for the SOC to be able to accurately determine the criticality so the incident can be closed accordingly. Criticality is what determines how fast an incident should be responded to.<br>
-        Should the incident be responded to immediately or can the team wait until tomorrow?</p>
-    <p>Sensitivity determines who should be notified about the incident. Some incidents require extreme discretion.</p>
+    <p>Критичность инцидента определяется на основе количества затронутых систем, потенциального воздействия отказа от остановки инцидента, задействованных систем и многих других факторов. Для SOC важно иметь возможность точно определить критичность, чтобы инцидент мог быть соответствующим образом закрыт. Критичность - это то, что определяет, насколько быстро нужно реагировать на инцидент. Следует ли немедленно реагировать на инцидент или команда может подождать до завтра?</p>
+    <p>Чувствительность определяет, кого следует уведомить об инциденте. Некоторые инциденты требуют особой осторожности.</p>
     <hr>
 
-    <h2>SOAR ("Security Orchestration, Automation and Response")</h2>
-    <p>To counter the advancements of threat actors, automation is key for a modern SOC to respond fast enough. To facilitate fast response to incidents, the SOC should have tools available to automatically orchestrate solutions to respond to threats in the environment.</p>
-    <p>The SOAR strategy means ensuring the SOC can use actionable data to help mitigate and stop threats which are developing more real-time than before. In traditional environments it takes attackers very short time from the time of compromise until they have spread to neighboring systems. Contrary to this it takes organizations typically a very long time to detect threats that have entered their environment. SOAR tries to help solve this.</p>
-    <p>SOAR includes concepts such as IAC "Infrastructure as Code" to help rebuild and remediate threats. SDN ("Software Defined Networking") to control accesses more fluently and easily, and much more.</p>
+    <h2>SOAR (&quot;Security Orchestration, Automation and Response&quot; - &quot;Обеспечение безопасности, автоматизация и реагирование&quot;)</h2>
+    <p>Чтобы противостоять продвижению злоумышленников, автоматизация является ключевым моментом для быстрого реагирования современного SOC. Чтобы облегчить быстрое реагирование на инциденты, у SOC должны быть инструменты для автоматической координации решений для реагирования на угрозы в среде.</p>
+    <p>Стратегия SOAR означает обеспечение того, чтобы SOC мог использовать важные данные, чтобы помочь смягчить и остановить угрозы, которые развиваются в более реальном времени, как можно раньше. В традиционных средах злоумышленникам требуется очень короткое время с момента взлома до того, как они распространятся на соседние системы. В отличие от этого организациям обычно требуется очень много времени, чтобы обнаружить угрозы, проникшие в их среду. SOAR пытается помочь решить эту проблему.</p>
+    <p>SOAR включает такие концепции, как IAC &quot;Infrastructure as Code&quot; (&quot;Инфраструктура как код&quot;) чтобы помочь восстановить и устранить угрозы. SDN (&quot;Software Defined Networking&quot; - &quot;Программно-определяемая сеть&quot;) для более быстрого и легкого управления доступом и многое другое.</p>
     <hr>
 
-    <h2>What to monitor?</h2>
-    <p>Events can be collected across many different devices, but how do we determine what to collect and monitor? We want the logs to have the highest quality. High fidelity logs that are relevant and identifying to quickly stop the threat actors in our networks. We also want to make it hard for attackers to circumvent the alerts we configure.</p>
-    <p>If we look at different ways to catch attackers, it becomes evident where we should focus. Here is a list of possible indicators we can use to detect attackers, and how hard it is considered for attackers to change.</p>
+    <h2>Что контролировать (мониторить)?</h2>
+    <p>События можно собирать на разных устройствах, но как определить, что собирать и отслеживать? Мы хотим, чтобы логи (журналы) были самого высокого качества. Журналы с высокой точностью, актуальные и идентифицирующие, чтобы быстро остановить злоумышленников в наших сетях. Мы также хотим, чтобы злоумышленникам было сложно обойти настраиваемые нами предупреждения.</p>
+    <p>Если мы рассмотрим различные способы поимки злоумышленников, станет очевидным, на чем мы должны сосредоточиться. Вот список возможных индикаторов, которые мы можем использовать для обнаружения злоумышленников, и того, что сложно злоумышленникам изменить.</p>
     <table class="ws-table-all notranslate">
         <tr>
-            <th>Indicator</th>
-            <th>Difficulty to change</th>
+            <th>Индикатор</th>
+            <th>Трудно изменить</th>
         </tr>
         <tr>
-            <td>File checksums and hashes</td>
-            <td>Very Easy</td>
+            <td>Контрольные суммы и хэши файлов</td>
+            <td>Очень просто</td>
         </tr>
         <tr>
-            <td>IP Addresses</td>
-            <td>Easy</td>
+            <td>IP-адреса</td>
+            <td>Легко</td>
         </tr>
         <tr>
-            <td>Domain Names</td>
-            <td>Simple</td>
+            <td>Доменные имена</td>
+            <td>Просто</td>
         </tr>
         <tr>
-            <td>Network and Host Artifacts</td>
-            <td>Annoying</td>
+            <td>Сетевые и хостовые артефакты</td>
+            <td>Раздражающий</td>
         </tr>
         <tr>
-            <td>Tools</td>
-            <td>Challenging</td>
+            <td>Инструменты</td>
+            <td>Сложно</td>
         </tr>
         <tr>
-            <td>Tactics, Techniques and Procedures</td>
-            <td>Hard</td>
+            <td>Тактика, методы и процедуры</td>
+            <td>Тяжело</td>
         </tr>
     </table>
-    <p>File checksums and hashes can be used to identify known pieces of malware or tools used by attackers. Changing these signatures are considered to be trivial for attackers as their code can be encoded and changed in multiple different ways, making the checksums and hashes change.</p>
-    <p>IP Addresses are also easy to change. Attackers can use IP addresses from other compromised hosts or simply use IP addresses within the jungle of different cloud and VPS ("Virtual Private Server") providers.</p>
-    <p>Domain Names can also be reconfigured quite easily by attackers. An attacker can configure a compromised system to use a DGA ("Domain Generation Algorithm") to continuously use a new DNS name as time passes. One week the compromised system uses one name, but the next week the name has changed automatically.</p>
-    <p>Network and Host Artifacts are more annoying to change, as this involves more changes for the attackers. Their utilities will have signatures, like a user-agent or the lack of thereof, that can be picked up by the SOC.</p>
-    <p>Tools become increasingly harder to change for attackers. Not the hashes of the tools, but how the tools behave and operate when attacking. Tools will be leaving traces in logs, loading libraries and other things which we can monitor to detect these anomalies.</p>
-    <p>If the defenders are capable of identifying Tactics, Techniques and Procedures threat actors use, it becomes even harder for attackers to get to their objectives. For example, if we know the threat actor likes to use Spear-Phishing and then Pivoting peer-to-peer via to other victim systems, defenders can use this to their advantage. Defenders can focus training to staff at risk for spear-phishing and start implementing barriers to deny peer-to-peer networking.</p>
+    <p>Контрольные суммы и хэши файлов могут использоваться для идентификации известных вредоносных программ или инструментов, используемых злоумышленниками. Изменение этих сигнатур считается тривиальным делом для злоумышленников, поскольку их код может быть закодирован и изменен множеством различных способов, что приведёт к изменению контрольных сумм и хэшей.</p>
+    <p>IP-адреса также легко изменить. Злоумышленники могут использовать IP-адреса с других взломанных хостов или просто использовать IP-адреса в джунглях различных облачных и VPS (Virtual Private Server - Виртуальных частных серверов) провайдеров.</p>
+    <p>Злоумышленники могут легко перенастроить доменные имена. Злоумышленник может настроить скомпрометированную систему на использование DGA (Domain Generation Algorithm - Алгоритм генерации домена) для постоянного использования нового DNS-имени с течением времени. Одна неделя скомпрометированная система использует одно имя, но на следующей неделе имя изменилось автоматически.</p>
+    <p>Сетевые артефакты и артефакты хоста больше раздражают, поскольку это требует дополнительных изменений для злоумышленников. Их утилиты будут иметь подписи, такие как пользовательский агент или отсутствие таковых, которые могут быть обнаружены SOC.</p>
+    <p>Злоумышленникам становится все труднее менять инструменты. Не хеши инструментов, а то, как инструменты ведут себя и работают при атаке. Инструменты будут оставлять следы в журналах, загружать библиотеки и другие вещи, которые мы можем отслеживать для обнаружения этих аномалий.</p>
+    <p>Если защитники способны определять тактики, приёмы и процедуры, которые используют злоумышленники, злоумышленникам становится ещё труднее добраться до своих целей. Например, если мы знаем, что злоумышленник любит использовать Spear-Phishing, а затем Pivoting однорангового соединения с другими системами-жертвами, защитники могут использовать это в своих интересах. Защитники могут сосредоточить обучение на персонале, подверженном риску целевого фишинга, и начать создавать барьеры для отказа от одноранговых сетей.</p>
     <hr>
-
-    <br>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cybersecurity_passwords.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="cybersecurity_incident_response.html">Next &#10095;</a>
