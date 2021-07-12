@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Ключевое слово Const. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Ключевое слово Const. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Ключевое слово Const. Невозможно переназначить. Когда использовать JavaScript const? Постоянные объекты и массивы. Область действия блока. Повторное объявление. Подъём (хостинг) Const. Уроки для начинающих. W3Schools на русском'>
 <link rel='stylesheet' href='../styles/browserref.css'>
 
 <div class='w3-container top'>
@@ -490,129 +490,127 @@
     </div>
 
     <div class="w3-info">
-        <p>The <code class="w3-codespan">const</code> keyword was introduced in <a href="js_es6.html">ES6 (2015)</a>.</p>
-        <p>Variables defined with <code class="w3-codespan">const</code> cannot be Redeclared.</p>
-        <p>Variables defined with <code class="w3-codespan">const</code> cannot be Reassigned.</p>
-        <p>Variables defined with <code class="w3-codespan">const</code> have Block Scope.</p>
+        <p>Ключевое слово <code class="w3-codespan">const</code> было введено в <a href="js_es6.html">ES6 (2015)</a>.</p>
+        <p>Переменные, определённые с помощью <code class="w3-codespan">const</code> не могут быть повторно объявлены.</p>
+        <p>Переменные, определённые с помощью <code class="w3-codespan">const</code> нельзя переназначить.</p>
+        <p>Переменные, определённые с помощью <code class="w3-codespan">const</code> имеют область действия блока.</p>
     </div>
 
-    <h2>Cannot be Reassigned</h2>
-    <p>A <code class="w3-codespan">const</code> variable cannot be reassigned:</p>
+    <h2>Невозможно переназначить</h2>
+    <p>Переменную <code class="w3-codespan">const</code> нельзя переназначить:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const PI = 3.141592653589793;<br>
-            PI = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will give an error<br>
-            PI = PI + 10;&nbsp;&nbsp; // This will also give an error
+            PI = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это выдаст ошибку<br>
+            PI = PI + 10;&nbsp;&nbsp; // Это также выдаст ошибку
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const_value" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_value.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Must be Assigned</h2>
-    <p>JavaScript <code class="w3-codespan">const</code> variables must be assigned a value when they are declared:</p>
+
+    <h2>Должен быть назначен</h2>
+    <p>JavaScript переменным <code class="w3-codespan">const</code> должно быть присвоено значение при их объявлении.</p>
 
     <div class="w3-example">
-        <h3>Correct</h3>
+        <h3>Правильно</h3>
         <div class="w3-code notranslate jsHigh">
             const PI = 3.14159265359;<br>
         </div>
     </div>
     <div class="w3-example w3-pale-red">
-        <h3>Incorrect</h3>
+        <h3>Неправильно</h3>
         <div class="w3-code notranslate jsHigh w3-border-red">
             const PI;<br>
             PI = 3.14159265359;<br>
         </div>
     </div>
     <div class="w3-note">
-        <h2>When to use JavaScript const?</h2>
-        <p>As a general rule, always declare a variables with <code class="w3-codespan">const</code> unless you know that
-            the value will change.</p>
-        <p>Always use <code class="w3-codespan">const</code> when you declare:</p>
+        <h2>Когда использовать JavaScript const?</h2>
+        <p>Как правило, всегда объявляйте переменные с помощью <code class="w3-codespan">const</code>, если вы не знаете, что значение изменится.</p>
+        <p>Всегда используйте <code class="w3-codespan">const</code> при объявлении:</p>
         <ul>
-            <li>A new Array</li>
-            <li>A new Object</li>
-            <li>A new Function</li>
-            <li>A new RegExp</li>
+            <li>Новый массив</li>
+            <li>Новый объект</li>
+            <li>Новая функция</li>
+            <li>Новый RegExp</li>
         </ul>
     </div>
-
     <hr>
-    <h2>Constant Objects and Arrays</h2>
-    <p>The keyword <code class="w3-codespan">const</code> is a little misleading.</p>
-    <p>It does not define a constant value. It defines a constant reference to a value.</p>
-    <p>Because of this you can NOT:</p>
-    <ul>
-        <li>Reassign a constant value</li>
-        <li>Reassign a constant array</li>
-        <li>Reassign a constant object</li>
-    </ul>
-    <ul>
-        <p>But you CAN:</p>
-        <li>Change a constant array</li>
-        <li>Change a constant object</li>
-    </ul>
 
+    <h2>Постоянные объекты и массивы</h2>
+    <p>Ключевое слово <code class="w3-codespan">const</code> немного вводит в заблуждение.</p>
+    <p>Оно не определяет постоянное значение. Оно определяет постоянную ссылку на значение.</p>
+    <p>Из-за этого вы НЕ МОЖЕТЕ:</p>
+    <ul>
+        <li>Переназначить постоянное значение</li>
+        <li>Переназначить постоянный массив</li>
+        <li>Переназначить постоянный объект</li>
+    </ul>
+    <p>Но вы МОЖЕТЕ:</p>
+    <ul>
+        <li>Изменить постоянный массив</li>
+        <li>Изменить постоянный объект</li>
+    </ul>
     <hr>
-    <h2>Constant Arrays</h2>
-    <p>You can change the elements of a constant array:</p>
+
+    <h2>Постоянные массивы</h2>
+    <p>Вы можете изменить элементы постоянного массива:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // You can create a constant array:<br>
+            // Вы можете создать постоянный массив:<br>
             const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br><br>
-            // You can change an element:<br>
+            // Вы можете изменить элемент:<br>
             cars[0] = &quot;Toyota&quot;;<br><br>
-            // You can add an element:<br>
+            // Вы можете добавить элемент:<br>
             cars.push(&quot;Audi&quot;);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const_array" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_array.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>But you can NOT reassign the array:</p>
+    <p>Но вы НЕ можете переназначить массив:</p>
 
     <div class="w3-example  w3-pale-red">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh w3-border-red">
             const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br>
             <br>
-            cars = [&quot;Toyota&quot;, &quot;Volvo&quot;, &quot;Audi&quot;];&nbsp;&nbsp;&nbsp; // ERROR
+            cars = [&quot;Toyota&quot;, &quot;Volvo&quot;, &quot;Audi&quot;];&nbsp;&nbsp;&nbsp; // ERROR (ОШИБКА)
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const_array_assign" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_array_assign.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Constant Objects</h2>
-    <p>You can change the properties of a constant object:</p>
+
+    <h2>Постоянные объекты</h2>
+    <p>Вы можете изменить свойства постоянного объекта:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // You can create a const object:<br>
+            // Вы можете создать объект const:<br>
             const car = {type:"Fiat", model:"500", color:"white"};<br><br>
-            // You can change a property:<br>
+            // Вы можете изменить свойство:<br>
             car.color = "red";<br><br>
-            // You can add a property:<br>
+            // Вы можете добавить свойство:<br>
             car.owner = "Johnson";</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const_object" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_object.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>But you can NOT reassign the object:</p>
+    <p>Но вы НЕ можете переназначить объект:</p>
 
     <div class="w3-example w3-pale-red">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh w3-border-red">
             const car = {type:"Fiat", model:"500", color:"white"};<br>
             <br>
-            car = {type:"Volvo", model:"EX60", color:"red"};&nbsp;&nbsp;&nbsp; //
-            ERROR</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const_object_assign" target="_blank">Попробуйте сами &raquo;</a>
+            car = {type:"Volvo", model:"EX60", color:"red"};&nbsp;&nbsp;&nbsp; // ERROR (ОШИБКА)</div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_object_assign.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Browser Support</h2>
-    <p>The <code class="w3-codespan">const</code> keyword is not supported in Internet Explorer 10 or earlier.</p>
-    <p>The following table defines the first browser versions with full support for the <code class="w3-codespan">const</code> keyword: </p>
+    <h2>Поддержка браузерами</h2>
+    <p>Ключевое слово <code class="w3-codespan">const</code> не поддерживается в Internet Explorer 10 или более ранней версии.</p>
+    <p>В следующей таблице определены первые версии браузера с полной поддержкой ключевого слова <code class="w3-codespan">const</code>:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px;">
@@ -641,134 +639,125 @@
 
     <hr>
     <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-        <!-- MidContent -->
-        <!-- <p class="adtext">Advertisement</p> -->
-
-        <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-        <div id="snhb-mid_content-0"></div>
-
-    </div>
+        <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    </div>
     <hr>
 
-    <h2>Block Scope</h2>
-    <p>Declaring a variable with <code class="w3-codespan">const</code> is similar to <code class="w3-codespan">let</code>
-        when it comes to <strong>Block Scope</strong>.</p>
-    <p>The x declared in the block, in this example, is not the same as the x declared outside the block:</p>
+    <h2>Область действия блока</h2>
+    <p>Объявление переменной с помощью <code class="w3-codespan">const</code> аналогично <code class="w3-codespan">let</code> когда дело доходит <strong>Области действия блока</strong>.</p>
+    <p>Переменная х, объявленная в блоке в этом примере, не совпадает с переменной x, объявленной вне блока:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const x = 10;<br>
-            // Here x is 10<br>
+            // Здесь x равно 10<br>
             <br>
             { <br>
             const x = 2;<br>
-            // Here x is 2<br>}<br>
+            // Здесь x равно 2<br>}<br>
             <br>
-            // Here x is 10
+            // Здесь x равно 10
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>You can learn more about block scope in the chapter <a href="js_scope.html">JavaScript Scope</a>.</p>
+    <p>Вы можете узнать больше об области действия блока в главе <a href="js_scope.html">JavaScript Область действия</a>.</p>
     <hr>
-    <h2>Redeclaring</h2>
-    <p>Redeclaring a JavaScript <code class="w3-codespan">var</code> variable is allowed
-        anywhere in a program:</p>
+
+    <h2>Повторное объявление</h2>
+    <p>Повторное объявление JavaScript переменной <code class="w3-codespan">var</code> разрешено в любом месте программы:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            var x = 3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            x = 4;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed</div>
+            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Разрешено<br>
+            var x = 3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Разрешено<br>
+            x = 4;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Разрешено</div>
     </div>
-    <p>Redeclaring an existing <code class="w3-codespan">var</code> or <code class="w3-codespan">let</code>
-        variable to <code class="w3-codespan">const</code>, in the same scope, is not allowed:</p>
+    <p>Повторное объявление существующей переменной <code class="w3-codespan">var</code> или <code class="w3-codespan">let</code> на <code class="w3-codespan">const</code> в той же области не разрешено:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Разрешено<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
             <br>
             {<br>
-            let x = 2;&nbsp; &nbsp;&nbsp; // Allowed<br>
-            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>}<br>
+            let x = 2;&nbsp; &nbsp;&nbsp; // Разрешено<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Не разрешено<br>}<br>
             <br>
             {<br>
-            const x = 2;&nbsp;&nbsp; // Allowed<br>
-            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            const x = 2;&nbsp;&nbsp; // Разрешено<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
             }
-
         </div>
     </div>
-
-    <p>Reassigning an existing <code class="w3-codespan">const</code> variable, in the same scope, is not allowed:</p>
+    <p>Переназначение существующей переменной <code class="w3-codespan">const</code>  в той же области действия не разрешено:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            x = 2;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
-            var x = 2;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
-            let x = 2;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
-            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Разрешено<br>
+            x = 2;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
+            var x = 2;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
+            let x = 2;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
             <br>{<br>&nbsp;
-            const x = 2;&nbsp;&nbsp; // Allowed<br>
+            const x = 2;&nbsp;&nbsp; // Разрешено<br>
             &nbsp; x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Not allowed<br>&nbsp; var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Not allowed<br>&nbsp; let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Not allowed<br>
+            // Не разрешено<br>&nbsp; var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;
+            // Не разрешено<br>&nbsp; let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;
+            // Не разрешено<br>
             &nbsp;
-            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Не разрешено<br>
             }<br>
         </div>
     </div>
 
-    <p>Redeclaring a variable with <code class="w3-codespan">const</code>, in another scope, or in another block, is allowed:</p>
+    <p>Разрешено повторное объявление переменной с помощью <code class="w3-codespan">const</code> в другой области действия или в другом блоке:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Allowed<br><br>{<br>&nbsp;
-            const x = 3;&nbsp;&nbsp; // Allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Разрешено<br><br>{<br>&nbsp;
+            const x = 3;&nbsp;&nbsp; // Разрешено<br>
             }<br>
             <br>
             {<br>
-            &nbsp;&nbsp;const x = 4;&nbsp;&nbsp;&nbsp;// Allowed<br>
+            &nbsp;&nbsp;const x = 4;&nbsp;&nbsp;&nbsp;// Разрешено<br>
             }</div>
     </div>
     <hr>
 
-    <h2>Const Hoisting</h2>
-    <p>Variables defined with <code class="w3-codespan">var</code> are <strong>hoisted</strong> to the top
-        and can be initialized at any time.</p>
-    <p>Meaning: You can use the variable before it is declared:</p>
+    <h2>Подъём (хостинг) Const</h2>
+    <p>Переменные, определенные с помощью <code class="w3-codespan">var</code> <strong>поднимаются</strong> вверх и могут быть инициализированы в любое время.</p>
+    <p><b>Важно</b>: вы можете использовать переменную до её объявления:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>This is OK:</p>
+        <h3>Пример</h3>
+        <p>Это OK:</p>
         <div class="w3-code notranslate jsHigh">
             carName = &quot;Volvo&quot;;<br>
             var carName;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_let_hoisting_var" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_hoisting_var.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>If you want to learn more about hoisting, study the chapter <a href="js_hoisting.html">JavaScript Hoisting</a>.
+    <p>Если вы хотите узнать больше о подъёме, изучите главу <a href="js_hoisting.html">JavaScript Подъём</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.
 
-    <p>Variables defined with <code class="w3-codespan">const</code> are also hoisted to the top,
-        but not initialized.</p>
-    <p>Meaning: Using a <code class="w3-codespan">const</code> variable before it is declared will result in a
-        <code class="w3-codespan">ReferenceError</code>:</p>
+    <p>Переменные, определенные с помощью <code class="w3-codespan">const</code> также поднимаются вверх, но не инициализируются.</p>
+    <p>Важно: Использование переменной <code class="w3-codespan">const</code> перед её объявлением приведёт к ошибке <code class="w3-codespan">ReferenceError</code>:</p>
 
     <div class="w3-example w3-pale-red">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh w3-border-red">
             alert (carName);<br>
             const carName = &quot;Volvo&quot;;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_const_hoisting" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_hoisting.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <br>
-
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_let.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_operators.html">Next &#10095;</a>

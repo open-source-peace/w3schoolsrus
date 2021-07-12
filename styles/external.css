@@ -442,13 +442,15 @@ hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
 .w3-note, .w3-warning {
  border-left: none;
 }
-.w3-panel {
+/*.w3-panel {*/
+.w3-note, .w3-warning {
  margin-top: 24px;
  margin-bottom: 24px;
  margin-left:-32px;
  margin-right:-32px;
  padding:16px 32px;
 }
+
 h1 {
  font-size: 42px;
 }
