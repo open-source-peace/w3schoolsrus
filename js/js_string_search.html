@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Строковый поиск. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Строковый поиск. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Строковый поиск. Методы для поиска строк. Синтаксис и поддержка браузерами. Значения параметров. Полный справочник. Уроки для начинающих. W3Schools на русском'>
 <link rel='stylesheet' href='../styles/browserref.css'>
 
 <div class='w3-container top'>
@@ -280,7 +280,7 @@
 <!--/Top menu--><!--Left menu sidebar JS-->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
     <div id='leftmenuinner'>
-        <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <div id='leftmenuinnerinner' style="background-color:#E7E9EB;">
             <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
             <h2 class='left'>JS Учебник</h2>
             <a target='_top' href='index.html'>JS Старт</a>
@@ -490,7 +490,7 @@
         <a class="w3-right w3-btn" href="js_string_templates.html">Next &#10095;</a>
     </div>
     <div class="w3-info">
-        <p>JavaScript методы для поиска строк:</p>
+        <h3>JavaScript методы для поиска строк:</h3>
         <ul>
             <li>String.indexOf()</li>
             <li>String.lastindexOf()</li>
@@ -508,7 +508,7 @@
             let str = &quot;Пожалуйста, найдите, где встречается слово 'locate'!&quot;;<br>
             str.indexOf(&quot;locate&quot;)&nbsp;&nbsp;&nbsp; // Возвращает 7
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_string_indexof" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_indexof.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
@@ -525,7 +525,7 @@
             let str = &quot;Пожалуйста, найдите, где встречается слово 'locate'!&quot;;<br>
             str.lastIndexOf(&quot;locate&quot;)&nbsp;&nbsp;&nbsp; // Возвращает 21
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_string_lastindexof" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_lastindexof.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <p>Оба <code class="w3-codespan">indexOf()</code> и <code class="w3-codespan">lastIndexOf()</code> возвращают -1, если текст не найден:</p>
     <div class="w3-example">
@@ -534,131 +534,121 @@
             let str = &quot;Пожалуйста, найдите, где встречается слово 'locate'!&quot;;<br>
             str.lastIndexOf(&quot;John&quot;)&nbsp;&nbsp;&nbsp; // Возвращает -1
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_string_indexof_1" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_indexof_1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Both methods accept a second parameter as the starting position for the
-        search:</p>
+    <p>Оба метода принимают второй параметр в качестве начальной позиции для поиска:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
-            str.indexOf(&quot;locate&quot;, 15)&nbsp;&nbsp;&nbsp; // Returns 21
+            let str = &quot;Пожалуйста, найдите, где встречается слово 'locate'!&quot;;<br>
+            str.indexOf(&quot;locate&quot;, 15)&nbsp;&nbsp;&nbsp; // Возвращает 21
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_string_indexof_2" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_indexof_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>The <code class="w3-codespan">lastIndexOf()</code> methods searches backwards
-        (from the end to the beginning), meaning:
-        if the second parameter is <code class="w3-codespan">15</code>, the search starts at position
-        15, and searches to the beginning of the string.</p>
+    <p>Методы <code class="w3-codespan">lastIndexOf()</code> выполняют поиск в обратном направлении (от конца к началу), что означает: если второй параметр равен <code class="w3-codespan">15</code>, поиск начинается с позиции 15 и до начала строки.</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
-            str.lastIndexOf(&quot;locate&quot;, 15)&nbsp;&nbsp;&nbsp; // Returns 7
+            let str = &quot;Пожалуйста, найдите, где встречается слово 'locate'!&quot;;<br>
+            str.lastIndexOf(&quot;locate&quot;, 15)&nbsp;&nbsp;&nbsp; // Возвращает 7
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_string_lastindexof_2" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_lastindexof_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
     <h2>String.search()</h2>
-    <p>The <code class="w3-codespan">search()</code> method searches a string for a specified value
-        and returns the position of the match:</p>
+    <p>Метод <code class="w3-codespan">search()</code> ищет строку для указанного значения и возвращает позицию совпадения:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
-            str.search(&quot;locate&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 7
+            let str = &quot;Пожалуйста, найдите, где встречается слово 'locate'!&quot;;<br>
+            str.search(&quot;locate&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает 7
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_string_search_locate" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_search_locate.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Did You Notice?</h2>
-    <p>The two methods, <code class="w3-codespan">indexOf()</code> and <code class="w3-codespan">search()</code>, are <strong>equal?</strong></p>
-    <p>They accept the same arguments (parameters), and return the same value?</p>
-    <p>The two methods are <strong>NOT</strong> equal. These are the differences:</p>
+
+    <h2>Вы заметили?</h2>
+    <p>Оба метода, <code class="w3-codespan">indexOf()</code> и <code class="w3-codespan">search()</code>, <strong>равнозначны?</strong></p>
+    <p>Они принимают одни и те же аргументы (параметры) и возвращают одно и то же значение?</p>
+    <p>Эти два метода <strong>НЕ РАВНОЗНАЧНЫ</strong>. Вот отличия:</p>
     <ul>
-        <li>The <code class="w3-codespan">search()</code> method cannot take a second start position argument.</li>
-        <li>The <code class="w3-codespan">indexOf()</code> method cannot take
-            powerful search values (regular expressions).</li>
+        <li>Метод <code class="w3-codespan">search()</code> не может принимать второй аргумент начальной позиции;</li>
+        <li>Метод <code class="w3-codespan">indexOf()</code> не может принимать большие поисковые значения (регулярные выражения).</li>
     </ul>
-    <p>You will learn more about
-        regular expressions in a later chapter.</p>
+    <p>Вы узнаете больше о регулярных выражениях в следующей главе.</p>
 
     <hr>
     <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-        <!-- MidContent -->
-        <!-- <p class="adtext">Advertisement</p> -->
-
-        <!--<pre>mid_content, all: [300,250][336,280][728,90][970,250][970,90][320,50][468,60]</pre>-->
-        <div id="snhb-mid_content-0"></div>
-
-    </div>
+        <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    </div>
     <hr>
 
     <h2>String.match()</h2>
-    <p>The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.</p>
+    <p>Метод <code class="w3-codespan">match()</code> ищет в строке совпадение с регулярным выражением и возвращает совпадения в виде объекта Array (массив).</p>
     <div class="w3-example">
-        <h3>Example 1</h3>
-        <p>Search a string for &quot;ain&quot;:</p>
+        <h3>Пример 1</h3>
+        <p>Искать в строке &quot;ain&quot;:</p>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;The rain in SPAIN stays mainly in the plain&quot;; <br>
-            text.match(/ain/g)&nbsp;&nbsp;&nbsp;&nbsp;// Returns an array [ain,ain,ain]
+            text.match(/ain/g)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает массив [ain,ain,ain]
         </div>
-
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_match_regexp" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_match_regexp.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Read more about regular expressions in the chapter <a href="../js/js_regexp.html">JS RegExp</a>.</p>
+    <p>Подробнее о <strong>регулярных выражениях</strong> читайте в главе <a href="../js/js_regexp.html">JS RegExp</a>.</p>
     <div class="w3-note">
-        <p>If the regular expression does not include the <em>g</em> modifier (to perform a <em>global</em> search),
-            the match() method will return only the first match in the string.</p>
+        <p>Если регулярное выражение не включает модификатор <em>g</em> (для выполнения <em>глобального</em> поиска), метод <code class="w3-codespan">match()</code> вернёт только первое совпадение в строке.</p>
     </div>
 
-    <h2>Syntax</h2>
+    <h2>Синтаксис</h2>
     <div class="w3-code w3-border notranslate"><div>
             <i>string</i>.match(<em>regexp</em>)</div></div>
     <table class="ws-table-all notranslate">
         <tr>
             <td><em>regexp</em></td>
-            <td>Required. The value to search for, as a regular expression.</td>
+            <td>Обязательно. Значение для поиска в виде регулярного выражения</td>
         </tr>
         <tr>
-            <td>Returns:</td>
-            <td>An Array, containing the matches, one item for each match, or <em>null</em> if no match is found</td>
+            <td>Возвращает:</td>
+            <td>Массив, содержащий совпадения, по одному элементу для каждого совпадения или <em>null</em>, если совпадений не найдено</td>
         </tr>
     </table>
 
     <div class="w3-example">
-        <h3>Example 2</h3>
-        <p>Perform a global, case-insensitive search for &quot;ain&quot;:</p>
+        <h3>Пример 2</h3>
+        <p>Выполните глобальный поиск без учета регистра &quot;ain&quot;:</p>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;The rain in SPAIN stays mainly in the plain&quot;; <br>
-            text.match(/ain/gi) &nbsp;&nbsp;// Returns an array [ain,AIN,ain,ain]
+            text.match(/ain/gi) &nbsp;&nbsp;// Возвращает массив [ain,AIN,ain,ain]
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_match_regexp2" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_match_regexp2.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
+
     <h2>String.includes()</h2>
-    <p>The <code class="w3-codespan">includes()</code> method returns true if a string contains a specified value.</p>
+    <p>Метод <code class="w3-codespan">includes()</code> возвращает true, если строка содержит указанное значение.</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
-            text.includes(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+            text.includes(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает true
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_includes" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_includes.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
-    <h2>Browser Support</h2>
-    <p>String.includes() is not supported in Internet Explorer.</p>
+    <h2>Поддержка браузерами</h2>
+    <p>String.includes() не поддерживается в Internet Explorer.</p>
     <table class="browserref notranslate">
         <tr style="height:50px">
             <th style="width:16%;" class="bsChrome" title="Chrome"></th>
@@ -683,97 +673,99 @@
         </tr>
     </table>
 
-    <h2>Syntax</h2>
+    <h2>Синтаксис</h2>
     <div class="w3-code w3-border notranslate"><div>
             <i>string</i>.includes(<em>searchvalue</em>,<em> start</em>)</div></div>
     <table class="ws-table-all notranslate">
         <tr>
             <td><em>searchvalue</em></td>
-            <td>Required. The string to search for</td>
+            <td>Обязательно. Строка для поиска</td>
         </tr>
         <tr>
             <td><em>start</em></td>
-            <td>Optional. Default 0. Position to start the search</td>
+            <td>Не обязательно. По умолчанию 0. Позиция для начала поиска.</td>
         </tr>
         <tr>
-            <td>Returns:</td>
-            <td>Returns <code class="w3-codespan">true</code> if the string contains the value, otherwise <code class="w3-codespan">false</code></td>
+            <td>Возвращает:</td>
+            <td>Возвращает <code class="w3-codespan">true</code> если строка содержит значение, в противном случае <code class="w3-codespan">false</code></td>
         </tr>
         <tr>
-            <td>JS Version:</td>
+            <td>JS Версия:</td>
             <td>ES6 (2015)</td>
         </tr>
     </table>
 
     <div class="w3-example">
-        <p>Check if a string includes "world", starting the search at position 12:</p>
+        <p>Проверьте, есть ли в строке слово "world", начиная поиск с позиции 12:</p>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
-            text.includes(&quot;world&quot;, 12)&nbsp;&nbsp;&nbsp;&nbsp;// Returns false
+            text.includes(&quot;world&quot;, 12)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает false
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_includes2" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_includes2.html?filename=" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
+
     <h2>String.startsWith()</h2>
-    <p>The <code class="w3-codespan">startsWith()</code> method returns <code class="w3-codespan">true</code>
-        if a string begins with a specified value, otherwise <code class="w3-codespan">false</code>:</p>
+    <p>Метод <code class="w3-codespan">startsWith()</code> возвращает <code class="w3-codespan">true</code> если строка начинается с указанного значения, в противном случае <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             <br>
-            text.startsWith(&quot;Hello&quot;)&nbsp;&nbsp;&nbsp;// Returns true
+            text.startsWith(&quot;Hello&quot;)&nbsp;&nbsp;&nbsp;// Возвращает true
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_startswith" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_startswith.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-    <h2>Syntax</h2>
+
+    <h2>Синтаксис</h2>
     <div class="w3-code w3-border notranslate"><div>
             <i>string</i>.startsWith(<em>searchvalue</em>,<em> start</em>)</div></div>
-    <h2>Parameter Values</h2>
+
+    <h2>Значения параметров</h2>
     <table class="ws-table-all notranslate">
         <tr>
-            <th style="width:23%">Parameter</th>
-            <th>Description</th>  </tr>
+            <th style="width:23%">Параметр</th>
+            <th>Описание</th>
+        </tr>
         <tr>
             <td><em>searchvalue</em></td>
-            <td>Required. The value to search for.</td>
+            <td>Обязательно. Значение для поиска</td>
         </tr>
         <tr>
             <td><em>start</em></td>
-            <td>Optional. Default 0. The position to start the search.</td>
+            <td>Не обязательно. По умолчанию 0. Позиция начала поиска</td>
         </tr>
     </table>
 
     <div class="w3-example">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             <br>
-            text.startsWith(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns false
+            text.startsWith(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает false
         </div>
 
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             <br>
-            text.startsWith(&quot;world&quot;, 5)&nbsp;&nbsp;&nbsp;&nbsp;// Returns false
+            text.startsWith(&quot;world&quot;, 5)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает false
         </div>
 
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             <br>
-            text.startsWith(&quot;world&quot;, 6)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+            text.startsWith(&quot;world&quot;, 6)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает true
         </div>
 
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_startswith2" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-note">
-        <p><b>Note:</b> The <code class="w3-codespan">startsWith()</code> method is case sensitive.</p>
+        <p><b>Примечание:</b> Метод <code class="w3-codespan">startsWith()</code> чувствителен к регистру.</p>
     </div>
 
-    <p>The <code class="w3-codespan">startsWith()</code> method is not supported in Internet Explorer.</p>
+    <p>Метод <code class="w3-codespan">startsWith()</code> не поддерживается в Internet Explorer.</p>
     <table class="browserref notranslate">
         <tr style="height:50px">
             <th style="width:16%;" class="bsChrome" title="Chrome"></th>
@@ -798,51 +790,56 @@
         </tr>
     </table>
     <hr>
+
     <h2>String.endsWith()</h2>
-    <p>The <code class="w3-codespan">endsWith()</code> method returns <code class="w3-codespan">true</code>
-        if a string ends with a specified value, otherwise <code class="w3-codespan">false</code>:</p>
+    <p>Метод <code class="w3-codespan">endsWith()</code> возвращает <code class="w3-codespan">true</code> если строка заканчивается указанным значением, в противном случае <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>Check if a string ends with "Doe":</p>
+        <p>Проверьте, заканчивается ли строка на "Doe":</p>
         <div class="w3-code notranslate jsHigh">
             var text = &quot;John Doe&quot;;<br>
-            text.endsWith(&quot;Doe&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+            text.endsWith(&quot;Doe&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает true
         </div>
         <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_endswith" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-    <h2>Syntax</h2>
-    <div class="w3-code w3-border notranslate"><div>
-            <i>string</i>.endswith(<em>searchvalue</em>,<em> length</em>)</div></div>
-    <h2>Parameter Values</h2>
+
+    <h2>Синтаксис</h2>
+    <div class="w3-code w3-border notranslate">
+        <div>
+            <i>string</i>.endswith(<em>searchvalue</em>,<em> length</em>)
+        </div>
+    </div>
+    <h2>Значения параметров</h2>
     <table class="ws-table-all notranslate">
         <tr>
-            <th style="width:23%">Parameter</th>
-            <th>Description</th>  </tr>
+            <th style="width:23%">Параметр</th>
+            <th>Описание</th>
+        </tr>
         <tr>
             <td><em>searchvalue</em></td>
-            <td>Required. The value to search for.</td>
+            <td>Обязательно. Значение для поиска</td>
         </tr>
         <tr>
             <td><em>length</em></td>
-            <td>Optional. The length to search.</td>
+            <td>Не обязательно. Длина поиска</td>
         </tr>
     </table>
 
     <div class="w3-example">
-        <p>Check in the 11 first characters of a string ends with "world":</p>
+        <p>Проверить 11 первых символов строки, оканчивающейся на "world":</p>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
-            text.endsWith(&quot;world&quot;, 11)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+            text.endsWith(&quot;world&quot;, 11)&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает true
         </div>
         <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_endswith2" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
     <div class="w3-note">
-        <p><b>Note:</b> The <code class="w3-codespan">endsWith()</code> method is case sensitive.</p>
+        <p><b>Примечание:</b> Метод <code class="w3-codespan">endsWith()</code> чувствителен к регистру.</p>
     </div>
 
-    <p>The <code class="w3-codespan">endsWith()</code> method is not supported in Internet Explorer.</p>
+    <p>Метод <code class="w3-codespan">endsWith()</code> не поддерживается в Internet Explorer.</p>
     <table class="browserref notranslate">
         <tr style="height:50px">
             <th style="width:16%;" class="bsChrome" title="Chrome"></th>
@@ -868,13 +865,10 @@
     </table>
     <br>
     <hr>
-    <h2>Complete String Reference</h2>
-    <p>For a complete reference, go to our <a href="../jsref/jsref_obj_string.html">Complete
-            JavaScript String Reference</a>.</p>
-    <p>The reference contains descriptions and examples of all string properties and methods.</p>
-
-
-    <br>
+    <h2>Полный справочник строк</h2>
+    <p>Для получения полной справки перейдите на <a href="../jsref/jsref_obj_string.html">Полный справочник JavaScript строк</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <p>Справочник содержит описания и примеры всех свойств и методов строк.</p>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_string_methods.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_string_templates.html">Next &#10095;</a>
