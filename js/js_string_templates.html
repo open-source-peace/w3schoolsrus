@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Строковые шаблоны. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Строковые шаблоны. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Строковые шаблоны (Шаблонные литералы). Back-Tics синтаксис. Кавычки внутри строк. Многострочные строки. Замены переменных. Замена выражения. HTML Шаблоны. Полный справочник. Уроки для начинающих. W3Schools на русском'>
 <link rel='stylesheet' href='../styles/browserref.css'>
 
 <div class='w3-container top'>
@@ -490,100 +490,107 @@
         <a class="w3-right w3-btn" href="js_numbers.html">Next &#10095;</a>
     </div>
     <div class="w3-info">
-        <h3>Synonyms:</h3>
+        <h3>Синонимы:</h3>
         <ul class="w3-large">
-            <li>Template Literals</li>
-            <li>Template Strings</li>
-            <li>String Templates</li>
-            <li>Back-Tics Syntax</li>
+            <li>Шаблонные литералы</li>
+            <li>Шаблонные строки</li>
+            <li>Строковые шаблоны</li>
+            <li>Back-Tics синтаксис</li>
         </ul>
     </div>
 
-    <h2>Back-Tics Syntax</h2>
-    <p><b>Template Literals</b> use back-ticks (``) rather than the quotes ("") to define a string:</p>
+    <h2>Back-Tics синтаксис</h2>
+    <p><b>В шаблонных литералах</b> для определения строки используются back-ticks (``) (обратные галочки или кавычки), а не обычные кавычки (&quot;&quot;):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = `Hello World!`;
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryjs_templates.html?filename=" target="_blank">Попробуйте сами &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_templates.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-
     <hr>
-    <h2>Quotes Inside Strings</h2>
-    <p>With <b>template literals</b>, you can use both single and double quotes inside a string:</p>
+
+    <h2>Кавычки внутри строк</h2>
+    <p>С помощью <strong>шаблонных литералов</strong> вы можете использовать как одинарные, так и двойные кавычки внутри строки:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let text = `He's often called "Johnny"`;
+            let text = `Его часто называют "Johnny"`;
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryjs_templates_quotes.html?filename=" target="_blank">Попробуйте сами &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_templates_quotes.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-
     <hr>
-    <h2>Multiline Strings</h2>
-    <p><b>Template literals</b> allows multiline strings:</p>
+
+    <h2>Многострочные строки</h2>
+    <p><strong>Шаблонные литералы</strong> допускают использование многострочных строк:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text =<br>
-            `The quick<br>
-            brown fox<br>
-            jumps over<br>
-            the lazy dog`;<br>
+            `Быстрая<br>
+            рыжая лиса<br>
+            перепрыгивает<br>
+            ленивую собаку`;<br>
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryjs_templates_multiline.html?filename=" target="_blank">Попробуйте сами &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_templates_multiline.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-
     <hr>
-    <h2>Interpolation</h2>
-    <p><b>Template literals</b> provide an easy way to interpolate variables and expressions into strings.</p>
-    <p>The method is called string interpolation.</p>
-    <p>The syntax is:</p>
+    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+      <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    </div>
+    <hr>
+
+    <h2>Интерполяция</h2>
+    <p><strong>Шаблонные литералы</strong> предоставляют простой способ интерполировать переменные и выражения в строки.</p>
+    <p>Метод называется <strong>строковой интерполяцией</strong>.</p>
+    <p>Синтаксис:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             ${...}</div>
     </div>
-
     <hr>
-    <h2>Variable Substitutions</h2>
-    <p><b>Template literals</b> allows variables in strings:</p>
+
+    <h2>Замены переменных</h2>
+    <p><strong>Шаблонные литералы</strong> разрешают переменные в строках:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let firstName = "John";<br>
             let lastName = "Doe";<br>
             <br>
             let text = `Welcome ${firstName,}, ${firstName,}`;
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryjs_templates_variables.html?filename=" target="_blank">Попробуйте сами &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_templates_variables.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-note">
-        <p>Automatic replacing of variables with real values is called <b>string interpolation</b>.</p>
+        <p>Автоматическая замена переменных действительными значениями называется <strong>интерполяцией строк</strong>.</p>
     </div>
-
     <hr>
-    <h2>Expression Substitution</h2>
-    <p><b>Template literals</b> allows expressions in strings:</p>
+
+    <h2>Замена выражения</h2>
+    <p><strong>Шаблонные литералы</strong> разрешают выражения в строках:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let price = 10;<br>
             let VAT = 0.25;<br>
             <br>
             let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryjs_templates_expressions.html?filename=" target="_blank">Попробуйте сами &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_templates_expressions.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-note">
-        <p>Automatic replacing of expressions with real values is called <b>string interpolation</b>.</p>
+        <p>Автоматическая замена выражений действительными значениями называется <strong>интерполяцией строк</strong>.</p>
     </div>
-
-
     <hr>
-    <h2>HTML Templates</h2>
+
+    <h2>HTML Шаблоны</h2>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let header = "Templates Literals";<br>
             let tags = ["template literals", "javascript", "es6"];<br>
@@ -596,13 +603,13 @@
             <br>
             html += `&lt;/ul&gt;`;
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryjs_templates_html.html?filename=" target="_blank">Попробуйте сами &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_templates_html.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-
     <hr>
-    <h2>Browser Support</h2>
-    <p><b>Template Literals</b> are not supported in Internet Explorer.</p>
-    <p>The first browser versions with full support was:</p>
+
+    <h2>Поддержка браузерами</h2>
+    <p><strong>Шаблонные литералы</strong> не поддерживаются в Internet Explorer.</p>
+    <p>Первые версии браузеров с полной поддержкой были:</p>
     <table class="browserref notranslate">
         <tr style="height:50px">
             <th style="width:16%;" class="bsChrome" title="Chrome"></th>
@@ -626,12 +633,11 @@
             <td>Apr 2015</td>
         </tr>
     </table>
-
     <hr>
-    <h2>Complete String Reference</h2>
-    <p>For a complete reference, go to our <a href="../jsref/jsref_obj_string.html">Complete
-            JavaScript String Reference</a>.</p>
-    <p>The reference contains descriptions and examples of all string properties and methods.</p>
+
+    <h2>Полный справочник строк</h2>
+    <p>Для получения полной справки перейдите на <a href="../jsref/jsref_obj_string.html">Полный справочник JavaScript строк</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <p>Справочник содержит описания и примеры всех свойств и методов строк.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_string_search.html">&#10094; Prev</a>
