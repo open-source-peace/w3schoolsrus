@@ -534,31 +534,30 @@
     </table>
     <hr>
 
-    <h2>Precision</h2>
-    <p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits.</p>
+    <h2>Точность</h2>
+    <p>Целые числа (числа без точки или показателя степени) имеют точность до 15 цифр.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 999999999999999;&nbsp;&nbsp; // x will be 999999999999999<br>
-            let y = 9999999999999999;&nbsp; // y will be 10000000000000000
+            let x = 999999999999999;&nbsp;&nbsp; // x будет 999999999999999<br>
+            let y = 9999999999999999;&nbsp; // y будет 10000000000000000
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_inaccurate1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>The maximum number of decimals is 17, but floating point arithmetic is not
-        always 100% accurate:</p>
+    <p>Максимальное количество десятичных знаков - 17, но арифметика с плавающей запятой не всегда точна на 100%:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 0.2 + 0.1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x will be 0.30000000000000004</div>
+            let x = 0.2 + 0.1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x будет 0.30000000000000004</div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_numbers_inaccurate2.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
-    <p>To solve the problem above, it helps to multiply and divide:</p>
+    <p>Чтобы решить указанную выше проблему, помогает умножать и делить:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = (0.2 * 10 + 0.1 * 10) / 10;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x will be 0.3</div>
+            let x = (0.2 * 10 + 0.1 * 10) / 10;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x будет 0.3</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_inaccurate3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
@@ -571,66 +570,66 @@
 </div>    </div>
     <hr>
 
-    <h2>Adding Numbers and Strings</h2>
+    <h2>Добавление чисел и строк</h2>
     <div class="w3-panel w3-warning">
-        <p>WARNING !!</p>
-        <p>JavaScript uses the + operator for both addition and concatenation.</p>
-        <p>Numbers are added. Strings are concatenated.</p>
+        <p>ВНИМАНИЕ!!</p>
+        <p>JavaScript использует оператор + как для сложения, так и для конкатенации.</p>
+        <p>Числа складываются. Строки объединяются.</p>
     </div>
-    <p>If you add two numbers, the result will be a number:</p>
+    <p>Если сложить два числа, получится число:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
             let y = 20;<br>
-            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z will be 30 (a number)
+            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z будет 30 (число)
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_add.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>If you add two strings, the result will be a string concatenation:</p>
+    <p>Если вы сложите две строки, результатом будет конкатенация (объединение) строк.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = &quot;10&quot;;<br>
             let y = &quot;20&quot;;<br>
-            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z will be 1020 (a string)
+            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z будет 1020 (строка)
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_add_strings1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>If you add a number and a string, the result will be a string concatenation:</p>
+    <p>Если вы сложите число и строку, результатом будет конкатенация строк:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
             let y = &quot;20&quot;;<br>
-            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z will be 1020 (a string)
+            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z будет 1020 (строка)
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_add_strings2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>If you add a string and a number, the result will be a string concatenation:</p>
+    <p>Если вы сложите строку и число, результатом будет конкатенация строк:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = &quot;10&quot;;<br>
             let y = 20;<br>
-            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z will be 1020 (a string)
+            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z будет 1020 (строка)
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_add_strings5.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>A common mistake is to expect this result to be 30:</p>
+    <p>Распространённая ошибка - ожидать, что этот результат будет 30:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
             let y = 20;<br>
-            let z = &quot;The result is: &quot; + x + y;
+            let z = &quot;Результат: &quot; + x + y;
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_add_strings3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>A common mistake is to expect this result to be 102030:</p>
+    <p>Распространённой ошибкой является ожидание того, что результат будет 102030:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -642,107 +641,102 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_add_strings4.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p>The JavaScript interpreter works from left to right.</p>
-        <p>First 10 + 20 is added because x and y are both numbers.</p>
-        <p>Then 30 + &quot;30&quot; is concatenated because z is a string.</p>
+        <p>JavaScript интерпретатор работает слева направо.</p>
+        <p>Первые 10 + 20 складываются, потому что x и y - оба числа.</p>
+        <p>Затем 30 + &quot;30&quot; - объединяются, потому что z является строкой (т.к. взято в кавычки).</p>
     </div>
     <hr>
 
-    <h2>Numeric Strings</h2>
-
-    <p>JavaScript strings can have numeric content:</p>
+    <h2>Числовые строки</h2>
+    <p>JavaScript строки могут иметь числовое содержание:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            let x = 100;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x is a number<br>
-            <br>let y = &quot;100&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // y is a
-            string</div>
+            let x = 100;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x является числом<br>
+            <br>let y = &quot;100&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // y является строкой</div>
     </div>
 
-    <p>JavaScript will try to convert strings to numbers in all numeric operations:</p>
-    <p>This will work:</p>
+    <p>JavaScript попытается преобразовать строки в числа во всех числовых операциях:</p>
+    <p>Это будет работать:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = &quot;100&quot;;<br>
             let y = &quot;10&quot;;<br>
-            let z = x / y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z will be 10
+            let z = x / y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z будет 10
         </div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_numbers_string1.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
 
-    <p>This will also work:</p>
+    <p>Это тоже сработает:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = &quot;100&quot;;<br>
             let y = &quot;10&quot;;<br>
-            let z = x * y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z will be 1000</div>
+            let z = x * y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z будет 1000</div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_numbers_string2.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
 
-    <p>And this will work:</p>
+    <p>И это будет работать:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = &quot;100&quot;;<br>
             let y = &quot;10&quot;;<br>
-            let z = x - y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z will be 90</div>
+            let z = x - y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z будет 90</div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_numbers_string3.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
 
-    <p>But this will not work:</p>
+    <p>Но это не сработает:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = &quot;100&quot;;<br>
             let y = &quot;10&quot;;<br>
-            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z will not be 110 (It will be 10010)</div>
+            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // z не будет 110 (будет 10010)</div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_numbers_string4.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>In the last example JavaScript uses the + operator to concatenate the strings.</p>
+        <p>В последнем примере JavaScript использует оператор + для объединения (конкатенации) строк.</p>
     </div>
-
     <hr>
 
-    <h2>NaN - Not a Number</h2>
-
-    <p><code class="w3-codespan">NaN</code> is a JavaScript reserved word indicating that a number is not a legal number.</p>
-    <p>Trying to do arithmetic with a non-numeric string will result in <code class="w3-codespan">NaN</code> (Not a Number):</p>
+    <h2>NaN - Not a Number (Не число)</h2>
+    <p><code class="w3-codespan">NaN</code> - это зарезервированное слово в JavaScript, указывающее, что число не является допустимым числом.</p>
+    <p>Попытка выполнить арифметику с нечисловой строкой приведет к результату <code class="w3-codespan">NaN</code> (Not a Number / Не число):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 100 / &quot;Apple&quot;;&nbsp;
-            // x will be NaN (Not a Number)<br>
+            // x будет NaN (Not a Number)<br>
         </div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_numbers_divide_string.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
-    <p>However, if the string contains a numeric value , the result will be a
-        number:</p>
+    <p>Однако, если строка содержит числовое значение, результатом будет число:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 100 / &quot;10&quot;;&nbsp;&nbsp;&nbsp;&nbsp;
-            // x will be 10</div>
+            // x будет 10</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_divide_number.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>You can use the global JavaScript function <code class="w3-codespan">isNaN()</code> to find out if a value is a number:</p>
+    <p>Вы можете использовать глобальную JavaScript функцию <code class="w3-codespan">isNaN()</code> чтобы узнать, является ли значение числом:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 100 / &quot;Apple&quot;;<br>isNaN(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true because x is Not a Number
+            let x = 100 / &quot;Apple&quot;;<br>isNaN(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает true, потому что x является Not a Number
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_isnan_true.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Watch out for <code class="w3-codespan">NaN</code>. If you use <code class="w3-codespan">NaN</code> in a mathematical operation, the result will also be <code class="w3-codespan">NaN</code>:</p>
+    <p>Следите за <code class="w3-codespan">NaN</code>. Если вы используете <code class="w3-codespan">NaN</code> в математической операции, результат также будет <code class="w3-codespan">NaN</code>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -750,80 +744,74 @@
             let x = NaN;<br>
             let y = 5;<br>
             let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // z will be NaN
+            // z будет NaN
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_nan_math.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Or the result might be a concatenation: </p>
+    <p>Или результатом может быть конкатенация (объединение):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = NaN;<br>
             let y = &quot;5&quot;;<br>
-            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z will be NaN5</div>
+            let z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // z будет NaN5</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_nan_concat.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p><code class="w3-codespan">NaN</code> is a number: <code class="w3-codespan">typeof NaN</code> returns <code class="w3-codespan">number</code>:</p>
+    <p><code class="w3-codespan">NaN</code> является числом: <code class="w3-codespan">typeof NaN</code> возвращает <code class="w3-codespan">number</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            typeof NaN;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns &quot;number&quot;</div>
+            typeof NaN;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает &quot;number&quot;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_nan_typeof.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
 
-    <h2>Infinity</h2>
-
-    <p><code class="w3-codespan">Infinity</code> (or <code class="w3-codespan">-Infinity</code>) is the value JavaScript will return if you calculate a number outside the largest
-        possible number.</p>
+    <h2>Infinity / Бесконечность</h2>
+    <p><code class="w3-codespan">Infinity</code> (или <code class="w3-codespan">-Infinity</code>) это значение, которое JavaScript вернёт, если вы вычислите число за пределами максимально возможного числа.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let myNumber = 2;<br>while (myNumber != Infinity) {&nbsp;&nbsp;&nbsp;// Execute until Infinity<br>
+            let myNumber = 2;<br>while (myNumber != Infinity) {&nbsp;&nbsp;&nbsp;// Выполнить до бесконечности<br>
             &nbsp; myNumber = myNumber * myNumber;<br>}
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_infinity.html" target="_blank">Попробуйте сами &raquo;</a></div>
 
-    <p>Division by 0 (zero) also generates <code class="w3-codespan">Infinity</code>:</p>
+    <p>Деление на 0 (ноль) также даёт <code class="w3-codespan">Infinity</code> (бесконечность):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x =&nbsp; 2 / 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // x will be Infinity<br>
-            let y = -2 / 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// y will be -Infinity
+            // x будет Infinity<br>
+            let y = -2 / 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// y будет -Infinity
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_infinity_zero.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p><code class="w3-codespan">Infinity</code> is a number: <code class="w3-codespan">typeof Infinity</code> returns <code class="w3-codespan">number</code>.</p>
+    <p><code class="w3-codespan">Infinity</code> является числом: <code class="w3-codespan">typeof Infinity</code> возвращает <code class="w3-codespan">number</code>.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            typeof Infinity;&nbsp;&nbsp;&nbsp;&nbsp; // returns &quot;number&quot;</div>
+            typeof Infinity;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает &quot;number&quot;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_infinity_typeof.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
 
-    <h2>Hexadecimal</h2>
-    <p>JavaScript interprets numeric constants as hexadecimal if they are preceded by
-        0x.</p>
+    <h2>Hexadecimal / Шестнадцатеричный</h2>
+    <p>JavaScript интерпретирует числовые константы как шестнадцатеричные, если им предшествует 0x.</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 0xFF;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x will be 255
+            let x = 0xFF;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x будет 255
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_hex.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Never write a number with a leading zero (like 07).<br>Some JavaScript versions interpret
-            numbers as octal if they are written with a leading zero.</p>
+        <p>Never write a number with a leading zero (like 07).<br>Some JavaScript versions interpret numbers as octal if they are written with a leading zero.</p>
     </div>
 
     <p>
