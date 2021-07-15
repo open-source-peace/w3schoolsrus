@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Числа. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript числа.  Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript числа всегда являются 64-битными числами с плавающей запятой. Добавление (сложение) чисел и строк. Числовые строки. NaN - Not a Number (Не число). Infinity / Бесконечность. Шестнадцатеричные. Числа могут быть объектами. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -646,6 +646,14 @@
         <p>Затем 30 + &quot;30&quot; - объединяются, потому что z является строкой (т.к. взято в кавычки).</p>
     </div>
     <hr>
+    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+      <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    </div>
+    <hr>
 
     <h2>Числовые строки</h2>
     <p>JavaScript строки могут иметь числовое содержание:</p>
@@ -704,6 +712,14 @@
     <div class="w3-panel w3-note">
         <p>В последнем примере JavaScript использует оператор + для объединения (конкатенации) строк.</p>
     </div>
+    <hr>
+    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+      <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    </div>
     <hr>
 
     <h2>NaN - Not a Number (Не число)</h2>
@@ -799,7 +815,7 @@
     </div>
     <hr>
 
-    <h2>Hexadecimal / Шестнадцатеричный</h2>
+    <h2>Hexadecimal / Шестнадцатеричные</h2>
     <p>JavaScript интерпретирует числовые константы как шестнадцатеричные, если им предшествует 0x.</p>
 
     <div class="w3-example">
@@ -811,88 +827,78 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Never write a number with a leading zero (like 07).<br>Some JavaScript versions interpret numbers as octal if they are written with a leading zero.</p>
+        <p>Никогда не пишите числа с нулем в начале (например, 07).<br>Некоторые версии JavaScript интерпретируют числа как восьмеричные, если они записаны с нулем в начале.</p>
     </div>
 
-    <p>
-        By default, JavaScript displays numbers as <strong>base 10</strong> decimals.</p>
-    <p>But you can use the <code class="w3-codespan">toString()</code> method to output numbers from <strong>base 2</strong>
-        to <strong>base 36</strong>.</p>
-    <p>Hexadecimal is <strong>base 16</strong>. Decimal is <strong>base 10</strong>.
-        Octal is <strong>base 8</strong>. Binary is <strong>base 2</strong>.</p>
+    <p>По умолчанию в JavaScript числа отображаются в виде десятичных знаков с <b>основанием 10</b>.</p>
+    <p>Но вы можете использовать метод <code class="w3-codespan">toString()</code> для вывода чисел от <b>основания 2</b> до <b>основания 36</b>.</p>
+    <p>В шестнадцатеричном формате используется <b>основание 16</b>. В десятичной системе используется <b>основание 10</b>. Восьмеричное число - это <b>основание 8</b>. Двоичный формат - это <b>основание 2</b>.</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let myNumber = 32;<br>myNumber.toString(10);&nbsp;&nbsp;// returns 32<br>myNumber.toString(32);&nbsp;&nbsp;// returns
-            10<br>
-            myNumber.toString(16);&nbsp;&nbsp;// returns 20<br>
-            myNumber.toString(8);&nbsp;&nbsp;&nbsp;// returns 40<br>
-            myNumber.toString(2);&nbsp;&nbsp;&nbsp;// returns 100000<br>
+            let myNumber = 32;<br>myNumber.toString(10);&nbsp;&nbsp;// вернёт 32<br>myNumber.toString(32);&nbsp;&nbsp;// вернёт 10<br>
+            myNumber.toString(16);&nbsp;&nbsp;// вернёт 20<br>
+            myNumber.toString(8);&nbsp;&nbsp;&nbsp;// вернёт 40<br>
+            myNumber.toString(2);&nbsp;&nbsp;&nbsp;// вернёт 100000<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_numbers_tostring.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Numbers Can be Objects</h2>
-
-    <p>Normally JavaScript numbers are primitive values created from literals:</p>
+    <h2>Числа могут быть объектами</h2>
+    <p>Обычно числа JavaScript - это примитивные значения, созданные из литералов:</p>
     <p><code class="w3-codespan">let x = 123;</code></p>
-    <p>But numbers can also be defined as objects with the keyword <code class="w3-codespan">new</code>:</p>
-    <p><code class="w3-codespan">let y = new
-            Number(123);</code></p>
+    <p>Но числа также можно определить как объекты с ключевым словом <code class="w3-codespan">new</code>:</p>
+    <p><code class="w3-codespan">let y = new Number(123);</code></p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 123;<br>
             let y = new Number(123);<br><br>
-            //
-            typeof x returns number<br>
-            //
-            typeof y returns object
+            // typeof x вернёт число<br>
+            // typeof y вернёт объект
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_number_object.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Do not create Number objects.
-            It slows down execution speed.<br>The <code class="w3-codespan">new</code> keyword complicates
-            the code. This can produce some unexpected results:</p>
+        <p>Не создавайте Number (числовые) объекты. Это снижает скорость выполнения.<br>Ключевое слово <code class="w3-codespan">new</code> усложняет код. Это может привести к неожиданным результатам:</p>
     </div>
 
-    <p> When using the <code class="w3-codespan">==</code> operator, equal
-        numbers are equal:</p>
+    <p>При использовании оператора <code class="w3-codespan">==</code> равные числа равны:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             let y = new Number(500);<br><br>
-            // (x == y) is true because x and y have equal values </div>
+            // (x == y) является true, потому что x и y имеют равные значения
+        </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_number_object1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>When using the <code class="w3-codespan">===</code> operator, equal numbers are not equal, because the <code class="w3-codespan">===</code> operator expects equality in both type and value.</p>
+    <p>При использовании оператора <code class="w3-codespan">===</code> равные числа не равны, поскольку оператор <code class="w3-codespan">===</code> ожидает равенства как по типу, так и по значению.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             let y = new Number(500);<br><br>
-            // (x === y) is false because x and y have different types
+            // (x === y) является false, потому что x и y имеют разные типы
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_number_object2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Or even worse. Objects cannot be compared:</p>
+    <p>Или даже хуже. Невозможно сравнивать объекты:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = new Number(500);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             let y = new Number(500);<br><br>
-            // (x == y) is false because objects cannot be compared
+            // (x == y) является false, потому что объекты нельзя сравнивать
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_number_object3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Note the difference between <code class="w3-codespan">(x==y)</code> and <code class="w3-codespan">(x===y)</code>.<br>Comparing two JavaScript objects will always return <code class="w3-codespan">false</code>.</p>
+        <p>Обратите внимание на разницу между <code class="w3-codespan">(x==y)</code> и <code class="w3-codespan">(x===y)</code>.<br>Сравнение двух объектов JavaScript всегда будет возвращать <code class="w3-codespan">false</code>.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
