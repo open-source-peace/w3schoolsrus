@@ -551,35 +551,27 @@
 </div>
     <h2>Функция сравнения</h2>
     <p>Цель функции сравнения - определить альтернативный порядок сортировки.</p>
-    <p>The compare function should return a negative, zero, or positive value, depending on the arguments:</p>
+    <p>Функция сравнения должна возвращать отрицательное, нулевое или положительное значение в зависимости от аргументов:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             function(a, b){return a - b}
         </div>
     </div>
-    <p>When the <code class="w3-codespan">sort()</code> function compares two values, it sends the values to the
-        compare function, and sorts the values according to the returned (negative,
-        zero, positive) value.</p>
-    <p>If the result is negative <code class="w3-codespan">a</code> is sorted before
-        <code class="w3-codespan">b</code>.</p>
-    <p>If the result is positive <code class="w3-codespan">b</code> is sorted
-        before <code class="w3-codespan">a</code>.</p>
-    <p>If the result is 0 no changes are done with the sort order of the two
-        values.</p>
+    <p>Когда функция <code class="w3-codespan">sort()</code> сравнивает два значения, она отправляет значения в функцию сравнения и сортирует значения в соответствии с возвращенным (отрицательным, нулевым, положительным) значением.</p>
+    <p>Если результат отрицательный, <code class="w3-codespan">a</code> сортируется перед <code class="w3-codespan">b</code>.</p>
+    <p>Если результат положительный, <code class="w3-codespan">b</code> сортируется перед <code class="w3-codespan">a</code>.</p>
+    <p>Если результат равен 0, то порядок сортировки двух значений не изменяется.</p>
     <p><strong>Пример:</strong></p>
-    <p>The compare function compares all the values in the array, two values at a
-        time <code class="w3-codespan">(a, b)</code>.</p>
-    <p>When comparing 40 and 100, the <code class="w3-codespan">sort()</code> method calls the compare function(40, 100).</p>
-    <p>The function calculates 40 - 100 <code class="w3-codespan">(a - b)</code>, and
-        since the result is negative (-60),&nbsp; the sort function will sort 40 as a value lower than 100.</p>
-    <p>You can use this code snippet to experiment with numerically and
-        alphabetically sorting:</p>
+    <p>Функция сравнения сравнивает все значения в массиве, по два значения за раз <code class="w3-codespan">(a, b)</code>.</p>
+    <p>При сравнении 40 и 100 метод <code class="w3-codespan">sort()</code> вызывает функцию сравнения (40, 100).</p>
+    <p>Функция вычисляет 40 - 100 <code class="w3-codespan">(a - b)</code>, и поскольку результат отрицательный (-60), функция сортировки отсортирует 40 как значение меньше 100.</p>
+    <p>Вы можете использовать этот фрагмент кода, чтобы поэкспериментировать с числовой и алфавитной сортировкой:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate htmlHigh">
-            &lt;button onclick=&quot;myFunction1()&quot;&gt;Sort Alphabetically&lt;/button&gt;<br>&lt;button
-            onclick=&quot;myFunction2()&quot;&gt;Sort Numerically&lt;/button&gt;<br><br>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br>
+            &lt;button onclick=&quot;myFunction1()&quot;&gt;Сортировать по алфавиту&lt;/button&gt;<br>&lt;button
+            onclick=&quot;myFunction2()&quot;&gt;Сортировать по числу&lt;/button&gt;<br><br>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br>
             <br>&lt;script&gt;<br>const points = [40, 100, 1, 5, 25, 10];<br>
             document.getElementById(&quot;demo&quot;).innerHTML = points;<br><br>function
             myFunction1() {<br>&nbsp;&nbsp;points.sort();<br>&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML
@@ -590,7 +582,7 @@
     </div>
     <hr>
 
-    <h2>Sorting an Array in Random Order</h2>
+    <h2>Сортировка массива в случайном порядке (рандомно)</h2>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -604,12 +596,10 @@
     </div>
     <hr>
 
-    <h2>The Fisher Yates Method</h2>
-    <p>The above example, <em>array</em>.sort(), is not accurate, it will favor some
-        numbers over the others.</p>
-    <p>The most popular correct method, is called the Fisher Yates shuffle, and was
-        introduced in data science as early as 1938!</p>
-    <p>In JavaScript the method can be translated to this:</p>
+    <h2>Метод Фишера Йейтса (Fisher Yates)</h2>
+    <p>Приведенный выше пример <em>array</em>.sort() не является точным, некоторые числа предпочтительнее других.</p>
+    <p>Самый популярный правильный метод, называемый перетасовкой Фишера Йейтса, был введен в науку о данных ещё в 1938 году!</p>
+    <p>В JavaScript метод можно перевести вот так:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -623,70 +613,59 @@
     </div>
     <hr>
 
-    <h2>Find the Highest (or Lowest) Array Value</h2>
-    <p>There are no built-in functions for finding the max or min
-        value in an array.</p>
-    <p>However, after you have sorted an array, you can use the
-        index to obtain the highest and lowest values.</p>
-    <p>Sorting ascending:</p>
+    <h2>Найдите наибольшее (или наименьшее) значение массива</h2>
+    <p>Нет встроенных функций для поиска максимального или минимального значения в массиве.</p>
+    <p>Однако после того, как вы отсортировали массив, вы можете использовать индекс для получения наибольшего и наименьшего значений.</p>
+    <p>Сортировка по возрастанию:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const points = [40, 100, 1, 5, 25, 10];<br>
             points.sort(function(a, b){return a - b});<br>
-            // now points[0] contains the lowest value<br>
-            // and points[points.length-1] contains the highest value</div>
+            // теперь points[0] содержит наименьшее значение<br>
+            // и points[points.length-1] содержит наибольшее значение</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_array_sort_low" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Sorting descending:</p>
+    <p>Сортировка по убыванию:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const points = [40, 100, 1, 5, 25, 10];<br>
             points.sort(function(a, b){return b - a});<br>
-            // now points[0] contains the highest value<br>
-            // and points[points.length-1] contains the lowest value</div>
+            // теперь points[0] содержит наибольшее значение<br>
+            // и points[points.length-1] содержит наименьшее значение</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_array_sort_high" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <div class="w3-panel w3-note">
-        <p>Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.</p>
-    </div>
-
+    <div class="w3-panel w3-note"><p><strong>Сортировка всего массива</strong> - очень неэффективный метод, если вы хотите найти только самое высокое (или самое низкое) значение.</p></div>
     <hr>
 
-    <h2>Using Math.max() on an Array</h2>
-    <p>You can use <code class="w3-codespan">Math.max.apply</code> to find the highest number in an array:</p>
+    <h2>Использование Math.max() в массиве</h2>
+    <p>Вы можете использовать <code class="w3-codespan">Math.max.apply</code> чтобы найти наибольшее число в массиве:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function myArrayMax(arr) {<br>
             &nbsp; return Math.max.apply(null, arr);<br>}
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_sort_math_max" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_sort_math_max" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p><code class="w3-codespan">Math.max.apply(null, [1, 2, 3])</code> is equivalent to <code class="w3-codespan">Math.max(1, 2, 3)</code>.</p>
-
+    <p><code class="w3-codespan">Math.max.apply(null, [1, 2, 3])</code> эквивалентно <code class="w3-codespan">Math.max(1, 2, 3)</code>.</p>
     <hr>
 
-    <h2>Using Math.min() on an Array</h2>
-    <p>You can use <code class="w3-codespan">Math.min.apply</code> to find the lowest number in an array:</p>
+    <h2>Использование Math.min() в массиве</h2>
+    <p>Вы можете использовать <code class="w3-codespan">Math.min.apply</code> чтобы найти наименьшее число в массиве:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function myArrayMin(arr) {<br>
             &nbsp;&nbsp;return Math.min.apply(null, arr);<br>}
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_sort_math_min" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_sort_math_min" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p><code class="w3-codespan">Math.min.apply(null, [1, 2, 3])</code> is equivalent to <code class="w3-codespan">Math.min(1, 2, 3)</code>.</p>
-
+    <p><code class="w3-codespan">Math.min.apply(null, [1, 2, 3])</code> эквивалентно <code class="w3-codespan">Math.min(1, 2, 3)</code>.</p>
     <hr>
 
     <h2>My Min / Max JavaScript Methods</h2>
