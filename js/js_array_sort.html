@@ -6,8 +6,8 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
-<title>JavaScript Сортировка массивов. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Сортировка массивов. Уроки для начинающих. W3Schools на русском'>
+<title>JavaScript Сортировка массива. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='JavaScript Сортировка массива. Обращение (реверс) массива. Числовая сортировка. Функция сравнения. В случайном порядке (рандомно). Метод Фишера Йейтса. Наибольшее (или наименьшее) значение. Использование Math.max() и Math.min() в массиве. Собственные методы. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -666,14 +666,17 @@
     </div>
 
     <p><code class="w3-codespan">Math.min.apply(null, [1, 2, 3])</code> эквивалентно <code class="w3-codespan">Math.min(1, 2, 3)</code>.</p>
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-
-    <h2>My Min / Max JavaScript Methods</h2>
-    <p>The fastest solution is to use a &quot;home made&quot; method.</p>
-    <p>This function loops through an array comparing each value with the highest
-        value found: </p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Собственные Min / Max JavaScript методы</h2>
+    <p>Самым быстрым решением является использование метода &quot;home made&quot; (&quot;сделаного самим&quot;).</p>
+    <p>Эта функция просматривает массив, сравнивая каждое значение с наибольшим найденным значением: </p>
     <div class="w3-example">
-        <h3>Пример (Find Max)</h3>
+        <h3>Пример (Найти Max-значение)</h3>
         <div class="w3-code notranslate jsHigh">
             function myArrayMax(arr) {<br>
             &nbsp;&nbsp;let len = arr.length;<br>
@@ -686,10 +689,9 @@
             <a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_sort_max" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
-    <p>This function loops through an array comparing each value with the lowest
-        value found: </p>
+    <p>Эта функция просматривает массив, сравнивая каждое значение с наименьшим найденным значением:</p>
     <div class="w3-example">
-        <h3>Пример (Find Min)</h3>
+        <h3>Пример (Найти Min-значение)</h3>
         <div class="w3-code notranslate jsHigh">
             function myArrayMin(arr) {<br>&nbsp;&nbsp;let len = arr.length;<br>&nbsp;&nbsp;let min = Infinity;<br>&nbsp;&nbsp;while (len--) {<br>&nbsp;&nbsp;&nbsp;
             if (arr[len] &lt; min) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -698,11 +700,10 @@
             <a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_sort_min" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
-
     <hr>
 
-    <h2>Sorting Object Arrays</h2>
-    <p>JavaScript arrays often contain objects:</p>
+    <h2>Сортировка массивов объектов</h2>
+    <p>Массивы JavaScript часто содержат объекты:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -714,16 +715,15 @@
             &nbsp;
             {type:&quot;BMW&quot;, year:2010}<br>];</div>
     </div>
-    <p>Even if objects have properties of different data types, the <code class="w3-codespan">sort()</code> method
-        can be used to sort the array. </p>
-    <p>The solution is to write a compare function to compare the property values:</p>
+    <p>Даже если объекты имеют свойства разных типов данных, метод <code class="w3-codespan">sort()</code> можно использовать для сортировки массива.</p>
+    <p>Решение состоит в том, чтобы написать функцию сравнения для сравнения значений свойств:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             cars.sort(function(a, b){return a.year - b.year});</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_array_sort_object1" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Comparing string properties is a little more complex:</p>
+    <p>Сравнение свойств строк немного сложнее:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -734,20 +734,18 @@
             if (x &gt; y) {return 1;}<br>&nbsp; return 0;<br>});</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_array_sort_object2" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
-    <hr>
-    <h2>Complete Array Reference</h2>
-    <p>For a complete reference, go to our <a href="/jsref/jsref_obj_array.html">Complete
-            JavaScript Array Reference</a>.</p>
-    <p>The reference contains descriptions and examples of all Array
-        properties and methods.</p>
     <hr>
 
-    <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="exercise_js.asp?filename=exercise_js_array_sort1" method="post" target="_blank">
-        <h2>Test Yourself With Exercises</h2>
+    <h2>Полный справочник массивов</h2>
+    <p>Для получение более полной информации о массивах посетите <a href="../jsref/jsref_obj_array.html">Полный справочник JavaScript массивов</a>.</p>
+    <p>Справочник содержит описания и примеры всех свойств и методов массива.</p>
+    <hr>
+
+    <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_array_sort1" method="post" target="_blank">
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Use the correct Array method to sort the <code class="w3-codespan">fruits</code> array alphabetically.</p>
+            <h2>Упражнение:</h2>
+            <p>Используйте корректный метод Array для сортировки массива <code class="w3-codespan">fruits</code> по алфавиту.</p>
             <div class="exerciseprecontainer">
 <pre>
 const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
@@ -755,10 +753,9 @@ const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
         </div>
     </form>
-
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_array_methods.html">&#10094; Prev</a>
