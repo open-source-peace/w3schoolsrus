@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Форматы дат. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Форматы дат. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Форматы дат. Ввод даты. Вывод. Год и месяц. Дата-Время. Часовые пояса. Краткие и длинные даты. Парсинг дат. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -567,8 +567,8 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>ISO Dates (Only Year)</h2>
-    <p>ISO dates can be written without month and day (YYYY):</p>
+    <h2>ISO Даты (Только год)</h2>
+    <p>Даты ISO могут быть написаны без месяца и дня (ГГГГ):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -578,14 +578,12 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Time zones will vary the result above between December 31 2014 and January 01 2015.</p>
+        <p>Часовые пояса будут отличаться от приведенного выше результата с 31 декабря 2014 г. по 1 января 2015 г.</p>
     </div>
-
     <hr>
-    <h2>ISO Dates (Date-Time)</h2>
 
-    <p>ISO dates can be written with added hours, minutes, and seconds
-        (YYYY-MM-DDTHH:MM:SSZ):</p>
+    <h2>ISO Даты (Дата-Время)</h2>
+    <p>Даты ISO могут быть записаны с добавлением часов, минут и секунд (ГГГГ-ММ-ДДТЧЧ: ММ: ССЗ):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -594,10 +592,9 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_string_iso4" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Date and time is separated with a capital T.</p>
-    <p>UTC time is defined with a capital letter Z.</p>
-    <p>If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM
-        instead: </p>
+    <p>Дата и время разделяются заглавной буквой T.</p>
+    <p>Время UTC определяется с заглавной буквы Z.</p>
+    <p>Если вы хотите изменить время относительно UTC, удалите Z и вместо этого добавьте + HH:MM или -HH:MM:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -607,26 +604,27 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_string_iso5" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p>UTC (Universal Time Coordinated)  is the same as GMT (Greenwich Mean Time).</p>
+        <p><b>UTC</b> (Universal Time Coordinated - Всемирное координированное время) совпадает с <b>GMT</b> (Greenwich Mean Time - среднее время по Гринвичу).</p>
     </div>
 
     <div class="w3-panel w3-warning">
-        <p>Omitting T or Z in a date-time string can give different results in different browsers.</p>
+        <p>Отсутствие T или Z в строке даты и времени может привести к разным результатам в разных браузерах.</p>
     </div>
-
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-    <h2>Time Zones</h2>
-    <p>When setting a date, without specifying the time zone, JavaScript will use
-        the browser's time zone.</p>
-    <p>When getting a date, without specifying the time zone, the result is
-        converted to the browser's time zone.</p>
-    <p>In other words: If a date/time is created in GMT (Greenwich Mean Time), the
-        date/time will be converted to CDT (Central US Daylight Time) if a user browses
-        from central US.</p>
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Часовые пояса</h2>
+    <p>При установке даты без указания часового пояса JavaScript будет использовать часовой пояс браузера. </p>
+    <p>При получении даты без указания часового пояса результат конвертируется в часовой пояс браузера.</p>
+    <p>Другими словами: если дата и время созданы в GMT (среднее время по Гринвичу), дата и время будут преобразованы в CDT (летнее время в центральной части США), если пользователь просматривает из центральной части США.</p>
     <hr>
-    <h2>JavaScript Short Dates.</h2>
-    <p>Short dates are written with an &quot;MM/DD/YYYY&quot; syntax like this:</p>
+
+    <h2>JavaScript Краткие даты</h2>
+    <p>Краткие даты пишутся с помощью ММ/ДД/ГГГГ, синтаксис вроде этого:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -634,38 +632,31 @@
             const d = new Date(&quot;03/25/2015&quot;);</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_string_7" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>WARNINGS !</h2>
+    <h2>ПРЕДУПРЕЖДЕНИЯ!</h2>
 
     <div class="w3-example">
-
-        <p>In some browsers, months or days with no leading zeroes may produce an error: </p>
+        <p>В некоторых браузерах месяцы или дни без начальных нулей могут приводить к ошибке: </p>
         <div class="w3-code notranslate jsHigh">
             const d = new Date(&quot;2015-3-25&quot;);
         </div>
     </div>
 
     <div class="w3-example">
-
-        <p>The behavior of &quot;YYYY/MM/DD&quot; is undefined.<br>Some browsers will
-            try to guess the format. Some will return NaN.</p>
-        <div class="w3-code notranslate jsHigh">
-            const d = new Date(&quot;2015/03/25&quot;);</div>
+        <p>Поведение ГГГГ/ММ/ДД не определено.<br>Некоторые браузеры пытаются угадать формат. Некоторые вернут NaN.</p>
+        <div class="w3-code notranslate jsHigh">const d = new Date(&quot;2015/03/25&quot;);</div>
     </div>
 
     <div class="w3-example">
-
-        <p>The behavior of&nbsp; &quot;DD-MM-YYYY&quot; is also undefined.<br>Some browsers will
-            try to guess the format. Some will return NaN.</p>
+        <p>Поведение ДД-ММ-ГГГГ также не определено.<br>Некоторые браузеры пытаются угадать формат. Некоторые вернут NaN.</p>
         <div class="w3-code notranslate jsHigh">
             const d = new Date(&quot;25-03-2015&quot;);
         </div>
     </div>
-
     <hr>
-    <h2>JavaScript Long Dates.</h2>
-    <p>Long dates are most often written with a &quot;MMM DD YYYY&quot; syntax like this: </p>
+
+    <h2>JavaScript Длинные даты</h2>
+    <p>Длинные даты чаще всего пишутся с помощью МММ ДД ГГГГ, синтаксис вроде этого:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -675,7 +666,7 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_string_1" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Month and day can be in any order:</p>
+    <p>Месяц и день могут быть в любом порядке:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -685,7 +676,7 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_string_2" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>And, month can be written in full (January), or abbreviated (Jan):</p>
+    <p>Месяц может быть написан полностью (January) или сокращенно (Jan):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -702,7 +693,7 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_string_5" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Commas are ignored. Names are case insensitive:</p>
+    <p>Запятые игнорируются. Имена нечувствительны к регистру:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -712,11 +703,9 @@
     </div>
     <hr>
 
-    <h2>Date Input - Parsing Dates</h2>
-    <p>If you have a valid date string, you can use the <code class="w3-codespan">
-            Date.parse()</code> method to convert it to milliseconds.</p>
-    <p><code class="w3-codespan">Date.parse()</code> returns the number of milliseconds between the date and January
-        1, 1970:</p>
+    <h2>Ввод даты - Парсинг дат</h2>
+    <p>Если у вас есть допустимая строка даты, вы можете использовать метод <code class="w3-codespan">Date.parse()</code> чтобы преобразовать её в миллисекунды.</p>
+    <p><code class="w3-codespan">Date.parse()</code> возвращает количество миллисекунд между датой и 1 января 1970 г.:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -726,7 +715,7 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_parse" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>You can then use the number of milliseconds to <strong>convert it to a date</strong> object:</p>
+    <p>Затем вы можете использовать количество миллисекунд, чтобы <strong>преобразовать его в объект даты</strong>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -737,10 +726,9 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_date_convert" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_dates.html">&#10094; Previous</a>
+        <a class="w3-left w3-btn" href="js_dates.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_date_methods.html">Next &#10095;</a>
     </div>
 </article>
