@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Методы установки дат. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Методы установки дат. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Методы установки дат. Сравнение дат. Полный справочник по датам. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -491,8 +496,8 @@
     <hr>
     <p class="intro">Методы установки даты позволяют вам устанавливать значения даты (годы, месяцы, дни, часы, минуты, секунды, миллисекунды) для объекта Date.</p>
     <hr>
-    <h2>Set Date Methods</h2>
-    <p>Set Date methods are used for setting a part of a date:</p>
+    <h2>Методы установки даты</h2>
+    <p>Методы установки даты используются для установки части даты:</p>
     <table class="ws-table-all notranslate">
         <tr>
             <th>Метод</th>
@@ -500,60 +505,60 @@
         </tr>
         <tr>
             <td>setDate()</td>
-            <td>Set the day as a number (1-31)</td>
+            <td>Установить день в виде числа (1-31)</td>
         </tr>
         <tr>
             <td>setFullYear()</td>
-            <td>Set the year (optionally month and day)</td>
+            <td>Установить год (при желании месяц и день)</td>
         </tr>
         <tr>
             <td>setHours()</td>
-            <td>Set the hour (0-23)</td>
+            <td>Установить час (0-23)</td>
         </tr>
         <tr>
             <td>setMilliseconds()</td>
-            <td>Set the milliseconds (0-999)</td>
+            <td>Установить миллисекунды (0-999)</td>
         </tr>
         <tr>
             <td>setMinutes()</td>
-            <td>Set the minutes (0-59)</td>
+            <td>Установить минуты (0-59)</td>
         </tr>
         <tr>
             <td>setMonth()</td>
-            <td>Set the month (0-11)</td>
+            <td>Установить месяц (0-11)</td>
         </tr>
         <tr>
             <td>setSeconds()</td>
-            <td>Set the seconds (0-59)</td>
+            <td>Установить секунды (0-59)</td>
         </tr>
         <tr>
             <td>setTime()</td>
-            <td>Set the time (milliseconds since January 1, 1970)</td>
+            <td>Установить время (миллисекунды с 1 января 1970 г.)</td>
         </tr>
     </table>
     <hr>
 
-    <h2>The setFullYear() Method</h2>
-    <p>The <code class="w3-codespan">setFullYear()</code> method sets the year of a date object. In this example to 2020:</p>
+    <h2>Метод setFullYear()</h2>
+    <p>Метод <code class="w3-codespan">setFullYear()</code> устанавливает год объекта даты. В этом примере до 2020 г.:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setFullYear(2020);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_setfullyear" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_setfullyear.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>The <code class="w3-codespan">setFullYear()</code> method can <strong>optionally</strong> set month and day:</p>
+    <p>Метод <code class="w3-codespan">setFullYear()</code> может <strong>опционально</strong> установить месяц и день:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setFullYear(2020, 11, 3);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_setfullyear_options" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_setfullyear_options.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -562,118 +567,121 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    
-    <h2>The setMonth() Method</h2>
-    <p>The <code class="w3-codespan">setMonth()</code> method sets the month of a date object (0-11):</p>
+    <h2>Метод setMonth()</h2>
+    <p>Метод <code class="w3-codespan">setMonth()</code> устанавливает месяц объекта даты (0-11):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setMonth(11);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_setmonth" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_setmonth.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <h2>The setDate() Method</h2>
-    <p>The <code class="w3-codespan">setDate()</code> method sets the day of a date object (1-31):</p>
+    <h2>Метод setDate()</h2>
+    <p>Метод <code class="w3-codespan">setDate()</code> устанавливает день объекта даты (1-31):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setDate(15);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_setdate" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_setdate.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>The <code class="w3-codespan">setDate()</code> method can also be used to <strong>add days</strong> to a date:</p>
+    <p>Метод <code class="w3-codespan">setDate()</code> также можно использовать для <strong>добавления дней</strong> к дате:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setDate(d.getDate() + 50);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_ahead" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_ahead.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>If adding days shifts the month or year, the changes are handled automatically by the Date object.</p>
+        <p>Если добавление дней сдвигает месяц или год, изменения обрабатываются автоматически объектом Date.</p>
     </div>
     <hr>
 
-    <h2>The setHours() Method</h2>
-    <p>The <code class="w3-codespan">setHours()</code> method sets the hours of a date object (0-23):</p>
+    <h2>Метод setHours()</h2>
+    <p>Метод <code class="w3-codespan">setHours()</code> устанавливает часы объекта даты (0-23):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setHours(22);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_sethours" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_sethours.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>The setMinutes() Method</h2>
-    <p>The <code class="w3-codespan">setMinutes()</code> method sets the minutes of a date object (0-59):</p>
+    <h2>Метод setMinutes()</h2>
+    <p>Метод <code class="w3-codespan">setMinutes()</code> устанавливает минуты объекта даты (0-59):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setMinutes(30);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_setminutes" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_setminutes.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>The setSeconds() Method</h2>
-    <p>The <code class="w3-codespan">setSeconds()</code> method sets the seconds of a date object (0-59):</p>
+    <h2>Метод setSeconds()</h2>
+    <p>Метод <code class="w3-codespan">setSeconds()</code> устанавливает секунды объекта даты (0-59):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             d.setSeconds(30);<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_setseconds" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_setseconds.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Compare Dates</h2>
-    <p>Dates can easily be compared.</p>
-    <p>The following example compares today's date with January 14, 2100:</p>
+    <h2>Сравнение дат</h2>
+    <p>Даты можно легко сравнить.</p>
+    <p>В следующем примере сегодняшняя дата сравнивается с 14 января 2100 года:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = "";<br>
             const today = new Date();<br>
             const someday = new Date();<br>
-            someday.setFullYear(2100, 0, 14);<br><br>if (someday &gt; today) {<br>&nbsp; text = &quot;Today is before January 14, 2100.&quot;;<br>} else {<br>
-            &nbsp; text = &quot;Today is after January 14, 2100.&quot;;<br>}
+            someday.setFullYear(2100, 0, 14);<br><br>if (someday &gt; today) {<br>&nbsp; text = &quot;Сегодня до 14 января 2100 г.&quot;;<br>} else {<br>
+            &nbsp; text = &quot;Сегодня после 14 января 2100 г.&quot;;<br>}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_compare" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_compare.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>JavaScript counts months from 0 to 11. January is 0. December is 11.</p>
+        <p>JavaScript считает месяцы от 0 до 11. Январь - 0. Декабрь - 11.</p>
     </div>
-
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-
-    <h2>Complete JavaScript Date Reference</h2>
-    <p>For a complete reference, go to our <a href="../jsref/jsref_obj_date.html">Complete JavaScript Date Reference</a>.</p>
-    <p>The reference contains descriptions and examples of all Date properties and
-        methods.</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Полный справочник по датам JavaScript</h2>
+    <p>Для получения полной справки перейдите на <a href="../jsref/jsref_obj_date.html">Полный справочник по датам JavaScript</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <p>Справочник содержит описания и примеры всех свойств и методов Date.</p>
     <hr>
 
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dates4" method="post" target="_blank">
-        <h2>Проверьте себя с помощью упражнений</h2>
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
             <h2>Упражнение:</h2>
-            <p>Use the correct Date method to set the year of a date object to 2020.</p>
+            <p>Используйте правильный метод Date, чтобы установить год объекта даты на 2020.</p>
             <div class="exerciseprecontainer">
 <pre>
 const d = new Date();
@@ -681,14 +689,13 @@ d.<input name="ex1" maxlength="17" style="width: 174px;">;
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
         </div>
     </form>
     <hr>
-
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_date_methods.asp">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_math.asp">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_date_methods.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_math.html">Next &#10095;</a>
     </div>
 </article>
 <div class="w3-hide-medium w3-hide-small">
