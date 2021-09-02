@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Методы получения дат. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Методы получения дат. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Методы получения дат. Как получить дату в JavaScript? Полный справочник по датам. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -497,72 +502,70 @@
         </tr>
         <tr>
             <td>getFullYear()</td>
-            <td>Get the <strong>year</strong> as a four digit number (yyyy)</td>
+            <td>Получить <strong>год</strong> в виде четырехзначного числа (гггг)</td>
         </tr>
         <tr>
             <td>getMonth()</td>
-            <td>Get the <strong>month</strong> as a number (0-11)</td>
+            <td>Получить <strong>месяц</strong> в виде числа (0-11)</td>
         </tr>
         <tr>
             <td>getDate()</td>
-            <td>Get the <strong>day</strong> as a number (1-31)</td>
+            <td>Получить <strong>день</strong> в виде числа (1-31)</td>
         </tr>
         <tr>
             <td>getHours()</td>
-            <td>Get the <strong>hour</strong> (0-23)</td>
+            <td>Получить <strong>час</strong> (0-23)</td>
         </tr>
         <tr>
             <td>getMinutes()</td>
-            <td>Get the <strong>minute</strong> (0-59)</td>
+            <td>Получить <strong>минуту</strong> (0-59)</td>
         </tr>
         <tr>
             <td>getSeconds()</td>
-            <td>Get the <strong>second</strong> (0-59)</td>
+            <td>Получить <strong>секунду</strong> (0-59)</td>
         </tr>
         <tr>
             <td>getMilliseconds()</td>
-            <td>Get the <strong>millisecond</strong> (0-999)</td>
+            <td>Получить <strong>миллисекунду</strong> (0-999)</td>
         </tr>
         <tr>
             <td>getTime()</td>
-            <td>Get the time (milliseconds since January 1, 1970)</td>
+            <td>Получить время (миллисекунды с 1 января 1970 г.)</td>
         </tr>
         <tr>
             <td>getDay()</td>
-            <td>Get the weekday as a number (0-6)</td>
+            <td>Получить день недели в виде числа (0-6)</td>
         </tr>
         <tr>
             <td>Date.now()</td>
-            <td>Get the time. ECMAScript 5.</td>
+            <td>Получить время. ECMAScript 5.</td>
         </tr>
     </table>
     <hr>
 
-    <h2>The getTime() Method</h2>
-
-    <p>The <code class="w3-codespan">getTime()</code> method returns the number of milliseconds since January 1, 1970:</p>
+    <h2>Метод getTime()</h2>
+    <p>Метод <code class="w3-codespan">getTime()</code> возвращает количество миллисекунд с 1 января 1970 г.:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             document.getElementById(&quot;demo&quot;).innerHTML = d.getTime();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_gettime" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_gettime.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>The getFullYear() Method</h2>
-
-    <p>The <code class="w3-codespan">getFullYear()</code> method returns the year of a date as a four digit number:</p>
+    <h2>Метод getFullYear()</h2>
+    <p>Метод <code class="w3-codespan">getFullYear()</code> возвращает год даты в виде четырехзначного числа:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             document.getElementById(&quot;demo&quot;).innerHTML = d.getFullYear();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getfullyear" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getfullyear.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -571,26 +574,26 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The getMonth() Method</h2>
-    <p>The <code class="w3-codespan">getMonth()</code> method returns the month of a date as a number (0-11):</p>
+    <h2>Метод getMonth()</h2>
+    <p>Метод <code class="w3-codespan">getMonth()</code> возвращает месяц даты в виде числа (0-11):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             document.getElementById(&quot;demo&quot;).innerHTML = d.getMonth();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getmonth" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getmonth.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>In JavaScript, the first month (January) is month number 0, so December returns month number 11.</p>
+        <p>В JavaScript первый месяц (январь) - это месяц номер 0, поэтому декабрь возвращает номер месяца 11.</p>
     </div>
 
-    <p>You can use an array of names, and <code class="w3-codespan">getMonth()</code> to return the month as a name:</p>
+    <p>Вы можете использовать массив имен и <code class="w3-codespan">getMonth()</code> чтобы вернуть месяц в качестве имени:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             const months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;,
@@ -598,69 +601,32 @@
             &quot;November&quot;, &quot;December&quot;];<br>
             document.getElementById(&quot;demo&quot;).innerHTML = months[d.getMonth()];
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_month" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_month.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>The getDate() Method</h2>
-    <p>The <code class="w3-codespan">getDate()</code> method returns the day of a date as a number (1-31):</p>
+    <h2>Метод getDate()</h2>
+    <p>Метод <code class="w3-codespan">getDate()</code> возвращает день даты в виде числа (1-31):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             document.getElementById(&quot;demo&quot;).innerHTML = d.getDate();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getdate" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getdate.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>The getHours() Method</h2>
-
-    <p>The <code class="w3-codespan">getHours()</code> method returns the hours of a date as a number (0-23):</p>
+    <h2>Метод getHours()</h2>
+    <p>Метод <code class="w3-codespan">getHours()</code> возвращает часы даты в виде числа (0-23):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             document.getElementById(&quot;demo&quot;).innerHTML = d.getHours();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getHours" target="_blank">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-
-    <h2>The getMinutes() Method</h2>
-    <p>The <code class="w3-codespan">getMinutes()</code> method returns the minutes of a date as a number (0-59):</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            const d = new Date();<br>
-            document.getElementById(&quot;demo&quot;).innerHTML = d.getMinutes();
-        </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getMinutes" target="_blank">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-
-    <h2>The getSeconds() Method</h2>
-    <p>The <code class="w3-codespan">getSeconds()</code> method returns the seconds of a date as a number (0-59):</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            const d = new Date();<br>
-            document.getElementById(&quot;demo&quot;).innerHTML = d.getSeconds();
-        </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getSeconds" target="_blank">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-
-    <h2>The getMilliseconds() Method</h2>
-    <p>The <code class="w3-codespan">getMilliseconds()</code> method returns the milliseconds of a date as a number (0-999):</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            const d = new Date();<br>
-            document.getElementById(&quot;demo&quot;).innerHTML = d.getMilliseconds();
-        </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getmilliseconds" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getHours.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -669,90 +635,129 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The getDay() Method</h2>
-    <p>The <code class="w3-codespan">getDay()</code> method returns the weekday of a date as a number (0-6):</p>
+    <h2>Метод getMinutes()</h2>
+    <p>Метод <code class="w3-codespan">getMinutes()</code> возвращает минуты даты в виде числа (0-59):</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date();<br>
+            document.getElementById(&quot;demo&quot;).innerHTML = d.getMinutes();
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getMinutes.html" target="_blank">Попробуйте сами &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Метод getSeconds()</h2>
+    <p>Метод <code class="w3-codespan">getSeconds()</code> возвращает секунды даты в виде числа (0-59):</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date();<br>
+            document.getElementById(&quot;demo&quot;).innerHTML = d.getSeconds();
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getSeconds.html" target="_blank">Попробуйте сами &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Метод getMilliseconds()</h2>
+    <p>Метод <code class="w3-codespan">getMilliseconds()</code> возвращает миллисекунды даты в виде числа (0-999):</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date();<br>
+            document.getElementById(&quot;demo&quot;).innerHTML = d.getMilliseconds();
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getmilliseconds.html" target="_blank">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Метод getDay()</h2>
+    <p>Метод <code class="w3-codespan">getDay()</code> возвращает день недели даты в виде числа (0-6):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             document.getElementById(&quot;demo&quot;).innerHTML = d.getDay();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_getday" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getday.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>In JavaScript, the first day of the week (0) means &quot;Sunday&quot;, even if some countries
-            in the world consider the first day of the week to be &quot;Monday&quot;</p>
+        <p>В JavaScript первый день недели (0) означает &quot;Sunday&quot; (Воскресенье), даже если в некоторых странах мира первым днем недели считается &quot;Monday&quot; (Понедельник).</p>
     </div>
 
-    <p>You can use an array of names, and <code class="w3-codespan">getDay()</code> to return the weekday as a name:</p>
+    <p>Вы можете использовать массив имён и <code class="w3-codespan">getDay()</code> чтобы вернуть день недели в качестве имени:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>
             const days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;,
             &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];<br>
             document.getElementById(&quot;demo&quot;).innerHTML = days[d.getDay()];<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_date_weekday" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_weekday.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>UTC Date Methods</h2>
-    <p>UTC date methods are used for working with UTC dates (Universal Time Zone dates):</p>
+    <h2>Методы UTC даты</h2>
+    <p>Методы даты UTC используются для работы с датами UTC (даты универсального часового пояса):</p>
     <table class="ws-table-all notranslate">
         <tr>
-            <th>Method</th>
-            <th>Description</th>
+            <th>Метод</th>
+            <th>Описание</th>
         </tr>
         <tr>
             <td>getUTCDate()</td>
-            <td>Same as getDate(), but returns the UTC date</td>
+            <td>То же, что и getDate(), но возвращает дату в формате UTC</td>
         </tr>
         <tr>
             <td>getUTCDay()</td>
-            <td>Same as getDay(), but returns the UTC day</td>
+            <td>То же, что и getDay(), но возвращает день в формате UTC</td>
         </tr>
         <tr>
             <td>getUTCFullYear()</td>
-            <td>Same as getFullYear(), but returns the UTC year</td>
+            <td>То же, что и getFullYear(), но возвращает год в формате UTC</td>
         </tr>
         <tr>
             <td>getUTCHours()</td>
-            <td>Same as getHours(), but returns the UTC hour</td>
+            <td>То же, что и getHours(), но возвращает час UTC</td>
         </tr>
         <tr>
             <td>getUTCMilliseconds()</td>
-            <td>Same as getMilliseconds(), but returns the UTC milliseconds</td>
+            <td>То же, что и getMilliseconds(), но возвращает миллисекунды в формате UTC</td>
         </tr>
         <tr>
             <td>getUTCMinutes()</td>
-            <td>Same as getMinutes(), but returns the UTC minutes</td>
+            <td>То же, что и getMinutes(), но возвращает минуты в формате UTC</td>
         </tr>
         <tr>
             <td>getUTCMonth()</td>
-            <td>Same as getMonth(), but returns the UTC month</td>
+            <td>То же, что и getMonth(), но возвращает месяц в формате UTC</td>
         </tr>
         <tr>
             <td>getUTCSeconds()</td>
-            <td>Same as getSeconds(), but returns the UTC seconds</td>
+            <td>То же, что и getSeconds(), но возвращает секунды в формате UTC</td>
         </tr>
     </table>
     <hr>
 
-    <h2>Complete JavaScript Date Reference</h2>
-    <p>For a complete reference, go to our <a href="../jsref/jsref_obj_date.html">Complete JavaScript Date Reference</a>.</p>
-    <p>The reference contains descriptions and examples of all Date properties and
-        methods.</p>
+    <h2>Полный справочник по датам JavaScript</h2>
+    <p>Для получения полной справки перейдите на <a href="../jsref/jsref_obj_date.html">Полный справочник по JavaScript датам</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <p>Справочник содержит описания и примеры всех свойств и методов Date.</p>
     <hr>
 
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://schoolsw3.com/js/exercise_js.asp?filename=exercise_js_dates3" method="post" target="_blank">
-        <h2>Test Yourself With Exercises</h2>
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Use the correct Date method to get the month (0-11) out of a date object.</p>
+            <h2>Упражнение:</h2>
+            <p>Используйте правильный метод Date, чтобы получить месяц (0-11) из объекта даты.</p>
             <div class="exerciseprecontainer">
 <pre>
 const d = new Date();
@@ -760,7 +765,7 @@ month = <input name="ex1" maxlength="12" style="width: 124px;">;
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
         </div>
     </form>
     <hr>
