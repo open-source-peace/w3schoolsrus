@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Рандомные числа. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Рандомные (случайные) числа. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Рандомные числа. Случайные целые числа. Правильная случайная функция. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -483,7 +488,7 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <article>
-    <h1>JavaScript Рандомные</h1>
+    <h1>JavaScript Рандомные числа</h1>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_math.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_booleans.html">Next &#10095;</a>
@@ -496,75 +501,75 @@
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random number:<br>
+            // Возвращает случайное число:<br>
             Math.random();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p><code class="w3-codespan">Math.random()</code> always returns a number lower than 1.</p>
+        <p><code class="w3-codespan">Math.random()</code> всегда возвращает число меньше 1.</p>
     </div>
     <hr>
-    <h2>JavaScript Random Integers</h2>
-    <p><code class="w3-codespan">Math.random()</code> used with <code class="w3-codespan">Math.floor()</code> can be used to return random integers.</p>
+    <h2>JavaScript Случайные целые числа</h2>
+    <p><code class="w3-codespan">Math.random()</code> используется с <code class="w3-codespan">Math.floor()</code>, может использоваться для возврата случайных целых чисел.</p>
     <div class="w3-note">
-        <p>There is no such thing as JavaScript integers.</p>
-        <p>We are talking about numbers with no decimals here.</p>
+        <p>Целых чисел в JavaScript не существует.</p>
+        <p>Здесь речь идёт о числах без десятичных знаков.</p>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random integer from 0 to 9:<br>
+            // Возвращает случайное целое число от 0 до 9:<br>
             Math.floor(Math.random() * 10);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_0_9" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_0_9.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random integer from 0 to 10:<br>
+            // Возвращает случайное целое число от 0 до 10:<br>
             Math.floor(Math.random() * 11);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_0_10" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_0_10.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random integer from 0 to 99:<br>
+            // Возвращает случайное целое число от 0 до 99:<br>
             Math.floor(Math.random() * 100);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_0_99" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_0_99.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random integer from 0 to 100:<br>
+            // Возвращает случайное целое число от 0 до 100:<br>
             Math.floor(Math.random() * 101);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_0_100" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_0_100.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random integer from 1 to 10:<br>
+            // Возвращает случайное целое число от 1 до 10:<br>
             Math.floor(Math.random() * 10) + 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_1_10" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_1_10.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // Returns a random integer from 1 to 100:<br>
+            // Возвращает случайное целое число от 1 до 100:<br>
             Math.floor(Math.random() * 100) + 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_1_100" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_1_100.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -573,12 +578,9 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>A Proper Random Function</h2>
-    <p>As you can see from the examples above, it might be a good idea to create a proper random function
-        to use for all random integer purposes.</p>
-
-    <p>This JavaScript function always returns a random number between min (included) and
-        max (excluded):</p>
+    <h2>Правильная случайная функция</h2>
+    <p>Как вы можете видеть из приведенных выше примеров, было бы неплохо создать правильную случайную функцию для использования для всех случайных целочисленных целей.</p>
+    <p>Эта JavaScript функция всегда возвращает случайное число от min (включено) до max (исключено):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -586,10 +588,10 @@
             &nbsp;&nbsp;return Math.floor(Math.random() * (max - min) ) + min;<br>
             }
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_function" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_function.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>This JavaScript function always returns a random number between min and max (both included):</p>
+    <p>Эта функция JavaScript всегда возвращает случайное число от min до max (оба включены):</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -597,7 +599,7 @@
             &nbsp; return Math.floor(Math.random() * (max - min + 1) ) + min;<br>
             }
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_random_function2" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_random_function2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
     <div class="w3-clear nextprev">
