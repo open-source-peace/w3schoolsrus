@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Булевы (логические) значения. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Булевы (логические) значения. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Булевы (логические) значения. Функция Boolean(). Сравнения и условия. Логические значения могут быть объектами. Полный справочник булевых значений. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -489,7 +494,7 @@
         <a class="w3-right w3-btn" href="js_comparisons.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">JavaScript булево (логическое) значение представляет одно из двух значений: <strong>true</strong> или <strong>false</strong>.</p>
+    <p class="intro">JavaScript булево (логическое) значение представляет одно из двух значений: <strong>true</strong> или <strong>false</strong> (<strong>истина</strong> или <strong>ложь</strong>).</p>
     <hr>
     <h2>Булевы (логические) значения</h2>
     <p>Очень часто в программировании вам понадобится тип данных, который может иметь только одно из двух значений, например:</p>
@@ -498,62 +503,61 @@
         <li>ON / OFF (ВКЛ. / ОТКЛ.)</li>
         <li>TRUE / FALSE (ИСТИНА / ЛОЖЬ)</li>
     </ul>
-    <p>For this, JavaScript has a <strong>Boolean</strong> data type. It can only take the values <strong>true</strong> or <strong>false</strong>.</p>
+    <p>Для этого в JavaScript есть тип данных <strong>булевые значения</strong>, которые могут принимать только значения <strong>true</strong> или <strong>false</strong>.</p>
     <hr>
 
-    <h2>The Boolean() Function</h2>
-    <p>You can use the <code class="w3-codespan">Boolean()</code> function to find out if an expression (or a variable) is
-        true:</p>
+    <h2>Функция Boolean()</h2>
+    <p>Вы можете использовать функцию <code class="w3-codespan">Boolean()</code> чтобы узнать, истинно ли выражение (или переменная):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Boolean(10 &gt; 9)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true
+            Boolean(10 &gt; 9)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает true
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_expression1.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_expression1.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-    <p>Or even easier:</p>
+    <p>Или даже проще:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            (10 &gt; 9) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // also returns true<br>
-            10 &gt; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // also returns true
+            (10 &gt; 9) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // также возвращает true<br>
+            10 &gt; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // также возвращает true
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_expression2.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_expression2.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Comparisons and Conditions</h2>
-    <p>The chapter JS Comparisons gives a full overview of comparison operators.</p>
-    <p>The chapter JS Conditions gives a full overview of conditional statements.</p>
-    <p>Here are some examples:</p>
+    <h2>Сравнения и условия</h2>
+    <p>В главе JS Сравнения даётся полный обзор операторов сравнения.</p>
+    <p>В главе JS Условия дается полный обзор условных операторов.</p>
+    <p>Вот несколько примеров:</p>
 
     <table class="ws-table-all notranslate">
         <tr>
-            <th style="width:10%">Operator</th>
-            <th>Description</th>
+            <th style="width:10%">Оператор</th>
+            <th>Описание</th>
             <th>Пример</th>
         </tr>
         <tr>
             <td>==</td>
-            <td>equal to</td>
-            <td> if (day == &quot;Monday&quot;)</td>
+            <td>равно</td>
+            <td>if (day == &quot;Monday&quot;)</td>
         </tr>
         <tr>
             <td>&gt;</td>
-            <td>greater than</td>
+            <td>больше чем</td>
             <td>if (salary &gt; 9000)</td>
         </tr>
         <tr>
             <td>&lt;</td>
-            <td>less than</td>
-            <td> if (age &lt; 18)</td>
+            <td>меньше чем</td>
+            <td>if (age &lt; 18)</td>
         </tr>
     </table>
 
     <div class="w3-panel w3-note">
-        <p>The Boolean value of an expression is the basis for all JavaScript comparisons and conditions.</p>
+        <p>Логическое (булево) значение выражения является основой для всех сравнений и условий JavaScript.</p>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -562,9 +566,9 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Everything With a &quot;Value&quot; is True</h2>
+    <h2>Всё, что имеет &quot;Значение&quot; является True (истина)</h2>
     <div class="w3-example">
-        <h3>Примерs</h3>
+        <h3>Примеры</h3>
         <div class="w3-code notranslate jsHigh">
             100<br><br>
             3.14<br><br>
@@ -572,72 +576,72 @@
             &quot;Hello&quot;<br><br>
             &quot;false&quot;<br><br>
             7 + 1 + 3.14</div>
-        <a target="_blank" href="../jstryit/tryjs_boolean.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Everything Without a &quot;Value&quot; is False</h2>
+    <h2>Всё, что не имеет &quot;Значения&quot; является False (ложь)</h2>
     <div class="w3-example">
-        <p>The Boolean value of <strong>0</strong> (zero) is <strong>false</strong>:</p>
+        <p>Булево значение <strong>0</strong> (ноль) является <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x = 0;<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_zero.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_zero.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <p>The Boolean value of <strong>-0</strong> (minus zero) is <strong>false</strong>:</p>
+        <p>Булево значение <strong>-0</strong> (минус ноль) является <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x = -0;<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns  false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_minus.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_minus.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <p>The Boolean value of <strong>&quot;&quot; </strong>(empty string) is <strong>false</strong>:</p>
+        <p>Булево значение <strong>&quot;&quot; </strong>(пустая строка) является <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x = &quot;&quot;;<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_empty.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_empty.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <p>The Boolean value of <strong>undefined</strong> is <strong>false</strong>:</p>
+        <p>Булево значение <strong>undefined</strong> является <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x;<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_undefined.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_undefined.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <p>The Boolean value of <strong>null</strong> is <strong>false</strong>:</p>
+        <p>Булево значение <strong>null</strong> является <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x = null;<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_null.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_null.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <p>The Boolean value of <strong>false</strong> is (you guessed it) <strong>false</strong>:</p>
+        <p>Булево значение <strong>false</strong> это (как вы уже догадались) <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x = false;<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_false.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_false.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <p>The Boolean value of <strong>NaN</strong> is <strong>false</strong>:</p>
+        <p>Булево значение <strong>NaN</strong> является <strong>false</strong>:</p>
         <div class="w3-code notranslate jsHigh">
             let x = 10 / "Hallo";<br>
-            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false
+            Boolean(x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // возвращает false
         </div>
-        <a target="_blank" href="../jstryit/tryjs_boolean_nan.html?filename=" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_boolean_nan.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -646,12 +650,11 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Booleans Can be Objects</h2>
-    <p>Normally JavaScript booleans are primitive values created from literals:</p>
+    <h2>Логические значения могут быть объектами</h2>
+    <p>Обычно логические значения JavaScript представляют собой примитивные значения, созданные из литералов:</p>
     <p><code class="w3-codespan">let x = false;</code></p>
-    <p>But booleans can also be defined as objects with the keyword <code class="w3-codespan">new</code>:</p>
-    <p><code class="w3-codespan">let y = new
-            Boolean(false);</code></p>
+    <p>Но логические значения также могут быть определены как объекты с ключевым словом <code class="w3-codespan">new</code>:</p>
+    <p><code class="w3-codespan">let y = new Boolean(false);</code></p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -662,55 +665,56 @@
             //
             typeof y returns object
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object.html?filename=" target="_blank">Try
-            it yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Do not create Boolean objects.
-            It slows down execution speed.<br>The <code class="w3-codespan">new</code> keyword complicates
-            the code. This can produce some unexpected results:</p>
+        <p>Не создавайте логические объекты. Это снижает скорость выполнения.<br>Ключевое слово <code class="w3-codespan">new</code> усложняет код. Это может привести к неожиданным результатам:</p>
     </div>
 
-    <p> When using the <code class="w3-codespan">==</code> operator, equal
-        booleans are equal:</p>
+    <p>При использовании оператора <code class="w3-codespan">==</code> равные логические значения равны:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             let y = new Boolean(false);<br><br>
-            // (x == y) is true because x and y have equal values </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object1.html?filename=" target="_blank">Попробуйте сами &raquo;</a>
+            // (x == y) является true, потому что x и y имеют равные значения</div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>When using the <code class="w3-codespan">===</code> operator, equal booleans are not equal, because the <code class="w3-codespan">===</code> operator expects equality in both type and value.</p>
+    <p>При использовании оператора <code class="w3-codespan">===</code> равные логические значения не равны, поскольку оператор <code class="w3-codespan">===</code> ожидает равенства как по типу, так и по значению.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             let y = new Boolean(false);<br><br>
-            // (x === y) is false because x and y have different types
+            // (x === y) является false, потому что x и y имеют разные типы
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object2.html?filename=" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Or even worse. Objects cannot be compared:</p>
+    <p>Или даже хуже. Объекты нельзя сравнивать:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = new Boolean(false);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             let y = new Boolean(false);<br><br>
-            // (x == y) is false because objects cannot be compared
+            // (x == y) является false, потому что объекты нельзя сравнивать
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object3.html?filename=" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_booleans_object3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Note the difference between (x==y) and (x===y).<br>Comparing two JavaScript objects will always return false.</p>
+        <p>Обратите внимание на разницу между (x==y) и (x===y).<br>Сравнение двух объектов JavaScript всегда будет возвращать false.</p>
     </div>
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-
-    <h2>Полный справочник булевых значений</h2>
-    <p>For a complete reference, go to our <a href="../jsref/jsref_obj_boolean.html">Полный справочник JavaScript Булевы значения</a>.</p>
-    <p>The reference contains descriptions and examples of all Boolean properties and methods.</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Полный справочник логических (булевых) значений</h2>
+    <p>Для получения полной справки перейдите на <a href="../jsref/jsref_obj_boolean.html">Полный справочник JavaScript Булевы значения</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+    <p>Справочник содержит описания и примеры всех логических свойств и методов.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_random.html">&#10094; Prev</a>
