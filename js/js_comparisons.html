@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Сравнение и логические операторы. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Сравнение и логические операторы. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Операторы сравнения и логические. Как можно использовать? Условный (тернарный) оператор. Синтаксис. Сравнение разных типов. Преобразование в правильный тип перед сравнением. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -494,101 +499,98 @@
     <hr>
 
     <h2>Операторы сравнения</h2>
-    <p>Comparison operators are used in logical statements to determine equality or difference between variables or values. </p>
-    <p>Given that <code class="w3-codespan">x = 5</code>, the table below explains the comparison operators:</p>
+    <p>Операторы сравнения используются в логических операторах для определения равенства или различия между переменными или значениями.</p>
+    <p>Учитывая, что <code class="w3-codespan">x = 5</code>, в таблице ниже объясняются операторы сравнения:</p>
 
     <div class="w3-responsive" style="margin:-16px 0">
         <table class="ws-table-all notranslate">
             <tr>
-                <th style="width:12%">Operator</th>
-                <th>Description</th>
-                <th>Comparing</th>
-                <th>Returns</th>
+                <th style="width:12%">Оператор</th>
+                <th>Описание</th>
+                <th>Сравнение</th>
+                <th>Возвращает</th>
                 <th style="width:10%">Попробуй это</th>
             </tr>
             <tr style="background-color:#f5f5f5;">
                 <td rowspan="3">==</td>
-                <td rowspan="3">equal to</td>
+                <td rowspan="3">равно</td>
                 <td>x == 8</td>
                 <td>false</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison1">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison1.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#f5f5f5;">
                 <td>x == 5</td>
                 <td>true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison2">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison2.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#f5f5f5;">
                 <td>x == "5"</td>
                 <td>true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison12">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison12.html">Попробуй это &raquo;</a></td>
             </tr>
-            <tr style="background-color:#ffffff;">
+            <tr style="background-color:#fff;">
                 <td rowspan="2">===</td>
-                <td rowspan="2">equal value and equal type</td>
+                <td rowspan="2">равное значение и равный тип</td>
                 <td>x === 5</td>
                 <td>true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison4">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison4.html">Попробуй это &raquo;</a></td>
             </tr>
-            <tr style="background-color:#ffffff;">
+            <tr style="background-color:#fff;">
                 <td>x === "5"</td>
                 <td>false</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison3">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison3.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#f5f5f5;">
                 <td>!=</td>
-                <td>not equal</td>
+                <td>не равно</td>
                 <td>x != 8</td>
                 <td>true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison5">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison5.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#fff;">
                 <td rowspan="3">!==</td>
-                <td rowspan="3">not equal value or not equal type</td>
+                <td rowspan="3">не равное значение или не равный тип</td>
                 <td>x !== 5</td>
                 <td>false</td>
-                <td>
-                    <a class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison7" target="_blank">Попробуй это &raquo;</a></td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_comparison7.html" target="_blank">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#fff">
                 <td>x !== &quot;5&quot;</td>
                 <td>true</td>
-                <td>
-                    <a class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison6" target="_blank">Попробуй это &raquo;</a></td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_comparison6.html" target="_blank">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#fff">
                 <td>x !== 8</td>
                 <td>true</td>
-                <td>
-                    <a class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison13" target="_blank">Попробуй это &raquo;</a></td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_comparison13.html" target="_blank">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#f5f5f5">
                 <td>&gt;</td>
-                <td>greater than</td>
+                <td>больше чем</td>
                 <td>x &gt; 8</td>
                 <td>false</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison8">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison8.html">Попробуй это &raquo;</a></td>
             </tr>
-            <tr style="background-color:#ffffff;">
+            <tr style="background-color:#fff;">
                 <td>&lt;</td>
-                <td>less than</td>
+                <td>меньше чем</td>
                 <td>x &lt; 8</td>
                 <td>true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison9">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison9.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr style="background-color:#f5f5f5;">
                 <td>&gt;=</td>
-                <td>greater than or equal to</td>
+                <td>больше чем или равно</td>
                 <td>x &gt;= 8</td>
                 <td>false</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison10">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison10.html">Попробуй это &raquo;</a></td>
             </tr>
-            <tr style="background-color:#ffffff;">
+            <tr style="background-color:#fff;">
                 <td>&lt;=</td>
-                <td>less than or equal to</td>
+                <td>меньше чем или равно</td>
                 <td>x &lt;= 8</td>
                 <td>true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison11">Попробуй это &raquo;</a></td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison11.html">Попробуй это &raquo;</a></td>
             </tr>
         </table>
     </div>
@@ -599,145 +601,145 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>How Can it be Used</h2>
-    <p>Comparison operators can be used in conditional statements to compare values and take action depending on the result:</p>
+    <h2>Как это можно использовать</h2>
+    <p>Операторы сравнения могут использоваться в условных операторах для сравнения значений и принятия мер в зависимости от результата:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            if (age &lt; 18) text = &quot;Too young to buy alcohol&quot;;
+            if (age &lt; 14) text = &quot;Ты слишком юная, чтобы заниматься сексом&quot;;
         </div></div>
 
-    <p>You will learn more about the use of conditional statements in the next chapter of this tutorial.</p>
+    <p>Вы узнаете больше об использовании условных операторов в следующей главе этого учебника.</p>
     <hr>
 
-    <h2>Logical Operators</h2>
-    <p>Logical operators are used to determine the logic between variables or values.</p>
-    <p>Given that <code class="w3-codespan">x = 6</code> and <code class="w3-codespan">y = 3</code>, the table below explains the logical operators: </p>
+    <h2>Логические операторы</h2>
+    <p>Логические операторы используются для определения логики между переменными или значениями.</p>
+    <p>Учитывая, что <code class="w3-codespan">x = 6</code> и <code class="w3-codespan">y = 3</code>, в таблице ниже объясняются логические операторы:</p>
 
     <div class="w3-responsive" style="margin:-16px 0">
         <table class="ws-table-all notranslate">
             <tr>
-                <th style="width:12%">Operator</th>
-                <th>Description</th>
-                <th>Example</th>
+                <th style="width:12%">Оператор</th>
+                <th>Описание</th>
+                <th>Пример</th>
                 <th style="width:10%">Попробуй это</th>
             </tr>
             <tr>
                 <td>&amp;&amp;</td>
                 <td>and</td>
-                <td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_and">Попробуй это &raquo;</a></td>
+                <td>(x &lt; 10 &amp;&amp; y &gt; 1) является true</td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_and.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr>
                 <td>||</td>
                 <td>or</td>
-                <td>(x == 5 || y == 5) is false</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_or">Попробуй это &raquo;</a></td>
+                <td>(x == 5 || y == 5) является false</td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_or.html">Попробуй это &raquo;</a></td>
             </tr>
             <tr>
                 <td>!</td>
                 <td>not</td>
-                <td> !(x == y) is true</td>
-                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_not">Попробуй это &raquo;</a></td>
+                <td> !(x == y) является true</td>
+                <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_not.html">Попробуй это &raquo;</a></td>
             </tr>
         </table>
     </div>
     <hr>
 
-    <h2>Conditional (Ternary) Operator</h2>
-    <p>JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.</p>
-    <h3>Syntax</h3>
+    <h2>Условный (тернарный) оператор</h2>
+    <p>JavaScript также содержит условный оператор, который присваивает значение переменной на основе некоторого условия.</p>
+    <h3>Синтаксис</h3>
+    <div class="w3-code w3-border notranslate">
+        <div><em>variablename </em>= (<em>condition</em>) ?<em> value1</em>:<em>value2</em>&nbsp;</div>
+    </div>
 
-    <div class="w3-code w3-border notranslate"><div>
-            <em>variablename </em>= (<em>condition</em>) ?<em> value1</em>:<em>value2</em>&nbsp;</div></div>
-
-    <h3>Example</h3>
+    <h3>Пример</h3>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            let voteable = (age &lt; 18) ? "Too young":"Old enough";</div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_comparison">Попробуй это Yourself &raquo;</a>
+            let voteable = (age &lt; 14) ? "Слишком юная":"Достаточно взрослая";</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_comparison.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>If the variable age is a value below 18, the value of the variable voteable
-        will be &quot;Too young&quot;, otherwise the value of voteable will be &quot;Old enough&quot;.</p>
+    <p>Если переменная age имеет значение ниже 14, значение переменной, подлежащей голосованию, будет &quot;Слишком юная&quot;, в противном случае значение переменной будет &quot;Достаточно взрослая&quot;.</p>
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-
-    <h2>Comparing Different Types</h2>
-    <p>Comparing data of different types may give unexpected results.</p>
-    <p>When comparing a string with a number, JavaScript will convert the string to
-        a number when doing the comparison. An empty string converts to 0. A non-numeric
-        string converts to <code class="w3-codespan">NaN</code> which is always <code class="w3-codespan">false</code>.</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Сравнение разных типов</h2>
+    <p>Сравнение данных разных типов может дать неожиданные результаты.</p>
+    <p>При сравнении строки с числом JavaScript преобразует строку в число при выполнении сравнения. Пустая строка преобразуется в 0. Нечисловая строка преобразуется в <code class="w3-codespan">NaN</code>, что всегда <code class="w3-codespan">false</code>.</p>
 
     <table class="ws-table-all notranslate">
         <tr>
-            <th>Case</th>
-            <th>Value</th>
-            <th style="width:10%">Try</th>
+            <th>Кейс</th>
+            <th>Значение</th>
+            <th style="width:10%">Попробуй</th>
         </tr>
         <tr>
             <td>2 &lt; 12</td>
             <td>true</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_20">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_20.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>2 &lt; &quot;12&quot;</td>
             <td>true</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_21">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_21.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>2 &lt; &quot;John&quot;</td>
             <td>false</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_23">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_23.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>2 &gt; &quot;John&quot;</td>
             <td>false</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_24">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_24.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>2 == &quot;John&quot;</td>
             <td>false</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_25">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_25.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>&quot;2&quot; &lt; &quot;12&quot;</td>
             <td>false</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_26">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_26.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>&quot;2&quot; &gt; &quot;12&quot;</td>
             <td>true</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_27">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_27.html">Попробуй это &raquo;</a></td>
         </tr>
         <tr>
             <td>&quot;2&quot; == &quot;12&quot;</td>
             <td>false</td>
-            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison_28">Попробуй это &raquo;</a></td>
+            <td><a target="_blank" class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_28.html">Попробуй это &raquo;</a></td>
         </tr>
     </table>
 
-    <p>When comparing two strings, &quot;2&quot; will be greater than &quot;12&quot;, because
-        (alphabetically) 1 is less than 2.</p>
-    <p>To secure a proper result, variables should be converted to the proper type
-        before comparison:</p>
+    <p>При сравнении двух строк, &quot;2&quot; будет больше, чем &quot;12&quot;, потому что (по алфавиту) 1 меньше чем 2.</p>
+    <p>Чтобы обеспечить правильный результат, переменные должны быть преобразованы в правильный тип перед сравнением:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             age = Number(age);<br>
             if (isNaN(age)) {<br>
-            &nbsp;&nbsp;voteable = &quot;Input is not a number&quot;;<br>
+            &nbsp;&nbsp;voteable = &quot;Ввод не является числом&quot;;<br>
             } else {<br>
-            &nbsp; voteable = (age &lt; 18) ? &quot;Too young&quot; : &quot;Old enough&quot;;<br>
+            &nbsp; voteable = (age &lt; 14) ? &quot;Слишком юная&quot; : &quot;Достаточно взрослая&quot;;<br>
             }
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_comparison_12">Попробуй это Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_comparison_12.html">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_comparisons1" method="post" target="_blank">
-        <h2>Test Yourself With Exercises</h2>
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Choose the correct <strong>comparison operator</strong> to alert <code class="w3-codespan">true</code>, when <code class="w3-codespan">x</code> is greater than <code class="w3-codespan">y</code>.</p>
+            <h2>Упражнение:</h2>
+            <p>Выберите правильный <strong>оператор сравнения</strong>, чтобы вывести <code class="w3-codespan">true</code>, когда <code class="w3-codespan">x</code> больше чем <code class="w3-codespan">y</code>.</p>
             <div class="exerciseprecontainer">
 <pre>
 x = 10;
@@ -746,7 +748,7 @@ alert(x <input name="ex1" maxlength="1" style="width: 14px;"> y);
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
         </div>
     </form>
     <hr>
