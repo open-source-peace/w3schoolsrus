@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Условия if else и else if. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Условия if else и else if. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Условия if else и else if. Условные операторы. Примеры использования. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -493,44 +498,43 @@
     <hr>
 
     <h2>Условные операторы</h2>
-    <p>Very often when you write code, you want to perform different actions for different decisions.</p>
-    <p>You can use conditional statements in your code to do this.</p>
-    <p>In JavaScript we have the following conditional statements:</p>
+    <p>Очень часто, когда вы пишете код, вы хотите выполнять разные действия для разных решений.</p>
+    <p>Для этого вы можете использовать в своем коде условные операторы.</p>
+    <p>В JavaScript у нас есть следующие условные операторы:</p>
     <ul>
-        <li>Use <code class="w3-codespan">if</code> to specify a block of code to be executed, if a specified condition is true</li>
-        <li>Use <code class="w3-codespan">else</code> to specify a block of code to be executed, if the same condition is
-            false</li>
-        <li>Use <code class="w3-codespan">else if</code> to specify a new condition to test, if the first condition is false</li>
-        <li>Use <code class="w3-codespan">switch</code> to specify many alternative blocks of code to be executed</li>
+        <li>Используйте <code class="w3-codespan">if</code> чтобы указать блок кода, который должен быть выполнен, если указанное условие true</li>
+        <li>Используйте <code class="w3-codespan">else</code> чтобы указать блок кода, который должен быть выполнен, если то же условие false</li>
+        <li>Используйте <code class="w3-codespan">else if</code> чтобы указать новое условие для проверки, если первое условие false</li>
+        <li>Используйте <code class="w3-codespan">switch</code> чтобы указать множество альтернативных блоков кода для выполнения</li>
     </ul>
     <div class="w3-panel w3-note">
-        <p>The <code class="w3-codespan">switch</code> statement is described in the next chapter.</p>
+        <p>Оператор <code class="w3-codespan">switch</code> описан в следующей главе этого учебника на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
     </div>
     <hr>
 
-    <h2>The if Statement</h2>
-    <p>Use the <code class="w3-codespan">if</code> statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+    <h2>Оператор if</h2>
+    <p>Используйте оператор <code class="w3-codespan">if</code> чтобы указать блок кода JavaScript, который будет выполняться, если условие true.</p>
 
-    <h3>Syntax</h3>
+    <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate jsHigh"><div>
             if (<i>condition</i>) {<br>
-            &nbsp;&nbsp;//<em>&nbsp; block of code to be executed if the condition is true<br>
+            &nbsp;&nbsp;//<em>&nbsp; блок кода, который должен быть выполнен, если условие true<br>
             </em>}
         </div>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Note that <code class="w3-codespan">if</code> is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.</p>
+        <p>Обратите внимание, что <code class="w3-codespan">if</code> вводится строчными буквами. Заглавные буквы (If или IF) вызовут ошибку JavaScript.</p>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>Make a &quot;Good day&quot; greeting if the hour is less than 18:00:</p>
+        <p>Сделайте приветствие &quot;Good day&quot; если час меньше, чем 18:00:</p>
         <div class="w3-code notranslate jsHigh">
             if (hour &lt; 18) {<br>
             &nbsp; greeting = &quot;Good day&quot;;<br>
             }</div>
-        <p>The result of greeting will be:</p>
+        <p>Результат приветствия будет:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
@@ -543,7 +547,7 @@
                 </script>
             </code>
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_ifthen" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_ifthen.html" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -552,22 +556,21 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The else Statement</h2>
-    <p>Use the <code class="w3-codespan">else</code> statement to specify a block of code to be executed if the condition is false.</p>
+    <h2>Оператор else</h2>
+    <p>Используйте оператор <code class="w3-codespan">else</code> чтобы указать блок кода, который будет выполняться, если условие false.</p>
     <div class="w3-code w3-border notranslate jsHigh"><div>
             if (<i>condition</i>) {<br>
-            &nbsp;&nbsp;//<em>&nbsp; block of code to be executed if the condition is true<br>
+            &nbsp;&nbsp;//<em>&nbsp; блок кода, который должен быть выполнен, если условие true<br>
             </em>}
             else {
             <br>
-            &nbsp;&nbsp;//<em>&nbsp; block of code to be executed if the condition is false<br>
+            &nbsp;&nbsp;//<em>&nbsp; блок кода, который должен быть выполнен, если условие false<br>
             </em>}</div>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>If the hour is less than 18, create a &quot;Good day&quot;
-            greeting, otherwise &quot;Good evening&quot;:</p>
+        <p>Если час меньше 18, создайте &quot;Good day&quot;; приветствие, иначе &quot;Good evening&quot;:</p>
         <div class="w3-code notranslate jsHigh">
             if (hour &lt; 18) {<br>
             &nbsp;&nbsp;greeting = &quot;Good day&quot;;<br>
@@ -576,7 +579,7 @@
             &nbsp; greeting = &quot;Good evening&quot;;<br>
             }
         </div>
-        <p>The result of greeting will be:</p>
+        <p>Результат приветствия будет:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
@@ -593,32 +596,28 @@
                 </script>
             </code>
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_ifthenelse" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_ifthenelse.html" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>The else if&nbsp;Statement</h2>
-    <p>Use the <code class="w3-codespan">else if</code> statement to specify a new condition if the first condition is false.</p>
+    <h2>Оператор else if</h2>
+    <p>Используйте оператор <code class="w3-codespan">else if</code> чтобы указать новое условие, если первое условие false.</p>
 
-    <h3>Syntax</h3>
+    <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate jsHigh"><div>
-
-            if (<i>condition1</i>) {<br>
-            &nbsp;&nbsp;//<em>&nbsp; block of code to be executed if condition1 is true<br>
+            if (<i>условие1</i>) {<br>
+            &nbsp;&nbsp;//<em>&nbsp; блок кода, который должен быть выполнен, если условие1 true<br>
             </em>}
-            else if (<i>condition2</i>) {<br>
-            &nbsp;&nbsp;//<em>&nbsp; block of code to be executed if the condition1 is false and condition2 is true</em><br>
+            else if (<i>условие2</i>) {<br>
+            &nbsp;&nbsp;//<em>&nbsp; блок кода, который должен быть выполнен, если условие1 false, а условие2 true</em><br>
             } else {<br>
-            &nbsp;&nbsp;//<em>&nbsp; block of code to be executed if the condition1 is false and condition2 is false<br>
+            &nbsp;&nbsp;//<em>&nbsp; блок кода, который должен быть выполнен, если условие1 false, а условие2 false<br>
             </em>}</div>
     </div>
 
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>If time is less than 10:00, create a &quot;Good
-            morning&quot;
-            greeting, if not, but time is less than 20:00, create a &quot;Good day&quot; greeting,
-            otherwise a &quot;Good evening&quot;:</p>
+        <p>Если время меньше 10:00, создайте сообщение приветствия &quot;Good morning&quot;, если нет, но время меньше 20:00, создайтье приветствие &quot;Good day&quot;, в противном случае &quot;Good evening&quot;:</p>
         <div class="w3-code notranslate jsHigh">
             if (time &lt; 10) {<br>
             &nbsp; greeting = &quot;Good morning&quot;;<br>
@@ -630,10 +629,9 @@
             &nbsp; greeting = &quot;Good evening&quot;;<br>
             }
         </div>
-        <p>The result of greeting will be:</p>
+        <p>Результат приветствия будет:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
-
                 <script>
                     d=new Date();
                     time=d.getHours();
@@ -652,22 +650,19 @@
                 </script>
             </code>
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_elseif" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_elseif.html" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>More Примерs</h2>
-    <p><a target="_blank" href="../jstryit/tryit.html?filename=tryjs_randomlink">Random link</a><br>
-        This example will write a link to either W3Schools or to the World Wildlife
-        Foundation (WWF). By using a random number, there is a 50% chance for each of the
-        links.</p>
+    <h2>Больше примеров</h2>
+    <p><a target="_blank" href="../jstryit/tryjs_randomlink.html">Случайная ссылка</a><br>В этом примере будет записана ссылка либо на W3Schools, либо на Всемирный фонд дикой природы (WWF). При использовании случайного числа вероятность каждой ссылки составляет 50%.</p>
     <hr>
 
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_conditions1" method="post" target="_blank">
-        <h2>Test Yourself With Exercises</h2>
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Fix the <code class="w3-codespan">if</code> statement to alert "Hello World" if <code class="w3-codespan">x</code> is greater than <code class="w3-codespan">y</code>.</p>
+            <h2>Упражнение:</h2>
+            <p>Исправьте оператор <code class="w3-codespan">if</code> чтобы вывести "Hello World" если <code class="w3-codespan">x</code> больше чем <code class="w3-codespan">y</code>.</p>
             <div class="exerciseprecontainer">
 <pre>
 if <input name="ex1" maxlength="1" style="width: 14px;">x &gt; y<input name="ex2" maxlength="1" style="width: 14px;"> <input name="ex3" maxlength="1" style="width: 14px;">
@@ -676,7 +671,7 @@ if <input name="ex1" maxlength="1" style="width: 14px;">x &gt; y<input name="ex2
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
         </div>
     </form>
     <hr>
