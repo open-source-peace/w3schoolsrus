@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -497,13 +502,13 @@
     <p>Часто так бывает при работе с массивами:</p>
 
     <div class="w3-example">
-        <h3>Instead of writing:</h3>
+        <h3>Вместо того, чтобы писать:</h3>
         <div class="w3-code notranslate jsHigh">
             text += cars[0] + &quot;&lt;br&gt;&quot;; <br>text += cars[1] + &quot;&lt;br&gt;&quot;; <br>
             text += cars[2] + &quot;&lt;br&gt;&quot;; <br>text += cars[3] + &quot;&lt;br&gt;&quot;; <br>
             text += cars[4] + &quot;&lt;br&gt;&quot;; <br>text += cars[5] + &quot;&lt;br&gt;&quot;;
         </div>
-        <h3>You can write:</h3>
+        <h3>Вы можете написать:</h3>
         <div class="w3-code notranslate jsHigh">
             for (let i = 0; i &lt; cars.length; i++) { <br>&nbsp;&nbsp;text += cars[i] + &quot;&lt;br&gt;&quot;;<br>
             }</div>
@@ -511,48 +516,46 @@
     </div>
     <hr>
 
-    <h2>Different Kinds of Loops</h2>
-    <p>JavaScript supports different kinds of loops:</p>
+    <h2>Различные виды циклов</h2>
+    <p>JavaScript поддерживает разные виды циклов:</p>
     <ul>
-        <li><code class="w3-codespan">for</code> - loops through a block of code a number of times</li>
-        <li><code class="w3-codespan">for/in</code> - loops through the properties of an object</li>
-        <li><code class="w3-codespan">for/of</code> - loops through the values of an
-            iterable object </li>
-        <li><code class="w3-codespan">while</code> - loops through a block of code while a specified condition is true</li>
-        <li><code class="w3-codespan">do/while</code> - also loops through a block of code while a specified condition is true</li>
+        <li><code class="w3-codespan">for</code> - проходит через блок кода несколько раз</li>
+        <li><code class="w3-codespan">for/in</code> - перебирает свойства объекта</li>
+        <li><code class="w3-codespan">for/of</code> - перебирает значения итерируемого объекта</li>
+        <li><code class="w3-codespan">while</code> - перебирает блок кода, пока выполняется указанное условие</li>
+        <li><code class="w3-codespan">do/while</code> - также перебирает блок кода, пока выполняется указанное условие</li>
     </ul>
     <hr>
 
-    <h2>The For Loop</h2>
-    <p>The <code class="w3-codespan">for</code> loop has the following syntax:</p>
+    <h2>Цикл For</h2>
+    <p>Цикл <code class="w3-codespan">for</code> имеет следующий синтаксис:</p>
 
-    <div class="w3-code w3-border notranslate jsHigh"><div>
-
-            for (<i>statement 1</i>;<i> statement 2</i>;<i> statement 3</i>) {<br>
-            &nbsp; // <i>code block to be executed</i><br>
+    <div class="w3-code w3-border notranslate jsHigh">
+        <div>
+            for (<i>инструкция 1</i>;<i> инструкция 2</i>;<i> инструкция 3</i>) {<br>
+            &nbsp; // <i>блок кода, который должен быть выполнен</i><br>
             }<br>
-        </div></div>
+        </div>
+    </div>
 
-    <p><strong>Statement 1</strong> is executed (one time) before the execution of the code block.</p>
-    <p><strong>Statement 2</strong> defines the condition for executing the code block.</p>
-    <p><strong>Statement 3</strong> is executed (every time) after the code block has been executed.</p>
+    <p><strong>Инструкция 1</strong> выполняется (один раз) перед выполнением блока кода.</p>
+    <p><strong>Инструкция 2</strong> определяет условие выполнения блока кода.</p>
+    <p><strong>Инструкция 3</strong> выполняется (каждый раз) после выполнения блока кода.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             for (let i = 0; i &lt; 5; i++) {<br>
-            &nbsp; text += &quot;The number is &quot; + i + &quot;&lt;br&gt;&quot;;<br>
+            &nbsp; text += &quot;Число является &quot; + i + &quot;&lt;br&gt;&quot;;<br>
             }<br>
         </div>
         <a target="_blank" href="../jstryit/tryjs_loop_for_ex.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>From the example above, you can read:</p>
-    <p>Statement 1 sets a variable before the loop starts (let i = 0).</p>
-    <p>Statement 2 defines the condition for the loop to run (i must be less than
-        5).</p>
-    <p>Statement 3 increases a value (i++) each time the code block in the loop has
-        been executed.</p>
+    <p>Из приведенного выше примера вы можете прочитать:</p>
+    <p>Инструкция 1 устанавливает переменную до начала цикла (let i = 0).</p>
+    <p>Инструкция 2 определяет условие для запуска цикла (i должно быть меньше чем 5).</p>
+    <p>Инструкция 3 увеличивает значение (i++) каждый раз, когда выполняется блок кода в цикле.</p>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -567,7 +570,7 @@
     <p>You can initiate many values in statement 1 (separated by comma):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             for (let i = 0, len = cars.length, text = &quot;&quot;; i &lt; len; i++) { <br>&nbsp; text += cars[i] + &quot;&lt;br&gt;&quot;;<br>
             }</div>
@@ -577,7 +580,7 @@
         before the loop starts):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let i = 2;<br>
             let len = cars.length;<br>
@@ -610,7 +613,7 @@
     <p>Statement 3 can also be omitted (like when you increment your values inside the loop): </p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let i = 0;<br>
             let len = cars.length;<br>
@@ -630,7 +633,7 @@
     <h2>Loop Scope</h2>
     <p>Using <code class="w3-codespan">var</code> in a loop:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             var i = 5;<br>
             <br>
@@ -644,7 +647,7 @@
 
     <p>Using <code class="w3-codespan">let</code> in a loop:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let i = 5;<br>
             <br>
