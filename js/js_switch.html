@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Оператор Switch (переключение). Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Оператор Switch (переключение). Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Оператор Switch (переключение). Ключевые слова break, default. Общие блоки кода. Детали переключения. Строгое сравнение. Примеры. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -496,31 +501,31 @@
     <p>Используйте оператор <code class="w3-codespan">switch</code>, чтобы выбрать один из множества блоков кода, которые нужно выполнить.</p>
     <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate jsHigh"><div>
-            switch(<em>expression</em>) {<br>
+            switch(<em>выражение</em>) {<br>
             &nbsp;&nbsp;case <em>x</em>:<br>
-            <em>&nbsp;&nbsp;&nbsp; // code block<br>
+            <em>&nbsp;&nbsp;&nbsp; // блок кода<br>
             </em>&nbsp;&nbsp;&nbsp; break;<br>
             &nbsp;&nbsp;case <em>y</em>:<br>
-            <em>&nbsp;&nbsp;&nbsp; // code block<br>
+            <em>&nbsp;&nbsp;&nbsp; // блок кода<br>
             </em>&nbsp;&nbsp;&nbsp; break;<br>
             &nbsp;&nbsp;default:<br>
-            &nbsp;&nbsp; &nbsp;// <em>code block</em><br>
+            &nbsp;&nbsp; &nbsp;// <em>блок кода</em><br>
             }
-        </div></div>
+        </div>
+    </div>
 
-    <p>This is how it works:</p>
+    <p>Вот как это работает:</p>
     <ul>
-        <li>The switch expression is evaluated once.</li>
-        <li>The value of the expression is compared with the values of each case.</li>
-        <li>If there is a match, the associated block of code is executed.</li>
-        <li>If there is no match, the default code block is executed.</li>
+        <li>Выражение переключения (switch) вычисляется один раз.</li>
+        <li>Значение выражения сравнивается со значениями для каждого случая.</li>
+        <li>Если есть совпадение, выполняется связанный блок кода.</li>
+        <li>Если совпадений нет, выполняется блок кода по умолчанию (default).</li>
     </ul>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>The <code class="w3-codespan">getDay()</code> method returns the weekday as a number between
-            0 and 6.</p>
+        <h3>Пример</h3>
+        <p>Метод <code class="w3-codespan">getDay()</code> возвращает день недели в виде числа от 0 до 6.</p>
         <p>(Sunday=0, Monday=1, Tuesday=2 ..)</p>
-        <p>This example uses the weekday number to calculate the weekday name:</p>
+        <p>В этом примере номер дня недели используется для вычисления имени дня недели:</p>
         <div class="w3-code notranslate jsHigh">
             switch (new Date().getDay()) {<br>
             &nbsp;&nbsp;case 0:<br>
@@ -545,7 +550,7 @@
             &nbsp; &nbsp;&nbsp;day = &quot;Saturday&quot;;<br>
             }
         </div>
-        <p>The result of day will be:</p>
+        <p>Результат дня будет:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
@@ -577,7 +582,7 @@
                 </script>
             </code>
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_switch" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_switch.html" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -586,138 +591,129 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The break Keyword</h2>
-    <p>When JavaScript reaches a <code class="w3-codespan">break</code>
-        keyword, it breaks out of the switch block.</p>
-    <p>This will stop the execution inside the switch block.</p>
-    <p>It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.</p>
+    <h2>Ключевое слово break</h2>
+    <p>Когда JavaScript достигает ключевого слова <code class="w3-codespan">break</code>, он выходит из блока switch.</p>
+    <p>Это остановит выполнение внутри блока switch.</p>
+    <p>Необязательно разбивать последний регистр в блоке switch. Блок все равно обрывается (заканчивается).</p>
 
     <div class="w3-panel w3-note">
-        <p><strong>Note: </strong>If you omit the break statement, the next case will be executed even if
-            the evaluation does not match the case.</p>
+        <p><b>Примечание:</b> Если вы опустите оператор break, следующий кейс будет выполнен, даже если оценка не соответствует кейсу.</p>
     </div>
-
-
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-    <h2>The default Keyword</h2>
-    <p>The <code class="w3-codespan">default</code> keyword specifies the code to run if there is no
-        case match:</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Ключевое слово default</h2>
+    <p>Ключевое слово <code class="w3-codespan">default</code> определяет код для запуска, если нет соответствующего кейса:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>The <code class="w3-codespan">getDay()</code> method returns the weekday as a number between
-            0 and 6.</p>
-        <p>If today is neither Saturday (6) nor Sunday (0), write a default message:</p>
+        <h3>Пример</h3>
+        <p>Метод <code class="w3-codespan">getDay()</code> возвращает день недели в виде числа от 0 до 6.</p>
+        <p>Если сегодня ни Суббота (6), ни Воскресенье (0), напишите сообщение по умолчанию (default):</p>
         <div class="w3-code notranslate jsHigh">
             switch (new Date().getDay()) {<br>
             &nbsp;
             case 6:<br>
-            &nbsp; &nbsp; text = &quot;Today is Saturday&quot;;<br>
+            &nbsp; &nbsp; text = &quot;Сегодня Суббота&quot;;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;break; <br>
             &nbsp;&nbsp;case 0:<br>
-            &nbsp;&nbsp;&nbsp; text = &quot;Today is Sunday&quot;;<br>
+            &nbsp;&nbsp;&nbsp; text = &quot;Сегодня Воскресенье&quot;;<br>
             &nbsp;&nbsp;&nbsp; break; <br>
             &nbsp;
             default: <br>
-            &nbsp;&nbsp;&nbsp; text = &quot;Looking forward to the Weekend&quot;;<br>}
+            &nbsp;&nbsp;&nbsp; text = &quot;С нетерпением жду выходных&quot;;<br>}
         </div>
-        <p>The result of text will be:</p>
+        <p>Результат текста будет:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
                     switch (new Date().getDay()) {
                         case 6:
-                            x= "Today is Saturday";
+                            x= "Сегодня суббота";
                             break;
                         case 0:
-                            x = "Today is Sunday";
+                            x = "Сегодня Воскресенье";
                             break;
                         default:
-                            x = "Looking forward to the Weekend";
+                            x = "С нетерпением жду выходных";
                     }
                     document.write(x);
                 </script>
             </code>
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_switch2" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_switch2.html" class="w3-btn w3-margin-bottom w3-margin-top">Попробуйте сами &raquo;</a>
     </div>
-    <p>The <code class="w3-codespan">default</code> case does not have to be the last case in a switch
-        block:</p>
+    <p>Кейс <code class="w3-codespan">default</code> не обязательно должен быть последним кейсом в блоке switch:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             switch (new Date().getDay()) {<br>
             &nbsp;&nbsp;default: <br>
-            &nbsp;&nbsp;&nbsp; text = &quot;Looking forward to the Weekend&quot;;<br>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp; text = &quot;С нетерпением жду выходных&quot;;<br>&nbsp;&nbsp;&nbsp;
             break;<br>&nbsp;&nbsp;case 6:<br>
-            &nbsp; &nbsp; text = &quot;Today is Saturday&quot;;<br>
+            &nbsp; &nbsp; text = &quot;Сегодня Суббота&quot;;<br>
             &nbsp;&nbsp;&nbsp; break; <br>
             &nbsp;&nbsp;case 0:<br>
-            &nbsp;&nbsp;&nbsp; text = &quot;Today is Sunday&quot;;<br>
+            &nbsp;&nbsp;&nbsp; text = &quot;Сегодня Воскресенье&quot;;<br>
             }
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_switch4" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_switch4.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p>If <code class="w3-codespan">default</code> is not the last case in the switch block, remember to end the default case with a break.</p>
+        <p>Если <code class="w3-codespan">default</code> не последний кейс в блоке switch, не забудьте завершить кейс default обрывом (break).</p>
     </div>
     <hr>
 
-    <h2>Common Code Blocks</h2>
-    <p>
-        Sometimes you will want different
-        switch cases to use the same
-        code.</p>
-    <p>
-        In this example case 4 and 5 share the same code block, and 0 and 6 share
-        another code block:</p>
+    <h2>Общие блоки кода</h2>
+    <p>Иногда вам может понадобиться, чтобы в разных случаях переключения (кейсах switch) использовался один и тот же код.</p>
+    <p>В этом примере кейс 4 и 5 совместно используют один и тот же блок кода, а 0 и 6 совместно используют другой блок кода:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             switch (new Date().getDay()) {<br>
             &nbsp;&nbsp;case 4:<br>&nbsp;&nbsp;case 5:<br>
-            &nbsp;&nbsp;&nbsp; text = &quot;Soon it is Weekend&quot;;<br>
+            &nbsp;&nbsp;&nbsp; text = &quot;Скоро выходные&quot;;<br>
             &nbsp;&nbsp;&nbsp; break; <br>
             &nbsp;&nbsp;case 0:<br>
             &nbsp;&nbsp;case 6:<br>
-            &nbsp;&nbsp;&nbsp; text = &quot;It is Weekend&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;default: <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;text = &quot;Looking forward to the Weekend&quot;;<br>
+            &nbsp;&nbsp;&nbsp; text = &quot;Это выходные&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;default: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text = &quot;С нетерпением жду выходных&quot;;<br>
             }
         </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_switch3" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_switch3.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Switching Details</h2>
-    <p>
-        If multiple cases matches a case value, the <strong>first</strong> case is selected.</p>
-    <p>
-        If no matching cases are found, the program continues to the <strong>default</strong> label.</p>
-    <p>
-        If no default label is found, the program continues to the statement(s) <strong>after the switch</strong>.</p>
+    <h2>Детали переключения</h2>
+    <p>Если одному кейсу соответствует несколько вариантов, выбирается <strong>первый</strong> кейс.</p>
+    <p>Если подходящих вариантов не найдено, программа переходит к метке <strong>default</strong>.</p>
+    <p>Если метка default не найдена, программа переходит к оператору (операторам) <strong>после switch</strong>.</p>
     <hr>
 
-    <h2>Strict Comparison</h2>
-    <p>Switch cases use <strong>strict</strong> comparison (===).</p>
-    <p>The values must be of the same type to match.</p>
-    <p>A strict comparison can only be true if the operands are of the same type.</p>
-    <p>In this example there will be no match for x: </p>
+    <h2>Строгое сравнение</h2>
+    <p>Switch кейсы используют <strong>строгое</strong> сравнение (===).</p>
+    <p>Значения должны быть одного типа, чтобы соответствовать друг другу.</p>
+    <p>Строгое сравнение может быть true, только если операнды одного типа.</p>
+    <p>В этом примере совпадения по x не будет:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = &quot;0&quot;;<br>switch (x) {<br>&nbsp;&nbsp;case 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;text = &quot;Off&quot;;<br>
             &nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 1:<br>&nbsp;&nbsp;&nbsp; text = &quot;On&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
             &nbsp; default:<br>&nbsp;&nbsp;&nbsp;
-            text = &quot;No value found&quot;;<br>} </div>
-        <a target="_blank" href="../jstryit/tryit.html?filename=tryjs_switch5" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+            text = &quot;Значение не найдено&quot;;<br>} </div>
+        <a target="_blank" href="../jstryit/tryjs_switch5.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_switch1" method="post" target="_blank">
-        <h2>Проверьте себя с помощью упражнений</h2>
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Create a <code class="w3-codespan">switch</code> statement that will alert "Hello" if <code class="w3-codespan">fruits</code> is "banana", and "Welcome" if <code class="w3-codespan">fruits</code> is "apple".</p>
+            <h2>Упражнение:</h2>
+            <p>Создайте оператор <code class="w3-codespan">switch</code>, который будет выводить "Hello", если <code class="w3-codespan">fruits</code> является "banana", и "Welcome", если <code class="w3-codespan">fruits</code> является "apple".</p>
             <div class="exerciseprecontainer">
 <pre>
 <input name="ex1" maxlength="6" style="width: 65px;">(fruits) {
@@ -731,7 +727,7 @@
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
         </div>
     </form>
     <hr>
