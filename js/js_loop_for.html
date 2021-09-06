@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Цикл For. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Цикл For. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Цикл For. Различные виды циклов. Область действия цикла. Циклы for/of и for/in, while и do/while. Упражнение на циклы в JS. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -494,7 +494,7 @@
         <a class="w3-right w3-btn" href="js_loop_forin.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Циклы могут выполнять блок кода несколько раз.</p>
+    <p class="intro"><strong>Циклы</strong> могут выполнять блок кода несколько раз.</p>
     <hr>
 
     <h2>JavaScript Циклы</h2>
@@ -563,11 +563,10 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Statement 1</h2>
-    <p>Normally you will use statement 1 to initialize the variable used in the loop (let i = 0).</p>
-    <p>This is not always the case, JavaScript doesn't care. Statement 1 is
-        optional.</p>
-    <p>You can initiate many values in statement 1 (separated by comma):</p>
+    <h2>Инструкция 1</h2>
+    <p>Обычно вы будете использовать инструкцию 1 для инициализации переменной, используемой в цикле (let i = 0).</p>
+    <p>Это не всегда так, JavaScript всё равно. Инструкция 1 необязательна.</p>
+    <p>В инструкции 1 можно указать множество значений (разделенных запятыми):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -576,8 +575,7 @@
             }</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_loop_for_om1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>And you can omit statement 1 (like when your values are set
-        before the loop starts):</p>
+    <p>И вы можете опустить инструкцию 1 (например, когда ваши значения установлены до начала цикла):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -590,27 +588,21 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_loop_for_om2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <h2>Statement 2</h2>
-    <p>Often statement 2 is used to evaluate the condition of the initial variable.</p>
-    <p>This is not always the case, JavaScript doesn't care. Statement 2 is
-        also optional.</p>
-    <p>If statement 2 returns true, the loop will start over again, if it returns false, the
-        loop will end.</p>
+    <h2>Инструкция 2</h2>
+    <p>Часто инструкция 2 используется для оценки состояния исходной переменной.</p>
+    <p>Это не всегда так, JavaScript всё равно. Инструкция 2 также необязательна.</p>
+    <p>Если инструкция 2 вернёт true, цикл начнется заново, если он вернёт false, цикл завершится.</p>
 
     <div class="w3-panel w3-note">
-        <p>If you omit statement 2, you must provide a <strong>break</strong> inside the
-            loop. Otherwise the loop will never end. This will crash your browser.
-            Read about breaks in a later chapter of this tutorial.</p>
+        <p>Если вы опустите инструкцию 2, вы должны сделать <strong>обрыв</strong> внутри цикла. В противном случае цикл никогда не закончится. Это приведёт к сбою вашего браузера. Прочтите об обрывах в следующей главе этого учебника на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
     </div>
-
     <hr>
-    <h2>Statement 3</h2>
-    <p>Often statement 3 increments the value of the initial variable.</p>
-    <p>This is not always the case, JavaScript doesn't care, and statement 3 is
-        optional.</p>
-    <p>Statement 3 can do anything like negative increment (i--), positive
-        increment (i = i + 15), or anything else.</p>
-    <p>Statement 3 can also be omitted (like when you increment your values inside the loop): </p>
+
+    <h2>Инструкция 3</h2>
+    <p>Часто инструкция 3 увеличивает значение начальной переменной.</p>
+    <p>Это не всегда так, JavaScript всё равно, а инструкция 3 необязательна.</p>
+    <p>Инструкция 3 может делать что угодно, например отрицательное приращение (i--), положительное приращение (i = i + 15) или что-то ещё.</p>
+    <p>Инструкцию 3 также можно опустить (например, когда вы увеличиваете свои значения внутри цикла):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -630,54 +622,52 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Loop Scope</h2>
-    <p>Using <code class="w3-codespan">var</code> in a loop:</p>
+    <h2>Область действия цикла</h2>
+    <p>Использование <code class="w3-codespan">var</code> в цикле:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             var i = 5;<br>
             <br>
             for (var i = 0; i &lt; 10; i++) {<br>
-            &nbsp;&nbsp;// some code<br>}<br>
+            &nbsp;&nbsp;// какой-то код<br>}<br>
             <br>
-            // Here i is 10
+            // Здесь i является 10
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_for_loop1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Using <code class="w3-codespan">let</code> in a loop:</p>
+    <p>Использование <code class="w3-codespan">let</code> в цикле:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let i = 5;<br>
             <br>
             for (let i = 0; i &lt; 10; i++) {<br>
-            &nbsp; // some code<br>}<br>
+            &nbsp; // какой-то код<br>}<br>
             <br>
-            // Here i is 5
+            // Здесь i является 5
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_for_loop2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>In the first example, using <code class="w3-codespan">var</code>, the variable declared in
-        the loop redeclares the variable outside the loop. </p>
-    <p>In the second example, using <code class="w3-codespan">let</code>, the variable declared in
-        the loop does not redeclare the variable outside the loop. </p>
-    <p>When <code class="w3-codespan">let</code> is used to declare the i variable in a loop, the i
-        variable will only be visible within the loop. </p>
+    <p>В первом примере с использованием <code class="w3-codespan">var</code>, переменная, объявленная в цикле, повторно объявляет переменную вне цикла.</p>
+    <p>Во втором примере с использованием <code class="w3-codespan">let</code>, переменная, объявленная в цикле, не объявляет повторно переменную вне цикла.</p>
+    <p>When <code class="w3-codespan">let</code> используется для объявления переменной i в цикле, переменная i будет видна только внутри цикла. .</p>
     <hr>
 
-    <h2>For/Of and For/In Loops</h2>
-    <p>The <code class="w3-codespan">for/in</code> loop and the <code class="w3-codespan">for/of</code> loop are explained in the next chapter.</p>
+    <h2>Циклы For/Of и For/In</h2>
+    <p>Цикл <code class="w3-codespan">for/in</code> и цикл <code class="w3-codespan">for/of</code> поясняются в следующей главе.</p>
     <hr>
-    <h2>While Loops</h2>
-    <p>The <code class="w3-codespan">while</code> loop and the <code class="w3-codespan">do/while</code> are explained in the next chapters.</p>
+
+    <h2>Циклы While</h2>
+    <p>Циклы <code class="w3-codespan">while</code> и <code class="w3-codespan">do/while</code> поясняются в следующих главах.</p>
     <hr>
 
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_loops1" method="post" target="_blank">
         <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
             <h2>Упражнение:</h2>
-            <p>Create a loop that runs from 0 to 9.</p>
+            <p>Создайте цикл от 0 до 9.</p>
             <div class="exerciseprecontainer">
 <pre>
 let i;
