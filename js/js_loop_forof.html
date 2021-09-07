@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Оператор For Of. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Оператор For Of. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Оператор For Of. Синтаксис. Циклы по массиву и строке. Циклы while и do/while. Уроки для начинающих. W3Schools на русском'>
 <link rel='stylesheet' href='../styles/browserref.css'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -496,20 +501,18 @@
     <div class="w3-example">
         <h3>Синтаксис</h3>
         <div class="w3-code notranslate jsHigh">
-            for (variable of iterable) {<br>
-            &nbsp; // <i>code block to be executed</i><br>
+            for (переменная итерируемого) {<br>
+            &nbsp; // <i>блок кода, который должен быть выполнен</i><br>
             }<br>
         </div></div>
 
-    <p><b>variable</b> - For every iteration the value of the next property is
-        assigned to the variable. <em>Variable</em> can be declared with
-        <code class="w3-codespan">const</code>, <code class="w3-codespan">let</code>, or <code class="w3-codespan">var</code>.</p>
-    <p><b>iterable</b> - An object that has iterable properties.</p>
+    <p><b>variable</b> - Для каждой итерации переменной присваивается значение следующего свойства. <em>Переменная</em> может быть объявлена с помощью <code class="w3-codespan">const</code>, <code class="w3-codespan">let</code> или <code class="w3-codespan">var</code>.</p>
+    <p><b>iterable</b> - Объект с итеративными свойствами (имеет свойство повторяться).</p>
     <hr>
 
-    <h2>Browser Support</h2>
-    <p><b>For/of</b> was added to JavaScript in 2015 (<a href="js_es6.html">ES6</a>)</p>
-    <p>Safari 7 was the first browser to support for of:</p>
+    <h2>Поддержка браузерами</h2>
+    <p><b>For/of</b> был добавлен в JavaScript 2015 (<a href="js_es6.html">ES6</a>)</p>
+    <p>Safari 7 был первым браузером, который поддерживал:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -535,13 +538,12 @@
             </tr>
             </tbody></table>
     </div>
-    <p><strong>For/of</strong> is not supported in Internet Explorer.</p>
-
+    <p><strong>For/of</strong> не поддерживается в Internet Explorer.</p>
     <hr>
 
-    <h2>Looping over an Array</h2>
+    <h2>Цикл по массиву</h2>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const cars = ["BMW", "Volvo", "Mini"];<br><br>
             let text = "";<br>
@@ -553,9 +555,9 @@
     </div>
     <hr>
 
-    <h2>Looping over a String</h2>
+    <h2>Цикл по строке</h2>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let language = "JavaScript";<br><br>
             let text = "";<br>
@@ -567,8 +569,8 @@
     </div>
     <hr>
 
-    <h2>The While Loop</h2>
-    <p>The <code class="w3-codespan">while</code> loop and the <code class="w3-codespan">do/while</code> loop are explained in the next chapter.</p>
+    <h2>Цикл While</h2>
+    <p>Цикл <code class="w3-codespan">while</code> и цикл <code class="w3-codespan">do/while</code> описаны в следующей главе данного учебника на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_loop_forin.html">&#10094; Prev</a>
