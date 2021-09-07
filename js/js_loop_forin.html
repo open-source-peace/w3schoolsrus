@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Оператор For In. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Оператор For In. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Оператор For In. Оператор for in может перебирать свойства массива. Метод forEach() вызывает функцию callback. Примеры. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -496,8 +501,8 @@
     <div class="w3-example">
         <h3>Синтаксис</h3>
         <div class="w3-code notranslate jsHigh">
-            for (key in object) {<br>
-            &nbsp; // <i>code block to be executed</i><br>
+            for (ключ в объекте) {<br>
+            &nbsp; // <i>блок кода, который должен быть выполнен</i><br>
             }
         </div>
     </div>
@@ -513,20 +518,20 @@
     </div>
     <h2>Объяснение примера</h2>
     <ul>
-        <li>The <b>for in</b> loop iterates over a <b>person</b> object</li>
-        <li>Each iteration returns a <b>key</b> (x)</li>
-        <li>The key is used to access the <b>value</b> of the key</li>
-        <li>The value of the key is <b>person[x]</b></li>
+        <li>Цикл <b>for in</b> выполняет итерацию по объекту <b>person</b></li>
+        <li>Каждая итерация возвращает <b>ключ</b> (x)</li>
+        <li>Ключ используется для доступа к <b>значению</b> ключа</li>
+        <li>Значение ключа является <b>person[x]</b></li>
     </ul>
     <hr>
 
-    <h2>For In Over Arrays</h2>
-    <p>The JavaScript <code class="w3-codespan">for in</code> statement can also loop over the properties of an Array:</p>
+    <h2>For In по массивам</h2>
+    <p>JavaScript оператор <code class="w3-codespan">for in</code> также может перебирать свойства массива:</p>
 
     <div class="w3-example">
         <h3>Синтаксис</h3>
         <div class="w3-code notranslate jsHigh">
-            for (variable in array) {<br>
+            for (переменная в массиве) {<br>
             &nbsp;&nbsp;code<br>
             }
         </div>
@@ -545,9 +550,9 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>Do not use <b>for in</b> over an Array if the index <b>order</b> is important.</p>
-        <p>The index order is implementation-dependent, and array values may not be accessed in the order you expect.</p>
-        <p>It is better to use a <b>for</b> loop, a <b>for of</b> loop, or <b>Array.forEach()</b> when the order is important.</p>
+        <p>Не используйте <b>for in</b> над массивом, если важен <b>порядок</b> индекса.</p>
+        <p>Порядок индекса зависит от реализации, и значения массива могут быть недоступны в ожидаемом порядке.</p>
+        <p>Если порядок важен, лучше использовать цикл <b>for</b>, цикл <b>for of</b> или <b>Array.forEach()</b>.</p>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -557,7 +562,7 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <h2>Array.forEach()</h2>
-    <p>The <code class="w3-codespan">forEach()</code> method calls a function (a callback function) once for each array element.</p>
+    <p>Метод <code class="w3-codespan">forEach()</code> вызывает функцию callback (функцию обратного вызова) один раз для каждого элемента массива.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -572,14 +577,14 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_foreach.html">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Note that the function takes 3 arguments:</p>
+    <p>Обратите внимание, что функция принимает 3 аргумента:</p>
     <ul>
-        <li>The item value</li>
-        <li>The item index </li>
-        <li>The array itself</li>
+        <li>Значение элемента</li>
+        <li>Индекс элемента</li>
+        <li>Сам массив</li>
     </ul>
 
-    <p>The example above uses only the value parameter. It can be rewritten to:</p>
+    <p>В приведенном выше примере используется только параметр значения. Его можно переписать на:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
