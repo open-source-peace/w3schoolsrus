@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Итерации. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Итерации (итерируемые объекты). Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Итерации (итерируемые объекты). Цикл For Of. Итерация по строке, по массиву, по набору, по карте. Примеры. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -500,57 +500,58 @@
         <p>Итерации можно повторять с помощью циклов <code class="w3-codespan">for..of</code>.</p>
     </div>
 
-    <h2>The For Of Loop</h2>
-    <p>The JavaScript <code class="w3-codespan">for..of</code> statement loops through the elements of an iterable object.</p>
+    <h2>Цикл For Of</h2>
+    <p>JavaScript оператор <code class="w3-codespan">for..of</code> перебирает элементы итерируемого объекта.</p>
     <div class="w3-example">
         <h3>Синтаксис</h3>
         <div class="w3-code notranslate jsHigh">
-            for (variable of iterable) {<br>
-            &nbsp; // <i>code block to be executed</i><br>
+            for (переменная итерируемого) {<br>
+            &nbsp; // <i>блок кода, который должен быть выполнен</i><br>
             }<br>
-        </div></div>
-
+        </div>
+    </div>
     <hr>
-    <h2>Iterating</h2>
-    <p>Iterating is easy to understand.</p>
-    <p>It simply means looping over a sequence of elements.</p>
-    <p>Here are some easy examples:</p>
+
+    <h2>Итерация</h2>
+    <p>Итерацию легко понять.</p>
+    <p>Это просто означает цикл по последовательности элементов.</p>
+    <p>Вот несколько простых примеров:</p>
     <ul>
-        <li>Iterating over a String</li>
-        <li>Iterating over an Array</li>
+        <li>Итерация по строке</li>
+        <li>Итерация по массиву</li>
     </ul>
     <hr>
 
-    <h2>Iterating Over a String</h2>
-    <p>You can use a <code class="w3-codespan">for..of</code> loop to iterate over the elements of a string:</p>
+    <h2>Итерация по строке</h2>
+    <p>Вы можете использовать цикл <code class="w3-codespan">for..of</code> для перебора элементов строки:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const name = "W3Schools";<br>
             <br>
             for (const x of name) {<br>
-            &nbsp;&nbsp;// <i>code block to be executed</i><br>
+            &nbsp;&nbsp;// <i>блок кода, который должен быть выполнен</i><br>
             }
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_iterate_string.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Iterating Over an Array</h2>
-    <p>You can use a <code class="w3-codespan">for..of</code> loop to iterate over the elements of an Array:</p>
+
+    <h2>Итерация по массиву</h2>
+    <p>Вы можете использовать цикл <code class="w3-codespan">for..of</code> для перебора элементов массива:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const letters = ["a","b","c"];<br>
             <br>
             for (const x of letters) {<br>
-            &nbsp;&nbsp;// <i>code block to be executed</i><br>
+            &nbsp;&nbsp;// <i>блок кода, который должен быть выполнен</i><br>
             }
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_iterate_array.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-note">
-        <p>You can learn more details about Iterables in the chapter <a href="js_object_iterables.html">JS Object Iterables</a>.
+        <p>Вы можете узнать больше об итерациях в главе <a href="js_object_iterables.html">JS Итерируемые объекты</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -559,25 +560,25 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Iterating Over a Set</h2>
-    <p>You can use a <code class="w3-codespan">for..of</code> loop to iterate over the elements of a Set:</p>
+    <h2>Итерация по набору</h2>
+    <p>Вы можете использовать цикл <code class="w3-codespan">for..of</code> для перебора элементов набора:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const letters = new Set(["a","b","c"]);<br>
             <br>
             for (const x of letters) {<br>
-            &nbsp;&nbsp;// <i>code block to be executed</i><br>
+            &nbsp;&nbsp;// <i>блок кода, который должен быть выполнен</i><br>
             }
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_iterate_set.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-note">
-        <p>Sets and Maps are covered in the next chapters.</p>
+        <p>Наборы и карты рассматриваются в следующих главах.</p>
     </div>
 
-    <h2>Iterating Over a Map</h2>
-    <p>You can use a <code class="w3-codespan">for..of</code> loop to iterate over the elements of a Map:</p>
+    <h2>Итерация по карте</h2>
+    <p>Вы можете использовать цикл <code class="w3-codespan">for..of</code> для перебора элементов карты:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -588,7 +589,7 @@
             ]);<br>
             <br>
             for (const x of fruits) {<br>
-            &nbsp;&nbsp;// <i>code block to be executed</i><br>
+            &nbsp;&nbsp;// <i>блок кода, который должен быть выполнен</i><br>
             }
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_iterate_map.html" target="_blank">Попробуйте сами &raquo;</a>
