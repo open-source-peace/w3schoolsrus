@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Break и Continue. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Break и Continue. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Break и Continue. Метки. Блоки кода. Упражнения. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -325,6 +325,9 @@
             <a target='_top' href='js_loop_forof.html'>JS Цикл For Of</a>
             <a target='_top' href='js_loop_while.html'>JS Цикл While</a>
             <a target='_top' href='js_break.html'>JS Break и Continue</a>
+            <a target='_top' href='js_iterables.html'>JS Итерации</a>
+            <a target='_top' href='js_sets.html'>JS Наборы</a>
+            <a target='_top' href='js_maps.html'>JS Карты</a>
             <a target='_top' href='js_typeof.html'>JS Typeof</a>
             <a target='_top' href='js_type_conversion.html'>JS Преобразование типов</a>
             <a target='_top' href='js_bitwise.html'>JS Побитовые</a>
@@ -344,6 +347,16 @@
             <a target='_top' href='js_performance.html'>JS Производительность</a>
             <a target='_top' href='js_reserved.html'>JS Зарезервированные слова</a>
             <br>
+            <h2 class='left'>JS Версии</h2>
+            <a target='_top' href='js_versions.html'>JS Версии</a>
+            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+            <a target='_top' href='js_2016.html'>JS 2016</a>
+            <a target='_top' href='js_2017.html'>JS 2017</a>
+            <a target='_top' href='js_2018.html'>JS 2018</a>
+            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
+            <a target='_top' href='js_history.html'>JS История</a>
+            <br>
             <h2 class='left'>JS Объекты</h2>
             <a target='_top' href='js_object_definition.html'>Определения объектов</a>
             <a target='_top' href='js_object_properties.html'>Свойства объекта</a>
@@ -352,9 +365,10 @@
             <a target='_top' href='js_object_accessors.html'>Доступ к объектам</a>
             <a target='_top' href='js_object_constructors.html'>Конструкторы объектов</a>
             <a target='_top' href='js_object_prototypes.html'>Прототипы объектов</a>
+            <a target='_top' href='js_object_iterables.html'>Итерируемые объекты</a>
+            <a target='_top' href='js_object_sets.html'>Наборы объектов</a>
+            <a target='_top' href='js_object_maps.html'>Карты объектов</a>
             <a target='_top' href='js_object_es5.html'>Справочник объектов</a>
-            <a target='_top' href='js_object_maps.html'>Объект Map()</a>
-            <a target='_top' href='js_object_sets.html'>Объект Set()</a>
             <br>
             <h2 class='left'>JS Функции</h2>
             <a target='_top' href='js_function_definition.html'>Определения функций</a>
@@ -375,16 +389,7 @@
             <a target='_top' href='js_promise.html'>Промисы</a>
             <a target='_top' href='js_async.html'>Async/Await</a>
             <br>
-            <h2 class='left'>JS Версии</h2>
-            <a target='_top' href='js_versions.html'>JS Версии</a>
-            <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
-            <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
-            <a target='_top' href='js_2016.html'>JS 2016</a>
-            <a target='_top' href='js_2017.html'>JS 2017</a>
-            <a target='_top' href='js_2018.html'>JS 2018</a>
-            <a target='_top' href='js_ie_edge.html'>JS IE/Edge</a>
-            <a target='_top' href='js_history.html'>JS История</a>
-            <br>
+
             <h2 class='left'>JS HTML DOM</h2>
             <a target='_top' href='js_htmldom.html'>DOM Введение</a>
             <a target='_top' href='js_htmldom_methods.html'>DOM Методы</a>
@@ -489,13 +494,13 @@
         <a class="w3-right w3-btn" href="js_iterables.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Оператор <code class="w3-codespan">break</code> &quot;выпрыгивает&quot; из цикла.</p>
-    <p class="intro">Оператор <code class="w3-codespan">continue</code> &quot;перепрыгивает&quot; через одну итерацию цикла.</p>
+    <p class="intro"><strong>Оператор <code class="w3-codespan">break</code></strong> &quot;выпрыгивает&quot; из цикла.</p>
+    <p class="intro"><strong>Оператор <code class="w3-codespan">continue</code></strong> &quot;перепрыгивает&quot; через одну итерацию цикла.</p>
     <hr>
-    <h2>The Break Statement</h2>
-    <p>You have already seen the <code class="w3-codespan">break</code> statement used in an earlier
-        chapter of this tutorial. It was used to &quot;jump out&quot; of a <code class="w3-codespan">switch()</code> statement.</p>
-    <p>The <code class="w3-codespan">break</code> statement can also be used to jump out of a loop:</p>
+
+    <h2>Оператор Break</h2>
+    <p>Вы уже видели оператор <code class="w3-codespan">break</code> который использовался в предыдущей главе этого учебника. Его использовали для &quot;выпрыгивания&quot; (прекращения действия) оператора <code class="w3-codespan">switch()</code>.</p>
+    <p>Оператор <code class="w3-codespan">break</code> также может использоваться для выхода из цикла:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -503,25 +508,24 @@
             for (let i = 0; i &lt; 10; i++) {<br>
             &nbsp;
             if (i === 3) { break; }<br>
-            &nbsp; text += "The number is " + i + "&lt;br&gt;";<br>
+            &nbsp; text += "Число является " + i + "&lt;br&gt;";<br>
             }</div>
         <a target="_blank" href="../jstryit/tryjs_break.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>In the example above, the <code class="w3-codespan">break</code> statement ends the loop ("breaks" the loop) when the loop counter (i) is 3.</p>
+    <p>В приведенном выше примере оператор <code class="w3-codespan">break</code> завершает цикл ("разрывает" цикл) когда счетчик цикла (i) соответствует 3.</p>
     <hr>
 
-    <h2>The Continue Statement</h2>
-    <p>The <code class="w3-codespan">continue</code> statement breaks one iteration (in the loop), if a specified
-        condition occurs, and continues with the next iteration in the loop.</p>
-    <p>This example skips the value of 3: </p>
+    <h2>Оператор Continue</h2>
+    <p>Оператор <code class="w3-codespan">continue</code> прерывает одну итерацию (в цикле), если возникает указанное условие, и продолжает следующую итерацию в цикле.</p>
+    <p>В этом примере пропускается значение 3:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             for (let i = 0; i &lt; 10; i++) {<br>
             &nbsp; if (i === 3) { continue; }<br>
-            &nbsp; text += &quot;The number is &quot; + i + &quot;&lt;br&gt;&quot;;<br>
+            &nbsp; text += &quot;Число является &quot; + i + &quot;&lt;br&gt;&quot;;<br>
             }
         </div>
         <a target="_blank" href="../jstryit/tryjs_continue.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
@@ -533,30 +537,23 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>JavaScript Labels</h2>
-    <p>To label JavaScript statements you precede the statements with a label name and a colon:</p>
+    <h2>JavaScript метки</h2>
+    <p>Чтобы пометить операторы JavaScript, вы ставите перед операторами (инструкциями) имя метки и двоеточие:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            label:<br>statements</div>
+            метка:<br>операторы</div>
     </div>
-    <p>The <code class="w3-codespan">break</code> and the <code class="w3-codespan">continue</code> statements are the only JavaScript statements that
-        can &quot;jump out of&quot; a code block.</p>
-    <p>Syntax:</p>
+    <p>Операторы <code class="w3-codespan">break</code> и <code class="w3-codespan">continue</code> - единственные операторы JavaScript, которые могут &quot;выпрыгнуть&quot; из блока кода.</p>
+    <p>Синтаксис:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate">
-            break <em>labelname</em>; <br><br>continue <em>labelname</em>;</div>
+            break <em>имяметки</em>; <br><br>continue <em>имяметки</em>;</div>
     </div>
-    <p>
-        The <code class="w3-codespan">continue</code>
-        statement (with or without a label reference) can only be used to <strong>skip one
-            loop iteration</strong>.</p>
-    <p>The <code class="w3-codespan">break</code> statement, without a label reference, can only be used to <strong>
-            jump out of a loop
-            or a switch</strong>.</p>
-    <p>With a label reference, the break statement can be used to <strong>jump out
-            of any code block</strong>: </p>
+    <p>Оператор <code class="w3-codespan">continue</code> (со ссылкой на метку или без неё) можно использовать только для <strong>пропуска одной итерации цикла</strong>.</p>
+    <p>Оператор <code class="w3-codespan">break</code> без ссылки на метку можно использовать только для <strong>выхода из цикла или переключения</strong>.</p>
+    <p>Со ссылкой на метку оператор break можно использовать для <strong>выхода из любого блока кода</strong>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -568,15 +565,15 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>A code block is a block of code between { and }.</p>
+        <p><strong>Блок кода</strong> - это блок кода между { and }.</p>
     </div>
-
     <hr>
+
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_break1" method="post" target="_blank">
-        <h2>Test Yourself With Exercises</h2>
+        <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Make the loop stop when <code class="w3-codespan">i</code> is 5.</p>
+            <h2>Упражнение:</h2>
+            <p>Остановите цикл, когда <code class="w3-codespan">i</code> равно 5.</p>
             <div class="exerciseprecontainer">
 <pre>
 for (i = 0; i &lt; 10; i++) {
