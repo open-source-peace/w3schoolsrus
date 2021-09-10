@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Карты. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Карты. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Карты. Основные методы карты. Как создать карту. Методы new Map(), set(), get(), delete(), has(), forEach(), entries(). Свойство size. Объекты vs Карты. Уроки для начинающих. W3Schools на русском'>
 <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -495,8 +495,8 @@
     </div>
 
     <div class="w3-info">
-        <p>Карта содержит пары &quot;ключ-значение&quot;, где ключи могут быть любого типа данных.</p>
-        <p>Карта запоминает исходный порядок вставки ключей.</p>
+        <p><strong>Карта</strong> содержит пары &quot;ключ-значение&quot;, где ключи могут быть любого типа данных.</p>
+        <p><strong>Карта</strong> запоминает исходный порядок вставки ключей.</p>
     </div>
 
     <h2>Основные методы карты</h2>
@@ -631,24 +631,24 @@
         <tr><th>Размер</th>
             <td>Не имеет свойства size</td>
             <td>Имеет свойство size</td></tr>
-        <tr><th>Key Types</th>
-            <td>Keys must be Strings (or Symbols)</td>
-            <td>Keys can be any datatype</td></tr>
-        <tr><th>Key Order</th>
-            <td>Keys are not well ordered</td>
-            <td>Keys are ordered by insertion</td></tr>
-        <tr><th>Defaults</th>
-            <td>Have default keys</td>
-            <td>Do not have default keys</td></tr>
+        <tr><th>Ключевые типы</th>
+            <td>Ключи должны быть строками (или символами)</td>
+            <td>Ключи могут иметь любой тип данных</td></tr>
+        <tr><th>Ключевой порядок</th>
+            <td>Ключи плохо упорядочены</td>
+            <td>Ключи упорядочены по вставке</td></tr>
+        <tr><th>По умолчанию</th>
+            <td>Есть ключи по умолчанию</td>
+            <td>Нет ключей по умолчанию</td></tr>
     </table>
-
     <hr>
-    <h2>The forEach() Method</h2>
-    <p>The <code class="w3-codespan">forEach()</code> method calls a function for each key/value pair in a Map:</p>
+
+    <h2>Метод forEach()</h2>
+    <p>Метод <code class="w3-codespan">forEach()</code> вызывает функцию для каждой пары ключ/значение на карте:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // List all entries<br>
+            // Список всех записей<br>
             let text = "";<br>
             fruits.forEach (function(value, key) {<br>
             &nbsp;&nbsp;text += key + ' = ' + value;<br>
@@ -656,14 +656,14 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_map_foreach.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>The entries() Method</h2>
-    <p>The <code class="w3-codespan">entries()</code> method returns an iterator object with the [key, values] in a Map:</p>
+
+    <h2>Метод entries()</h2>
+    <p>Метод <code class="w3-codespan">entries()</code> возвращает объект-итератор с [ключом, значениями] на карте:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // List all entries<br>
+            // Список всех записей<br>
             let text = "";<br>
             for (const x of fruits.entries()) {<br>
             &nbsp;&nbsp;text += x;<br>
@@ -674,7 +674,7 @@
     <hr>
 
     <h2>Поддержка браузерами</h2>
-    <p>JavaScript Maps are supported in all browsers, except Internet Explorer:</p>
+    <p>Карты JavaScript поддерживаются во всех браузерах, кроме Internet Explorer:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -691,10 +691,10 @@
                 <td>Safari</td>
                 <td>Opera</td>
             </tr>
-            </tbody></table>
+            </tbody>
+        </table>
     </div>
-    <br>
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_sets.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_typeof.html">Next &#10095;</a>
