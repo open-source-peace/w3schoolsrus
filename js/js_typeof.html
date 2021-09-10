@@ -494,7 +494,7 @@
         <a class="w3-right w3-btn" href="js_type_conversion.html">Next &#10095;</a>
     </div>
     <hr>
-    <p>In JavaScript there are 5 different data types that can contain values:</p>
+    <p>В JavaScript есть 5 различных типов данных, которые могут содержать значения:</p>
     <ul>
         <li><code class="w3-codespan">string</code></li>
         <li><code class="w3-codespan">number</code></li>
@@ -502,7 +502,7 @@
         <li><code class="w3-codespan">object</code></li>
         <li><code class="w3-codespan">function</code></li>
     </ul>
-    <p>There are 6 types of objects:</p>
+    <p>Есть 6 типов объектов:</p>
     <ul>
         <li><code class="w3-codespan">Object</code></li>
         <li><code class="w3-codespan">Date</code></li>
@@ -511,69 +511,60 @@
         <li><code class="w3-codespan">Number</code></li>
         <li><code class="w3-codespan">Boolean</code></li>
     </ul>
-    <p>And 2 data types that cannot contain values:</p>
+    <p>И 2 типа данных, которые не могут содержать значения:</p>
     <ul>
         <li><code class="w3-codespan">null</code></li>
         <li><code class="w3-codespan">undefined</code></li>
     </ul>
     <hr>
 
-    <h2>The typeof Operator</h2>
-    <p>You can use the <code class="w3-codespan">typeof</code> operator to find the data type of a
-        JavaScript variable.</p>
+    <h2>Оператор typeof</h2>
+    <p>Вы можете использовать оператор <code class="w3-codespan">typeof</code> чтобы найти тип данных переменной JavaScript.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             typeof &quot;John&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;string&quot; <br>
+            // Возвращает &quot;string&quot; <br>
             typeof 3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;number&quot;<br>
+            // Возвращает &quot;number&quot;<br>
             typeof NaN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;number&quot;<br>
+            // Возвращает &quot;number&quot;<br>
             typeof false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;boolean&quot;<br>
-            typeof [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
+            // Возвращает &quot;boolean&quot;<br>
+            typeof [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
             &quot;object&quot;<br>
             typeof {name:'John', age:34}&nbsp;
-            // Returns &quot;object&quot;<br>typeof new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;object&quot;<br>typeof function () {} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Returns
+            // Возвращает &quot;object&quot;<br>typeof new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            // Возвращает &quot;object&quot;<br>typeof function () {} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Возвращает
             &quot;function&quot;<br>
             typeof myCar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;undefined&quot; *<br>
+            // Возвращает &quot;undefined&quot; *<br>
             typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;object&quot;
+            // Возвращает &quot;object&quot;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_typeof_all" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_typeof_all.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Please observe:</p>
+    <p>Пожалуйста, обратите внимание:</p>
     <ul>
-        <li>The data type of NaN is number</li>
-        <li>The data type of an array is object</li>
-        <li>The data type of a date is object</li>
-        <li>The data type of null is object</li>
-        <li>The data type of an undefined variable is <strong>undefined</strong>
-            *</li>
-        <li>The data type of a variable that has not been assigned a value is
-            also <strong>undefined</strong> *</li>
+        <li>Тип данных NaN - это число</li>
+        <li>Тип данных массива - это объект</li>
+        <li>Тип данных даты - это объект</li>
+        <li>Тип данных null - это объект</li>
+        <li>Тип данных неопределенной переменной: <strong>undefined</strong> *</li>
+        <li>Тип данных переменной, которой не было присвоено значение, также <strong>undefined</strong> *</li>
     </ul>
 
-    <div class="w3-panel w3-note">
-        <p>You cannot use <code class="w3-codespan">typeof</code> to determine if a JavaScript object is an array (or a date).</p>
-    </div>
-
+    <div class="w3-panel w3-note"><p>Вы не можете использовать <code class="w3-codespan">typeof</code> чтобы определить, является ли объект JavaScript массивом (или датой).</p></div>
+    <div class="w3-hide-medium w3-hide-small">
     <hr>
-    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-        <!-- MidContent -->
-        <!-- <p class="adtext">Advertisement</p> -->
-
-        <div id="adngin-mid_content-0"></div>
-
-    </div>
-    <hr>
-    <h2>Primitive Data</h2>
-    <p>A primitive data value is a single simple data value with no additional
-        properties and methods.</p>
-    <p>The <code class="w3-codespan">typeof</code> operator can return one of these primitive types:</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Примитивные данные</h2>
+    <p>Примитивное значение данных - это одно простое значение данных без дополнительных свойств и методов.</p>
+    <p>Оператор <code class="w3-codespan">typeof</code> может возвращать один из этих примитивных типов:</p>
     <ul>
         <li><code class="w3-codespan">string</code></li>
         <li><code class="w3-codespan">number</code></li>
@@ -581,40 +572,40 @@
         <li><code class="w3-codespan">undefined</code></li>
     </ul>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            typeof &quot;John&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
+            typeof &quot;John&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
             &quot;string&quot; <br>
-            typeof 3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
+            typeof 3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
             &quot;number&quot;<br>
-            typeof true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
-            &quot;boolean&quot;<br>typeof false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
+            typeof true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
+            &quot;boolean&quot;<br>typeof false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
             &quot;boolean&quot;<br>typeof x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;undefined&quot; (if x has no value)</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_typeof_primitive" target="_blank">Try it Yourself &raquo;</a>
+            // Возвращает &quot;undefined&quot; (если x не имеет значения)</div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_typeof_primitive.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Complex Data</h2>
-    <p>The <code class="w3-codespan">typeof</code> operator can return one of two complex types:</p>
+
+    <h2>Комплексные данные</h2>
+    <p>Оператор <code class="w3-codespan">typeof</code> может возвращать один из двух сложных типов:</p>
     <ul>
         <li><code class="w3-codespan">function</code></li>
         <li><code class="w3-codespan">object</code></li>
     </ul>
 
-    <p>The <code class="w3-codespan">typeof</code> operator returns &quot;object&quot; for objects, arrays, and null.</p>
-    <p>The <code class="w3-codespan">typeof</code> operator does not return &quot;object&quot; for functions.</p>
+    <p>Оператор <code class="w3-codespan">typeof</code> возвращает &quot;object&quot; для объектов, массивов и null.</p>
+    <p>Оператор <code class="w3-codespan">typeof</code> не возвращает &quot;object&quot; для функций.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            typeof {name:'John', age:34}&nbsp;// Returns &quot;object&quot;<br>
+            typeof {name:'John', age:34}&nbsp;// Возвращает &quot;object&quot;<br>
             typeof [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns &quot;object&quot; (not &quot;array&quot;, see note below)<br>
-            typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Returns
-            &quot;object&quot;<br>typeof function myFunc(){}&nbsp;&nbsp; // Returns &quot;function&quot;<br>
+            // Возвращает &quot;object&quot; (не &quot;массив&quot;, см. примечание ниже)<br>
+            typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Возвращает
+            &quot;object&quot;<br>typeof function myFunc(){}&nbsp;&nbsp; // Возвращает &quot;function&quot;<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_typeof_complex" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_typeof_complex.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
@@ -632,76 +623,78 @@
     <p>The <code class="w3-codespan">constructor</code> property returns the constructor
         function for all JavaScript variables.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             &quot;John&quot;.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns function String()&nbsp; {[native code]}<br>
+            // Возвращает function String()&nbsp; {[native code]}<br>
             (3.14).constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns function Number()&nbsp; {[native code]}<br>
-            false.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
+            // Возвращает function Number()&nbsp; {[native code]}<br>
+            false.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
             function Boolean() {[native code]}<br>
             [1,2,3,4].constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns function Array()&nbsp;&nbsp; {[native code]}<br>
+            // Возвращает function Array()&nbsp;&nbsp; {[native code]}<br>
             {name:'John',age:34}.constructor&nbsp;
-            // Returns function Object()&nbsp; {[native code]}<br>
+            // Возвращает function Object()&nbsp; {[native code]}<br>
             new Date().constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Returns function Date()&nbsp; &nbsp; {[native code]}<br>
-            function () {}.constructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns
+            // Возвращает function Date()&nbsp; &nbsp; {[native code]}<br>
+            function () {}.constructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
             function Function(){[native code]}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_constructor_all" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_constructor_all.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>
-        You can check the constructor property to find out if an object is an <code class="w3-codespan">Array</code>
+    <p>You can check the constructor property to find out if an object is an <code class="w3-codespan">Array</code>
         (contains the word &quot;Array&quot;):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function isArray(myArray) {<br>
             &nbsp; return myArray.constructor.toString().indexOf(&quot;Array&quot;) &gt; -1;<br>
             }
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_array_isarray" target="_blank">Try it Yourself &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_array_isarray.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
     <p>Or even simpler, you can check if the object is an <strong>Array function</strong>:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function isArray(myArray) {<br>
             &nbsp; return myArray.constructor
             === Array;<br>
             }
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_type_isarray" target="_blank">Try it Yourself &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_type_isarray.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-
-    <p>
-        You can check the constructor property to find out if an object is a
-        <code class="w3-codespan">Date</code> (contains the word &quot;Date&quot;):</p>
+    <div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <p>You can check the constructor property to find out if an object is a <code class="w3-codespan">Date</code> (contains the word &quot;Date&quot;):</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function isDate(myDate) {<br>
             &nbsp; return myDate.constructor.toString().indexOf(&quot;Date&quot;) &gt; -1;<br>
             }
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_date_isdate" target="_blank">Try it Yourself &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_date_isdate.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <p>Or even simpler, you can check if the object is a <strong>Date function</strong>:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function isDate(myDate) {<br>
             &nbsp; return myDate.constructor === Date;<br>
             }
         </div>
-        <p><a class="w3-btn" href="../jstryit/tryit.html?filename=tryjs_type_isdate" target="_blank">Try it Yourself &raquo;</a></p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_type_isdate.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
     <hr>
@@ -709,20 +702,20 @@
     <p>In JavaScript, a variable without a value, has the value <code class="w3-codespan">undefined</code>.
         The type is also <code class="w3-codespan">undefined</code>.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let car;&nbsp;&nbsp;&nbsp; // Value is undefined,
             type is undefined</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_undefined" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <p>Any variable can be emptied, by setting the value to <code class="w3-codespan">undefined</code>.
         The type will also be <code class="w3-codespan">undefined</code>.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             car = undefined;&nbsp;&nbsp;&nbsp; // Value is undefined,
             type is undefined</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_undefined_2" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <hr>
@@ -730,12 +723,12 @@
     <p>An empty value has nothing to do with <code class="w3-codespan">undefined</code>.</p>
     <p>An empty string has both a legal value and a type.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let car = &quot;&quot;;&nbsp;&nbsp;&nbsp; //
             The value is
             &quot;&quot;, the typeof is &quot;string&quot;</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_empty" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_empty.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <hr>
@@ -749,22 +742,22 @@
 
     <p>You can empty an object by setting it to <code class="w3-codespan">null</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};<br>person = null;&nbsp;&nbsp;&nbsp; //
             Now value is null,
             but type is still an object<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_null" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_null.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <p>You can also empty an object by setting it to <code class="w3-codespan">undefined</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};<br>person = undefined;&nbsp;&nbsp; //
             Now both value and type is undefined<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_undefined_1" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined_1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
@@ -777,10 +770,9 @@
             // object<br><br>null === undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             // false<br>null == undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             // true</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_datatypes_undefined_3" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined_3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_maps.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_type_conversion.html">Next &#10095;</a>
