@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Оператор Typeof. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Оператор Typeof. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Оператор Typeof. Примитивные и комплексные данные. Тип данных typeof. Свойство constructor. Undefined и Null. Пустые значения. Различие между Undefined и Null. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -602,26 +602,24 @@
             typeof {name:'John', age:34}&nbsp;// Возвращает &quot;object&quot;<br>
             typeof [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             // Возвращает &quot;object&quot; (не &quot;массив&quot;, см. примечание ниже)<br>
-            typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Возвращает
-            &quot;object&quot;<br>typeof function myFunc(){}&nbsp;&nbsp; // Возвращает &quot;function&quot;<br>
+            typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Возвращает &quot;object&quot;<br>
+            typeof function myFunc(){}&nbsp;&nbsp; // Возвращает &quot;function&quot;<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_typeof_complex.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>The <code class="w3-codespan">typeof</code> operator returns &quot;<code class="w3-codespan">object</code>&quot; for arrays because in JavaScript arrays are objects.</p>
+        <p>Оператор <code class="w3-codespan">typeof</code> возвращает &quot;<code class="w3-codespan">object</code>&quot; для массивов, потому что в JavaScript массивы являются объектами.</p>
     </div>
     <hr>
-    <h2>The Data Type of typeof</h2>
-    <p>The <code class="w3-codespan">typeof</code>operator is not a variable. It is an operator. Operators ( + - * /
-        ) do not have any data type. </p>
-    <p>But, the <code class="w3-codespan">typeof</code> operator always <strong>returns a string</strong> (containing
-        the type of the operand).</p>
+
+    <h2>Тип данных typeof</h2>
+    <p>Оператор <code class="w3-codespan">typeof</code> не является переменной. Это оператор. Операторы (+ - * / ) не имеют типа данных.</p>
+    <p>Но оператор <code class="w3-codespan">typeof</code> всегда <strong>возвращает строку</strong> (содержащую тип операнда).</p>
     <hr>
 
-    <h2>The constructor Property</h2>
-    <p>The <code class="w3-codespan">constructor</code> property returns the constructor
-        function for all JavaScript variables.</p>
+    <h2>Свойство constructor</h2>
+    <p>Свойство <code class="w3-codespan">constructor</code> возвращает функцию конструктора для всех переменных JavaScript.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -629,22 +627,18 @@
             // Возвращает function String()&nbsp; {[native code]}<br>
             (3.14).constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             // Возвращает function Number()&nbsp; {[native code]}<br>
-            false.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
-            function Boolean() {[native code]}<br>
+            false.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает function Boolean() {[native code]}<br>
             [1,2,3,4].constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             // Возвращает function Array()&nbsp;&nbsp; {[native code]}<br>
             {name:'John',age:34}.constructor&nbsp;
             // Возвращает function Object()&nbsp; {[native code]}<br>
-            new Date().constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Возвращает function Date()&nbsp; &nbsp; {[native code]}<br>
-            function () {}.constructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает
-            function Function(){[native code]}
+            new Date().constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Возвращает function Date()&nbsp; &nbsp; {[native code]}<br>
+            function () {}.constructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Возвращает function Function(){[native code]}
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_constructor_all.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>You can check the constructor property to find out if an object is an <code class="w3-codespan">Array</code>
-        (contains the word &quot;Array&quot;):</p>
+    <p>Вы можете проверить свойство конструктора, чтобы узнать, является ли объект <code class="w3-codespan">Array</code> (содержит слово &quot;Array&quot;):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -656,7 +650,7 @@
         <p><a class="w3-btn" href="../jstryit/tryjs_array_isarray.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Or even simpler, you can check if the object is an <strong>Array function</strong>:</p>
+    <p>Или, что ещё проще, вы можете проверить, является ли объект <strong>Array функцией</strong>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -674,7 +668,7 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>You can check the constructor property to find out if an object is a <code class="w3-codespan">Date</code> (contains the word &quot;Date&quot;):</p>
+</div>    <p>Вы можете проверить свойство конструктора, чтобы узнать, является ли объект <code class="w3-codespan">Date</code> (содержит слово &quot;Date&quot;):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -685,7 +679,7 @@
         </div>
         <p><a class="w3-btn" href="../jstryit/tryjs_date_isdate.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-    <p>Or even simpler, you can check if the object is a <strong>Date function</strong>:</p>
+    <p>Или, что ещё проще, вы можете проверить, является ли объект <strong>Date функцией</strong>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -696,73 +690,67 @@
         </div>
         <p><a class="w3-btn" href="../jstryit/tryjs_type_isdate.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-
     <hr>
+
     <h2>Undefined</h2>
-    <p>In JavaScript, a variable without a value, has the value <code class="w3-codespan">undefined</code>.
-        The type is also <code class="w3-codespan">undefined</code>.</p>
+    <p>В JavaScript переменная без значения имеет значение <code class="w3-codespan">undefined</code>. Тип также является <code class="w3-codespan">undefined</code>.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let car;&nbsp;&nbsp;&nbsp; // Value is undefined,
-            type is undefined</div>
+            let car;&nbsp;&nbsp;&nbsp; // Значение - undefined, тип - undefined</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Any variable can be emptied, by setting the value to <code class="w3-codespan">undefined</code>.
-        The type will also be <code class="w3-codespan">undefined</code>.</p>
+    <p>Любую переменную можно очистить, установив значение на <code class="w3-codespan">undefined</code>.
+        Тип также будет <code class="w3-codespan">undefined</code>.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            car = undefined;&nbsp;&nbsp;&nbsp; // Value is undefined,
-            type is undefined</div>
+            car = undefined;&nbsp;&nbsp;&nbsp; // Значение - undefined, тип - undefined</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Empty Values </h2>
-    <p>An empty value has nothing to do with <code class="w3-codespan">undefined</code>.</p>
-    <p>An empty string has both a legal value and a type.</p>
+
+    <h2>Пустые значения</h2>
+    <p>Пустое значение не имеет ничего общего с <code class="w3-codespan">undefined</code>.</p>
+    <p>Пустая строка имеет как допустимое значение, так и тип.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let car = &quot;&quot;;&nbsp;&nbsp;&nbsp; //
-            The value is
-            &quot;&quot;, the typeof is &quot;string&quot;</div>
+            let car = &quot;&quot;;&nbsp;&nbsp;&nbsp; // Значение - &quot;&quot;, тип - &quot;string&quot;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_empty.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
+
     <h2>Null</h2>
-    <p>In JavaScript <code class="w3-codespan">null</code> is &quot;nothing&quot;. It is supposed to be something that doesn't exist.</p>
-    <p>Unfortunately, in JavaScript, the data type of <code class="w3-codespan">null</code> is an object.</p>
+    <p>В JavaScript <code class="w3-codespan">null</code> означает &quot;ничего&quot;. Это должно быть что-то, чего не существует.</p>
+    <p>К сожалению, в JavaScript тип данных <code class="w3-codespan">null</code> является объектом.</p>
 
     <div class="w3-panel w3-note">
-        <p>You can consider it a bug in JavaScript that <code class="w3-codespan">typeof null</code> is an object. It should be <code class="w3-codespan">null</code>.</p>
+        <p>Вы можете считать ошибкой в JavaScript то, что <code class="w3-codespan">typeof null</code> является объектом. Должен быть <code class="w3-codespan">null</code>.</p>
     </div>
 
-    <p>You can empty an object by setting it to <code class="w3-codespan">null</code>:</p>
+    <p>Вы можете очистить объект, установив для него <code class="w3-codespan">null</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};<br>person = null;&nbsp;&nbsp;&nbsp; //
-            Now value is null,
-            but type is still an object<br>
+            Теперь значение равно null, но тип по-прежнему является объектом<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_null.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>You can also empty an object by setting it to <code class="w3-codespan">undefined</code>:</p>
+    <p>Вы также можете очистить объект, установив для него <code class="w3-codespan">undefined</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};<br>person = undefined;&nbsp;&nbsp; //
-            Now both value and type is undefined<br>
+            Теперь и значение, и тип не определены<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_undefined_1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Difference Between Undefined and Null</h2>
-    <p><code class="w3-codespan">undefined</code> and <code class="w3-codespan">null</code> are equal in value but different in type:</p>
+    <h2>Различие между Undefined и Null</h2>
+    <p><code class="w3-codespan">undefined</code> и <code class="w3-codespan">null</code> равны по значению, но различаются по типу:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             typeof undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
