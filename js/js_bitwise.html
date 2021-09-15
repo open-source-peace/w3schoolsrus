@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Побитовые операции. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Побитовые операции. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Побитовые операции. 32-битные побитовые операнды. AND, OR, XOR, NOT. Сдвиг влево и вправо. Двоичные (бинарные) числа. Десятичное значение. Преобразование десятичного числа в двоичное и наоборот. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -614,13 +614,13 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Bitwise AND</h2>
-    <p>When a bitwise AND is performed on a pair of bits, it returns 1 if both bits are 1.</p>
+    <h2>Побитовое AND</h2>
+    <p>Когда побитовое AND выполняется для пары битов, он возвращает 1, если оба бита равны 1.</p>
     <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half">
-            One bit example:
+            Один бит пример:
             <table class="ws-table-all">
-                <tr><th>Operation</th><th>Result</th></tr>
+                <tr><th>Операция</th><th>Результат</th></tr>
                 <tr><td>0 &amp; 0</td><td>0</td></tr>
                 <tr><td>0 &amp; 1</td><td>0</td></tr>
                 <tr><td>1 &amp; 0</td><td>0</td></tr>
@@ -628,9 +628,9 @@
             </table>
         </div>
         <div class="w3-half">
-            4 bits example:
+            4 бит пример:
             <table class="ws-table-all">
-                <tr><th>Operation</th><th>Result</th></tr>
+                <tr><th>Операция</th><th>Результат</th></tr>
                 <tr><td>1111 &amp; 0000</td><td>0000</td></tr>
                 <tr><td>1111 &amp; 0001</td><td>0001</td></tr>
                 <tr><td>1111 &amp; 0010</td><td>0010</td></tr>
@@ -640,13 +640,13 @@
     </div>
     <hr>
 
-    <h2>Bitwise OR</h2>
-    <p>When a bitwise OR is performed on a pair of bits, it returns 1 if one of the bits are 1:</p>
+    <h2>Побитовое OR</h2>
+    <p>Когда для пары битов выполняется побитовое OR, оно возвращает 1, если один из битов равен 1:</p>
     <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half">
-            One bit example:
+            Один бит пример:
             <table class="ws-table-all">
-                <tr><th>Operation</th><th>Result</th></tr>
+                <tr><th>Операция</th><th>Результат</th></tr>
                 <tr><td>0 | 0</td><td>0</td></tr>
                 <tr><td>0 | 1</td><td>1&nbsp;</td></tr>
                 <tr><td>1 | 0</td><td>1</td></tr>
@@ -654,9 +654,9 @@
             </table>
         </div>
         <div class="w3-half">
-            4 bits example:
+            4 бит пример:
             <table class="ws-table-all">
-                <tr><th>Operation</th><th>Result</th></tr>
+                <tr><th>Операция</th><th>Результат</th></tr>
                 <tr><td>1111 | 0000</td><td>1111</td></tr>
                 <tr><td>1111 | 0001</td><td>1111</td></tr>
                 <tr><td>1111 | 0010</td><td>1111</td></tr>
@@ -666,13 +666,13 @@
     </div>
     <hr>
 
-    <h2>Bitwise XOR</h2>
-    <p>When a bitwise XOR is performed on a pair of bits, it returns 1 if the bits are different:</p>
+    <h2>Побитовое XOR</h2>
+    <p>Когда побитовое XOR выполняется для пары битов, возвращает 1, если биты разные:</p>
     <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half">
-            One bit example:
+            Один бит пример:
             <table class="ws-table-all">
-                <tr><th>Operation</th><th>Result</th></tr>
+                <tr><th>Операция</th><th>Результат</th></tr>
                 <tr><td>0 ^ 0</td><td>0</td></tr>
                 <tr><td>0 ^ 1</td><td>1&nbsp;</td></tr>
                 <tr><td>1 ^ 0</td><td>1</td></tr>
@@ -680,9 +680,9 @@
             </table>
         </div>
         <div class="w3-half">
-            4 bits example:
+            4 бит пример:
             <table class="ws-table-all">
-                <tr><th>Operation</th><th>Result</th></tr>
+                <tr><th>Операция</th><th>Результат</th></tr>
                 <tr><td>1111 ^ 0000</td><td>1111</td></tr>
                 <tr><td>1111 ^ 0001</td><td>1110</td></tr>
                 <tr><td>1111 ^ 0010</td><td>1101</td></tr>
@@ -692,38 +692,38 @@
     </div>
     <hr>
 
-    <h2>JavaScript Bitwise AND (&amp;)</h2>
-    <p>Bitwise AND returns 1 only if both bits are 1:</p>
+    <h2>JavaScript Побитовое AND (&amp;)</h2>
+    <p>Побитовое AND возвращает 1, только если оба бита равны 1:</p>
 
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>5</td><td>00000000000000000000000000000101</td></tr>
         <tr><td>1</td><td>00000000000000000000000000000001</td></tr>
         <tr><td>5 &amp; 1</td><td>00000000000000000000000000000001 (1)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5 &amp; 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_and" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_and.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>JavaScript Bitwise OR (|)</h2>
-    <p>Bitwise OR returns 1 if one of the bits are 1:</p>
+    <h2>JavaScript Побитовое OR (|)</h2>
+    <p>Побитовое OR возвращает 1, если один из битов равен 1:</p>
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>5</td><td>00000000000000000000000000000101</td></tr>
         <tr><td>1</td><td>00000000000000000000000000000001</td></tr>
         <tr><td>5 | 1</td><td>00000000000000000000000000000101 (5)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5 | 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_or" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_or.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -732,95 +732,90 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>JavaScript Bitwise XOR (^)</h2>
-    <p>Bitwise XOR returns 1 if the bits are different:</p>
+    <h2>JavaScript Побитовое XOR (^)</h2>
+    <p>Побитовое XOR возвращает 1, если биты разные:</p>
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>5</td><td>00000000000000000000000000000101</td></tr>
         <tr><td>1</td><td>00000000000000000000000000000001</td></tr>
         <tr><td>5 ^ 1</td><td>00000000000000000000000000000100 (4)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5 ^ 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_xor" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_xor.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>JavaScript Bitwise NOT (~)</h2>
+    <h2>JavaScript Побитовое NOT (~)</h2>
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>5</td><td>00000000000000000000000000000101</td></tr>
         <tr><td>~5</td><td>11111111111111111111111111111010 (-6)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = ~5;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_not" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_not.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>JavaScript (Zero Fill) Bitwise Left Shift (&lt;&lt;)</h2>
-    <p>This is a zero fill left shift. One or more zero bits are pushed in from the right,
-        and the leftmost bits fall off:</p>
+    <h2>JavaScript (нулевое заполнение) Побитовый сдвиг влево (&lt;&lt;)</h2>
+    <p>Это сдвиг влево с нулевым заполнением. Один или несколько нулевых бит вставляются справа, а крайние левые биты отваливаются:</p>
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>5</td><td>00000000000000000000000000000101</td></tr>
         <tr><td>5 &lt;&lt; 1</td><td>00000000000000000000000000001010 (10)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5 &lt;&lt; 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_left" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_left.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>JavaScript (Sign Preserving) Bitwise Right Shift (&gt;&gt;)</h2>
-    <p>This is a sign preserving right shift. Copies of the leftmost bit are pushed
-        in from the left, and the rightmost bits fall off:</p>
+    <h2>JavaScript (сохранение знака) Побитовый сдвиг вправо (&gt;&gt;)</h2>
+    <p>Это знак, сохраняющий правый сдвиг. Копии самого левого бита вставляются слева, а крайние правые биты отваливаются:</p>
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>-5</td><td>11111111111111111111111111111011</td></tr>
         <tr><td>-5 &gt;&gt; 1</td><td>11111111111111111111111111111101 (-3)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = -5 &gt;&gt; 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_right_sign" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_right_sign.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
 
-    <h2>JavaScript (Zero Fill) Right Shift (&gt;&gt;&gt;)</h2>
-    <p>This is a zero fill right shift. One or more zero bits are pushed in from the left,
-        and the rightmost bits fall off:</p>
+    <h2>JavaScript (Zero Fill) сдвиг вправо (&gt;&gt;&gt;)</h2>
+    <p>Это сдвиг вправо с нулевым заполнением. Один или несколько нулевых бит вставляются слева, а крайние правые биты отваливаются:</p>
     <table class="ws-table-all">
-        <tr><th>Decimal</th><th>Binary</th></tr>
+        <tr><th>Десятичное</th><th>Двоичное</th></tr>
         <tr><td>5</td><td>00000000000000000000000000000101</td></tr>
         <tr><td>5 &gt;&gt;&gt; 1</td><td>00000000000000000000000000000010 (2)</td></tr>
     </table>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5 &gt;&gt;&gt; 1;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_right" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_right.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
 
-    <h2>Binary Numbers</h2>
-    <p>Binary numbers with only one bit set is easy to understand:</p>
+    <h2>Двоичные (бинарные) числа</h2>
+    <p>Двоичные числа с одним набором битов легко понять:</p>
     <table class="ws-table-all">
-        <tr><th>Binary Representation</th><th>Decimal value</th></tr>
+        <tr><th>Двоичное представление</th><th>Десятичное значение</th></tr>
         <tr><td>00000000000000000000000000000001</td><td>1</td></tr>
         <tr><td>00000000000000000000000000000010</td><td>2</td></tr>
         <tr><td>00000000000000000000000000000100</td><td>4</td></tr>
@@ -829,17 +824,17 @@
         <tr><td>00000000000000000000000000100000</td><td>32</td></tr>
         <tr><td>00000000000000000000000001000000</td><td>64</td></tr>
     </table>
-    <p>Setting a few more bits reveals the binary pattern:</p>
+    <p>Установка ещё нескольких битов показывает двоичный паттерн:</p>
     <table class="ws-table-all">
-        <tr><th>Binary Representation</th><th>Decimal value</th></tr>
+        <tr><th>Двоичное представление</th><th>Десятичное значение</th></tr>
         <tr><td>00000000000000000000000000000101</td><td>5 (4 + 1)</td></tr>
         <tr><td>00000000000000000000000000001101</td><td>13 (8 + 4 + 1)</td></tr>
         <tr><td>00000000000000000000000000101101</td><td>45 (32 + 8 + 4 + 1)</td></tr>
     </table>
-    <p>JavaScript binary numbers are stored in two's complement format.</p>
-    <p>This means that a negative number is the bitwise NOT of the number plus 1:</p>
+    <p>Двоичные числа JavaScript хранятся в формате дополнения до двух.</p>
+    <p>Это означает, что отрицательное число - это побитовое NOT числа плюс 1:</p>
     <table class="ws-table-all">
-        <tr><th>Binary Representation</th><th>Decimal value</th></tr>
+        <tr><th>Двоичное представление</th><th>Десятичное значение</th></tr>
         <tr><td>00000000000000000000000000000101</td><td>5</td></tr>
         <tr><td>11111111111111111111111111111011</td><td>-5</td></tr>
         <tr><td>00000000000000000000000000000110</td><td>6</td></tr>
@@ -849,27 +844,27 @@
     </table>
     <hr>
 
-    <h2>Converting Decimal to Binary</h2>
+    <h2>Преобразование десятичного числа в двоичное</h2>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function dec2bin(dec){<br>
             &nbsp;&nbsp;return (dec &gt;&gt;&gt; 0).toString(2);<br>
             }
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_convert" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_convert.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Converting Binary to Decimal</h2>
+    <h2>Преобразование двоичного числа в десятичное</h2>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function bin2dec(bin){<br>
             &nbsp; return parseInt(bin, 2).toString(10);<br>
             }
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_bitwise_convert_binary" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_bitwise_convert_binary.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
     <div class="w3-clear nextprev">
