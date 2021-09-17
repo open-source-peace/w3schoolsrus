@@ -74,7 +74,8 @@
                         <a class='w3-bar-item w3-button' href='../python/scipy/index.html'>Выучить SciPy</a>
                         <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Выучить Matplotlib</a>
                         <a class='w3-bar-item w3-button' href='../statistics/index.html'>Выучить Статистика</a>
-
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Выучить Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Выучить Google таблицы</a>
                         <h3>XML</h3>
                         <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
                         <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
@@ -137,6 +138,8 @@
                     <a class='w3-bar-item w3-button' href='../python/scipy/index.html'>Выучить SciPy</a>
                     <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Выучить Matplotlib</a>
                     <a class='w3-bar-item w3-button' href='../statistics/index.html'>Выучить Статистика</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Выучить Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Выучить Google таблицы</a>
                     <h3>XML</h3>
                     <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
                     <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
@@ -488,14 +491,14 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <article>
-    <h1>JavaScript <span class="color_h1">Область видимости (действия)</span></h1>
+    <h1>JavaScript <span class="color_h1">Область действия</span></h1>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_errors.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_hoisting.html">Next &#10095;</a>
     </div>
     <div class="w3-info">
-        <p class="intro"><strong>Область видимости</strong> (или <strong>область действия</strong>) определяет доступность (видимость) переменных.</p>
-        <p>JavaScript имеет 3 типа области видимости:</p>
+        <p class="intro"><strong>Область действия</strong> (или <strong>область видимости</strong>) определяет доступность (видимость) переменных.</p>
+        <p>JavaScript имеет 3 типа области действия:</p>
         <ul>
             <li>Область действия блока</li>
             <li>Область действия функции</li>
@@ -503,57 +506,53 @@
         </ul>
     </div>
 
-    <h2>Block Scope</h2>
-    <p>Before ES6 (2015), JavaScript had only <b>Global Scope</b> and <b>Function Scope</b>.</p>
-    <p>ES6 introduced two important new JavaScript keywords: <code class="w3-codespan">let</code> and <code class="w3-codespan">const</code>.</p>
-    <p>These two keywords provide <strong>Block Scope</strong> in JavaScript.</p>
-    <p>Variables declared inside a { } block cannot be accessed
-        from outside the block:</p>
+    <h2>Область действия блока</h2>
+    <p>До ES6 (2015) в JavaScript были только <b>Глобальная область действия</b> и <b>Область действия функции</b>.</p>
+    <p>ES6 представил два важных новых ключевых слова JavaScript: <code class="w3-codespan">let</code> и <code class="w3-codespan">const</code>.</p>
+    <p>Эти два ключевых слова обеспечивают <strong>область действия блока</strong> в JavaScript.</p>
+    <p>К переменным, объявленным внутри блока { }, нельзя получить доступ извне блока:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             { <br>
             &nbsp;&nbsp;let x = 2;<br>
             }<br>
-            // x can NOT be used here</div>
+            // x НЕ может быть использован здесь</div>
     </div>
 
-    <p>Variables declared with the <code class="w3-codespan">var</code> keyword can NOT have block scope.</p>
-    <p>Variables declared inside a { } block can be accessed from
-        outside the block. </p>
+    <p>Переменные, объявленные с помощью ключевого слова <code class="w3-codespan">var</code> НЕ могут иметь область действия блока.</p>
+    <p>К переменным, объявленным внутри блока { }, можно получить доступ извне блока.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             { <br>
             &nbsp;&nbsp;var x = 2; <br>
             }<br>
-            // x CAN be used here</div>
+            // x МОЖНО использовать здесь</div>
     </div>
-
     <hr>
-    <h2>Local Scope</h2>
-    <p>Variables declared within a JavaScript function, become <strong>
-            LOCAL</strong> to
-        the function.</p>
+
+    <h2>Локальная область действия</h2>
+    <p>Переменные, объявленные в функции JavaScript, становятся <strong>ЛОКАЛЬНЫМИ</strong> для функции.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            // code here can NOT use carName<br><br>function myFunction() {<br>
-            &nbsp;&nbsp;let carName = &quot;Volvo&quot;;<br>&nbsp; // code here CAN use carName<br>}<br>
-            <br>// code here can NOT use carName
+            // код здесь НЕ может использовать carName<br><br>function myFunction() {<br>
+            &nbsp;&nbsp;let carName = &quot;Volvo&quot;;<br>&nbsp; // код здесь МОЖЕТ использовать carName<br>}<br>
+            <br>// код здесь НЕ может использовать carName
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_scope_local" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_local.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-note">
-        <p>Local variables have <strong>Function Scope</strong>:</p>
-        <p>They can only be accessed from within the function.</p>
+        <p>Локальные переменные имеют <strong>Область действия функции</strong>:</p>
+        <p>Доступ к ним можно получить только из функции.</p>
     </div>
 
-    <p>Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.</p>
-    <p>Local variables are created when a function starts, and deleted when the function is completed.</p>
+    <p>Поскольку локальные переменные распознаются только внутри своих функций, переменные с одинаковыми именами могут использоваться в разных функциях.</p>
+    <p>Локальные переменные создаются при запуске функции и удаляются, когда функция завершается.</p>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -561,21 +560,15 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Function Scope</h2>
-    <p>JavaScript has function scope: Each function creates a new scope. </p>
-    <p>Variables defined inside a function are not accessible (visible) from outside the
-        function.</p>
-
-
-    <p>Variables declared with <code class="w3-codespan">var</code>, <code class="w3-codespan">let</code>
-        and <code class="w3-codespan">const</code> are
-        quite similar when declared inside a function.</p>
-    <p>They all have <strong>Function Scope</strong>:</p>
+    <h2>Область действия функции</h2>
+    <p>JavaScript имеет область действия функции: каждая функция создает новую область действия.</p>
+    <p>Переменные, определенные внутри функции, недоступны (видимы) вне функции.</p>
+    <p>Переменные, объявленные с помощью <code class="w3-codespan">var</code>, <code class="w3-codespan">let</code> и <code class="w3-codespan">const</code> очень похожи, когда объявлены внутри функции.</p>
+    <p>Они все имеют <strong>Область действия функции</strong>:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             function myFunction() {<br>
-            &nbsp; var carName = "Volvo";&nbsp;&nbsp;
-            // Function Scope<br>
+            &nbsp; var carName = "Volvo";&nbsp;&nbsp; // Область действия функции<br>
             }
         </div>
     </div>
@@ -583,8 +576,7 @@
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             function myFunction() {<br>
-            &nbsp; let carName = "Volvo";&nbsp;&nbsp; //
-            Function Scope<br>
+            &nbsp; let carName = "Volvo";&nbsp;&nbsp; // Область действия функции<br>
             }
         </div>
     </div>
@@ -592,8 +584,7 @@
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             function myFunction() {<br>
-            &nbsp; const carName = "Volvo";&nbsp;&nbsp; //
-            Function Scope<br>
+            &nbsp; const carName = "Volvo";&nbsp;&nbsp; // Область действия функции<br>
             }
         </div>
     </div>
@@ -605,59 +596,50 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Global JavaScript Variables</h2>
-    <p>A variable declared outside a function, becomes <strong>GLOBAL</strong>.</p>
+    <h2>Глобальные JavaScript переменные</h2>
+    <p>Переменная, объявленная вне функции, становится <strong>ГЛОБАЛЬНОЙ</strong>.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let carName = &quot;Volvo&quot;;<br>
-            // code here can use carName<br><br>
+            // код здесь может использовать carName<br><br>
             function myFunction() {<br>
-            // code here can also use carName <br>}
+            // код здесь также может использовать carName <br>}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_scope_global" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_global.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-note">
-        <p>A global variable has <strong>Global Scope</strong>:</p>
-        <p>All scripts and functions on a web page can access it.&nbsp;</p>
+        <p>Глобальная переменная имеет <strong>Глобальную область действия</strong>:</p>
+        <p>Все скрипты и функции на веб-странице могут получить к ней доступ.</p>
     </div>
-
     <hr>
 
-    <h2>Global Scope</h2>
-    <p>Variables declared <strong>Globally</strong> (outside any function) have
-        <strong>Global Scope</strong>.</p>
-
-
-    <p><strong>Global</strong> variables can be accessed from anywhere in a JavaScript program. </p>
-    <p>Variables declared with <code class="w3-codespan">var</code>, <code class="w3-codespan">let</code>
-        and <code class="w3-codespan">const</code> are
-        quite similar when declared outside a block.</p>
-    <p>They all have <strong>Global Scope</strong>:</p>
+    <h2>Глобальная область действия</h2>
+    <p>Переменные, объявленные <strong>Глобально</strong> (вне какой-либо функции), имеют <strong>Глобальную область действия</strong>.</p>
+    <p><strong>Доступ к глобальным переменным</strong> можно получить из любого места в программе JavaScript.</p>
+    <p>Переменные, объявленные с помощью <code class="w3-codespan">var</code>, <code class="w3-codespan">let</code> и <code class="w3-codespan">const</code> очень похожи, когда объявлены вне блока.</p>
+    <p>Они все имеют <strong>Глобальную область действия</strong>:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Global scope</div>
+            // Глобальная область действия</div>
     </div>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //
-            Global scope</div>
+            let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Глобальная область действия</div>
     </div>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //
-            Global scope</div>
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Глобальная область действия</div>
     </div>
-
     <hr>
-    <h2>JavaScript Variables</h2>
-    <p>In JavaScript, objects and functions are also variables.</p>
+
+    <h2>JavaScript Переменные</h2>
+    <p>В JavaScript объекты и функции также являются переменными.</p>
     <div class="w3-panel w3-note">
-        <p>Scope determines the accessibility of variables, objects, and functions from
-            different parts of the code.</p>
+        <p>Область видимости определяет доступность переменных, объектов и функций из разных частей кода.</p>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -666,52 +648,50 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Automatically Global</h2>
-    <p>If you assign a value to a variable that has not been declared, it will automatically become a <b>GLOBAL</b> variable.</p>
-    <p>This code example will declare a global variable <code class="w3-codespan">carName</code>, even if
-        the value is assigned inside a function.</p>
+    <h2>Автоматически глобальная</h2>
+    <p>Если вы присвоите значение переменной, которая не была объявлена, она автоматически станет <b>ГЛОБАЛЬНОЙ</b> переменной.</p>
+    <p>Этот пример кода объявляет глобальную переменную <code class="w3-codespan">carName</code>, даже если значение назначается внутри функции.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            myFunction();<br><br>// code here can use carName
+            myFunction();<br><br>// код здесь может использовать carName
             <br><br>function myFunction() {<br>
             &nbsp; carName = &quot;Volvo&quot;;<br>}</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_local_global" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_local_global.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>Strict Mode</h2>
-    <p>All modern browsers support running JavaScript in "Strict Mode".</p>
-    <p>You will learn more about how to use strict mode in a later chapter of this tutorial.</p>
+
+    <h2>Строгий режим</h2>
+    <p>Все современные браузеры поддерживают выполнение JavaScript в &quot;Строгом режиме&quot;.</p>
+    <p>Вы узнаете больше о том, как использовать строгий режим в следующей главе этого учебника на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
 
     <div class="w3-panel w3-warning">
-        <p>In &quot;Strict Mode&quot;, undeclared variables are not automatically global.</p>
+        <p>В &quot;Строгом режиме&quot; необъявленные переменные не становятся глобальными автоматически.</p>
     </div>
-
     <hr>
-    <h2>Global Variables in HTML</h2>
-    <p>With JavaScript, the global scope is the JavaScript environment. </p>
-    <p>In HTML, the global scope is the window object.</p>
-    <p>Global variables defined with the <code class="w3-codespan">var</code> keyword belong to the window object:</p>
+
+    <h2>Глобальные переменные в HTML</h2>
+    <p>В JavaScript глобальной областью действия является среда JavaScript.</p>
+    <p>В HTML глобальной областью действия является объект окна.</p>
+    <p>Глобальные переменные, определенные с помощью ключевого слова <code class="w3-codespan">var</code> принадлежат объекту окна:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            var carName = &quot;Volvo&quot;;<br>// code here
-            can use window.carName<br></div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_scope_window" target="_blank">Попробуйте сами &raquo;</a>
+            var carName = &quot;Volvo&quot;;<br>// код здесь может использовать window.carName<br></div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_window.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <p>Global variables defined with the <code class="w3-codespan">let</code> keyword do not belong to the window object:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let carName = &quot;Volvo&quot;;<br>
             // code here can not use window.carName
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_let_global" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_global.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
 
@@ -737,7 +717,7 @@
     <br>
 
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_errors.html">&#10094; Previous</a>
+        <a class="w3-left w3-btn" href="js_errors.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_hoisting.html">Next &#10095;</a>
     </div>
 </article>
