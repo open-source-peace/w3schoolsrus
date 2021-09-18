@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Область действия. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Область действия. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Область действия определяет доступность (видимость) переменных. Область действия блока, функции, глобальная.Строгий режим. Время жизни переменных. Аргументы функции. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -683,39 +683,34 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_window.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Global variables defined with the <code class="w3-codespan">let</code> keyword do not belong to the window object:</p>
+    <p>Глобальные переменные, определенные с помощью ключевого слова <code class="w3-codespan">let</code> не принадлежат объекту окна:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let carName = &quot;Volvo&quot;;<br>
-            // code here can not use window.carName
+            // код здесь не может использовать window.carName
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_global.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
-
     <hr>
-    <h2>Warning</h2>
+
+    <h2>Предупреждение</h2>
     <div class="w3-panel w3-warning">
-        <p>Do NOT create global variables unless you intend to.</p>
-        <p>Your global variables (or functions) can overwrite window variables (or
-            functions).<br>Any function, including the window object, can overwrite your global
-            variables and functions.</p>
+        <p>НЕ создавайте глобальные переменные, если вы не собираетесь.</p>
+        <p>Ваши глобальные переменные (или функции) могут перезаписывать переменные (или функции) окна.<br>Любая функция, включая объект окна, может перезаписывать ваши глобальные переменные и функции.</p>
     </div>
-
-    <hr>
-    <h2>The Lifetime of JavaScript Variables</h2>
-    <p>The lifetime of a JavaScript variable starts when it is declared.</p>
-    <p>Function (local) variables are deleted when the function is completed.</p>
-    <p>In a web browser, global variables are deleted when you close the browser
-        window (or tab).</p>
     <hr>
 
-    <h2>Function Arguments</h2>
-    <p>Function arguments (parameters) work as local variables inside functions.</p>
-    <br>
+    <h2>Время жизни переменных JavaScript</h2>
+    <p>Время жизни переменной JavaScript начинается с момента её объявления.</p>
+    <p>Функциональные (локальные) переменные удаляются по завершении функции.</p>
+    <p>В веб-браузере глобальные переменные удаляются при закрытии окна (или вкладки) браузера.</p>
+    <hr>
 
+    <h2>Аргументы функции</h2>
+    <p>Аргументы функции (параметры) работают как локальные переменные внутри функций.</p>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_errors.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_hoisting.html">Next &#10095;</a>
