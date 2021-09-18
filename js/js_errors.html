@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>JavaScript Ошибки. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Ошибки. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Ошибки. Try и Catch. Операторы throw, finally. Проверка ввода. Объект Error (ошибка). Значения имени ошибки. Полный справочник. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -657,21 +657,19 @@
     <p>Свойство имени ошибки может вернуть шесть различных значений:</p>
     <table class="ws-table-all">
         <tr><th>Имя ошибки</th><th>Описание</th></tr>
-        <tr><td>EvalError</td><td>An error has occurred in the eval() function</td></tr>
-        <tr><td>RangeError</td><td>A number &quot;out of range&quot; has occurred</td></tr>
-        <tr><td>ReferenceError</td><td>An illegal reference has occurred</td></tr>
-        <tr><td>SyntaxError</td><td>A syntax error has occurred</td></tr>
-        <tr><td>TypeError</td><td>A type error has occurred</td></tr>
-        <tr><td>URIError</td><td>An error in encodeURI() has occurred</td></tr>
+        <tr><td>EvalError</td><td>Произошла ошибка в функции eval()</td></tr>
+        <tr><td>RangeError</td><td>Произошло число &quot;Вне допустимого диапазона&quot;</td></tr>
+        <tr><td>ReferenceError</td><td>Произошла недопустимая ссылка</td></tr>
+        <tr><td>SyntaxError</td><td>Произошла синтаксическая ошибка</td></tr>
+        <tr><td>TypeError</td><td>Произошла ошибка типа</td></tr>
+        <tr><td>URIError</td><td>Произошла ошибка в encodeURI()</td></tr>
     </table>
-    <p>The six different values are described below.</p>
+    <p>Шесть различных значений описаны ниже.</p>
     <hr>
 
-    <h2>Eval Error</h2>
-    <p>An <code class="w3-codespan">EvalError</code> indicates an error in the eval() function.</p>
-    <div class="w3-panel w3-warning">
-        <p>Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</p>
-    </div>
+    <h2>Ошибка Eval Error</h2>
+    <p>Ошибка <code class="w3-codespan">EvalError</code> указывает на ошибку в функции eval().</p>
+    <div class="w3-panel w3-warning"><p>Новые версии JavaScript не генерируют EvalError. Вместо этого используйте SyntaxError.</p></div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -679,18 +677,15 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Range Error</h2>
-    <p>A <code class="w3-codespan">RangeError</code> is thrown if you use a number that is outside
-        the range of legal values.</p>
-    <p>For example: You cannot set the number of significant digits of a number to
-        500. </p>
+    <h2>Ошибка Range Error</h2>
+    <p>Ошибка <code class="w3-codespan">RangeError</code> выдается, если вы используете число, выходящее за пределы диапазона допустимых значений.</p>
+    <p>Например: вы не можете установить количество значащих цифр числа равным 500.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let num = 1;<br>
             try {<br>
-            &nbsp; num.toPrecision(500);&nbsp;&nbsp; // A number cannot have 500
-            significant digits<br>
+            &nbsp; num.toPrecision(500);&nbsp;&nbsp; // Число не может содержать 500 значащих цифр<br>
             }<br>
             catch(err) {<br>
             &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
@@ -700,14 +695,13 @@
     </div>
     <hr>
 
-    <h2>Reference Error</h2>
-    <p>A <code class="w3-codespan">ReferenceError</code> is thrown if you use (reference) a variable
-        that has not been declared:</p>
+    <h2>Ошибка Reference Error</h2>
+    <p><code class="w3-codespan">ReferenceError</code> выдаётся, если вы используете (ссылаетесь) на переменную, которая не была объявлена:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5;<br>try {<br>
-            &nbsp;&nbsp;x = y + 1;&nbsp;&nbsp; // y cannot be used (referenced)<br>
+            &nbsp;&nbsp;x = y + 1;&nbsp;&nbsp; // y не может использоваться (ссылаться)<br>
             }<br>
             catch(err) {<br>
             &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
@@ -717,28 +711,25 @@
     </div>
     <hr>
 
-    <h2>Syntax Error</h2>
-    <p>A <code class="w3-codespan">SyntaxError</code> is thrown if you try to evaluate code with a
-        syntax error.</p>
+    <h2>Ошибка Syntax Error</h2>
+    <p><code class="w3-codespan">SyntaxError</code> выдаётся, если вы пытаетесь запустить код с синтаксической ошибкой.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            try {<br>&nbsp; eval(&quot;alert('Hello)&quot;);&nbsp;&nbsp; //
-            Missing ' will produce an error<br>}<br>catch(err) {<br>&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>} </div>
+            try {<br>&nbsp; eval(&quot;alert('Hello)&quot;);&nbsp;&nbsp; // Отсутствие ' приведет к ошибке<br>
+            }<br>catch(err) {<br>&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>} </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_error_syntaxerror.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
 
-    <h2>Type Error</h2>
-    <p>A <code class="w3-codespan">TypeError</code> is thrown if you use a value that is outside the
-        range of expected types:</p>
+    <h2>Ошибка Type Error</h2>
+    <p><code class="w3-codespan">TypeError</code> выдаётся, если вы используете значение, выходящее за пределы диапазона ожидаемых типов:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let num = 1;<br>
             try {<br>
-            &nbsp;&nbsp;num.toUpperCase();&nbsp;&nbsp; // You cannot convert a number
-            to upper case<br>
+            &nbsp;&nbsp;num.toUpperCase();&nbsp;&nbsp; // Вы не можете преобразовать число в верхний регистр<br>
             }<br>
             catch(err) {<br>
             &nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
@@ -748,14 +739,13 @@
     </div>
     <hr>
 
-    <h2>URI (Uniform Resource Identifier) Error</h2>
-    <p>A <code class="w3-codespan">URIError</code> is thrown if you use illegal characters in a URI function:</p>
+    <h2>Ошибка URI (Uniform Resource Identifier - Единый идентификатор ресурса) Error</h2>
+    <p><code class="w3-codespan">URIError</code> выдаётся, если вы используете недопустимые символы в функции URI:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             try {<br>
-            &nbsp; decodeURI(&quot;%%%&quot;);&nbsp;&nbsp; // You cannot URI decode
-            percent signs<br>
+            &nbsp; decodeURI(&quot;%%%&quot;);&nbsp;&nbsp; // Вы не можете декодировать URI знаки процента<br>
             }<br>
             catch(err) {<br>
             &nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
@@ -765,20 +755,21 @@
     </div>
     <hr>
 
-    <h2>Non-Standard Error Object Properties</h2>
+    <h2>Нестандартные Свойства объекта Error</h2>
     <div class="w3-panel w3-warning">
-        <p>Mozilla and Microsoft defines some non-standard error object properties:</p>
+        <p>Mozilla и Microsoft определяют некоторые нестандартные свойства объекта ошибки:</p>
         <p>fileName (Mozilla)<br>
             lineNumber (Mozilla)<br>
             columnNumber (Mozilla)<br>
             stack (Mozilla)<br>
             description (Microsoft)<br>
             number (Microsoft)</p>
-        <p>Do not use these properties in public web sites. They will not work in all browsers.</p>
+        <p>Не используйте эти свойства на общедоступных веб-сайтах. Они не будут работать во всех браузерах.</p>
     </div>
     <hr>
-    <h2>Complete Error Reference</h2>
-    <p>For a complete reference of the Error object, go to our <a href="../jsref/jsref_obj_error.html">Complete JavaScript Error Reference</a>.</p>
+
+    <h2>Полный справочник Error</h2>
+    <p>Полный справочник по объекту Error смотрите в главе <a href="../jsref/jsref_obj_error.html">Полный справочник JavaScript Error</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_regexp.html">&#10094; Prev</a>
