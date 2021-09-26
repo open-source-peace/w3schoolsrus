@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Статистика Делаем выводы. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Делаем выводы. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Статистика Делаем выводы. Статистические выводы. Теория вероятностей. Доверительные интервалы. Проверка гипотез. Причинный вывод. Уроки для начинающих. W3Schools на русском'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -289,10 +289,10 @@
             <a target='_top' href="statistics_describing_data.html">Stat Описание данных</a>
             <a target='_top' href="statistics_making_conclusions.html">Stat Делаем выводы</a>
             <a target='_top' href="statistics_prediction_and_explanation.html">Stat Прогнозирование &amp; Объяснение</a>
-            <a target='_top' href="statistics_populations_and_samples.html">Stat Населения &amp; Образцы</a>
+            <a target='_top' href="statistics_populations_and_samples.html">Stat Совокупность &amp; Выборка</a>
             <a target='_top' href="statistics_parameters_and_statistics.html">Stat Параметры &amp; Статистика</a>
             <a target='_top' href="statistics_study_types.html">Stat Типы исследований</a>
-            <a target='_top' href="statistics_sample_types.html">Stat Типы образцов</a>
+            <a target='_top' href="statistics_sample_types.html">Stat Типы выборок</a>
             <a target='_top' href="statistics_data_types.html">Stat Типы данных</a>
             <a target='_top' href="statistics_measurement_levels.html">Stat Уровни измерения</a>
             <br>
@@ -354,22 +354,23 @@
         <a class="w3-right w3-btn" href="statistics_prediction_and_explanation.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Использование статистики для вывода о популяции называется статистическим выводом.</p>
+    <p class="intro">Использование статистики для вывода о совокупности называется <strong>статистическим выводом</strong>.</p>
     <hr>
-    <h2>Statistical Inference</h2>
-    <p>Statistics from the data in the <strong>sample</strong> is used to make conclusions about the whole <strong>population</strong>. This is a type of <strong>statistical inference</strong>.</p>
-    <p><strong>Probability theory</strong> is used to calculate the certainty that those statistics also apply to the population.</p>
-    <p>When using a sample, there will <strong>always</strong> be some uncertainty about what the data looks like for the population.</p>
-    <p>Uncertainty is often expressed as <strong>confidence intervals</strong>.</p><p>Confidence intervals are numerical ways of showing how likely it is that the <strong>true value</strong> of this statistic is within a certain range for the population.</p>
-    <p><strong>Hypothesis testing</strong> is a another way of checking if a statement about a population is true. More precisely, it checks how likely it is that a hypothesis is true is based on the sample data.</p>
-    <p>Some examples of statements or questions that can be checked with hypothesis testing:</p>
+    <h2>Статистические выводы</h2>
+    <p>Статистика на основе данных в <strong>выборке</strong> используется для вывода обо всей <strong>генеральной совокупности</strong>. Это тип <strong>статистического вывода</strong>.</p>
+    <p><strong>Теория вероятностей</strong> используется для расчета уверенности в том, что эти статистические данные также применимы к совокупности.</p>
+    <p>При использовании выборки <b>всегда</b> будет некоторая неопределенность в отношении того, как выглядят данные для генеральной совокупности.</p>
+    <p>Неопределенность часто выражается как <strong>доверительные интервалы</strong>.</p>
+    <p><strong>Доверительные интервалы</strong> - это числовые способы показать, насколько вероятно, что <strong>истинное значение</strong> этой статистики находится в пределах определенного диапазона для совокупности.</p>
+    <p><strong>Проверка гипотез</strong> - ещё один способ проверить, истинно ли утверждение о совокупности. Точнее, он проверяет, насколько вероятно, что гипотеза верна, на основе выборочных данных.</p>
+    <p>Некоторые примеры утверждений или вопросов, которые можно проверить с помощью проверки гипотез:</p>
     <ul>
-        <li>People in the Netherlands taller than people in Denmark</li>
-        <li>Do people prefer Pepsi or Coke?</li>
-        <li>Does a new medicine cure a disease?</li>
+        <li>Люди в Нидерландах выше людей в Дании</li>
+        <li>Люди предпочитают Пепси или Кока-колу?</li>
+        <li>Лечит ли болезнь новое лекарство?</li>
     </ul>
     <div class="w3-panel w3-info">
-        <p><strong>Note:</strong> Confidence intervals and hypothesis testing are closely related and describe the same things in different ways. Both are widely used in science.</p>
+        <p><b>Примечание:</b> Доверительные интервалы и проверка гипотез тесно связаны и по-разному описывают одни и те же вещи. Оба широко используются в науке.</p>
     </div>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
@@ -377,15 +378,15 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Causal Inference</h2>
-    <p>Causal inference is used to investigate if something causes another thing.</p>
-    <p>For example: Does rain make plants grow?</p>
-    <p>If we think two things are related we can investigate to see if they <strong>correlate</strong>. Statistics can be used to find out how strong this relation is.</p>
-    <p>Even if things are correlated, finding out of something is caused by other things can be difficult. It can be done with good <strong>experimental design</strong> or other special statistical techniques.</p>
+</div>    <h2>Причинный вывод</h2>
+    <p>Причинно-следственный вывод используется для расследования, если что-то вызывает другое.</p>
+    <p>Например: дождь заставляет растения расти?</p>
+    <p>Если мы считаем, что две вещи связаны, мы можем исследовать, <strong>коррелируют ли они</strong>. Статистические данные можно использовать, чтобы выяснить, насколько сильна эта связь.</p>
+    <p>Даже если что-то взаимосвязано, выяснить что-то, вызванное другими вещами, может быть сложно. Это можно сделать с помощью хорошего <strong>экспериментального плана</strong> или других специальных статистических методов.</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> Good experimental design is often difficult to achieve because of ethical concerns or other practical reasons.</p>
+        <p><b>Примечание:</b> Хороший экспериментальный план часто бывает трудно достичь из-за этических соображений или других практических причин.</p>
     </div>
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="statistics_describing_data.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_prediction_and_explanation.html">Next &#10095;</a>
@@ -563,7 +564,7 @@
   Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
     Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
     Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
-    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2022</a> by Refsnes Data. All Rights Reserved.<br>
     <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
     <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
   </div>
