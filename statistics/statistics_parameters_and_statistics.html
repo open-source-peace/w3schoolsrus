@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Статистика Параметры и статистика. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Параметры и статистика выборки. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Статистика Параметры и статистика выборки. Среднее значение, медиана и режим - это разные типы средних значений. Дисперсия и стандартное отклонение - это два типа значений, описывающих разброс значений. Уроки для начинающих. W3Schools на русском'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -292,7 +292,7 @@
             <a target='_top' href="statistics_populations_and_samples.html">Stat Совокупность &amp; Выборка</a>
             <a target='_top' href="statistics_parameters_and_statistics.html">Stat Параметры &amp; Статистика</a>
             <a target='_top' href="statistics_study_types.html">Stat Типы исследований</a>
-            <a target='_top' href="statistics_sample_types.html">Stat Типы образцов</a>
+            <a target='_top' href="statistics_sample_types.html">Stat Типы выборок</a>
             <a target='_top' href="statistics_data_types.html">Stat Типы данных</a>
             <a target='_top' href="statistics_measurement_levels.html">Stat Уровни измерения</a>
             <br>
@@ -360,53 +360,53 @@
     <h2>Параметры и статистика</h2>
     <p><strong>Параметр</strong>: Число, которое описывает что-то обо всей <strong>совокупности</strong>.</p>
     <p><strong>Статистика выборки</strong>: Число, которое описывает что-то в <strong>выборке</strong>.</p>
-    <p>The parameters are the key things we want to learn about. The parameters are usually unknown.</p>
-    <p>Sample statistics gives us <strong>estimates</strong> for parameters.</p>
-    <p>There will always be some <strong>uncertainty</strong> about how accurate estimates are. More certainty gives us more useful knowledge.</p>
-    <p>For every parameter we want to learn about we can get a sample and calculate a sample statistic, which gives us an estimate of the parameter.</p>
+    <p>Параметры - это ключевые вещи, о которых мы хотим узнать. Параметры обычно неизвестны.</p>
+    <p>Статистика выборки даёт нам <strong>оценки</strong> параметров.</p>
+    <p>Всегда остаётся <strong>неуверенность</strong> в том, насколько точны оценки. Больше уверенности даёт нам больше полезных знаний.</p>
+    <p>Для каждого параметра, о котором мы хотим узнать, мы можем получить выборку и вычислить статистику выборки, которая даёт нам оценку параметра.</p>
     <div class="w3-hide-medium w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h3>Some Important Examples</h3>
+</div>    <h3>Некоторые важные примеры</h3>
     <table class="w3-table-all notranslate">
         <tr>
-            <th>Parameter</th>
-            <th>Sample statistic</th>
+            <th>Параметр</th>
+            <th>Статистика выборки</th>
         </tr>
         <tr>
-            <td>Mean</td>
-            <td>Sample mean</td>
+            <td>Среднее</td>
+            <td>Выборочное среднее</td>
         </tr>
         <tr>
-            <td>Median</td>
-            <td>Sample median</td>
+            <td>Медиана</td>
+            <td>Медиана выборки</td>
         </tr>
         <tr>
-            <td>Mode</td>
-            <td>Sample mode</td>
+            <td>Режим</td>
+            <td>Выборка режима</td>
         </tr>
         <tr>
-            <td>Variance</td>
-            <td>Sample variance</td>
+            <td>Дисперсия</td>
+            <td>Выборочная дисперсия</td>
         </tr>
         <tr>
-            <td>Standard deviation</td>
-            <td>Sample standard deviation</td>
+            <td>Стандартное отклонение</td>
+            <td>Стандартное отклонение выборки</td>
         </tr>
     </table>
-    <p><strong>Mean, median and mode</strong> are different types of averages (typical values in a population). <p>For example:</p>
+    <p><strong>Среднее значение, медиана и режим</strong> - это разные типы средних значений (типичные (средние) значения в генеральной совокупности). <p> Например:</p>
     <ul>
-        <li>The typical age of people in a country</li>
-        <li>The typical profits of a company</li>
-        <li>The typical range of an electric car</li>
+        <li>Типичный возраст жителей страны</li>
+        <li>Типичная прибыль компании</li>
+        <li>Типичный пробег электромобиля</li>
     </ul>
-    <p><strong>Variance</strong> and <strong>standard deviation</strong> are two types of values describing how spread out the values are.
-    <p>A single class of students in a school would usually be about the same age. The age of the students will have <strong>low</strong> variance and standard deviation.
-    <p>A whole country will have people of all kinds of different ages. The variance and standard deviation of age in the whole country would then be <strong>bigger</strong> than in a single school grade.</p>
-    <br>
+    <p><strong>Дисперсия</strong> и <strong>стандартное отклонение</strong> - это два типа значений, описывающих разброс значений.
+    <p>Один класс учеников в школе обычно бывает примерно одного возраста. Возраст учащихся будет иметь <b>низкую</b> дисперсию и стандартное отклонение.</p>
+    <p>В целой стране будут люди самых разных возрастов. Тогда дисперсия и стандартное отклонение возраста по всей стране будут <b>больше</b>, чем в одном классе.</p>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="statistics_populations_and_samples.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_study_types.html">Next &#10095;</a>
@@ -584,7 +584,7 @@
   Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
     Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
     Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
-    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2022</a> by Refsnes Data. All Rights Reserved.<br>
     <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
     <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
   </div>
