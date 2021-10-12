@@ -6,8 +6,8 @@
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
-<title>Статистика Статистические выводы. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Статистические выводы. Основные типы: оценка, проверка гипотез. Распределение вероятностей. Уроки для начинающих. W3Schools на русском'>
+<title>Статистика Нормальное распределение. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='Статистика Нормальное распределение описывается средним (\(\mu\)) и стандартным отклонением (\(\sigma\)). Различные средние и стандартные отклонения. Распределение вероятностей. Уроки для начинающих. W3Schools на русском'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -348,80 +348,81 @@
 </div>            <a href='index.html'><img src='../svg/python.svg' alt='Статистика. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='Статистика для начинающих. W3Schools на русском' style='width: 90px'></a>
 
 <article>
-    <h1>Statistics - Normal Distribution</h1>
+    <h1>Статистика - Нормальное распределение</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="statistics_statistical_inference.html">&#10094; Previous</a>
+        <a class="w3-left w3-btn" href="statistics_statistical_inference.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_standard_normal_distribution.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">The normal distribution is an important probability distribution used in stastistics.</p>
-    <p class="intro">Many real world examples of data are normally distributed.</p>
+    <p class="intro"><strong>Нормальное распределение</strong> является важным распределением вероятностей, используемым в статистике.</p>
+    <p class="intro">Многие реальные примеры данных имеют <strong>нормальное распределение</strong>.</p>
     <hr>
-    <h2>Normal Distribution</h2>
-    <p>The normal distribution is described by the <a href="statistics_mean.html">mean</a> (\(\mu\)) and the <a href="statistics_standard_deviation.html">standard deviation</a> (\(\sigma\)).</p>
-    <p>The normal distribution is often referred to as a 'bell curve' because of it's shape:</p>
+    <h2>Нормальное распределение</h2>
+    <p><strong>Нормальное распределение</strong> описывается <a href="statistics_mean.html">средним</a> (\(\mu\)) и <a href="statistics_standard_deviation.html">стандартным отклонением</a> (\(\sigma\)).</p>
+    <p>Нормальное распределение часто называют &quot;колоколообразной кривой&quot; из-за его формы:</p>
     <ul>
-        <li>Most of the values are around the centre (\(\mu\))</li>
-        <li>The <a href="statistics_median.html">median</a> and mean are equal</li>
-        <li>It has only one <a href="statistics_mode.html">mode</a></li>
-        <li>It is symmetric, meaning it decreases the same amount on the left and the right of the centre </li>
+        <li>Большинство значений около центра (\(\mu\))</li>
+        <li><a href="statistics_median.html">Медиана</a> и среднее значение равны</li>
+        <li>У него только один <a href="statistics_mode.html">режим</a></li>
+        <li>Он симметричен, то есть уменьшает на одинаковую величину слева и справа от центра.</li>
     </ul>
-    <p>The area under the curve of the normal distribution represents probabilities for the data.</p>
-    <p>The area under the whole curve is equal to 1, or 100&#37;</p>
-    <p>Here is a graph of a normal distribution with probabilities between standard deviations (\(\sigma\)):</p>
-    <p><img src="img_normal_distribution.svg" style="width:100%; max-width:1000px; height:auto" alt="Normal Distributions with indicated probabilities."></p>
+    <p>Площадь под кривой нормального распределения представляет вероятности для данных.</p>
+    <p>Площадь под всей кривой равна 1, или 100&#37;</p>
+    <p>Вот график нормального распределения с вероятностями между стандартными отклонениями (\(\sigma\)):</p>
+    <p><img src="img_normal_distribution.svg" style="width:100%; max-width:1000px; height:auto" alt="Нормальные распределения с указанными вероятностями"></p>
     <ul>
-        <li>Roughly 68.3&#37; of the data is within 1 standard deviation of the average (from &mu;-1&sigma; to &mu;+1&sigma;) </li>
-        <li>Roughly 95.5&#37; of the data is within 2 standard deviations of the average (from &mu;-2&sigma; to &mu;+2&sigma;) </li>
-        <li>Roughly 99.7&#37; of the data is within 3 standard deviations of the average (from &mu;-3&sigma; to &mu;+3&sigma;) </li>
+        <li>Примерно 68.3&#37; данных находится в пределах 1 стандартного отклонения от среднего (от &mu;-1&sigma; to &mu;+1&sigma;) </li>
+        <li>Примерно 95.5&#37; данных находится в пределах 2 стандартных отклонений от среднего (от &mu;-2&sigma; to &mu;+2&sigma;) </li>
+        <li>Примерно 99.7&#37; данных находится в пределах 3 стандартных отклонений от среднего (от &mu;-3&sigma; to &mu;+3&sigma;) </li>
     </ul>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> Probabilities of the normal distribution can only be calculated for intervals (between two values).</p>
+        <p><b>Примечание:</b> Вероятности нормального распределения можно рассчитать только для интервалов (между двумя значениями).</p>
     </div>
     <hr>
-    <h2>Different Mean and Standard Deviations</h2>
-    <p>The mean describes where the centre of the normal distribution is.</p>
-    <p>Here is a graph showing three different normal distributions with the <strong>same</strong> standard deviation but different means.</p>
-    <p><img src="img_norm_means.svg" style="width:100%; max-width:1000px; height:auto" alt="Normal Distributions with different means."></p>
-    <p>The standard deviation describes how spread out the normal distribution is.</p>
-    <p>Here is a graph showing three different normal distributions with the <strong>same</strong> mean but different standard deviations.</p>
-    <p><img src="img_norm_stds.svg" style="width:100%; max-width:1000px; height:auto" alt="Normal Distributions with different standard deviations."></p>
-    <p>The purple cuve has the biggest standard deviation and the black curve has the smallest standard deviation.</p>
-    <p>The area under each of the curves is still 1, or 100&#37;.</p>
+    <h2>Различные средние и стандартные отклонения</h2>
+    <p>Среднее значение описывает, где находится центр нормального распределения.</p>
+    <p>Вот график, показывающий три разных нормальных распределения с <b>одинаковым</b> стандартным отклонением, но разными средними значениями.</p>
+    <p><img src="../svg/img_norm_means.svg" style="width:100%; max-width:1000px; height:auto" alt="Нормальные распределения с разными средствами"></p>
+    <p>Стандартное отклонение описывает, насколько распространено нормальное распределение.</p>
+    <p>Вот график, показывающий три разных нормальных распределения с <b>одинаковым</b> средним, но разными стандартными отклонениями.</p>
+    <p><img src="../svg/img_norm_stds.svg" style="width:100%; max-width:1000px; height:auto" alt="Нормальные распределения с разными стандартными отклонениями"></p>
+    <p>У фиолетовой кривой наибольшее стандартное отклонение, а у черной кривой наименьшее стандартное отклонение.</p>
+    <p>Площадь под каждой кривой по-прежнему равна 1, или 100&#37;.</p>
     <hr>
-    <h2>A Real Data Example of Normally Distributed Data</h2>
-    <p>Real world data is often normally distributed.</p>
-    <p>Here is a histogram of the age of Nobel Prize winners when they won the prize:</p>
-    <p><img src="img_nobel_norm.svg" style="width:100%; max-width:1000px; height:auto" alt="Histogram of the age of Nobel Prize winners when they won the prize and normal distribution fitted to the data."></p>
-    <p>The normal distribution drawn on top of the histogram is based on the population mean (\(\mu\)) and standard deviation (\(\sigma\)) of the real data.</p>
-    <p>We can see that the histogram close to a normal distribution.</p>
-    <p>Examples of real world variables that can be normally distributed:</p>
+    <h2>Пример нормально распределенных данных на реальных данных</h2>
+    <p>Реальные данные часто распространяются нормально.</p>
+    <p>Вот гистограмма возраста лауреатов Нобелевской премии, когда они выиграли эту премию:</p>
+    <p><img src="../svg/img_nobel_norm.svg" style="width:100%; max-width:1000px; height:auto" alt="Гистограмма возраста лауреатов Нобелевской премии, когда они выиграли премию, и нормальное распределение, соответствующее данным"></p>
+    <p>Нормальное распределение, нарисованное в верхней части гистограммы, основано на среднем значении генеральной совокупности (\(\mu\)) и стандартном отклонении (\(\sigma\)) реальных данных.</p>
+    <p>Мы видим, что гистограмма близка к нормальному распределению.</p>
+    <p>Примеры реальных переменных, которые могут иметь нормальное распределение:</p>
     <ul>
-        <li>Test scores</li>
-        <li>Height</li>
-        <li>Birth weight</li>
+        <li>Результаты тестов</li>
+        <li>Высота</li>
+        <li>Вес при рождении</li>
     </ul>
     <hr>
-    <h2>Probability Distributions</h2>
-    <p>Probability distributions are functions that calculates the probabilities of the outcomes of random variables.</p>
-    <p>Typical examples of random variables are coin tosses and dice rolls.</p>
-    <p>Here is an graph showing the results of a growing number of coin tosses and the expected values of the results (heads or tails).</p>
-    <p>The expected values of the coin toss is the probability distribution of the coin toss.</p>
-    <p><img src="img_1_2dice_100f2.gif" style="width:100%; max-width:800px; height:auto" alt="Simulated coin tosses and expected values."></p>
-    <p>Notice how the result of random coin tosses gets closer to the expected values (50&#37;) as the number of tosses increases.</p>
-    <p>Similarly, here is a graph showing the results of a growing number of dice rolls and the expected values of the results (from 1 to 6).</p>
-    <p><img src="img_1_6dice_100f2.gif" style="width:100%; max-width:800px; height:auto" alt="Simulated dice rolls and expected values."></p>
-    <p>Notice again how the result of random dice rolls gets closer to the expected values (1/6, or 16.666&#37;) as the number of rolls increases.</p>
-    <p>When the random variable is a <strong>sum</strong> of dice rolls the results and expected values take a different shape.</p>
-    <p>The different shape comes from there being more ways of getting a sum of near the middle, than a small or large sum.</p>
-    <p><img src="img_2_6dice_100f2.gif" style="width:100%; max-width:800px; height:auto" alt="Simulated sum of two dice rolls and expected values."></p>
-    <p>As we keep increasing the number of dice for a sum the shape of the results and expected values look more and more like a normal distribution.</p>
-    <p><img src="img_3_6dice_100f2.gif" style="width:50%; max-width:600px; height:auto" alt="Simulated sum of 3 dice rolls and expected values."><img src="img_5_6dice_100f2.gif" style="width:50%; max-width:600px; height:auto" alt="Simulated sum of 5 dice rolls and expected values."></p>
-    <p>Many real world variables follow a similar pattern and naturally form normal distributions.</p>
-    <p>Normally distributed varaiables can be analysed with well-known techniques.</p>
-    <p>You will learn about some of the most common and useful techniques in the following pages.</p>
+    <h2>Распределение вероятностей</h2>
+    <p>Распределения вероятностей - это функции, которые вычисляют вероятности исходов случайных величин.</p>
+    <p>Типичными примерами случайных величин являются подбрасывание монет и костей.</p>
+    <p>Вот график, показывающий результаты растущего числа подбрасываний монет и ожидаемые значения результатов (орел или решка).</p>
+    <p>Ожидаемые значения подбрасывания монеты - это распределение вероятностей подбрасывания монеты.</p>
+    <p><img src="../images/img_1_2dice_100f2.gif" style="width:100%; max-width:800px; height:auto" alt="Имитация подбрасывания монет и ожидаемые значения"></p>
+    <p>Обратите внимание, как результат случайных подбрасываний монет приближается к ожидаемым значениям (50&#37;) по мере увеличения количества подбрасываний.</p>
+    <p>Точно так же график, показывающий результаты растущего числа бросков кубиков и ожидаемые значения результатов (от 1 до 6).</p>
+    <p><img src="../images/img_1_6dice_100f2.gif" style="width:100%; max-width:800px; height:auto" alt="Имитация бросков кубиков и ожидаемые значения"></p>
+    <p>Ещё раз обратите внимание, как результат случайных бросков кубиков приближается к ожидаемым значениям (1/6, или 16,666&#37;) по мере увеличения количества бросков.</p>
+    <p>Когда случайная величина представляет собой <b>сумму</b> кубиков, результаты и ожидаемые значения принимают другую форму.</p>
+    <p>Разная форма возникает из-за того, что существует больше способов получить сумму, близкую к середине, чем небольшую или большую сумму.</p>
+    <p><img src="../images/img_2_6dice_100f2.gif" style="width:100%; max-width:800px; height:auto" alt="Смоделированная сумма двух бросков кубиков и ожидаемые значения"></p>
+    <p>По мере того, как мы продолжаем увеличивать количество кубиков для получения суммы, форма результатов и ожидаемых значений становится все больше и больше похожа на нормальное распределение.</p>
+    <p><img src="../images/img_3_6dice_100f2.gif" style="width:50%; max-width:600px; height:auto" alt="Смоделированная сумма 3 бросков кубиков и ожидаемые значения"><img src="../images/img_5_6dice_100f2.gif" style="width:50%; max-width:600px; height:auto" alt="Смоделированная сумма 5 бросков кубиков и ожидаемые значения"></p>
+    <p>Многие переменные реального мира следуют аналогичному шаблону и, естественно, образуют нормальные распределения.</p>
+    <p>Обычно распределенные переменные можно анализировать с помощью хорошо известных методов.</p>
+    <p>На следующих страницах вы узнаете о некоторых из наиболее распространенных и полезных методов.</p>
+    <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="statistics_statistical_inference.html">&#10094; Previous</a>
+        <a class="w3-left w3-btn" href="statistics_statistical_inference.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_standard_normal_distribution.html">Next &#10095;</a>
     </div>
 </article>
