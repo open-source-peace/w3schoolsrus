@@ -356,139 +356,139 @@
         <a class="w3-right w3-btn" href="statistics_estimation_mean.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">A population proportion is the share of a population that belongs to a particular <a href="statistics_data_types.html">category</a>.</p>
-    <p class="intro">Confidence intervals are used to <a href="statistics_estimation.html">estimate</a> population proportions. </p>
+    <p class="intro">Доля совокупности - это часть совокупности, которая принадлежит к определенной <a href="statistics_data_types.html">категории</a>.</p>
+    <p class="intro">Доверительные интервалы используются для <a href="statistics_estimation.html">estimate</a> доли совокупности.</p>
     <hr>
-    <h2>Estimating Population Proportions</h2>
-    <p>A statistic from a <a href="statistics_populations_and_samples.html">sample</a> is used to estimate a parameter of the population.</p>
-    <p>The most likely value for a parameter is the <strong>point estimate</strong>.</p>
-    <p>Additionally, we can calculate a <strong>lower bound</strong> and an <strong>upper bound</strong> for the estimated parameter.</p>
-    <p>The <strong>margin of error</strong> is the difference between the lower and upper bounds from the point estimate.</p>
-    <p>Together, the lower and upper bounds define a <strong>confidence interval</strong>.</p>
+    <h2>Оценка доли совокупности</h2>
+    <p>Статистика <a href="statistics_populations_and_samples.html">выборки</a> используется для оценки параметра генеральной совокупности.</p>
+    <p>Наиболее вероятное значение параметра - это <strong>точечная оценка</strong>.</p>
+    <p>Кроме того, мы можем вычислить <strong>нижнюю границу</strong> и <strong>верхнюю границу</strong> для оценочного параметра.</p>
+    <p><strong>Предел погрешности</strong> - это разница между нижней и верхней границами от точечной оценки.</p>
+    <p>Вместе нижняя и верхняя границы определяют <strong>доверительный интервал</strong>.</p>
     <hr>
-    <h2>Calculating a Confidence Interval</h2>
-    <p>The following steps are used to calculate a confidence interval:</p>
+    <h2>Расчет доверительного интервала</h2>
+    <p>Для расчета доверительного интервала используются следующие шаги:</p>
     <ol>
-        <li>Check the conditions</li>
-        <li>Find the point estimate</li>
-        <li>Decide the confidence level</li>
-        <li>Calculate the margin of error</li>
-        <li>Calculate the confidence interval</li>
+        <li>Проверьте условия</li>
+        <li>Найдите точечную оценку</li>
+        <li>Определите уровень достоверности</li>
+        <li>Рассчитайте погрешность</li>
+        <li>Рассчитайте доверительный интервал</li>
     </ol>
-    <p>For example:</p>
+    <p>Например:</p>
     <ul>
-        <li><strong>Population</strong>: Nobel Prize winners</li>
-        <li><strong>Category</strong>: Born in the United States of America</li>
+        <li><strong>Совокупность</strong>: Лауреаты Нобелевской премии</li>
+        <li><strong>Категория</strong>: Родился в Соединенных Штатах Америки</li>
     </ul>
-    <p>We can take a sample and see how many of them were born in the US.</p>
-    <p>The sample data is used to make an estimation of the share of <strong>all</strong> the Nobel Prize winners born in the US.</p>
-    <p>By randomly selecting 30 Nobel Prize winners we could find that:</p>
+    <p>Мы можем взять выборку и посмотреть, сколько из них родились в США.</p>
+    <p>Выборки данных используются для оценки доли <b>всех</b> лауреатов Нобелевской премии, родившихся в США.</p>
+    <p>Случайным образом выбрав 30 лауреатов Нобелевской премии, мы смогли найти, что:</p>
     <div class="w3-code notranslate">
-        <p>6 out of 30 Nobel Prize winners in the sample were born in the US</p>
+        <p>6 из 30 нобелевских лауреатов в выборке родились в США.</p>
     </div>
-    <p>From this data we can calculate a confidence interval with the steps below.</p>
+    <p>По этим данным мы можем рассчитать доверительный интервал, выполнив следующие действия.</p>
     <hr>
-    <h2>1. Checking the Conditions</h2>
-    <p>The conditions for calculating a confidence interval for a proportion are:</p>
+    <h2>1. Проверка условий</h2>
+    <p>Условия для расчета доверительного интервала для доли следующие:</p>
     <ul>
-        <li>The sample is <a href="statistics_sample_types.html">randomly selected</a></li>
-        <li>There is only two options:</li>
+        <li>Выборка <a href="statistics_sample_types.html">произведена случайным образом</a></li>
+        <li>Есть только два варианта:</li>
         <ul>
-            <li>Being in the category</li>
-            <li>Not being in the category</li>
+            <li>Находиться в категории</li>
+            <li>Не в категории</li>
         </ul>
-        <li>The sample needs at least:</li>
+        <li>Для выборки требуется как минимум:</li>
         <ul>
-            <li>5 members in the category</li>
-            <li>5 members not in the category</li>
+            <li>5 участников в категории</li>
+            <li>5 участников не в категории</li>
         </ul>
     </ul>
-    <p>In our example, we randomly selected 6 people that were born in the US.</p>
-    <p>The rest were not born in the US, so there are 24 in the other category.</p>
-    <p>The conditions are fulfilled in this case.</p>
+    <p>В нашем примере мы случайным образом выбрали 6 человек, родившихся в США.</p>
+    <p>Остальные не родились в США, поэтому 24 из них принадлежат к другой категории.</p>
+    <p>В этом случае условия выполнены.</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> It is possible to calculate a confidence interval without having 5 of each category. But special adjustments need to be made.</p>
+        <p><b>Примечание:</b> Можно рассчитать доверительный интервал, не имея 5 из каждой категории. Но необходимо внести особые корректировки.</p>
     </div>
     <hr>
-    <h2>2. Finding the Point Estimate</h2>
-    <p>The point estimate is the sample proportion (\(\hat{p}\)).</p>
-    <p>The formula for calculating the sample proportion is the number of occurences (\(x\)) divided by the sample size (\(n\)):</p>
+    <h2>2. Нахождение точечной оценки</h2>
+    <p>Точечная оценка - это доля выборки (\(\hat{p}\)).</p>
+    <p>Формула для расчета доли выборки - это количество вхождений (\(x\)), делённое на размер выборки (\(n\)):</p>
     <p>\(\displaystyle \hat{p} =\frac{x}{n}\)</p>
-    <p>In our example, 6 out of 30 were born in the US: \(x\) is 6, and \(n\) is 30.</p>
-    <p>So the point estimate for the proportion is:</p>
+    <p>В нашем примере 6 из 30 родились в США: \(x\) is 6, and \(n\) is 30.</p>
+    <p>Таким образом, точечная оценка доли равна:</p>
     <p>\(\displaystyle \hat{p} = \frac{x}{n} = \frac{6}{30} = \underline{0.2} = 20\%\)</p>
-    <p>So 20&#37; of the sample were born in the US.</p>
+    <p>Таким образом, 20&#37; из выборки родились в США.</p>
     <hr>
-    <h2>3. Deciding the Confidence Level</h2>
-    <p>The confidence level is expressed with a percentage or a decimal number.</p>
-    <p>For example, if the confidence level is 95% or 0.95:</p>
-    <p>The remaining probability (\(\alpha\)) is then: 5%, or 1 - 0.95 = 0.05.</p>
+    <h2>3. Определение уровня достоверности</h2>
+    <p>Уровень достоверности выражается в процентах или десятичном числе.</p>
+    <p>Например, если уровень достоверности 95% или 0,95:</p>
+    <p>Оставшаяся вероятность (\(\alpha\)) тогда равна: 5%, или 1 - 0.95 = 0.05.</p>
 
-    <p>Commonly used confidence levels are:</p>
+    <p>Обычно используемые уровни достоверности:</p>
     <ul>
-        <li>90&#37; with \(\alpha\) = 0.1</li>
-        <li>95&#37; with \(\alpha\) = 0.05</li>
-        <li>99&#37; with \(\alpha\) = 0.01</li>
+        <li>90&#37; с \(\alpha\) = 0.1</li>
+        <li>95&#37; с \(\alpha\) = 0.05</li>
+        <li>99&#37; с \(\alpha\) = 0.01</li>
     </ul>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> A 95&#37; confidence level means that if we take 100 different samples and make confidence intervals for each:</p>
-        <p>The true parameter will be inside the confidence interval 95 out of those 100 times.</p>
+        <p><b>Примечание:</b> 95&#37; уровень достоверности означает, что если мы возьмем 100 различных выборок и сделаем доверительные интервалы для каждого:</p>
+        <p>Истинный параметр будет в 95 доверительном интервале из этих 100 раз.</p>
     </div>
-    <p>We use the <a href="statistics_standard_normal_distribution.html">standard normal distribution</a> to find the <strong>margin of error</strong> for the confidence interval.</p>
-    <p>The remaining probabilities (\(\alpha\)) are divided in two so that half is in each tail area of the distribution.</p>
-    <p>The values on the z-value axis that separate the tails area from the middle are called <strong>critical z-values</strong>.</p>
-    <p>Below are graphs of the standard normal distribution showing the tail areas (\(\alpha\)) for different confidence levels.</p>
-    <p><img src="img_z_ci.svg" style="width:100%; max-width:1200px; height:auto" alt="Standard Normal Distributions with two tail areas, with different sizes."></p>
-
+    <p>Мы используем <a href="statistics_standard_normal_distribution.html">стандартное нормальное распределение</a>, чтобы найти <strong>предел погрешности</strong> для доверительного интервала.</p>
+    <p>Остальные вероятности (\(\alpha\)) делятся на две, так что половина находится в каждой хвостовой области распределения.</p>
+    <p>Значения на оси z-значений, которые отделяют область хвоста от середины, называются <strong>критическими z-значениями</strong>.</p>
+    <p>Ниже приведены графики стандартного нормального распределения, показывающие области хвоста (\(\alpha\)) для различных уровней достоверности.</p>
+    <p><img src="../svg/img_z_ci.svg" style="width:100%; max-width:1200px; height:auto" alt="Стандартные нормальные распределения с двумя областями хвоста, с разными размерами"></p>
     <hr>
-    <h2>4. Calculating the Margin of Error</h2>
-    <p>The margin of error is the difference between the point estimate and the lower and upper bounds.</p>
-    <p>The margin of error (\(E\)) for a proportion is calculated with a <a href="statistics_z_table.html">critical z-value</a> and the <strong>standard error</strong>:</p>
+
+    <h2>4. Расчет погрешности</h2>
+    <p>Предел погрешности - это разница между точечной оценкой и нижней и верхней границами.</p>
+    <p>Предел погрешности (\(E\)) для пропорции рассчитывается с помощью <a href="statistics_z_table.html">критического z-значения</a> и <strong>стандартной ошибки</strong>:</p>
     <p>\(\displaystyle E = Z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \)</p>
-    <p>The critical z-value \(Z_{\alpha/2} \) is calculated from the standard normal distribution and the confidence level.</p>
-    <p>The standard error \(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \) is calculated from the point estimate (\(\hat{p}\)) and sample size (\(n\)).</p>
-    <p>In our example with 6 US-born Nobel Prize winners out of a sample of 30 the standard error is:</p>
+    <p>Критическое z-значение \(Z_{\alpha/2} \) рассчитывается на основе стандартного нормального распределения и уровня достоверности.</p>
+    <p>Стандартная ошибка \(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \) рассчитывается из точечной оценки (\(\hat{p}\)) и размера выборки (\(n\)).</p>
+    <p>В нашем примере с 6 лауреатами Нобелевской премии, родившимися в США из 30 выборки, стандартная ошибка равна:</p>
     <p>\(\displaystyle \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.2(1-0.2)}{30}} = \sqrt{\frac{0.2 \cdot 0.8}{30}} = \sqrt{\frac{0.16}{30}} = \sqrt{0.00533..} \approx \underline{0.073}\)</p>
-    <p>If we choose 95&#37; as the confidence level, the \(\alpha\) is 0.05.</p>
-    <p>So we need to find the critical z-value \(Z_{0.05/2} = Z_{0.025}\)</p>
-    <p>The critical z-value can be found using a <a href="statistics_z_table.html">Z-table</a> or with a programming language function:</p>
+    <p>Если мы выберем 95&#37; в качестве уровня достоверности \(\alpha\) составляет 0.05.</p>
+    <p>Т.о. нам нужно найти критическое z-значение \(Z_{0.05/2} = Z_{0.025}\)</p>
+    <p>Критическое z-значение можно найти с помощью <a href="statistics_z_table.html">Z-table</a> или с помощью функции языка программирования:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With Python use the Scipy Stats library <code class="w3-codespan">norm.ppf()</code> function find the Z-value for an \(\alpha\)/2 = 0.025</p>
+        <h3>Пример</h3>
+        <p>В Python используйте функцию библиотеки Scipy Stats <code class="w3-codespan">norm.ppf()</code> чтобы найти Z-значение для \(\alpha\)/2 = 0.025</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             print(stats.norm.ppf(1-0.025))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_z_score">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_z_score.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With R use the built-in <code class="w3-codespan">qnorm()</code> function to find the Z-value for an \(\alpha\)/2 = 0.025</p>
+        <h3>Пример</h3>
+        <p>В R используйте встроенную функцию <code class="w3-codespan">qnorm()</code> чтобы найти Z-значение для \(\alpha\)/2 = 0.025</p>
         <div class="w3-code notranslate pythonHigh">
             qnorm(1-0.025)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_z_score">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_z_score.html">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Using either method we can find that the critical Z-value \( Z_{\alpha/2} \) is \(\approx \underline{1.96} \)</p>
-    <p>The standard error \(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\) was \( \approx \underline{0.073}\)</p>
-
-    <p>So the margin of error (\(E\)) is:</p>
+    <p>Используя любой метод, мы можем найти, что критическое Z-значение \( Z_{\alpha/2} \) is \(\approx \underline{1.96} \)</p>
+    <p>Стандартная ошибка \(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\) была \( \approx \underline{0.073}\)</p>
+    <p>Таким образом, предел погрешности (\(E\)) является:</p>
     <p>\(\displaystyle E = Z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \approx 1.96 \cdot 0.073  = \underline{0.143}\)</p>
     <hr>
-    <h2>5. Calculate the Confidence Interval</h2>
-    <p>The lower and upper bounds of the confidence interval are found by subtracting and adding the margin of error (\(E\)) from the point estimate (\(\hat{p}\)).</p>
-    <p>In our example the point estimate was 0.2 and the margin of error was 0.143, then:</p>
-    <p>The lower bound is:</p>
+
+    <h2>5. Рассчитайте доверительный интервал</h2>
+    <p>Нижняя и верхняя границы доверительного интервала находятся путем вычитания и прибавления погрешности (\(E\)) из точечной оценки (\(\hat{p}\)).</p>
+    <p>В нашем примере точечная оценка составила 0,2, а предел погрешности - 0,143, тогда:</p>
+    <p>Нижняя граница:</p>
     <p>\(\hat{p} - E = 0.2 - 0.143 = \underline{0.057} \)</p>
-    <p>The upper bound is:</p>
+    <p>Верхняя граница:</p>
     <p>\(\hat{p} + E = 0.2 + 0.143 = \underline{0.343} \)</p>
-    <p>The confidence interval is:</p>
+    <p>Доверительный интервал:</p>
     <p>\([0.057, 0.343]\) or \([5.7 \%, 34,4 \%]\)</p>
-    <p>And we can summarize the confidence interval by stating:</p>
+    <p>И мы можем резюмировать доверительный интервал, указав:</p>
     <div class="w3-code notranslate">
-        <p>The <strong>95&#37;</strong> confidence interval for the proportion of Nobel Prize winners born in the US is between <strong>5.7&#37; and 34.4&#37;</strong></p>
+        <p>Доверительный интервал <strong>95&#37;</strong> для доли лауреатов Нобелевской премии, родившихся в США, находится между <strong>5.7&#37; и 34.4&#37;</strong></p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -496,11 +496,11 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Calculating a Confidence Interval with Programming</h2>
-    <p>A confidence interval can be calculated with many programming languages.</p>
-    <p>Using software and programming to calculate statistics is more common for bigger sets of data, as calculating manually becomes difficult.</p>
+</div>    <h2>Расчет доверительного интервала с помощью программирования</h2>
+    <p>Доверительный интервал можно рассчитать с помощью многих языков программирования.</p>
+    <p>Использование программного обеспечения и программирования для расчета статистики более распространено для больших наборов данных, поскольку расчет вручную становится затруднительным.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the scipy and math librarires to calculate the confidence interval for an estimated proportion.</p>
         <p>Here, the sample size is 30 and the occurences is 6.</p>
         <div class="w3-code notranslate pythonHigh">
@@ -552,10 +552,10 @@
             <br>
             print("between {:.3f} and {:.3f}".format(lower_bound,upper_bound))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_ci">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_ci">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>R can use built-in math and statistics functions to calculate the confidence interval for an estimated proportion.</p>
         <p>Here, the sample size is 30 and the occurences is 6.</p>
         <div class="w3-code notranslate pythonHigh">
@@ -602,7 +602,7 @@
             <br>
             sprintf("between %0.4f and %0.4f", lower_bound, upper_bound)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-top w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_ci">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-top w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_ci">Попробуйте сами &raquo;</a>
     </div>
     <br>
     <div class="w3-clear nextprev">
