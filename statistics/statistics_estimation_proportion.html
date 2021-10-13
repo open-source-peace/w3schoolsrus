@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Статистика Оценка доли совокупности. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Оценка доли совокупности. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Статистика Оценка доли совокупности. Доля совокупности. Доверительные интервалы. Предел погрешности. Расчет доверительного интервала. Проверка условий. Нахождение точечной оценки. Определение уровня достоверности. Расчет погрешности. Уроки для начинающих. W3Schools на русском'>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class='w3-container top'>
@@ -356,8 +356,8 @@
         <a class="w3-right w3-btn" href="statistics_estimation_mean.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Доля совокупности - это часть совокупности, которая принадлежит к определенной <a href="statistics_data_types.html">категории</a>.</p>
-    <p class="intro">Доверительные интервалы используются для <a href="statistics_estimation.html">estimate</a> доли совокупности.</p>
+    <p class="intro"><strong>Доля совокупности</strong> - это часть совокупности, которая принадлежит к определенной <a href="statistics_data_types.html">категории</a>.</p>
+    <p class="intro"><strong>Доверительные интервалы</strong> используются для <a href="statistics_estimation.html">estimate</a> доли совокупности.</p>
     <hr>
     <h2>Оценка доли совокупности</h2>
     <p>Статистика <a href="statistics_populations_and_samples.html">выборки</a> используется для оценки параметра генеральной совокупности.</p>
@@ -501,15 +501,15 @@
     <p>Использование программного обеспечения и программирования для расчета статистики более распространено для больших наборов данных, поскольку расчет вручную становится затруднительным.</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the scipy and math librarires to calculate the confidence interval for an estimated proportion.</p>
-        <p>Here, the sample size is 30 and the occurences is 6.</p>
+        <p>В Python используйте библиотеки scipy и math для вычисления доверительного интервала для предполагаемой доли.</p>
+        <p>Здесь размер выборки составляет 30, а количество вхождений - 6.</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             import math
             <br>
             <br>
-            # Specify sample occurences (x), sample size (n) and confidence level
+            # Укажите количество выборок (x), размер выборки (n) и уровень достоверности
             <br>
             x = 6
             <br>
@@ -518,7 +518,7 @@
             confidence_level = 0.95
             <br>
             <br>
-            # Calculate the point estimate, alpha, the critical z-value, the standrad error, and the margin of error
+            # Рассчитайте точечную оценку, alpha, критическое z-значение, стандартную ошибку и предел погрешности
             <br>
             point_estimate = x/n
             <br>
@@ -531,14 +531,14 @@
             margin_of_error = critical_z * standard_error
             <br>
             <br>
-            # Calculate the lower and upper bound of the confidence interval
+            # Рассчитайте нижнюю и верхнюю границы доверительного интервала
             <br>
             lower_bound = point_estimate - margin_of_error
             <br>
             upper_bound = point_estimate + margin_of_error
             <br>
             <br>
-            # Print the results
+            # Распечатайте результаты
             <br>
             print("Point Estimate: {:.3f}".format(point_estimate))
             <br>
@@ -552,14 +552,14 @@
             <br>
             print("between {:.3f} and {:.3f}".format(lower_bound,upper_bound))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_ci">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_prop_ci.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>R can use built-in math and statistics functions to calculate the confidence interval for an estimated proportion.</p>
-        <p>Here, the sample size is 30 and the occurences is 6.</p>
+        <p>R может использовать встроенные математические и статистические функции для вычисления доверительного интервала для предполагаемой доли.</p>
+        <p>Здесь размер выборки составляет 30, а количество вхождений - 6.</p>
         <div class="w3-code notranslate pythonHigh">
-            # Specify sample occurences (x), sample size (n) and confidence level
+            # Укажите количество выборок (x), размер выборки (n) и уровень достоверности
             <br>
             x = 6
             <br>
@@ -568,7 +568,7 @@
             confidence_level = 0.95
             <br>
             <br>
-            # Calculate the point estimate, alpha, the critical z-value, the standard error, and the margin of error
+            # Рассчитайте точечную оценку, alpha, критическое z-значение, стандартную ошибку и предел погрешности.
             <br>
             point_estimate = x/n
             <br>
@@ -581,14 +581,14 @@
             margin_of_error = critical_z * standard_error
             <br>
             <br>
-            # Calculate the lower and upper bound of the confidence interval
+            # Рассчитайте нижнюю и верхнюю границы доверительного интервала
             <br>
             lower_bound = point_estimate - margin_of_error
             <br>
             upper_bound = point_estimate + margin_of_error
             <br>
             <br>
-            # Print the results
+            # Распечатайте результаты
             <br>
             sprintf("Point Estimate: %0.3f", point_estimate)
             <br>
@@ -602,9 +602,9 @@
             <br>
             sprintf("between %0.4f and %0.4f", lower_bound, upper_bound)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-top w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_ci">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-top w3-margin-bottom" href="../rtryit/demo_stat_r_prop_ci.html">Попробуйте сами &raquo;</a>
     </div>
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="statistics_estimation.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_estimation_mean.html">Next &#10095;</a>
