@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Статистика Проверка гипотезы. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Проверка гипотезы. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Статистика Проверка гипотезы. Нулевая и альтернативная гипотеза. Уровень значимости. Статистика теста. Подходы критического значения и P-значения. Этапы проверки гипотез. Уроки для начинающих. W3Schools на русском'>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class='w3-container top'>
@@ -378,21 +378,21 @@
     <div class="w3-code notranslate">
         <p>&quot;Средний рост людей в Дании более 170 см&quot;.</p>
     </div>
-    <p>In this case, the <strong>parameter</strong> is the average height of people in Denmark (\(\mu\)).</p>
-    <p>The null and alternative hypothesis would be:</p>
+    <p>В данном случае <strong>параметр</strong> - это средний рост людей в Дании (\(\mu\)).</p>
+    <p>Нулевая и альтернативная гипотеза будет:</p>
     <div class="w3-code notranslate">
-        <p><strong>Null hypothesis</strong>: The average height of people in Denmark <strong>is</strong> 170 cm.</p>
-        <p><strong>Alternative hypothesis</strong>: The average height of people in Denmark is <strong>more</strong> than 170 cm.</p>
+        <p><strong>Нулевая гипотеза</strong>: средний рост жителей Дании <b>составляет</b> 170 см.</p>
+        <p><strong>Альтернативная гипотеза</strong>: средний рост жителей Дании <b>больше</b> 170 см.</p>
     </div>
-    <p>The claims are often expressed with symbols like this:</p>
+    <p>Заявления часто выражаются такими символами:</p>
     <div class="w3-code notranslate">
         <p>\(H_{0}\): \(\mu = 170 \: cm \)</p>
         <p>\(H_{1}\): \(\mu > 170 \: cm \)</p>
     </div>
-    <p>If the data supports the alternative hypothesis, we <strong>reject</strong> the null hypothesis and <strong>accept</strong> the alternative hypothesis.</p>
-    <p>If the data does <strong>not</strong> support the alternative hypothesis, we <strong>keep</strong> the null hypothesis.</p>
+    <p>Если данные подтверждают альтернативную гипотезу, мы <b>отклоняем</b> нулевую гипотезу и <b>принимаем</b> альтернативную гипотезу.</p>
+    <p>Если данные <b>не</b> подтверждают альтернативную гипотезу, мы <b>сохраняем</b> нулевую гипотезу.</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The alternative hypothesis is also referred to as \(H_{A}\)</code></p>
+        <p><b>Примечание:</b> Альтернативная гипотеза также упоминается как \(H_{A}\)</code></p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -400,35 +400,35 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>The Significance Level</h2>
-    <p>The significance level (\(\alpha\)) is the <strong>uncertainty</strong> we accept when rejecting the null hypothesis in the hypothesis test.</p>
-    <p>The significance level is a percentage probability of accidentally making the wrong conclusion.</p>
-    <p>Typical significance levels are:</p>
+</div>    <h2>Уровень значимости</h2>
+    <p>Уровень значимости (\(\alpha\)) - это <strong>неопределённость</strong>, которую мы принимаем при отклонении нулевой гипотезы в проверке гипотез.</p>
+    <p>Уровень значимости - это процентная вероятность случайного ошибочного вывода.</p>
+    <p>Типичные уровни значимости:</p>
     <ul>
         <li>\(\alpha = 0.1\) (10&#37;)</li>
         <li>\(\alpha = 0.05\) (5&#37;)</li>
         <li>\(\alpha = 0.01\) (1&#37;)</li>
     </ul>
-    <p>A lower significance level means that the evidence in the data needs to be stronger to reject the null hypothesis.</p>
-    <p>There is no "correct" significance level  - it only states the uncertainty of the conclusion.</p>
+    <p>Более низкий уровень значимости означает, что доказательства в данных должны быть более убедительными, чтобы отвергнуть нулевую гипотезу.</p>
+    <p>Не существует &quot;правильного&quot; уровня значимости - он лишь констатирует неопределенность вывода.</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> A 5&#37; significance level means that when we reject a null hypothesis:</p>
-        <p>We expect to reject a <strong>true</strong> null hypothesis 5 out of 100 times.</p>
+        <p><b>Примечание:</b> А 5&#37; уровень значимости означает, что когда мы отклоняем нулевую гипотезу:</p>
+        <p>Мы ожидаем отклонить <strong>истинную</strong> нулевую гипотезу в 5 случаях из 100.</p>
     </div>
     <p></p>
     <hr>
-    <h2>The Test Statistic</h2>
-    <p>The test statistic is used to decide the outcome of the hypothesis test.</p>
-    <p>The test statistic is a <strong>standardized</strong> value calculated from the sample.</p>
-    <p>Standardization means converting a statistic to a well known <strong>probability distribution</strong>.</p>
-    <p>The type of probability distribution depends on the type of test.</p>
-    <p>Common examples are:</p>
+    <h2>Статистика теста </h2>
+    <p>Статистика теста используется для определения результата проверки гипотезы.</p>
+    <p>Статистика теста - это <strong>стандартизированное</strong> значение, рассчитанное на основе выборки.</p>
+    <p>Стандартизация означает преобразование статистики в хорошо известное <strong>распределение вероятностей</strong>.</p>
+    <p>Тип распределения вероятностей зависит от типа теста.</p>
+    <p>Распространенными примерами являются:</p>
     <ul>
-        <li><a href="statistics_standard_normal_distribution.html">Standard Normal Distribution</a> (Z): used for <a href="statistics_hypothesis_testing_proportion.html">Testing Population Proportions</a></li>
-        <li><a href="statistics_students_t_distribution.html">Student's T-Distribution</a> (T): used for <a href="statistics_hypothesis_testing_mean.html">Testing Population Means</a></li>
+        <li><a href="statistics_standard_normal_distribution.html">Стандартное нормальное распределение</a> (Z): используется для <a href="statistics_hypothesis_testing_proportion.html">Проверки пропорций совокупности</a></li>
+        <li><a href="statistics_students_t_distribution.html">Стьюдент T-распределение</a> (T): используется для <a href="statistics_hypothesis_testing_mean.html">Проверки среднего совокупности</a></li>
     </ul>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> You will learn how to calculate the test statistic for each type of test in the following chapters.</p>
+        <p><b>Примечание:</b> Вы узнаете, как рассчитать статистику теста для каждого типа теста, в следующих главах.</p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -436,58 +436,63 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>The Critical Value and P-Value Approach</h2>
-    <p>There are two main approaches used for hypothesis tests:</p>
+</div>    <h2>Подходы критического значения и P-значения</h2>
+    <p>Для проверки гипотез используются два основных подхода:</p>
     <ul>
-        <li>The <strong>critical value</strong> approach compares the test statistic with the critical value of the significance level.</li>
-        <li>The <strong>p-value</strong> approach compares the p-value of the test statistic and with the significance level.</li>
+        <li>Подход <strong>критического значения</strong> сравнивает статистику теста с критическим значением уровня значимости.</li>
+        <li>Подход <strong>p-значения</strong> сравнивает p-значение тестовой статистики и уровень значимости.</li>
     </ul>
-    <h3>The Critical Value Approach</h3>
-    <p>The critical value approach checks if the test statistic is in the <strong>rejection region</strong>.</p>
-    <p>The rejection region is an area of probability in the tails of the distribution.</p>
-    <p>The size of the rejection region is decided by the significance level (\(\alpha\)).</p>
-    <p>The value that separates the rejection region from the rest is called the <strong>critical value</strong>.</p>
-    <p>Here is a graphical illustration:</p>
-    <p><img src="../svg/img_critical_value_right.svg" style="width:100%; max-width:1000px; height:auto" alt="Graph of T-Distribution for right-tailed test, rejection region (alpha), critical value, and test statistic in the rejection area."></p>
-    <p>If the test statistic is <strong>inside</strong> this rejection region, the null hypothesis is <strong>rejected</strong>.</p>
-    <p>For example, if the test statistic is 2.3 and the critical value is 2 for a significance level (\(\alpha = 0.05\)):</p>
+    <h3>Подход критического значения</h3>
+    <p>Подход критического значения проверяет, находится ли тестовая статистика в <strong>области отклонения</strong>.</p>
+    <p>Область отклонения - это область вероятности в хвостах распределения.</p>
+    <p>Размер области отклонения определяется уровнем значимости (\(\alpha\)).</p>
+    <p>Значение, отделяющее область отклонения от остальных, называется <strong>критическим значением</strong>.</p>
+    <p>Вот графическая иллюстрация:</p>
+    <p><img src="../svg/img_critical_value_right.svg" style="width:100%; max-width:1000px; height:auto" alt="График Т-распределения для правостороннего теста, области отклонения (alpha), критического значения и статистики теста в области отклонения"></p>
+    <p>Если статистика теста находится <b>внутри</b> этой области отклонения, нулевая гипотеза <b>отклоняется</b>.</p>
+    <p>Например, если тестовая статистика составляет 2,3, а критическое значение равно 2 для уровня значимости (\(\alpha = 0.05\)):</p>
     <div class="w3-code notranslate">
-        <p>We reject the null hypothesis (\(H_{0} \)) at 0.05 significance level (\(\alpha\))</p>
+        <p>Мы отклоняем нулевую гипотезу (\(H_{0} \)) на уровне значимости 0.05 (\(\alpha\))</p>
     </div>
-    <h3>The P-Value Approach</h3>
-    <p>The p-value approach checks if the p-value of the test statistic is <strong>smaller</strong> than the significance level (\(\alpha\)).</p>
-    <p>The p-value of the test statistic is the area of probability in the tails of the distribution from the value of the test statistic.</p>
-    <p>Here is a graphical illustration:</p>
-    <p><img src="../svg/img_p_value_right.svg"  style="width:100%; max-width:1000px; height:auto" alt="Graphs of T-Distributions for right-tailed test with tail area (alpha), and tail area equal to p-value of test statistic."></p>
-    <p>If the p-value is <strong>smaller</strong> than the significance level, the null hypothesis is <strong>rejected</strong>.</p>
-    <p>The p-value directly tells us the <strong>lowest significance level</strong> where we can reject the null hypothesis.</p>
-    <p>For example, if the p-value is 0.03:</p>
+    <h3>Подход P-значения</h3>
+    <p>Подход с p-значением проверяет, является ли p-значение тестовой статистики <b>меньше</b>, чем уровень значимости (\(\alpha\)).</p>
+    <p>P-значение тестовой статистики - это область вероятности в хвостах распределения от значения тестовой статистики.</p>
+    <p>Вот графическая иллюстрация:</p>
+    <p><img src="../svg/img_p_value_right.svg"  style="width:100%; max-width:1000px; height:auto" alt="Графики Т-распределений для правостороннего теста с площадью хвоста (alpha) и площадью хвоста, равной p-значению статистики теста"></p>
+    <p>Если p-значение <b>меньше</b> уровня значимости, нулевая гипотеза <b>отклоняется</b>.</p>
+    <p>P-значение напрямую указывает нам <strong>самый низкий уровень значимости</strong>, на котором мы можем отклонить нулевую гипотезу.</p>
+    <p>Например, если p-значение равно 0,03:</p>
     <div class="w3-code notranslate">
-        <p>We reject the null hypothesis (\(H_{0} \)) at a 0.05 significance level (\(\alpha\))</p>
-        <p>We keep the null hypothesis (\(H_{0}\)) at a 0.01 significance level (\(\alpha\))</p>
+        <p>Мы отклоняем нулевую гипотезу (\(H_{0} \)) на уровне значимости 0,05 (\(\alpha\))</p>
+        <p>Мы сохраняем нулевую гипотезу (\(H_{0}\)) на уровне значимости 0,01 (\(\alpha\))</p>
     </div>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The two approaches are only different in how they present the conclusion.</p>
+        <p><b>Примечание:</b> Эти два подхода отличаются только тем, как они представляют заключение.</p>
     </div>
+    <div class="w3-hide-small">
     <hr>
-    <h2>Steps for a Hypothesis Test</h2>
-    <p>The following steps are used for a hypothesis test:</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Этапы проверки гипотез</h2>
+    <p>Для проверки гипотез используются следующие шаги:</p>
     <ol>
-        <li>Check the conditions</li>
-        <li>Define the claims</li>
-        <li>Decide the significance level</li>
-        <li>Calculate the test statistic</li>
-        <li>Conclusion</li>
+        <li>Проверить условия</li>
+        <li>Определить претензииь</li>
+        <li>Определить уровень значимости</li>
+        <li>Рассчитать статистику теста</li>
+        <li>Заключение</li>
     </ol>
-    <p>One <strong>condition</strong> is that the sample is <a href="statistics_sample_types.html">randomly selected</a> from the population.</p>
-    <p>The other conditions depends on what type of parameter you are testing the hypothesis for.</p>
-    <p>Common parameters to test hypotheses are:</p>
+    <p>Одно <b>условие</b> заключается в том, что выборка производится <a href="statistics_sample_types.html">случайным образом</a> из генеральной совокупности.</p>
+    <p>Остальные условия зависят от того, для какого типа параметра вы проверяете гипотезу.</p>
+    <p>Общие параметры для проверки гипотез:</p>
     <ul>
-        <li>Proportions (for qualitative data)</li>
-        <li>Mean values (for numerical data)</li>
+        <li>Пропорции (для качественных данных)</li>
+        <li>Средние значения (для числовых данных)</li>
     </ul>
-    <p>You will learn the steps for both types in the following pages.</p>
-    <br>
+    <p>На следующих страницах вы узнаете, как работать с обоими типами.</p>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="statistics_estimation_mean.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_hypothesis_proportion.html">Next &#10095;</a>
