@@ -452,23 +452,23 @@
     <p>\(n\) - размер выборки.</p>
     <p>В нашем примере:</p>
     <div class="w3-code notranslate">
-        <p>The claimed (\(H_{0}\)) population proportion (\(p\)) was \( 0.20 \)</p>
-        <p>The sample proportion (\(\hat{p}\)) was 10 out of 40, or: \(\displaystyle \frac{10}{40} = 0.25\)
-        <p>The sample size (\(n\)) was \(40\)</p>
+        <p>Заявленная (\(H_{0}\)) доля совокупности (\(p\)) была \( 0.20 \)</p>
+        <p>Доля выборки (\(\hat{p}\)) была 10 из 40, или: \(\displaystyle \frac{10}{40} = 0.25\)
+        <p>Размер выборки (\(n\)) был \(40\)</p>
     </div>
-    <p>So the test statistic (TS) is then:</p>
+    <p>Таким образом, тестовая статистика (TS) тогда:</p>
     <p>\(\displaystyle \frac{0.25-0.20}{\sqrt{0.2(1-0.2)}} \cdot \sqrt{40} = \frac{0.05}{\sqrt{0.2(0.8)}} \cdot \sqrt{40} = \frac{0.05}{\sqrt{0.16}} \cdot \sqrt{40} \approx \frac{0.05}{0.4} \cdot 6.325 = \underline{0.791}\)</p>
-    <p>You can also calculate the test statistic using programming language functions:</p>
+    <p>Вы также можете рассчитать статистику теста, используя функции языка программирования:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With Python use the scipy and math libraries to calculate the test statistic for a proportion.</p>
+        <h3>Пример</h3>
+        <p>В Python используйте библиотеки scipy и math для вычисления статистики теста для пропорции.</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             import math
             <br>
             <br>
-            # Specify the number of occurences (x), the sample size (n), and the proportion claimed in the null-hypothesis (p)
+            # Укажите количество вхождений (x), размер выборки (n) и пропорцию, заявленную в нулевой гипотезе (p)
             <br>
             x = 10
             <br>
@@ -477,22 +477,22 @@
             p = 0.2
             <br>
             <br>
-            # Calculate the sample proportion
+            # Рассчитайте долю выборки
             <br>
             p_hat = x/n
             <br>
             <br>
-            # Calculate and print the test statistic
+            # Рассчитайте и распечатайте тестовую статистику
             <br>
             print((p_hat-p)/(math.sqrt((p*(1-p))/(n))))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_test_statistic">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_prop_test_statistic.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With R use the built-in <code class="w3-codespan">prop.test()</code> function to calculate the test statistic for a proportion.</p>
+        <h3>Пример</h3>
+        <p>В R используйте встроенную функцию <code class="w3-codespan">prop.test()</code> чтобы вычислить статистику теста для пропорции.</p>
         <div class="w3-code notranslate pythonHigh">
-            # Specify the sample occurences (x), the sample size (n), and the null-hypothesis claim (p)
+            # Укажите количество примеров (x), размер выборки (n) и утверждение нулевой гипотезы (p)
             <br>
             x <- 10
             <br>
@@ -501,65 +501,65 @@
             p <- 0.20
             <br>
             <br>
-            # Calculate the sample proportion
+            # Рассчитайте долю выборки
             <br>
             p_hat = x/n
             <br>
             <br>
-            # Calculate and print the test statistic
+            # Рассчитайте и распечатайте тестовую статистику
             <br>
             (p_hat-p)/(sqrt((p*(1-p))/(n)))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_test_statistic">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_r_prop_test_statistic.html">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2>5. Concluding</h2>
-    <p>There are two main approaches for making the conclusion of a hypothesis test:</p>
+    <h2>5. Заключение</h2>
+    <p>Существует два основных подхода к заключению проверки гипотез:</p>
     <ul>
-        <li>The <strong>critical value</strong> approach compares the test statistic with the critical value of the significance level.</li>
-        <li>The <strong>P-value</strong> approach compares the P-value of the test statistic and with the significance level.</li>
+        <li>Подход <strong>критического значения</strong> сравнивает статистику теста с критическим значением уровня значимости.</li>
+        <li>Подход <strong>P-значения</strong> сравнивает P-значение тестовой статистики и уровень значимости.</li>
     </ul>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The two approaches are only different in how they present the conclusion.</p>
+        <p><b>Примечание:</b> Эти два подхода отличаются только тем, как они представляют заключение.</p>
     </div>
-    <h3>The Critical Value Approach</h3>
-    <p>For the critical value approach we need to find the <strong>critical value</strong> (CV) of the significance level (\(\alpha\)).</p>
-    <p>For a population proportion test, the critical value (CV) is a <strong>Z-value</strong> from a <a href="standard_normal_distribution.html">standard normal distribution</a>.</p>
-    <p>This critical Z-value (CV) defines the <strong>rejection region</strong> for the test.</p>
-    <p>The rejection region is an area of probability in the tails of the standard normal distribution.</p>
-    <p>Because the claim is that the population proportion is <strong>more</strong> than 20&#37;, the rejection region is in the right tail:</p>
-    <p><img src="../svg/img_critical_value_right_prop1.svg" alt="Standard Normal Distribution with a right tail area (rejection region) denoted as the greek symbol alpha"></p>
-    <p>The size of the rejection region is decided by the significance level (\(\alpha\)).
-    <p>Choosing a significance level (\(\alpha\)) of 0.05, or 5&#37;, we can find the critical Z-value from a <a href="statistics_z_table.html">Z-table</a>, or with a programming language function:</p>
+    <h3>Подход критических значений</h3>
+    <p>Для подхода критического значения нам нужно найти <strong>критическое значение</strong> (CV) уровня значимости (\(\alpha\)).</p>
+    <p>Для теста доли совокупности критическим значением (CV) является <strong>Z-значение</strong> из <a href="standard_normal_distribution.html"> стандартного нормального распределения</a>.</p>
+    <p>Это критическое Z-значение (CV) определяет <strong>область отклонения</strong> для теста.</p>
+    <p>Область отклонения - это область вероятности в хвостах стандартного нормального распределения.</p>
+    <p>Поскольку утверждается, что доля совокупности <b>более</b> чем 20&#37;, область отклонения находится в правом хвосте:</p>
+    <p><img src="../svg/img_critical_value_right_prop1.svg" alt="Стандартное нормальное распределение с правой областью хвоста (область отклонения), обозначенной греческим символом alpha"></p>
+    <p>Размер области отклонения определяется уровнем значимости (\(\alpha\)).
+    <p>Выбрав уровень значимости (\(\alpha\)) 0.05, или 5&#37;, мы можем найти критическое Z-значение из <a href="statistics_z_table.html">Z-таблицы</a>, или с функцией языка программирования:</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The functions find the Z-value for an area from the left side.</p>
-        <p>To find the Z-value for a right tail we need to use the function on the area to the left of the tail (1-0.05 = 0.95).</p>
+        <p><b>Примечание:</b> Функции находят Z-значение для области с левой стороны.</p>
+        <p>Чтобы найти Z-значение для правого хвоста, нам нужно использовать функцию в области слева от хвоста (1-0.05 = 0.95).</p>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With Python use the Scipy Stats library <code class="w3-codespan">norm.ppf()</code> function find the Z-value for an \(\alpha\) = 0.05 in the right tail.</p>
+        <h3>Пример</h3>
+        <p>В Python используйте функцию библиотеки Scipy Stats <code class="w3-codespan">norm.ppf()</code> найдите Z-значение для \(\alpha\) = 0.05 в правом хвосте.</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             print(stats.norm.ppf(1-0.05))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_z_score2">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_z_score2.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With R use the built-in <code class="w3-codespan">qnorm()</code> function to find the Z-value for an \(\alpha\) = 0.05 in the right tail.</p>
+        <h3>Пример</h3>
+        <p>В R используйте встроенную функцию <code class="w3-codespan">qnorm()</code> чтобы найти Z-значение для \(\alpha\) = 0.05 в правом хвосте.</p>
         <div class="w3-code notranslate pythonHigh">
             qnorm(1-0.05)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_z_score2">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_z_score2.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>Using either method we can find that the critical Z-value is \(\approx \underline{1.6449}\)</p>
-    <p>For a <strong>right</strong> tailed test we need to check if the test statistic (TS) is <strong>bigger</strong> than the critical value (CV).</p>
-    <p>If the test statistic is bigger than the critical value, the test statistic is in the <strong>rejection region</strong>.</p>
-    <p>When the test statistic is in the rejection region, we <strong>reject</strong> the null hypothesis (\(H_{0}\)).</p>
-    <p>Here, the test statistic (TS) was \(\approx \underline{0.791}\) and the critical value was \(\approx \underline{1.6449}\)</p>
-    <p>Here is an illustration of this test in a graph:</p>
-    <p><img src="../svg/img_critical_value_right_prop2.svg" alt="Standard Normal Distribution with a right tail area (rejection region) equal to 0.05, a critical value of 1.6449, and a test statistic of 0.791"></p>
+    <p>Используя любой метод, мы можем найти, что критическое Z-значение равно \(\approx \underline{1.6449}\)</p>
+    <p>Для <b>правостороннего</b> теста нам нужно проверить, не является ли тестовая статистика (TS) <b>больше</b> критического значения (CV).</p>
+    <p>Если статистика теста больше критического значения, статистика теста находится в <strong>области отклонения</strong>.</p>
+    <p>Когда статистика теста находится в области отклонения, мы <b>отклоняем</b> нулевую гипотезу (\(H_{0}\)).</p>
+    <p>Здесь тестовая статистика (TS) была \(\approx \underline{0.791}\), а критическое значение было \(\approx \underline{1.6449}\)</p>
+    <p>Вот иллюстрация этого теста в виде графика:</p>
+    <p><img src="../svg/img_critical_value_right_prop2.svg" alt="Стандартное нормальное распределение с областью правого хвоста (область отклонения), равной 0,05, критическим значением 1,6449 и тестовой статистикой 0,791"></p>
     <p>Since the test statistic was <strong>smaller</strong> than the critical value we do <strong>not</strong> reject the null hypothesis.</p>
     <p>This means that the sample data does not support the alternative hypothesis.</p>
     <p>And we can summarize the conclusion stating:</p>
@@ -578,22 +578,22 @@
         <p>To find the P-value for a right tail we need to subtract the left area from the total area: 1 - the output of the function.</p>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the Scipy Stats library <code class="w3-codespan">norm.cdf()</code> function find the P-value of a Z-value bigger than 0.791:</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             print(1-stats.norm.cdf(0.791))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With R use the built-in <code class="w3-codespan">pnorm()</code> function find the P-value of a Z-value bigger than 0.791:</p>
         <div class="w3-code notranslate pythonHigh">
             1-pnorm(0.791)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_p_value">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_p_value">Попробуйте сами &raquo;</a>
     </div>
     <p>Using either method we can find that the P-value is \(\approx \underline{0.2145}\)</p>
     <p>This tells us that the significance level (\(\alpha\)) would need to be bigger than 0.2145, or 21.45&#37;, to <strong>reject</strong> the null hypothesis.</p>
@@ -620,7 +620,7 @@
     <p>Using software and programming to calculate statistics is more common for bigger sets of data, as calculating manually becomes difficult.</p>
     <p>The P-value calculated here will tell us the <strong>lowest possible significance level</strong> where the null-hypothesis can be rejected.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the scipy and math libraries to calculate the P-value for a right tailed hypothesis test for a proportion.</p>
         <p>Here, the sample size is 40, the occurences are 10, and the test is for a proportion bigger than 0.20.</p>
         <div class="w3-code notranslate pythonHigh">
@@ -652,10 +652,10 @@
             <br>
             print(1-stats.norm.cdf(test_stat))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_test">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_test">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With R use the built-in <code class="w3-codespan">prop.test()</code> function find the P-value for a right tailed hypothesis test for a proportion.</p>
         <p>Here, the sample size is 40, the occurences are 10, and the test is for a proportion bigger than 0.20.</p>
         <div class="w3-code notranslate pythonHigh">
@@ -672,7 +672,7 @@
             <br>
             prop.test(x, n, p, alternative = c("greater"), conf.level = 0.95, correct = FALSE)$p.value
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_test">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_test">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
         <p><strong>Note:</strong> The <code class="w3-codespan">conf.level</code> in the R code is the reverse of the significance level.</p>
