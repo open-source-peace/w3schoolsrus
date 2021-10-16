@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Статистика Проверка пропорции. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Проверка пропорции.  Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Статистика Проверка пропорции. Гипотеза, проверяющая пропорцию. Пропорция совокупности. Тесты гипотез. Проверка условий. Определение претензии. Уровень значимости. Статистика теста. Заключение. Подход P-значение. Левосторонние и двусторонние тесты. Уроки для начинающих. W3Schools на русском'>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class='w3-container top'>
@@ -357,8 +357,8 @@
         <a class="w3-right w3-btn" href="statistics_hypothesis_testing_mean.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Пропорция совокупности - это доля совокупности, которая принадлежит к определенной <a href="statistics_data_types.html">категории</a>.</p>
-    <p class="intro">Тесты гипотез используются для проверки утверждения о размере этой доли совокупности.</p>
+    <p class="intro"><strong>Пропорция совокупности</strong> - это доля совокупности, которая принадлежит к определенной <a href="statistics_data_types.html">категории</a>.</p>
+    <p class="intro"><strong>Тесты гипотез</strong> используются для проверки утверждения о размере этой доли совокупности.</p>
     <hr>
     <h2>Гипотеза, проверяющая пропорцию</h2>
     <p>Для проверки гипотез используются следующие шаги:</p>
@@ -560,54 +560,54 @@
     <p>Здесь тестовая статистика (TS) была \(\approx \underline{0.791}\), а критическое значение было \(\approx \underline{1.6449}\)</p>
     <p>Вот иллюстрация этого теста в виде графика:</p>
     <p><img src="../svg/img_critical_value_right_prop2.svg" alt="Стандартное нормальное распределение с областью правого хвоста (область отклонения), равной 0,05, критическим значением 1,6449 и тестовой статистикой 0,791"></p>
-    <p>Since the test statistic was <strong>smaller</strong> than the critical value we do <strong>not</strong> reject the null hypothesis.</p>
-    <p>This means that the sample data does not support the alternative hypothesis.</p>
-    <p>And we can summarize the conclusion stating:</p>
+    <p>Поскольку статистика теста была <b>меньше</b> критического значения, мы <b>не</b> отклоняем нулевую гипотезу.</p>
+    <p>Это означает, что выборки данных не подтверждают альтернативную гипотезу.</p>
+    <p>И мы можем резюмировать вывод о том, что:</p>
     <div class="w3-code notranslate">
-        <p>The sample data does <strong>not</strong> support the claim that "more than 20&#37; of Nobel Prize winners were born in the US" at a <strong>5&#37; significance level</strong>.</p>
+        <p>Данные выборки <b>не</b> подтверждают утверждение о том, что "более 20 лауреатов Нобелевской премии родились в США" при <strong>5&#37; уровне значимости</strong>.</p>
     </div>
-    <h3>The P-Value Approach</h3>
-    <p>For the P-value approach we need to find the <strong>P-value</strong> of the test statistic (TS).</p>
-    <p>If the P-value is <strong>smaller</strong> than the significance level (\(\alpha\)), we <strong>reject</strong> the null hypothesis (\(H_{0}\)).</p>
-    <p>The test statistic was found to be \( \approx \underline{0.791} \)</p>
-    <p>For a population proportion test, the test statistic is a Z-Value from a <a href="statistics_standard_normal_distribution.html">standard normal distribution</a>.</p>
-    <p>Because this is a <strong>right</strong> tailed test, we need to find the P-value of a Z-value <strong>bigger</strong> than 0.791.</p>
-    <p>We can find the P-value using a <a href="statistics_z_table.html">Z-table</a>, or with a programming language function:</p>
+    <h3>Подход P-значение</h3>
+    <p>Для подхода P-значения нам нужно найти <b>P-значение</b> тестовой статистики (TS).</p>
+    <p>Если P-значение <b>меньше</b> уровня значимости (\(\alpha\)), мы <b>отклоняем</b> нулевую гипотезу (\(H_{0}\)).</p>
+    <p>Статистические данные теста оказались равными \( \approx \underline{0.791} \)</p>
+    <p>Для теста доли совокупности, статистика теста представляет собой Z-значение из <a href="statistics_standard_normal_distribution.html"> стандартного нормального распределения</a>.</p>
+    <p>Поскольку это <b>правосторонний</b> тест, нам нужно найти P-значение для Z-значения, <b>больше</b> 0,791.</p>
+    <p>Мы можем найти P-значение с помощью <a href="statistics_z_table.html">Z-таблицы</a> или с помощью функции языка программирования:</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The functions find the P-value (area) to the left side of Z-value.</p>
-        <p>To find the P-value for a right tail we need to subtract the left area from the total area: 1 - the output of the function.</p>
+        <p><b>Примечание:</b> Функции находят P-значение (площадь) слева от Z-значения.</p>
+        <p>Чтобы найти P-значение для правого хвоста, нам нужно вычесть левую область из общей площади: 1 - результат функции.</p>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the Scipy Stats library <code class="w3-codespan">norm.cdf()</code> function find the P-value of a Z-value bigger than 0.791:</p>
+        <p>В Python используйте функцию библиотеки Scipy Stats <code class="w3-codespan">norm.cdf()</code>, чтобы найти P-значение Z-значения больше 0,791:</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             print(1-stats.norm.cdf(0.791))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_p_value.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With R use the built-in <code class="w3-codespan">pnorm()</code> function find the P-value of a Z-value bigger than 0.791:</p>
+        <p>С помощью R используйте встроенную функцию <code class="w3-codespan">pnorm()</code> чтобы найти P-значение Z-значения больше 0,791:</p>
         <div class="w3-code notranslate pythonHigh">
             1-pnorm(0.791)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_p_value">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_p_value.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>Using either method we can find that the P-value is \(\approx \underline{0.2145}\)</p>
-    <p>This tells us that the significance level (\(\alpha\)) would need to be bigger than 0.2145, or 21.45&#37;, to <strong>reject</strong> the null hypothesis.</p>
-    <p>Here is an illustration of this test in a graph:</p>
-    <p><img src="../svg/img_p_value_right_prop.svg"></p>
-    <p>This P-value is <strong>bigger</strong> than any of the common significance levels (10&#37;, 5&#37;, 1&#37;).</p>
-    <p>So the null hypothesis is <strong>kept</strong> at all of these significance levels.</p>
-    <p>And we can summarize the conclusion stating:</p>
+    <p>Используя любой метод, мы можем найти, что P-значение равно \(\approx \underline{0.2145}\)</p>
+    <p>Это говорит нам о том, что уровень значимости (\(\alpha\)) должен быть больше 0,2145 или 21,45&#37;, чтобы <b>отклонить</b> нулевую гипотезу.</p>
+    <p>Вот иллюстрация этого теста в виде графика:</p>
+    <p><img src="../svg/img_p_value_right_prop.svg" alt="P-значение"></p>
+    <p>Это P-значение <b>больше</b>, чем любой из распространённых уровней значимости (10&#37;, 5&#37;, 1&#37;).</p>
+    <p>Таким образом, нулевая гипотеза <b>сохраняется</b> на всех этих уровнях значимости.</p>
+    <p>И мы можем резюмировать вывод о том, что:</p>
     <div class="w3-code notranslate">
-        <p>The sample data does <strong>not</strong> support the claim that "more than 20&#37; of Nobel Prize winners were born in the US" at a <strong>10&#37;, 5&#37;, or 1&#37; significance level</strong>.</p>
+        <p>Выборки данных <b>не</b> поддерживают утверждение о том, что "более, чем 20&#37; лауреатов Нобелевской премии родились в США" при <strong>10&#37;, 5&#37;, или 1&#37; уровне значимости</strong>.</p>
     </div>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> It may still be true that the real population proportion is more than 20&#37;.</p>
-        <p>But there was not strong enough evidence to support it with this sample.</p>
+        <p><b>Примечание:</b> Возможно, все ещё верно, что реальная доля совокупности превышает 20&#37;.</p>
+        <p>Но на этой выборке не было достаточно веских доказательств, чтобы подтвердить это.</p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -615,21 +615,21 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Calculating a P-Value for a Hypothesis Test with Programming</h2>
-    <p>Many programming languages can calculate the P-value to decide outcome of a hypothesis test.</p>
-    <p>Using software and programming to calculate statistics is more common for bigger sets of data, as calculating manually becomes difficult.</p>
-    <p>The P-value calculated here will tell us the <strong>lowest possible significance level</strong> where the null-hypothesis can be rejected.</p>
+</div>    <h2>Расчет P-значения для проверки гипотез с помощью программирования</h2>
+    <p>Многие языки программирования могут вычислять P-значение для определения результата проверки гипотез.</p>
+    <p>Использование программного обеспечения и программирования для расчета статистики более распространено для больших наборов данных, поскольку вычисление вручную становится затруднительным.</p>
+    <p>Рассчитанное здесь P-значение покажет нам <strong>минимально возможный уровень значимости</strong>, при котором нулевая гипотеза может быть отклонена.</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the scipy and math libraries to calculate the P-value for a right tailed hypothesis test for a proportion.</p>
-        <p>Here, the sample size is 40, the occurences are 10, and the test is for a proportion bigger than 0.20.</p>
+        <p>В Python используйте библиотеки scipy и math для вычисления P-значения для проверки гипотезы с правым хвостом для пропорции.</p>
+        <p>Здесь размер выборки - 40, повторов - 10, а тест - для доли, превышающей 0,20.</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             import math
             <br>
             <br>
-            # Specify the number of occurences (x), the sample size (n), and the proportion claimed in the null-hypothesis (p)
+            # Укажите количество вхождений (x), размер выборки (n) и пропорцию, заявленную в нулевой гипотезе (p)
             <br>
             x = 10
             <br>
@@ -638,28 +638,28 @@
             p = 0.2
             <br>
             <br>
-            # Calculate the sample proportion
+            # Рассчитайте долю выборки
             <br>
             p_hat = x/n
             <br>
             <br>
-            # Calculate the test statistic
+            # Рассчитайте тестовую статистику
             <br>
             test_stat = (p_hat-p)/(math.sqrt((p*(1-p))/(n)))
             <br>
             <br>
-            # Output the p-value of the test statistic (right tailed test)
+            # Выведите p-значение тестовой статистики (правосторонний тест)
             <br>
             print(1-stats.norm.cdf(test_stat))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_prop_test">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_prop_test.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With R use the built-in <code class="w3-codespan">prop.test()</code> function find the P-value for a right tailed hypothesis test for a proportion.</p>
-        <p>Here, the sample size is 40, the occurences are 10, and the test is for a proportion bigger than 0.20.</p>
+        <p>В R используйте встроенную функцию <code class="w3-codespan">prop.test()</code>, чтобы найти P-значение для проверки гипотезы с правым хвостом для пропорции.</p>
+        <p>Здесь размер выборки - 40, повторов - 10, а тест - для доли, превышающей 0,20.</p>
         <div class="w3-code notranslate pythonHigh">
-            # Specify the sample occurences (x), the sample size (n), and the null-hypothesis claim (p)
+            # Укажите количество примеров (x), размер выборки (n) и утверждение нулевой гипотезы (p)
             <br>
             x <- 10
             <br>
@@ -668,25 +668,25 @@
             p <- 0.20
             <br>
             <br>
-            # P-value from right-tail proportion test at 0.05 significance level
+            # P-значение из теста пропорции правого хвоста при уровне значимости 0,05
             <br>
             prop.test(x, n, p, alternative = c("greater"), conf.level = 0.95, correct = FALSE)$p.value
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_prop_test">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_prop_test.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The <code class="w3-codespan">conf.level</code> in the R code is the reverse of the significance level.</p>
-        <p>Here, the significance level is 0.05, or 5&#37;, so the conf.level is 1-0.05 = 0.95, or 95&#37;.</p>
+        <p><b>Примечание:</b> <code class="w3-codespan">conf.level</code> в коде R является обратным уровню значимости.</p>
+        <p>Здесь уровень значимости 0,05, или 5&#37;, т.о. conf.level равно 1-0.05 = 0.95, или 95&#37;.</p>
     </div>
     <hr>
-    <h2>Left-Tailed and Two-Tailed Tests</h2>
-    <p>This was an example of a <strong>right</strong> tailed test, where the alternative hypothesis claimed that parameter is <strong>bigger</strong> than the null hypothesis claim.</p>
-    <p>You can check out an equivalent step-by-step guide for other types here:</p>
+    <h2>Левосторонние и двусторонние тесты</h2>
+    <p>Это был пример <b>правостороннего</b> теста, в котором альтернативная гипотеза утверждала, что параметр <b>больше</b>, чем утверждение нулевой гипотезы.</p>
+    <p>Вы можете ознакомиться с аналогичным пошаговым руководством для других типов здесь:</p>
     <ul>
-        <li><a href="statistics_hypothesis_testing_proportion_left.html">Left-Tailed Test</a></li>
-        <li><a href="statistics_hypothesis_testing_proportion_2tail.html">Two-Tailed Test</a></li>
+        <li><a href="statistics_hypothesis_testing_proportion_left.html">Левосторонний тест</a></li>
+        <li><a href="statistics_hypothesis_testing_proportion_2tail.html">Двусторонний тест</a></li>
     </ul>
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="statistics_hypothesis_testing.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="statistics_hypothesis_testing_mean.html">Next &#10095;</a>
