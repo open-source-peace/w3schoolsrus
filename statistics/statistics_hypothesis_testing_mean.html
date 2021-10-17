@@ -467,14 +467,14 @@
     <p>Вы также можете рассчитать статистику теста, используя функции языка программирования:</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the scipy and math libraries to calculate the test statistic.</p>
+        <p>В Python используйте библиотеки scipy и math для вычисления статистики теста.</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             import math
             <br>
             <br>
-            # Specify the sample mean (x_bar), the sample standard deviation (s), the mean claimed in the null-hypothesis (mu_null), and the sample size (n)
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
             <br>
             x_bar = 62.1
             <br>
@@ -485,17 +485,17 @@
             n = 30
             <br>
             <br>
-            # Calculate and print the test statistic
+            # Рассчитайте и распечатайте тестовую статистику
             <br>
             print((x_bar - mu_null)/(s/math.sqrt(n)))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_mean_test_statistic">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_mean_test_statistic.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With R use built-in math and statistics functions to calculate the test statistic.</p>
+        <p>С помощью R используйте встроенные математические и статистические функции для расчета тестовой статистики.</p>
         <div class="w3-code notranslate pythonHigh">
-            # Specify the sample mean (x_bar), the sample standard deviation (s), the mean claimed in the null-hypothesis (mu_null), and the sample size (n)
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
             <br>
             x_bar <- 62.1
             <br>
@@ -506,11 +506,11 @@
             n <- 30
             <br>
             <br>
-            # Output the test statistic
+            # Вывести статистику теста
             <br>
             (x_bar - mu_null)/(s/sqrt(n))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_mean_test_statistic">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_mean_test_statistic.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -518,57 +518,57 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>5. Concluding</h2>
-    <p>There are two main approaches for making the conclusion of a hypothesis test:</p>
+</div>    <h2>5. Заключение</h2>
+    <p>Существует два основных подхода к заключению проверки гипотезы:</p>
     <ul>
-        <li>The <strong>critical value</strong> approach compares the test statistic with the critical value of the significance level.</li>
-        <li>The <strong>P-value</strong> approach compares the P-value of the test statistic and with the significance level.</li>
+        <li>Подход <strong>критического значения</strong> сравнивает статистику теста с критическим значением уровня значимости</li>
+        <li>Подход <strong>P-значения</strong> сравнивает P-значение тестовой статистики и уровень значимости</li>
     </ul>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> The two approaches are only different in how they present the conclusion.</p>
+        <p><b>Примечание.</b> Эти два подхода различаются только тем, как они представляют заключение.</p>
     </div>
-    <h3>The Critical Value Approach</h3>
-    <p>For the critical value approach we need to find the <strong>critical value</strong> (CV) of the significance level (\(\alpha\)).</p>
-    <p>For a population mean test, the critical value (CV) is a <strong>T-value</strong> from a <a href="students_t_distribution.html">student's t-distribution</a>.</p>
-    <p>This critical T-value (CV) defines the <strong>rejection region</strong> for the test.</p>
-    <p>The rejection region is an area of probability in the tails of the standard normal distribution.</p>
-    <p>Because the claim is that the population mean is <strong>more</strong> than 55, the rejection region is in the right tail:</p>
-    <p><img src="img_critical_value_right_prop1.svg" alt="Standard Normal Distribution with a right tail area (rejection region) denoted as the greek symbol alpha"></p>
-    <p>The size of the rejection region is decided by the significance level (\(\alpha\)).
-    <p>The student's t-distribution is adjusted for the uncertainty from smaller samples.</p>
-    <p>This adjustment is called degrees of freedom (df), which is the sample size \((n) - 1\)</p>
-    <p>In this case the degrees of freedom (df) is: \(30 - 1 = \underline{29} \)</p>
-    <p>Choosing a significance level (\(\alpha\)) of 0.01, or 1&#37;, we can find the critical T-value from a <a href="statistics_t_table.html">T-table</a>, or with a programming language function:</p>
+    <h3>Подход критических значений</h3>
+    <p>Для подхода критического значения нам нужно найти <strong>критическое значение</strong> (CV) уровня значимости (\(\alpha\)).</p>
+    <p>Для теста на среднее значение для генеральной совокупности критическое значение (CV) - это <strong>T-значение</strong> из <a href="students_t_distribution.html">стьюдент t-распределения</a>.</p>
+    <p>Это критическое T-значение (CV) определяет <strong>область отклонения</strong> для теста.</p>
+    <p>Область отклонения - это область вероятности в хвостах стандартного нормального распределения.</p>
+    <p>Поскольку утверждается, что среднее значение генеральной совокупности <b>больше</b> чем 55, область отклонения находится в правом хвосте:</p>
+    <p><img src="../svg/img_critical_value_right_prop1.svg" alt="Стандартное нормальное распределение с правой хвостовой областью (область отклонения), обозначенной греческим символом alpha"></p>
+    <p>Размер области отклонения определяется уровнем значимости (\(\alpha\)).
+    <p>Стьюдент t-распределение скорректировано с учетом неопределенности по меньшим выборкам.</p>
+    <p>Эта корректировка называется степенями свободы (df), то есть размером выборки \((n) - 1\)</p>
+    <p>В этом случае степени свободы (df) равны: \(30 - 1 = \underline{29} \)</p>
+    <p>Выбрав уровень значимости (\(\alpha\)) 0,01 или 1&#37;, мы можем найти критическое T-значение из <a href="statistics_t_table.html">T-таблицы</a>, или с помощью функции языка программирования:</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the Scipy Stats library <code class="w3-codespan">t.ppf()</code> function find the T-Value for an \(\alpha\) = 0.01 at 29 degrees of freedom (df).</p>
+        <p>В Python используйте функцию библиотеки Scipy Stats <code class="w3-codespan">t.ppf()</code> найдите T-значение для \(\alpha\) = 0,01 при 29 степенях свободы (df).</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             print(stats.t.ppf(1-0.01, 29))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_t_score2">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_t_score2.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With R use the built-in <code class="w3-codespan">qt()</code> function to find the t-value for an \(\alpha\) = 0.01 at 29 degrees of freedom (df).</p>
+        <p>В R используйте встроенную функцию <code class="w3-codespan">qt()</code> чтобы найти t-значение для \(\alpha\) = 0,01 при 29 степенях свободы (df).</p>
         <div class="w3-code notranslate pythonHigh">
             qt(1-0.01, 29)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_t_score2">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_t_score2.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>Using either method we can find that the critical T-Value is \(\approx \underline{2.462}\)</p>
-    <p>For a <strong>right</strong> tailed test we need to check if the test statistic (TS) is <strong>bigger</strong> than the critical value (CV).</p>
-    <p>If the test statistic is bigger than the critical value, the test statistic is in the <strong>rejection region</strong>.</p>
-    <p>When the test statistic is in the rejection region, we <strong>reject</strong> the null hypothesis (\(H_{0}\)).</p>
-    <p>Here, the test statistic (TS) was \(\approx \underline{2.889}\) and the critical value was \(\approx \underline{2.462}\)</p>
-    <p>Here is an illustration of this test in a graph:</p>
-    <p><img src="img_critical_value_right_mean2.svg" alt="Student's T-Distribution with a right tail area (rejection region) equal to 0.01, a critical value of 2.462, and a test statistic of 2.889"></p>
-    <p>Since the test statistic was <strong>bigger</strong> than the critical value we <strong>reject</strong> the null hypothesis.</p>
-    <p>This means that the sample data supports the alternative hypothesis.</p>
-    <p>And we can summarize the conclusion stating:</p>
+    <p>Используя любой метод, мы можем найти, что критическое T-значение равно \(\approx \underline{2.462}\)</p>
+    <p>Для <b>правостороннего</b> теста необходимо проверить, не превышает ли тестовая статистика (TS) критическое значение (CV).</p>
+    <p>Если тестовая статистика больше критического значения, то тестовая статистика находится в <strong>области отклонения</strong>.</p>
+    <p>Когда статистика теста находится в области отклонения, мы <b>отклоняем</b> нулевую гипотезу (\(H_{0}\)).</p>
+    <p>Здесь тестовая статистика (TS) была \(\approx \underline{2.889}\), а критическое значение было \(\approx \underline{2.462}\)</p>
+    <p>Вот иллюстрация этого теста в виде графика:</p>
+    <p><img src="../svg/img_critical_value_right_mean2.svg" alt="Т-распределение Стьюдента с областью правого хвоста (область отклонения), равной 0,01, критическим значением 2,462 и тестовой статистикой 2,889"></p>
+    <p>Поскольку статистика теста была <b>больше</b> критического значения, мы <b>отклоняем</b> нулевую гипотезу.</p>
+    <p>Это означает, что выборки данных подтверждают альтернативную гипотезу.</p>
+    <p>И мы можем резюмировать вывод о том, что:</p>
     <div class="w3-code notranslate">
-        <p>The sample data <strong>supports</strong> the claim that "The average age of Nobel Prize winners when they received the prize is more than 55" at a <strong>1&#37; significance level</strong>.</p>
+        <p>Выборки данных <b>подтверждают</b> утверждение о том, что "средний возраст лауреатов Нобелевской премии на момент получения премии превышает 55 лет" при <strong>1&#37; уровне значимости</strong>.</p>
     </div>
     <h3>The P-Value Approach</h3>
     <p>For the P-value approach we need to find the <strong>P-value</strong> of the test statistic (TS).</p>
@@ -585,7 +585,7 @@
             <br>
             print(1-stats.t.cdf(2.889, 29))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
@@ -593,7 +593,7 @@
         <div class="w3-code notranslate pythonHigh">
             1-pt(2.889, 29)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_p_value">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_p_value">Попробуйте сами &raquo;</a>
     </div>
     <p>Using either method we can find that the P-value is \(\approx \underline{0.0036}\)</p>
     <p>This tells us that the significance level (\(\alpha\)) would need to be bigger than 0.0036, or 0.36&#37;, to <strong>reject</strong> the null hypothesis.</p>
@@ -649,7 +649,7 @@
             <br>
             print(1-stats.t.cdf(test_stat, n-1))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_mean_test">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_mean_test">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
@@ -676,7 +676,7 @@
             <br>
             1-pt(test_stat, n-1)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_mean_test">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_mean_test">Попробуйте сами &raquo;</a>
     </div>
     <hr>
     <h2>Left-Tailed and Two-Tailed Tests</h2>
