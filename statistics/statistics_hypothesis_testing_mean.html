@@ -357,116 +357,116 @@
         <a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">A population <a href="statistics_mean.html">mean</a> is an average of value a population.</p>
-    <p class="intro">Hypothesis tests are used to check a claim about the size of that population mean.</p>
+    <p class="intro"><a href="statistics_mean.html">Среднее</a> генеральной совокупности - это среднее значение генеральной совокупности.</p>
+    <p class="intro">Тесты гипотез используются для проверки утверждения о размере этого среднего совокупности.</p>
     <hr>
-    <h2>Hypothesis Testing a Mean</h2>
-    <p>The following steps are used for a hypothesis test:</p>
+    <h2>Гипотеза, проверяющая среднее</h2>
+    <p>Для проверки гипотез используются следующие шаги:</p>
     <ol>
-        <li>Check the conditions</li>
-        <li>Define the claims</li>
-        <li>Decide the significance level</li>
-        <li>Calculate the test statistic</li>
-        <li>Conclusion</li>
+        <li>Проверить условия</li>
+        <li>Определить претензии</li>
+        <li>Определить уровень значимости</li>
+        <li>Рассчитать статистику теста</li>
+        <li>Заключение</li>
     </ol>
-    <p>For example:</p>
+    <p>Например:</p>
     <ul>
-        <li><strong>Population</strong>: Nobel Prize winners</li>
-        <li><strong>Category</strong>: Age when they received the prize.</li>
+        <li><strong>Совокупность</strong>: Лауреаты Нобелевской премии</li>
+        <li><strong>Категория</strong>: Возраст, когда они получили премию</li>
     </ul>
-    <p>And we want to check the claim:</p>
+    <p>И мы хотим проверить претензию:</p>
     <div class="w3-code notranslate">
-        <p>"The average age of Nobel Prize winners when they received the prize is <strong>more</strong> than 55"</p>
+        <p>"Средний возраст лауреатов Нобелевской премии, когда они получили премию, <b>более</b> чем 55 лет."</p>
     </div>
-    <p>By taking a sample of 30 randomly selected Nobel Prize winners we could find that:</p>
+    <p>Взяв выборку из 30 случайно выбранных лауреатов Нобелевской премии, мы смогли обнаружить, что:</p>
     <div class="w3-code notranslate">
-        <p>The mean age in the sample (\(\bar{x}\)) is 62.1</p>
-        <p>The standard deviation of age in the sample (\(s\)) is 13.46</p>
+        <p>Средний возраст в выборке (\(\bar{x}\)) равен 62.1</p>
+        <p>Стандартное отклонение возраста в выборке (\(s\)) равно 13.46</p>
     </div>
-    <p>From this sample data we check the claim with the steps below.</p>
+    <p>По этим выборкам данных мы проверяем претензию, выполнив следующие действия.</p>
     <div class="w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>1. Checking the Conditions</h2>
-    <p>The conditions for calculating a confidence interval for a proportion are:</p>
+</div>    <h2>1. Проверка условий</h2>
+    <p>Условия для расчета доверительного интервала для доли:</p>
     <ul>
-        <li>The sample is <a href="statistics_sample_types.html">randomly selected</a></li>
-        <li>And either:</li>
+        <li>Выборка произведена <a href="statistics_sample_types.html">случайным образом</a></li>
+        <li>А также:</li>
         <ul>
-            <li>The population data is normally distributed</li>
-            <li>Sample size is large enough</li>
+            <li>Данные о совокупности распределены нормально</li>
+            <li>Размер выборки достаточно велик</li>
         </ul>
     </ul>
-    <p>A moderately large sample size, like 30, is typically large enough.</p>
-    <p>In the example, the sample size was 30 and it was randomly selected, so the conditions are fulfilled.</p>
+    <p>Обычно достаточно большого размера выборки, например 30.</p>
+    <p>В этом примере размер выборки был 30, и она была выбрана случайным образом, поэтому условия выполняются.</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> Checking if the data is normally distributed can be done with specialized statistical tests.</p>
+        <p><b>Примечание:</b> Проверить, нормально ли распределяются данные, можно с помощью специализированных статистических тестов.</p>
     </div>
     <hr>
-    <h2>2. Defining the Claims</h2>
-    <p>We need to define a <strong>null hypothesis</strong> (\(H_{0}\)) and an <strong>alternative hypothesis</strong> (\(H_{1}\)) based on the claim we are checking.</p>
-    <p>The claim was:</p>
+    <h2>2. Определение претензий</h2>
+    <p>Нам нужно определить <strong>нулевую гипотезу</strong> (\(H_{0}\)) и <strong>альтернативную гипотезу</strong> (\(H_{1}\)) на основе утверждения, которое мы проверяем.</p>
+    <p>Претензия была:</p>
     <div class="w3-code notranslate">
-        <p>"The average age of Nobel Prize winners when they received the prize is <strong>more</strong> than 55"</p>
+        <p>"Средний возраст лауреатов Нобелевской премии, когда они получили премию, <b>более</b> чем 55 лет".</p>
     </div>
-    <p>In this case, the <strong>parameter</strong> is the mean age of Nobel Prize winners when they received the prize (\(\mu\)).</p>
-    <p>The null and alternative hypothesis are then:</p>
+    <p>В этом случае <b>параметр</b> - это средний возраст лауреатов Нобелевской премии, когда они получили премию (\(\mu\)).</p>
+    <p>Тогда нулевая и альтернативная гипотезы:</p>
     <div class="w3-code notranslate">
-        <p><strong>Null hypothesis</strong>: The average age was 55.</p>
-        <p><strong>Alternative hypothesis</strong>: The average age was <strong>more</strong> than 55.</p>
+        <p><strong>Нулевая гипотеза</strong>: средний возраст - 55 лет.</p>
+        <p><strong>Альтернативная гипотеза</strong>: средний возраст был <b>больше</b> чем 55 лет.</p>
     </div>
-    <p>Which can be  expressed with symbols as:</p>
+    <p>Что можно выразить символами как:</p>
     <div class="w3-code notranslate">
         <p>\(H_{0}\): \(\mu = 55 \)</p>
         <p>\(H_{1}\): \(\mu > 55 \)</p>
     </div>
-    <p>This is a '<strong>right</strong> tailed' test, because the alternative hypothesis claims that the proportion is <strong>more</strong> than in the null hypothesis.</p>
-    <p>If the data supports the alternative hypothesis, we <strong>reject</strong> the null hypothesis and <strong>accept</strong> the alternative hypothesis.</p>
+    <p>Это '<b>правый</b> хвост' теста, поскольку альтернативная гипотеза утверждает, что пропорция <b>больше</b>, чем в нулевой гипотезе.</p>
+    <p>Если данные подтверждают альтернативную гипотезу, мы <b>отклоняем</b> нулевую гипотезу и <b>принимаем</b> альтернативную гипотезу.</p>
     <div class="w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>3. Deciding the Significance Level</h2>
-    <p>The significance level (\(\alpha\)) is the <strong>uncertainty</strong> we accept when rejecting the null hypothesis in a hypothesis test.</p>
-    <p>The significance level is a percentage probability of accidentally making the wrong conclusion.</p>
-    <p>Typical significance levels are:</p>
+</div>    <h2>3. Определение уровня значимости</h2>
+    <p>Уровень значимости (\(\alpha\)) - это <strong>неопределённость</strong>, которую мы принимаем при отклонении нулевой гипотезы в проверке гипотез.</p>
+    <p>Уровень значимости - это процентная вероятность случайного ошибочного вывода.</p>
+    <p>Типичные уровни значимости:</p>
     <ul>
         <li>\(\alpha = 0.1\) (10&#37;)</li>
         <li>\(\alpha = 0.05\) (5&#37;)</li>
         <li>\(\alpha = 0.01\) (1&#37;)</li>
     </ul>
-    <p>A lower significance level means that the evidence in the data needs to be stronger to reject the null hypothesis.</p>
-    <p>There is no "correct" significance level  - it only states the uncertainty of the conclusion.</p>
+    <p>Более низкий уровень значимости означает, что доказательства в данных должны быть более убедительными, чтобы отвергнуть нулевую гипотезу. </p>
+    <p>Не существует &quot;правильного&quot; уровня значимости - он лишь констатирует неопределенность вывода.</p>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> A 5&#37; significance level means that when we reject a null hypothesis:</p>
-        <p>We expect to reject a <strong>true</strong> null hypothesis 5 out of 100 times.</p>
+        <p><b>Примечание:</b> 5&#37; уровень значимости означает, что когда мы отвергаем нулевую гипотезу:</p>
+        <p>Мы ожидаем отклонить <b>истинную</b> нулевую гипотезу в 5 случаях из 100.</p>
     </div>
     <hr>
-    <h2>4. Calculating the Test Statistic</h2>
-    <p>The test statistic is used to decide the outcome of the hypothesis test.</p>
-    <p>The test statistic is a <a href="statistics_standard_normal_distribution.html">standardized</a> value calculated from the sample.</p>
-    <p>The formula for the test statistic (TS) of a population mean is:</p>
+    <h2>4. Расчет статистики теста</h2>
+    <p>Статистика теста используется для определения результата проверки гипотезы.</p>
+    <p>Статистика теста - это <a href="statistics_standard_normal_distribution.html">стандартизованное</a> значение, рассчитанное на основе выборки.</p>
+    <p>Формула для тестовой статистики (TS) среднего значения генеральной совокупности:</p>
     <p>\(\displaystyle \frac{\bar{x} - \mu}{s} \cdot \sqrt{n} \)</p>
-    <p>\(\bar{x}-\mu\) is the <strong>difference</strong> between the <strong>sample</strong> mean (\(\bar{x}\)) and the claimed <strong>population</strong> mean (\(\mu\)).</p>
-    <p>\(s\) is the <a href="statistics_standard_deviation.html">sample standard deviation</a>.</p>
-    <p>\(n\) is the sample size.</p>
-    <p>In our example:</p>
+    <p>\(\bar{x}-\mu\) - это <b>разница</b> между <b>выборкой</b> среднего (\(\bar{x}\)) и заявленным средним <b>совокупности</b> (\(\mu\)).</p>
+    <p>\(s\) - это <a href="statistics_standard_deviation.html">стандартное отклонение выборки</a>.</p>
+    <p>\(n\) - это размер выборки.</p>
+    <p>В нашем примере:</p>
     <div class="w3-code notranslate">
-        <p>The claimed (\(H_{0}\)) population mean (\(\mu\)) was \( 55 \)</p>
-        <p>The sample mean (\(\bar{x}\)) was \(62.1\)</p>
-        <p>The sample standard deviation (\(s\)) was \(13.46\)</p>
-        <p>The sample size (\(n\)) was \(30\)</p>
+        <p>Заявленное (\(H_{0}\)) среднее совокупности (\(\mu\)) было \( 55 \)</p>
+        <p>Среднее выборки (\(\bar{x}\)) было \(62.1\)</p>
+        <p>Стандартное отклонение выборки (\(s\)) было \(13.46\)</p>
+        <p>Размер выборки (\(n\)) был \(30\)</p>
     </div>
-    <p>So the test statistic (TS) is then:</p>
+    <p>Таким образом, тестовая статистика (TS) тогда:</p>
     <p>\(\displaystyle \frac{62.1-55}{13.46} \cdot \sqrt{30} = \frac{7.1}{13.46} \cdot \sqrt{30}  \approx 0.528 \cdot 5.477 = \underline{2.889}\)</p>
-    <p>You can also calculate the test statistic using programming language functions:</p>
+    <p>Вы также можете рассчитать статистику теста, используя функции языка программирования:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the scipy and math libraries to calculate the test statistic.</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
@@ -492,7 +492,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_mean_test_statistic">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With R use built-in math and statistics functions to calculate the test statistic.</p>
         <div class="w3-code notranslate pythonHigh">
             # Specify the sample mean (x_bar), the sample standard deviation (s), the mean claimed in the null-hypothesis (mu_null), and the sample size (n)
@@ -540,7 +540,7 @@
     <p>In this case the degrees of freedom (df) is: \(30 - 1 = \underline{29} \)</p>
     <p>Choosing a significance level (\(\alpha\)) of 0.01, or 1&#37;, we can find the critical T-value from a <a href="statistics_t_table.html">T-table</a>, or with a programming language function:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the Scipy Stats library <code class="w3-codespan">t.ppf()</code> function find the T-Value for an \(\alpha\) = 0.01 at 29 degrees of freedom (df).</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
@@ -550,7 +550,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_t_score2">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With R use the built-in <code class="w3-codespan">qt()</code> function to find the t-value for an \(\alpha\) = 0.01 at 29 degrees of freedom (df).</p>
         <div class="w3-code notranslate pythonHigh">
             qt(1-0.01, 29)
@@ -578,7 +578,7 @@
     <p>Because this is a <strong>right</strong> tailed test, we need to find the P-value of a t-value <strong>bigger</strong> than 2.889.</p><p>The student's t-distribution is adjusted according to degrees of freedom (df), which is the sample size \((30) - 1 = \underline{29}\)</p>
     <p>We can find the P-value using a <a href="statistics_t_table.html">T-table</a>, or with a programming language function:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the Scipy Stats library <code class="w3-codespan">t.cdf()</code> function find the P-value of a T-value bigger than 2.889 at 29 degrees of freedom (df):</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
@@ -588,7 +588,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With R use the built-in <code class="w3-codespan">pt()</code> function find the P-value of a T-Value bigger than 2.889 at 29 degrees of freedom (df):</p>
         <div class="w3-code notranslate pythonHigh">
             1-pt(2.889, 29)
@@ -598,7 +598,7 @@
     <p>Using either method we can find that the P-value is \(\approx \underline{0.0036}\)</p>
     <p>This tells us that the significance level (\(\alpha\)) would need to be bigger than 0.0036, or 0.36&#37;, to <strong>reject</strong> the null hypothesis.</p>
     <p>Here is an illustration of this test in a graph:</p>
-    <p><img src="img_p_value_right_mean.svg"></p>
+    <p><img src="img_p_value_right_mean.svg" alt=""></p>
     <p>This P-value is <strong>smaller</strong> than any of the common significance levels (10&#37;, 5&#37;, 1&#37;).</p>
     <p>So the null hypothesis is <strong>rejected</strong> at all of these significance levels.</p>
     <p>And we can summarize the conclusion stating:</p>
@@ -620,7 +620,7 @@
     <p>Using software and programming to calculate statistics is more common for bigger sets of data, as calculating manually becomes difficult.</p>
     <p>The P-value calculated here will tell us the <strong>lowest possible significance level</strong> where the null-hypothesis can be rejected.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With Python use the scipy and math libraries to calculate the P-value for a right tailed hypothesis test for a mean.</p>
         <p>Here, the sample size is 30, the sample mean is 62.1, the sample standard deviation is 13.46, and the test is for a mean bigger than 55.</p>
         <div class="w3-code notranslate pythonHigh">
@@ -652,7 +652,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_mean_test">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>With R use built-in math and statistics functions find the P-value for a right tailed hypothesis test for a mean.</p>
         <p>Here, the sample size is 30, the sample mean is 62.1, the sample standard deviation is 13.46, and the test is for a mean bigger than 55.</p>
         <div class="w3-code notranslate pythonHigh">
