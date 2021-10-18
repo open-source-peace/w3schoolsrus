@@ -7,7 +7,7 @@
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <title>Статистика Проверка среднего. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='Статистика Проверка среднего. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='Статистика Гипотеза, проверяющая среднее. Проверить условия. Определить претензии. Уровень значимости. Рассчитать статистику теста. Заключение. Подход критических значений. Подход P-значения. Левосторонние и двусторонние тесты. Уроки для начинающих. W3Schools на русском'>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class='w3-container top'>
@@ -357,8 +357,8 @@
         <a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro"><a href="statistics_mean.html">Среднее</a> генеральной совокупности - это среднее значение генеральной совокупности.</p>
-    <p class="intro">Тесты гипотез используются для проверки утверждения о размере этого среднего совокупности.</p>
+    <p class="intro"><strong><a href="statistics_mean.html">Среднее</a></strong> генеральной совокупности - это среднее значение генеральной совокупности.</p>
+    <p class="intro"><strong>Тесты гипотез</strong> используются для проверки утверждения о размере этого среднего совокупности.</p>
     <hr>
     <h2>Гипотеза, проверяющая среднее</h2>
     <p>Для проверки гипотез используются следующие шаги:</p>
@@ -570,44 +570,51 @@
     <div class="w3-code notranslate">
         <p>Выборки данных <b>подтверждают</b> утверждение о том, что "средний возраст лауреатов Нобелевской премии на момент получения премии превышает 55 лет" при <strong>1&#37; уровне значимости</strong>.</p>
     </div>
-    <h3>The P-Value Approach</h3>
-    <p>For the P-value approach we need to find the <strong>P-value</strong> of the test statistic (TS).</p>
-    <p>If the P-value is <stronger>smaller</stronger> than the significance level (\(\alpha\)), we <strong>reject</strong> the null hypothesis (\(H_{0}\)).</p>
-    <p>The test statistic was found to be \( \approx \underline{2.889} \)</p>
-    <p>For a population proportion test, the test statistic is a T-Value from a <a href="students_t_distribution.html">student's t-distribution</a>.</p>
-    <p>Because this is a <strong>right</strong> tailed test, we need to find the P-value of a t-value <strong>bigger</strong> than 2.889.</p><p>The student's t-distribution is adjusted according to degrees of freedom (df), which is the sample size \((30) - 1 = \underline{29}\)</p>
-    <p>We can find the P-value using a <a href="statistics_t_table.html">T-table</a>, or with a programming language function:</p>
+    <div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h3>Подход P-значения</h3>
+    <p>Для подхода P-значения нам нужно найти <strong>P-значение</strong> тестовой статистики (TS).</p>
+    <p>Если P-значение <b>меньше</b> уровня значимости (\(\alpha\)), мы <b>отклоняем</b> нулевую гипотезу (\(H_{0}\)).</p>
+    <p>Статистика теста оказалась \( \approx \underline{2.889} \)</p>
+    <p>Для теста доли населения статистика теста представляет собой T-значение из <a href="students_t_distribution.html">стьюдент t-распределения</a>.</p>
+    <p>Поскольку это <b>правосторонний</b> тест, нам нужно найти P-значение для T-значения <b>больше</b> чем 2,889.</p>
+    <p>Стьюдент T-распределение корректируется в соответствии со степенями свободы (df), которые являются размером выборки \((30) - 1 = \underline{29}\)</p>
+    <p>Мы можем найти P-значение с помощью <a href="statistics_t_table.html">T-таблицы</a> или с помощью функции языка программирования:</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the Scipy Stats library <code class="w3-codespan">t.cdf()</code> function find the P-value of a T-value bigger than 2.889 at 29 degrees of freedom (df):</p>
+        <p>Используя Python, используйте функцию библиотеки Scipy Stats <code class="w3-codespan">t.cdf()</code> чтобы найти P-значение для T-значения больше 2,889 при 29 степенях свободы (df):</p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             print(1-stats.t.cdf(2.889, 29))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_p_value">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_p_value.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With R use the built-in <code class="w3-codespan">pt()</code> function find the P-value of a T-Value bigger than 2.889 at 29 degrees of freedom (df):</p>
+        <p>С помощью R используйте встроенную функцию <code class="w3-codespan">pt()</code>, чтобы найти P-значение для T-значения больше 2,889 при 29 степенях свободы (df):</p>
         <div class="w3-code notranslate pythonHigh">
             1-pt(2.889, 29)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_p_value">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_p_value.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>Using either method we can find that the P-value is \(\approx \underline{0.0036}\)</p>
-    <p>This tells us that the significance level (\(\alpha\)) would need to be bigger than 0.0036, or 0.36&#37;, to <strong>reject</strong> the null hypothesis.</p>
-    <p>Here is an illustration of this test in a graph:</p>
-    <p><img src="img_p_value_right_mean.svg" alt=""></p>
-    <p>This P-value is <strong>smaller</strong> than any of the common significance levels (10&#37;, 5&#37;, 1&#37;).</p>
-    <p>So the null hypothesis is <strong>rejected</strong> at all of these significance levels.</p>
-    <p>And we can summarize the conclusion stating:</p>
+    <p>Используя любой метод, мы можем найти, что p-значение равно \(\approx \underline{0.0036}\)</p>
+    <p>Это говорит нам о том, что уровень значимости (\(\alpha\)) должен быть больше 0.0036, или 0.36&#37;, чтобы <b>отклонить</b> нулевую гипотезу.</p>
+    <p>Вот иллюстрация этого теста в виде графика:</p>
+    <p><img src="../svg/img_p_value_right_mean.svg" alt="p-значение"></p>
+    <p>Это P-значение <b>меньше</b>, чем любой из распространенных уровней значимости (10&#37;, 5&#37;, 1&#37;).</p>
+    <p>Таким образом, нулевая гипотеза <b>отклоняется</b> на всех этих уровнях значимости.</p>
+    <p>И мы можем резюмировать вывод, констатируя:</p>
     <div class="w3-code notranslate">
-        <p>The sample data <strong>supports</strong> the claim that "The average age of Nobel Prize winners when they received the prize is more than 55" at a <strong>10&#37;, 5&#37;, or 1&#37; significance level</strong>.</p>
+        <p>Выборки данных <b>подтверждают</b> утверждение о том, что "Средний возраст лауреатов Нобелевской премии, когда они получили премию, превышает 55 лет" при <b>10&#37;, 5&#37;, или 1&#37; уровне значимости</b>.</p>
     </div>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> An outcome of an hypothesis test that rejects the null hypothesis with a p-value of 0.36&#37; means:</p>
-        <p>For this p-value, we only expect to reject a true null hypothesis 36 out of 10000 times.</p>
+        <p><b>Примечание:</b> Результат проверки гипотезы, который отклоняет нулевую гипотезу с p-значением 0.36&#37; означает:</p>
+        <p>Для этого p-значения мы ожидаем отклонить истинную нулевую гипотезу только 36 раз из 10000.</p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -615,21 +622,21 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Calculating a P-Value for a Hypothesis Test with Programming</h2>
-    <p>Many programming languages can calculate the P-value to decide outcome of a hypothesis test.</p>
-    <p>Using software and programming to calculate statistics is more common for bigger sets of data, as calculating manually becomes difficult.</p>
-    <p>The P-value calculated here will tell us the <strong>lowest possible significance level</strong> where the null-hypothesis can be rejected.</p>
+</div>    <h2>Расчет P-значения для проверки гипотез с помощью программирования</h2>
+    <p>Многие языки программирования могут вычислять P-значение для определения результата проверки гипотез.</p>
+    <p>Использование программного обеспечения и программирования для расчета статистики более распространено для больших наборов данных, поскольку вычисление вручную становится затруднительным.</p>
+    <p>Рассчитанное здесь P-значение покажет нам <strong>самый низкий возможный уровень значимости</strong>, при котором нулевая гипотеза может быть отклонена.</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With Python use the scipy and math libraries to calculate the P-value for a right tailed hypothesis test for a mean.</p>
-        <p>Here, the sample size is 30, the sample mean is 62.1, the sample standard deviation is 13.46, and the test is for a mean bigger than 55.</p>
+        <p>В Python используйте библиотеки scipy и math для вычисления P-значения для проверки гипотезы с правым хвостом для среднего.</p>
+        <p>Здесь размер выборки - 30, выборочное среднее - 62,1, стандартное отклонение выборки - 13,46, а тест - для среднего значения больше 55. </p>
         <div class="w3-code notranslate pythonHigh">
             import scipy.stats as stats
             <br>
             import math
             <br>
             <br>
-            # Specify the sample mean (x_bar), the sample standard deviation (s), the mean claimed in the null-hypothesis (mu_null), and the sample size (n)
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
             <br>
             x_bar = 62.1
             <br>
@@ -640,23 +647,23 @@
             n = 30
             <br>
             <br>
-            # Calculate the test statistic
+            # Рассчитайте тестовую статистику
             <br>
             test_stat = (x_bar - mu_null)/(s/math.sqrt(n))
             <br>
             <br>
-            # Output the p-value of the test statistic (right tailed test)
+            # Выведите p-значение тестовой статистики (правосторонний тест)
             <br>
             print(1-stats.t.cdf(test_stat, n-1))
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython.html?filename=demo_stat_python_mean_test">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_mean_test.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>With R use built-in math and statistics functions find the P-value for a right tailed hypothesis test for a mean.</p>
-        <p>Here, the sample size is 30, the sample mean is 62.1, the sample standard deviation is 13.46, and the test is for a mean bigger than 55.</p>
+        <p>С помощью R используйте встроенные математические и статистические функции, чтобы найти P-значение для проверки гипотезы с правым хвостом для среднего.</p>
+        <p>Здесь размер выборки составляет 30, среднее значение выборки - 62,1, стандартное отклонение выборки - 13,46, а тест предназначен для среднего значения, превышающего 55.</p>
         <div class="w3-code notranslate pythonHigh">
-            # Specify the sample mean (x_bar), the sample standard deviation (s), the mean claimed in the null-hypothesis (mu_null), and the sample size (n)
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
             <br>
             x_bar <- 62.1
             <br>
@@ -667,26 +674,26 @@
             n <- 30
             <br>
             <br>
-            # Calculate the test statistic
+            # Рассчитайте тестовую статистику
             <br>
             test_stat = (x_bar - mu_null)/(s/sqrt(n))
             <br>
             <br>
-            # P-value the p-value of the test statistic (right tailed test)
+            # P-значение тестовой статистики (правосторонний тест)
             <br>
             1-pt(test_stat, n-1)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryr.asp?filename=demo_stat_r_mean_test">Попробуйте сами &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_mean_test.html">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2>Left-Tailed and Two-Tailed Tests</h2>
-    <p>This was an example of a <strong>right</strong> tailed test, where the alternative hypothesis claimed that parameter is <strong>bigger</strong> than the null hypothesis claim.</p>
-    <p>You can check out an equivalent step-by-step guide for other types here:</p>
+    <h2>Левосторонние и двусторонние тесты</h2>
+    <p>Это был пример <b>правостороннего</b> теста, в котором альтернативная гипотеза утверждала, что параметр <b>больше</b>, чем утверждение нулевой гипотезы.</p>
+    <p>Вы можете ознакомиться с аналогичным пошаговым руководством для других типов здесь:</p>
     <ul>
-        <li><a href="statistics_hypothesis_testing_mean_left.html">Left-Tailed Test</a></li>
-        <li><a href="statistics_hypothesis_testing_mean_2tail.html">Two-Tailed Test</a></li>
+        <li><a href="statistics_hypothesis_testing_mean_left.html">Левосторонний тест</a></li>
+        <li><a href="statistics_hypothesis_testing_mean_2tail.html">Двусторонний тест</a></li>
     </ul>
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="statistics_hypothesis_testing_proportion.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
