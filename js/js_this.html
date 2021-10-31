@@ -517,25 +517,24 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_this_method.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2>What is <b>this</b>?</h2>
-    <p>The JavaScript <code class="w3-codespan">this</code> keyword refers to the object it belongs to.</p>
+    <h2>Что такое <b>this</b>?</h2>
+    <p>JavaScript ключевое слово <code class="w3-codespan">this</code> относится к объекту, которому оно принадлежит.</p>
     <div class="w3-panel w3-note">
-        <p>It has different values depending on where it is used:</p>
+        <p>Оно имеет разные значения в зависимости от того, где оно используется:</p>
         <ul class="w3-ul w3-margin-bottom">
-            <li>In a method, <code class="w3-codespan">this</code> refers to the <b>owner object</b>.</li>
-            <li>Alone, <code class="w3-codespan">this</code> refers to the <b>global object</b>.</li>
-            <li>In a function, <code class="w3-codespan">this</code> refers to the <b>global object</b>.</li>
-            <li>In a function, in strict mode, <code class="w3-codespan">this</code> is <code class="w3-codespan">undefined</code>.</li>
-            <li>In an event, <code class="w3-codespan">this</code> refers to the <b>element</b> that received the event.</li>
-            <li>Methods like <code class="w3-codespan">call()</code>, and <code class="w3-codespan">apply()</code> can refer <code class="w3-codespan">this</code> to <b>any object</b>.</li>
+            <li>В методе <code class="w3-codespan">this</code> относится к <b>владельцу объекта</b>.</li>
+            <li>Сам по себе <code class="w3-codespan">this</code> относится к <b>глобальному объекту</b>.</li>
+            <li>В функции <code class="w3-codespan">this</code> относится к <b>глобальному объекту</b>.</li>
+            <li>В функции в строгом режиме <code class="w3-codespan">this</code> является <code class="w3-codespan">undefined</code>.</li>
+            <li>В событии <code class="w3-codespan">this</code> относится к <b>элементу</b> получившему событие.</li>
+            <li>Такие методы, как <code class="w3-codespan">call()</code> и <code class="w3-codespan">apply()</code> могут ссылаться на <code class="w3-codespan">this</code> в <b>любом объекте</b>.</li>
         </ul>
     </div>
     <hr>
-    <h2><b>this</b> in a Method</h2>
-    <p>In an object method, <code class="w3-codespan">this</code> refers to the &quot;<b>owner</b>&quot; of the
-        method.</p>
-    <p>In the example on the top of this page, <code class="w3-codespan">this</code> refers to the <b>person</b> object.</p>
-    <p>The <b>person</b> object is the <b>owner</b> of the <b>fullName</b> method.</p>
+    <h2><b>this</b> в методе</h2>
+    <p>В методе объекта <code class="w3-codespan">this</code> относится к &quot;<b>владельцу</b>&quot; метода.</p>
+    <p>В примере вверху этой страницы <code class="w3-codespan">this</code> относится к объекту <b>person</b>.</p>
+    <p>Объект <b>person</b> является <b>владельцем</b> метода <b>fullName</b>.</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             fullName : function() {<br>
@@ -549,9 +548,9 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2><b>this</b> Alone</h2>
-    <p>When used alone, the <b>owner</b> is the Global object, so <code class="w3-codespan">this</code> refers to the Global object.</p>
-    <p>In a browser window the Global object is <code class="w3-codespan">[object Window]</code>:</p>
+</div>    <h2><b>this</b> сам по себе</h2>
+    <p>При использовании отдельно <b>владелец</b> является глобальным объектом, поэтому <code class="w3-codespan">this</code> относится к глобальному объекту.</p>
+    <p>В окне браузера глобальный объект <code class="w3-codespan">[object Window]</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -560,8 +559,7 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_this.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>&nbsp;In <strong>strict mode</strong>, when used alone, <code class="w3-codespan">this</code> also refers to the Global object
-        <code class="w3-codespan">[object Window]</code>:</p>
+    <p>В <strong>строгом режиме</strong>, когда используется отдельно, <code class="w3-codespan">this</code> также относится к глобальному объекту <code class="w3-codespan">[object Window]</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -575,7 +573,7 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2><b>this</b> in a Function (Default) </h2>
+</div>    <h2><b>this</b> в функции (по умолчанию)</h2>
     <p>In a JavaScript function, the owner of the function is the <strong>default</strong> binding for <code class="w3-codespan">this</code>.</p>
     <p>So, in a function, <code class="w3-codespan">this</code> refers to the Global object <code class="w3-codespan">[object Window]</code>.</p>
     <div class="w3-example">
