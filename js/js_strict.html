@@ -507,17 +507,15 @@
         &quot;строгом режиме&quot;.</p>
     <hr>
 
-    <h2>The &quot;use strict&quot; Directive</h2>
-    <p>The <code class="w3-codespan">&quot;use strict&quot;</code> directive was new in ECMAScript version 5.</p>
-    <p>It is not a statement, but a literal expression, ignored by earlier versions
-        of JavaScript.</p>
-    <p>The purpose of <code class="w3-codespan">&quot;use strict&quot;</code> is to indicate that the code should be executed in &quot;strict mode&quot;.</p>
-    <p>With strict mode, you can not, for example, use undeclared variables.</p>
-
-    <p>All modern browsers support "use strict" except Internet Explorer 9 and lower:</p>
+    <h2>Директива (указание) &quot;use strict&quot;</h2>
+    <p>Директива <code class="w3-codespan">&quot;use strict&quot;</code> была новой в ECMAScript версии 5.</p>
+    <p>Это не инструкция, а буквальное выражение, игнорируемое более ранними версиями JavaScript.</p>
+    <p>Цель <code class="w3-codespan">&quot;use strict&quot;</code> - указать, что код должен выполняться в &quot;строгом режиме&quot;.</p>
+    <p>В строгом режиме нельзя, например, использовать необъявленные переменные.</p>
+    <p>Все современные браузеры поддерживают "use strict", кроме Internet Explorer 9 и ниже:</p>
     <table class="browserref notranslate">
         <tr>
-            <th style="width:20%;font-size:16px;text-align:left;">Directive</th>
+            <th style="width:20%;font-size:16px;text-align:left;">Директива</th>
             <th style="width:16%;" class="bsChrome" title="Chrome"></th>
             <th style="width:16%;" class="bsEdge"  title="Internet Explorer / Edge"></th>
             <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
@@ -533,10 +531,10 @@
             <td>12.1</td>
         </tr>
     </table>
-    <p>The numbers in the table specify the first browser version that fully supports the directive.</p>
+    <p>Цифры в таблице указывают первую версию браузера, полностью поддерживающую директиву.</p>
     <div class="w3-panel w3-note">
-        <p>You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.</p>
-        <p><code class="w3-codespan">"use strict"</code> is just a string, so IE 9 will not throw an error even if it does not understand it.</p>
+        <p>Вы можете использовать строгий режим во всех своих программах. Это помогает вам писать более чистый код, например предотвращает использование необъявленных переменных.</p>
+        <p><code class="w3-codespan">"use strict"</code> это просто строка, поэтому IE 9 не выдаст ошибку, даже если он её не понимает.</p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -544,11 +542,9 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Declaring Strict Mode</h2>
-    <p>Strict mode is declared by adding <span class="w3-codespan">&quot;use strict&quot;;</span> to the beginning of a
-        script or a function.</p>
-    <p>Declared at the beginning of a script, it has global scope (all code
-        in the script will execute in strict mode):</p>
+</div>    <h2>Объявление строгого режима</h2>
+    <p>Strict mode is declared by adding <span class="w3-codespan">&quot;use strict&quot;;</span> to the beginning of a script or a function.</p>
+    <p>Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh">
