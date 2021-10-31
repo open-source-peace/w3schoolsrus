@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Use Strict. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Use Strict. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Use Strict. Директива (указание) "use strict". Объявление строгого режима. Синтаксис. Что не разрешено в строгом режиме? Уроки для начинающих. W3Schools на русском'>
 <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -503,8 +503,7 @@
         <a class="w3-right w3-btn" href="js_this.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro"><code class="w3-codespan">&quot;use strict&quot;;</code> определяет, что JavaScript код должен выполняться в
-        &quot;строгом режиме&quot;.</p>
+    <p class="intro"><code class="w3-codespan">&quot;use strict&quot;;</code> определяет, что JavaScript код должен выполняться в <strong>&quot;строгом режиме&quot;</strong>.</p>
     <hr>
 
     <h2>Директива (указание) &quot;use strict&quot;</h2>
@@ -543,37 +542,34 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Объявление строгого режима</h2>
-    <p>Strict mode is declared by adding <span class="w3-codespan">&quot;use strict&quot;;</span> to the beginning of a script or a function.</p>
-    <p>Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):</p>
+    <p>Строгий режим объявляется добавлением <span class="w3-codespan">&quot;use strict&quot;;</span> в начало скрипта или функции.</p>
+    <p>Объявленный в начале скрипта, он имеет глобальную область видимости (весь код в скрипте будет выполняться в строгом режиме):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            "use strict";<br>x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
-            because x is not declared<br>
+            "use strict";<br>x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку, потому что x не объявлен<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_strict_variable.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             "use strict";<br>myFunction();<br><br>
             function myFunction() {<br>
-            &nbsp;&nbsp;y = 3.14;&nbsp;&nbsp; // This will also cause an error
-            because y is not declared<br>}</div>
+            &nbsp;&nbsp;y = 3.14;&nbsp;&nbsp; // Это также вызовет ошибку, потому что y не объявлен<br>}</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_strict_global.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Declared inside a function, it has local scope (only the code inside the function is
-        in strict mode):</p>
+    <p>Объявленный внутри функции, он имеет локальную область видимости (только код внутри функции находится в строгом режиме):</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will not cause an error.
-            <br>myFunction();<br><br>function
-            myFunction() {<br>
+            x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это не вызовет ошибки
+            <br>myFunction();<br><br>
+            function myFunction() {<br>
             &nbsp;&nbsp;"use strict";<br>
-            &nbsp; y = 3.14;&nbsp;&nbsp; // This will cause an error<br>}<br>
+            &nbsp; y = 3.14;&nbsp;&nbsp; // Это вызовет ошибку<br>}<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_strict_local.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
@@ -584,27 +580,18 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The &quot;use strict&quot;; Syntax</h2>
-    <p>The syntax, for declaring strict mode, was designed to be compatible with
-        older versions of JavaScript.</p>
-    <p>Compiling a numeric literal (4 + 5;) or a string literal (&quot;John Doe&quot;;) in a
-        JavaScript program has no side effects. It simply compiles to a non existing
-        variable and dies.</p>
-    <p>So <code class="w3-codespan">&quot;use strict&quot;;</code> only matters to new compilers that &quot;understand&quot; the meaning
-        of it.</p>
+    <h2>Синтаксис &quot;use strict&quot;;</h2>
+    <p>Синтаксис для объявления строгого режима был разработан для совместимости со старыми версиями JavaScript.</p>
+    <p>Компиляция числового литерала (4 + 5;) или строкового литерала (&quot;John Doe&quot;;) в программе JavaScript не имеет побочных эффектов. Он просто компилируется в несуществующую переменную и умирает.</p>
+    <p>Таким образом, <code class="w3-codespan">&quot;use strict&quot;;</code> имеет значение только для новых компиляторов, которые &quot;понимают&quot; смысл этого.</p>
     <hr>
 
-    <h2>Why Strict Mode?</h2>
-    <p>Strict mode makes it easier to write &quot;secure&quot; JavaScript.</p>
-    <p>Strict mode changes previously accepted &quot;bad syntax&quot; into real errors.</p>
-    <p>As an example, in normal JavaScript, mistyping a variable name creates a new
-        global variable. In strict mode, this will throw an error, making it impossible
-        to accidentally create a global variable.</p>
-    <p>In normal JavaScript, a developer will not receive any error feedback
-        assigning values to non-writable properties. </p>
-    <p>In strict mode, any assignment to a non-writable property, a getter-only
-        property, a non-existing property, a non-existing variable, or a non-existing
-        object, will throw an error.</p>
+    <h2>Почему именно строгий режим?</h2>
+    <p>Строгий режим упрощает запись &quot;защищенного&quot; JavaScript.</p>
+    <p>Строгий режим заменяет ранее принятый &quot;плохой синтакис&quot; на реальные ошибки.</p>
+    <p>Например, в обычном JavaScript неправильный ввод имени переменной создаёт новую глобальную переменную. В строгом режиме это вызовет ошибку, что сделает невозможным случайное создание глобальной переменной.</p>
+    <p>В обычном JavaScript разработчик не будет получать никаких сообщений об ошибках, присваивающих значения неперезаписываемым свойствам.</p>
+    <p>В строгом режиме любое присвоение не доступному для записи свойству, свойству только для получения, несуществующему свойству, несуществующей переменной или несуществующему объекту вызовет ошибку.</p>
     <div class="w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -612,62 +599,51 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Not Allowed in Strict Mode</h2>
-    <p>Using a variable, without declaring it, is not allowed:</p>
+    <h2>Не разрешено в строгом режиме</h2>
+    <p>Использование переменной без её объявления не допускается:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>
-            x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error</div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_variable.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+            x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку</div>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_variable.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <div class="w3-panel w3-note">
-        <p>Objects are variables too.</p>
-    </div>
+    <div class="w3-panel w3-note"><p>Объекты тоже переменные.</p></div>
 
-    <p>Using an object, without declaring it, is not allowed:</p>
+    <p>Использование объекта без его объявления не допускается:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>
-            x = {p1:10, p2:20};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error</div>
+            x = {p1:10, p2:20};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку</div>
         <p>
             <a class="w3-btn" href="../jstryit/tryjs_strict_object.html" target="_blank">Попробуйте сами &raquo;</a>
         </p>
     </div>
 
-    <p>Deleting a variable (or object) is not allowed.</p>
+    <p>Удаление переменной (или объекта) запрещено.</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>let x = 3.14;<br>
-            delete x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This
-            will cause an error
+            delete x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_delete.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_delete.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Deleting a function is not allowed.</p>
+    <p>Удаление функции запрещено.</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>function x(p1, p2) {}; <br>delete x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // This will cause an error&nbsp;
+            // Это вызовет ошибку&nbsp;
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_delete_function.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_delete_function.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Duplicating a parameter name is not allowed:</p>
+    <p>Дублирование имени параметра запрещено:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>function x(p1, p1) {};&nbsp;&nbsp; // This will cause an error
+            &quot;use strict&quot;;<br>function x(p1, p1) {};&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_duplicate.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_duplicate.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -675,40 +651,32 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>Octal numeric literals are not allowed:</p>
+</div>    <p>Восьмеричные числовые литералы не допускаются:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>let x = 010;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This
-            will cause an error
+            &quot;use strict&quot;;<br>let x = 010;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_octal.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_octal.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Octal escape characters are not allowed:</p>
+    <p>Восьмеричные escape-символы не допускаются:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>
-            let x = &quot;\010&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
+            let x = &quot;\010&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_escape.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_escape.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Writing to a read-only property is not allowed:</p>
+    <p>Запись в свойство, доступное только для чтения, не разрешена:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>
             const obj = {};<br>
             Object.defineProperty(obj, &quot;x&quot;, {value:0, writable:false});<br><br>
-            obj.x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; // This
-            will cause an error
+            obj.x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_readonly.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_readonly.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -716,47 +684,38 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>Writing to a get-only property is not allowed:</p>
+</div>    <p>Запись в свойство только для получения не допускается:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>
             const obj = {get x()
-            {return 0} };<br><br>obj.x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This
-            will cause an error
+            {return 0} };<br><br>obj.x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_getonly.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_getonly.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Deleting an undeletable property is not allowed:</p>
+    <p>Удаление свойства, которое невозможно удалить, запрещено:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>delete Object.prototype; // This will cause an error
+            &quot;use strict&quot;;<br>delete Object.prototype; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_deleteprop.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_deleteprop.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>The word <code class="w3-codespan">eval</code> cannot be used as a variable:</p>
+    <p>Слово <code class="w3-codespan">eval</code> нельзя использовать в качестве переменной:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>let eval = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
+            &quot;use strict&quot;;<br>let eval = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_eval.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_eval.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>The word <code class="w3-codespan">arguments</code> cannot be used as a variable:</p>
+    <p>Слово <code class="w3-codespan">arguments</code> нельзя использовать в качестве переменной:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>let arguments = 3.14;&nbsp;&nbsp;&nbsp; // This will cause an error
+            &quot;use strict&quot;;<br>let arguments = 3.14;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_arguments.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_arguments.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-hide-small">
     <hr>
@@ -764,45 +723,35 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>The <code class="w3-codespan">with</code> statement is not allowed:</p>
+</div>    <p>Оператор <code class="w3-codespan">with</code> не допускается:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>with (Math){x = cos(2)}; // This will cause an error
+            &quot;use strict&quot;;<br>with (Math){x = cos(2)}; // Это вызовет ошибку 
         </div>
         <p><a class="w3-btn" href="../jstryit/tryjs_strict_width.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>For security reasons, <code class="w3-codespan">eval()</code> is not allowed to create
-        variables in the scope from which it was called:</p>
+    <p>По соображениям безопасности <code class="w3-codespan">eval()</code> не разрешено создавать переменные в той области, из которой он был вызван:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>eval (&quot;let x = 2&quot;);<br>
-            alert (x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;// This
-            will cause an error
+            alert (x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;// Это вызовет ошибку
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_eval2.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_eval2.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
-    <p>The <code class="w3-codespan">this</code> keyword in functions behaves
-        differently in strict mode.</p>
-    <p>The <code class="w3-codespan">this</code> keyword refers to the object that
-        called the function.</p>
-    <p>If the object is not specified, functions in strict mode
-        will return <code class="w3-codespan">undefined</code> and functions in normal
-        mode will return the global object (window):</p>
+    <p>Ключевое слово <code class="w3-codespan">this</code> в функциях ведет себя иначе в строгом режиме.</p>
+    <p>Ключевое слово <code class="w3-codespan">this</code> относится к объекту, который вызвал функцию.</p>
+    <p>Если объект не указан, функции в строгом режиме вернут <code class="w3-codespan">undefined</code>, а функции в нормальном режиме вернут глобальный объект (окно):</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             &quot;use strict&quot;;<br>function myFunction() {<br>&nbsp;
-            alert(this); // will alert &quot;undefined&quot;<br>}<br>myFunction(); </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_this.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+            alert(this); // выведет предупреждение &quot;undefined&quot;<br>}<br>myFunction(); </div>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_this.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <hr>
-    <h2>Future Proof!</h2>
-    <p>Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.</p>
-    <p>These are:</p>
+    <h2>На будущее!</h2>
+    <p>Ключевые слова, зарезервированные для будущих версий JavaScript, НЕ могут использоваться в качестве имён переменных в строгом режиме.</p>
+    <p>А именно:</p>
     <ul>
         <li>implements</li>
         <li>interface</li>
@@ -816,15 +765,13 @@
     </ul>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            &quot;use strict&quot;;<br>let public = 1500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
+            &quot;use strict&quot;;<br>let public = 1500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Это вызовет ошибку 
         </div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_strict_names.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a class="w3-btn" href="../jstryit/tryjs_strict_names.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-panel w3-warning">
-        <h2>Watch Out!</h2>
-        <p>The &quot;use strict&quot; directive is only recognized at the <strong>beginning</strong> of a script or a function.</p>
+        <h2>Обратите внимание!</h2>
+        <p>Директива &quot;use strict&quot; распознаётся только в <b>начале</b> скрипта или функции.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
