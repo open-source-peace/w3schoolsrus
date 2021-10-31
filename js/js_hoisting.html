@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Хостинг. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Хостинг. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Хостинг. Что такое подъём? Поднятие JavaScript объявления. Ключевые слова let и const. Инициализации JavaScript не запускаются. Если разработчик не понимает подъема, программы могут содержать баги (ошибки). Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -506,35 +506,33 @@
     <p class="intro"><strong>Хостинг (подъём)</strong> - это стандартное поведение JavaScript, заключающееся в перемещении объявлений наверх.</p>
     <hr>
 
-    <h2>JavaScript Declarations are Hoisted</h2>
-    <p>In JavaScript, a variable can be declared after it has been used.</p>
-    <p>In other words; a variable can be used before it has been declared.</p>
-    <p><b>Пример 1</b> gives the same result as <b>Пример 2</b>:</p>
+    <h2>Поднятие JavaScript объявления</h2>
+    <p>В JavaScript переменную можно объявить после того, как она была использована.</p>
+    <p>Другими словами: переменную можно использовать до того, как она была объявлена.</p>
+    <p><b>Пример 1</b> даёт тот же результат, что и <b>Пример 2</b>:</p>
     <div class="w3-example">
         <h3>Пример 1</h3>
         <div class="w3-code notranslate jsHigh">
-            x = 5; // Assign 5 to x<br>
-            <br>
-            elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
-            elem.innerHTML = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Display x in the element<br><br>var x; // Declare x
+            x = 5; // Присвоить 5 к x<br><br>
+            elem = document.getElementById(&quot;demo&quot;); // Найти элемент <br>
+            elem.innerHTML = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Отобразить x в элементе<br><br>
+            var x; // Объявить x
         </div>
         <a target="_blank" href="../jstryit/tryjs_hoisting1.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример 2</h3>
         <div class="w3-code notranslate jsHigh">
-            var x; // Declare x<br>
-            x = 5; // Assign 5 to x<br><br>
-            elem = document.getElementById(&quot;demo&quot;); // Find an element <br>elem.innerHTML = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Display x in the element<br>
+            var x; // Объявить x<br>
+            x = 5; // Присвоить 5 к x<br><br>
+            elem = document.getElementById(&quot;demo&quot;); // Найти элемент <br>
+            elem.innerHTML = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Отобразить x в элементе<br>
         </div>
         <a target="_blank" href="../jstryit/tryjs_hoisting2.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>To understand this, you have to understand the term &quot;hoisting&quot;.</p>
-    <p>Hoisting is JavaScript's default behavior of moving all declarations to the
-        top of the current scope (to the top of the current script or the current function).</p>
+    <p>Чтобы понять это, вы должны понимать термин &quot;хостинг&quot; (подъём).</p>
+    <p>Подъем - это стандартное поведение JavaScript, заключающееся в перемещении всех объявлений в верхнюю часть текущей области видимости (в верхнюю часть текущего скрипта или текущей функции).</p>
     <div class="w3-hide-small">
     <hr>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -542,18 +540,15 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The let and const Keywords</h2>
-    <p>Variables defined with <code class="w3-codespan">let</code> and <code class="w3-codespan">const</code> are hoisted to the top
-        of the block, but not <em>initialized</em>.<p>Meaning: The block of code is aware of the
-        variable, but it cannot be used until it has been declared.
-    <p>Using a <code class="w3-codespan">let</code> variable before it is declared will result in a
-        <code class="w3-codespan">ReferenceError</code>.</p>
-    <p>The variable is in a &quot;temporal dead zone&quot; from the start
-        of the block until it is declared:</p>
+    <h2>Ключевые слова let и const</h2>
+    <p>Переменные, определенные с помощью <code class="w3-codespan">let</code> и <code class="w3-codespan">const</code> поднимаются в верхнюю часть блока, но не <em>инициализируются</em>.</p>
+    <p>Значение: блоку кода известно о переменной, но её нельзя использовать, пока она не будет объявлена.</p>
+    <p>Использование переменной <code class="w3-codespan">let</code> перед её объявлением приведет к <code class="w3-codespan">ReferenceError</code> (ошибке).</p>
+    <p>Переменная находится во &quot;временной мертвой зоне&quot; от начала блока до его объявления:</p>
 
     <div class="w3-example w3-pale-red">
         <h3>Пример</h3>
-        This will result in a <code class="w3-codespan">ReferenceError</code>:
+        Это приведет к <code class="w3-codespan">ReferenceError</code>:
         <div class="w3-code notranslate jsHigh">
             carName = &quot;Volvo&quot;;<br>
             let carName;
@@ -561,12 +556,11 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_hoisting_let.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Using a <code class="w3-codespan">const</code> variable before it is declared, is a syntax errror,
-        so the code will simply not run.</p>
+    <p>Использование переменной <code class="w3-codespan">const</code> перед её объявлением является синтаксической ошибкой, поэтому код просто не запускается.</p>
 
     <div class="w3-example w3-pale-red">
         <h3>Пример</h3>
-        <p>This code will not run.</p>
+        <p>Этот код не будет работать.</p>
         <div class="w3-code notranslate jsHigh">
             carName = &quot;Volvo&quot;;<br>
             const carName;
@@ -574,7 +568,7 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_hoisting_const.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Read more about let and const in <a href="js_let.html">JS Let / Const</a>.</p>
+    <p>Узнайте больше о let и const в <a href="js_let.html">JS Let / Const</a>.</p>
 
     <div class="w3-hide-small">
     <hr>
@@ -582,47 +576,45 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>JavaScript Initializations are Not Hoisted</h2>
-    <p>JavaScript only hoists declarations, not initializations.</p>
-    <p><strong>Пример 1</strong> does <strong>not</strong> give the same result as
-        <strong>Пример 2</strong>:</p>
+</div>    <h2>Инициализации JavaScript не запускаются </h2>
+    <p>JavaScript поднимает только объявления, но не инициализации.</p>
+    <p><b>Пример 1</b> не даёт такой же результат, как <b>Пример 2</b>:</p>
 
     <div class="w3-example">
         <h3>Пример 1</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 5; // Initialize x<br>var y = 7; // Initialize y<br><br>elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
-            elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display x and y
+            var x = 5; // Инициализировать x<br>var y = 7; // Инициализировать y<br><br>elem = document.getElementById(&quot;demo&quot;); // Найти элемент <br>
+            elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Отобразить x и y
         </div>
         <a target="_blank" href="../jstryit/tryjs_hoisting4.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
         <h3>Пример 2</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 5; // Initialize x<br>
+            var x = 5; // Инициализировать x<br>
             <br>
-            elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
-            elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display x and y<br>
+            elem = document.getElementById(&quot;demo&quot;); // Найти элемент <br>
+            elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Отобразить x и y<br>
             <br>
-            var y = 7; // Initialize y
+            var y = 7; // Инициализировать y
         </div>
         <a target="_blank" href="../jstryit/tryjs_hoisting3.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Does it make sense that y is undefined in the last example?</p>
-    <p>This is because only the declaration (var y), not the initialization (=7) is hoisted to the top.</p>
-    <p>Because of hoisting, y has been declared before it is used, but because
-        initializations are not hoisted, the value of y is undefined.</p>
-    <p>Пример 2 is the same as writing:</p>
+    <p>Имеет ли смысл, что y не определен в последнем примере?</p>
+    <p>Это связано с тем, что наверх поднимается только объявление (var y), а не инициализация (= 7).</p>
+    <p>Из-за подъема y был объявлен до его использования, но поскольку инициализации не поднимаются, значение y не определено.</p>
+    <p>Пример 2 то же самое, что писать:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 5; // Initialize x<br>
-            var y;&nbsp;&nbsp;&nbsp;&nbsp; // Declare y<br>
+            var x = 5; // Инициализировать x<br>
+            var y;&nbsp;&nbsp;&nbsp;&nbsp; // Объявить y<br>
             <br>
-            elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
-            elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display x and y<br>
+            elem = document.getElementById(&quot;demo&quot;); // Найти элемент <br>
+            elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Отобразить x и y<br>
             <br>
-            y = 7;&nbsp;&nbsp;&nbsp; // Assign 7 to y
+            y = 7;&nbsp;&nbsp;&nbsp; // Присвоить 7 к y
         </div>
         <a target="_blank" href="../jstryit/tryjs_hoisting5.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
@@ -633,19 +625,12 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Declare Your Variables At the Top !</h2>
-    <p>Hoisting is (to many developers) an unknown or overlooked behavior of
-        JavaScript.</p><p>
-        If a developer doesn't understand hoisting, programs may contain bugs (errors).<p>
-        To avoid bugs, always declare all variables at the beginning of
-        every scope.<p>
-        Since this is how JavaScript interprets the
-        code, it is always a good rule.
-    </p>
-    <div class="w3-panel w3-note">
-        <p>JavaScript in strict mode does not allow variables to be used if they are
-            not declared.<br>Study <strong>&quot;use strict&quot;</strong> in the next chapter.</p>
-    </div>
+    <h2>Объявите свои переменные наверху!</h2>
+    <p>Подъем (хостинг) является для многих разработчиков неизвестным или недооцененным поведением JavaScript.</p>
+    <p>Если разработчик не понимает подъема, программы могут содержать баги (ошибки).</p>
+    <p>Чтобы избежать ошибок, всегда объявляйте все переменные в начале каждой области.</p>
+    <p>Так как JavaScript интерпретирует код именно так, это всегда хорошее правило.</p>
+    <div class="w3-panel w3-note"><p>JavaScript в строгом режиме не позволяет использовать переменные, если они не объявлены. <br>Изучите <strong>&quot;use strict&quot;</strong> в следующей главе учебника на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p></div>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_scope.html">&#10094; Prev</a>
