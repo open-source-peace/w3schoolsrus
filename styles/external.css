@@ -221,16 +221,18 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
  .w3-example, .w3-note, #w3-exerciseform {margin-left:-16px;margin-right:-16px;}
 }
 
+/* fontawesome */
 @font-face {
- font-family:'fontawesome';
- src: url('../lib/fonts/fontawesome8deb.eot?14663396');
- src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
- url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
- url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
- url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
- font-weight:normal;
- font-style:normal;
-  font-display: swap;
+ font-family: 'fontawesome';
+ font-style: normal;
+ font-weight: normal;
+ font-display: swap;
+ src: url('../lib/fonts/fontawesome.eot?14663396'); /* IE9 Compat Modes */
+ src: url('../lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'), /* IE6-IE8 */
+ url('../lib/fonts/fontawesome.woff2?14663396') format('woff2'), /* Super Modern Browsers */
+ url('../lib/fonts/fontawesome.woff?14663396') format('woff'), /* Modern Browsers */
+ url('../lib/fonts/fontawesome.ttf?14663396') format('truetype'), /* Safari, Android, iOS */
+ url('../lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg'); /* Legacy iOS */
 }
 
 .fa {
@@ -276,23 +278,7 @@ span.marked, span.deprecated {
  background-color:transparent;
 }
 .w3-codeline{background-color:#f1f1f1;color:#000;font-family: Consolas,'courier new', sans-serif;padding:15px;}
-/*
-#nav_login {background-color:#f1f1f1;color:#000;}
-.loginmodalform {margin:auto;width:100%;max-width:700px;text-align:left;padding:20px 40px;}
-.loginmodaldiv input {width:100%;border:1px solid #ccc;padding:8px 12px;}
-.loginmodaldiv .login_submit_container {text-align:right;}
-.loginmodaldiv button {width:30%;min-width:120px;border:none;border-radius:5px;padding:6px 10px;background-color:#4CAF50;color:#fff;cursor:pointer;}
-.loginmodaldiv button:hover {background-color:#46a049;color:#fff;}
-.loginmodaldiv button:focus {outline:none}
-.loginmodaldiv a {padding:0 !important;color:#000;}
-.login_newusertext {width:auto;float:right;text-align:right;}
-.login_forgotpasswordtext {width:auto;float:left;}
-@media screen and (max-width:700px) {
- .loginmodaldiv .login_submit_container {text-align:center;}
- .login_newusertext {width:100%;text-align:center;margin-top:20px;}
- .login_forgotpasswordtext {width:100%;text-align:center;margin-top:30px;}
-}
- */
+
 .darktheme .w3-code span.marked {
  color:#ff9999;
  background-color:transparent;
@@ -598,7 +584,7 @@ a.btnsmall {
  color: black!important;
 }
 
-.ws-btn {font-size: 17px;font-family: 'Source Sans Pro', sans-serif;border:none;border-radius:5px;display:inline-block;padding:6px 18px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;;text-align:center;cursor:pointer;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#04AA6D;color:#ffffff}
+.ws-btn {font-size: 17px;font-family: 'Source Sans Pro', sans-serif;border:none;border-radius:5px;display:inline-block;padding:6px 18px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;;text-align:center;cursor:pointer;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#04AA6D;}
 
 .ws-btn:hover,.ws-btn:active {
  background-color: #059862!important;
@@ -630,9 +616,8 @@ hr {
  margin-top: 1em;
  margin-bottom: 1em;
 }
-.w3-code,w3-codeline{
- font-size:15px;
-}
+.w3-code{font-size:15px;}
+
 #midcontentadcontainer,#mainLeaderboard {
  text-align:center;
  margin-left:-16px;
@@ -742,3 +727,5 @@ figcaption {padding: 10px 0; font-family: calibri, sans-serif;}
 .warning_sign {color:orange;font-size:2em;margin-right:10px}
 .info_sign {background-color: #6EACEF;color:#fff;font-size:1.5em;margin-right:10px;}
 code {font-family: 'Source Code Pro',Menlo,Consolas,monospace;font-size:105%;color:brown;background-color:#f1f1f1;padding: 0 4px;}
+
+.adver {max-width:100%!important} /*для реклами*/
