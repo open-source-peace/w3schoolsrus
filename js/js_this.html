@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Ключевое слово this. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Ключевое слово this. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Ключевое слово this. Что такое THIS в JavaScript? - относится к объекту, которому оно принадлежит. В методе. Сам по себе. В функции. В строгом режиме. В обработчиках событий. Привязка метода объекта. Явная привязка функций. Уроки для начинающих. W3Schools на русском'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
@@ -574,8 +574,8 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2><b>this</b> в функции (по умолчанию)</h2>
-    <p>In a JavaScript function, the owner of the function is the <strong>default</strong> binding for <code class="w3-codespan">this</code>.</p>
-    <p>So, in a function, <code class="w3-codespan">this</code> refers to the Global object <code class="w3-codespan">[object Window]</code>.</p>
+    <p>В функции JavaScript владельцем функции является привязка <b>по умолчанию</b> для <code class="w3-codespan">this</code>.</p>
+    <p>Т.о., в функции <code class="w3-codespan">this</code> относится к глобальному объекту <code class="w3-codespan">[object Window]</code>.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -586,9 +586,9 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_this_function.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2><b>this</b> in a Function (Strict) </h2>
-    <p>JavaScript <strong>strict mode</strong> does not allow default binding.</p>
-    <p>So, when used in a function, in strict mode, <code class="w3-codespan">this</code> is <code class="w3-codespan">undefined</code>.</p>
+    <h2><b>this</b> в функции (строгий режим) </h2>
+    <p>В <strong>строгом режиме</strong> JavaScript не допускается привязка по умолчанию.</p>
+    <p>Таким образом, при использовании в функции в строгом режиме <code class="w3-codespan">this</code> является <code class="w3-codespan">undefined</code>.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -604,21 +604,17 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2><b>this</b> in Event Handlers</h2>
-    <p>In HTML event handlers, <code class="w3-codespan">this</code> refers to the HTML element that received the
-        event:</p>
+</div>    <h2><b>this</b> в обработчиках событий</h2>
+    <p>В обработчиках событий HTML <code class="w3-codespan">this</code> относится к элементу HTML, получившему событие:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;button onclick=&quot;this.style.display='none'&quot;&gt;<br>&nbsp; Click to
-            Remove Me!<br>&lt;/button&gt;</div>
-        <p>
-            <a class="w3-btn" href="../jstryit/tryjs_this_event.html" target="_blank">Попробуйте сами &raquo;</a>
-        </p>
+            &lt;button onclick=&quot;this.style.display='none'&quot;&gt;<br>&nbsp; Нажмите, чтобы удалить меня!<br>&lt;/button&gt;</div>
+        <p><a class="w3-btn" href="../jstryit/tryjs_this_event.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
     <hr>
-    <h2>Object Method Binding</h2>
-    <p>In these examples, <code class="w3-codespan">this</code> is the <b>person</b> object (The person object is the "owner" of the function):</p>
+    <h2>Привязка метода объекта</h2>
+    <p>В этих примерах <code class="w3-codespan">this</code> - это объект <b>person</b> (объект person является "владельцем" функции):</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -648,16 +644,22 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_this_method.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>In other words: <b>this.firstName</b> means the <b>firstName</b> property of <b>this</b> (person) object.</p>
+    <p>Другими словами: <b>this.firstName</b> означает <b>firstName</b> свойство <b>this</b> объекта (person).</p>
+    <div class="w3-hide-small">
     <hr>
-    <h2>Explicit Function Binding</h2>
-    <p>The <code class="w3-codespan">call()</code> and <code class="w3-codespan">apply()</code> methods are predefined JavaScript methods.</p>
-    <p>They can both be used to call an object method with another object as argument.</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Явная привязка функций</h2>
+    <p>Методы <code class="w3-codespan">call()</code> и <code class="w3-codespan">apply()</code> являются предопределенными методами JavaScript.</p>
+    <p>Оба они могут использоваться для вызова метода объекта с другим объектом в качестве аргумента.</p>
     <div class="w3-panel w3-note">
-        <p>You can read more about <code class="w3-codespan">call()</code> and <code class="w3-codespan">apply()</code> later in this tutorial.</p>
+        <p>Вы можете узнать больше о <code class="w3-codespan">call()</code> и <code class="w3-codespan">apply()</code> позже в этом учебнике на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
     </div>
 
-    <p>In the example below, when calling person1.fullName with person2 as argument, <code class="w3-codespan">this</code> will refer to person2, even if it is a method of person1:</p>
+    <p>В приведенном ниже примере при вызове person1.fullName с аргументом person2 <code class="w3-codespan">this</code> будет ссылаться на person2, даже если это метод person1:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -669,7 +671,7 @@
             &nbsp; firstName:&quot;John&quot;,<br>
             &nbsp; lastName: &quot;Doe&quot;,<br>
             }<br>
-            person1.fullName.call(person2);&nbsp; // Will return &quot;John Doe&quot;
+            person1.fullName.call(person2);&nbsp; // Вернёт &quot;John Doe&quot;
         </div>
         <p><a class="w3-btn" href="../jstryit/tryjs_this_call.html" target="_blank">Попробуйте сами &raquo;</a></p>
     </div>
