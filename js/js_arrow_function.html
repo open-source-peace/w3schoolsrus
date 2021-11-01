@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Функция стрелки. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Функция стрелки. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Функция стрелки (или Стрелочные функции). Обработка this. Поддержка браузерами. Уроки для начинающих. W3Schools на русском'>
     <style>
         table.browserref
         {border-collapse:collapse;width:100%;}
@@ -514,53 +514,50 @@
         <a class="w3-right w3-btn" href="js_classes.html">Next &#10095;</a>
     </div>
     <hr>
-
-    <p>Arrow functions were introduced in ES6.</p>
-    <p>Arrow functions allow us to write shorter function syntax:</p>
+    <p class="intro"><strong>Функции стрелки</strong> (или <strong>стрелочные функции</strong>) были введены в ES6.<br><strong>Стрелочные функции</strong> позволяют нам писать более короткий синтаксис функций:</p>
 
     <div class="w3-example">
-        <h3>Before:</h3>
+        <h3>Раньше:</h3>
         <div class="w3-code notranslate jsHigh">
             hello = function() {<br>&nbsp; return &quot;Hello World!&quot;;<br>}</div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function1.html">Попробуйте сами &raquo;</a></p>
     </div>
 
     <div class="w3-example">
-        <h3>With Arrow Function:</h3>
+        <h3>Со стрелочной функцией:</h3>
         <div class="w3-code notranslate jsHigh">
             hello = () =&gt; {<br>&nbsp; return &quot;Hello World!&quot;;<br>}</div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function2.html">Попробуйте сами &raquo;</a></p>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets <em>and</em> the <code class="w3-codespan">return</code> keyword:</p>
+</div>    <p>Код становится короче! Если функция имеет только один оператор, и оператор возвращает значение, вы можете удалить скобки <em>и</em> ключевое слово <code class="w3-codespan">return</code>:</p>
     <div class="w3-example">
-        <h3>Arrow Functions Return Value by Default:</h3>
+        <h3>Стрелочные функции возвращают значение по умолчанию:</h3>
         <div class="w3-code notranslate jsHigh">
             hello = () =&gt; &quot;Hello World!&quot;;</div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function3.html">Попробуйте сами &raquo;</a></p>
     </div>
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> This works only if the function has only one statement.</p>
+        <p><b>Примечание:</b> Это работает, если функция имеет только один оператор.</p>
     </div>
 
-    <p>If you have parameters, you pass them inside the parentheses:</p>
+    <p>Если есть параметры, вы передаёте их в круглых скобках:</p>
 
     <div class="w3-example">
-        <h3>Arrow Function With Parameters:</h3>
+        <h3>Функция стрелки с параметрами:</h3>
         <div class="w3-code notranslate jsHigh">
             hello = (val) =&gt; &quot;Hello &quot; + val;</div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function4.html">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>In fact, if you have only one parameter, you can skip the parentheses as well:</p>
+    <p>Фактически, если есть только один параметр, вы также можете пропустить круглые скобки:</p>
 
     <div class="w3-example">
-        <h3>Arrow Function Without Parentheses:</h3>
+        <h3>Функция стрелки без скобок:</h3>
         <div class="w3-code notranslate jsHigh">
             hello = val =&gt; &quot;Hello &quot; + val;</div>
         <a name="arrowthis"><span style="display:none">this</span></a>
@@ -568,44 +565,49 @@
             <a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function5.html">Попробуйте сами &raquo;</a>
         </p>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>What About <code class="w3-codespan">this</code>?</h2>
-    <p>The handling of <code class="w3-codespan">this</code> is also different in arrow functions compared to regular functions.</p>
-    <p>In short, with arrow functions there are no binding of <code class="w3-codespan">this</code>.</p>
-    <p>In regular functions the <code class="w3-codespan">this</code> keyword represented the object that called the function, which could be the window, the document, a button or whatever.</p>
-    <p>With arrow functions the <code class="w3-codespan">this</code> keyword <em>always</em> represents the object that defined the arrow function.</p>
-    <p>Let us take a look at two examples to understand the difference.</p>
-    <p>Both examples call a method twice, first when the page loads, and once again when the user clicks a button.</p>
-    <p>The first example uses a regular function, and the second example uses an arrow function.</p>
-    <p>The result shows that the first example returns two different objects (window and button), and the second example returns the window object twice, because the window object is the &quot;owner&quot; of the function.</p>
+    <h2>А что насчёт <code class="w3-codespan">this</code>?</h2>
+    <p>Обработка <code class="w3-codespan">this</code> также отличается в стрелочных функциях от обычных функций.</p>
+    <p>Короче говоря, со стрелочными функциями нет привязки <code class="w3-codespan">this</code>.</p>
+    <p>В обычных функциях ключевое слово <code class="w3-codespan">this</code> представляет объект, вызывающий функцию, которым может быть окно, документ, кнопка или что-то ещё.</p>
+    <p>Для стрелочных функций <code class="w3-codespan">this</code> ключевое слово <em>always</em> представляет объект, определяющий стрелочную функцию.</p>
+    <p>Давайте рассмотрим два примера, чтобы понять разницу.</p>
+    <p>Оба примера вызывают метод дважды: сначала при загрузке страницы, и ещё раз, когда пользователь нажимает кнопку.</p>
+    <p>В первом примере используется обычная функция, а во втором - стрелочная функция.</p>
+    <p>Результат показывает, что первый пример возвращает два разных объекта (окно и кнопку), а второй пример возвращает объект окна дважды, поскольку объект окна является &quot;владельцем&quot; функции.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With a regular function <code class="w3-codespan">this</code> represents the object that <em>calls</em> the function:</p>
+        <h3>Пример</h3>
+        <p>В обычной функции <code class="w3-codespan">this</code> представляет объект, который <em>вызывает</em> функцию:</p>
         <div class="w3-code notranslate jsHigh">
-            // Regular Function:<br>hello = function() {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML += this;<br>}<br><br>// The window object calls the function:<br>
-            window.addEventListener(&quot;load&quot;, hello);<br><br>// A button object calls the function:<br>document.getElementById(&quot;btn&quot;).addEventListener(&quot;click&quot;, hello);</div>
+            // Обычная функция:<br>hello = function() {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML += this;<br>}<br><br>// Объект окна вызывает функцию:<br>
+            window.addEventListener(&quot;load&quot;, hello);<br><br>// Объект кнопки вызывает функцию:<br>document.getElementById(&quot;btn&quot;).addEventListener(&quot;click&quot;, hello);</div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function6.html">Попробуйте сами &raquo;</a></p>
     </div>
 
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>With an arrow function <code class="w3-codespan">this</code> represents the <em>owner</em> of the function:</p>
+        <h3>Пример</h3>
+        <p>С помощью функции стрелки <code class="w3-codespan">this</code> представляет <em>владельца</em> функции:</p>
         <div class="w3-code notranslate jsHigh">
-            // Arrow Function:<br>hello = () =&gt; {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML += this;<br>}<br><br>// The window object calls the function:<br>
-            window.addEventListener(&quot;load&quot;, hello);<br><br>// A button object calls the function:<br>document.getElementById(&quot;btn&quot;).addEventListener(&quot;click&quot;, hello);</div>
+            // Функция стрелки:<br>hello = () =&gt; {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML += this;<br>}<br><br>// Объект окна вызывает функцию:<br>
+            window.addEventListener(&quot;load&quot;, hello);<br><br>// Объект кнопки вызывает функцию:<br>document.getElementById(&quot;btn&quot;).addEventListener(&quot;click&quot;, hello);</div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_arrow_function7.html">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>Remember these differences when you are working with functions. Sometimes the behavior of regular functions is what you want, if not, use arrow functions.</p>
+    <p>Помните об этих различиях, когда работаете с функциями. Иногда поведение обычных функций - это то, что вам нужно, если нет, используйте стрелочные функции.</p>
     <hr>
-    <h2>Browser Support</h2>
-    <p>The following table defines the first browser versions with full support for Arrow Functions in JavaScript:</p>
+    <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Поддержка браузерами</h2>
+    <p>В следующей таблице определены первые версии браузеров с полной поддержкой функций стрелок в JavaScript:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px;">
@@ -637,8 +639,7 @@
         <a class="w3-right w3-btn" href="js_classes.html">Next &#10095;</a>
     </div>
 </article>
-<div class="w3-hide-small">
-    <hr>
+<div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
