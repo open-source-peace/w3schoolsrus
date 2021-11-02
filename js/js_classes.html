@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Классы. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Классы. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Классы. Синтаксис. Использование класса. Метод конструктора. Методы класса. Поддержка браузерами. Уроки для начинающих. W3Schools на русском'>
     <style>
         table.browserref
         {border-collapse:collapse;width:100%;}
@@ -514,8 +514,8 @@
         <a class="w3-right w3-btn" href="js_json.html">Next &#10095;</a>
     </div>
     <div class="w3-info">
-        <p>В ECMAScript 2015, также известном как ES6, появились классы JavaScript.</p>
-        <p>Классы JavaScript - это шаблоны для объектов JavaScript.</p>
+        <p>В ECMAScript 2015, также известном как ES6, появились <strong>JavaScript классы</strong>.</p>
+        <p><strong>JavaScript классы</strong> - это шаблоны для объектов JavaScript.</p>
     </div>
 
     <h2>Синтаксис JavaScript класса</h2>
@@ -569,12 +569,12 @@
     <p>В приведенном выше примере используется <b>класс Car</b> для создания двух <b>объектов Car</b>.</p>
 
     <div class="w3-panel w3-note">
-        <p>Метод конструктора вызывается автоматически при создании нового объекта.</p>
+        <p><strong>Метод конструктора</strong> вызывается автоматически при создании нового объекта.</p>
     </div>
     <hr>
 
     <h2>Метод конструктора</h2>
-    <p>Метод конструктора - это особый метод:</p>
+    <p><strong>Метод конструктора</strong> - это особый метод:</p>
     <ul>
         <li>У него должно быть точное имя &quot;конструктор&quot;</li>
         <li>Он выполняется автоматически при создании нового объекта</li>
@@ -588,7 +588,7 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <h2>Методы класса</h2>
-    <p>Методы класса создаются с тем же синтаксисом, что и методы объекта.</p>
+    <p><strong>Методы класса</strong> создаются с тем же синтаксисом, что и методы объекта.</p>
     <p>Используйте ключевое слово <code class="w3-codespan">class</code> для создания класса.</p>
     <p>Всегда добавляйте метод <code class="w3-codespan">constructor()</code>.</p>
     <p>Затем добавьте любое количество методов.</p>
@@ -620,14 +620,12 @@
             &nbsp;  }<br>}<br><br>
             let myCar = new Car(&quot;Ford&quot;, 2014);<br>
             document.getElementById(&quot;demo&quot;).innerHTML =<br>
-            "My car is " + myCar.age() + " years old.";
+            "Моему автомобилю " + myCar.age() + " лет.";
         </div>
-        <p>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_class_method.html">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_class_method.html">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>You can send parameters to Class methods:</p>
+    <p>Вы можете отправлять параметры в методы класса:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -637,15 +635,13 @@
             age(x) {<br>&nbsp;&nbsp;&nbsp; return x - this.year;<br>&nbsp; }<br>}<br><br>
             let date = new Date();<br>
             let year = date.getFullYear();<br><br>let myCar = new
-            Car(&quot;Ford&quot;, 2014);<br>document.getElementById(&quot;demo&quot;).innerHTML=<br>&quot;My car is
-            &quot; + myCar.age(year) + &quot; years old.&quot;; </div>
-        <p>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_class_method2.html">Попробуйте сами &raquo;</a>
-        </p>
+            Car(&quot;Ford&quot;, 2014);<br>document.getElementById(&quot;demo&quot;).innerHTML=<br>&quot;Моему автомобилю &quot; + myCar.age(year) + &quot; лет.&quot;;
+        </div>
+        <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_class_method2.html">Попробуйте сами &raquo;</a></p>
     </div>
     <hr>
-    <h2>Browser Support</h2>
-    <p>The following table defines the first browser version with full support for Classes in JavaScript: </p>
+    <h2>Поддержка браузерами</h2>
+    <p>В следующей таблице определяется первая версия браузера с полной поддержкой классов в JavaScript:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px;">
@@ -672,7 +668,7 @@
         </table>
     </div>
 
-    <div class="w3-panel w3-note"><p>You will learn a lot more about JavaScript Classes later in this tutorial.</p></div>
+    <div class="w3-panel w3-note"><p>Вы узнаете намного больше о классах JavaScript позже в этом учебнике на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p></div>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_arrow_function.html">&#10094; Prev</a>
