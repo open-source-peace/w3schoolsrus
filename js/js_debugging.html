@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Дебагинг (отладка). Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Отладка (дебагинг). Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Отладка (дебагинг) кода. Метод console.log(). Установка точек останова. Ключевое слово debugger. Основные инструменты отладки браузеров. Как запустить консоль в браузере? Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -504,57 +504,58 @@
     </div>
     <hr>
 
-    <div class="w3-note w3-panel"><p>Ошибки могут (будут) возникать каждый раз, когда вы пишете новый компьютерный код.</p></div>
+    <div class="w3-note w3-panel"><p><strong>Ошибки (баги)</strong> могут (будут) возникать каждый раз, когда вы пишете новый компьютерный код.</p></div>
     <hr>
 
-    <h2>Code Debugging</h2>
-    <p>Programming code might contain syntax errors, or logical errors.</p>
-    <p>Many of these errors are difficult to diagnose.</p>
-    <p>Often, when programming code contains errors, nothing will happen. There are no error messages, and you will get no indications where to search for errors.</p>
-    <p>Searching for (and fixing) errors in programming code is called code debugging.</p>
+    <h2>Отладка (дебагинг) кода</h2>
+    <p>Программный код может содержать синтаксические или логические ошибки.</p>
+    <p>Многие из этих ошибок сложно диагностировать.</p>
+    <p>Часто, когда программный код содержит ошибки, ничего не происходит. Сообщения об ошибках отсутствуют, и вы не получите указаний, где искать ошибки.</p>
+    <p>Поиск (и исправление) ошибок в программном коде называется <strong>отладкой (или дебагингом) кода</strong>.</p>
     <hr>
-    <h2>JavaScript Debuggers</h2>
-    <p>Debugging is not easy. But fortunately, all modern browsers have a built-in JavaScript debugger.</p>
-    <p>Built-in debuggers can be turned on and off, forcing errors to be reported to the user.</p>
-    <p>With a debugger, you can also set breakpoints (places where code execution can be stopped), and examine variables while the code is executing.</p>
-    <p>Normally, otherwise follow the steps at the bottom of this page, you activate debugging in your browser with the F12 key, and select &quot;Console&quot; in the debugger menu.<br></p>
+    <h2>Отладчики JavaScript</h2>
+    <p>Отладка - непростая задача. Но, к счастью, все современные браузеры имеют встроенный отладчик JavaScript.</p>
+    <p>Встроенные отладчики можно включать и выключать, заставляя пользователя сообщать об ошибках.</p>
+    <p>С помощью отладчика вы также можете устанавливать точки останова (места, где выполнение кода может быть остановлено) и проверять переменные во время выполнения кода.</p>
+    <p>Обычно так. В противном случае следуя инструкциям внизу страницы, вы активируете отладку в своем браузере с помощью клавиши F12 и выбираете &quot;Консоль&quot; в меню отладчика.</p>
     <hr>
 
-    <h2>The console.log() Method</h2>
-    <p>If your browser supports debugging, you can use <code class="w3-codespan">console.log()</code> to display JavaScript values in the debugger window:</p>
+    <h2>Метод console.log()</h2>
+    <p>Если ваш браузер поддерживает отладку, вы можете использовать <code class="w3-codespan">console.log()</code> для отображения значений JavaScript в окне отладчика:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;My First Web Page&lt;/h1&gt;<br><br>
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Моя первая веб-страница&lt;/h1&gt;<br><br>
             &lt;script&gt;<br>a = 5;<br>b = 6;<br>c = a + b;<br>console.log(c);<br>&lt;/script&gt;<br>
             <br>&lt;/body&gt;<br>&lt;/html&gt;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_console.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
     <div class="w3-note w3-panel">
-        <p><b>Tip:</b> Read more about the <code class="w3-codespan">console.log()</code> method in our <a href="../jsref/met_console_log.html">JavaScript Console Reference</a>.</p>
+        <p><b>Совет:</b> Дополнительные сведения о методе <code class="w3-codespan">console.log()</code> смотрите в <a href="../jsref/met_console_log.html">Справочнике по JavaScript консоле</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
     </div>
     <hr>
 
-    <h2>Setting Breakpoints</h2>
-    <p>In the debugger window, you can set breakpoints in the JavaScript code.</p>
-    <p>At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values.</p>
-    <p>After examining values, you can resume the execution of code (typically with a play button).</p>
-    <div class="w3-hide-small">
+    <h2>Установка точек останова</h2>
+    <p>В окне отладчика вы можете установить точки останова в JavaScript коде.</p>
+    <p>В каждой точке останова JavaScript прекращает выполнение и позволяет вам проверять значения JavaScript.</p>
+    <p>После изучения значений вы можете возобновить выполнение кода (обычно с помощью кнопки воспроизведения).</p>
     <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>The debugger Keyword</h2>
-    <p>The <code class="w3-codespan">debugger</code> keyword stops the execution of JavaScript, and calls (if available) the debugging function.</p>
-    <p>This has the same function as setting a breakpoint in the debugger.</p>
-    <p>If no debugging is available, the debugger statement has no effect.</p>
-    <p>With the debugger turned on, this code will stop executing before it executes the third line.</p>
+</div>
+    <h2>Ключевое слово debugger</h2>
+    <p>Ключевое слово <code class="w3-codespan">debugger</code> останавливает выполнение JavaScript и вызывает (если доступно) функцию отладки.</p>
+    <p>Это та же функция, что и установка точки останова в отладчике.</p>
+    <p>Если отладка недоступна, инструкция отладчика не действует.</p>
+    <p>При включенном отладчике этот код перестанет выполняться до того, как выполнит третью строку.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 15 * 5;<br>debugger;<br>document.getElementById(&quot;demo&quot;).innerHTML = x;
         </div>
@@ -562,46 +563,45 @@
     </div>
     <hr>
 
-    <h2>Major Browsers' Debugging Tools</h2>
-    <p>Normally, you activate debugging in your browser with F12, and select &quot;Console&quot; in the debugger menu.</p>
-    <p>Otherwise follow these steps:</p>
+    <h2>Основные инструменты отладки браузеров</h2>
+    <p>Обычно вы активируете отладку в своём браузере с помощью F12 и выбираете &quot;Console&quot; в меню отладчика.</p>
+    <p>В противном случае выполните следующие действия:</p>
     <h2>Chrome</h2>
     <ul>
-        <li>Open the browser.</li>
-        <li>From the menu, select &quot;More tools&quot;.</li>
-        <li>From tools, choose &quot;Developer tools&quot;.</li>
-        <li>Finally, select Console.</li>
+        <li>Открыть браузер.</li>
+        <li>В меню выберите &quot;Дополнительные инструменты&quot;.</li>
+        <li>В инструментах выберите &quot;Инструменты разработчика&quot;.</li>
+        <li>Затем выберите Консоль.</li>
     </ul>
     <h2>Firefox</h2>
     <ul>
-        <li>Open the browser.</li>
-        <li>From the menu, select &quot;Web Developer&quot;.</li>
-        <li>Finally, select &quot;Web Console&quot;.</li>
+        <li>Открыть браузер.</li>
+        <li>В меню выберите &quot;Инструменты веб-разработчика&quot;.</li>
+        <li>Затем выберите &quot;Консоль&quot;.</li>
     </ul>
     <h2>Edge</h2>
     <ul>
-        <li>Open the browser.</li>
-        <li>From the menu, select &quot;Developer Tools&quot;.</li>
-        <li>Finally, select &quot;Console&quot;.</li>
+        <li>Открыть браузер.</li>
+        <li>В меню выберите &quot;Инструменты разработчика&quot;.</li>
+        <li>Затем выберите &quot;Консоль&quot;.</li>
     </ul>
     <h2>Opera</h2>
     <ul>
-        <li>Open the browser.</li>
-        <li>From the menu, select &quot;Developer&quot;.</li>
-        <li>From &quot;Developer&quot;, select &quot;Developer tools&quot;.<br></li>
-        <li>Finally, select &quot;Console&quot;.</li>
+        <li>Открыть браузер.</li>
+        <li>В меню выберите &quot;Разработка&quot;.</li>
+        <li>Из &quot;Разработка&quot; выберите &quot;Инструменты разработчика&quot;.<br></li>
+        <li>Затем выберите &quot;Консоль&quot;.</li>
     </ul>
     <h2>Safari</h2>
     <ul>
-        <li>Go to Safari, Preferences, Advanced in the main menu.</li>
-        <li>Check &quot;Enable Show Develop menu in menu bar&quot;.</li>
-        <li>When the new option &quot;Develop&quot; appears in the menu:<br>Choose &quot;Show Error Console&quot;.</li>
+        <li>Перейдите в Safari, Настройки, Дополнительно в главном меню..</li>
+        <li>Установите флажок &quot;Включить показывать меню разработки в строке меню&quot;.</li>
+        <li>При появлении новой опции &quot;Develop&quot; появляется в меню:<br>Выберите &quot;Show Error Console&quot;.</li>
     </ul>
     <hr>
-    <h2>Did You Know?</h2>
+    <h2>А вы знаете?</h2>
     <div class="w3-panel w3-note">
-        <p>Debugging is the process of testing, finding, and reducing bugs (errors) in computer programs.<br>
-            The first known computer bug was a real bug (an insect) stuck in the electronics.</p>
+        <p><strong>Отладка - это процесс тестирования, поиска и устранения багов (ошибок) в компьютерных программах</strong>.<br>Первой известной компьютерной ошибкой был настоящий жук (<i>bug - с анг. насекомое</i>), застрявший в электронике. Именно поэтому ошибки в программах стали называть багами (жуками).</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
@@ -609,8 +609,7 @@
         <a class="w3-right w3-btn" href="js_conventions.html">Next &#10095;</a>
     </div>
 </article>
-<div class="w3-hide-small">
-    <hr>
+<div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
