@@ -514,16 +514,16 @@
         <a class="w3-right w3-btn" href="js_json.html">Next &#10095;</a>
     </div>
     <div class="w3-info">
-        <p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.</p>
-        <p>JavaScript Classes are templates for JavaScript Objects.</p>
+        <p>В ECMAScript 2015, также известном как ES6, появились классы JavaScript.</p>
+        <p>Классы JavaScript - это шаблоны для объектов JavaScript.</p>
     </div>
 
-    <h2>JavaScript Class Syntax</h2>
-    <p>Use the keyword <code class="w3-codespan">class</code> to create a class.</p>
-    <p>Always add a method named <code class="w3-codespan">constructor()</code>:</p>
+    <h2>Синтаксис JavaScript класса</h2>
+    <p>Используйте ключевое слово <code class="w3-codespan">class</code> для создания класса.</p>
+    <p>Всегда добавляйте метод с именем <code class="w3-codespan">constructor()</code>:</p>
 
     <div class="w3-example">
-        <h3>Syntax</h3>
+        <h3>Синтаксис</h3>
         <div class="w3-code notranslate jsHigh">
             class ClassName {<br>
             &nbsp;  constructor() { ... }<br>
@@ -532,7 +532,7 @@
     </div>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             class Car {<br>
             &nbsp;  constructor(name, year) {<br>
@@ -542,65 +542,59 @@
             }
         </div>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <p>The example above creates a class named &quot;Car&quot;.</p>
-    <p>The class has two initial properties: "name" and "year".</p>
+    <p>В приведенном выше примере создается класс с именем &quot;Car&quot;.</p>
+    <p>Класс имеет два начальных свойства: "имя" и "год".</p>
     <div class="w3-panel w3-note">
-        <p>A JavaScript class is <b>not</b> an object.</p>
-        <p>It is a <b>template</b> for JavaScript objects.</p>
+        <p>JavaScript класс <b>не является</b> объектом.</p>
+        <p>Он является <b>шаблоном</b> для JavaScript объектов.</p>
     </div>
     <hr>
-    <h2>Using a Class</h2>
-    <p>When you have a class, you can use the class to create objects:</p>
+    <h2>Использование класса</h2>
+    <p>Когда есть класс, вы можете использовать его для создания объектов:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let myCar1 = new Car(&quot;Ford&quot;, 2014);<br>
             let myCar2 = new Car(&quot;Audi&quot;, 2019);
         </div>
-        <p>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_class_init.html">Попробуйте сами &raquo;</a>
-        </p>
+        <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_class_init.html">Попробуйте сами &raquo;</a></p>
     </div>
 
-    <p>The example above uses the <b>Car class</b> to create two <b>Car objects</b>.</p>
+    <p>В приведенном выше примере используется <b>класс Car</b> для создания двух <b>объектов Car</b>.</p>
 
     <div class="w3-panel w3-note">
-        <p>The constructor method is called automatically when a new object is created.</p>
+        <p>Метод конструктора вызывается автоматически при создании нового объекта.</p>
     </div>
     <hr>
 
-    <h2>The Constructor Method</h2>
-    <p>The constructor method is a special method:</p>
+    <h2>Метод конструктора</h2>
+    <p>Метод конструктора - это особый метод:</p>
     <ul>
-        <li>It has to have the exact name &quot;constructor&quot;</li>
-        <li>It is executed automatically when a new object is created</li>
-        <li>It is used to initialize object properties</li>
+        <li>У него должно быть точное имя &quot;конструктор&quot;</li>
+        <li>Он выполняется автоматически при создании нового объекта</li>
+        <li>Он используется для инициализации свойств объекта</li>
     </ul>
-    <p>If you do not define a constructor method, JavaScript
-        will add an empty constructor method.
-    </p>
-    <div class="w3-hide-small">
-    <hr>
+    <p>Если вы не указываете метод конструктора, JavaScript добавит пустой метод конструктора.</p>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Class Methods</h2>
-    <p>Class methods are created with the same syntax as object methods.</p>
-    <p>Use the keyword <code class="w3-codespan">class</code> to create a class.</p>
-    <p>Always add a <code class="w3-codespan">constructor()</code> method.</p>
-    <p>Then add any number of methods.</p>
+    <h2>Методы класса</h2>
+    <p>Методы класса создаются с тем же синтаксисом, что и методы объекта.</p>
+    <p>Используйте ключевое слово <code class="w3-codespan">class</code> для создания класса.</p>
+    <p>Всегда добавляйте метод <code class="w3-codespan">constructor()</code>.</p>
+    <p>Затем добавьте любое количество методов.</p>
 
     <div class="w3-example">
-        <h3>Syntax</h3>
+        <h3>Синтаксис</h3>
         <div class="w3-code notranslate jsHigh">
             class ClassName {<br>
             &nbsp;  constructor() { ... }<br>
@@ -611,10 +605,10 @@
         </div>
     </div>
 
-    <p>Create a Class method named "age", that returns the Car age:</p>
+    <p>Создайте метод класса с именем &quot;age&quot; (&quot;возраст&quot;), который возвращает возраст автомобиля:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             class Car {<br>
             &nbsp;  constructor(name, year) {<br>
@@ -636,7 +630,7 @@
     <p>You can send parameters to Class methods:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             class Car {<br>&nbsp; constructor(name, year) {<br>&nbsp;&nbsp;&nbsp;
             this.name = name;<br>&nbsp;&nbsp;&nbsp; this.year = year;<br>&nbsp; }<br>&nbsp;
@@ -685,8 +679,7 @@
         <a class="w3-right w3-btn" href="js_json.html">Next &#10095;</a>
     </div>
 </article>
-<div class="w3-hide-small">
-    <hr>
+<div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
