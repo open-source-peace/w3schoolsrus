@@ -506,30 +506,30 @@
     <p class="intro">Всегда используйте одни и те же соглашения о кодировании для всех своих проектов JavaScript.</p>
     <hr>
 
-    <h1>JavaScript Coding Conventions</h1>
-    <p>Coding conventions are <strong>style guidelines for programming</strong>. They typically cover:</p>
+    <h1>Соглашения о кодировании JavaScript</h1>
+    <p><strong>Соглашения о кодировании</strong> - это <strong>рекомендации по стилю программирования</strong>. Обычно они содержат:</p>
     <ul>
-        <li>Naming and declaration rules for variables and functions.</li>
-        <li>Rules for the use of white space, indentation, and comments.</li>
-        <li>Programming practices and principles</li>
+        <li>Правила именования и объявления для переменных и функций</li>
+        <li>Правила использования пробелов, отступов и комментариев</li>
+        <li>Практика и принципы программирования</li>
     </ul>
 
-    <p>Coding conventions <strong>secure quality</strong>:</p>
+    <p>Правила кодирования <strong>безопасное качество</strong>:</p>
     <ul>
-        <li>Improves code readability</li>
-        <li>Make code maintenance easier</li>
+        <li>Улучшают читаемость кода</li>
+        <li>Упрощают обслуживание кода</li>
     </ul>
-    <p>Coding conventions can be documented rules for teams to follow, or just be your individual coding practice.</p>
+    <p>Соглашения о кодировании могут быть задокументированными правилами, которым должны следовать команды, или просто вашей индивидуальной практикой кодирования.</p>
 
     <div class="w3-panel w3-note">
-        <p>This page describes the general JavaScript code conventions used by W3Schools.<br> You should also read the next chapter &quot;Best Practices&quot;, and learn how to avoid coding pitfalls.</p>
+        <p>На этой странице описаны общие соглашения о коде JavaScript, используемые W3Schools. <br>Вам также следует прочитать следующую главу &quot;Лучшие практики&quot; и узнать, как избежать ошибок при программировании.</p>
     </div>
     <hr>
 
-    <h2>Variable Names</h2>
-    <p>At W3schools we use <strong>camelCase</strong> for identifier names (variables and functions).</p>
-    <p>All names start with a <strong>letter</strong>.</p>
-    <p>At the bottom of this page, you will find a wider discussion about naming rules.</p>
+    <h2>Имена переменных</h2>
+    <p>В W3schools мы используем <b>camelCase</b> (верблюжийРегистр) для имен идентификаторов (переменных и функций).</p>
+    <p>Все имена начинаются с <b>буквы</b>.</p>
+    <p>Внизу страницы вы найдете более широкое обсуждение правил именования.</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
@@ -538,28 +538,26 @@
     </div>
     <hr>
 
-    <h2>Spaces Around Operators</h2>
-    <p>Always put spaces around operators ( = + - * / ), and after commas:</p>
+    <h2>Пространства (пробелы) вокруг операторов</h2>
+    <p>Всегда ставьте пробелы вокруг операторов ( = + - * / ) и после запятых:</p>
 
     <div class="w3-example">
-        <h3>Examples:</h3>
+        <h3>Примеры:</h3>
         <div class="w3-code notranslate jsHigh">
             let x = y + z;<br>
             const myArray = [&quot;Volvo&quot;, &quot;Saab&quot;,
             &quot;Fiat&quot;];</div>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Code Indentation</h2>
-
-    <p>Always use 2 spaces for indentation of code blocks:</p>
+    <h2>Отступы в коде</h2>
+    <p>Всегда используйте 2 пробела для отступов кодовых блоков:</p>
     <div class="w3-example">
-        <h3>Functions:</h3>
+        <h3>Функции:</h3>
         <div class="w3-code notranslate jsHigh">
             function toCelsius(fahrenheit) {<br>
             &nbsp; return (5 / 9) * (fahrenheit - 32);<br>
@@ -567,18 +565,18 @@
         </div>
     </div>
 
-    <div class="w3-panel w3-warning"><p>Do not use tabs (tabulators) for indentation. Different editors interpret tabs differently.</p></div>
+    <div class="w3-panel w3-warning"><p>Не используйте табы (табуляторы) для отступов. Разные редакторы по-разному интерпретируют табы.</p></div>
     <hr>
 
-    <h2>Statement Rules</h2>
-    <p>General rules for simple statements:</p>
+    <h2>Правила инструкций</h2>
+    <p>Общие правила для простых инструкций:</p>
 
     <ul>
-        <li>Always end a simple statement with a semicolon.</li>
+        <li>Всегда заканчивайте простую инструкцию точкой с запятой.</li>
     </ul>
 
     <div class="w3-example">
-        <h3>Examples:</h3>
+        <h3>Примеры:</h3>
         <div class="w3-code notranslate jsHigh">
             const cars = [&quot;Volvo&quot;, &quot;Saab&quot;,
             &quot;Fiat&quot;];<br><br>
@@ -587,16 +585,16 @@
             &quot;blue&quot;<br>};</div>
     </div>
 
-    <p>General rules for complex (compound) statements:</p>
+    <p>Общие правила для сложных (составных) инструкций:</p>
 
     <ul>
-        <li>Put the opening bracket at the end of the first line.</li>
-        <li>Use one space before the opening bracket.</li>
-        <li>Put the closing bracket on a new line, without leading spaces.</li>
-        <li>Do not end a complex statement with a semicolon.</li>
+        <li>Поместите открывающую скобку в конец первой строки</li>
+        <li>Используйте один пробел перед открывающей скобкой</li>
+        <li>Поместите закрывающую скобку в новую строку без начальных пробелов</li>
+        <li>Не заканчивайте сложную инструкцию точкой с запятой</li>
     </ul>
     <div class="w3-example">
-        <h3>Functions:</h3>
+        <h3>Функции:</h3>
         <div class="w3-code notranslate jsHigh">
             function toCelsius(fahrenheit) {<br>
             &nbsp;&nbsp;return (5 / 9) * (fahrenheit - 32);<br>
@@ -605,46 +603,44 @@
     </div>
 
     <div class="w3-example">
-        <h3>Loops:</h3>
+        <h3>Циклы:</h3>
         <div class="w3-code notranslate jsHigh">
             for (let i = 0; i &lt; 5; i++) {<br>&nbsp;&nbsp;x += i;<br>}</div>
     </div>
 
     <div class="w3-example">
-        <h3>Conditionals:</h3>
+        <h3>Условия:</h3>
         <div class="w3-code notranslate jsHigh">
             if (time &lt; 20) {<br>&nbsp;&nbsp;greeting = &quot;Good day&quot;;<br>} else {<br>
-            &nbsp;
-            greeting = &quot;Good evening&quot;;<br>}</div>
+            &nbsp;greeting = &quot;Good evening&quot;;<br>}</div>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Object Rules</h2>
-    <p>General rules for object definitions:</p>
+    <h2>Правила объекта</h2>
+    <p>Общие правила для определений объектов:</p>
 
     <ul>
-        <li>Place the opening bracket on the same line as the object name.</li>
-        <li>Use colon plus one space between each property and its value.</li>
-        <li>Use quotes around string values, not around numeric values.</li>
-        <li>Do not add a comma after the last property-value pair.</li>
-        <li>Place the closing bracket on a new line, without leading spaces.</li>
-        <li>Always end&nbsp;an object definition with a semicolon. </li>
+        <li>Разместите открывающую скобку на той же строке, что и имя объекта</li>
+        <li>Используйте двоеточие плюс один пробел между каждым свойством и его значением</li>
+        <li>Используйте кавычки для строковых значений, а не для числовых значений</li>
+        <li>Не ставьте запятую после последней пары &quot;свойство-значение&quot; </li>
+        <li>Поместите закрывающую скобку в новую строку без пробелов в начале</li>
+        <li>Всегда заканчивайте определение объекта точкой с запятой</li>
     </ul>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh" style="color: #404040">
             const person = {<br>&nbsp; firstName: &quot;John&quot;,<br>&nbsp;
             lastName: &quot;Doe&quot;,<br>&nbsp; age: 50,<br>&nbsp; eyeColor:
             &quot;blue&quot;<br>};</div>
     </div>
 
-    <p>Short objects can be written compressed, on one line, using spaces only between properties, like this:</p>
+    <p>Короткие объекты могут быть записаны сжатыми в одну строку, используя только пробелы между свойствами, например:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh" style="color: #404040">
@@ -663,8 +659,7 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_line_break.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -703,8 +698,7 @@
         <div class="w3-code notranslate htmlHigh">
             &lt;script src=&quot;myscript.js&quot;&gt;&lt;/script&gt;</div>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -750,8 +744,7 @@
         <a class="w3-right w3-btn" href="js_best_practices.html">Next &#10095;</a>
     </div>
 </article>
-<div class="w3-hide-small">
-    <hr>
+<div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
