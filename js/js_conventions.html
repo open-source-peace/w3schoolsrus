@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Гид по стилю. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Гид по стилю. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Гид по стилю. Соглашения о кодировании JavaScript. Имена переменных. Пространства (пробелы) вокруг операторов. Отступы в коде. Правила инструкций. Правила объекта. Длина строки. Соглашения об именах. Загрузка JavaScript в HTML. Доступ к HTML-элементам. Расширения файлов. Имена файлов в нижнем регистре. Производительность. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -489,7 +489,7 @@
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
-          <div class='w3-hide-small'>
+          <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -503,7 +503,7 @@
         <a class="w3-right w3-btn" href="js_best_practices.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Всегда используйте одни и те же соглашения о кодировании для всех своих проектов JavaScript.</p>
+    <p class="intro">Всегда используйте одни и те же <strong>соглашения о кодировании</strong> для всех своих проектов JavaScript.</p>
     <hr>
 
     <h1>Соглашения о кодировании JavaScript</h1>
@@ -548,6 +548,7 @@
             const myArray = [&quot;Volvo&quot;, &quot;Saab&quot;,
             &quot;Fiat&quot;];</div>
     </div>
+    <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
@@ -614,6 +615,7 @@
             if (time &lt; 20) {<br>&nbsp;&nbsp;greeting = &quot;Good day&quot;;<br>} else {<br>
             &nbsp;greeting = &quot;Good evening&quot;;<br>}</div>
     </div>
+    <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
@@ -648,65 +650,67 @@
     </div>
     <hr>
 
-    <h2>Line Length &lt; 80</h2>
-    <p>For readability, avoid lines longer than 80 characters.</p>
-    <p>If a JavaScript statement does not fit on one line, the best place to break it, is after an operator or a comma.</p>
+    <h2>Длина строки &lt; 80</h2>
+    <p>Для удобства чтения избегайте строк длиной более 80 символов.</p>
+    <p>Если оператор JavaScript не умещается в одной строке, лучше всего его разорвать после оператора или запятой.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             document.getElementById(&quot;demo&quot;).innerHTML =<br>
             &quot;Hello Dolly.&quot;;
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_line_break.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
+    <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Naming Conventions</h2>
-    <p>Always use the same naming convention for all your code. For example:</p>
+    <h2>Соглашения об именах</h2>
+    <p>Всегда используйте одно и то же соглашение об именах для всего кода. Например:</p>
     <ul>
-        <li>Variable and function names written as <strong>camelCase</strong></li>
-        <li>Global variables written in <strong>UPPERCASE </strong>(We don't, but it's quite common)</li>
-        <li>Constants (like PI) written in <strong>UPPERCASE</strong></li>
+        <li>Имена переменных и функций записываются как <b>camelCase</b> (верблюжийРегистр)</li>
+        <li>Глобальные переменные, записываются в <b>ВЕРХНЕМ РЕГИСТРЕ</b> (мы этого не делаем, но это довольно часто)</li>
+        <li>Константы (например, PI) записываются в <b>ВЕРХНЕМ РЕГИСТРЕ</b></li>
     </ul>
-    <p>Should you use <strong>hyp-hens</strong>, <strong>camelCase</strong>, or <strong>under_scores</strong> in variable names?</p>
-    <p>This is a question programmers often discuss. The answer depends on who you ask:</p>
-    <p><strong>Hyphens in HTML and CSS:</strong></p>
-    <p>HTML5 attributes can start with data- (data-quantity, data-price).</p>
-    <p>CSS uses hyphens in property-names (font-size).</p>
+    <p>Что следует использовать в именах переменных: <b>hyp-hens</b>, <b>camelCase</b> или <b>under_scores</b>?</p>
+    <p>Программисты часто обсуждают этот вопрос. Ответ зависит от того, кого вы спрашиваете:</p>
+    <p><strong>Дефисы в HTML и CSS:</strong></p>
+    <p>Атрибуты HTML5 могут начинаться с data-, например: data-quantity (количество данных), data-price (цена данных) и т.д.</p>
+    <p>CSS использует дефисы в именах свойств, например: font-size (размер шрифта).</p>
 
-    <div class="w3-panel w3-warning"><p>Hyphens can be mistaken as subtraction attempts. Hyphens are not allowed in JavaScript names.</p></div>
+    <div class="w3-panel w3-warning"><p>Дефисы могут быть ошибочно приняты за попытки вычитания. В именах JavaScript нельзя использовать дефис.</p></div>
 
-    <p><strong>Underscores:</strong></p>
-    <p>Many programmers prefer to use underscores (date_of_birth), especially in SQL databases.</p>
-    <p>Underscores are often used in PHP documentation.</p>
+    <p><strong>Подчеркивание:</strong></p>
+    <p>Многие программисты предпочитают использовать символы подчеркивания (date_of_birth), особенно в базах данных SQL.</p>
+    <p>Подчеркивание часто используется в документации PHP.</p>
     <p><strong>PascalCase:</strong></p>
-    <p>PascalCase is often preferred by C programmers.</p>
+    <p>Программисты на C часто предпочитают PascalCase.</p>
     <p><strong>camelCase:</strong></p>
-    <p>camelCase is used by JavaScript itself, by jQuery, and other JavaScript libraries.</p>
+    <p>camelCase используется самим JavaScript, jQuery и другими библиотеками JavaScript.</p>
 
-    <div class="w3-panel w3-warning"><p>Do not start names with a $ sign. It will put you in conflict with many JavaScript library names.</p></div>
+    <div class="w3-panel w3-warning"><p>Не начинайте имена со знака $. Это приведет к конфликту со многими именами библиотек JavaScript.</p></div>
     <hr>
 
-    <h2>Loading JavaScript in HTML</h2>
-    <p>Use simple syntax for loading external scripts (the type attribute is not necessary):</p>
+    <h2>Загрузка JavaScript в HTML</h2>
+    <p>Используйте простой синтаксис для загрузки внешних скриптов (атрибут type не нужен):</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate htmlHigh">
             &lt;script src=&quot;myscript.js&quot;&gt;&lt;/script&gt;</div>
     </div>
+    <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Accessing HTML Elements</h2>
-    <p>A consequence of using &quot;untidy&quot; HTML styles, might result in JavaScript errors.</p>
-    <p>These two JavaScript statements will produce different results:</p>
+    <h2>Доступ к HTML-элементам</h2>
+    <p>Последствие использования &quot;неопрятного&quot; HTML стиля могут привести к ошибкам JavaScript.</p>
+    <p>Эти два оператора JavaScript дадут разные результаты:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
@@ -714,30 +718,30 @@
             const obj = getElementById(&quot;demo&quot;)
         </div>
     </div>
-    <p>If possible, use the same naming convention (as JavaScript) in HTML. </p>
-    <p><a href="../html/html5_syntax.html">Visit the HTML Style Guide</a>.</p>
+    <p>Если возможно, используйте то же соглашение об именах (как JavaScript) в HTML.</p>
+    <p>Посетите учебник по <a href="../html/html5_syntax.html">HTML Стилю</a>.</p>
     <hr>
 
-    <h2>File Extensions</h2>
-    <p>HTML files should have a <strong>.html</strong> extension (<strong>.htm</strong> is allowed).
-    <p>CSS files should have a <strong>.css</strong> extension.</p>
-    <p>JavaScript files should have a <strong>.js</strong> extension.</p>
+    <h2>Расширения файлов</h2>
+    <p>HTML файлы должны иметь расширение <em>.html</em>, (также допускается <i>.htm</i>).
+    <p>CSS файлы должны иметь расширение <em>.css</em>.</p>
+    <p>JavaScript файлы должны иметь расширение <em>.js</em>.</p>
     <hr>
 
-    <h2>Use Lower Case File Names</h2>
-    <p>Most web servers (Apache, Unix) are case sensitive about file names:</p>
-    <p>london.jpg cannot be accessed as London.jpg. </p>
-    <p>Other web servers (Microsoft, IIS) are not case sensitive:</p>
-    <p>london.jpg can be accessed as London.jpg or london.jpg.</p>
-    <p>If you use a mix of upper and lower case, you have to be extremely consistent.</p>
-    <p>If you move from a case insensitive, to a case sensitive server, even small errors can break your web site.</p>
-    <p>To avoid these problems, always use lower case file names (if possible).</p>
+    <h2>Используйте имена файлов в нижнем регистре</h2>
+    <p>Большинство веб-серверов (Apache, Unix) чувствительны к регистру в именах файлов:</p>
+    <p><i>london.jpg</i> недоступен как <i>London.jpg</i>.</p>
+    <p>Другие веб-серверы (Microsoft, IIS) не чувствительны к регистру:</p>
+    <p><i>london.jpg</i> можно открыть как <i>London.jpg</i> или <i>london.jpg</i>.</p>
+    <p>Если вы используете сочетание верхнего и нижнего регистра, вы должны быть предельно последовательны.</p>
+    <p>Если вы перейдете с сервера без учета регистра на сервер с учетом регистра, даже небольшие ошибки могут нарушить работу вашего веб-сайта.</p>
+    <p>Чтобы избежать этих проблем, всегда используйте имена файлов в нижнем регистре (если возможно).</p>
     <hr>
 
-    <h2>Performance</h2>
-    <p>Coding conventions are not used by computers. Most rules have little impact on the execution of programs.</p>
-    <p>Indentation and extra spaces are not significant in small scripts.</p>
-    <p>For code in development, readability should be preferred. Larger production scripts should be minified.&nbsp; </p>
+    <h2>Производительность</h2>
+    <p>Соглашения о кодировании не используются компьютерами. Большинство правил мало влияют на выполнение программ.</p>
+    <p>Отступы и лишние пробелы не имеют значения в небольших скриптах.</p>
+    <p>Для кода, находящегося в разработке, предпочтение следует отдавать удобочитаемости. Большие производственные скрипты следует минимизировать.&nbsp; </p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_debugging.html">&#10094; Prev</a>
