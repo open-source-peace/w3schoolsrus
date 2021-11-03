@@ -489,7 +489,7 @@
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
-          <div class='w3-hide-small'>
+          <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -505,22 +505,22 @@
     <hr>
     <p class="intro">В этой главе указаны некоторые <strong>распространенные ошибки JavaScript</strong>.</p>
     <hr>
-    <h2>Accidentally Using the Assignment Operator </h2>
-    <p>JavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (<code class="w3-codespan">=</code>), instead of a comparison operator (<code class="w3-codespan">==</code>) in an if statement.</p>
-    <p>This <code class="w3-codespan">if</code> statement returns <code class="w3-codespan">false</code> (as expected) because x is not equal to 10:</p>
+    <h2>Случайное использование оператора присваивания</h2>
+    <p>Программы JavaScript могут генерировать неожиданные результаты, если программист случайно использует оператор присваивания (<code class="w3-codespan">=</code>), вместо оператора сравнения (<code class="w3-codespan">==</code>) в операторе if.</p>
+    <p>Этот оператор <code class="w3-codespan">if</code> возвращает <code class="w3-codespan">false</code> (как и ожидалось), поскольку x не равно  10:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 0;<br>if (x == 10) </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_equal_1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>This <code class="w3-codespan">if</code> statement returns <code class="w3-codespan">true</code> (maybe not as expected), because 10 is true:</p>
+    <p>Этот оператор <code class="w3-codespan">if</code> возвращает <code class="w3-codespan">true</code> (возможно, не так, как ожидалось), потому что 10 является true:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 0;<br>if (x = 10)
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_equal_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>This <code class="w3-codespan">if</code> statement returns <code class="w3-codespan">false</code> (maybe not as expected), because 0 is false:</p>
+    <p>Этот оператор <code class="w3-codespan">if</code> возвращает <code class="w3-codespan">false</code> (возможно, не так, как ожидалось), потому что 0 - это false:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 0;<br>if (x = 0)
@@ -529,24 +529,23 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>An assignment always returns the value of the assignment.</p>
+        <p>Присвоение всегда возвращает значение присваивания.</p>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Expecting Loose Comparison</h2>
-    <p>In regular comparison, data type does not matter. This <code class="w3-codespan">if</code> statement returns true:</p>
+    <h2>Ожидание нечеткого сравнения</h2>
+    <p>При обычном сравнении тип данных не имеет значения. Этот оператор <code class="w3-codespan">if</code> возвращает значение true:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
             let y = &quot;10&quot;;<br>if (x == y) </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_loose_1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>In strict comparison, data type does matter. This <code class="w3-codespan">if</code> statement returns false:</p>
+    <p>В строгом сравнении тип данных имеет значение. Этот оператор <code class="w3-codespan">if</code> возвращает false:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
@@ -554,8 +553,8 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_loose_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>It is a common mistake to forget that <code class="w3-codespan">switch</code> statements use strict comparison:</p>
-    <p>This <code class="w3-codespan">case switch</code> will display an alert:</p>
+    <p>Часто забывают, что в операторах <code class="w3-codespan">switch</code> используется строгое сравнение:</p>
+    <p>Этот <code class="w3-codespan">case switch</code> будет отображать предупреждение:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
@@ -563,7 +562,7 @@
             } </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_loose_3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>This <code class="w3-codespan">case switch</code> will not display an alert:</p>
+    <p>Этот <code class="w3-codespan">case switch</code> не будет отображать предупреждение:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
@@ -571,32 +570,28 @@
             } </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_loose_4.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Confusing Addition &amp; Concatenation </h2>
-    <p><strong>Addition</strong> is about adding <strong>numbers</strong>.</p>
-    <p><strong>Concatenation</strong> is about adding <strong>strings</strong>.</p>
-    <p>In JavaScript both operations use the same <code class="w3-codespan">+</code> operator.</p>
-    <p>Because of this, adding a number as a number will produce a different
-        result from adding a number as a string:</p>
+    <h2>Непонятное сложение &amp; Конкатенация</h2>
+    <p><strong>Сложение</strong> - это добавление <strong>чисел</strong>.</p>
+    <p><strong>Конкатенация</strong> - это добавление <strong>строк</strong>.</p>
+    <p>В JavaScript в обеих операциях используется один и тот же оператор <code class="w3-codespan">+</code>.</p>
+    <p>Из-за этого добавление числа в качестве числа приведет к другому результату, чем добавление числа в виде строки:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             let x = 10;<br>
-            x = 10 + 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //
-            Now x is 15<br>
+            x = 10 + 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Теперь x равен 15<br>
             <br>
             let y = 10;<br>
-            y += &quot;5&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            // Now y is &quot;105&quot;</div>
+            y += &quot;5&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Теперь y равен &quot;105&quot;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_add_1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>When adding two variables, it can be difficult to anticipate the result:</p>
+    <p>При добавлении двух переменных бывает трудно предвидеть результат:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
@@ -608,8 +603,7 @@
             let z = x + y;&nbsp;&nbsp;&nbsp; &nbsp;// Now z is &quot;105&quot;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_add_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -660,8 +654,7 @@
             let x = &quot;Hello \<br>World!&quot;;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_string_3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -723,8 +716,7 @@
             &nbsp; let<br>&nbsp; power = 10;&nbsp; <br>&nbsp;&nbsp;return;<br>&nbsp; a * power;<br>}</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_mistakes_return_5.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -786,8 +778,7 @@
             // person[0] will return undefined</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_associative_2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -823,8 +814,7 @@
         <div class="w3-code notranslate jsHigh">
             points = [40, 100, 1, 5, 25, 10];</div>
     </div>
-    <div class="w3-hide-small">
-    <hr>
+    <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -873,8 +863,7 @@
         <a class="w3-right w3-btn" href="js_performance.html">Next &#10095;</a>
     </div>
 </article>
-<div class="w3-hide-small">
-    <hr>
+<div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
