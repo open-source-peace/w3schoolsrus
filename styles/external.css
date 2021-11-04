@@ -700,6 +700,16 @@ p {line-height: 1.4;}
 .img-responsive {max-width:100%;height:auto;border:0;}
 figcaption {padding: 10px 0; font-family: calibri, sans-serif;}
 
+.w3-example .w3-btn, .w3-example .ws-btn {
+ background-color:#04AA6D!important;
+ border-radius:5px;
+ font-size: 17px;
+ font-family: 'Source Sans Pro', sans-serif;
+ padding:6px 18px;
+}
+.ws-btn {border:none;display:inline-block;vertical-align:middle;overflow:hidden;text-decoration:none;text-align:center;cursor:pointer;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#04AA6D;color:#fff}
+.ws-btn:hover,.ws-btn:active {background-color: #059862!important;color: #fff;}
+
 .videowrap {max-width: 720px; margin: 0 auto;}
 .videoblock {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;}
 .videoblock iframe, object, embed {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;}
