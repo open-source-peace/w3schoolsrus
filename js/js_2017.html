@@ -11,8 +11,8 @@
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
-<title>JavaScript Версии. ECMAScript 2016. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Версии. ECMAScript 2016. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
+<title>JavaScript Версии. ECMAScript 2017. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='JavaScript Версии. ECMAScript 2017. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
     <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -498,10 +498,10 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <article>
-    <h1>ECMAScript 2016</h1>
+    <h1>ECMAScript 2017</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_es6.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_2017.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_2016.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_2018.html">Next &#10095;</a>
     </div>
 
     <div class="w3-panel w3-info">
@@ -510,12 +510,14 @@
         <p>С 2016 года новые версии именуются по годам (ECMAScript 2016/2017/2018).</p>
     </div>
 
-    <h2>Новые функции в ECMAScript 2016</h2>
-    <p>В этой главе представлены новые функции в ECMAScript 2016:</p>
+    <h2>Новые возможности ECMAScript 2017</h2>
+    <p>В этой главе представлены новые функции в ECMAScript 2017:</p>
     <ul>
-        <li>JavaScript Возведение в степень (**)</li>
-        <li>JavaScript Присваивание возведения в степень (**=)</li>
-        <li>JavaScript Array.prototype.includes</li>
+        <li><a href="#mark_padding">JavaScript String padding</a></li>
+        <li><a href="#mark_obj_entries">JavaScript Object.entries</a></li>
+        <li><a href="#mark_obj_values">JavaScript Object.values</a></li>
+        <li><a href="#mark_async">JavaScript async functions</a></li>
+        <li>JavaScript shared memory</li>
     </ul>
     <hr>
     <div class="adver">
@@ -523,39 +525,31 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Оператор возведения в степень</h2>
-    <p>Оператор <b>возведения в степень</b> (<code class="w3-codespan">**</code>) возводит первый операнд в степень второго операнда.</p>
+</div>    <a id="mark_padding"></a>
+    <h2>JavaScript String Padding</h2>
+    <p>ECMAScript 2017 added two String methods: <code class="w3-codespan">padStart</code>
+        and <code class="w3-codespan">padEnd</code> to support padding at the beginning and at the end of a string.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 5;<br>
-            let z = x ** 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // result is 25
+            let str = &quot;5&quot;;<br>
+            str = str.padStart(4,0);<br>
+            // result is 0005
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_exponent1.html" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p><code class="w3-codespan">x ** y</code> produces the same result as <code class="w3-codespan">Math.pow(x, y)</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 5;<br>
-            let z = Math.pow(x,2);&nbsp;&nbsp; // result is 25
+            let str = &quot;5&quot;;<br>
+            str = str.padEnd(4,0);<br>
+            // result is 5000
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_exponent2.html" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <hr>
-    <h2>Exponentiation Assignment</h2>
-    The <b>exponentiation assignment</b> operator (<code class="w3-codespan">**=</code>) raises the value of a variable to the power of the right operand.
-    <div class="w3-example">
-        <h3>Пример</h3>
-        <div class="w3-code notranslate jsHigh">
-            let x = 5;<br>
-            x **= 2; // result 25
-        </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_exponent3.html" target="_blank">Попробуйте сами &raquo;</a>
-    </div>
-
-    <p>Chrome 52 and Edge 14 was the first browsers to fully support the Exponentiation Operator:</p>
+    <p>String Padding is not supported in Internet Explorer.</p>
+    <p>Firefox and Safari were the first browsers with support for JavaScript string padding:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -566,18 +560,18 @@
                 <th style="width:16%;" class="bsOpera" title="Opera"></th>
             </tr>
             <tr>
-                <td>Chrome 52</td>
-                <td>Edge 14</td>
-                <td>Firefox 52</td>
-                <td>Safari 10.1</td>
-                <td>Opera 39</td>
+                <td>Chrome 57</td>
+                <td>Edge 15</td>
+                <td>Firefox 48</td>
+                <td>Safari 10</td>
+                <td>Opera 44</td>
             </tr>
             <tr>
-                <td>Jul 2016</td>
-                <td>Aug 2016</td>
                 <td>Mar 2017</td>
-                <td>Mar 2017</td>
+                <td>Apr 2017</td>
                 <td>Aug 2016</td>
+                <td>Sep 2016</td>
+                <td>Mar 2017</td>
             </tr>
             </tbody></table>
     </div>
@@ -587,21 +581,49 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-    <h2>JavaScript Array.includes()</h2>
-    <p>ECMAScript 2016 introduced <code class="w3-codespan">Array.prototype.includes</code> to arrays.
-        This allows us to check if an element is present in an array:</p>
-    <div class="w3-example">
+</div>    <a id="mark_obj_entries"></a>
+    <h2>JavaScript Object Entries</h2>
+    <p>ECMAScript 2017 adds a new <code class="w3-codespan">Object.entries</code> method to objects.</p>
+    <p>The Object.entries() method returns an array of the key/value pairs in an object:</p>
 
+    <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const fruits = ["Banana", "Orange", "Apple", "Mango"];<br><br>
-            fruits.includes("Mango"); // is true
+            const person = {<br>&nbsp; firstName : &quot;John&quot;,<br>&nbsp; lastName : &quot;Doe&quot;,<br>&nbsp;
+            age : 50,<br>&nbsp; eyeColor : &quot;blue&quot;<br>};<br>document.getElementById(&quot;demo&quot;).innerHTML =
+            Object.entries(person);
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_includes.html" target="_blank">Попробуйте сами &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_entries.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>All modern browsers support Array.prototype.includes:</p>
+    <p>Object.entries() makes it simple to use objects in loops:</p>
+
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code notranslate jsHigh">
+            const fruits = {Bananas:300, Oranges:200, Apples:500};<br>
+            <br>
+            let text = "";<br>
+            for (let [fruit, value] of Object.entries(fruits)) {<br>
+            text += fruit + ": " + value + "<br>";<br>
+            }
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_entries_loop.html" target="_blank">Попробуйте сами &raquo;</a>
+    </div>
+
+    <p>Object.entries() also makes it simple to convert objects to maps:</p>
+
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <div class="w3-code notranslate jsHigh">
+            const fruits = {Bananas:300, Oranges:200, Apples:500};<br>
+            <br>
+            const myMap = new Map(Object.entries(fruits));
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_entries_map.html" target="_blank">Попробуйте сами &raquo;</a>
+    </div>
+
+    <p>Chrome and Firefox were the first browsers with support for <code class="w3-codespan">Object.entries</code>:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -614,23 +636,115 @@
             <tr>
                 <td>Chrome 47</td>
                 <td>Edge 14</td>
-                <td>Firefox 43</td>
-                <td>Safari 9</td>
-                <td>Opera 34</td>
+                <td>Firefox 47</td>
+                <td>Safari 10.1</td>
+                <td>Opera 41</td>
             </tr>
             <tr>
-                <td>Des 2015</td>
+                <td>Jun 2016</td>
                 <td>Aug 2016</td>
-                <td>Des 2015</td>
-                <td>Oct 2015</td>
-                <td>Des 2015</td>
+                <td>Jun 2016</td>
+                <td>Mar 2017</td>
+                <td>Oct 2016</td>
+            </tr>
+            </tbody></table>
+    </div>
+    <hr>
+    <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <a id="mark_obj_values"></a>
+    <h2>JavaScript Object Values</h2>
+    <p><code class="w3-codespan">Object.values</code> are similar to <code class="w3-codespan">Object.entries</code>, but returns a single dimension array of the object values:</p>
+    <div class="w3-example">
+
+        <h3>Пример</h3>
+        <div class="w3-code notranslate jsHigh">
+            const person = {<br>&nbsp; firstName : &quot;John&quot;,<br>&nbsp; lastName : &quot;Doe&quot;,<br>&nbsp;
+            age : 50,<br>&nbsp; eyeColor : &quot;blue&quot;<br>};<br>document.getElementById(&quot;demo&quot;).innerHTML =
+            Object.values(person);
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_values.html" target="_blank">Попробуйте сами &raquo;</a>
+    </div>
+    <p>Firefox and Chrome were the first browsers with support for <code class="w3-codespan">Object.values</code>:</p>
+    <div class="w3-responsive">
+        <table class="browserref notranslate">
+            <tbody><tr style="height:50px">
+                <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:16%;" class="bsEdge" title="Edge"></th>
+                <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:16%;" class="bsSafari" title="Safari"></th>
+                <th style="width:16%;" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+                <td>Chrome 54</td>
+                <td>Edge 14</td>
+                <td>Firefox 47</td>
+                <td>Safari 10.1</td>
+                <td>Opera 41</td>
+            </tr>
+            <tr>
+                <td>Oct 2016</td>
+                <td>Aug 2016</td>
+                <td>Jun 2016</td>
+                <td>Mar 2017</td>
+                <td>Oct 2016</td>
+            </tr>
+            </tbody></table>
+    </div>
+    <hr>
+    <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <a id="mark_async"></a>
+    <h2>JavaScript Async Functions</h2>
+    <div class="w3-example">
+        <h3>Waiting for a Timeout</h3>
+        <div class="w3-code notranslate jsHigh">
+            async function myDisplay() {<br>
+            &nbsp; let myPromise = new Promise(function(myResolve,  myReject) {<br>
+            &nbsp;&nbsp;&nbsp; setTimeout(function() { myResolve("I love You !!"); }, 3000);<br>
+            &nbsp; });<br>
+            &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = await myPromise;<br>}<br><br>
+            myDisplay();
+        </div>
+        <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_async4.html">Попробуйте сами &raquo;</a></p>
+    </div>
+    <p>Firefox and Chrome were the first browsers with support for async JavaScript functions:</p>
+    <div class="w3-responsive">
+        <table class="browserref notranslate">
+            <tbody><tr style="height:50px">
+                <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:16%;" class="bsEdge" title="Edge"></th>
+                <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:16%;" class="bsSafari" title="Safari"></th>
+                <th style="width:16%;" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+                <td>Chrome 55</td>
+                <td>Edge 15</td>
+                <td>Firefox 52</td>
+                <td>Safari 11</td>
+                <td>Opera 42</td>
+            </tr>
+            <tr>
+                <td>Des 2016</td>
+                <td>Apr 2017</td>
+                <td>Mar 2017</td>
+                <td>Sep 2017</td>
+                <td>Des 2016</td>
             </tr>
             </tbody></table>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_es6.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_2017.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_2016.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_2018.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">
