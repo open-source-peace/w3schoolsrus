@@ -507,24 +507,24 @@
         <a class="w3-right w3-btn" href="js_2016.html">Next &#10095;</a>
     </div>
     <div class="w3-panel w3-info">
-        <p>ECMAScript 2015 was the second major revision to JavaScript.</p>
-        <p>ECMAScript 2015 is also known as ES6 and ECMAScript 6.</p>
-        <p>This chapter describes the most important features of ES6.</p>
+        <p>ECMAScript 2015 стал второй крупной версией JavaScript.</p>
+        <p>ECMAScript 2015 также известен как ES6 и ECMAScript 6.</p>
+        <p>В этой главе описаны наиболее важные функции ES6.</p>
     </div>
 
-    <h2>New Features in ES6</h2>
+    <h2>Новые возможности ES6</h2>
     <ul>
-        <li><a href="#mark_let">The let keyword</a></li>
-        <li><a href="#mark_const">The const keyword</a></li>
-        <li><a href="#mark_arrow">Arrow Functions</a></li>
+        <li><a href="#mark_let">Ключевое слово let</a></li>
+        <li><a href="#mark_const">Ключевое слово const</a></li>
+        <li><a href="#mark_arrow">Функции стрелок</a></li>
         <li><a href="#mark_forof">For/of</a></li>
-        <li><a href="#mark_map">Map Objects</a></li>
-        <li><a href="#mark_set">Set Objects</a></li>
-        <li><a href="#mark_class">Classes</a></li>
-        <li><a href="#mark_promise">Promises</a></li>
-        <li><a href="#mark_symbol">Symbol</a></li>
-        <li><a href="#mark_param">Default Parameters</a></li>
-        <li><a href="#mark_rest">Function Rest Parameter</a></li>
+        <li><a href="#mark_map">Карты объектов</a></li>
+        <li><a href="#mark_set">Наборы объектов</a></li>
+        <li><a href="#mark_class">Классы</a></li>
+        <li><a href="#mark_promise">Промисы</a></li>
+        <li><a href="#mark_symbol">Символ</a></li>
+        <li><a href="#mark_param">Параметры по умолчанию</a></li>
+        <li><a href="#mark_rest">Функция Остаточный параметр</a></li>
         <li><a href="#mark_includes">String.includes()</a></li>
         <li><a href="#mark_startswith">String.startsWith()</a></li>
         <li><a href="#mark_endswith">String.endsWith()</a></li>
@@ -532,17 +532,17 @@
         <li><a href="#mark_array_keys">Array.keys()</a></li>
         <li><a href="#mark_array_find">Array.find()</a></li>
         <li><a href="#mark_array_findIndex">Array.findIndex()</a></li>
-        <li><a href="#mark_math_methods">New Math Methods</a></li>
-        <li><a href="#mark_number_properties">New Number Properties</a></li>
-        <li><a href="#mark_number_methods">New Number Methods</a></li>
-        <li><a href="#mark_global_methods">New Global Methods</a></li>
+        <li><a href="#mark_math_methods">Новые математические методы</a></li>
+        <li><a href="#mark_number_properties">Новые числовые свойства</a></li>
+        <li><a href="#mark_number_methods">Новые числовые методы</a></li>
+        <li><a href="#mark_global_methods">Новые глобальные методы</a></li>
         <li>Iterables Object.entries</li>
-        <li>JavaScript Modules</li>
+        <li>JavaScript Модули</li>
     </ul>
-
     <hr>
-    <h2>Browser Support for ES6 (2015)</h2>
-    <p>Safari 10 and Edge 14 were the first browsers to fully support ES6:</p>
+
+    <h2>Поддержка браузерами ES6 (2015)</h2>
+    <p>Safari 10 и Edge 14 были первыми браузерами, полностью поддерживающими ES6:</p>
 
     <div class="w3-responsive">
         <table class="browserref notranslate">
@@ -567,26 +567,25 @@
                 <td>Jul 2016</td>
                 <td>Aug 2018</td>
             </tr>
-            </tbody></table>
+            </tbody>
+        </table>
     </div>
     <hr>
 
     <a id="mark_let"></a>
-    <h2>JavaScript let</h2>
-    <p>The <code class="w3-codespan">let</code> keyword allows you to declare a variable with block scope.</p>
+    <h2>JavaScript Ключевое слово let</h2>
+    <p>Ключевое слово <code class="w3-codespan">let</code> позволяет объявить переменную с областью видимости блока.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             var x = 10;<br>
-            // Here x is 10<br>
-            { <br>
+            // Здесь x равен 10<br>{ <br>
             &nbsp;&nbsp;let x = 2;<br>
-            &nbsp; // Here x is 2<br>}<br>
-            // Here x is 10
+            &nbsp; // Здесь x равен 2<br>}<br> // Здесь x равен 10
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_es6_let" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Read more about <code class="w3-codespan">let</code> in the chapter: <a href="js_let.html">JavaScript Let</a>.</p>
+    <p>Подробнее о ключевом слове <code class="w3-codespan">let</code> вы можете узнать в главе: <a href="js_let.html">JavaScript Let</a>.</p>
     <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -595,23 +594,21 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    
     <a id="mark_const"></a>
-    <h2>JavaScript const</h2>
-    <p>The <code class="w3-codespan">const</code> keyword allows you to declare a constant (a JavaScript variable with a constant value).</p>
-    <p>Constants are similar to let variables, except that the value cannot be changed.</p>
+    <h2>JavaScript Ключевое слово const</h2>
+    <p>Ключевое слово <code class="w3-codespan">const</code> позволяет объявить константу (переменную JavaScript с постоянным значением).</p>
+    <p>Константы аналогичны let переменным, за исключением того, что значение нельзя изменить.</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             var x = 10;<br>
-            // Here x is 10<br>
-            { <br>
+            // Здесь x равно 10<br> { <br>
             &nbsp;&nbsp;const x = 2;<br>
-            &nbsp; // Here x is 2<br>}<br>
-            // Here x is 10
+            &nbsp; // Здесь x равно 2<br>}<br>// Здесь x равно 10
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_es6_const" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Read more about <code class="w3-codespan">const</code> in the chapter: <a href="js_const.html">JavaScript Const</a>.</p>
+    <p>Подробнее о ключевом слове <code class="w3-codespan">const</code> вы можете узнать в главе <a href="js_const.html">JavaScript Const</a>.</p>
     <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -620,12 +617,12 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <a id="mark_arrow"></a>
-    <h2>Arrow Functions</h2>
+    <h2>Функции стрелки</h2>
     <p>Arrow functions allows a short syntax for writing function expressions.</p>
     <p>You don't need the <code class="w3-codespan">function</code> keyword, the <code class="w3-codespan">return</code> keyword, and the
         <strong>curly brackets</strong>.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             // ES5<br>
             var x = function(x, y) {<br>
@@ -644,7 +641,7 @@
         is safer than using <code class="w3-codespan">var</code>, because a function expression is always a constant value.</p>
     <p>You can only omit the <code class="w3-codespan">return</code> keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const x = (x, y) =&gt; { return x * y };<br>
         </div>
@@ -674,7 +671,7 @@
 
     <h3>Looping over an Array</h3>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const cars = [&quot;BMW&quot;, &quot;Volvo&quot;, &quot;Mini&quot;];<br>
             let text = "";<br>
@@ -687,7 +684,7 @@
 
     <h3>Looping over a String</h3>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let language = &quot;JavaScript&quot;;<br>
             let text = "";<br>
@@ -710,7 +707,7 @@
     <div class="w3-note"><p>Being able to use an Object as a key is an important Map feature.</p></div>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             // Create Objects<br>
             const apples = {name: 'Apples'};<br>
@@ -734,7 +731,7 @@
     <a id="mark_set"></a>
     <h2>JavaScript Set Objects</h2>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             // Create a Set<br>
             const letters = new Set();<br>
@@ -771,7 +768,7 @@
     </div>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             class Car {<br>
             &nbsp;  constructor(name, year) {<br>
@@ -796,7 +793,7 @@
 
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const myCar1 = new Car(&quot;Ford&quot;, 2014);<br>
             const myCar2 = new Car(&quot;Audi&quot;, 2019);
@@ -855,7 +852,7 @@
     <p>For instance, if different coders want to add a person.id property to a person object belonging to a third-party code, they could mix each others values.</p>
     <p>Using Symbol() to create a unique identifiers, solves this problem:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const person = {<br>
             &nbsp; firstName: &quot;John&quot;,<br>
@@ -884,7 +881,7 @@
     <h2>Default Parameter Values</h2>
     <p>ES6 allows function parameters to have default values.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function myFunction(x, y = 10) {<br>&nbsp;
             // y is 10 if not passed or undefined<br>&nbsp;
@@ -901,7 +898,7 @@
     <h2>Function Rest Parameter</h2>
     <p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function sum(...args) {<br>
             &nbsp; let sum = 0;<br>
@@ -920,7 +917,7 @@
         otherwise <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             text.includes(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
@@ -935,7 +932,7 @@
         if a string begins with a specified value, otherwise <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             <br>
@@ -955,7 +952,7 @@
         if a string ends with a specified value, otherwise <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             var text = &quot;John Doe&quot;;<br>
             text.endsWith(&quot;Doe&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
@@ -968,7 +965,7 @@
     <h2>Array.from()</h2>
     <p>The <code class="w3-codespan">Array.from()</code> method returns an Array object from any object with a length property or any iterable object.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>Create an Array from a String:</p>
         <div class="w3-code notranslate jsHigh">
             Array.from(&quot;ABCDEFG&quot;)&nbsp;&nbsp;&nbsp;// Returns [A,B,C,D,E,F,G]<br>
@@ -981,7 +978,7 @@
     <h2>Array.Keys()</h2>
     <p>The <code class="w3-codespan">Array.keys()</code> method returns an Array Iterator object with the keys of an array.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <p>Create an Array Iterator object, containing the keys of the array:</p>
         <div class="w3-code notranslate jsHigh">
             const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
@@ -999,7 +996,7 @@
     <p>The <code class="w3-codespan">find()</code> method returns the value of the first array element that passes a test function.</p>
     <p>This example finds (returns the value of ) the first element that is larger than 18:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const numbers = [4, 9, 16, 25, 29];<br>let first =
             numbers.find(myFunction);<br><br>function myFunction(value, index, array) {<br>
@@ -1025,7 +1022,7 @@
     <p>The <code class="w3-codespan">findIndex()</code> method returns the index of the first array element that passes a test function.</p>
     <p>This example finds the index of the first element that is larger than 18:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const numbers = [4, 9, 16, 25, 29];<br>let first =
             numbers.findIndex(myFunction);<br><br>function myFunction(value, index, array) {<br>
@@ -1056,7 +1053,7 @@
     <p><code class="w3-codespan">Math.trunc(x)</code> returns the integer part of x:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Math.trunc(4.9);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
             Math.trunc(4.7);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
@@ -1072,7 +1069,7 @@
     <p><code class="w3-codespan">Math.sign(x)</code> returns if x is negative, null or positive:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Math.sign(-4);&nbsp;&nbsp;&nbsp;&nbsp;// returns -1<br>
             Math.sign(0);&nbsp;&nbsp;&nbsp;&nbsp;// returns 0<br>
@@ -1091,7 +1088,7 @@
     <p><code class="w3-codespan">Math.cbrt(x)</code> returns the cube root of x:</p>
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Math.cbrt(8);&nbsp;&nbsp;&nbsp;&nbsp;// returns 2<br>
             Math.cbrt(64);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
@@ -1104,7 +1101,7 @@
     <h2>The Math.log2() Method</h2>
     <p><code class="w3-codespan">Math.log2(x)</code> returns the base 2 logarithm of x:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Math.log2(2);&nbsp;&nbsp;&nbsp;&nbsp;// returns 1<br>
         </div>
@@ -1115,7 +1112,7 @@
     <h2>The Math.log10() Method</h2>
     <p><code class="w3-codespan">Math.log10(x)</code> returns the base 10 logarithm of x:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Math.log10(10);&nbsp;&nbsp;&nbsp;&nbsp;// returns 1<br>
         </div>
@@ -1132,21 +1129,21 @@
         <li><code class="w3-codespan">MAX_SAFE_INTEGER</code></li>
     </ul>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = Number.EPSILON;
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_es6_epsilon" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = Number.MIN_SAFE_INTEGER;
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryit.html?filename=tryjs_es6_min_safe" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = Number.MAX_SAFE_INTEGER;
         </div>
@@ -1170,7 +1167,7 @@
 </div>    <h2>The Number.isInteger() Method</h2>
     <p>The <code class="w3-codespan">Number.isInteger()</code> method returns <code class="w3-codespan">true</code> if the argument is an integer.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Number.isInteger(10);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true<br>
             Number.isInteger(10.5);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false<br>
@@ -1182,7 +1179,7 @@
     <p>A safe integer is an integer that can be exactly represented as a double precision number.</p>
     <p>The <code class="w3-codespan">Number.isSafeInteger()</code> method returns <code class="w3-codespan">true</code> if the argument is a safe integer.</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             Number.isSafeInteger(10);&nbsp;&nbsp;&nbsp;&nbsp;// returns true<br>
             Number.isSafeInteger(12345678901234567890);&nbsp; // returns false<br>
@@ -1208,7 +1205,7 @@
     <p>The global <code class="w3-codespan">isFinite()</code> method returns <code class="w3-codespan">false</code> if the argument is <code class="w3-codespan">Infinity</code> or <code class="w3-codespan">NaN</code>.</p>
     <p>Otherwise it returns <code class="w3-codespan">true</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             isFinite(10/0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false<br>
             isFinite(10/1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true<br>
@@ -1219,7 +1216,7 @@
     <h2>The isNaN() Method</h2>
     <p>The global <code class="w3-codespan">isNaN()</code> method returns <code class="w3-codespan">true</code> if the argument is <code class="w3-codespan">NaN</code>. Otherwise it returns <code class="w3-codespan">false</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             isNaN("Hello");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true<br>
         </div>
