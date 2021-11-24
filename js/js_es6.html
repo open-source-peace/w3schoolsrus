@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Версии. ECMAScript 2015 или ES6, или ECMAScript 6. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Версии. ECMAScript 2015 также известен как ES6 и ECMAScript 6. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Версии. ECMAScript 2015 также известен как ES6 и ECMAScript 6. Новые возможности. Ключевое слово let, const. Функции стрелки. Цикл For/Of. Объекты карты, Набора. Классы. Промисы. Тип символа. Значения параметров по умолчанию. Функция Rest Parameter. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
     <link rel="stylesheet" href="../styles/browserref.css">
     <style>
         #main a[id] {position: relative;top: -50px;}
@@ -773,7 +773,6 @@
     <p>В приведенном выше примере создается класс с именем &quot;Car&quot;.</p>
     <p>У класса есть два начальных свойства: "name" (название) и "year" (год).</p>
 
-
     <div class="w3-panel w3-note">
         <p>JavaScript класс <b>не является</b> объектом.</p>
         <p>Он является <b>шаблоном</b> для JavaScript объектов.</p>
@@ -852,8 +851,8 @@
             };<br><br>
             let id = Symbol('id');<br>
             person[id] = 140353;<br>
-            // Now Person[id] = 140353<br>
-            // but person.id is still undefined
+            // теперь Person[id] = 140353<br>
+            // но person.id все еще не определено
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_symbol.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
@@ -868,14 +867,14 @@
     <hr>
     <a id="mark_param"></a>
 
-    <h2>Default Parameter Values</h2>
-    <p>ES6 allows function parameters to have default values.</p>
+    <h2>Значения параметров по умолчанию</h2>
+    <p>ES6 позволяет параметрам функции иметь значения по умолчанию.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             function myFunction(x, y = 10) {<br>&nbsp;
-            // y is 10 if not passed or undefined<br>&nbsp;
-            return x + y;<br>}<br>myFunction(5); // will return 15</div>
+            // y равно 10, если не передано или не определено<br>&nbsp;
+            return x + y;<br>}<br>myFunction(5); // вернёт 15</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_default.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
@@ -885,8 +884,8 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <a id="mark_rest"></a>
-    <h2>Function Rest Parameter</h2>
-    <p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
+    <h2>Функция Rest Parameter</h2>
+    <p>Параметр rest (...) позволяет функции обрабатывать неопределенное количество аргументов как массив:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -903,14 +902,13 @@
 
     <a id="mark_includes"></a>
     <h2>String.includes()</h2>
-    <p>The <code class="w3-codespan">includes()</code> method returns <code class="w3-codespan">true</code> if a string contains a specified value,
-        otherwise <code class="w3-codespan">false</code>:</p>
+    <p>Метод <code class="w3-codespan">includes()</code> вернёт <code class="w3-codespan">true</code> если строка содержит указанное значение, иначе <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
-            text.includes(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+            text.includes(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Вернёт true
         </div>
         <a target="_blank" href="../jstryit/tryjs_includes.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
@@ -918,15 +916,14 @@
     <hr>
     <a id="mark_startswith"></a>
     <h2>String.startsWith()</h2>
-    <p>The <code class="w3-codespan">startsWith()</code> method returns <code class="w3-codespan">true</code>
-        if a string begins with a specified value, otherwise <code class="w3-codespan">false</code>:</p>
+    <p>Метод <code class="w3-codespan">startsWith()</code> вернёт <code class="w3-codespan">true</code> если строка начинается с указанного значения, иначе <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let text = &quot;Hello world, welcome to the universe.&quot;;<br>
             <br>
-            text.startsWith(&quot;Hello&quot;)&nbsp;&nbsp;&nbsp;// Returns true
+            text.startsWith(&quot;Hello&quot;)&nbsp;&nbsp;&nbsp;// Вернёт true
         </div>
         <a target="_blank" href="../jstryit/tryjs_startswith.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
@@ -938,38 +935,37 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <a id="mark_endswith"></a>
     <h2>String.endsWith()</h2>
-    <p>The <code class="w3-codespan">endsWith()</code> method returns <code class="w3-codespan">true</code>
-        if a string ends with a specified value, otherwise <code class="w3-codespan">false</code>:</p>
+    <p>Метод <code class="w3-codespan">endsWith()</code> вернёт <code class="w3-codespan">true</code> если строка заканчивается указанным значением, иначе <code class="w3-codespan">false</code>:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             var text = &quot;John Doe&quot;;<br>
-            text.endsWith(&quot;Doe&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+            text.endsWith(&quot;Doe&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// вернёт true
         </div>
         <a target="_blank" href="../jstryit/tryjs_endswith.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
     <a id="mark_array_from"></a>
+
     <h2>Array.from()</h2>
-    <p>The <code class="w3-codespan">Array.from()</code> method returns an Array object from any object with a length property or any iterable object.</p>
+    <p>Метод <code class="w3-codespan">Array.from()</code> возвращает объект массива с любого объекта с свойством длины или любым итерируемым (повторяющимся) объектом.</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>Create an Array from a String:</p>
+        <p>Создать массив из строки:</p>
         <div class="w3-code notranslate jsHigh">
-            Array.from(&quot;ABCDEFG&quot;)&nbsp;&nbsp;&nbsp;// Returns [A,B,C,D,E,F,G]<br>
+            Array.from(&quot;ABCDEFG&quot;)&nbsp;&nbsp;&nbsp;// Вернёт [A,B,C,D,E,F,G]<br>
         </div>
         <a target="_blank" href="../jstryit/tryjs_array_from.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
     <a id="mark_array_keys"></a>
+
     <h2>Array.Keys()</h2>
-    <p>The <code class="w3-codespan">Array.keys()</code> method returns an Array Iterator object with the keys of an array.</p>
+    <p>Метод <code class="w3-codespan">Array.keys()</code> возвращает объект Array Iterator с ключами массива.</p>
     <div class="w3-example">
         <h3>Пример</h3>
-        <p>Create an Array Iterator object, containing the keys of the array:</p>
+        <p>Создать объект Array Iterator, содержащий ключи массива:</p>
         <div class="w3-code notranslate jsHigh">
             const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
             const keys = fruits.keys();<br><br>
@@ -979,58 +975,54 @@
         </div>
         <a target="_blank" href="../jstryit/tryjs_array_keys.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
     <a id="mark_array_find"></a>
+
     <h2>Array.find()</h2>
-    <p>The <code class="w3-codespan">find()</code> method returns the value of the first array element that passes a test function.</p>
-    <p>This example finds (returns the value of ) the first element that is larger than 18:</p>
+    <p>Метод <code class="w3-codespan">find()</code> возвращает значение первого элемента массива, который передаёт тестовую функцию.</p>
+    <p>В этом примере находит (возвращает значение) первый элемент, размер которого больше 18:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const numbers = [4, 9, 16, 25, 29];<br>let first =
-            numbers.find(myFunction);<br><br>function myFunction(value, index, array) {<br>
-            &nbsp; return
-            value &gt; 18;<br>} </div>
+            const numbers = [4, 9, 16, 25, 29];<br>let first = numbers.find(myFunction);<br><br>function myFunction(value, index, array) {<br>
+            &nbsp; return value &gt; 18;<br>} </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_find.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Note that the function takes 3 arguments:</p>
+    <p>Обратите внимание, что функция принимает 3 аргумента:</p>
     <ul>
-        <li>The item value</li>
-        <li>The item index </li>
-        <li>The array itself</li>
+        <li>Значение элемента</li>
+        <li>Индекс элемента</li>
+        <li>Сам массив</li>
     </ul>
     <hr>
+    <a id="mark_array_findIndex"></a>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <a id="mark_array_findIndex"></a>
     <h2>Array.findIndex()</h2>
-    <p>The <code class="w3-codespan">findIndex()</code> method returns the index of the first array element that passes a test function.</p>
-    <p>This example finds the index of the first element that is larger than 18:</p>
+    <p>Метод <code class="w3-codespan">findIndex()</code> возвращает индекс первого элемента массива, который передает тестовую функцию.</p>
+    <p>В этом примере выполняется поиск индекса первого элемента больше 18:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const numbers = [4, 9, 16, 25, 29];<br>let first =
-            numbers.findIndex(myFunction);<br><br>function myFunction(value, index, array) {<br>
-            &nbsp; return
-            value &gt; 18;<br>} </div>
+            const numbers = [4, 9, 16, 25, 29];<br>let first = numbers.findIndex(myFunction);<br><br>function myFunction(value, index, array) {<br>
+            &nbsp; return value &gt; 18;<br>} </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_find_index.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Note that the function takes 3 arguments:</p>
+    <p>Обратите внимание, что функция принимает 3 аргумента:</p>
     <ul>
-        <li>The item value</li>
-        <li>The item index </li>
-        <li>The array itself</li>
+        <li>Значение элемента</li>
+        <li>Индекс элемента</li>
+        <li>Сам массив</li>
     </ul>
     <hr>
 
     <a id="mark_math_methods"></a>
-    <h2>New Math Methods</h2>
-    <p>ES6 added the following methods to the Math object:</p>
+    <h2>Новые математические методы</h2>
+    <p>ES6 добавил следующие методы для математического объекта:</p>
     <ul>
         <li><code class="w3-codespan">Math.trunc()</code></li>
         <li><code class="w3-codespan">Math.sign()</code></li>
@@ -1039,31 +1031,31 @@
         <li><code class="w3-codespan">Math.log10()</code></li>
     </ul>
     <hr>
-    <h2>The Math.trunc() Method</h2>
-    <p><code class="w3-codespan">Math.trunc(x)</code> returns the integer part of x:</p>
+    <h2>Метод Math.trunc()</h2>
+    <p>Метод <code class="w3-codespan">Math.trunc(x)</code> возвращает целочисленную часть Х:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Math.trunc(4.9);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
-            Math.trunc(4.7);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
-            Math.trunc(4.4);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
-            Math.trunc(4.2);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
-            Math.trunc(-4.2);&nbsp;&nbsp;&nbsp;&nbsp;// returns -4<br>
+            Math.trunc(4.9);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 4<br>
+            Math.trunc(4.7);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 4<br>
+            Math.trunc(4.4);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 4<br>
+            Math.trunc(4.2);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 4<br>
+            Math.trunc(-4.2);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт -4<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_math_trunc.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>The Math.sign() Method</h2>
-    <p><code class="w3-codespan">Math.sign(x)</code> returns if x is negative, null or positive:</p>
+
+    <h2>Метод Math.sign()</h2>
+    <p>Метод <code class="w3-codespan">Math.sign(x)</code> возвращает, если X отрицательный, нулевой или положительный:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Math.sign(-4);&nbsp;&nbsp;&nbsp;&nbsp;// returns -1<br>
-            Math.sign(0);&nbsp;&nbsp;&nbsp;&nbsp;// returns 0<br>
-            Math.sign(4);&nbsp;&nbsp;&nbsp;&nbsp;// returns 1<br>
+            Math.sign(-4);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт -1<br>
+            Math.sign(0);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 0<br>
+            Math.sign(4);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 1<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_math_sign.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
@@ -1074,45 +1066,50 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>The Math.cbrt() Method</h2>
-    <p><code class="w3-codespan">Math.cbrt(x)</code> returns the cube root of x:</p>
+    <h2>Метод Math.cbrt()</h2>
+    <p>Метод <code class="w3-codespan">Math.cbrt(x)</code> возвращает кубический корень Х:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Math.cbrt(8);&nbsp;&nbsp;&nbsp;&nbsp;// returns 2<br>
-            Math.cbrt(64);&nbsp;&nbsp;&nbsp;&nbsp;// returns 4<br>
-            Math.cbrt(125);&nbsp;&nbsp;&nbsp;&nbsp;// returns 5<br>
+            Math.cbrt(8);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 2<br>
+            Math.cbrt(64);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 4<br>
+            Math.cbrt(125);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 5<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_math_cbrt.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>The Math.log2() Method</h2>
-    <p><code class="w3-codespan">Math.log2(x)</code> returns the base 2 logarithm of x:</p>
+
+    <h2>Метод Math.log2()</h2>
+    <p>Метод <code class="w3-codespan">Math.log2(x)</code> возвращает логарифм Х по основанию 2:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Math.log2(2);&nbsp;&nbsp;&nbsp;&nbsp;// returns 1<br>
+            Math.log2(2);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 1<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_math_log2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
     <hr>
-    <h2>The Math.log10() Method</h2>
-    <p><code class="w3-codespan">Math.log10(x)</code> returns the base 10 logarithm of x:</p>
+
+    <h2>Метод Math.log10()</h2>
+    <p><code class="w3-codespan">Math.log10(x)</code> возвращает логарифм X по основанию 10:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Math.log10(10);&nbsp;&nbsp;&nbsp;&nbsp;// returns 1<br>
+            Math.log10(10);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт 1<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_math_log10.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-
+    <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
     <a id="mark_number_properties"></a>
-    <h2>New Number Properties</h2>
-    <p>ES6 added the following properties to the Number object:</p>
+    <h2>Новые свойства числа</h2>
+    <p>ES6 добавил следующие свойства к объекту Number (число):</p>
     <ul>
         <li><code class="w3-codespan">EPSILON</code></li>
         <li><code class="w3-codespan">MIN_SAFE_INTEGER</code></li>
@@ -1142,8 +1139,8 @@
     <hr>
 
     <a id="mark_number_methods"></a>
-    <h2>New Number Methods</h2>
-    <p>ES6 added 2 new methods to the Number object:</p>
+    <h2>Новые методы числа</h2>
+    <p>ES6 добавил 2 новых метода к объекту Number (Число):</p>
     <ul>
         <li><code class="w3-codespan">Number.isInteger()</code></li>
         <li><code class="w3-codespan">Number.isSafeInteger()</code></li>
@@ -1154,57 +1151,62 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>The Number.isInteger() Method</h2>
-    <p>The <code class="w3-codespan">Number.isInteger()</code> method returns <code class="w3-codespan">true</code> if the argument is an integer.</p>
+</div>    <h2>Метод Number.isInteger()</h2>
+    <p>Метод <code class="w3-codespan">Number.isInteger()</code> возвращает <code class="w3-codespan">true</code> если аргумент является целым числом .</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Number.isInteger(10);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true<br>
-            Number.isInteger(10.5);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false<br>
+            Number.isInteger(10);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // вернёт true<br>
+            Number.isInteger(10.5);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // вернёт false<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_isinteger.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2>The Number.isSafeInteger() Method</h2>
-    <p>A safe integer is an integer that can be exactly represented as a double precision number.</p>
-    <p>The <code class="w3-codespan">Number.isSafeInteger()</code> method returns <code class="w3-codespan">true</code> if the argument is a safe integer.</p>
+    <h2>Метод Number.isSafeInteger()</h2>
+    <p>Безопасное целое число - это целое число, которое может быть точно представлено как число двойной точности.</p>
+    <p>Метод <code class="w3-codespan">Number.isSafeInteger()</code> возвращает <code class="w3-codespan">true</code> если аргумент является безопасным целым числом.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            Number.isSafeInteger(10);&nbsp;&nbsp;&nbsp;&nbsp;// returns true<br>
-            Number.isSafeInteger(12345678901234567890);&nbsp; // returns false<br>
+            Number.isSafeInteger(10);&nbsp;&nbsp;&nbsp;&nbsp;// вернёт true<br>
+            Number.isSafeInteger(12345678901234567890);&nbsp; // вернёт false<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_issafeinteger.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-
-    <div class="w3-container w3-note">
-        <p>Safe integers are all integers from -(2<sup>53</sup> - 1) to +(2<sup>53</sup> - 1).<br>
-            This is safe: 9007199254740991. This is not safe: 9007199254740992.</p>
+    <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <div class="w3-container w3-note">
+        <p>Безопасные целые числа - это целые числа от -(2<sup>53</sup> - 1) до +(2<sup>53</sup> - 1).<br> Это безопасно: 9007199254740991. Это не безопасно: 9007199254740992.</p>
     </div>
     <hr>
 
     <a id="mark_global_methods"></a>
-    <h2>New Global Methods</h2>
-    <p>ES6 added 2 new global number methods:</p>
+    <h2>Новые глобальные методы</h2>
+    <p>ES6 добавил 2 новых метода глобального числа:</p>
     <ul>
         <li><code class="w3-codespan">isFinite()</code></li>
         <li><code class="w3-codespan">isNaN()</code></li>
     </ul>
     <hr>
-    <h2>The isFinite() Method</h2>
-    <p>The global <code class="w3-codespan">isFinite()</code> method returns <code class="w3-codespan">false</code> if the argument is <code class="w3-codespan">Infinity</code> or <code class="w3-codespan">NaN</code>.</p>
-    <p>Otherwise it returns <code class="w3-codespan">true</code>:</p>
+
+    <h2>Метод isFinite()</h2>
+    <p>Глобальный метод <code class="w3-codespan">isFinite()</code> возвращает <code class="w3-codespan">false</code> если аргумент имеет значение <code class="w3-codespan">Infinity</code> или <code class="w3-codespan">NaN</code>.</p>
+    <p>Иначе возвращается <code class="w3-codespan">true</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            isFinite(10/0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns false<br>
-            isFinite(10/1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns true<br>
+            isFinite(10/0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // вернёт false<br>
+            isFinite(10/1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // вернёт true<br>
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_isfinite.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2>The isNaN() Method</h2>
-    <p>The global <code class="w3-codespan">isNaN()</code> method returns <code class="w3-codespan">true</code> if the argument is <code class="w3-codespan">NaN</code>. Otherwise it returns <code class="w3-codespan">false</code>:</p>
+
+    <h2>Метод isNaN()</h2>
+    <p>Глобальный метод <code class="w3-codespan">isNaN()</code> возвращает <code class="w3-codespan">true</code> если аргумент имеет <code class="w3-codespan">NaN</code>. Иначе возвращает <code class="w3-codespan">false</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
