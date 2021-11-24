@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Версии. ECMAScript 2016. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Версии. ECMAScript 2016. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Версии. ECMAScript 2016. Новые функции. Оператор и присвоение возведения в степень. Массивы Array.includes(). Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
     <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -529,33 +529,33 @@
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5;<br>
-            let z = x ** 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // result is 25
+            let z = x ** 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // результат равен 25
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_exponent1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p><code class="w3-codespan">x ** y</code> produces the same result as <code class="w3-codespan">Math.pow(x, y)</code>:</p>
+    <p><code class="w3-codespan">x ** y</code> даёт тот же результат, что и <code class="w3-codespan">Math.pow(x, y)</code>:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5;<br>
-            let z = Math.pow(x,2);&nbsp;&nbsp; // result is 25
+            let z = Math.pow(x,2);&nbsp;&nbsp; // результат равен 25
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_exponent2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
     <hr>
-    <h2>Exponentiation Assignment</h2>
-    The <b>exponentiation assignment</b> operator (<code class="w3-codespan">**=</code>) raises the value of a variable to the power of the right operand.
+    <h2>Присвоение возведения в степень</h2>
+    <p>Оператор <b>присвоения возведения в степень</b> (<code class="w3-codespan">**=</code>) увеличивает значение переменной до степени правого операнда.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let x = 5;<br>
-            x **= 2; // result 25
+            x **= 2; // результат равен 25
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_exponent3.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Chrome 52 and Edge 14 was the first browsers to fully support the Exponentiation Operator:</p>
+    <p>Chrome 52 и Edge 14 были первыми браузерами, полностью поддерживающими оператор возведения в степень:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -589,19 +589,18 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <h2>JavaScript Array.includes()</h2>
-    <p>ECMAScript 2016 introduced <code class="w3-codespan">Array.prototype.includes</code> to arrays.
-        This allows us to check if an element is present in an array:</p>
+    <p>ECMAScript 2016 представил массивы <code class = "w3 -codepan"> Array.prototype.includes </code>. Это позволяет нам проверить, присутствует ли элемент в массиве:</p>
     <div class="w3-example">
 
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const fruits = ["Banana", "Orange", "Apple", "Mango"];<br><br>
-            fruits.includes("Mango"); // is true
+            fruits.includes("Mango"); // является true
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_includes.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>All modern browsers support Array.prototype.includes:</p>
+    <p>Все современные браузеры поддерживают Array.prototype.includes:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
