@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Версии. ECMAScript 2017. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Версии. ECMAScript 2017. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Версии. ECMAScript 2017. Новые возможности. Заполнение строк. Записи объектов. Значения объекта. Асинхронные функции. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
     <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -513,11 +513,11 @@
     <h2>Новые возможности ECMAScript 2017</h2>
     <p>В этой главе представлены новые функции в ECMAScript 2017:</p>
     <ul>
-        <li><a href="#mark_padding">JavaScript String padding</a></li>
+        <li><a href="#mark_padding">JavaScript Заполнение строк</a></li>
         <li><a href="#mark_obj_entries">JavaScript Object.entries</a></li>
         <li><a href="#mark_obj_values">JavaScript Object.values</a></li>
-        <li><a href="#mark_async">JavaScript async functions</a></li>
-        <li>JavaScript shared memory</li>
+        <li><a href="#mark_async">JavaScript Асинхронные функции</a></li>
+        <li>JavaScript Общая память</li>
     </ul>
     <hr>
     <div class="adver">
@@ -526,15 +526,14 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <a id="mark_padding"></a>
-    <h2>JavaScript String Padding</h2>
-    <p>ECMAScript 2017 added two String methods: <code class="w3-codespan">padStart</code>
-        and <code class="w3-codespan">padEnd</code> to support padding at the beginning and at the end of a string.</p>
+    <h2>JavaScript Заполнение строк</h2>
+    <p>В ECMAScript 2017 добавлены два метода строк: <code class="w3-codespan">padStart</code> и <code class="w3-codespan">padEnd</code> для поддержки заполнения в начале и в конце строки.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let str = &quot;5&quot;;<br>
             str = str.padStart(4,0);<br>
-            // result is 0005
+            // результат равен 0005
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding1.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
@@ -544,12 +543,12 @@
         <div class="w3-code notranslate jsHigh">
             let str = &quot;5&quot;;<br>
             str = str.padEnd(4,0);<br>
-            // result is 5000
+            // результат равен 5000
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding2.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>String Padding is not supported in Internet Explorer.</p>
-    <p>Firefox and Safari were the first browsers with support for JavaScript string padding:</p>
+    <p>Заполнение строк не поддерживается в Internet Explorer.</p>
+    <p>Firefox и Safari были первыми браузерами с поддержкой заполнения строк в JavaScript:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -582,48 +581,44 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <a id="mark_obj_entries"></a>
-    <h2>JavaScript Object Entries</h2>
-    <p>ECMAScript 2017 adds a new <code class="w3-codespan">Object.entries</code> method to objects.</p>
-    <p>The Object.entries() method returns an array of the key/value pairs in an object:</p>
+    <h2>JavaScript Записи объектов</h2>
+    <p>ECMAScript 2017 добавил к объектам новый метод <code class="w3-codespan">Object.entries</code>.</p>
+    <p>Метод Object.entries() возвращает массив пар ключ / значение в объекте:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const person = {<br>&nbsp; firstName : &quot;John&quot;,<br>&nbsp; lastName : &quot;Doe&quot;,<br>&nbsp;
-            age : 50,<br>&nbsp; eyeColor : &quot;blue&quot;<br>};<br>document.getElementById(&quot;demo&quot;).innerHTML =
-            Object.entries(person);
+            age : 50,<br>&nbsp; eyeColor : &quot;blue&quot;<br>};<br>document.getElementById(&quot;demo&quot;).innerHTML = Object.entries(person);
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_entries.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Object.entries() makes it simple to use objects in loops:</p>
+    <p>Object.entries() упрощает использование объектов в циклах:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const fruits = {Bananas:300, Oranges:200, Apples:500};<br>
-            <br>
+            const fruits = {Bananas:300, Oranges:200, Apples:500};<br><br>
             let text = "";<br>
             for (let [fruit, value] of Object.entries(fruits)) {<br>
-            text += fruit + ": " + value + "<br>";<br>
-            }
+            text += fruit + ": " + value + "<br>";<br> }
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_entries_loop.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Object.entries() also makes it simple to convert objects to maps:</p>
+    <p>Object.entries() также упрощает преобразование объектов в карты:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
-            const fruits = {Bananas:300, Oranges:200, Apples:500};<br>
-            <br>
+            const fruits = {Bananas:300, Oranges:200, Apples:500};<br><br>
             const myMap = new Map(Object.entries(fruits));
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_entries_map.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>Chrome and Firefox were the first browsers with support for <code class="w3-codespan">Object.entries</code>:</p>
+    <p>Chrome и Firefox были первыми браузерами с поддержкой <code class="w3-codespan">Object.entries</code>:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -656,10 +651,9 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <a id="mark_obj_values"></a>
-    <h2>JavaScript Object Values</h2>
-    <p><code class="w3-codespan">Object.values</code> are similar to <code class="w3-codespan">Object.entries</code>, but returns a single dimension array of the object values:</p>
+    <h2>JavaScript Значения объекта</h2>
+    <p><code class="w3-codespan">Object.values</code> похожи на <code class="w3-codespan">Object.entries</code>, но возвращает одномерный массив значений объекта:</p>
     <div class="w3-example">
-
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             const person = {<br>&nbsp; firstName : &quot;John&quot;,<br>&nbsp; lastName : &quot;Doe&quot;,<br>&nbsp;
@@ -668,7 +662,7 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_values.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>Firefox and Chrome were the first browsers with support for <code class="w3-codespan">Object.values</code>:</p>
+    <p>Firefox и Chrome были первыми браузерами с поддержкой <code class="w3-codespan">Object.values</code>:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -702,9 +696,9 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <a id="mark_async"></a>
-    <h2>JavaScript Async Functions</h2>
+    <h2>JavaScript Асинхронные функции</h2>
     <div class="w3-example">
-        <h3>Waiting for a Timeout</h3>
+        <h3>Ожидание тайм-аута</h3>
         <div class="w3-code notranslate jsHigh">
             async function myDisplay() {<br>
             &nbsp; let myPromise = new Promise(function(myResolve,  myReject) {<br>
@@ -715,7 +709,7 @@
         </div>
         <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_async4.html">Попробуйте сами &raquo;</a></p>
     </div>
-    <p>Firefox and Chrome were the first browsers with support for async JavaScript functions:</p>
+    <p>Firefox и Chrome были первыми браузерами с поддержкой асинхронных функций JavaScript:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
