@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Версии. ECMAScript 2018. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Версии. ECMAScript 2018. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Версии. ECMAScript 2018. Новые возможности. Асинхронная итерация. Promise.finally. Object Rest Свойства. новые функции RegExp. Браузерная поддержка. Уроки для начинающих. W3Schools на русском'>
     <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -510,28 +510,28 @@
         <p>С 2016 года новые версии именуются по годам (ECMAScript 2016/2017/2018).</p>
     </div>
 
-    <h2>New Features in ECMAScript 2018</h2>
-    <p>This chapter introduces the new features in ECMAScript 2018:</p>
+    <h2>Новые возможности ECMAScript 2018</h2>
+    <p>В этой главе представлены новые функции в ECMAScript 2018:</p>
     <ul>
-        <li><a href="#mark_async_iteration">Asynchronous Iteration</a></li>
-        <li><a href="#mark_promise_finally">Promise Finally</a></li>
-        <li><a href="#mark_obj_rest">Object Rest Properties</a></li>
-        <li><a href="#mark_regxp">New RegExp Features</a></li>
+        <li><a href="#mark_async_iteration">Асинхронная итерация</a></li>
+        <li><a href="#mark_promise_finally">Финальные промисы</a></li>
+        <li><a href="#mark_obj_rest">Object Rest Свойства</a></li>
+        <li><a href="#mark_regxp">Новые возможности RegExp</a></li>
     </ul>
-
     <hr>
     <a id="#mark_async_iteration"></a>
-    <h2>JavaScript Asynchronous Iteration</h2>
-    <p>ECMAScript 2018 added asynchronous iterators and iterables.</p>
-    <p>With asynchronous iterables, we can use the <code class="w3-codespan">await</code> keyword in <code class="w3-codespan">for/of</code> loops.
+
+    <h2>JavaScript Асинхронная итерация</h2>
+    <p>В ECMAScript 2018 добавлены асинхронные итераторы и итерации.</p>
+    <p>С асинхронными итерациями мы можем использовать ключевое слово <code class="w3-codespan">await</code> в циклах <code class="w3-codespan">for/of</code>.
 
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             for await () {}
         </div>
     </div>
-    <p>Firefox and Safari were the first browsers with support for JavaScript asynchronous iteration:</p>
+    <p>Firefox и Safari были первыми браузерами с поддержкой асинхронной итерации JavaScript:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -565,9 +565,9 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <a id="mark_promise_finally"></a>
     <h2>JavaScript Promise.finally</h2>
-    <p>ECMAScript 2018 finalizes the full implementation of the Promise object with <code class="w3-codespan">Promise.finally</code>:</p>
+    <p>ECMAScript 2018 завершает полную реализацию объекта Promise с <code class="w3-codespan">Promise.finally</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let myPromise = new Promise();<br>
             <br>
@@ -576,7 +576,7 @@
             myPromise.finally();<br>
         </div>
     </div>
-    <p>Chrome and Firefox were the first browsers with support for <code class="w3-codespan">Promise.finally</code>:</p>
+    <p>Chrome и Firefox были первыми браузерами с поддержкой <code class="w3-codespan">Promise.finally</code>:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -610,11 +610,11 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <a id="mark_obj_rest"></a>
-    <h2>JavaScript Object Rest Properties</h2>
-    <p>ECMAScript 2018 added rest properties.</p>
-    <p>This allows us to destruct an object and collect the leftovers onto a new object:</p>
+    <h2>JavaScript Object Rest Свойства</h2>
+    <p>В ECMAScript 2018 добавлены rest свойства.</p>
+    <p>Это позволяет разрушить объект и собрать остатки на новом объекте:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
             let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };<br>
             x; // 1<br>
@@ -622,7 +622,7 @@
             z; // { a: 3, b: 4 }<br>
         </div>
     </div>
-    <p>Chrome, Firefox, ans Opera were the first browsers with support for object rest properties:</p>
+    <p>Chrome, Firefox и Opera были первыми браузерами с поддержкой object rest свойств:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
@@ -656,8 +656,8 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <a id="mark_regxp"></a>
-    <h2>New JavaScript RegExp Features</h2>
-    <p>ECMAScript 2018 added 4 new RegExp features:</p>
+    <h2>Новые возможности JavaScript RegExp</h2>
+    <p>В ECMAScript 2018 добавлены 4 новые функции RegExp:</p>
     <ul>
         <li>Unicode Property Escapes (\p{...})</li>
         <li>Lookbehind Assertions (?&lt;= ) and (?&lt;! )</li>
@@ -665,7 +665,7 @@
         <li>s (dotAll) Flag</li>
     </ul>
 
-    <p>Chrome and Firefox were the first browsers with support for all the new RegExp features:</p>
+    <p>Chrome и Firefox были первыми браузерами с поддержкой всех новых функций RegExp:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
             <tbody><tr style="height:50px">
