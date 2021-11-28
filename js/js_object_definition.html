@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Определения объектов. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Определения объектов. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Определения объектов. В JavaScript почти всё является объектом. Чтио такое примитивы? Объекты - это переменные. Свойства и методы объекта. Создание. Использование литерала объекта. Ключевое слово new. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -505,24 +505,23 @@
     </div>
     <hr>
     <div class="w3-panel w3-note">
-        <p>In JavaScript, objects are king. If you understand objects, you understand JavaScript.</p>
+        <p>В JavaScript объекты являются королями. Если вы разбираетесь в объектах, вы понимаете JavaScript.</p>
     </div>
     <hr>
 
-    <p>In JavaScript, almost &quot;everything&quot; is an object.</p>
-
+    <p>В JavaScript почти &quot;всё&quot; является объектом.</p>
     <ul>
-        <li>Booleans can be objects (if defined with the <code class="w3-codespan">new</code> keyword)</li>
-        <li>Numbers can be objects (if defined with the <code class="w3-codespan">new</code> keyword)</li>
-        <li>Strings can be objects (if defined with the <code class="w3-codespan">new</code> keyword)</li>
-        <li>Dates are always objects</li>
-        <li>Maths are always objects</li>
-        <li>Regular expressions are always objects</li>
-        <li>Arrays are always objects</li>
-        <li>Functions are always objects</li>
-        <li>Objects are always objects</li>
+        <li>Логические (булевы) значения могут быть объектами (если они определены с помощью ключевого слова <code class="w3-codespan">new</code>)</li>
+        <li>Числа могут быть объектами (если они определены с помощью ключевого слова <code class="w3-codespan">new</code>)</li>
+        <li>Строки могут быть объектами (если они определены с помощью ключевого слова <code class="w3-codespan">new</code>)</li>
+        <li>Даты всегда являются объектами</li>
+        <li>Математика - это всегда объекты</li>
+        <li>Регулярные выражения всегда являются объектами</li>
+        <li>Массивы всегда являются объектами</li>
+        <li>Функции всегда являются объектами</li>
+        <li>Объекты всегда являются объектами</li>
     </ul>
-    <p>All JavaScript values, except primitives, are objects.</p>
+    <p>Все значения JavaScript, кроме примитивов, являются объектами.</p>
     <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -530,10 +529,10 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>JavaScript Primitives</h2>
-    <p>A <strong>primitive value</strong> is a value that has no properties or methods.</p>
-    <p>A <strong>primitive data type</strong> is data that has a primitive value.</p>
-    <p>JavaScript defines 5 types of primitive data types:</p>
+    <h2>JavaScript Примитивы</h2>
+    <p><strong>Примитивное значение</strong> - это значение, не имеющее свойств или методов.</p>
+    <p><strong>Примитивный тип данных</strong> - это данные с примитивным значением.</p>
+    <p>JavaScript определяет 5 типов примитивных типов данных:</p>
     <ul>
         <li><code class="w3-codespan">string</code></li>
         <li><code class="w3-codespan">number</code></li>
@@ -542,20 +541,20 @@
         <li><code class="w3-codespan">undefined</code></li>
     </ul>
 
-    <p>Primitive values are immutable (they are hardcoded and therefore cannot be changed).</p>
+    <p>Примитивные значения неизменяемы (они жестко запрограммированы и поэтому не могут быть изменены).</p>
 
     <div class="w3-panel w3-note">
-        <p>if x = 3.14, you can change the value of x. But you cannot change the value of 3.14.</p>
+        <p>если x = 3.14, вы можете изменить значение x. Но вы не можете изменить значение 3.14.</p>
     </div>
 
     <table class="ws-table-all">
-        <tr><th>Value</th><th>Type</th><th>Comment</th></tr>
-        <tr><td>"Hello&quot;</td><td>string</td><td>&quot;Hello&quot; is always &quot;Hello&quot;</td></tr>
-        <tr><td>3.14</td><td>number</td><td>3.14 is always 3.14</td></tr>
-        <tr><td>true</td><td>boolean</td><td>true is always true</td></tr>
-        <tr><td>false</td><td>boolean</td><td>false is always false</td></tr>
-        <tr><td>null</td><td>null (object)</td><td>null is always null</td></tr>
-        <tr><td>undefined</td><td>undefined</td><td>undefined is always undefined</td></tr>
+        <tr><th>Значение</th><th>Тип</th><th>Коментарий</th></tr>
+        <tr><td>"Hello&quot;</td><td>string</td><td>&quot;Hello&quot; всегда &quot;Hello&quot;</td></tr>
+        <tr><td>3.14</td><td>number</td><td>3.14 всегда 3.14</td></tr>
+        <tr><td>true</td><td>boolean</td><td>true всегда true</td></tr>
+        <tr><td>false</td><td>boolean</td><td>false всегда false</td></tr>
+        <tr><td>null</td><td>null (объект)</td><td>null всегда null</td></tr>
+        <tr><td>undefined</td><td>undefined</td><td>undefined всегда undefined</td></tr>
     </table>
     <hr>
     <div class="adver">
@@ -563,8 +562,8 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Objects are Variables</h2>
-    <p>JavaScript variables can contain single values:</p>
+</div>    <h2>Объекты - это переменные</h2>
+    <p>Переменные JavaScript могут содержать одиночные значения:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -573,11 +572,9 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_variable.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>JavaScript variables can also contain many values.</p>
-    <p>Objects are variables too. But objects can contain many
-        values. </p>
-    <p>Object values are written as <b>name : value</b> pairs (name and value separated by a
-        colon).</p>
+    <p>JavaScript переменные также могут содержать множество значений.</p>
+    <p>Объекты тоже переменные. Но объекты могут содержать много значений.</p>
+    <p>Значения объекта записываются в виде пар <b>имя: значение</b> (имя и значение, разделенные двоеточием).</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -588,9 +585,9 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>A JavaScript object is a collection of <strong>named values</strong></p>
+        <p>JavaScript объект - это коллекция <strong>именованных значений</strong></p>
     </div>
-    <p>It is a common practice to declare objects with the <code class="w3-codespan">const</code> keyword.</p>
+    <p>Обычно объекты объявляются с помощью ключевого слова <code class="w3-codespan">const</code>.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -605,12 +602,12 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Object Properties</h2>
-    <p>The named values, in JavaScript objects, are called <strong>properties</strong>.</p>
+    <h2>Свойства объекта</h2>
+    <p>Именованные значения в JavaScript объектах называются <strong>свойствами</strong>.</p>
     <table class="ws-table-all">
         <tr>
-            <th style="width:20%">Property</th>
-            <th>Value</th>
+            <th style="width:20%">Свойство</th>
+            <th>Значение</th>
         </tr>
         <tr>
             <td>firstName</td>
@@ -630,13 +627,13 @@
         </tr>
     </table>
 
-    <p>Objects written as name value pairs are similar to:</p>
+    <p>Объекты, записанные как пары имя-значение, похожи на:</p>
     <ul>
-        <li>Associative arrays in PHP</li>
-        <li>Dictionaries in Python</li>
-        <li>Hash tables in C</li>
-        <li>Hash maps in Java</li>
-        <li>Hashes in Ruby and Perl</li>
+        <li>Ассоциативные массивы в PHP</li>
+        <li>Словари на Python</li>
+        <li>Хеш-таблицы на C</li>
+        <li>Хеш-карты в Java</li>
+        <li>Хеши на Ruby и Perl</li>
     </ul>
     <hr>
     <div class="adver">
@@ -645,15 +642,15 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Object Methods</h2>
-    <p>Methods are <strong>actions</strong> that can be performed on objects.</p>
-    <p>Object properties can be both primitive values, other objects, and functions.</p>
-    <p>An <strong>object method</strong> is an object property containing a <strong>function definition</strong>.</p>
+    <h2>Методы объекта</h2>
+    <p>Методы - это <b>действия</b>, которые можно выполнять с объектами.</p>
+    <p>Свойства объекта могут быть как примитивными значениями, так и другими объектами и функциями.</p>
+    <p><b>Метод объекта</b> - это свойство объекта, содержащее <b>определение функции</b>.</p>
 
     <table class="ws-table-all">
         <tr>
-            <th style="width:20%">Property</th>
-            <th>Value</th>
+            <th style="width:20%">Свойство</th>
+            <th>Значение</th>
         </tr>
         <tr>
             <td>firstName</td>
@@ -678,10 +675,10 @@
     </table>
 
     <div class="w3-panel w3-note">
-        <p>JavaScript objects are containers for named values, called properties and methods.</p>
+        <p>JavaScript объекты - это контейнеры для именованных значений, называемых свойствами и методами.</p>
     </div>
 
-    <p>You will learn more about methods in the next chapters.</p>
+    <p>Вы узнаете больше о методах в следующих главах.</p>
     <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
@@ -689,22 +686,22 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Creating a JavaScript Object</h2>
-    <p>With JavaScript, you can define and create your own objects.</p>
-    <p>There are different ways to create new objects:</p>
+    <h2>Создание объекта JavaScript</h2>
+    <p>С помощью JavaScript вы можете определять и создавать свои собственные объекты.</p>
+    <p>Существуют разные способы создания новых объектов:</p>
     <ul>
-        <li>Create a single object, using an object literal.</li>
-        <li>Create a single object, with the keyword <code class="w3-codespan">new</code>.</li>
-        <li>Define an object constructor, and then create objects of the constructed type.</li>
-        <li>Create an object using <code class="w3-codespan">Object.create()</code>.</li>
+        <li>Создайте единый объект, используя литерал объекта</li>
+        <li>Создайте единый объект с ключевым словом <code class="w3-codespan">new</code>.</li>
+        <li>Определите конструктор объекта, а затем создайте объекты сконструированного типа.</li>
+        <li>Создайте объект, используя <code class="w3-codespan">Object.create()</code>.</li>
     </ul>
     <hr>
 
-    <h2>Using an Object Literal</h2>
-    <p>This is the easiest way to create a JavaScript Object.</p>
-    <p>Using an object literal, you both define and create an object in one statement.</p>
-    <p>An object literal is a list of name:value pairs (like age:50) inside curly braces {}.</p>
-    <p>The following example creates a new JavaScript object with four properties:</p>
+    <h2>Использование литерала объекта</h2>
+    <p>Это самый простой способ создать объект JavaScript.</p>
+    <p>Используя литерал объекта, вы одновременно определяете и создаете объект в одном операторе.</p>
+    <p>Литерал объекта - это список пар имя: значение (например, age: 50) в фигурных скобках {}.</p>
+    <p>В следующем примере создается новый объект JavaScript с четырьмя свойствами:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -712,7 +709,7 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_create_1.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>Spaces and line breaks are not important. An object definition can span multiple lines:</p>
+    <p>Пробелы и перенос строки не важны. Определение объекта может занимать несколько строк:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -720,7 +717,7 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_create_2.html">Попробуйте сами &raquo;</a>
     </div>
-    <p>This example creates an empty JavaScript object, and then adds 4 properties:</p>
+    <p>В этом примере создается пустой объект JavaScript, а затем добавляются 4 свойства:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -739,10 +736,8 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Using the JavaScript Keyword new</h2>
-    <p>The following example create a new JavaScript object
-        using <code class="w3-codespan">new Object()</code>,
-        and then adds 4 properties:</p>
+    <h2>Использование JavaScript ключевого слова new</h2>
+    <p>В следующем примере создается новый объект JavaScript с помощью <code class="w3-codespan">new Object()</code>, а затем добавляются 4 свойства:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -756,9 +751,9 @@
     </div>
 
     <div class="w3-panel w3-note">
-        <p>The examples above do exactly the same.</p>
-        <p>But there is no need to use <code class="w3-codespan">new Object()</code>.</p>
-        <p>For readability, simplicity and execution speed, use the object literal method.</p>
+        <p>Приведенные выше примеры делают то же самое.</p>
+        <p>Но нет необходимости использовать <code class="w3-codespan">new Object()</code>.</p>
+        <p>Для удобства чтения, простоты и скорости выполнения используйте метод литерала объекта.</p>
     </div>
     <hr>
     <div class="adver">
@@ -767,18 +762,18 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>JavaScript Objects are Mutable</h2>
-    <p>Objects are mutable: They are addressed by reference, not by value.</p>
-    <p>If person is an object, the following statement will not create a copy of person:</p>
+    <h2>Объекты JavaScript изменяемы</h2>
+    <p>Объекты изменяемы: они адресуются по ссылке, а не по значению.</p>
+    <p>Если человек является объектом, следующее утверждение не создаст копию человека:</p>
 
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            const x = person;&nbsp; // Will not create a copy of person.
+            const x = person;&nbsp; // Не будет создавать копию человека
         </div>
     </div>
 
-    <p>The object x is <strong>not a copy</strong> of person. It <strong>is</strong> person. Both x and person are the same object.</p>
-    <p>Any changes to x will also change person, because x and person are the same object.</p>
+    <p>Объект x - <b>не копия</b> человека. Это <b>это</b> человек. И x, и person - один и тот же объект.</p>
+    <p>Любые изменения в x также изменят person, потому что x и person являются одним и тем же объектом.</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -788,7 +783,7 @@
             &nbsp; age:50, eyeColor:&quot;blue&quot;<br>
             }<br>
             <br>const x = person;<br>
-            x.age = 10;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Will change both x.age and person.age
+            x.age = 10;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Изменит как x.age, так и person.age
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_mutable.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
