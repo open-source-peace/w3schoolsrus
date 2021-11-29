@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='ru'>
-<meta charset='UTF-8'>
+<meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
@@ -10,9 +10,9 @@
 <meta property='og:image:type' content='image/png'>
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
-<meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает популярные темы, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
+<meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает наиболее популярные технологии, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Свойства объекта. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Свойства объекта. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Свойства объекта. Доступ к свойствам. Цикл for...in. Добавление новых свойств. Удаление свойств. Вложенные объекты и массивы. Атрибуты свойства. Объекты JavaScript наследуют свойства своего прототипа. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -504,17 +504,17 @@
         <a class="w3-right w3-btn" href="js_object_methods.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Properties are the most important part of any JavaScript object.</p>
+    <p class="intro"><strong>Свойства</strong> - самая важная часть любого объекта JavaScript.</p>
     <hr>
 
-    <h2>JavaScript Properties</h2>
-    <p>Properties are the values associated with a JavaScript object.</p>
-    <p>A JavaScript object is a collection of unordered properties.</p>
-    <p>Properties can usually be changed, added, and deleted, but some are read only.</p>
+    <h2>JavaScript Свойства</h2>
+    <p><strong>Свойства</strong> - это значения, связанные с объектом JavaScript.</p>
+    <p><strong>Объект JavaScript</strong> - это набор неупорядоченных свойств.</p>
+    <p>Свойства обычно можно изменять, добавлять и удалять, но некоторые из них доступны только для чтения.</p>
     <hr>
 
-    <h2>Accessing JavaScript Properties</h2>
-    <p>The syntax for accessing the property of an object is:</p>
+    <h2>Доступ к свойствам JavaScript</h2>
+    <p>Синтаксис для доступа к свойству объекта:</p>
     <div class="w3-code w3-border notranslate jsHigh">
         <div>
             <i>objectName.property&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>// person.age
@@ -528,17 +528,17 @@
             <i>objectName</i>[<i>expression</i>]&nbsp;&nbsp; // x = &quot;age&quot;; person[x]</div></div>
 
     <div class="w3-panel w3-note">
-        <p>The expression must evaluate to a property name.</p>
+        <p>Выражение должно оцениваться как имя свойства.</p>
     </div>
 
     <div class="w3-example">
-        <h3>Example 1</h3>
+        <h3>Пример 1</h3>
         <div class="w3-code notranslate jsHigh">
             person.firstname + &quot; is &quot; + person.age + &quot; years old.&quot;;</div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_properties1.html">Попробуйте сами &raquo;</a>
     </div>
     <div class="w3-example">
-        <h3>Example 2</h3>
+        <h3>Пример 2</h3>
         <div class="w3-code notranslate jsHigh">
             person[&quot;firstname&quot;] + &quot; is &quot; + person[&quot;age&quot;] + &quot; years old.&quot;;</div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_properties2.html" target="_blank">Попробуйте сами &raquo;</a>
@@ -550,16 +550,16 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>JavaScript for...in Loop</h2>
-    <p>The JavaScript <code class="w3-codespan">for...in</code> statement loops through the properties of an object.</p>
-    <h3>Syntax</h3>
+    <h2>JavaScript Цикл for...in</h2>
+    <p>JavaScript инструкция <code class="w3-codespan">for...in</code> перебирает свойства объекта.</p>
+    <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate jsHigh"><div>
             for (let <i>variable</i> in <i>object</i>) {<br>
-            <i>&nbsp; // code to be executed</i><br>
+            <i>&nbsp; // код для выполнения</i><br>
             }</div></div>
 
-    <p>The block of code inside of the <code class="w3-codespan">for...in</code> loop will be executed once for each property.</p>
-    <p>Looping through the properties of an object:</p>
+    <p>Блок кода внутри цикла <code class="w3-codespan">for...in</code> будет выполняться один раз для каждого свойства.</p>
+    <p>Цикл по свойствам объекта:</p>
 
     <div class="w3-example">
         <h3>Пример</h3>
@@ -582,9 +582,9 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Adding New Properties</h2>
-    <p>You can add new properties to an existing object by simply giving it a value. </p>
-    <p>Assume that the person object already exists - you can then give it new properties:</p>
+    <h2>Добавление новых свойств</h2>
+    <p>Вы можете добавить новые свойства к существующему объекту, просто присвоив ему значение.</p>
+    <p>Предположим, что объект person уже существует - затем вы можете присвоить ему новые свойства:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -593,8 +593,8 @@
     </div>
     <hr>
 
-    <h2>Deleting Properties</h2>
-    <p>The <code class="w3-codespan">delete</code> keyword deletes a property from an object:</p>
+    <h2>Удаление свойств</h2>
+    <p>Ключевое слово <code class="w3-codespan">delete</code> удаляет свойство из объекта:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -608,7 +608,7 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_properties4.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
-    <p>or delete person[&quot;age&quot;];</p>
+    <p>или удаляет person[&quot;age&quot;];</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -623,21 +623,18 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_properties5.html" target="_blank">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>The <code class="w3-codespan">delete</code> keyword deletes both the value of the property and the property itself.</p>
-    <p>After deletion, the property cannot be used before it is added back again.</p>
-    <p>The
-        <code class="w3-codespan">delete</code> operator is designed to be used on object properties. It has no effect on
-        variables or functions.
-    </p>
-    <p>The <code class="w3-codespan">delete</code> operator should not be used on predefined JavaScript object properties. It can crash your application.</p>
+    <p>Ключевое слово <code class="w3-codespan">delete</code> удаляет как значение свойства, так и само свойство.</p>
+    <p>После удаления свойство нельзя использовать до его повторного добавления.</p>
+    <p>Оператор <code class="w3-codespan">delete</code> разработан для использования со свойствами объекта. Он не влияет на переменные или функции.</p>
+    <p>Оператор <code class="w3-codespan">delete</code> не следует использовать для предопределенных свойств объекта JavaScript. Это может привести к сбою вашего приложения.</p>
     <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Nested Objects</h2>
-    <p>Values in an object can be another object:</p>
+</div>    <h2>Вложенные объекты</h2>
+    <p>Значения в объекте могут быть другим объектом:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -651,7 +648,7 @@
         </div>
     </div>
 
-    <p>You can access nested objects using the dot notation or the bracket notation:</p>
+    <p>Вы можете получить доступ к вложенным объектам, используя точечную нотацию или нотацию скобок:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -660,7 +657,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_nested.html">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>or:</p>
+    <p>или:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -669,7 +666,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_nested2.html">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>or:</p>
+    <p>или:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -678,7 +675,7 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_nested3.html">Попробуйте сами &raquo;</a>
     </div>
 
-    <p>or:</p>
+    <p>или:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -695,8 +692,8 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    <h2>Nested Arrays and Objects</h2>
-    <p>Values in objects can be arrays, and values in arrays can be objects:</p>
+    <h2>Вложенные массивы и объекты</h2>
+    <p>Значения в объектах могут быть массивами, а значения в массивах могут быть объектами:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -711,7 +708,7 @@
             &nbsp; ]<br>}</div>
     </div>
 
-    <p>To access arrays inside arrays, use a for-in loop for each array:</p>
+    <p>Чтобы получить доступ к массивам внутри массивов, используйте цикл for-in для каждого массива:</p>
     <div class="w3-example">
         <h3>Пример</h3>
         <div class="w3-code notranslate jsHigh">
@@ -722,20 +719,19 @@
     </div>
     <hr>
 
-    <h2>Property Attributes</h2>
-    <p>All properties have a name. In addition they also have a value.</p>
-    <p>The value is one of the property's attributes.</p>
-    <p>Other attributes are: enumerable, configurable, and writable.</p>
-    <p>These attributes define how the property can be accessed (is it readable?, is it writable?)</p>
-    <p>In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).</p>
-    <p>(ECMAScript 5 has methods for both getting and setting all property attributes)</p>
+    <h2>Атрибуты свойства</h2>
+    <p>У всех свойств есть имя. Кроме того, они также имеют значение.</p>
+    <p>Значение является одним из атрибутов свойства.</p>
+    <p>Другие атрибуты: перечисляемый, настраиваемый и доступный для записи.</p>
+    <p>Эти атрибуты определяют, как можно получить доступ к свойству (доступно ли оно для чтения? или для записи?)</p>
+    <p>В JavaScript все атрибуты можно читать, но можно изменить только атрибут значения (и только если свойство доступно для записи).</p>
+    <p>(В ECMAScript 5 есть методы как для получения, так и для установки всех атрибутов свойств).</p>
     <hr>
 
-    <h2>Prototype Properties</h2>
-    <p>JavaScript objects inherit the properties of their prototype. </p>
-    <p>The <code class="w3-codespan">delete</code> keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.</p>
+    <h2>Свойства прототипа</h2>
+    <p>Объекты JavaScript наследуют свойства своего прототипа.</p>
+    <p>Ключевое слово <code class="w3-codespan">delete</code> не удаляет унаследованные свойства, но если вы удалите свойство прототипа, это повлияет на все объекты, унаследованные от прототипа.</p>
     <hr>
-
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_object_definition.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_object_methods.html">Next &#10095;</a>
@@ -906,7 +902,7 @@
   Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
     Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
     Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
-    <a href='../about/about_copyright.html'>Copyright 1999-2022</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2023</a> by Refsnes Data. All Rights Reserved.<br>
     <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
     <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
   </div>
