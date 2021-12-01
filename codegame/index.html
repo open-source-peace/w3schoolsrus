@@ -1,0 +1,132 @@
+<html lang="ru-UA" style="height: 100%;"><head>
+    <title>W3Schools Кодовая игра онлайн</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+    </style>
+    <link rel="stylesheet" href="../styles/codeGameUI.css">
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body style="margin:0;">
+<div style="background-color:#fff;height:80px;">
+    <style>
+        .mainheader {
+            position:absolute;
+            width:100%;
+            text-align:center;
+            font-family: var(--codeGame-font-family-freckle-face);
+            font-style: var(--codeGame-font-style-normal);
+            font-weight: var(--codeGame-font-weight-normal);
+            font-size: var(--codeGame-font-size-32);
+            line-height: var(--codeGame-line-spacing-50);
+            letter-spacing: var(--codeGame-character-spacing-0);
+            color: var(--maincolour);
+            text-shadow: 1px 1px 0 var(--white);
+        }
+    </style>
+    <h1 class="mainheader">Кодовая игра: Помогите рыси собрать сосновые шишки!</h1>
+    <a href="https://w3schools.com/" style="z-index:9;position:absolute;">
+        <img src="../images/w3logo.png" alt="W3Schools" style="width:50px;margin:16px;">
+    </a>
+
+</div>
+<!-- CODEGAME START -->
+<div class="codeGame-main" id="codeGame-main">
+    <div class="codeGame-render" id="codeGame-render">
+    </div>
+    <div class="codeGame-control">
+        <div id="codeGame-messagebox" class="codeGame-control-sidebar codeGame-messagebox-container" style="display: none;">
+            <div class="codeGame-messagebox">
+                <div id="codeGame-messagebox-section" class="codeGame-messagebox-section success">
+                    <div class="codeGame-messagebox-header">
+                        <pre id="codeGame-messagebox-title">Success</pre>
+                        <div class="circle"></div>
+                        <div style="right: 40px;" class="circle"></div>
+                    </div>
+                    <div class="codeGame-messagebox-cover">
+                        <img src="../svg/pinecones.svg"/>
+                    </div>
+                    <div class="codeGame-messagebox-content">
+                        <h1 id="codeGame-messagebox-text" class="maintitle">Вау!<br>Отличная работа!</h1>
+                    </div>
+                    <div class="codeGame codeGame-messagebox-actions">
+                        <button id="codeGame-nextLevel" class="nextLevel">Играть на следующем уровне</button>
+                        <button id="codeGame-retryLevel" class="retryLevel"><p><img alt="restart" src="../svg/restart.svg"/><span>Повторить</span></p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="codeGame-levelselector" class="codeGame-control-sidebar codeGame-levelselector" style="display: none;">
+            <div class="codeGame-levelselector-section">
+                <div class="codeGame-levelselector-header">
+                    <pre id="codeGame-levelselector-title">Уровни</pre>
+                    <div class="circle"></div>
+                    <div style="right: 28px;" class="circle"></div>
+                </div>
+                <div id="codeGame-levelselector-scrollcontainer" class="codeGame-levelselector-scrollcontainer">
+                </div>
+                <div class="codeGame-levelselector-footer">
+                    <div class="codeGame">
+                        <button id="codeGame-levelselector-close" class="levelselector close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="codeGame-gamebox" class="codeGame-control-sidebar codeGame-control-container" style="display: block;">
+            <div class="codeGame-control-upper">
+                <h4 id="codeGame-levelTitle" class="level">УРОВЕНЬ 1</h4>
+                <h1 id="codeGame-mainTitle" class="maintitle">Помогите рыси собрать<br>сосновые шишки!</h1>
+                <h3 id="codeGame-subTitle" class="subtitle">Подождите пожалуйста...</h3>
+            </div>
+            <div id="codeGame-control-lower" class="codeGame-control-lower">
+                <div class="codeGame-control-code-container">
+                    <div style="position: relative" class="codeGame-control-code-header">
+                        <pre>Панель кода</pre>
+                        <div id="codeGame-button-clear" class="trash"></div>
+                        <div class="trashnote">Очистить код</div>
+                        <div class="circle"></div>
+                    </div>
+                    <div id="codeGame-control-code-sequence" class="codeGame codeGame-control-code-sequence">
+                    </div>
+                    <div id="codeGame-control-actions" class="codeGame-control-code-actions">
+                        <div class="codeGame codeGame-control-buttons">
+                            <div style="display: none;" id="codeGame-button-forward" class="button forward"></div>
+                            <div style="display: none;" id="codeGame-button-left" class="button left"></div>
+                            <div style="display: none;" id="codeGame-button-right" class="button right"></div>
+                            <div style="display: none;" id="codeGame-button-use" class="button use"></div>
+                            <div style="display: none;" id="codeGame-button-loop" class="button loop"></div>
+                        </div>
+                        <div class="codeGame codeGame-control-execute">
+                            <button id="codeGame-button-runsequence" class="execute"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="codeGame codeGame-control-levelselector">
+                    <button id="codeGame-levelselector-open" class="levelselector open">Выбрать уровень</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../scripts/bundle.js"></script>
+<!-- CODEGAME END -->
+<style>
+    .bottomtext {
+        text-align:center;
+        position:relative;
+        padding:0 20px;
+        font: normal normal normal 12px Source Sans Pro;
+        margin-top:60px;
+    }
+    .bottomtext a:link, .bottomtext a:visited {
+        color:#000!important;
+    }
+</style>
+<p class="bottomtext">Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.php'>условия использования</a>, <a href='../about/about_privacy.php'>cookie и политику конфиденциальности</a>.<br>
+Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br></p>
+</body>
+</html>

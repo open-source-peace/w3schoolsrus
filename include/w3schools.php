@@ -1,0 +1,1 @@
+<a href='../index.php'><strong>W3Schools на русском</strong></a>

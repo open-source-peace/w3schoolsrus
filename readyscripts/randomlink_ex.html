@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Вывод на веб-странице случайной ссылки с помощью JavaScript</title>
+</head>
+<body>
+  <script>
+  var a=Math.round(Math.random()*2)
+  // это число должно совпадать с максимальным индексом таблицы ссылок
+
+  link = new Array();
+  link[0]="index.html"
+  link[1]="index1.html"
+  link[2]="index2.html"
+  // с максимальным индексом link[..] совпадает число, на которое умножаем вверху
+
+  document.write ("<a href="+link[a]+">Ссылка</a>");
+  </script>
+<p>При обновлении веб-страницы (при нажатии клавиши F5 на клавиатуре), ссылки будут меняться в случайном порядке.</p>
+</body>
+</html>
