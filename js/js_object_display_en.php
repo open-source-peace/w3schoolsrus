@@ -1,7 +1,7 @@
 <?php include '../include/head_en.php'; ?>
 
 <title>JavaScript Display Objects. <?php include '../include/title_en.php'; ?></title>
-<meta name='description' content='JavaScript Display Objects. <?php include '../include/description_en.php'; ?>'>
+<meta name='description' content='JavaScript Display Objects. How to Display JavaScript Objects? Displaying Object Properties. Using JSON.stringify(). <?php include '../include/description_en.php'; ?>'>
 
 <?php include '../include/topmenu_en.php'; ?>
 <?php include '../include/leftmenu_js_en.php'; ?>
@@ -14,8 +14,8 @@
 <article>
     <h1>JavaScript Display Objects</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_object_methods.asp">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_object_accessors.asp">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_object_methods.php">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_object_accessors.php">Next &#10095;</a>
     </div>
 
     <hr>
@@ -32,7 +32,7 @@
             <br>
             document.getElementById("demo").innerHTML = person;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display.html">Try it Yourself &raquo;</a>
     </div>
 
     <p>Some common solutions to display JavaScript objects are:
@@ -58,7 +58,7 @@
             document.getElementById("demo").innerHTML =<br>
             person.name + "," + person.age + "," + person.city;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_properties_all">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_properties_all.html">Try it Yourself &raquo;</a>
     </div>
 
     <hr>
@@ -79,7 +79,7 @@
             };<br><br>
             document.getElementById("demo").innerHTML = txt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_properties_loop">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_properties_loop.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
         <p>You must use <b>person[x]</b> in the loop.</p>
@@ -115,7 +115,7 @@
             const myArray = Object.values(person);<br>
             document.getElementById(&quot;demo&quot;).innerHTML = myArray;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_values">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_values.html">Try it Yourself &raquo;</a>
     </div>
 
     <p><code class="w3-codespan">Object.values()</code> is supported in all major browsers since 2016.</p>
@@ -179,7 +179,7 @@
             let myString = JSON.stringify(person);<br>
             document.getElementById(&quot;demo&quot;).innerHTML = myString;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_stringify">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_stringify.html">Try it Yourself &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
@@ -204,7 +204,7 @@
             let myString = JSON.stringify(person);<br>
             document.getElementById(&quot;demo&quot;).innerHTML = myString;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_stringify_date" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_stringify_date.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
 
     <hr>
@@ -222,7 +222,7 @@
             let myString = JSON.stringify(person);<br>
             document.getElementById(&quot;demo&quot;).innerHTML = myString;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_stringify_function" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_stringify_function.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
 
     <p>This can be "fixed" if you convert the functions into strings before stringifying.</p>
@@ -237,7 +237,7 @@
             let myString = JSON.stringify(person);<br>
             document.getElementById(&quot;demo&quot;).innerHTML = myString;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_object_display_stringify_function_tostring" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_stringify_function_tostring.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
 
     <hr>
@@ -251,17 +251,16 @@
             let myString = JSON.stringify(arr);<br>
             document.getElementById(&quot;demo&quot;).innerHTML = myString;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_array_display_stringify" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_array_display_stringify.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
         <p>The result will be a string following the JSON notation:</p>
         <p>["John","Peter","Sally","Jane"]</p>
     </div>
     <hr>
-
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_object_methods.asp">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_object_accessors.asp">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_object_methods.php">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_object_accessors.php">Next &#10095;</a>
     </div>
 </article>
 <?php include '../include/addown_content.php'; ?>
