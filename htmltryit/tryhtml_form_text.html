@@ -29,10 +29,6 @@
 </head>
 
 <body>
-
-  <script>
-    globalURL = 'https://tryit.w3schools.com/code_datas.php';
-  </script>
   <div id="saveModal" class="w3-modal" style="z-index:4">
     <div class="w3-modal-content">
       <div class="w3-display-container">
@@ -47,7 +43,7 @@
             </p>
           </div>
           <p>Нажав кнопку "Сохранить", вы соглашаетесь с нашими <a href="javascript:void(0);" class="w3-hover-text-green" onclick="document.getElementById('saveDisclaimer').style.display='block';">условиями и положениями</a>.</p>
-          <p><a href="../default.html" class="w3-button w3-light-grey" onclick="event.preventDefault();displayError()">Сообщить об ошибке</a></p>
+          <p><a href="../index.php" class="w3-button w3-light-grey" onclick="event.preventDefault();displayError()">Сообщить об ошибке</a></p>
           <div id="saveDisclaimer" style="display:none;">
             <p>Весь код в общих файлах предоставлен пользователями и принадлежит постеру.</p>
             <p>Все общие файлы обнародованы. Лицензия не применяется.</p>
@@ -145,11 +141,10 @@
 <h2>Ввод текста</h2>
 
 <form>
-  Имя:<br>
-  <input type="text" name="firstname">
-  <br>
-  Фамилия:<br>
-  <input type="text" name="lastname">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe">
 </form>
 
 <p>Обратите внимание, что сама форма не видна.</p>
