@@ -30,7 +30,7 @@
       <a class='w3-btn w3-margin-top w3-margin-bottom' href='../htmltryit/tryitcff8.html?filename=tryhtml_form_submit' target='_blank'>Попробуйте сами &raquo;</a>
     </div>
     <hr>
-
+      <?php include '../include/adinfeed.php'; ?>
     <h2>Элемент &lt;form&gt;</h2>
     <p>HTML элемент <code class='w3-codespan'>&lt;form&gt;</code> определяет форму, которая используется для сбора пользовательского ввода:</p>
     <div class='w3-example'>
@@ -71,10 +71,7 @@
       <p>Вы узнаете намного больше о типах ввода позже в этом учебнике.</p>
     </div>
     <hr>
-
-
-
-
+      <?php include '../include/adinfeed.php'; ?>
     <h2>Ввод текста</h2>
     <p><code class='w3-codespan'>&lt;input type='text'&gt;</code> определяет однострочное поле ввода для <strong>text input</strong>:</p>
     <div class='w3-example'>
@@ -100,7 +97,7 @@
       <p><b>Примечание:</b> Сама форма не видна. Также обратите внимание, что ширина текстового поля по умолчанию составляет 20 символов.</p>
     </div>
     <hr>
-
+      <?php include '../include/adinfeed.php'; ?>
     <h2>Радио кнопка ввода</h2>
     <p><code class='w3-codespan'>&lt;input type='radio'&gt;</code> определяет <strong>радио кнопку</strong>.</p>
     <p>Переключатели (радио-кнопки) позволяют пользователю выбрать ОДИН из ограниченного числа вариантов:</p>
@@ -145,7 +142,7 @@
       <input type='submit' value='Submit'>
     </form>
     <hr>
-
+      <?php include '../include/adinfeed.php'; ?>
     <h2>Атрибут Action</h2>
     <p>Атрибут <code class='w3-codespan'>action</code> определяет действие, которое будет выполнено при отправке формы.</p>
     <p>Обычно данные формы отправляются на веб-страницу на сервере, когда пользователь нажимает кнопку отправки..</p>
@@ -155,9 +152,8 @@
         &lt;form <strong>action='/action_page.php</strong>'&gt;<br>
       </div></div>
     <p>Если атрибут <code class='w3-codespan'>action</code> пропущен, действие установлено на текущую страницу.</p>
-
     <hr>
-
+      <?php include '../include/adinfeed.php'; ?>
     <h2>Атрибут Target</h2>
     <p>Атрибут <code class='w3-codespan'>target</code> указывает, будет ли отправленный результат открываться в новой вкладке браузера, во фрейме или в текущем окне.</p>
     <p>По умолчанию значение '<code class='w3-codespan'>_self</code>' означает, что форма будет отправлена в текущем окне.</p>
@@ -188,7 +184,7 @@
       <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryit362c.html?filename=tryhtml_form_post' target='_blank'>Попробуйте сами &raquo;</a>
     </div>
     <hr>
-
+      <?php include '../include/adinfeed.php'; ?>
     <h2>Когда использовать GET?</h2>
     <p>Метод по умолчанию при отправке данных формы - GET.</p>
     <p>Однако при использовании GET отправленные данные формы будут <strong>видны в поле адреса страницы.</strong>:</p>
@@ -213,8 +209,8 @@
       <li>POST не имеет ограничений по размерам и может использоваться для отправки больших объёмов данных</li>
       <li>Отправленные с POST формы нельзя добавить в закладки</li>
     </ul>
-
     <hr>
+      <?php include '../include/adinfeed.php'; ?>
 
     <h2>Атрибут Name</h2>
     <p>Каждое поле ввода должно иметь атрибут <code class='w3-codespan'>name</code> для отправки.</p>
@@ -280,7 +276,7 @@
       </div>
     </form>
     <hr>
-
+      <?php include '../include/adinfeed.php'; ?>
     <p>Список всех атрибутов <code class='w3-codespan'>&lt;form&gt;</code>:</p>
 
     <table class='w3-table-all'>
@@ -324,7 +320,6 @@
     <div class='w3-panel w3-note'>
       <p>Вы узнаете больше об атрибутах формы в следующих разделах на сайте.</p>
     </div>
-
     <hr>
     <div class='w3-clear nextprev'>
       <a class='w3-left w3-btn' href='html_xhtml.php'>&#10094; Prev</a>

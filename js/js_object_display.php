@@ -8,8 +8,8 @@
 <?php include '../include/before_content_js.php'; ?>
 
     <p class="w3-right">
-        <a href="js_object_display_en.php">En</a>
-        <a href="<?php include '../include/w3schools_link_ua.php'; ?>js/js_object_display.php" target="_blank">Ua</a>
+        <a href="js_object_display_en.php" title="Перейти на английский язык">En</a>
+        <a href="<?php include '../include/w3schools_link_ua.php'; ?>js/js_object_display.php" target="_blank" title="Перейти на украинский язык">Ua</a>
     </p>
 <article>
     <h1>JavaScript Отображение объектов</h1>

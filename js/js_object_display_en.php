@@ -8,8 +8,8 @@
 <?php include '../include/before_content_js_en.php'; ?>
 
     <p class="w3-right">
-        <a href="js_object_display.php">Ru</a>
-        <a href="<?php include '../include/w3schools_link_ua.php'; ?>js/js_object_display.php" target="_blank">Ua</a>
+        <a href="js_object_display.php" title="Go to Russian language">Ru</a>
+        <a href="<?php include '../include/w3schools_link_ua.php'; ?>js/js_object_display.php" target="_blank" title="Go to Ukrainian language">Ua</a>
     </p>
 <article>
     <h1>JavaScript Display Objects</h1>
@@ -17,7 +17,6 @@
         <a class="w3-left w3-btn" href="js_object_methods.php">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_object_accessors.php">Next &#10095;</a>
     </div>
-
     <hr>
     <h2>How to Display JavaScript Objects?</h2>
     <p>Displaying a JavaScript object will output <b>[object Object]</b>.</p>
@@ -35,15 +34,16 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display.html">Try it Yourself &raquo;</a>
     </div>
 
-    <p>Some common solutions to display JavaScript objects are:
+    <p>Some common solutions to display JavaScript objects are:</p>
     <ul>
         <li>Displaying the Object Properties by name</li>
         <li>Displaying the Object Properties in a Loop</li>
         <li>Displaying the Object using Object.values()</li>
         <li>Displaying the Object using JSON.stringify()</li>
     </ul>
-    </p>
     <hr>
+    <?php include '../include/adinfeed.php'; ?>
+
     <h2>Displaying Object Properties</h2>
     <p>The properties of an object can be displayed as a string:</p>
     <div class="w3-example">
@@ -60,8 +60,8 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_properties_all.html">Try it Yourself &raquo;</a>
     </div>
-
     <hr>
+
     <h2>Displaying the Object in a Loop</h2>
     <p>The properties of an object can be collected in a loop:</p>
     <div class="w3-example">
@@ -85,8 +85,8 @@
         <p>You must use <b>person[x]</b> in the loop.</p>
         <p><b>person.x</b> will not work (Because <b>x</b> is a variable).</p>
     </div>
-
     <hr>
+    <?php include '../include/adinfeed.php'; ?>
     <h2>Using Object.values()</h2>
     <p>Any JavaScript object can be converted to an array using <code class="w3-codespan">Object.values()</code>:</p>
 
@@ -138,17 +138,8 @@
             </tr>
             </tbody></table>
     </div>
-
-
     <hr>
-    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-        <!-- MidContent -->
-        <!-- <p class="adtext">Advertisement</p> -->
-
-        <div id="adngin-mid_content-0"></div>
-
-    </div>
-    <hr>
+    <?php include '../include/adinfeed.php'; ?>
 
     <h2>Using JSON.stringify()</h2>
     <p>Any JavaScript object can be stringified (converted to a string) with the JavaScript function
@@ -188,9 +179,9 @@
     </div>
 
     <p><code class="w3-codespan">JSON.stringify()</code> is included in JavaScript and supported in all major browsers.</p>
-
-
     <hr>
+    <?php include '../include/adinfeed.php'; ?>
+
     <h2>Stringify Dates</h2>
     <p><code class="w3-codespan">JSON.stringify</code> converts dates into strings:</p>
     <div class="w3-example">
@@ -206,8 +197,8 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_stringify_date.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
-
     <hr>
+    <?php include '../include/adinfeed.php'; ?>
 
     <h2>Stringify Functions</h2>
     <p><code class="w3-codespan">JSON.stringify</code> will not stringify functions:</p>
@@ -239,8 +230,9 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_display_stringify_function_tostring.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
-
     <hr>
+    <?php include '../include/adinfeed.php'; ?>
+
     <h2>Stringify Arrays</h2>
     <p>It is also possible to stringify JavaScript arrays:</p>
 

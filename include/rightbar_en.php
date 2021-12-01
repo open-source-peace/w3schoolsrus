@@ -1,8 +1,8 @@
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
-        <h4><a href='../colors/colors_picker.php'>COLOR PICKER</a></h4>
-        <a href='../colors/colors_picker.php'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+        <h4><a href='../colors/colors_picker_en.php'>COLOR PICKER</a></h4>
+        <a href='../colors/colors_picker_en.php'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
     </div>
     <div class='sidesection'>
         <h4>SUBSCRIBE!</h4>
