@@ -282,7 +282,7 @@
 
     <h3>HTML Формы</h3>
     <div class='w3-bar-block'>
-      <a class='w3-button w3-bar-item w3-light-grey' target='_blank' href='../htmltryit/tryit5852.html?filename=tryhtml_form_text'>Форма с вводом текста</a>
+      <a class='w3-button w3-bar-item w3-light-grey' target='_blank' href='../htmltryit/tryhtml_form_text.html?filename=tryhtml_form_text'>Форма с вводом текста</a>
       <a class='w3-button w3-bar-item w3-light-grey w3-border-top' target='_blank' href='../htmltryit/tryit1082.html?filename=tryhtml_form_radio'>Форма ввода с радио-кнопкой</a>
       <a class='w3-button w3-bar-item w3-light-grey w3-border-top' target='_blank' href='../htmltryit/tryitcff8.html?filename=tryhtml_form_submit'>Форма с текстовыми полями и кнопкой отправки</a>
       <a class='w3-button w3-bar-item w3-light-grey w3-border-top' target='_blank' href='../htmltryit/tryit1c32.html?filename=tryhtml_form_submit_id'>Форма с текстовыми полями без атрибута name</a>

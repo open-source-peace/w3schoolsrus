@@ -72,23 +72,30 @@
     </div>
     <hr>
 
+
+
+
     <h2>Ввод текста</h2>
     <p><code class='w3-codespan'>&lt;input type='text'&gt;</code> определяет однострочное поле ввода для <strong>text input</strong>:</p>
     <div class='w3-example'>
       <h3>Пример</h3>
-      <div class='w3-code notranslate htmlHigh'>
-        &lt;form&gt;<br>
-        &nbsp;
-        First name:&lt;br&gt;<br>&nbsp; &lt;input type='text' name='firstname'&gt;&lt;br&gt;<br>
-        &nbsp;
-        Last name:&lt;br&gt;<br>&nbsp; &lt;input type='text' name='lastname'&gt;<br>
-        &lt;/form&gt;
-      </div>
-      <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryit5852.html?filename=tryhtml_form_text' target='_blank'>Попробуйте сами &raquo;</a>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;form&gt;<br>
+            &nbsp;&lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;<br>
+            &nbsp;&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;<br>
+            &nbsp;&lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;<br>
+            &nbsp;&lt;input type="text" id="lname" name="lname"&gt;<br>
+            &lt;/form&gt;
+        </div>
+      <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml_form_text.html' target='_blank'>Попробуйте сами &raquo;</a>
     </div>
     <p>Вот так это будет выглядеть в браузере:</p>
-    First name:<br> <input type='text'><br>
-    Last name:<br> <input type='text'>
+      <form>
+          First name:<br>
+          <input type="text" name="fname"><br>
+          Last name:<br>
+          <input type="text" name="lname">
+      </form>
     <div class='w3-panel w3-note'>
       <p><b>Примечание:</b> Сама форма не видна. Также обратите внимание, что ширина текстового поля по умолчанию составляет 20 символов.</p>
     </div>
