@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>W3.CSS Библиотеки цветов. Уроки для начинающих. W3Schools на русском</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="W3,w3css,библиотеки,цветов,скачать,w3schools,на русском,уроки,для начинающих">
+<meta name="description" content="W3.CSS Библиотеки цветов - это небольшие CSS-файлы, содержащие часто используемые значения цветов, такие как стандарты безопасности, цвета шоссе, модные цвета, цвета камуфляжа и т.д. Учебник по фреймворку W3.CSS для начинающих. Бесплатные уроки онлайн W3Schools на русском языке">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="4/w3.css">
+<link rel="stylesheet" href="../lib/w3-colors-highway.css">
+<link rel="stylesheet" href="../lib/w3-colors-safety.css">
+<link rel="stylesheet" href="../lib/w3-colors-signal.css">
+<link rel="stylesheet" href="../lib/w3-colors-camo.css">
+<link rel="stylesheet" href="../lib/w3-colors-food.css">
+<link rel="stylesheet" href="../lib/w3-colors-2017.css">
+<link rel="stylesheet" href="../lib/w3-colors-2018.css">
+<link rel="stylesheet" href="../lib/w3-colors-2019.css">
+<link rel="stylesheet" href="../lib/w3-colors-vivid.css">
+<link rel="stylesheet" href="../lib/w3-colors-windows.css">
+</head>
+
+<body>
+<div id="mainContent">
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.на русском</span></a>
+  <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ</div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Главная'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Учебник'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Учебник'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Учебник'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Учебник'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Учебник'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>КАК СДЕЛАТЬ</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Учебник'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Учебник'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../java/default.html' title='Java Учебник'>JAVA</a>
+      <a class="w3-bar-item w3-button" href='../xml/default.html' title='XML Учебник'>XML</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Учебники'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключить на тёмный код'>&#9681;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'>КНИГИ</a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML и CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Выучить HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Выучить CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Выучить W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Выучить Цвета</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Выучить Иконки</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Выучить Графика</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Выучить SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+          <a class="w3-bar-item w3-button" href='default.html'>Выучить Как сделать</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Выучить Sass</a>
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Выучить XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Выучить XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Выучить XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Выучить XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Выучить XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Выучить XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Выучить JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Выучить jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Выучить React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Выучить AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Выучить JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Выучить W3.JS</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Выучить Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Выучить Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Выучить C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Выучить C#</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Уроки Машинное обучение</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Выучить SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Выучить PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Выучить ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Выучить Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+          <h3>Веб-строительство</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Веб-шаблоны</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Веб-статистика</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Веб-сертификаты</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Веб-редактор</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Веб-разработка</a>
+          <a class="w3-bar-item w3-button" href="https://www.w3schools.com/typingspeed/default.asp" target="_blank" rel="nofollow">Скорость печати</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Выучить XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Выучить XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Выучить XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Выучить XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Выучить XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Выучить XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Справочник тегов</a>
+	  <a class="w3-bar-item w3-button" href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Справочник цветов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Справочник</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Справочник</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Справочник</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Справочник</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Справочник</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Справочник</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Справочник</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Наборы символов</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Упражнения</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../cs/cpp_exercises.html">C# Упражнения</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Викторины</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Викторина</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+	  <a class="w3-bar-item w3-button" href='../java/java_quiz.html' target='_top'>Java Викторина</a>
+	  <a class="w3-bar-item w3-button" href='../cpp/cpp_quiz.html' target='_top'>C++ Викторина</a>
+          <a class="w3-bar-item w3-button" href='../cs/cs_quiz.html' target='_top'>C# Викторина</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3>Сертификаты</h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Сертификат</a>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<!--/Top menu-->
+
+<!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left">W3.CSS Учебник</h2>
+<a target="_top" href="default.html">W3.CSS Учебник</a>
+<a target="_top" href="w3css_intro.html">W3.CSS Введение</a>
+<a target="_top" href="w3css_colors.html">W3.CSS Цвета</a>
+<a target="_top" href="w3css_containers.html">W3.CSS Контейнеры</a>
+<a target="_top" href="w3css_panels.html">W3.CSS Панели</a>
+<a target="_top" href="w3css_borders.html">W3.CSS Границы</a>
+<a target="_top" href="w3css_cards.html">W3.CSS Открытки</a>
+<a target="_top" href="w3css_fonts.html">W3.CSS Шрифты</a>
+<a target="_top" href="w3css_text.html">W3.CSS Текст</a>
+<a target="_top" href="w3css_round.html">W3.CSS Округлости</a>
+<a target="_top" href="w3css_padding.html">W3.CSS Внутренние отступы</a>
+<a target="_top" href="w3css_margins.html">W3.CSS Внешние отступы</a>
+<a target="_top" href="w3css_display.html">W3.CSS Отображение</a>
+<a target="_top" href="w3css_buttons.html">W3.CSS Кнопки</a>
+<a target="_top" href="w3css_notes.html">W3.CSS Примечания</a>
+<a target="_top" href="w3css_quotes.html">W3.CSS Цитаты</a>
+<a target="_top" href="w3css_alerts.html">W3.CSS Оповещения</a>
+<a target="_top" href="w3css_tables.html">W3.CSS Таблицы</a>
+<a target="_top" href="w3css_lists.html">W3.CSS Списки</a>
+<a target="_top" href="w3css_images.html">W3.CSS Изображения</a>
+<a target="_top" href="w3css_input.html">W3.CSS Вводы</a>
+<a target="_top" href="w3css_badges.html">W3.CSS Значки</a>
+<a target="_top" href="w3css_tags.html">W3.CSS Ярлыки</a>
+<a target="_top" href="w3css_icons.html">W3.CSS Иконки</a>
+<a target="_top" href="w3css_responsive.html">W3.CSS Адаптив</a>
+<a target="_top" href="w3css_layout.html">W3.CSS Макеты</a>
+<a target="_top" href="w3css_animate.html">W3.CSS Анимация</a>
+<a target="_top" href="w3css_effects.html">W3.CSS Эффекты</a>
+<a target="_top" href="w3css_bars.html">W3.CSS Панели</a>
+<a target="_top" href="w3css_dropdowns.html">W3.CSS Выпадающие</a>
+<a target="_top" href="w3css_accordions.html">W3.CSS Аккордионы</a>
+<a target="_top" href="w3css_navigation.html">W3.CSS Навигация</a>
+<a target="_top" href="w3css_sidebar.html">W3.CSS Сайдбар</a>
+<a target="_top" href="w3css_tabulators.html">W3.CSS Вкладки</a>
+<a target="_top" href="w3css_pagination.html">W3.CSS Пагинация</a>
+<a target="_top" href="w3css_progressbar.html">W3.CSS Прогресс-бары</a>
+<a target="_top" href="w3css_slideshow.html">W3.CSS Слайдшоу</a>
+<a target="_top" href="w3css_modal.html">W3.CSS Модальные окна</a>
+<a target="_top" href="w3css_tooltips.html">W3.CSS Всплывающие подсказки</a>
+<a target="_top" href="w3css_grid.html">W3.CSS Сетка</a>
+<a target="_top" href="w3css_code.html">W3.CSS Код</a>
+<a target="_top" href="w3css_filters.html">W3.CSS Фильтры</a>
+<a target="_top" href="w3css_trends.html">W3.CSS Тренды</a>
+<a target="_top" href="w3css_case.html">W3.CSS Кейс</a>
+<a target="_top" href="w3css_material.html">W3.CSS Material-дизайн</a>
+<a target="_top" href="w3css_validation.html">W3.CSS Валидация</a>
+<a target="_top" href="w3css_versions.html">W3.CSS Версии</a>
+<a target="_top" href="w3css_mobile.html">W3.CSS Мобильность</a>
+<br>
+<h2 class="left">W3.CSS Цвета</h2>
+<a target="_top" href="w3css_color_classes.html">W3.CSS Классы цветов</a>
+<a target="_top" href="w3css_color_material.html">W3.CSS Цвет Material</a>
+<a target="_top" href="w3css_color_flat.html">W3.CSS Цвет Flat UI</a>
+<a target="_top" href="w3css_color_metro.html">W3.CSS Цвет Metro UI</a>
+<a target="_top" href="w3css_color_win8.html">W3.CSS Цвет Win8</a>
+<a target="_top" href="w3css_color_ios.html">W3.CSS Цвет iOS</a>
+<a target="_top" href="w3css_color_libraries.html">W3.CSS Библиотеки цветов</a>
+<a target="_top" href="w3css_color_schemes.html">W3.CSS Цветовые схемы</a>
+<a target="_top" href="w3css_color_themes.html">W3.CSS Цветовые темы</a>
+<a target="_top" href="w3css_color_generator.html">W3.CSS Генератор цветов</a>
+<br>
+<h2 class="left">Примеры</h2>
+<a target="_top" href="w3css_examples.html">W3.CSS Примеры</a>
+<a target="_top" href="w3css_demo.html">W3.CSS Демо</a>
+<a target="_top" href="w3css_templates.html">W3.CSS Шаблоны</a>
+<br>
+<h2 class="left">Справочники</h2>
+<a target="_top" href="w3css_references.html">W3.CSS Справочник</a>
+<a target="_top" href="w3css_downloads.html">W3.CSS Загрузки</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar -->
+
+<!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+<a href="index.html"><img src="../images/w3css_logo.png" alt="W3.CSS Уроки для начинающих" class="w3-left w3-padding" title="W3.CSS для начинающих" width="120"></a>
+
+<h1>W3.CSS <span class="color_h1">Библиотеки цветов</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="w3css_color_ios.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="w3css_color_schemes.html">Next &#10095;</a>
+</div>
+
+<hr>
+<h2>Библиотеки цветов</h2>
+<p>Библиотеки цветов (или цветовые библиотеки) - это небольшие CSS-файлы, содержащие часто используемые значения цветов, такие как стандарты безопасности, цвета шоссе, модные цвета, цвета камуфляжа и т.д.</p>
+
+<div class="w3-tag w3-highway-schoolbus w3-xlarge w3-card">Schoolbus</div>
+<div class="w3-tag w3-highway-green w3-xlarge">Falcon Ridge Parkway</div>
+<div class="w3-tag w3-highway-red w3-xlarge">STOP</div>
+<hr>
+
+<h2>Как использовать библиотеки цветов</h2>
+<p>Библиотеки цветов просты в использовании. Просто добавьте ссылку на библиотеку цветов на вашей веб-странице: </p>
+
+<div class="w3-example">
+  <h4>Пример:</h4>
+<div class="w3-code notranslate htmlHigh">
+  &lt;link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css"&gt;
+</div>
+</div>
+
+<p>Затем добавьте имя класса к элементу HTML, который вы хотите раскрасить:</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-highway-schoolbus"&gt;Schoolbus&lt;/div&gt;<br>&lt;div
+  class="w3-highway-green"&gt;Falcon Ridge Parkway&lt;/div&gt;<br>&lt;div
+  class="w3-highway-red"&gt;STOP&lt;/div&gt;</div>
+<a class="w3-btn w3-margin-bottom" href="tryit8abe.html?filename=tryw3css_colors_highway" target="_blank">
+  Попробуйте сами &raquo;</a>
+</div>
+<hr>
+
+<h2>Цвета шоссе США</h2>
+<table class="w3-table-all w3-large">
+<tr><td class="w3-highway-brown">w3-highway-brown</td></tr>
+<tr><td class="w3-highway-red">w3-highway-red</td></tr>
+<tr><td class="w3-highway-orange">w3-highway-orange</td></tr>
+<tr><td class="w3-highway-schoolbus">w3-highway-schoolbus</td></tr>
+<tr><td class="w3-highway-yellow">w3-highway-yellow</td></tr>
+<tr><td class="w3-highway-green">w3-highway-green</td></tr>
+<tr><td class="w3-highway-blue">w3-highway-blue</td></tr>
+</table>
+<div class="w3-example">
+ <h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-highway-red"&gt;STOP&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit4fa3.html?filename=tryw3css_colors_highway_red" target="_blank">
+  Попробуйте сами &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="tryitab09.html?filename=tryw3css_colors_highway_lib" target="_blank">
+  Попробуйте все &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="../lib/w3-colors-highway.css" target="_blank">
+  Скачать CSS &raquo;</a>
+</div>
+<p>Цвета шоссе определены в <a href="../colors/colors_fs595.html">Федеральном стандарте 595</a>.</p>
+<hr>
+
+<h2>Цвета безопасности США</h2>
+<table class="w3-table-all w3-large">
+<tr><td class="w3-safety-red">w3-safety-red</td></tr>
+<tr><td class="w3-safety-orange">w3-safety-orange</td></tr>
+<tr><td class="w3-safety-yellow">w3-safety-yellow</td></tr>
+<tr><td class="w3-safety-green">w3-safety-green</td></tr>
+<tr><td class="w3-safety-blue">w3-safety-blue</td></tr>
+<tr><td class="w3-safety-purple">w3-safety-purple</td></tr>
+</table>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-safety-red"&gt;DANGER&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit49a3.html?filename=tryw3css_colors_safety-red" target="_blank">
+  Попробуйте сами &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="tryitfd71.html?filename=tryw3css_colors_safety" target="_blank">
+  Попробуйте все &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="../lib/w3-colors-safety.css" target="_blank">
+  Скачать CSS &raquo;</a>
+</div>
+<p>Цвета безопасности США определены в <a href="../colors/colors_fs595.html">Федеральном стандарте 595</a>.</p>
+<hr>
+
+<h2>Европейские Сигнальные Цвета</h2>
+<table class="w3-table-all w3-large">
+<tr><td class="w3-signal-yellow">w3-signal-yellow</td></tr>
+<tr><td class="w3-signal-orange">w3-signal-orange</td></tr>
+<tr><td class="w3-signal-red">w3-signal-red</td></tr>
+<tr><td class="w3-signal-violet">w3-signal-violet</td></tr>
+<tr><td class="w3-signal-blue">w3-signal-blue</td></tr>
+<tr><td class="w3-signal-green">w3-signal-green</td></tr>
+<tr><td class="w3-signal-grey">w3-signal-grey</td></tr>
+<tr><td class="w3-signal-brown">w3-signal-brown</td></tr>
+<tr><td class="w3-signal-white">w3-signal-white</td></tr>
+<tr><td class="w3-signal-black">w3-signal-black</td></tr>
+</table>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-signal-red"&gt;Stop&lt;/div&gt;<br>&lt;div
+  class="w3-signal-yellow"&gt;Wait&lt;/div&gt;<br>&lt;div class="w3-signal-green"&gt;Go&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryite5a8.html?filename=tryw3css_colors_signal" target="_blank">
+  Попробуйте сами &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="tryit89ce.html?filename=tryw3css_colors_signal_lib" target="_blank">
+  Попробуйте все &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="../lib/w3-colors-signal.css" target="_blank">
+  Скачать CSS &raquo;</a>
+</div>
+<p>Европейские сигнальные цвета определены в <a href="../colors/colors_ral.html">
+Стандарте цвета RAL</a>.</p>
+<hr>
+
+<h2>Модные цвета осень 2019 / зима 2020</h2>
+
+<div class="w3-container w3-section w3-2019-dark-cheddar">
+<h2>Chili Pepper</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-biking-red">
+<h2>Biking Red</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-creme-de-peche">
+<h2>Crème de Pêche</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-peach-pink">
+<h2>Peach Pink</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-rocky-road">
+<h2>Rocky Road</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-fruit-dove">
+<h2>Fruit Dove</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-sugar-almond">
+<h2>Sugar Almond</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-dark-cheddar">
+<h2>Dark Cheddar</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-galaxy-blue">
+<h2>Galaxy Blue</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-bluestone">
+<h2>Bluestone</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-orange-tiger">
+<h2>Orange Tiger</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-eden">
+<h2>Eden</h2>
+</div>
+
+<h2>The Autumn 2019 / Winter 2020 Classics:</h2>
+
+<div class="w3-container w3-section w3-2019-vanilla-custard">
+<h2>Vanilla Custard</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-evening-blue">
+<h2>Evening Blue</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-paloma">
+<h2>Paloma</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-guacamole">
+<h2>Guacamole</h2>
+</div>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="w3-2019-dark-cheddar"&gt;Dark Cheddar&lt;/div&gt;<br>
+&lt;div class="w3-2019-bluestone"&gt;Bluestone&lt;/div&gt;
+</div>
+<p>
+<a class="w3-btn" href="tryitcb40.html?filename=tryw3css_colors_2019_2" target="_blank">
+Попробуйте сами &raquo;</a>&nbsp;
+<a class="w3-btn" href="tryit2e02.html?filename=tryw3css_colors_2019_lib" target="_blank">
+Попробуйте все &raquo;</a>&nbsp;
+<a class="w3-btn" href="../lib/w3-colors-2019.css" target="_blank">
+Скачать CSS &raquo;</a>
+</p>
+</div>
+<hr>
+
+<h2>Модные цвета - весна 2019</h2>
+
+<div class="w3-container w3-section w3-2019-fiesta">
+<h2>Fiesta</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-jester-red">
+<h2>Jester Red</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-turmeric">
+<h2>Turmeric</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-living-coral">
+<h2>Living Coral</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-pink-peacock">
+<h2>Pink Peacock</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-pepper-stem">
+<h2>Pepper Stem</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-aspen-gold">
+<h2>Aspen Gold</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-princess-blue">
+<h2>Princess Blue</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-toffee">
+<h2>Toffee</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-mango-mojito">
+<h2>Mango Mojito</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-terrarium-moss">
+<h2>Terrarium Moss</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-sweet-lilac">
+<h2>Sweet Lilac</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-soybean">
+<h2>Soybean</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-eclipse">
+<h2>Eclipse</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-sweet-corn">
+<h2>Sweet Corn</h2>
+</div>
+
+<div class="w3-container w3-section w3-2019-brown-granite">
+<h2>Brown Granite</h2>
+</div>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="w3-2019-fiesta"&gt;Fiesta&lt;/div&gt;<br>
+&lt;div class="w3-2019-princess-blue"&gt;Princess Blue&lt;/div&gt;
+</div>
+<p>
+<a class="w3-btn" href="tryit3787.html?filename=tryw3css_colors_2019" target="_blank">
+Попробуйте сами &raquo;</a>&nbsp;
+<a class="w3-btn" href="tryit2e02.html?filename=tryw3css_colors_2019_lib" target="_blank">
+Попробуйте все &raquo;</a>&nbsp;
+<a class="w3-btn" href="../lib/w3-colors-2019.css" target="_blank">
+Скачать CSS &raquo;</a>
+</p>
+</div>
+
+<p>Модные цвета выбираются из <a href="../colors/colors_trends.html">
+Цветовые тренды</a>.</p>
+<hr>
+
+<h2>Модные цвета 2018</h2>
+<table class="w3-table-all w3-large">
+  <tr><td class="w3-2018-red-pear">w3-2018-red-pear</td></tr>
+  <tr><td class="w3-2018-valiant-poppy">w3-2018-valiant-poppy</td></tr>
+  <tr><td class="w3-2018-nebulas-blue">w3-2018-nebulas-blue</td></tr>
+  <tr><td class="w3-2018-ceylon-yellow">w3-2018-ceylon-yellow</td></tr>
+  <tr><td class="w3-2018-martini-olive">w3-2018-martini-olive</td></tr>
+  <tr><td class="w3-2018-russet-orange">w3-2018-russet-orange</td></tr>
+  <tr><td class="w3-2018-ultra-violet">w3-2018-ultra-violet</td></tr>
+  <tr><td class="w3-2018-crocus-petal">w3-2018-crocus-petal</td></tr>
+  <tr><td class="w3-2018-limelight">w3-2018-limelight</td></tr>
+  <tr><td class="w3-2018-quetzal-green">w3-2018-quetzal-green</td></tr>
+  <tr><td class="w3-2018-sargasso-sea">w3-2018-sargasso-sea</td></tr>
+  <tr><td class="w3-2018-tofu">w3-2018-tofu</td></tr>
+  <tr><td class="w3-2018-almond-buff">w3-2018-almond-buff</td></tr>
+  <tr><td class="w3-2018-quiet-gray">w3-2018-quiet-gray</td></tr>
+  <tr><td class="w3-2018-meerkat">w3-2018-meerkat</td></tr>
+  <tr><td class="w3-2018-meadowlark">w3-2018-meadowlark</td></tr>
+  <tr><td class="w3-2018-cherry-tomato">w3-2018-cherry-tomato</td></tr>
+  <tr><td class="w3-2018-little-boy-blue">w3-2018-little-boy-blue</td></tr>
+  <tr><td class="w3-2018-chili-oil">w3-2018-chili-oil</td></tr>
+  <tr><td class="w3-2018-blooming-dahlia">w3-2018-blooming-dahlia</td></tr>
+  <tr><td class="w3-2018-arcadia">w3-2018-arcadia</td></tr>
+  <tr><td class="w3-2018-emperador">w3-2018-pink-emperador</td></tr>
+  <tr><td class="w3-2018-almost-mauve">w3-2018-almost-mauve</td></tr>
+  <tr><td class="w3-2018-spring-crocus">w3-2018-spring-crocus</td></tr>
+  <tr><td class="w3-2018-lime-punch">w3-2018-lime-punch</td></tr>
+  <tr><td class="w3-2018-sailor-blue">w3-2018-sailor-blue</td></tr>
+  <tr><td class="w3-2018-harbor-mist">w3-2018-harbor-mist</td></tr>
+  <tr><td class="w3-2018-warm-sand">w3-2018-warm-sand</td></tr>
+  <tr><td class="w3-2018-coconut-milk">w3-2018-coconut-milk</td></tr>
+</table>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-2018-ultra-violet"&gt;Ultra Violet&lt;/div&gt;<br>
+  &lt;div class="w3-2018-cherry-tomato"&gt;Cherry Tomato&lt;/div&gt;
+</div>
+<p>
+<a class="w3-btn" href="tryit575b.html?filename=tryw3css_colors_2018" target="_blank">
+Попробуйте сами &raquo;</a>&nbsp;
+<a class="w3-btn" href="tryitbc68.html?filename=tryw3css_colors_2018_lib" target="_blank">
+Попробуйте все &raquo;</a>&nbsp;
+<a class="w3-btn" href="../lib/w3-colors-2018.css" target="_blank">
+Скачать CSS &raquo;</a>
+</p>
+</div>
+<p>Модные цвета выбираются из <a href="../colors/colors_trends.html">
+Цветовые тренды</a>.</p>
+<hr>
+
+<h2>Модные цвета 2017</h2>
+<table class="w3-table-all w3-large">
+  <tr><td class="w3-2017-greenery">w3-2017-greenery</td></tr>
+  <tr><td class="w3-2017-grenadine">w3-2017-grenadine</td></tr>
+  <tr><td class="w3-2017-tawny-port">w3-2017-tawny-port</td></tr>
+  <tr><td class="w3-2017-ballet-slipper">w3-2017-ballet-slipper</td></tr>
+  <tr><td class="w3-2017-butterum">w3-2017-butterum</td></tr>
+  <tr><td class="w3-2017-navy-peony">w3-2017-navy-peony</td></tr>
+  <tr><td class="w3-2017-neutral-grey">w3-2017-neutral-grey</td></tr>
+  <tr><td class="w3-2017-shaded-spruce">w3-2017-shaded-spruce</td></tr>
+  <tr><td class="w3-2017-golden-lime">w3-2017-golden-lime</td></tr>
+  <tr><td class="w3-2017-marina">w3-2017-marina</td></tr>
+  <tr><td class="w3-2017-autumn-maple">w3-2017-autumn-maple</td></tr>
+  <tr><td class="w3-2017-niagra">w3-2017-niagra</td></tr>
+  <tr><td class="w3-2017-primrose-yellow">w3-2017-primrose-yellow</td></tr>
+  <tr><td class="w3-2017-lapis-blue">w3-2017-lapis-blue</td></tr>
+  <tr><td class="w3-2017-flame">w3-2017-flame</td></tr>
+  <tr><td class="w3-2017-island-paradise">w3-2017-island-paradise</td></tr>
+  <tr><td class="w3-2017-pale-dogwood">w3-2017-pale-dogwood</td></tr>
+  <tr><td class="w3-2017-pink-yarrow">w3-2017-pink-yarrow</td></tr>
+  <tr><td class="w3-2017-kale">w3-2017-kale</td></tr>
+  <tr><td class="w3-2017-hazelnut">w3-2017-hazelnut</td></tr>
+</table>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-2017-greenery"&gt;Greenery&lt;/div&gt;<br>
+  &lt;div class="w3-2017-flame"&gt;Flame&lt;/div&gt;
+</div>
+<p>
+<a class="w3-btn" href="tryitc17a.html?filename=tryw3css_colors_2017" target="_blank">
+Попробуйте сами &raquo;</a>&nbsp;
+<a class="w3-btn" href="tryit53f5.html?filename=tryw3css_colors_2017_lib" target="_blank">
+Попробуйте все &raquo;</a>&nbsp;
+<a class="w3-btn" href="../lib/w3-colors-2017.css" target="_blank">
+Скачать CSS &raquo;</a>
+</p>
+</div>
+<p>Модные цвета выбираются из <a href="../colors/colors_trends.html">Цветовые тренды</a>.</p>
+<hr>
+
+<h2>Яркие цвета</h2>
+<table class="w3-table-all w3-large">
+<tr><td style="color:#fff;background-color:#ffb5bA">w3-vivid-pink</td></tr>
+<tr><td style="color:#fff;background-color:#be0032">w3-vivid-red</td></tr>
+<tr><td style="color:#fff;background-color:#f38400">w3-vivid-orange</td></tr>
+<tr><td style="color:#fff;background-color:#f3c300">w3-vivid-yellow</td></tr>
+<tr><td style="color:#fff;background-color:#008856">w3-vivid-green</td></tr>
+<tr><td style="color:#fff;background-color:#00a1c2">w3-vivid-blue</td></tr>
+<tr><td style="color:#fff;background-color:#9065ca">w3-vivid-violet</td></tr>
+<tr><td style="color:#fff;background-color:#9a4eae">w3-vivid-purple</td></tr>
+<tr><td style="color:#fff;background-color:#000">w3-vivid-black</td></tr>
+<tr><td style="color:#000;background-color:#fff">w3-vivid-white</td></tr>
+<tr><td style="color:#fff;background-color:#ffb7a5">w3-vivid-yellowish-pink</td></tr>
+<tr><td style="color:#fff;background-color:#e25822">w3-vivid-reddish-orange</td></tr>
+<tr><td style="color:#fff;background-color:#f6a600">w3-vivid-orange-yellow</td></tr>
+<tr><td style="color:#fff;background-color:#dcd300">w3-vivid-greenish-yellow</td></tr>
+<tr><td style="color:#fff;background-color:#8db600">w3-vivid-yellow-green</td></tr>
+<tr><td style="color:#fff;background-color:#27a64c">w3-vivid-yellowish-green</td></tr>
+<tr><td style="color:#fff;background-color:#008882">w3-vivid-bluish-green</td></tr>
+<tr><td style="color:#fff;background-color:#0085a1">w3-vivid-greenish-blue</td></tr>
+<tr><td style="color:#fff;background-color:#30267a">w3-vivid-purplish-blue</td></tr>
+<tr><td style="color:#fff;background-color:#870074">w3-vivid-reddish-purple</td></tr>
+<tr><td style="color:#fff;background-color:#ce4676">w3-vivid-purplish-red</td></tr>
+</table>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-vivid-red"&gt;<br>&nbsp; &lt;p&gt;Лондон - самый густонаселенный город в Соединенном Королевстве,<br>&nbsp; с населением более 9 миллионов человек.&lt;/p&gt;<br>&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitbc3a.html?filename=tryw3css_colors_vivid" target="_blank">
+  Попробуйте сами &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="../lib/w3-colors-vivid.css" target="_blank">
+  Скачать CSS &raquo;</a>
+</div>
+<p>Яркие цвета определены в <a href="../colors/colors_nbs.html">ISCC-NBS</a>.</p>
+<hr>
+
+<h2>Пищевые цвета</h2>
+<table class="w3-table-all w3-large">
+<tr><td class="w3-food-apple">w3-food-apple</td></tr>
+<tr><td class="w3-food-aspargus">w3-food-aspargus</td></tr>
+<tr><td class="w3-food-apricot">w3-food-apricot</td></tr>
+<tr><td class="w3-food-aubergine">w3-food-aubergine</td></tr>
+<tr><td class="w3-food-avocado">w3-food-avocado</td></tr>
+<tr><td class="w3-food-banana">w3-food-banana</td></tr>
+<tr><td class="w3-food-butter">w3-food-butter</td></tr>
+<tr><td class="w3-food-blueberry">w3-food-blueberry</td></tr>
+<tr><td class="w3-food-cherry">w3-food-cherry</td></tr>
+<tr><td class="w3-food-chocolate">w3-food-chocolate</td></tr>
+<tr><td class="w3-food-cranberry">w3-food-cranberry</td></tr>
+<tr><td class="w3-food-coffee">w3-food-coffee</td></tr>
+<tr><td class="w3-food-egg">w3-food-egg</td></tr>
+<tr><td class="w3-food-grape">w3-food-grape</td></tr>
+<tr><td class="w3-food-kiwi">w3-food-kiwi</td></tr>
+<tr><td class="w3-food-lemon">w3-food-lemon</td></tr>
+<tr><td class="w3-food-lime">w3-food-lime</td></tr>
+<tr><td class="w3-food-mango">w3-food-mango</td></tr>
+<tr><td class="w3-food-mushroom">w3-food-mushroom</td></tr>
+<tr><td class="w3-food-mustard">w3-food-mustard</td></tr>
+<tr><td class="w3-food-mint">w3-food-mint</td></tr>
+<tr><td class="w3-food-olive">w3-food-olive</td></tr>
+<tr><td class="w3-food-orange">w3-food-orange</td></tr>
+<tr><td class="w3-food-pea">w3-food-pea</td></tr>
+<tr><td class="w3-food-peach">w3-food-peach</td></tr>
+<tr><td class="w3-food-pear">w3-food-pear</td></tr>
+<tr><td class="w3-food-pistachio">w3-food-pistachio</td></tr>
+<tr><td class="w3-food-plum">w3-food-plum</td></tr>
+<tr><td class="w3-food-raspberry">w3-food-raspberry</td></tr>
+<tr><td class="w3-food-saffron">w3-food-saffron</td></tr>
+<tr><td class="w3-food-salmon">w3-food-salmon</td></tr>
+<tr><td class="w3-food-spearmint">w3-food-spearmint</td></tr>
+<tr><td class="w3-food-squash">w3-food-squash</td></tr>
+<tr><td class="w3-food-strawberry">w3-food-strawberry</td></tr>
+<tr><td class="w3-food-tomato">w3-food-tomato</td></tr>
+<tr><td class="w3-food-wheat">w3-food-wheat</td></tr>
+<tr><td class="w3-food-wine">w3-food-wine</td></tr>
+</table>
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-food-apple"&gt;Apple&lt;/div&gt;<br>&lt;div
+  class="w3-food-banana"&gt;Banana&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitddf7.html?filename=tryw3css_colors_food" target="_blank">
+  Попробуйте сами &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="tryit77bd.html?filename=tryw3css_colors_food_lib" target="_blank">
+  Попробуйте все &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="../lib/w3-colors-food.css" target="_blank">
+  Скачать CSS &raquo;</a>
+</div>
+<hr>
+
+<h2>Камуфляжные цвета</h2>
+<table class="w3-table-all w3-large">
+<tr><td class="w3-camo-brown">w3-camo-brown</td></tr>
+<tr><td class="w3-camo-red">w3-camo-red</td></tr>
+<tr><td class="w3-camo-olive">w3-camo-olive</td></tr>
+<tr><td class="w3-camo-field">w3-camo-field</td></tr>
+<tr><td class="w3-camo-earth">w3-camo-earth</td></tr>
+<tr><td class="w3-camo-sand">w3-camo-sand</td></tr>
+<tr><td class="w3-camo-tan">w3-camo-tan</td></tr>
+<tr><td class="w3-camo-sandstone">w3-camo-sandstone</td></tr>
+<tr><td class="w3-camo-dark-green">w3-camo-dark-green</td></tr>
+<tr><td class="w3-camo-forest">w3-camo-forest</td></tr>
+<tr><td class="w3-camo-light-green">w3-camo-light-green</td></tr>
+<tr><td class="w3-camo-green">w3-camo-green</td></tr>
+<tr><td class="w3-camo-dark-grey">w3-camo-dark-grey</td></tr>
+<tr><td class="w3-camo-grey">w3-camo-grey</td></tr>
+<tr><td class="w3-camo-black">w3-camo-black</td></tr>
+</table>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;div class="w3-camo-earth"&gt;Camouflaged Truck&lt;/div&gt;<br>&lt;div
+  class="w3-camo-grey"&gt;Camouflaged Ship&lt;/div&gt;
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryitc21f.html?filename=tryw3css_colors_camo" target="_blank">
+  Попробуйте сами &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="tryit3755.html?filename=tryw3css_colors_camo_lib" target="_blank">
+  Попробуйте все &raquo;</a>
+  &nbsp;
+<a class="w3-btn w3-margin-bottom" href="../lib/w3-colors-camo.css" target="_blank">
+  Скачать CSS &raquo;</a>
+</div>
+<p>Камуфляжные цвета определены в <a href="../colors/colors_fs595.html">
+Федеральном стандарте 595</a>.</p>
+
+<hr>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="w3css_color_ios.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="w3css_color_schemes.html">Next &#10095;</a>
+</div>
+
+<hr>
+<!--Комментарии от Disqus-->
+<iframe class="predisqus" src="../pages/predisqus.html"></iframe>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = w3schoolsrus.github.io; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io / w3css / w3css_color_libraries.html; // уникальный идентификатор страницы
+};
+(function() { // Не редактировать ниже этой линии
+var d = document, s = d.createElement('script');
+s.src = 'https://w3schoolsrus-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев, предоставленных Disqus.</a></noscript>
+<!--/ Комментарии от Disqus-->
+<hr>
+
+</div>
+
+<!--Right sidebar-->
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection w3-light-grey" style="padding-bottom: 5px">
+<h4><a href="../colors/colors_picker.html">ПАЛИТРА ЦВЕТОВ</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="Палитра цветов"></a>
+</div>
+
+<div class="sidesection" id="moreAboutSubject">
+</div>
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_css_icon_bar.html">Навбар с иконками</a><br>
+    <a href="../howto/howto_css_menu_icon.html">Меню бургер</a><br>
+    <a href="../howto/howto_js_accordion.html">Меню аккордеон</a><br>
+    <a href="../howto/howto_js_tabs.html">Меню вкладки</a><br>
+    <a href="../howto/howto_js_vertical_tabs.html">Вертикальные вкладки</a><br>
+    <a href="../howto/howto_js_tab_header.html">Заголовки вкладок</a><br>
+    <a href="../howto/howto_js_full_page_tabs.html">Вкладки полной страницы</a><br>
+    <a href="../howto/howto_js_hover_tabs.html">Вкладки при наведении</a><br>
+    <a href="../howto/howto_js_topnav.html">Верхний навбар</a><br>
+    <a href="../howto/howto_js_topnav_responsive.html">Адаптивный верхний навбар</a><br>
+    <a href="../howto/howto_css_navbar_icon.html">Навбар с иконками</a><br>
+    <a href="../howto/howto_js_search_menu.html">Меню поиска по сайту</a><br>
+    <a href="../howto/howto_css_searchbar.html">Панель поиска по сайту</a><br>
+    <a href="../howto/howto_css_fixed_sidebar.html">Фиксированный сайдбар</a><br>
+    <a href="../howto/howto_js_sidenav.html">Боковой сайдбар</a><br>
+    <a href="../howto/howto_css_sidebar_responsive.html">Адаптивный сайдбар</a><br>
+    <a href="../howto_js_fullscreen_overlay.html">Полноэкранный навбар</a><br>
+    <a href="../howto/howto_js_off-canvas.html">Меню Off-Canvas</a><br>
+    <a href="../howto/howto_css_sidenav_buttons.html">Кнопки навбара при наведении</a><br>
+    <a href="../howto/howto_css_sidebar_icons.html">Сайдбар с иконками</a><br>
+    <a href="../howto/howto_css_menu_horizontal_scroll.html">Горизонтальное меню с прокруткой</a><br>
+    <a href="../howto/howto_css_vertical_menu.html">Вертикальное меню</a><br>
+    <a href="../howto/howto_css_bottom_nav.html">Нижняя навигация</a><br>
+    <a href="../howto/howto_js_bottom_nav_responsive.html">Адаптивная нижняя навигация</a><br>
+    <a href="../howto/howto_css_navbar_border.html">Нижняя граница навигационных ссылок</a>
+  </div>
+</div>
+
+</div>
+<!--/Right sidebar-->
+
+</div>
+
+<!--FOOTER-->
+<div id="footer" class="footer w3-container w3-white">
+<hr>
+
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
+</div>
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+<h2>Ваше предложение:</h2>
+<form>
+<div class="w3-section">
+<label for="err_email">Ваш E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">
+<label for="err_email">Адрес страницы:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Описание:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
+</div>
+<br>
+</form>
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<h2>Спасибо за Вашу помощь!</h2>
+<p>Ваше сообщение было отправлено в W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Учебники</h4>
+<a href="default.html">HTML Учебник</a><br>
+<a href="../css/default.html">CSS Учебник</a><br>
+<a href="../js/default.html">JavaScript Учебник</a><br>
+<a href="../howto/default.html">Как сделать Учебник</a><br>
+<a href="../sql/default.html">SQL Учебник</a><br>
+<a href="../python/default.html">Python Учебник</a><br>
+<a href="../w3css/default.html">W3.CSS Учебник</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Учебник</a><br>
+<a href="../php/default.html">PHP Учебник</a><br>
+<a href="../jquery/default.html">jQuery Учебник</a><br>
+<a href="../java/default.html">Java Учебник</a><br>
+<a href="../cpp/default.html">C++ Учебник</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Справочники</h4>
+<a href="../tags/default.html">HTML Справочник</a><br>
+<a href="../cssref/default.html">CSS Справочник</a><br>
+<a href="../jsref/default.html">JavaScript Справочник</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Справочник</a><br>
+<a href="../python/python_reference.html">Python Справочник</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Справочник</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Справочник</a><br>
+<a href="../php/php_ref_overview.html">PHP Справочник</a><br>
+<a href="../colors/colors_names.html">HTML Цвета</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Справочник</a><br>
+<a href="../java/java_ref_keywords.html">Java Справочник</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Справочник</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Примеры</h4>
+<a href="html_examples.html">HTML Примеры</a><br>
+<a href="../css/css_examples.html">CSS Примеры</a><br>
+<a href="../js/js_examples.html">JavaScript Примеры</a><br>
+<a href="../howto/default.html">Как сделать Примеры</a><br>
+<a href="../sql/sql_examples.html">SQL Примеры</a><br>
+<a href="../python/python_examples.html">Python Примеры</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Примеры</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Примеры</a><br>
+<a href="../php/php_examples.html">PHP Примеры</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Примеры</a><br>
+<a href="../java/java_examples.html">Java Примеры</a><br>
+<a href="../xml/xml_examples.html">XML Примеры</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Веб Сертификаты</h4>
+<a href="../cert/default.html">HTML Сертификат</a><br>
+<a href="../cert/default.html">CSS Сертификат</a><br>
+<a href="../cert/default.html">JavaScript Сертификат</a><br>
+<a href="../cert/default.html">SQL Сертификат</a><br>
+<a href="../cert/default.html">Python Сертификат</a><br>
+<a href="../cert/default.html">jQuery Сертификат</a><br>
+<a href="../cert/default.html">PHP Сертификат</a><br>
+<a href="../cert/default.html">Bootstrap Сертификат</a><br>
+<a href="../cert/default.html">XML Сертификат</a><br>
+<a class="w3-button w3-margin-top w3-dark-grey" href="../cert/default.html" style="text-decoration:none">Получить Сертификацию &raquo;</a>
+</div>
+</div>
+</div>
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
+<a href="../about/about_copyright.html">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
+<a href="default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+<!--[if lt IE 9]>
+<script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
+<script src="../cdn/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</div>
+</body>
+</html>

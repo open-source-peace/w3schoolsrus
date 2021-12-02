@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<title>Node.js и Raspberry Pi Учебник. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='Node.js и Raspberry Pi Учебник. Что такое Raspberry Pi? Что необходимо? Записать образ ОС Raspbian на карту MicroSD. Настройка сети на Raspberry Pi. Включить SSH, изменить имя хоста и пароль. Установка Node.js на Raspberry Pi. Начало работы. Как начать работать? Уроки для начинающих. W3Schools на русском'>
+
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Главная'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Учебник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Учебник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Учебник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Учебник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Учебник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>КАК СДЕЛАТЬ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Учебник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Учебник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Учебник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Учебник'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Выучить HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Выучить CSS</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Выучить W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Выучить Цвета</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Выучить Иконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Выучить Графику</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Выучить Как сделать</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Выучить Sass</a>
+
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Искусственный интеллект</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index.html">Выучить ИИ</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                        <a class='w3-bar-item w3-button' href='../python/numpy/index.html'>Выучить NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../python/scipy/index.html'>Выучить SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Выучить Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Выучить Статистика</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Выучить Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Выучить Google таблицы</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Выучить JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Выучить jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Выучить React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Выучить AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Выучить JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Выучить AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Выучить W3.JS</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Выучить Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Выучить Java</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Выучить C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Выучить C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Выучить R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Выучить Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Выучить Go</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Выучить SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Выучить MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Выучить PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Выучить ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Выучить Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Выучить Git</a>
+
+                    <h3>Веб-строительство</h3>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблоны</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../cert/index.html'>Веб-сертификаты</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-разработка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кибербезопасность</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступность</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Проверить скорость печати</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодовая игра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Искусственный интеллект</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Выучить ИИ</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                    <a class='w3-bar-item w3-button' href='../python/numpy/index.html'>Выучить NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../python/scipy/index.html'>Выучить SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Выучить Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Выучить Статистика</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Выучить Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Выучить Google таблицы</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Справочник тегов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Справочник цветов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Иконки Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Справочник</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Наборы символов</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Наборы символов</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Упражнения</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/numpy/numpy_exercises.html'>NumPy Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/pandas_exercises.html'>Pandas Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/scipy/scipy_exercises.html'>SciPy Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Упражнения</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Викторины</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/numpy/numpy_quiz.html' target='_top'>NumPy Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/pandas_quiz.html' target='_top'>Pandas Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/scipy/scipy_quiz.html' target='_top'>SciPy Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кибербезопасность Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступность Викторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертификаты</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертификат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar JS-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner' style="background-color:#E7E9EB;">
+            <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+            <h2 class="left"><span class="left_h2">Node.js</span> Учебник</h2>
+            <a target="_top" href="index.html">Node.js Главная</a>
+            <a target="_top" href="nodejs_intro.html">Node.js Интро</a>
+            <a target="_top" href="nodejs_get_started.html">Node.js СТАРТ</a>
+            <a target="_top" href="nodejs_modules.html">Node.js Модули</a>
+            <a target="_top" href="nodejs_http.html">Node.js HTTP Модуль</a>
+            <a target="_top" href="nodejs_filesystem.html">Node.js Файловая система</a>
+            <a target="_top" href="nodejs_url.html">Node.js URL Модуль</a>
+            <a target="_top" href="nodejs_npm.html">Node.js NPM</a>
+            <a target="_top" href="nodejs_events.html">Node.js События</a>
+            <a target="_top" href="nodejs_uploadfiles.html">Node.js Загрузка файлов</a>
+            <a target="_top" href="nodejs_email.html">Node.js Email</a>
+            <br>
+            <h2 class="left"><span class="left_h2">Node.js</span> MySQL</h2>
+            <a target="_top" href="nodejs_mysql.html">MySQL СТАРТ</a>
+            <a target="_top" href="nodejs_mysql_create_db.html">MySQL Create Database</a>
+            <a target="_top" href="nodejs_mysql_create_table.html">MySQL Create Table</a>
+            <a target="_top" href="nodejs_mysql_insert.html">MySQL Insert Into</a>
+            <a target="_top" href="nodejs_mysql_select.html">MySQL Select From</a>
+            <a target="_top" href="nodejs_mysql_where.html">MySQL Where</a>
+            <a target="_top" href="nodejs_mysql_orderby.html">MySQL Order By</a>
+            <a target="_top" href="nodejs_mysql_delete.html">MySQL Delete</a>
+            <a target="_top" href="nodejs_mysql_drop_table.html">MySQL Drop Table</a>
+            <a target="_top" href="nodejs_mysql_update.html">MySQL Update</a>
+            <a target="_top" href="nodejs_mysql_limit.html">MySQL Limit</a>
+            <a target="_top" href="nodejs_mysql_join.html">MySQL Join</a>
+            <br>
+            <h2 class="left"><span class="left_h2">Node.js</span> MongoDB</h2>
+            <a target="_top" href="nodejs_mongodb.html">MongoDB Get Started</a>
+            <a target="_top" href="nodejs_mongodb_create_db.html">MongoDB Create Database</a>
+            <a target="_top" href="nodejs_mongodb_createcollection.html">MongoDB Create Collection</a>
+            <a target="_top" href="nodejs_mongodb_insert.html">MongoDB Insert</a>
+            <a target="_top" href="nodejs_mongodb_find.html">MongoDB Find</a>
+            <a target="_top" href="nodejs_mongodb_query.html">MongoDB Query</a>
+            <a target="_top" href="nodejs_mongodb_sort.html">MongoDB Sort</a>
+            <a target="_top" href="nodejs_mongodb_delete.html">MongoDB Delete</a>
+            <a target="_top" href="nodejs_mongodb_drop.html">MongoDB Drop Collection</a>
+            <a target="_top" href="nodejs_mongodb_update.html">MongoDB Update</a>
+            <a target="_top" href="nodejs_mongodb_limit.html">MongoDB Limit</a>
+            <a target="_top" href="nodejs_mongodb_join.html">MongoDB Join</a>
+            <br>
+            <h2 class="left"><span class="left_h2">Raspberry</span> Pi</h2>
+            <a target="_top" href="nodejs_raspberrypi.html">RasPi СТАРТ</a>
+            <a target="_top" href="nodejs_raspberrypi_gpio_intro.html">RasPi GPIO Интро</a>
+            <a target="_top" href="nodejs_raspberrypi_blinking_led.html">RasPi Blinking LED</a>
+            <a target="_top" href="nodejs_raspberrypi_led_pushbutton.html">RasPi LED &amp; Pushbutton</a>
+            <a target="_top" href="nodejs_raspberrypi_flowing_leds.html">RasPi Flowing LEDs</a>
+            <a target="_top" href="nodejs_raspberrypi_webserver_websocket.html">RasPi WebSocket</a>
+            <a target="_top" href="nodejs_raspberrypi_rgb_led_websocket.html">RasPi RGB LED WebSocket</a>
+            <a target="_top" href="nodejs_raspberrypi_components.html">RasPi Components</a>
+            <br>
+            <h2 class="left"><span class="left_h2">Node.js</span> Справочник</h2>
+            <a target="_top" href="ref_modules.html">Встроенные модули</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu sidebar JS--><!--CONTENT JS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/nodejs_icon.svg' alt='NodeJS. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='NodeJS для начинающих. W3Schools на русском' style='width: 120px'></a>
+
+<article>
+    <h1>Node.js и <span class="color_h1">Raspberry Pi</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="nodejs_mongodb_join.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="nodejs_raspberrypi_gpio_intro.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Raspberry Pi</strong> - небольшой многофункциональный компьютер.</p>
+    <p class="intro">Из Node.js вы можете делать удивительные вещи с <strong>Raspberry Pi</strong>.</p>
+    <hr>
+
+    <h2>Что такое Raspberry Pi?</h2>
+    <p><strong>Raspberry Pi</strong> - это небольшой, доступный и удивительно мощный компьютер размером с кредитную карту.</p>
+    <p>Он разработан Raspberry Pi Foundation и может быть самой универсальной технологией из когда-либо созданных.</p>
+    <p>Целью создателя Эбена Аптона было создание недорогого устройства, которое улучшило бы навыки программирования и понимание оборудования.</p>
+    <p>Из-за небольшого размера и цены устройство стало центром широкого спектра проектов мастеров, производителей и энтузиастов электроники.</p>
+    <hr>
+
+    <h2>Raspberry Pi и Node.js</h2>
+    <p>Raspberry Pi имеет ряд контактов GPIO (ввод/вывод общего назначения), которые можно использовать для удивительного взаимодействия с реальным миром. В этом руководстве мы сосредоточимся на том, как использовать их с Node.js.</p>
+    <hr>
+
+    <h2>Что мне нужно?</h2>
+    <p>Для этого урока вам понадобится Raspberry Pi. В наших примерах мы используем Raspberry Pi 3, но это руководство должно работать для большинства версий.</p>
+    <p>Требуется оборудование:</p>
+    <ul>
+        <li>Компьютер Raspberry Pi</li>
+        <li>Карта памяти MicroSD (мы рекомендуем класс 10 с объемом памяти 16 ГБ или выше)</li>
+        <li>Адаптер карты памяти MicroSD к SD (обычно прилагается к карте MicroSD)</li>
+        <li>Блок питания Micro USB для питания Raspberry Pi (рекомендуется 2,5 или больше)</li>
+        <li>Подключение кабеля Wi-Fi / Ethernet для Raspberry Pi (не требуется для Raspberry Pi 3, поскольку он имеет встроенный Wi-Fi)</li>
+        <li>Рабочий компьютер с Интернетом и устройством чтения карт памяти SD (используется для установки ОС (операционной системы) Raspberry Pi на карту памяти). В нашем руководстве мы используем для этого компьютер с Windows, но вы можете использовать компьютер Mac или Linux, если хотите</li>
+        <li>HDMI-монитор, USB-клавиатура (они нужны нам временно для первой загрузки Raspberry Pi)</li>
+    </ul>
+    <p>В последующих главах этого руководства мы будем использовать специальные датчики или устройства, которые мы подключаем к Raspberry Pi. Мы укажем это как особые требования в соответствующих главах.</p>
+    <div class="w3-note w3-panel"><p>Если у вас уже есть Raspberry Pi, настроенный с Raspbian, Интернет и включенный SSH, вы можете перейти к шагу &quot;Установка Node.js на Raspberry Pi&quot;.</p></div>
+    <hr>
+
+    <h2>Записать образ ОС Raspbian на карту MicroSD</h2>
+    <p>Прежде чем мы сможем начать использовать Raspberry Pi для чего-либо, нам нужно установить ОС.</p>
+    <p>Raspbian - это бесплатная операционная система на основе Debian Linux, оптимизированная для Raspberry Pi.</p>
+    <p>Загрузите последний образ Raspbian со страницы <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="nofollow">https://www.raspberrypi.org/downloads/raspbian/</a> на свой компьютер.</p>
+    <p>Мы используем &quot;LITE&quot; версии в нашем руководстве, так как мы настраиваем Raspberry Pi как безголовый сервер (мы будем подключаться к нему через SSH, без подключения к нему клавиатуры / дисплея). Вы можете использовать любую версию, которую хотите, но это руководство написано с использованием &quot;LITE&quot; версии как его фокус.</p>
+    <p>Вставьте карту памяти MicroSD в компьютер (при необходимости через адаптер SD). Откройте проводник, чтобы убедиться, что он работает.</p>
+    <p>Etcher - программа для записи изображений на карты памяти. Загрузите и установите Etcher из: <a href="https://etcher.io/" target="_blank" rel="nofollow">https://etcher.io/</a></p>
+    <p>Запустите Etcher:</p>
+    <img src="../images/img_etcher.png" alt="Launch Etcher" style="width:100%;max-width:1000px">
+    <p>Нажмите кнопку &quot;Выбрать изображение&quot; и найдите загруженный zip-файл Raspbian.</p>
+    <p>Нажмите кнопку &quot;Выбрать диск&quot; и укажите карту памяти в качестве целевого местоположения.</p>
+    <p>Нажмите &quot;Flash!&quot; кнопку для записи изображения на карту памяти.</p>
+    <p>После того, как Etcher закончит запись изображения на карту памяти, удалите его с компьютера.</p>
+    <hr>
+
+    <h2>Настройте свой Raspberry Pi</h2>
+    <p>Чтобы подготовить Raspberry Pi к загрузке, нам нужно:</p>
+    <ol>
+        <li>Вставьте карту памяти MicroSD в Raspberry Pi</li>
+        <li>Подключите USB-клавиатуру</li>
+        <li>Подключите кабель HDMI</li>
+        <li>Подключите USB-адаптер Wi-Fi (или кабель Ethernet). Пропустите этот шаг, если вы используете Raspberry Pi 3</li>
+        <li>Подключите источник питания micro USB</li>
+        <li>Raspberry Pi должен загружаться.</li>
+    </ol>
+    <p>Когда Raspberry Pi завершит загрузку, войдите в систему, используя имя пользователя: <code class="w3-codespan">pi</code> и пароль: <code class="w3-codespan">raspberry</code></p>
+    <hr>
+
+    <h2>Настройка сети на Raspberry Pi</h2>
+    <p>Если вы будете использовать кабель Ethernet для подключения Raspberry Pi к Интернету, вы можете пропустить этот шаг.</p>
+    <p>В этом разделе мы предполагаем, что у вас есть Raspberry Pi 3 со встроенным Wi-Fi.</p>
+    <p>Начните с поиска беспроводных сетей:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@raspberrypi:~ $
+        sudo iwlist wlan0 scan
+    </div>
+    <p>В нем будут перечислены все доступные сети Wi-Fi. (Это также подтверждает, что ваш WiFi работает).</p>
+    <p>Теперь нам нужно открыть файл wpa-supplicant, чтобы добавить сеть, к которой вы хотите подключиться:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@raspberrypi:~ $ sudo
+        nano /etc/wpa_supplicant/wpa_supplicant.conf</div>
+    <p>Это откроет файл в редакторе Nano. Добавьте следующее в конец файла (замените <code class="w3-codespan">wifiName</code> и <code class="w3-codespan">wifiPassword</code> на фактическое имя сети и пароль):</p>
+
+    <div class="w3-code notranslate w3-black">
+        network={<br>&nbsp; ssid=&quot;wifiName&quot;<br>&nbsp; psk=&quot;wifiPassword&quot;<br>}
+    </div>
+
+    <p>Нажмите &quot;<code class="w3-codespan">Ctrl+x</code>&quot; чтобы сохранить код. Подтвердите, нажав "<code class="w3-codespan">y</code>", и подтвердите имя, нажав "<code class="w3-codespan">Enter</code>".</p>
+    <p>И перезагрузите Raspberry Pi:</p>
+
+    <div class="w3-code notranslate w3-black">
+        pi@raspberrypi:~ $ sudo reboot
+    </div>
+
+    <p>После перезагрузки снова войдите в систему и убедитесь, что WiFi подключен и работает:</p>
+
+    <div class="w3-code notranslate w3-black">
+        pi@raspberrypi:~ $ ifconfig wlan0
+    </div>
+
+    <p>Если Wi-Fi работает нормально, отображаемая информация должна включать IP-адрес, подобный этому:</p>
+    <div class="w3-code notranslate w3-black">
+        inet addr:192.168.1.50
+    </div>
+    <p>Запишите этот IP-адрес, так как мы будем использовать его для подключения к Raspberry Pi через SSH.</p>
+    <div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>Включить SSH, изменить имя хоста и пароль</h2>
+    <p>Теперь ваш Raspberry Pi подключен к Интернету, пора включить SSH.</p>
+    <p>SSH позволяет использовать Raspberry Pi без подключения к нему монитора и клавиатуры.</p>
+    <p>Для этого вам понадобится SSH-клиент на вашем компьютере, отличном от Raspberry Pi. Мы используем <href src="http://www.putty.org" alt="PuTTY SSH client" target="_blank"><a href="http://www.putty.org/" target="_blank">PuTTY</a></href> для Windows)</p>
+    <p>Откройте инструмент настройки программного обеспечения Raspberry Pi:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@raspberrypi:~ $ sudo raspi-config
+    </div>
+    <p>Вы должны увидеть такое меню:</p>
+    <img src="../images/img_raspi-config.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>Выберите вариант <code class="w3-codespan">5 Interfacing Options</code>:</p>
+    <img src="../images/img_raspi-config_interfacing_options.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>Выберите опцию <code class="w3-codespan">P2 SSH</code>, чтобы активировать SSH:</p>
+    <img src="../images/img_raspi-config_ssh.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>Подтвердите, нажав <code class="w3-codespan">YES</code>, чтобы активировать SSH:</p>
+    <img src="../images/img_raspi-config_enable_ssh.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>SSH теперь включен, и вы снова должны быть в главном меню.</p>
+    <p>Выберите <code class="w3-codespan">1 Change User Password</code>, и следуйте инструкциям по изменению пароля. Выберите надежный пароль, но то, что вы запомните:</p>
+    <img src="../images/img_raspi-config.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>После того, как вы закончили менять пароль, вы должны вернуться в главное меню.</p>
+    <p>Выберите <code class="w3-codespan">2 Hostname</code>, и следуйте инструкциям, чтобы изменить имя хоста:</p>
+    <img src="../images/img_raspi-config_hostname.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>После того, как вы закончили изменять имя хоста, вы должны вернуться в главное меню.</p>
+    <p>Теперь закроем меню и сохраним изменения:</p>
+    <img src="../images/img_raspi-config_finish.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>При выборе <code class="w3-codespan">Finish</code>, вы получите возможность перезагрузки. Выберите <code class="w3-codespan">Yes</code> чтобы перезагрузить Raspberry Pi.</p>
+    <img src="../images/img_raspi-config_finish_reboot.png" alt="raspi-config Main Screen" style="width:100%;max-width:1000px">
+    <p>Теперь вы можете отключить монитор и клавиатуру от Raspberry Pi, и мы можем войти в систему с помощью клиента SSH.</p>
+    <p>Откройте PuTTY, введите IP-адрес своего Raspberry Pi и нажмите <code class="w3-codespan">Open</code>:</p>
+    <img src="../images/img_putty_connect.png" alt="raspi-config Main Screen" style="width:100%;max-width:500px">
+    <p>Войдите в систему, используя имя пользователя <code class="w3-codespan">pi</code> и новый пароль, который вы указали.</p>
+    <p>Теперь вы должны увидеть такую командную строку: we used w3demopi as our hostname (мы использовали w3demopi в качестве имени хоста)</p>
+    <div class="w3-code notranslate w3-black">
+        pi@w3demopi:~ $
+    </div>
+    <p>Теперь вы можете запустить свой Raspberry Pi в &quot;режиме без головы&quot;, что означает, что вам не нужен монитор или клавиатура. А если у вас есть соединение Wi-Fi, вам не нужен кабель Ethernet, только кабель питания!</p>
+    <hr>
+
+    <h2>Установка Node.js на Raspberry Pi</h2>
+    <p>После правильной настройки Raspberry Pi войдите в систему через SSH и обновите системные пакеты Raspberry Pi до последних версий.</p>
+    <p>Обновите список пакетов вашей системы:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@w3demopi:~ $ sudo apt-get update
+    </div>
+    <p>Обновите все установленные пакеты до последней версии:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@w3demopi:~ $ sudo apt-get dist-upgrade
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Если вы будете делать это регулярно, ваша установка Raspberry Pi будет обновляться.</p>
+    </div>
+    <p>Чтобы загрузить и установить новейшую версию Node.js, используйте следующую команду:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@w3demopi:~ $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -</div>
+
+    <p>Теперь установите его, запустив:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@w3demopi:~ $ sudo apt-get install -y nodejs
+    </div>
+    <p>Убедитесь, что установка прошла успешно, и с номером версии Node.js:</p>
+    <div class="w3-code notranslate w3-black">
+        pi@w3demopi:~ $ node -v
+    </div>
+    <hr>
+
+    <h2>Начните работу с Raspberry Pi и Node.js</h2>
+    <p>Теперь у вас есть Raspberry Pi с установленным Node.js!</p>
+    <p>Если вы хотите узнать больше о Node.js, перейдите на <a href="../nodejs/index.html">Учебник Node.js</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a></p>
+    <p>В следующей главе мы узнаем о GPIO и о том, как его использовать с Node.js.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="nodejs_mongodb_join.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="nodejs_raspberrypi_gpio_intro.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ОБРАТНАЯ СВЯЗЬ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПЕЧАТЬ СТРАНИЦЫ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Связь с админом</h2>
+      <p>Если вы хотите сообщить об ошибке, а также внести предложение о работе сайта, добавить объявление или рекламу на сайт, не стесняйтесь отправить админу электронное письмо на email:</p>
+      <p>w3schoolsrus@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Учебники</h4>
+        <a href='../html/index.html'>HTML Учебник</a><br>
+        <a href='../css/index.html'>CSS Учебник</a><br>
+        <a href='../js/index.html'>JavaScript Учебник</a><br>
+        <a href='../sql/index.html'>SQL Учебник</a><br>
+        <a href='../python/index.html'>Python Учебник</a><br>
+        <a href='../php/index.html'>PHP Учебник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
+        <a href='../appml/index.html'>AppML Учебник</a><br>
+        <a href='../jquery/index.html'>jQuery Учебник</a><br>
+        <a href='../angular/index.html'>Angular Учебник</a><br>
+        <a href='../sass/index.html'>Sass Учебник</a><br>
+        <a href='../java/index.html'>Java Учебник</a><br>
+        <a href='../cpp/index.html'>C++ Учебник</a><br>
+        <a href='../cs/index.html'>C# Учебник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Справочники</h4>
+        <a href='../tags/index.html'>HTML Справочник</a><br>
+        <a href='../cssref/index.html'>CSS Справочник</a><br>
+        <a href='../jsref/index.html'>JavaScript Справочник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
+        <a href='../python/python_reference.html'>Python Справочник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
+        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Примеры</h4>
+        <a href='../html/html_examples.html'>HTML Примеры</a><br>
+        <a href='../css/css_examples.html'>CSS Примеры</a><br>
+        <a href='../js/js_examples.html'>JavaScript Примеры</a><br>
+        <a href='../sql/sql_examples.html'>SQL Примеры</a><br>
+        <a href='../python/python_examples.html'>Python Примеры</a><br>
+        <a href='../php/php_examples.html'>PHP Примеры</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Примеры</a><br>
+        <a href='../angular/angular_examples.html'>Angular Примеры</a><br>
+        <a href='../java/java_examples.html'>Java Примеры</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Примеры</a><br>
+        <a href='../cs/cs_examples.html'>C# Примеры</a><br>
+        <a href='../xml/xml_examples.html'>XML Примеры</a><br>
+        <a href='../howto/index.html'>Как сделать? Примеры</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб Сертификаты</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертификат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертификат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертификат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертификат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертификат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука о данных Сертификат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертификат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертификат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертификат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертификат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертификат</a><br>
+        <a href='../cert/career_tips.html'>Планирование карьеры</a><br>
+        <a href='../cert/career_cv.html'>Составление резюме</a><br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+  Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
+    Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
+    Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <!--GoogleAdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!--/GoogleAdSense-->
+</div>
+</div>
+<!--AdSense-auto-w3schoolsrus-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396"
+        crossorigin="anonymous"></script>
+<!--/AdSense-auto-w3schoolsrus-->
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

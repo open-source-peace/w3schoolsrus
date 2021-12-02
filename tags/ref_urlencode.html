@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'><title>HTML Кодировка URL адреса. Справочник. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='Кодирование URL адреса в HTML. Справочник. Как кодируются URL-адреса веб-документов. Курс по основам HTML5. Уроки для начинающих. W3Schools на русском'>
+<script>
+    function urlencode()
+    {
+        var txt=document.getElementById('txt').value;
+//var encodetxt=encodeURI(txt);
+        var encodetxt=encodeURIComponent(txt);
+        document.getElementById('encodingresult').innerHTML=encodetxt;
+    }
+</script>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Главная'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Учебник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Учебник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Учебник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Учебник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Учебник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>КАК СДЕЛАТЬ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Учебник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Учебник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Учебник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Учебник'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Выучить HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Выучить CSS</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Выучить W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Выучить Цвета</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Выучить Иконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Выучить Графику</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+                    <a class='w3-bar-item w3-button' href='index.html'>Выучить Как сделать</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Выучить Sass</a>
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Искусственный интеллект</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index.html">Выучить ИИ</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                        <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Выучить JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Выучить jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Выучить React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Выучить AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Выучить JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Выучить AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Выучить W3.JS</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Выучить Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Выучить Java</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Выучить C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Выучить C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Выучить R</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Выучить SQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Выучить PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Выучить ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Выучить Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+                    <h3>Веб-строительство</h3>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблоны</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../cert/index.html'>Веб-сертификаты</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-разработка</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Проверить скорость печати</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Искусственный интеллект</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Выучить AI</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Справочник тегов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Справочник цветов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Иконки Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Справочник</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Наборы символов</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Наборы символов</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Упражнения</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Упражнения</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Викторины</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертификаты</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертификат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+      <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+        <h2 class='left'><span class='left_h2'>HTML</span> Справочник</h2>
+        <a target='_top' href='index.html'>HTML Теги по алфавиту</a>
+        <a target='_top' href='ref_byfunc.html'>HTML Теги по категории</a>
+        <a target='_top' href='ref_html_browsersupport.html'>HTML Поддержка браузеров</a>
+        <a target='_top' href='ref_attributes.html'>HTML Атрибуты</a>
+        <a target='_top' href='ref_standardattributes.html'>HTML Глобальные атрибуты</a>
+        <a target='_top' href='ref_eventattributes.html'>HTML Атрибуты событий</a>
+        <a target='_top' href='ref_colornames.html'>HTML Цвета</a>
+        <a target='_top' href='ref_canvas.html'>HTML Canvas</a>
+        <a target='_top' href='ref_av_dom.html'>HTML Аудио/Видео</a>
+        <a target='_top' href='ref_charactersets.html'>HTML Наборы символов</a>
+        <a target='_top' href='ref_html_dtd.html'>HTML Doctype</a>
+        <a target='_top' href='ref_urlencode.html'>HTML URL кодирование</a>
+        <a target='_top' href='ref_language_codes.html'>HTML Коды языков</a>
+        <a target='_top' href='ref_country_codes.html'>HTML Коды стран</a>
+        <a target='_top' href='ref_httpmessages.html'>HTTP Сообщения</a>
+        <a target='_top' href='ref_httpmethods.html'>HTTP Методы</a>
+        <a target='_top' href='ref_pxtoemconversion.html'>PX в EM Конвертер</a>
+        <a target='_top' href='ref_keyboardshortcuts.html'>Горячие клавиши</a>
+        <br>
+        <div class='notranslate'>
+            <h2 class='left'><span class='left_h2'>HTML</span> Теги</h2>
+            <a target='_top' href='tag_comment.html'>&lt;!--&gt;</a>
+            <a target='_top' href='tag_doctype.html'>&lt;!DOCTYPE&gt;</a>
+            <a target='_top' href='tag_a.html'>&lt;a&gt;</a>
+            <a target='_top' href='tag_abbr.html'>&lt;abbr&gt;</a>
+            <a target='_top' href='tag_acronym.html'>&lt;acronym&gt;</a>
+            <a target='_top' href='tag_address.html'>&lt;address&gt;</a>
+            <a target='_top' href='tag_applet.html'>&lt;applet&gt;</a>
+            <a target='_top' href='tag_area.html'>&lt;area&gt;</a>
+            <a target='_top' href='tag_article.html'>&lt;article&gt;</a>
+            <a target='_top' href='tag_aside.html'>&lt;aside&gt;</a>
+            <a target='_top' href='tag_audio.html'>&lt;audio&gt;</a>
+            <a target='_top' href='tag_b.html'>&lt;b&gt;</a>
+            <a target='_top' href='tag_base.html'>&lt;base&gt;</a>
+            <a target='_top' href='tag_basefont.html'>&lt;basefont&gt;</a>
+            <a target='_top' href='tag_bdi.html'>&lt;bdi&gt;</a>
+            <a target='_top' href='tag_bdo.html'>&lt;bdo&gt;</a>
+            <a target='_top' href='tag_big.html'>&lt;big&gt;</a>
+            <a target='_top' href='tag_blockquote.html'>&lt;blockquote&gt;</a>
+            <a target='_top' href='tag_body.html'>&lt;body&gt;</a>
+            <a target='_top' href='tag_br.html'>&lt;br&gt;</a>
+            <a target='_top' href='tag_button.html'>&lt;button&gt;</a>
+            <a target='_top' href='tag_canvas.html'>&lt;canvas&gt;</a>
+            <a target='_top' href='tag_caption.html'>&lt;caption&gt;</a>
+            <a target='_top' href='tag_center.html'>&lt;center&gt;</a>
+            <a target='_top' href='tag_cite.html'>&lt;cite&gt;</a>
+            <a target='_top' href='tag_code.html'>&lt;code&gt;</a>
+            <a target='_top' href='tag_col.html'>&lt;col&gt;</a>
+            <a target='_top' href='tag_colgroup.html'>&lt;colgroup&gt;</a>
+            <a target='_top' href='tag_data.html'>&lt;data&gt;</a>
+            <a target='_top' href='tag_datalist.html'>&lt;datalist&gt;</a>
+            <a target='_top' href='tag_dd.html'>&lt;dd&gt;</a>
+            <a target='_top' href='tag_del.html'>&lt;del&gt;</a>
+            <a target='_top' href='tag_details.html'>&lt;details&gt;</a>
+            <a target='_top' href='tag_dfn.html'>&lt;dfn&gt;</a>
+            <a target='_top' href='tag_dialog.html'>&lt;dialog&gt;</a>
+            <a target='_top' href='tag_dir.html'>&lt;dir&gt;</a>
+            <a target='_top' href='tag_div.html'>&lt;div&gt;</a>
+            <a target='_top' href='tag_dl.html'>&lt;dl&gt;</a>
+            <a target='_top' href='tag_dt.html'>&lt;dt&gt;</a>
+            <a target='_top' href='tag_em.html'>&lt;em&gt;</a>
+            <a target='_top' href='tag_embed.html'>&lt;embed&gt;</a>
+            <a target='_top' href='tag_fieldset.html'>&lt;fieldset&gt;</a>
+            <a target='_top' href='tag_figcaption.html'>&lt;figcaption&gt;</a>
+            <a target='_top' href='tag_figure.html'>&lt;figure&gt;</a>
+            <a target='_top' href='tag_font.html'>&lt;font&gt;</a>
+            <a target='_top' href='tag_footer.html'>&lt;footer&gt;</a>
+            <a target='_top' href='tag_form.html'>&lt;form&gt;</a>
+            <a target='_top' href='tag_frame.html'>&lt;frame&gt;</a>
+            <a target='_top' href='tag_frameset.html'>&lt;frameset&gt;</a>
+            <a target='_top' href='tag_hn.html'>&lt;h1&gt; - &lt;h6&gt;</a>
+            <a target='_top' href='tag_head.html'>&lt;head&gt;</a>
+            <a target='_top' href='tag_header.html'>&lt;header&gt;</a>
+            <a target='_top' href='tag_hr.html'>&lt;hr&gt;</a>
+            <a target='_top' href='tag_html.html'>&lt;html&gt;</a>
+            <a target='_top' href='tag_i.html'>&lt;i&gt;</a>
+            <a target='_top' href='tag_iframe.html'>&lt;iframe&gt;</a>
+            <a target='_top' href='tag_img.html'>&lt;img&gt;</a>
+            <a target='_top' href='tag_input.html'>&lt;input&gt;</a>
+            <a target='_top' href='tag_ins.html'>&lt;ins&gt;</a>
+            <a target='_top' href='tag_kbd.html'>&lt;kbd&gt;</a>
+            <a target='_top' href='tag_label.html'>&lt;label&gt;</a>
+            <a target='_top' href='tag_legend.html'>&lt;legend&gt;</a>
+            <a target='_top' href='tag_li.html'>&lt;li&gt;</a>
+            <a target='_top' href='tag_link.html'>&lt;link&gt;</a>
+            <a target='_top' href='tag_main.html'>&lt;main&gt;</a>
+            <a target='_top' href='tag_map.html'>&lt;map&gt;</a>
+            <a target='_top' href='tag_mark.html'>&lt;mark&gt;</a>
+            <a target='_top' href='tag_meta.html'>&lt;meta&gt;</a>
+            <a target='_top' href='tag_meter.html'>&lt;meter&gt;</a>
+            <a target='_top' href='tag_nav.html'>&lt;nav&gt;</a>
+            <a target='_top' href='tag_noframes.html'>&lt;noframes&gt;</a>
+            <a target='_top' href='tag_noscript.html'>&lt;noscript&gt;</a>
+            <a target='_top' href='tag_object.html'>&lt;object&gt;</a>
+            <a target='_top' href='tag_ol.html'>&lt;ol&gt;</a>
+            <a target='_top' href='tag_optgroup.html'>&lt;optgroup&gt;</a>
+            <a target='_top' href='tag_option.html'>&lt;option&gt;</a>
+            <a target='_top' href='tag_output.html'>&lt;output&gt;</a>
+            <a target='_top' href='tag_p.html'>&lt;p&gt;</a>
+            <a target='_top' href='tag_param.html'>&lt;param&gt;</a>
+            <a target='_top' href='tag_picture.html'>&lt;picture&gt;</a>
+            <a target='_top' href='tag_pre.html'>&lt;pre&gt;</a>
+            <a target='_top' href='tag_progress.html'>&lt;progress&gt;</a>
+            <a target='_top' href='tag_q.html'>&lt;q&gt;</a>
+            <a target='_top' href='tag_rp.html'>&lt;rp&gt;</a>
+            <a target='_top' href='tag_rt.html'>&lt;rt&gt;</a>
+            <a target='_top' href='tag_ruby.html'>&lt;ruby&gt;</a>
+            <a target='_top' href='tag_s.html'>&lt;s&gt;</a>
+            <a target='_top' href='tag_samp.html'>&lt;samp&gt;</a>
+            <a target='_top' href='tag_script.html'>&lt;script&gt;</a>
+            <a target='_top' href='tag_section.html'>&lt;section&gt;</a>
+            <a target='_top' href='tag_select.html'>&lt;select&gt;</a>
+            <a target='_top' href='tag_small.html'>&lt;small&gt;</a>
+            <a target='_top' href='tag_source.html'>&lt;source&gt;</a>
+            <a target='_top' href='tag_span.html'>&lt;span&gt;</a>
+            <a target='_top' href='tag_strike.html'>&lt;strike&gt;</a>
+            <a target='_top' href='tag_strong.html'>&lt;strong&gt;</a>
+            <a target='_top' href='tag_style.html'>&lt;style&gt;</a>
+            <a target='_top' href='tag_sub.html'>&lt;sub&gt;</a>
+            <a target='_top' href='tag_summary.html'>&lt;summary&gt;</a>
+            <a target='_top' href='tag_sup.html'>&lt;sup&gt;</a>
+            <a target='_top' href='tag_svg.html'>&lt;svg&gt;</a>
+            <a target='_top' href='tag_table.html'>&lt;table&gt;</a>
+            <a target='_top' href='tag_tbody.html'>&lt;tbody&gt;</a>
+            <a target='_top' href='tag_td.html'>&lt;td&gt;</a>
+            <a target='_top' href='tag_template.html'>&lt;template&gt;</a>
+            <a target='_top' href='tag_textarea.html'>&lt;textarea&gt;</a>
+            <a target='_top' href='tag_tfoot.html'>&lt;tfoot&gt;</a>
+            <a target='_top' href='tag_th.html'>&lt;th&gt;</a>
+            <a target='_top' href='tag_thead.html'>&lt;thead&gt;</a>
+            <a target='_top' href='tag_time.html'>&lt;time&gt;</a>
+            <a target='_top' href='tag_title.html'>&lt;title&gt;</a>
+            <a target='_top' href='tag_tr.html'>&lt;tr&gt;</a>
+            <a target='_top' href='tag_track.html'>&lt;track&gt;</a>
+            <a target='_top' href='tag_tt.html'>&lt;tt&gt;</a>
+            <a target='_top' href='tag_u.html'>&lt;u&gt;</a>
+            <a target='_top' href='tag_ul.html'>&lt;ul&gt;</a>
+            <a target='_top' href='tag_var.html'>&lt;var&gt;</a>
+            <a target='_top' href='tag_video.html'>&lt;video&gt;</a>
+            <a target='_top' href='tag_wbr.html'>&lt;wbr&gt;</a>
+        </div>
+      <br><br>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar --><!--CONTENT Tags-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/html5_icon1.svg' alt='HTML5 Полный справочник тегов' class='w3-left w3-padding' title='Все HTML теги. W3Schools на русском' style='width: 90px'></a>
+
+<article>
+  <h1>HTML <span class='color_h1'>URL Кодирование</span>. Справочник</h1>
+  <div class='w3-clear nextprev'>
+    <a class='w3-left w3-btn' href='ref_html_dtd.html'>&#10094; Prev</a>
+    <a class='w3-right w3-btn' href='ref_language_codes.html'>Next &#10095;</a>
+  </div>
+  <hr>
+  <p class='intro'><strong>Кодирование URL</strong> преобразует символы в формат, который может быть передан через Интернет.</p>
+  <hr>
+
+  <h2>URL (Uniform Resource Locator) - Унифицированный указатель информационного ресурса</h2>
+  <p>Веб-браузеры запрашивают страницы с веб-серверов с помощью URL-адреса.</p>
+  <p>URL-адрес - это адрес веб-страницы, например: <b>https://www.w3schools.com.</b></p>
+  <hr>
+  <h2>Кодирование URL (кодирование с процентами)</h2>
+  <p>URL-адреса можно отправлять только через Интернет с помощью <a href='/charsets/ref_html_ascii.html'>набора символов ASCII</a>.</p>
+  <p>Поскольку URL-адреса часто содержат символы вне набора ASCII, URL-адрес должен быть преобразован в правильный формат ASCII.</p>
+  <p><strong>Кодирование URL</strong> заменяет опасные символы ASCII на '%', за которыми следуют две шестнадцятеричные цифры.</p>
+  <p>URL-адреса не могут содержать пробелы. Кодирование URL обычно заменяет пробел знаком плюс (+) или %20.</p>
+  <hr>
+
+  <h2>Попробуйте сами</h2>
+  <p>Если нажать кнопку Submit (&quot;Отправить&quot;) ниже, браузер закодирует входной URL-адрес прежде, чем он будет отправлен на сервер. Страница на сервере отобразит полученные данные.</p>
+
+  <form name='input' target='_blank' action='https://www.w3schools.com/action_page2.html' method='get'>
+    <input type='text' value='Hello Günter' name='text' size='30' />
+    <input type='submit' value='Submit' />
+  </form>
+
+  <p>Попробуйте ввести другие данные и опять нажмите Submit ('Отправить')</p>
+  <hr>
+
+  <h2>Функции кодирования URL-адресов</h2>
+  <p>В JavaScript, PHP и ASP существуют функции, которые можно использовать для URL-кодирования строки.</p>
+  <p>PHP имеет функцию rawurlencode(), а ASP имеет функцию Server.URLEncode().</p>
+  <p>В JavaScript можно использовать функцию <b>encodeURIComponent()</b>.</p>
+  <p>Нажмите кнопку 'URL Encode', чтобы увидеть, как функция JavaScript кодирует текст.</p>
+
+  <input type='text' name='txt' id='txt' value='Hello Günter' size='30' />
+  <input type='button' value='URL Encode' onclick='urlencode()' />
+  <div id='encodingresult'></div>
+  <p><b>Примечание: </b>Функция JavaScript кодирует пробел как %20.</p>
+  <hr>
+
+  <h2>ASCII Кодировки. Справочник</h2>
+  <p>Ваш браузер будет кодировать входящие данные в соответствие набору символов, который используется на веб-странице.</p>
+  <p>Типичный (стандартный) набор символов (кодировка) в HTML5 - это UTF-8.</p>
+
+  <table class='w3-table-all notranslate'>
+    <tr>
+      <th style='width:33%'>Символ</th>
+      <th style='width:33%'>Из Windows-1252</th>
+      <th style='width:34%'>Из UTF-8</th>
+    </tr>
+    <tr>
+      <td>space</td>
+      <td>%20</td>
+      <td>%20</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>%21</td>
+      <td>%21</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%22</td>
+      <td>%22</td>
+    </tr>
+    <tr>
+      <td>#</td>
+      <td>%23</td>
+      <td>%23</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>%24</td>
+      <td>%24</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>%25</td>
+      <td>%25</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>%26</td>
+      <td>%26</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%27</td>
+      <td>%27</td>
+    </tr>
+    <tr>
+      <td>(</td>
+      <td>%28</td>
+      <td>%28</td>
+    </tr>
+    <tr>
+      <td>)</td>
+      <td>%29</td>
+      <td>%29</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>%2A</td>
+      <td>%2A</td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>%2B</td>
+      <td>%2B</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>%2C</td>
+      <td>%2C</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>%2D</td>
+      <td>%2D</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>%2E</td>
+      <td>%2E</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>%2F</td>
+      <td>%2F</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>%30</td>
+      <td>%30</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>%31</td>
+      <td>%31</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>%32</td>
+      <td>%32</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>%33</td>
+      <td>%33</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>%34</td>
+      <td>%34</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>%35</td>
+      <td>%35</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>%36</td>
+      <td>%36</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>%37</td>
+      <td>%37</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>%38</td>
+      <td>%38</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>%39</td>
+      <td>%39</td>
+    </tr>
+    <tr>
+      <td>:</td>
+      <td>%3A</td>
+      <td>%3A</td>
+    </tr>
+    <tr>
+      <td>;</td>
+      <td>%3B</td>
+      <td>%3B</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>%3C</td>
+      <td>%3C</td>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>%3D</td>
+      <td>%3D</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>%3E</td>
+      <td>%3E</td>
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>%3F</td>
+      <td>%3F</td>
+    </tr>
+    <tr>
+      <td>@</td>
+      <td>%40</td>
+      <td>%40</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>%41</td>
+      <td>%41</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>%42</td>
+      <td>%42</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>%43</td>
+      <td>%43</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>%44</td>
+      <td>%44</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>%45</td>
+      <td>%45</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>%46</td>
+      <td>%46</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>%47</td>
+      <td>%47</td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>%48</td>
+      <td>%48</td>
+    </tr>
+    <tr>
+      <td>I</td>
+      <td>%49</td>
+      <td>%49</td>
+    </tr>
+    <tr>
+      <td>J</td>
+      <td>%4A</td>
+      <td>%4A</td>
+    </tr>
+    <tr>
+      <td>K</td>
+      <td>%4B</td>
+      <td>%4B</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>%4C</td>
+      <td>%4C</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>%4D</td>
+      <td>%4D</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>%4E</td>
+      <td>%4E</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>%4F</td>
+      <td>%4F</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>%50</td>
+      <td>%50</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>%51</td>
+      <td>%51</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>%52</td>
+      <td>%52</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>%53</td>
+      <td>%53</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>%54</td>
+      <td>%54</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>%55</td>
+      <td>%55</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>%56</td>
+      <td>%56</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>%57</td>
+      <td>%57</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>%58</td>
+      <td>%58</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>%59</td>
+      <td>%59</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>%5A</td>
+      <td>%5A</td>
+    </tr>
+    <tr>
+      <td>[</td>
+      <td>%5B</td>
+      <td>%5B</td>
+    </tr>
+    <tr>
+      <td>\</td>
+      <td>%5C</td>
+      <td>%5C</td>
+    </tr>
+    <tr>
+      <td>]</td>
+      <td>%5D</td>
+      <td>%5D</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td>%5E</td>
+      <td>%5E</td>
+    </tr>
+    <tr>
+      <td>_</td>
+      <td>%5F</td>
+      <td>%5F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%60</td>
+      <td>%60</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>%61</td>
+      <td>%61</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>%62</td>
+      <td>%62</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>%63</td>
+      <td>%63</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>%64</td>
+      <td>%64</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>%65</td>
+      <td>%65</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>%66</td>
+      <td>%66</td>
+    </tr>
+    <tr>
+      <td>g</td>
+      <td>%67</td>
+      <td>%67</td>
+    </tr>
+    <tr>
+      <td>h</td>
+      <td>%68</td>
+      <td>%68</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>%69</td>
+      <td>%69</td>
+    </tr>
+    <tr>
+      <td>j</td>
+      <td>%6A</td>
+      <td>%6A</td>
+    </tr>
+    <tr>
+      <td>k</td>
+      <td>%6B</td>
+      <td>%6B</td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>%6C</td>
+      <td>%6C</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>%6D</td>
+      <td>%6D</td>
+    </tr>
+    <tr>
+      <td>n</td>
+      <td>%6E</td>
+      <td>%6E</td>
+    </tr>
+    <tr>
+      <td>o</td>
+      <td>%6F</td>
+      <td>%6F</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>%70</td>
+      <td>%70</td>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>%71</td>
+      <td>%71</td>
+    </tr>
+    <tr>
+      <td>r</td>
+      <td>%72</td>
+      <td>%72</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>%73</td>
+      <td>%73</td>
+    </tr>
+    <tr>
+      <td>t</td>
+      <td>%74</td>
+      <td>%74</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>%75</td>
+      <td>%75</td>
+    </tr>
+    <tr>
+      <td>v</td>
+      <td>%76</td>
+      <td>%76</td>
+    </tr>
+    <tr>
+      <td>w</td>
+      <td>%77</td>
+      <td>%77</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>%78</td>
+      <td>%78</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>%79</td>
+      <td>%79</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>%7A</td>
+      <td>%7A</td>
+    </tr>
+    <tr>
+      <td>{</td>
+      <td>%7B</td>
+      <td>%7B</td>
+    </tr>
+    <tr>
+      <td>|</td>
+      <td>%7C</td>
+      <td>%7C</td>
+    </tr>
+    <tr>
+      <td>}</td>
+      <td>%7D</td>
+      <td>%7D</td>
+    </tr>
+    <tr>
+      <td>~</td>
+      <td>%7E</td>
+      <td>%7E</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%7F</td>
+      <td>%7F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%80</td>
+      <td>%E2%82%AC</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%81</td>
+      <td>%81</td>
+    </tr>
+    <tr>
+      <td>‚</td>
+      <td>%82</td>
+      <td>%E2%80%9A</td>
+    </tr>
+    <tr>
+      <td>ƒ</td>
+      <td>%83</td>
+      <td>%C6%92</td>
+    </tr>
+    <tr>
+      <td>„</td>
+      <td>%84</td>
+      <td>%E2%80%9E</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>%85</td>
+      <td>%E2%80%A6</td>
+    </tr>
+    <tr>
+      <td>†</td>
+      <td>%86</td>
+      <td>%E2%80%A0</td>
+    </tr>
+    <tr>
+      <td>‡</td>
+      <td>%87</td>
+      <td>%E2%80%A1</td>
+    </tr>
+    <tr>
+      <td>ˆ</td>
+      <td>%88</td>
+      <td>%CB%86</td>
+    </tr>
+    <tr>
+      <td>‰</td>
+      <td>%89</td>
+      <td>%E2%80%B0</td>
+    </tr>
+    <tr>
+      <td>Š</td>
+      <td>%8A</td>
+      <td>%C5%A0</td>
+    </tr>
+    <tr>
+      <td>‹</td>
+      <td>%8B</td>
+      <td>%E2%80%B9</td>
+    </tr>
+    <tr>
+      <td>Œ</td>
+      <td>%8C</td>
+      <td>%C5%92</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%8D</td>
+      <td>%C5%8D</td>
+    </tr>
+    <tr>
+      <td>Ž</td>
+      <td>%8E</td>
+      <td>%C5%BD</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%8F</td>
+      <td>%8F</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%90</td>
+      <td>%C2%90</td>
+    </tr>
+    <tr>
+      <td>‘</td>
+      <td>%91</td>
+      <td>%E2%80%98</td>
+    </tr>
+    <tr>
+      <td>’</td>
+      <td>%92</td>
+      <td>%E2%80%99</td>
+    </tr>
+    <tr>
+      <td>“</td>
+      <td>%93</td>
+      <td>%E2%80%9C</td>
+    </tr>
+    <tr>
+      <td>”</td>
+      <td>%94</td>
+      <td>%E2%80%9D</td>
+    </tr>
+    <tr>
+      <td>•</td>
+      <td>%95</td>
+      <td>%E2%80%A2</td>
+    </tr>
+    <tr>
+      <td>–</td>
+      <td>%96</td>
+      <td>%E2%80%93</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td>%97</td>
+      <td>%E2%80%94</td>
+    </tr>
+    <tr>
+      <td>˜</td>
+      <td>%98</td>
+      <td>%CB%9C</td>
+    </tr>
+    <tr>
+      <td>™</td>
+      <td>%99</td>
+      <td>%E2%84</td>
+    </tr>
+    <tr>
+      <td>š</td>
+      <td>%9A</td>
+      <td>%C5%A1</td>
+    </tr>
+    <tr>
+      <td>›</td>
+      <td>%9B</td>
+      <td>%E2%80</td>
+    </tr>
+    <tr>
+      <td>œ</td>
+      <td>%9C</td>
+      <td>%C5%93</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%9D</td>
+      <td>%9D</td>
+    </tr>
+    <tr>
+      <td>ž</td>
+      <td>%9E</td>
+      <td>%C5%BE</td>
+    </tr>
+    <tr>
+      <td>Ÿ</td>
+      <td>%9F</td>
+      <td>%C5%B8</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%A0</td>
+      <td>%C2%A0</td>
+    </tr>
+    <tr>
+      <td>¡</td>
+      <td>%A1</td>
+      <td>%C2%A1</td>
+    </tr>
+    <tr>
+      <td>¢</td>
+      <td>%A2</td>
+      <td>%C2%A2</td>
+    </tr>
+    <tr>
+      <td>£</td>
+      <td>%A3</td>
+      <td>%C2%A3</td>
+    </tr>
+    <tr>
+      <td>¤</td>
+      <td>%A4</td>
+      <td>%C2%A4</td>
+    </tr>
+    <tr>
+      <td>¥</td>
+      <td>%A5</td>
+      <td>%C2%A5</td>
+    </tr>
+    <tr>
+      <td>¦</td>
+      <td>%A6</td>
+      <td>%C2%A6</td>
+    </tr>
+    <tr>
+      <td>§</td>
+      <td>%A7</td>
+      <td>%C2%A7</td>
+    </tr>
+    <tr>
+      <td>¨</td>
+      <td>%A8</td>
+      <td>%C2%A8</td>
+    </tr>
+    <tr>
+      <td>©</td>
+      <td>%A9</td>
+      <td>%C2%A9</td>
+    </tr>
+    <tr>
+      <td>ª</td>
+      <td>%AA</td>
+      <td>%C2%AA</td>
+    </tr>
+    <tr>
+      <td>«</td>
+      <td>%AB</td>
+      <td>%C2%AB</td>
+    </tr>
+    <tr>
+      <td>¬</td>
+      <td>%AC</td>
+      <td>%C2%AC</td>
+    </tr>
+    <tr>
+      <td>­</td>
+      <td>%AD</td>
+      <td>%C2%AD</td>
+    </tr>
+    <tr>
+      <td>®</td>
+      <td>%AE</td>
+      <td>%C2%AE</td>
+    </tr>
+    <tr>
+      <td>¯</td>
+      <td>%AF</td>
+      <td>%C2%AF</td>
+    </tr>
+    <tr>
+      <td>°</td>
+      <td>%B0</td>
+      <td>%C2%B0</td>
+    </tr>
+    <tr>
+      <td>±</td>
+      <td>%B1</td>
+      <td>%C2%B1</td>
+    </tr>
+    <tr>
+      <td>²</td>
+      <td>%B2</td>
+      <td>%C2%B2</td>
+    </tr>
+    <tr>
+      <td>³</td>
+      <td>%B3</td>
+      <td>%C2%B3</td>
+    </tr>
+    <tr>
+      <td>´</td>
+      <td>%B4</td>
+      <td>%C2%B4</td>
+    </tr>
+    <tr>
+      <td>µ</td>
+      <td>%B5</td>
+      <td>%C2%B5</td>
+    </tr>
+    <tr>
+      <td>¶</td>
+      <td>%B6</td>
+      <td>%C2%B6</td>
+    </tr>
+    <tr>
+      <td>·</td>
+      <td>%B7</td>
+      <td>%C2%B7</td>
+    </tr>
+    <tr>
+      <td>¸</td>
+      <td>%B8</td>
+      <td>%C2%B8</td>
+    </tr>
+    <tr>
+      <td>¹</td>
+      <td>%B9</td>
+      <td>%C2%B9</td>
+    </tr>
+    <tr>
+      <td>º</td>
+      <td>%BA</td>
+      <td>%C2%BA</td>
+    </tr>
+    <tr>
+      <td>»</td>
+      <td>%BB</td>
+      <td>%C2%BB</td>
+    </tr>
+    <tr>
+      <td>¼</td>
+      <td>%BC</td>
+      <td>%C2%BC</td>
+    </tr>
+    <tr>
+      <td>½</td>
+      <td>%BD</td>
+      <td>%C2%BD</td>
+    </tr>
+    <tr>
+      <td>¾</td>
+      <td>%BE</td>
+      <td>%C2%BE</td>
+    </tr>
+    <tr>
+      <td>¿</td>
+      <td>%BF</td>
+      <td>%C2%BF</td>
+    </tr>
+    <tr>
+      <td>À</td>
+      <td>%C0</td>
+      <td>%C3%80</td>
+    </tr>
+    <tr>
+      <td>Á</td>
+      <td>%C1</td>
+      <td>%C3%81</td>
+    </tr>
+    <tr>
+      <td>Â</td>
+      <td>%C2</td>
+      <td>%C3%82</td>
+    </tr>
+    <tr>
+      <td>Ã</td>
+      <td>%C3</td>
+      <td>%C3%83</td>
+    </tr>
+    <tr>
+      <td>Ä</td>
+      <td>%C4</td>
+      <td>%C3%84</td>
+    </tr>
+    <tr>
+      <td>Å</td>
+      <td>%C5</td>
+      <td>%C3%85</td>
+    </tr>
+    <tr>
+      <td>Æ</td>
+      <td>%C6</td>
+      <td>%C3%86</td>
+    </tr>
+    <tr>
+      <td>Ç</td>
+      <td>%C7</td>
+      <td>%C3%87</td>
+    </tr>
+    <tr>
+      <td>È</td>
+      <td>%C8</td>
+      <td>%C3%88</td>
+    </tr>
+    <tr>
+      <td>É</td>
+      <td>%C9</td>
+      <td>%C3%89</td>
+    </tr>
+    <tr>
+      <td>Ê</td>
+      <td>%CA</td>
+      <td>%C3%8A</td>
+    </tr>
+    <tr>
+      <td>Ë</td>
+      <td>%CB</td>
+      <td>%C3%8B</td>
+    </tr>
+    <tr>
+      <td>Ì</td>
+      <td>%CC</td>
+      <td>%C3%8C</td>
+    </tr>
+    <tr>
+      <td>Í</td>
+      <td>%CD</td>
+      <td>%C3%8D</td>
+    </tr>
+    <tr>
+      <td>Î</td>
+      <td>%CE</td>
+      <td>%C3%8E</td>
+    </tr>
+    <tr>
+      <td>Ï</td>
+      <td>%CF</td>
+      <td>%C3%8F</td>
+    </tr>
+    <tr>
+      <td>Ð</td>
+      <td>%D0</td>
+      <td>%C3%90</td>
+    </tr>
+    <tr>
+      <td>Ñ</td>
+      <td>%D1</td>
+      <td>%C3%91</td>
+    </tr>
+    <tr>
+      <td>Ò</td>
+      <td>%D2</td>
+      <td>%C3%92</td>
+    </tr>
+    <tr>
+      <td>Ó</td>
+      <td>%D3</td>
+      <td>%C3%93</td>
+    </tr>
+    <tr>
+      <td>Ô</td>
+      <td>%D4</td>
+      <td>%C3%94</td>
+    </tr>
+    <tr>
+      <td>Õ</td>
+      <td>%D5</td>
+      <td>%C3%95</td>
+    </tr>
+    <tr>
+      <td>Ö</td>
+      <td>%D6</td>
+      <td>%C3%96</td>
+    </tr>
+    <tr>
+      <td>×</td>
+      <td>%D7</td>
+      <td>%C3%97</td>
+    </tr>
+    <tr>
+      <td>Ø</td>
+      <td>%D8</td>
+      <td>%C3%98</td>
+    </tr>
+    <tr>
+      <td>Ù</td>
+      <td>%D9</td>
+      <td>%C3%99</td>
+    </tr>
+    <tr>
+      <td>Ú</td>
+      <td>%DA</td>
+      <td>%C3%9A</td>
+    </tr>
+    <tr>
+      <td>Û</td>
+      <td>%DB</td>
+      <td>%C3%9B</td>
+    </tr>
+    <tr>
+      <td>Ü</td>
+      <td>%DC</td>
+      <td>%C3%9C</td>
+    </tr>
+    <tr>
+      <td>Ý</td>
+      <td>%DD</td>
+      <td>%C3%9D</td>
+    </tr>
+    <tr>
+      <td>Þ</td>
+      <td>%DE</td>
+      <td>%C3%9E</td>
+    </tr>
+    <tr>
+      <td>ß</td>
+      <td>%DF</td>
+      <td>%C3%9F</td>
+    </tr>
+    <tr>
+      <td>à</td>
+      <td>%E0</td>
+      <td>%C3%A0</td>
+    </tr>
+    <tr>
+      <td>á</td>
+      <td>%E1</td>
+      <td>%C3%A1</td>
+    </tr>
+    <tr>
+      <td>â</td>
+      <td>%E2</td>
+      <td>%C3%A2</td>
+    </tr>
+    <tr>
+      <td>ã</td>
+      <td>%E3</td>
+      <td>%C3%A3</td>
+    </tr>
+    <tr>
+      <td>ä</td>
+      <td>%E4</td>
+      <td>%C3%A4</td>
+    </tr>
+    <tr>
+      <td>å</td>
+      <td>%E5</td>
+      <td>%C3%A5</td>
+    </tr>
+    <tr>
+      <td>æ</td>
+      <td>%E6</td>
+      <td>%C3%A6</td>
+    </tr>
+    <tr>
+      <td>ç</td>
+      <td>%E7</td>
+      <td>%C3%A7</td>
+    </tr>
+    <tr>
+      <td>è</td>
+      <td>%E8</td>
+      <td>%C3%A8</td>
+    </tr>
+    <tr>
+      <td>é</td>
+      <td>%E9</td>
+      <td>%C3%A9</td>
+    </tr>
+    <tr>
+      <td>ê</td>
+      <td>%EA</td>
+      <td>%C3%AA</td>
+    </tr>
+    <tr>
+      <td>ë</td>
+      <td>%EB</td>
+      <td>%C3%AB</td>
+    </tr>
+    <tr>
+      <td>ì</td>
+      <td>%EC</td>
+      <td>%C3%AC</td>
+    </tr>
+    <tr>
+      <td>í</td>
+      <td>%ED</td>
+      <td>%C3%AD</td>
+    </tr>
+    <tr>
+      <td>î</td>
+      <td>%EE</td>
+      <td>%C3%AE</td>
+    </tr>
+    <tr>
+      <td>ï</td>
+      <td>%EF</td>
+      <td>%C3%AF</td>
+    </tr>
+    <tr>
+      <td>ð</td>
+      <td>%F0</td>
+      <td>%C3%B0</td>
+    </tr>
+    <tr>
+      <td>ñ</td>
+      <td>%F1</td>
+      <td>%C3%B1</td>
+    </tr>
+    <tr>
+      <td>ò</td>
+      <td>%F2</td>
+      <td>%C3%B2</td>
+    </tr>
+    <tr>
+      <td>ó</td>
+      <td>%F3</td>
+      <td>%C3%B3</td>
+    </tr>
+    <tr>
+      <td>ô</td>
+      <td>%F4</td>
+      <td>%C3%B4</td>
+    </tr>
+    <tr>
+      <td>õ</td>
+      <td>%F5</td>
+      <td>%C3%B5</td>
+    </tr>
+    <tr>
+      <td>ö</td>
+      <td>%F6</td>
+      <td>%C3%B6</td>
+    </tr>
+    <tr>
+      <td>÷</td>
+      <td>%F7</td>
+      <td>%C3%B7</td>
+    </tr>
+    <tr>
+      <td>ø</td>
+      <td>%F8</td>
+      <td>%C3%B8</td>
+    </tr>
+    <tr>
+      <td>ù</td>
+      <td>%F9</td>
+      <td>%C3%B9</td>
+    </tr>
+    <tr>
+      <td>ú</td>
+      <td>%FA</td>
+      <td>%C3%BA</td>
+    </tr>
+    <tr>
+      <td>û</td>
+      <td>%FB</td>
+      <td>%C3%BB</td>
+    </tr>
+    <tr>
+      <td>ü</td>
+      <td>%FC</td>
+      <td>%C3%BC</td>
+    </tr>
+    <tr>
+      <td>ý</td>
+      <td>%FD</td>
+      <td>%C3%BD</td>
+    </tr>
+    <tr>
+      <td>þ</td>
+      <td>%FE</td>
+      <td>%C3%BE</td>
+    </tr>
+    <tr>
+      <td>ÿ</td>
+      <td>%FF</td>
+      <td>%C3%BF</td>
+    </tr>
+  </table>
+
+  <hr>
+  <h2>Справочник URL кодировок</h2>
+  <p>Набор символов ASCII <strong>%00-%1F</strong> сначала разрабатывался для управления аппаратными устройствами.</p>
+  <p>Наборы символов не имеют никакого отношения к URL-адресам.</p>
+
+  <table class='w3-table-all notranslate'>
+    <tr>
+      <th>ASCII Character</th>
+      <th>Description</th>
+      <th>URL-encoding</th>
+    </tr>
+    <tr>
+      <td>NUL</td>
+      <td>null character</td>
+      <td>%00</td>
+    </tr>
+    <tr>
+      <td>SOH</td>
+      <td>start of header</td>
+      <td>%01</td>
+    </tr>
+    <tr>
+      <td>STX</td>
+      <td>start of text</td>
+      <td>%02</td>
+    </tr>
+    <tr>
+      <td>ETX</td>
+      <td>end of text</td>
+      <td>%03</td>
+    </tr>
+    <tr>
+      <td>EOT</td>
+      <td>end of transmission</td>
+      <td>%04</td>
+    </tr>
+    <tr>
+      <td>ENQ</td>
+      <td>enquiry</td>
+      <td>%05</td>
+    </tr>
+    <tr>
+      <td>ACK</td>
+      <td>acknowledge</td>
+      <td>%06</td>
+    </tr>
+    <tr>
+      <td>BEL</td>
+      <td>bell (ring)</td>
+      <td>%07</td>
+    </tr>
+    <tr>
+      <td>BS</td>
+      <td>backspace</td>
+      <td>%08</td>
+    </tr>
+    <tr>
+      <td>HT</td>
+      <td>horizontal tab</td>
+      <td>%09</td>
+    </tr>
+    <tr>
+      <td>LF</td>
+      <td>line feed</td>
+      <td>%0A</td>
+    </tr>
+    <tr>
+      <td>VT</td>
+      <td>vertical tab</td>
+      <td>%0B</td>
+    </tr>
+    <tr>
+      <td>FF</td>
+      <td>form feed</td>
+      <td>%0C</td>
+    </tr>
+    <tr>
+      <td>CR</td>
+      <td>carriage return</td>
+      <td>%0D</td>
+    </tr>
+    <tr>
+      <td>SO</td>
+      <td>shift out</td>
+      <td>%0E</td>
+    </tr>
+    <tr>
+      <td>SI</td>
+      <td>shift in</td>
+      <td>%0F</td>
+    </tr>
+    <tr>
+      <td>DLE</td>
+      <td>data link escape</td>
+      <td>%10</td>
+    </tr>
+    <tr>
+      <td>DC1</td>
+      <td>device control 1</td>
+      <td>%11</td>
+    </tr>
+    <tr>
+      <td>DC2</td>
+      <td>device control 2</td>
+      <td>%12</td>
+    </tr>
+    <tr>
+      <td>DC3</td>
+      <td>device control 3</td>
+      <td>%13</td>
+    </tr>
+    <tr>
+      <td>DC4</td>
+      <td>device control 4</td>
+      <td>%14</td>
+    </tr>
+    <tr>
+      <td>NAK</td>
+      <td>negative acknowledge</td>
+      <td>%15</td>
+    </tr>
+    <tr>
+      <td>SYN</td>
+      <td>synchronize</td>
+      <td>%16</td>
+    </tr>
+    <tr>
+      <td>ETB</td>
+      <td>end transmission block</td>
+      <td>%17</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>cancel</td>
+      <td>%18</td>
+    </tr>
+    <tr>
+      <td>EM</td>
+      <td>end of medium</td>
+      <td>%19</td>
+    </tr>
+    <tr>
+      <td>SUB</td>
+      <td>substitute</td>
+      <td>%1A</td>
+    </tr>
+    <tr>
+      <td>ESC</td>
+      <td>escape</td>
+      <td>%1B</td>
+    </tr>
+    <tr>
+      <td>FS</td>
+      <td>file separator</td>
+      <td>%1C</td>
+    </tr>
+    <tr>
+      <td>GS</td>
+      <td>group separator</td>
+      <td>%1D</td>
+    </tr>
+    <tr>
+      <td>RS</td>
+      <td>record separator</td>
+      <td>%1E</td>
+    </tr>
+    <tr>
+      <td>US</td>
+      <td>unit separator</td>
+      <td>%1F</td>
+    </tr>
+  </table>
+
+  <hr>
+  <div class='w3-clear nextprev'>
+    <a class='w3-left w3-btn' href='ref_html_dtd.html'>&#10094; Prev</a>
+    <a class='w3-right w3-btn' href='ref_language_codes.html'>Next &#10095;</a>
+  </div>
+</article>
+<div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ОБРАТНАЯ СВЯЗЬ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПЕЧАТЬ СТРАНИЦЫ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Связь с админом</h2>
+      <p>Если вы хотите сообщить об ошибке, а также внести предложение о работе сайта, добавить объявление или рекламу на сайт, не стесняйтесь отправить админу электронное письмо на email:</p>
+      <p>w3schoolsrus@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Учебники</h4>
+        <a href='../html/index.html'>HTML Учебник</a><br>
+        <a href='../css/index.html'>CSS Учебник</a><br>
+        <a href='../js/index.html'>JavaScript Учебник</a><br>
+        <a href='../sql/index.html'>SQL Учебник</a><br>
+        <a href='../python/index.html'>Python Учебник</a><br>
+        <a href='../php/index.html'>PHP Учебник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
+        <a href='../appml/index.html'>AppML Учебник</a><br>
+        <a href='../jquery/index.html'>jQuery Учебник</a><br>
+        <a href='../angular/index.html'>Angular Учебник</a><br>
+        <a href='../sass/index.html'>Sass Учебник</a><br>
+        <a href='../java/index.html'>Java Учебник</a><br>
+        <a href='../cpp/index.html'>C++ Учебник</a><br>
+        <a href='../cs/index.html'>C# Учебник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Справочники</h4>
+        <a href='../tags/index.html'>HTML Справочник</a><br>
+        <a href='../cssref/index.html'>CSS Справочник</a><br>
+        <a href='../jsref/index.html'>JavaScript Справочник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
+        <a href='../python/python_reference.html'>Python Справочник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
+        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Примеры</h4>
+        <a href='../html/html_examples.html'>HTML Примеры</a><br>
+        <a href='../css/css_examples.html'>CSS Примеры</a><br>
+        <a href='../js/js_examples.html'>JavaScript Примеры</a><br>
+        <a href='../sql/sql_examples.html'>SQL Примеры</a><br>
+        <a href='../python/python_examples.html'>Python Примеры</a><br>
+        <a href='../php/php_examples.html'>PHP Примеры</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Примеры</a><br>
+        <a href='../angular/angular_examples.html'>Angular Примеры</a><br>
+        <a href='../java/java_examples.html'>Java Примеры</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Примеры</a><br>
+        <a href='../cs/cs_examples.html'>C# Примеры</a><br>
+        <a href='../xml/xml_examples.html'>XML Примеры</a><br>
+        <a href='../howto/index.html'>Как сделать? Примеры</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб Сертификаты</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертификат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертификат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертификат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертификат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертификат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука о данных Сертификат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертификат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертификат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертификат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертификат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертификат</a><br>
+        <a href='../cert/career_tips.html'>Планирование карьеры</a><br>
+        <a href='../cert/career_cv.html'>Составление резюме</a><br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+  Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
+    Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
+    Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <!--GoogleAdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!--/GoogleAdSense-->
+</div>
+</div>
+<!--AdSense-auto-w3schoolsrus-->
+<script data-ad-client="ca-pub-4060216941760396" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--/AdSense-auto-w3schoolsrus-->
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'><title>Учебник по кибербезопасности. Веб-приложения. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='Веб-приложения. HTTP протокол. URL-адреса, параметры и схема запроса. HTTP Заголовки. HTTP глаголы. Коды ответа HTTP. Rest-сервисы. Сессии & Состояние. Виртуальные хосты. URL кодирование. JavaScript. Шифрование с помощью TLS. Учебник по кибербезопасности. Уроки для начинающих. W3Schools на русском'>
+
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Главная'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Учебник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Учебник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Учебник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Учебник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Учебник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>КАК СДЕЛАТЬ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Учебник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Учебник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Учебник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Учебник'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Выучить HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Выучить CSS</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Выучить W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Выучить Цвета</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Выучить Иконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Выучить Графику</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Выучить Как сделать</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Выучить Sass</a>
+
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Искусственный интеллект</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index.html">Выучить ИИ</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                        <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Выучить JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Выучить jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Выучить React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Выучить AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Выучить JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Выучить AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Выучить W3.JS</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Выучить Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Выучить Java</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Выучить C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Выучить C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Выучить R</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Выучить SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Выучить MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Выучить PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Выучить ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Выучить Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Выучить Git</a>
+
+                    <h3>Веб-строительство</h3>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблоны</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../cert/index.html'>Веб-сертификаты</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-разработка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кибербезопасность</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступность</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Статистика</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Проверить скорость печати</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодовая игра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Искусственный интеллект</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Выучить ИИ</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                    <a class='w3-bar-item w3-button' href='../python/numpy/index.html'>Выучить NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../python/scipy/index.html'>Выучить SciPy</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Справочник тегов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Справочник цветов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Иконки Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Справочник</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Наборы символов</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Наборы символов</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Упражнения</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/numpy/numpy_exercises.html'>NumPy Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/pandas_exercises.html'>Pandas Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/scipy/scipy_exercises.html'>SciPy Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Упражнения</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Викторины</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/numpy/numpy_quiz.html' target='_top'>NumPy Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/pandas_quiz.html' target='_top'>Pandas Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/scipy/scipy_quiz.html' target='_top'>SciPy Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертификаты</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертификат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div class='w3-light-grey' id='leftmenuinnerinner'>
+            <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+            <h2 class='left'><span class='left_h2'>Кибербезопасность</span></h2>
+            <a target='_top' href='index.html'>CS Главная</a>
+            <a target='_top' href='cybersecurity_crime.html'>CS Киберпреступность</a>
+            <a target='_top' href='cybersecurity_money.html'>CS Угрозы получения денег</a>
+            <a target='_top' href='cybersecurity_dark_web.html'>CS Dark Web - Темная паутина</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>Сети</span></h2>
+            <a target='_top' href='cybersecurity_networking.html'>CS Основы работы в сети</a>
+            <a target='_top' href='cybersecurity_network_layer.html'>CS Сетевой уровень</a>
+            <a target='_top' href='cybersecurity_network_transport.html'>CS Сетевой транспорт</a>
+            <a target='_top' href='cybersecurity_firewalls.html'>CS Межсетевые экраны (файерволы)</a>
+            <a target='_top' href='cybersecurity_web_applications.html'>CS Веб-приложения</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>Кибератаки</span></h2>
+            <a target='_top' href='cybersecurity_mapping_port_scanning.html'>CS Сопоставление &amp;<br>Сканирование портов</a>
+            <a target='_top' href='cybersecurity_network_attacks.html'>CS Сетевые атаки</a>
+            <a target='_top' href='cybersecurity_web_applications_attacks.html'>CS Атаки на веб-приложения</a>
+            <a target='_top' href='cybersecurity_wifi_attacks.html'>CS WIFI атаки</a>
+            <a target='_top' href='cybersecurity_prenetration_testing.html'>CS Тестирование на проникновение &amp;<br>Социальная инженерия</a>
+            <a target='_top' href='cybersecurity_passwords.html'>CS Пароли</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>Киберзащита</span></h2>
+            <a target='_top' href='cybersecurity_security_operations.html'>CS Безопасность операций</a>
+            <a target='_top' href='cybersecurity_incident_response.html'>CS Реагирование на инцидент</a>
+            <br>
+            <a target='_top' href='cybersecurity_quiz.html'>CS Викторина</a>
+            <a target='_top' href='cybersecurity_exam.html'>CS Сертификат</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu sidebar --><!--CONTENT PHP-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../images/cybersecurity_logo.jpg' alt='Кибербезопасность. Уроки для начинающих' class='w3-left w3-padding' title='Кибербезопасность для начинающих. Учебник W3Schools на русском' style='width: 120px'></a>
+<article>
+    <h1>Кибербезопасность. <span class="color_h1">Веб-приложения</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="cybersecurity_firewalls.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="cybersecurity_mapping_port_scanning.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Веб-приложения</strong> являются неотъемлемой частью почти всего, что мы делаем, будь то доступ в Интернет или удаленное управление вашей газонокосилкой. В этом вводном классе мы рассмотрим <strong>основы безопасности веб-приложений</strong>.</p>
+    <hr>
+
+    <h2>HTTP протокол</h2>
+    <p>HTTP - это протокол-носитель, который позволяет браузерам и приложениям получать такой контент, как HTML (язык гипертекстовой разметки), CSS (каскадные таблицы стилей), изображения и видео.</p>
+    <hr>
+
+    <h2>URL-адреса, параметры и схема запроса</h2>
+    <p>Для доступа к веб-приложению мы используем URL-адрес (Унифицированный указатель ресурсов), например: https://www.google.com/search?q=w3schools+cyber+security&amp;ie=UTF-8</p>
+    <p>URL-адрес google.com содержит домен, скрипт, к которому осуществляется доступ, и параметры запроса.</p>
+    <p>Скрипт, к которому мы обращаемся, называется /search. Символ / указывает, что он содержится в верхнем каталоге на сервере, где обслуживаются файлы. Символ ? указывает входные параметры скрипта, а символ &amp; разграничивает различные входные параметры. В данном URL входные параметры:</p>
+    <ul>
+        <li>q со значением кибербезопасности w3schools</li>
+        <li>т.е. со значением UTF-8</li>
+    </ul>
+    <p>Значение этих входных данных определяется приложением веб-серверов.</p>
+    <p>Иногда вы увидите просто / или /? указывающие, что скрипт был настроен для обслуживания ответа на этот адрес. Обычно этот скрипт представляет собой что-то вроде индексного файла, который улавливает все запросы, если не указан конкретный скрипт.</p>
+    <p>Схема - это то, что определяет используемый протокол. В нашем случае это первая часть URL: https. Когда схема не определена в URL-адресе, это позволяет приложению решать, что использовать. Схемы могут включать в себя целый ряд протоколов, таких как:</p>
+    <ul>
+        <li>HTTP</li>
+        <li>HTTPS</li>
+        <li>FTP</li>
+        <li>SSH</li>
+        <li>SMB</li>
+    </ul>
+    <hr>
+
+    <h2>HTTP Заголовки</h2>
+    <p>Протокол HTTP использует множество заголовков, некоторые из которых настраиваются для приложения, а другие хорошо определены и приняты технологией.</p>
+    <p>Пример запроса к http://google.com</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate">
+            GET /search?q=w3schools+cyber+security&amp;ie=UTF-8 HTTP/1.1<br>
+            Host: google.com<br>
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36<br>
+            Accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8<br>
+            Referer: https://w3schools.com/<br>
+            Accept-Encoding: gzip, deflate<br>
+            Cookie: cookie1=value1;cookie2=value2<br>
+        </div>
+    </div>
+    <p>Заголовок запроса указывает, что клиент хочет выполнить на целевом веб-сервере. Он также содержит информацию о том, принимает ли он сжатие, к какому типу клиента обращается и какие файлы cookie сервер сказал клиенту предоставить. Заголовки HTTP-запроса объясняются здесь:</p>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th>Заголовок</th>
+            <th>Объяснение</th>
+        </tr>
+        <tr>
+            <td>GET /search... HTTP/1.1</td>
+            <td>GET - это глагол, который мы используем для доступа к приложению. Подробно объяснено в разделе HTTP-глаголы. Мы также видим путь и параметры запроса и версию HTTP.</td>
+        </tr>
+        <tr>
+            <td>Host: google.com</td>
+            <td>Этот заголовок указывает целевую службу, которую мы хотим использовать. Сервер может иметь несколько сервисов, как описано в разделе VHOSTS.</td>
+        </tr>
+        <tr>
+            <td>User-Agent</td>
+            <td>Клиентское приложение, которым в большинстве случаев является браузер, может идентифицировать себя по версии, движку и операционной системе.</td>
+        </tr>
+        <tr>
+            <td>Accept</td>
+            <td>Определяет, какой контент может принимать клиент</td>
+        </tr>
+        <tr>
+            <td>Referer: https://w3schools.com/</td>
+            <td>Если клиент кликнул ссылку с другого веб-сайта, используется заголовок Referer, чтобы указать, откуда пришел клиент.</td>
+        </tr>
+        <tr>
+            <td>Accept-Encoding: gzip, deflate</td>
+            <td>Можно ли сжать или закодировать контент? Это определяет, что мы можем принять</td>
+        </tr>
+        <tr>
+            <td>Cookie</td>
+            <td>Файлы cookie - это значения, отправленные сервером в предыдущих запросах, которые клиент отправляет обратно в каждом последующем запросе. Подробно объяснено в разделе Состояние</td>
+        </tr>
+    </table>
+    <p>На этот запрос сервер ответит заголовками и содержимым. Примеры заголовков показаны ниже:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate">
+            HTTP/1.1 200 OK<br>
+            Content-Type: text/html<br>
+            Set-Cookie: &lt;cookie value&gt;<br>
+            &lt;website content&gt;
+        </div></div>
+
+    <p>Заголовок и содержимое ответа - вот что определяет то, что мы увидим в браузере. Заголовки ответа HTTP объясняются следующим образом:</p>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th>Заголовок</th>
+            <th>Объяснение</th>
+        </tr>
+        <tr>
+            <td>HTTP/1.1 200 OK</td>
+            <td>Код ответа HTTP. Подробно объяснено в разделе &quot;Коды ответа HTTP&quot;.</td>
+        </tr>
+        <tr>
+            <td>Content-Type: text/html</td>
+            <td>Задает тип возвращаемого содержимого, например HTML, JSON или XML</td>
+        </tr>
+        <tr>
+            <td>Set-Cookie:</td>
+            <td>Любые особые значения, которые клиент должен запомнить и вернуть в следующем запросе.</td>
+        </tr>
+    </table>
+        <hr>
+
+        <h2>HTTP глаголы</h2>
+        <p>При доступе к веб-приложению клиент получает инструкции о том, как отправлять данные в веб-приложение. Приложение принимает множество глаголов.</p>
+        <table class="w3-table-all notranslate">
+            <tr>
+                <th>!Verb</th>
+                <th>Используется для</th>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>Обычно используется для получения значений через параметры запроса</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>Используется для отправки данных в сценарий через значения в теле запроса, отправленного на веб-сервер. Обычно это включает создание, загрузку или отправку большого количества данных</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>Часто используется для загрузки или записи данных на веб-сервер</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>Укажите ресурс, который следует удалить</td>
+            </tr>
+            <tr>
+                <td>PATCH</td>
+                <td>Может использоваться для обновления ресурса новым значением</td>
+            </tr>
+        </table>
+            <p>Они используются, как того требует веб-приложение. Веб-сервисы Restful (REST) особенно хороши при использовании полного массива HTTP-глаголов для определения того, что следует делать на бэкэнде.</p>
+            <hr>
+
+            <h2>Коды ответа HTTP</h2>
+            <p>Приложение, работающее на веб-сервере, может отвечать разными кодами в зависимости от того, что произошло на стороне сервера. Перечислены общие коды ответов, которые веб-сервер будет выдавать клиенту, о которых должны знать специалисты по безопасности:</p>
+            <table class="w3-table-all notranslate">
+                <tr>
+                    <th>Код</th>
+                    <th>Объяснение</th>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Приложение вернулось нормально</td>
+                </tr>
+                <tr>
+                    <td>301</td>
+                    <td>Сервер просит клиента навсегда запомнить перенаправление в новое место, где клиент должен получить доступ</td>
+                </tr>
+                <tr>
+                    <td>302</td>
+                    <td>Временно перенаправить. Клиенту не нужно сохранять этот ответ</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>Клиент сделал неверный запрос</td>
+                </tr>
+                <tr>
+                    <td>403</td>
+                    <td>Клиенту не разрешен доступ к этому ресурсу. Требуется авторизация</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>Клиент попытался получить доступ к несуществующему ресурсу</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Ошибка сервера при попытке выполнить запрос</td>
+                </tr>
+            </table>
+            <hr>
+
+            <h2>REST</h2>
+            <p>Rest-сервисы, иногда называемые службами RESTful, в полной мере используют HTTP-глаголы и HTTP-коды ответа для облегчения использования веб-приложения. Службы RESTful часто используют части URL-адреса в качестве параметра запроса, чтобы определить, что происходит в веб-приложении. REST обычно используется API (&quot;Application Programming Interfaces&quot; - &quot;Интерфейсы прикладного программирования&quot;).</p>
+            <p>URL-адреса REST будут вызывать функции, основанные на различных элементах URL-адреса.</p>
+            <p>Пример URL-адреса REST: http://example.com/users/search/w3schools</p>
+            <p>Этот URL-адрес будет вызывать функциональность как часть URL-адреса вместо параметров запроса. Мы можем расшифровать URL как:</p>
+            <table class="w3-table-all notranslate">
+                <tr>
+                    <th>Параметр</th>
+                    <th>Комментарий</th>
+                </tr>
+                <tr>
+                    <td>users</td>
+                    <td>Доступ к пользовательской части функциональности</td>
+                </tr>
+                <tr>
+                    <td>search</td>
+                    <td>Доступ к функции поиска</td>
+                </tr>
+                <tr>
+                    <td>w3schools</td>
+                    <td>Пользователь для поиска</td>
+                </tr>
+            </table>
+            <hr>
+
+            <h2>Сессии &amp; Состояние</h2>
+            <p>Не существует встроенного способа для сервера идентифицировать возвращающегося посетителя в HTTP. Чтобы веб-сервер мог идентифицировать пользователя, секретное значение должно быть передано Клиенту и от него в каждом запросе. Обычно это делается с помощью файлов cookie в заголовках, однако распространены и другие способы, например, с помощью параметров GET и POST или других заголовков. Передача состояния через параметры GET не рекомендуется, поскольку такие параметры часто регистрируются на сервере или в посредниках, таких как прокси.</p>
+            <p><img src="../svg/img_http-sessions.svg" alt="HTTP Сессии" style="width:100%;max-width:1280px"></p>
+            <p>Вот несколько распространенных примеров файлов cookie, которые позволяют приложению на веб-сервере контролировать сеансы и состояние:</p>
+            <ul>
+                <li>PHPSESSID</li>
+                <li>JSESSIONID</li>
+                <li>ASP.NET_SessionID</li>
+            </ul>
+            <p>Эти значения представляют определенное состояние на сервере, часто называемое сеансом. Это состояние представляет такие вещи, как:</p>
+            <ul>
+                <li>Каким пользователем вы вошли в систему?</li>
+                <li>Привилегии и разрешения</li>
+            </ul>
+            <p>Важно, чтобы значение сессии, отправленное Клиенту, не могло быть легко угадано или иным образом идентифицировано другими. Если бы они могли, злоумышленник мог бы представить себя другими пользователями веб-приложения.</p>
+            <p>Состояние также можно сохранить на клиенте. При этом сервер отправляет все состояния клиенту и полагается на то, что клиент отправляет обратно все элементы. Такие реализации полагаются на шифрование для проверки целостности состояния, запрашиваемого клиентом. Примеры реализаций, использующих это, перечислены ниже:</p>
+            <ul>
+                <li>JWT ("JSON Web Tokens")</li>
+                <li>ASP.Net ViewState</li>
+            </ul>
+            <p>Вы используете файлы cookie, чтобы пройти этот курс! Вы можете проверить эти файлы cookie в своем веб-браузере, открыв инструменты разработчика. Это делается нажатием <code>F12</code> в браузере, открывающем окно инструментов разработчика. В этом окне вы сможете найти правильное место, где хранятся ваши файлы cookie.</p>
+            <p><img src="../images/img_web-developerconsole-cookies.png" alt="Консоль разработчика" style="width:100%;max-width:1280px"></p>
+            <p>В Google Chrome файлы cookie были идентифицированы на вкладке "Приложение" выше.</p>
+            <div class="w3-panel w3-note"><b>Примечание</b>: Можете ли вы догадаться, почему файлы cookie были замаскированы на скриншоте, чтобы вы не могли их прочитать?</div>
+            <hr>
+
+            <h2>Виртуальные хосты</h2>
+            <p>Один веб-сервер может обрабатывать множество приложений через виртуальные хосты, часто сокращенно Vhosts. Чтобы облегчить доступ к другим виртуальным хостам, веб-сервер обычно считывает заголовок хоста клиентского запроса и на основе этого значения отправляет запрос в правильное приложение.</p>
+            <p><img src="../svg/img_vhosts.svg" alt="Virtual Hosts" style="width:100%;max-width:1280px"></p>
+            <hr>
+
+            <h2>URL кодирование</h2>
+            <p>Чтобы приложение могло безопасно передавать контент между сервером и клиентом, некоторые символы должны быть закодированы, чтобы гарантировать, что они не влияют на протокол. Для сохранения целостности сообщений используется кодировка URL.</p>
+            <p>Кодировка URL заменяет небезопасные символы знаком % и двумя шестнадцатеричными цифрами. Например:</p>
+            <ul>
+                <li>Процент заменяется на %25</li>
+                <li>Пробел заменяется на %20</li>
+                <li>Кавычки заменены на %22</li>
+            </ul>
+            <p>CyberChef - отличный инструмент для анализа текста и выполнения таких операций, как декодирование URL. Вы можете попробовать его в своём браузере здесь: <a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener">https://gchq.github.io/CyberChef/</a></p>
+
+            <div class="w3-panel w3-note"><b>Примечание</b>: Поиграйте с Cyber Chef и посмотрите, сможете ли вы узнать, что содержится в следующем сообщении в символах, закодированных в URL: %48 %65 %6c %6c %6f %20 %64 %65 %61 %72 %20 %77 %33 %73 %63 %68 %6f %6f %6c %73 %20 %73 %74 %75 %64 %65 %6e %74 %2e %20 %48 %6f %70 %65 %20 %79 %6f %75 %20 %61 %72 %65 %20 %6c %65 %61 %72 %6e %69 %6e %67 %20 %73 %6f %6d %65 %74 %68 %69 %6e %67 %20 %74 %6f %64 %61 %79 %21</div>
+            <hr>
+
+            <h2>JavaScript</h2>
+            <p>Для поддержки динамического содержимого браузеры используют скриптовый язык JavaScript. Это позволяет разработчикам программировать решения, которые будут работать на клиенте, обеспечивая более интерактивный и &quot;живой&quot; веб-контент.</p>
+            <p>JavaScript также участвует во многих атаках на веб-приложения и клиентские приложения, такие как браузеры.</p>
+            <hr>
+
+            <h2>Шифрование с помощью TLS</h2>
+            <p>Протокол HTTP не поддерживает шифрование передаваемых данных, поэтому для поддержки шифрования добавляется оболочка HTTP. Это обозначается буквой S после HTTP, т.е. HTTPS.</p>
+            <p>Раньше использовалось шифрование SSL (&quot;Secure Sockets Layer&quot; - &quot;Уровень защищенных гнезд&quot;), но с тех пор оно устарело. Вместо этого для обеспечения шифрования обычно используется TLS (&quot;Transport Layer Security&quot; - &quot;Безопасность транспортного уровня&quot;).</p>
+            <hr>
+            <div class="w3-clear nextprev">
+                <a class="w3-left w3-btn" href="cybersecurity_firewalls.html">&#10094; Prev</a>
+                <a class="w3-right w3-btn" href="cybersecurity_mapping_port_scanning.html">Next &#10095;</a>
+            </div>
+</article>
+<div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ОБРАТНАЯ СВЯЗЬ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПЕЧАТЬ СТРАНИЦЫ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Связь с админом</h2>
+      <p>Если вы хотите сообщить об ошибке, а также внести предложение о работе сайта, добавить объявление или рекламу на сайт, не стесняйтесь отправить админу электронное письмо на email:</p>
+      <p>w3schoolsrus@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Учебники</h4>
+        <a href='../html/index.html'>HTML Учебник</a><br>
+        <a href='../css/index.html'>CSS Учебник</a><br>
+        <a href='../js/index.html'>JavaScript Учебник</a><br>
+        <a href='../sql/index.html'>SQL Учебник</a><br>
+        <a href='../python/index.html'>Python Учебник</a><br>
+        <a href='../php/index.html'>PHP Учебник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
+        <a href='../appml/index.html'>AppML Учебник</a><br>
+        <a href='../jquery/index.html'>jQuery Учебник</a><br>
+        <a href='../angular/index.html'>Angular Учебник</a><br>
+        <a href='../sass/index.html'>Sass Учебник</a><br>
+        <a href='../java/index.html'>Java Учебник</a><br>
+        <a href='../cpp/index.html'>C++ Учебник</a><br>
+        <a href='../cs/index.html'>C# Учебник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Справочники</h4>
+        <a href='../tags/index.html'>HTML Справочник</a><br>
+        <a href='../cssref/index.html'>CSS Справочник</a><br>
+        <a href='../jsref/index.html'>JavaScript Справочник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
+        <a href='../python/python_reference.html'>Python Справочник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
+        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Примеры</h4>
+        <a href='../html/html_examples.html'>HTML Примеры</a><br>
+        <a href='../css/css_examples.html'>CSS Примеры</a><br>
+        <a href='../js/js_examples.html'>JavaScript Примеры</a><br>
+        <a href='../sql/sql_examples.html'>SQL Примеры</a><br>
+        <a href='../python/python_examples.html'>Python Примеры</a><br>
+        <a href='../php/php_examples.html'>PHP Примеры</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Примеры</a><br>
+        <a href='../angular/angular_examples.html'>Angular Примеры</a><br>
+        <a href='../java/java_examples.html'>Java Примеры</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Примеры</a><br>
+        <a href='../cs/cs_examples.html'>C# Примеры</a><br>
+        <a href='../xml/xml_examples.html'>XML Примеры</a><br>
+        <a href='../howto/index.html'>Как сделать? Примеры</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб Сертификаты</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертификат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертификат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертификат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертификат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертификат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука о данных Сертификат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертификат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертификат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертификат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертификат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертификат</a><br>
+        <a href='../cert/career_tips.html'>Планирование карьеры</a><br>
+        <a href='../cert/career_cv.html'>Составление резюме</a><br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+  Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
+    Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
+    Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <!--GoogleAdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!--/GoogleAdSense-->
+</div>
+</div>
+<!--AdSense-auto-w3schoolsrus-->
+<script data-ad-client="ca-pub-4060216941760396" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--/AdSense-auto-w3schoolsrus-->
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

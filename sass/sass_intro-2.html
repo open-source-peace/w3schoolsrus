@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<title>Sass Учебник. Уроки для начинающих. W3Schools на русском</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Учебник по Sass. W3Schools на русском. Уроки онлайн для начинающих бесплатно'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../w3css/4/w3.css'>
+</head>
+
+<body>
+    <div class='w3-container top'>
+      <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.на русском</span></a>
+      <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">
+        ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
+      </div>
+    </div>
+
+<!--GoogleSearch-->
+<div id='googleSearch' style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;'>
+<script async src='https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc'>
+</script>
+<div class='gcse-search'></div>
+</div><!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+<div style="overflow:auto;">
+  <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+    <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+    <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../default.html' title='Главная'></a>
+    <a class='w3-bar-item w3-button' href='../html/default.html' title='HTML Учебник'>HTML</a>
+    <a class='w3-bar-item w3-button' href='../css/default.html' title='CSS Учебник'>CSS</a>
+    <a class='w3-bar-item w3-button' href='../js/default.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+    <a class='w3-bar-item w3-button' href='../sql/default.html' title='SQL Учебник'>SQL</a>
+    <a class='w3-bar-item w3-button' href='../python/default.html' title='Python Учебник'>PYTHON</a>
+    <a class='w3-bar-item w3-button' href='../php/default.html' title='PHP Учебник'>PHP</a>
+    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+    <a class='w3-bar-item w3-button' href='../howto/default.html' title='Как сделать Учебник'>КАК СДЕЛАТЬ</a>
+    <a class='w3-bar-item w3-button' href='../w3css/default.html' title='W3.CSS Учебник'>W3.CSS</a>
+    <a class='w3-bar-item w3-button' href='../jquery/default.html' title='jQuery Учебник'>JQUERY</a>
+    <a class='w3-bar-item w3-button' href='../xml/default.html' title='XML Учебник'>XML</a>
+    <a class='w3-bar-item w3-button' href='javascript:void(0);' id='topnavbtn_tutorials' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+    <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключить на тёмный код'>&#9681;</a>
+    <a class='w3-bar-item w3-button w3-right' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' target='_blank' title='Подборка книг для бесплатного скачивания с Google-диска'>КНИГИ</a>
+    <a class='w3-bar-item w3-button w3-right' href='javascript:void(0);' id='topnavbtn_exercises' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    <a class='w3-bar-item w3-button w3-right' href='javascript:void(0);' id='topnavbtn_references' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+  </div>
+  <div class='w3-bar-block w3-card-2' id='nav_tutorials' style='display:none;'>
+    <span class='w3-button w3-xlarge w3-right' onclick='w3_close_nav("tutorials")' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+  <div class='w3-row-padding' style='padding:24px 48px'>
+      <div class='w3-col l3 m6'>
+        <h3>HTML и CSS</h3><a class='w3-bar-item w3-button' href='../html/default.html'>Выучить HTML</a>
+        <a class='w3-bar-item w3-button' href='../css/default.html'>Выучить CSS</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+        <a class='w3-bar-item w3-button' href='../w3css/default.html'>Выучить W3.CSS</a>
+        <a class='w3-bar-item w3-button' href='../colors/default.html'>Выучить Colors</a>
+        <a class='w3-bar-item w3-button' href='../icons/default.html'>Выучить Icons</a>
+        <a class='w3-bar-item w3-button' href='../graphics/default.html'>Выучить Graphics</a>
+        <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+        <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+        <a class='w3-bar-item w3-button' href='default.html'>Выучить How To</a>
+        <a class='w3-bar-item w3-button' href='../sass/default.html'>Выучить Sass</a>
+        <div class='w3-hide-large w3-hide-small'>
+          <h3>XML</h3><a class='w3-bar-item w3-button' href='../xml/default.html'>Выучить XML</a>
+          <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+          <a class='w3-bar-item w3-button' href="../xml/dom_intro.html">Выучить XML DOM</a>
+          <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+          <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+          <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+          <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+          <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+        </div>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>JavaScript</h3>
+        <a class='w3-bar-item w3-button' href='../js/default.html'>Выучить JavaScript</a>
+        <a class='w3-bar-item w3-button' href='../jquery/default.html'>Выучить jQuery</a>
+        <a class='w3-bar-item w3-button' href='../react/default.html'>Выучить React</a>
+        <a class='w3-bar-item w3-button' href='../angular/default.html'>Выучить AngularJS</a>
+        <a class='w3-bar-item w3-button' href="../js/js_json_intro.html">Выучить JSON</a>
+        <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+        <a class='w3-bar-item w3-button' href='../appml/default.html'>Выучить AppML</a>
+        <a class='w3-bar-item w3-button' href="../w3js/default.html">Выучить W3.JS</a>
+        <h3>Программирование</h3>
+        <a class='w3-bar-item w3-button' href='../python/default.html'>Выучить Python</a>
+        <a class='w3-bar-item w3-button' href='../java/default.html'>Выучить Java</a>
+        <a class='w3-bar-item w3-button' href='../cpp/default.html'>Выучить C++</a>
+        <a class='w3-bar-item w3-button' href='../cs/default.html'>Выучить C#</a>
+        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+	<a class='w3-bar-item w3-button' href='../datascience/default.html'>Выучить Наука о данных</a>
+        <div class="w3-hide-small">
+          <br class="w3-hide-medium w3_hide-small">
+          <br class="w3-hide-medium w3_hide-small">
+        </div>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>Серверная сторона</h3>
+        <a class='w3-bar-item w3-button' href='../sql/default.html'>Выучить SQL</a>
+        <a class='w3-bar-item w3-button' href='../php/default.html'>Выучить PHP</a>
+        <a class='w3-bar-item w3-button' href='../asp/default.html'>Выучить ASP</a>
+        <a class='w3-bar-item w3-button' href='../nodejs/default.html'>Выучить Node.js</a>
+        <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+        <h3>Веб-строительство</h3>
+        <a class='w3-bar-item w3-button' href="../w3css/w3css_templates.html">Веб-шаблоны</a>
+        <a class='w3-bar-item w3-button' href='../browsers/default.html'>Веб-статистика</a>
+        <a class='w3-bar-item w3-button' href='../cert/default.html'>Веб-сертификаты</a>
+        <a class='w3-bar-item w3-button' href='../tryit/default.html'>Веб-редактор</a>
+        <a class='w3-bar-item w3-button' href="../whatis/default.html">Веб-разработка</a>
+        <a class='w3-bar-item w3-button' href="https://www.w3schools.com/typingspeed/default.asp" target="_blank" rel="nofollow">Проверить скорость печати</a>
+      </div>
+      <div class='w3-col l3 m6 w3-hide-medium'>
+        <h3>XML</h3><a class='w3-bar-item w3-button' href='../xml/default.html'>Выучить XML</a>
+        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+        <a class='w3-bar-item w3-button' href="../xml/dom_intro.html">Выучить XML DOM</a>
+        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+      </div>
+    </div><br>
+  </div>
+  <div class='w3-bar-block w3-card-2' id='nav_references'>
+    <span class='w3-button w3-xlarge w3-right' onclick='w3_close_nav("references")' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+    <div class='w3-row-padding' style="padding:24px 48px">
+      <div class='w3-col l3 m6'>
+        <h3>HTML</h3>
+        <a class='w3-bar-item w3-button' href='../tags/default.html'>HTML Справочник тегов</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+        <a class='w3-bar-item w3-button' href='../colors/default.html'>HTML Справочник цветов</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+        <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+        <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+        <a class='w3-bar-item w3-button' href='../charsets/default.html'>HTML Наборы символов</a>
+        <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+        <h3>CSS</h3>
+        <a class='w3-bar-item w3-button' href='../cssref/default.html'>CSS Справочник</a>
+        <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+        <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Selector Справочник</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+        <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+        <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Icon Справочник</a>
+        <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>JavaScript</h3>
+        <a class='w3-bar-item w3-button' href='../jsref/default.html'>JavaScript Справочник</a>
+        <a class='w3-bar-item w3-button' href='../jsref/default.html'>HTML DOM Справочник</a>
+        <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+        <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+        <a class='w3-bar-item w3-button' href="../w3js/w3js_references.html">W3.JS Справочник</a>
+        <h3>Программирование</h3>
+        <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+        <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+      </div>
+      <div class='w3-col l3 m6'>
+        <h3>Серверная сторона</h3>
+        <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+        <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+        <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+        <h3>XML</h3>
+        <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Справочник</a>
+        <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+        <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+        <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+      </div>
+      <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+        <h3>Наборы символов</h3>
+        <a class='w3-bar-item w3-button' href='../charsets/default.html'>HTML Наборы символов</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+        <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+      </div>
+    </div><br>
+  </div>
+  <div class='w3-bar-block w3-card-2' id='nav_exercises'>
+    <span class='w3-button w3-xlarge w3-right' onclick='w3_close_nav("exercises")' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+    <div class='w3-row-padding' style="padding:24px 48px">
+      <div class='w3-col l4 m6'>
+        <h3>Упражнения</h3>
+        <a class='w3-bar-item w3-button' href="../html/html_exercises.html">HTML Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../css/css_exercises.html">CSS Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../js/js_exercises.html">JavaScript Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../sql/sql_exercises.html">SQL Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../php/php_exercises.html">PHP Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../python/python_exercises.html">Python Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../jquery/jquery_exercises.html">jQuery Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../bootstrap/bootstrap_exercises.html">Bootstrap Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../java/java_exercises.html">Java Упражнения</a>
+        <a class='w3-bar-item w3-button' href="../cpp/cpp_exercises.html">C++ Упражнения</a>
+      </div>
+      <div class='w3-col l4 m6'>
+        <h3>Викторины</h3>
+        <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+        <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+        <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+        <a class='w3-bar-item w3-button' href="../sql/sql_quiz.html" target='_top'>SQL Викторина</a>
+        <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+        <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+        <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+        <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+        <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+      </div>
+      <div class='w3-col l4 m12'>
+        <h3>Сертификаты</h3>
+        <a class='w3-bar-item w3-button' href="../cert/cert_html_new.html" target='_top'>HTML Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_css.html" target='_top'>CSS Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_javascript.html" target='_top'>JavaScript Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_sql.html" target='_top'>SQL Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_php.html" target='_top'>PHP Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_python.html" target='_top'>Python Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_jquery.html" target='_top'>jQuery Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_bootstrap.html" target='_top'>Bootstrap Сертификат</a>
+        <a class='w3-bar-item w3-button' href="../cert/cert_xml.html" target='_top'>XML Сертификат</a>
+      </div>
+    </div><br>
+  </div>
+</div>
+</div><!--/Top menu-->
+
+<!--Left menu sidebar-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<h2 class='left'><span class='left_h2'>Sass</span> Учебник</h2>
+<a target='_top' href='default.html'>Sass Старт</a>
+<a target='_top' href='sass_intro.html'>Sass Введение</a>
+<a target='_top' href='sass_installation.html'>Sass Установка</a>
+<a target='_top' href='sass_variables.html'>Sass Переменные</a>
+<a target='_top' href='sass_nesting.html'>Sass Вложения</a>
+<a target='_top' href='sass_import.html'>Sass @import</a>
+<a target='_top' href='sass_mixin_include.html'>Sass @mixin</a>
+<a target='_top' href='sass_extend.html'>Sass @extend</a>
+<br>
+<h2 class='left'><span class='left_h2'>Sass</span> Функции</h2>
+<a target='_top' href='sass_functions_string.html'>Sass Строковые функции</a>
+<a target='_top' href='sass_functions_numeric.html'>Sass Числовые функции</a>
+<a target='_top' href='sass_functions_list.html'>Sass Функции списка</a>
+<a target='_top' href='sass_functions_map.html'>Sass Функции карты</a>
+<a target='_top' href='sass_functions_selector.html'>Sass Селекторные функции</a>
+<a target='_top' href='sass_functions_introspection.html'>Sass Функции самоанализа</a>
+<a target='_top' href='sass_functions_color.html'>Sass Цветовые функции</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar-->
+
+<!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <a href='../index.html'><img src='../svg/sass_icon.svg' alt='Sass. Уроки для начинающих' class='w3-left' title='Учебник Sass для начинающих' style='width:120px;padding: 10px;'></a>
+
+<h1>Sass <span class="color_h1">Введение</span></h1>
+<div class="w3-clear nextprev">
+  <a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
+  <a class="w3-right w3-btn" href="sass_installation.html">Next &#10095;</a>
+</div>
+<hr>
+
+<h2>Что необходимо знать перед изучением Sass?</h2>
+<p>Прежде чем приступить к изучению Sass, вы должны иметь общее представление о следующих технологиях:</p>
+<ul>
+  <li><a href="../html/default.html" target="_blank" title="Перейти к изучению HTML">HTML</a> - язык разметки веб-страниц;</li>
+  <li><a href="../css/default.html" target="_blank" title="Перейти к изучению CSS">CSS</a> - язык стилизации и визуального оформления веб-страниц.</li>
+</ul>
+<p>Если вы ещё не знаете эти технологии, то найдите уроки по <strong>HTML</strong> и <strong>CSS</strong> на <a href="../default.html">Главной странице</a> нашего сайта.</p>
+<hr>
+
+<h2>Что такое Sass?</h2>
+<p><strong>Sass</strong> - самый популярный, стабильный и мощный язык CSS-расширений профессионального уровня в мире.</p>
+<ul>
+  <li><strong>Sass</strong> - это сокращение от <strong>S</strong>yntactically <strong>A</strong>wesome
+  <strong>S</strong>tyle<strong>S</strong>heet - Синтаксически отличная таблица стилей</li>
+  <li>Sass - это расширение CSS</li>
+  <li>Sass - это CSS пре-процессор</li>
+  <li>Sass полностью совместим со всеми версиями CSS</li>
+  <li>Sass уменьшает повторение CSS и, следовательно, экономит время для его написания</li>
+  <li>Sass был спроектирован Хэмптоном Кэтлином и разработан Натали Вайценбаум в 2006 году</li>
+  <li>Sass можно загрузить с официального сайта и использовать бесплатно</li>
+</ul>
+<hr>
+
+<h2>Зачем использовать Sass?</h2>
+<p>Таблицы стилей становятся больше, всё сложнее и сложнее в обслуживании. Здесь может помочь препроцессор CSS.</p>
+<p>Sass позволяет использовать функции, которых нет в CSS, такие как переменные, вложенные правила, миксины, импорт, наследование, встроенные функции и прочее.</p>
+<hr>
+
+<h2>Простой пример, почему Sass полезен</h2>
+<p>Допустим, у нас есть сайт с тремя основными цветами:</p>
+
+<div class="w3-section">
+  <div class="w3-container" style="background-color:#a2b9bc;color:#000">
+  <p>#a2b9bc</p>
+  </div>
+  <div class="w3-container" style="background-color:#b2ad7f;color:#000">
+  <p>#b2ad7f</p>
+  </div>
+  <div class="w3-container" style="background-color:#878f99;color:#fff">
+  <p>#878f99</p>
+  </div>
+</div>
+
+<p>Итак, сколько раз вам нужно вводить эти шестнадцатеричные значения? Много раз. А как насчет вариаций одних и тех же цветов?</p>
+<p>Вместо того, чтобы много раз вводить вышеуказанные значения, вы можете использовать Sass и написать это:</p>
+<div class="w3-example">
+<h3>Sass Пример</h3>
+<div class="w3-code notranslate cssHigh">
+  /* определить переменные для основных цветов */<br>$primary_1: #a2b9bc;<br>
+  $primary_2: #b2ad7f;<br>$primary_3:
+  #878f99;<br><br>/*
+  использовать переменные */<br>.main-header
+{<br>&nbsp; background-color: $primary_1;<br>}<br><br>.menu-left
+{<br>&nbsp; background-color: $primary_2;<br>}<br><br>.menu-right
+{<br>&nbsp; background-color: $primary_3;<br>}<br></div>
+<br></div>
+<p>Итак, при использовании Sass и изменении основного цвета вам нужно изменить его только в одном месте.</p>
+<hr>
+
+<h2>Как работает Sass?</h2>
+<p>Браузер не понимает код Sass. Следовательно, вам понадобится препроцессор Sass для преобразования кода Sass в стандартный CSS.</p>
+<p>Этот процесс называется транспилированием. Итак, вам нужно дать транспилятору (какой-то программе) некоторый код Sass, а затем вернуть код CSS.</p>
+
+<div class="w3-panel w3-note">
+  <p><strong>Совет:</strong> Транспилирование - это термин, обозначающий использование исходного кода, написанного на одном языке, и его преобразования/перевода на другой язык.</p>
+</div>
+<hr>
+
+<h2>Sass Тип файла</h2>
+<p>Sass-файлы имеют расширение файла <em>.scss</em>.</p>
+<hr>
+
+<h2>Sass Комментарии</h2>
+<p>Sass поддерживает стандартные CSS комментарии <code class="w3-codespan">/* comment */</code> и, кроме того, он поддерживает встроенные комментарии <code class="w3-codespan">// comment</code>:</p>
+<div class="w3-example">
+<h3>Sass пример</h3>
+<div class="w3-code notranslate cssHigh">
+  /* определить основные цвета */<br>$primary_1: #a2b9bc;<br>
+  $primary_2: #b2ad7f;<br><br>/*
+  использовать переменные */<br>.main-header
+{<br>&nbsp; background-color: $primary_1; // здесь вы можете поместить встроенный комментарий<br>}</div>
+<br></div>
+
+<hr>
+<div class="w3-clear nextprev">
+  <a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
+  <a class="w3-right w3-btn" href="sass_installation.html">Next &#10095;</a>
+</div>
+
+<hr>
+<!--Комментарии от Disqus-->
+<iframe class="predisqus" src="../pages/predisqus.html"></iframe>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = w3schoolsrus.github.io/sass/sass_intro2.html; // канонический URL страницы
+this.page.identifier = w3schoolsrus.github.io/sass/sass_intro2.html; // уникальный идентификатор страницы
+};
+(function() { // Не редактировать ниже этой линии
+var d = document, s = d.createElement('script');
+s.src = 'https://w3schoolsrus-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев, предоставленных Disqus.</a></noscript>
+<!--/ Комментарии от Disqus-->
+<hr>
+
+</div>
+
+<!--Right sidebar-->
+<div class="w3-col l2 m12" id="right">
+
+<iframe class="sassrightsidebar" src="../pages/sassrightsidebar.html"></iframe>
+
+</div>
+<!--/Right sidebar-->
+
+</div>
+
+<!--FOOTER-->
+<div id="footer" class="footer w3-container w3-white">
+<hr>
+
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
+</div>
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+<h2>Ваше предложение:</h2>
+<form>
+<div class="w3-section">
+<label for="err_email">Ваш E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">
+<label for="err_email">Адрес страницы:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Описание:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
+</div>
+<br>
+</form>
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<h2>Спасибо за Вашу помощь!</h2>
+<p>Ваше сообщение было отправлено в W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center">
+<iframe class="toplist" src="../pages/toplist.html"></iframe>
+</div>
+
+<hr>
+<iframe class="footerpage" src="../pages/footerpage.html"></iframe>
+<br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+<!--[if lt IE 9]>
+<script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
+<script src="../cdn/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>
