@@ -10,8 +10,8 @@
 <meta property='og:image:type' content='image/png'>
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
-<meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'><title>Bootstrap 5 Tutorial. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='Bootstrap 5. Tutorial. Bootstrap 5 vs. Bootstrap 3 & 4. Exercises. Quiz Test. Lessons for beginners. W3Schools in English'>
+<meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'><title>Bootstrap 5 Tutorial. Get Started. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='Bootstrap 5. Tutorial. Get Started. What is Bootstrap? What is Responsive Web Design? Bootstrap Versions. Why Use Bootstrap? Where to Get Bootstrap 5? Bootstrap 5 CDN. Downloading Bootstrap 5. Basic Bootstrap 5 Pages. Lessons for beginners. W3Schools in English'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
@@ -365,83 +365,184 @@
                                      title='Bootstrap tutorials. W3Schools in English'></a>
 
 <p class='w3-right'>
-    <a href='index.html' title='Go to Russian language'>Ru</a>
-    <a href="https://w3schoolsua.github.io/bootstrap5/index.html" target='_blank' title='Go to Ukrainian language'>Ua</a>
+    <a href='bootstrap_get_started.html' title='Go to Russian language'>Ru</a>
+    <a href="https://w3schoolsua.github.io/bootstrap5/bootstrap_get_started.html" target='_blank' title='Go to Ukrainian language'>Ua</a>
 </p>
 <article>
-    <h1>Bootstrap 5 <span class="color_h1">Tutorial</span></h1>
-
+    <h1>Bootstrap 5 <span class="color_h1">Get Started</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index_en.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="bootstrap_get_started_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="index_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="bootstrap_containers_en.html">Next &#10095;</a>
     </div>
     <hr>
-
-    <div class="w3-panel w3-info intro w3-padding-16">
-        <p style="margin-top:15px;">Bootstrap 5 is the newest version of <a href="../bootstrap/index_en.html">Bootstrap</a>, which is the most popular HTML, CSS, and JavaScript framework for creating responsive, mobile-first websites.</p>
-        <p>Bootstrap 5 is completely free to download and use!</p>
-        <p><a href="bootstrap_get_started_en.html" class="w3-btn w3-padding-large w3-hide-small" style="font-size: 18px;padding-left:25px;padding-right:25px;font-family: 'Source Sans Pro', sans-serif;margin-top:6px;">Start learning Bootstrap 5 now &raquo;</a></p>
-        <p><a href="bootstrap_get_started_en.html" class="w3-btn w3-block w3-hide-large w3-hide-medium" style="font-size: 18px;padding-left:25px;padding-right:25px;font-family: 'Source Sans Pro', sans-serif;margin-top:6px;">Learn Bootstrap 5</a></p>
+    <h2>What is Bootstrap?</h2>
+    <ul>
+        <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+        <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+        <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+    </ul>
+    <div class="w3-panel w3-note">
+        <p><b>What is Responsive Web Design?</b><br>Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.</p>
     </div>
+
+    <div class="w3-example">
+        <h3>Bootstrap 5 Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;container-fluid p-5 bg-primary text-white text-center&quot;&gt;<br>&nbsp;
+            &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;Resize this responsive page to
+            see the effect!&lt;/p&gt; <br>&lt;/div&gt;<br><br>&lt;div class=&quot;container mt-5&quot;&gt;<br>&nbsp; &lt;div
+            class=&quot;row&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;h3&gt;Column 1&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit...&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;h3&gt;Column 2&lt;/h3&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit...&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;h3&gt;Column 3&lt;/h3&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit...&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;</div>
+        <a target="_blank" href="../bootstrap5tryit/trybs_default.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a></div>
     <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Try it Yourself Examples</h2>
-    <p>This tutorial contains hundreds of Bootstrap 5 examples.</p>
-    <p>With our online editor, you can edit the code, and click on a button to view the result.</p>
-
-    <div class="w3-example">
-        <h3>Bootstrap 5 Example</h3>
-        <iframe src="../bootstrap5tryit/trybs_default-ifr.html" style="width:100%;min-height:500px;border:none;margin-bottom:8px;"></iframe>
-        <a target="_blank" href="../bootstrap5tryit/trybs_default.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a></div>
-    <div class="w3-panel w3-note">
-        <p style="margin-bottom:8px">Click on the &quot;Try it Yourself&quot; button to see how it works.</p>
-    </div>
-    <hr>
-
-    <h2>Bootstrap 5 vs. Bootstrap 3 & 4</h2>
-    <p>Bootstrap 5 is the newest version of <a href="../bootstrap/index_en.html">Bootstrap</a>; with new components, faster stylesheet and more responsiveness.</p>
+</div>    <h2>Bootstrap Versions</h2>
+    <p>Bootstrap 5 (released 2021) is the newest version of <a href="../bootstrap/index_en.html">Bootstrap</a> (released 2013); with new components, faster stylesheet and more responsiveness.</p>
     <p>Bootstrap 5 supports the latest, stable releases of all major browsers and platforms. However, Internet Explorer 11 and down is not supported.</p>
-    <p>The main differences between Bootstrap 5 and Bootstrap 3 &amp; 4, is that Bootstrap 5 has switched to <a href="../js/index_en.html">JavaScript</a> instead of <a href="../jquery/index_en.html">jQuery</a>.</p>
+    <p>The main differences between Bootstrap 5 and Bootstrap 3 &amp; 4, is that Bootstrap 5 has switched to vanilla JavaScript instead of jQuery.</p>
     <div class="w3-panel w3-note">
         <p style="margin-bottom:8px"><strong>Note:</strong> <a href="../bootstrap/index_en.html">Bootstrap 3</a> and <a href="../bootstrap4/index_en.html">Bootstrap 4</a> is still supported by the team for critical bugfixes and documentation changes, and it is perfectly safe to continue to use them. However, new features will NOT be added to them.</p>
     </div>
     <hr>
+
+    <h2>Why Use Bootstrap?</h2>
+    <p>Advantages of Bootstrap:</p>
+    <ul>
+        <li><strong>Easy to use:</strong> Anybody with just basic knowledge of HTML and CSS can start using Bootstrap</li>
+        <li><strong>Responsive features:</strong> Bootstrap's responsive CSS adjusts to phones, tablets, and desktops</li>
+        <li><strong>Mobile-first approach:</strong> In Bootstrap, mobile-first styles are part of the core framework</li>
+        <li><strong>Browser compatibility:</strong> Bootstrap 5 is compatible with all modern browsers (Chrome, Firefox, Edge, Safari, and Opera).
+            <b>Note:</b> If you need support for IE11 and down, you must use either BS4 or BS3.</li>
+    </ul>
+    <hr>
+
+    <h2>Where to Get Bootstrap 5?</h2>
+    <p>There are two ways to start using Bootstrap 5 on your own web site.</p>
+    <p>You can:</p>
+    <ul>
+        <li>Include Bootstrap 5 from a CDN</li>
+        <li>Download Bootstrap 5 from getbootstrap.com</li>
+    </ul>
+    <hr>
     <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Bootstrap 5 Exercises</h2>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/bootstrap5/exercise.html?filename=exercise_bs5_typography1" method="post" target="_blank">
-        <h2 class="shadow-black-1">Test Yourself With Exercises</h2>
-        <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Use a Bootstrap class to center the following text:</p>
-            <div class="exerciseprecontainer">
-<pre style="background-color:transparent;border:none;">
-&lt;p class="<input name="ex1" maxlength="11" style="width: 115px;">"> Hello World!&lt;/p>
-</pre>
-            </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
-        </div>
-    </form>
+</div>    <h2>Bootstrap 5 CDN</h2>
+    <p>If you don't want to download and host Bootstrap 5 yourself, you can include it from a CDN (Content Delivery Network). </p>
+    <p>jsDelivr provides CDN support for Bootstrap's CSS and JavaScript:</p>
+    <div class="w3-example">
+        <h3>MaxCDN:</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!-- Latest compiled and minified CSS --&gt;<br>&lt;link
+            href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css&quot;
+            rel=&quot;stylesheet&quot;&gt;<br>
+            <br>&lt;!-- Latest compiled JavaScript --&gt;<br>&lt;script
+            src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</div>
+    </div>
+
+    <div class="w3-panel w3-note">
+        <p><b>One advantage of using the Bootstrap 5 CDN:</b><br>Many users already have downloaded Bootstrap 5 from jsDelivr when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make sure that once a user requests a file from it, it will be served from the server closest to them, which also leads to faster loading time.<br><br><strong>JavaScript?</strong><br>Bootstrap 5 use JavaScript for different components (like modals, tooltips, popovers etc). However, if you just use the CSS part of Bootstrap, you don't need them.</p>
+    </div>
     <hr>
 
-    <h2>Bootstrap 5 Quiz Test</h2>
-    <p>Test your Bootstrap 5 skills at W3Schools!</p>
-    <p><a href="bootstrap_quiz_en.html" class="ws-btn w3-blue w3-large w3-round">Start Bootstrap 5 Quiz!</a></p>
+    <h2>Downloading Bootstrap 5</h2>
+    <p>If you want to download and host Bootstrap 5 yourself, go to <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>, and follow the instructions there.</p>
+    <hr>
+
+    <h2>Create Your First Web Page With Bootstrap 5</h2>
+    <p><strong>1. Add the HTML5 doctype</strong></p>
+    <p>Bootstrap 5 uses HTML elements and CSS properties that require the HTML5 doctype.</p>
+    <p>Always include the HTML5 doctype at the beginning of the page, along with the lang attribute and the correct title and character set:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&nbsp; &lt;head&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;title&gt;Bootstrap 5 Example&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp; &lt;meta charset=&quot;utf-8&quot;&gt; <br>&nbsp; &lt;/head&gt;<br>&lt;/html&gt;</div>
+    </div>
+
+    <p><strong>2. Bootstrap 5 is mobile-first</strong></p>
+    <p>Bootstrap 5 is designed to be responsive to mobile devices. Mobile-first styles are part of the core framework.</p>
+    <p>To ensure proper rendering and touch zooming, add the following <code class="w3-codespan">&lt;meta&gt;</code> tag inside the <code class="w3-codespan">&lt;head&gt;</code> element:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate htmlHigh">
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        </div>
+    </div>
+
+    <p>The <code class="w3-codespan">width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).</p>
+    <p>The <code class="w3-codespan">initial-scale=1</code> part sets the initial zoom level when the page is first loaded by the browser.</p>
+    <p><strong>3. Containers</strong></p>
+    <p>Bootstrap 5 also requires a containing element to wrap site contents. </p>
+    <p>There are two container classes to choose from:</p>
+    <ol>
+        <li>The <code class="w3-codespan">.container</code> class provides a responsive <strong>fixed width container</strong></li>
+        <li>The <code class="w3-codespan">.container-fluid</code> class provides a <strong>full width container</strong>, spanning the entire width of the viewport</li>
+    </ol>
+
+    <div class="w3-row-padding" style="margin:16px -16px 0 -16px">
+        <div class="w3-half">
+            <div class="w3-padding w3-padding-16" style="border:4px solid #f1f1f1">
+                <div style="height:100px;width:80%;margin:auto;background:#d9d9d9" class="w3-display-container"><span class="w3-display-middle">.container</span>
+                </div>
+            </div>
+        </div>
+        <div class="w3-half">
+            <div class="w3-padding-16" style="border:4px solid #f1f1f1">
+                <div style="height:100px;width:100%;background:#d9d9d9" class="w3-center w3-display-container"><span class="w3-display-middle">.container-fluid</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Two Basic Bootstrap 5 Pages</h2>
+    <p>The following example shows the code for a basic Bootstrap 5 page (with a responsive fixed width container):</p>
+    <div class="w3-example">
+        <h3>Container Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&lt;head&gt;<br>&nbsp; &lt;title&gt;Bootstrap
+            Example&lt;/title&gt;<br>&nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;<br>&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;<br>&nbsp; &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;<br>&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;<br>
+            &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;div class=&quot;container&quot;&gt;<br>&nbsp; &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;This part is inside a .container class.&lt;/p&gt;
+            <br>&nbsp; &lt;p&gt;The .container class provides a responsive fixed width container.&lt;/p&gt; <br>&lt;/div&gt;<br>
+            <br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+        <a target="_blank" href="../bootstrap5tryit/trybs_gs_container.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+
+    <p>The following example shows the code for a basic Bootstrap 5 page (with a full width container):</p>
+    <div class="w3-example">
+        <h3>Container Fluid Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&lt;head&gt;<br>&nbsp; &lt;title&gt;Bootstrap Example&lt;/title&gt;<br>&nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;<br>&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;<br>&nbsp; &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;<br>&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;<br>
+            &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;div class=&quot;container-fluid&quot;&gt;<br>&nbsp; &lt;h1&gt;My First Bootstrap Page&lt;/h1&gt;<br>&nbsp; &lt;p&gt;This part is inside a .container-fluid class.&lt;/p&gt;<br>&nbsp; &lt;p&gt;The .container-fluid class provides a full width container, spanning the entire width of the viewport.&lt;/p&gt; <br>&lt;/div&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+        <a target="_blank" href="../bootstrap5tryit/trybs_gs_container-fluid.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index_en.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="bootstrap_get_started_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="index_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="bootstrap_containers_en.html">Next &#10095;</a>
     </div>
 </article>
-
 <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- udup_content_media_horizontally -->
