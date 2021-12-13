@@ -11,8 +11,8 @@
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает наиболее популярные технологии, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
-<title>JavaScript Обратные вызовы. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Обратные вызовы. Последовательность функций. Контроль (управление) последовательностью. Когда использовать обратный вызов? Уроки для начинающих. W3Schools на русском'>
+<title>JavaScript Асинхронный. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='JavaScript Асинхронный. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -498,88 +498,26 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <p class='w3-right'>
-    <a href='js_callback_en.html' title='Перейти на английский язык'>En</a>
-    <a href="https://w3schoolsua.github.io/js/js_callback.html" target='_blank' title='Перейти на украинский язык'>Ua</a>
+    <a href='js_asynchronous_en.html' title='Перейти на английский язык'>En</a>
+    <a href="https://w3schoolsua.github.io/js/js_asynchronous.html" target='_blank' title='Перейти на украинский язык'>Ua</a>
 </p>
     <article>
-        <h1>JavaScript Обратные вызовы</h1>
+        <h1>Асинхронный JavaScript</h1>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="js_class_static.html">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="js_asynchronous.html">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="js_callback.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_promise.html">Next &#10095;</a>
         </div>
 
         <div class="w3-panel w3-info w3-center" style="padding:8px">
-            <p class="w3-xlarge"><i>"Я перезвоню позже!"</i></p>
-            <p><strong>Обратный вызов</strong> (<strong>callback</strong>) - это функция, переданная в качестве аргумента другой функции.</p>
-            <p>Этот метод позволяет функции вызывать другую функцию.</p>
-            <p>Функция обратного вызова может запускаться после завершения другой функции.</p>
+            <p class="w3-xlarge"><i>"Я закончу позже!"</i></p>
+            <p>Функции, выполняющиеся параллельно с другими функциями, называются асинхронными</p>
+            <p>Хорошим примером является JavaScript setTimeout()</p>
         </div>
 
-        <h2>Последовательность функций</h2>
-        <p>Функции JavaScript выполняются в той последовательности, в которой они вызываются. Не в той последовательности, в которой они определены. </p>
-        <p>В этом примере будет отображаться сообщение &quot;Goodbye&quot;:</p>
-        <div class="w3-example">
-            <h3>Пример</h3>
-            <div class="w3-code notranslate jsHigh">
-                function myFirst() {<br>&nbsp; myDisplayer(&quot;Hello&quot;);<br>}<br><br>function mySecond() {<br>&nbsp;
-                myDisplayer(&quot;Goodbye&quot;);<br>}<br><br>myFirst();<br>mySecond();
-            </div>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback1.html">Попробуйте сами &raquo;</a>
-        </div>
+        <h2>Асинхронный JavaScript</h2>
+        <p>Примеры, использованные в предыдущей главе, были очень упрощены.</p>
+        <p>Целью примеров было продемонстрировать синтаксис функций обратного вызова:</p>
 
-        <p>В этом примере будет отображаться "Hello":</p>
-        <div class="w3-example">
-            <h3>Пример</h3>
-            <div class="w3-code notranslate jsHigh">
-                function myFirst() {<br>&nbsp; myDisplayer(&quot;Hello&quot;);<br>}<br><br>function mySecond() {<br>&nbsp;
-                myDisplayer(&quot;Goodbye&quot;);<br>}<br><br>mySecond();<br>myFirst();</div>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback2.html">Попробуйте сами &raquo;</a>
-        </div>
-        <hr>
-        <div class="adver">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
-    <!-- AdInFeed -->
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-        <h2>Контроль (управление) последовательностью</h2>
-        <p>Иногда вам нужно лучше контролировать (управлять), когда выполнять функцию.</p>
-        <p>Предположим, вы хотите произвести расчет, а затем отобразить результат.</p>
-        <p>Вы можете вызвать функцию калькулятора (<code class="w3-codespan">myCalculator</code>), сохранить результат, а затем вызвать другую функцию (<code class="w3-codespan">myDisplayer</code>), чтобы отобразить результат:</p>
-        <div class="w3-example">
-            <h3>Пример</h3>
-            <div class="w3-code notranslate jsHigh">
-                function myDisplayer(some) {<br>
-                &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = some;<br>}<br><br>
-                function myCalculator(num1, num2) {<br>
-                &nbsp; let sum = num1 + num2;<br>
-                &nbsp; return sum;<br>
-                }<br><br>let result = myCalculator(5, 5);<br>
-                myDisplayer(result);</div>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback3.html">Попробуйте сами &raquo;</a>
-        </div>
-        <p>Или вы можете вызвать функцию калькулятора (<code class="w3-codespan">myCalculator</code>), и позволить функции калькулятора вызывать функцию отображения (<code class="w3-codespan">myDisplayer</code>):</p>
-        <div class="w3-example">
-            <h3>Пример</h3>
-            <div class="w3-code notranslate jsHigh">
-                function myDisplayer(some) {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML = some;<br>}<br><br>function myCalculator(num1, num2) {<br>&nbsp; let sum = num1 + num2;<br>&nbsp; myDisplayer(sum);<br>}<br><br>myCalculator(5, 5);
-            </div>
-            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback8.html">Попробуйте сами &raquo;</a>
-        </div>
-        <p>Проблема с первым примером, приведенным выше, заключается в том, что вам нужно вызвать две функции для отображения результата.</p>
-        <p>Проблема со вторым примером заключается в том, что вы не можете предотвратить отображение результата функцией калькулятора.</p>
-        <p>А теперь пора сделать обратный вызов.</p>
-        <hr>
-        <div class="adver">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
-    <!-- AdInFeed -->
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>JavaScript Обратный вызов</h2>
-        <div class="w3-panel w3-note">
-            <p><strong>Обратный вызов</strong> - это функция, переданная в качестве аргумента другой функции.</p>
-        </div>
-        <p>Используя обратный вызов, вы можете вызвать функцию калькулятора (<code class="w3-codespan">myCalculator</code>) с обратным вызовом и позволить функции калькулятора выполнить обратный вызов после завершения расчета:</p>
         <div class="w3-example">
             <h3>Пример</h3>
             <div class="w3-code notranslate jsHigh">
@@ -587,13 +525,11 @@
             </div>
             <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback4.html">Попробуйте сами &raquo;</a>
         </div>
-
         <p>В приведенном выше примере <code class="w3-codespan">myDisplayer</code> - это имя функции.</p>
         <p>Он передается в <code class="w3-codespan">myCalculator()</code> в качестве аргумента.</p>
         <div class="w3-panel w3-note">
-            <p>Когда вы передаете функцию в качестве аргумента, помните, что нельзя использовать круглые скобки.</p>
-            <p>Правильно: myCalculator(5, 5, myDisplayer);</p>
-            <p>Неправильно: <del>myCalculator(5, 5, myDisplayer())</del>;</p>
+            <p>В реальном мире обратные вызовы чаще всего используются с асинхронными функциями.</p>
+            <p>Типичным примером является JavaScript <code class="w3-codespan">setTimeout()</code>.</p>
         </div>
         <hr>
         <div class="adver">
@@ -601,15 +537,107 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Когда использовать обратный вызов?</h2>
-        <p>Приведенные выше примеры не очень интересны.</p>
-        <p>Они упрощены, чтобы научить вас синтаксису обратного вызова.</p>
-        <p>Обратные вызовы действительно эффективны в асинхронных функциях, где одна функция должна ждать, пока другая функция (например, ожидает загрузки файла).</p>
-        <p>Асинхронные функции рассматриваются в следующей главе этого учебника на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
+</div>        <h2>Ожидание тайм-аута</h2>
+        <p>При использовании функции JavaScript функции <code class="w3-codespan">setTimeout()</code> можно указать функцию обратного вызова, которая будет выполняться по истечении времени ожидания:</p>
+        <div class="w3-example">
+            <h3>Пример</h3>
+            <div class="w3-code notranslate jsHigh">
+                setTimeout(myFunction, 3000);<br><br>function myFunction() {<br>
+                &nbsp; document.getElementById("demo").innerHTML = "I love You !!";<br>}
+            </div>
+            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback5.html">Попробуйте сами &raquo;</a>
+        </div>
+        <p>В приведенном выше примере <code class="w3-codespan">myFunction</code> используется в качестве обратного вызова.</p>
+        <p><code class="w3-codespan">myFunction</code> передается в <code class="w3-codespan">setTimeout()</code> в качестве аргумента.</p>
+        <p>3000 - количество миллисекунд до тайм-аута, поэтому <code class="w3-codespan">myFunction()</code> будет вызываться через 3 секунды.</p>
+        <div class="w3-panel w3-note">
+            <p>Когда вы передаете функцию в качестве аргумента, помните, что нельзя использовать круглые скобки.</p>
+            <p>Правильно: setTimeout(myFunction, 3000);</p>
+            <p>Неправильно: <del>setTimeout(myFunction(), 3000)</del>;</p>
+        </div>
+        <p>Вместо того, чтобы передавать имя функции в качестве аргумента другой функции, вы всегда можете передать всю функцию целиком:</p>
+        <div class="w3-example">
+            <h3>Пример</h3>
+            <div class="w3-code notranslate jsHigh">
+                setTimeout(function() { myFunction("I love You !!!"); }, 3000);<br><br>
+                function myFunction(value) {<br>&nbsp; document.getElementById("demo").innerHTML = value;<br>}
+            </div>
+            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback9.html">Попробуйте сами &raquo;</a>
+        </div>
+        <p>В приведенном выше примере, <code class="w3-codespan">function(){ myFunction("I love You !!!"); }</code> используется как обратный вызов. Это полноценная функция. Полная функция передается в setTimeout() в качестве аргумента.</p>
+        <p>3000 - количество миллисекунд до тайм-аута, поэтому <code class="w3-codespan">myFunction()</code> будет вызываться через 3 секунды.</p>
+        <hr>
+        <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Ожидание интервалов:</h2>
+        <p>При использовании JavaScript функции <code class="w3-codespan">setInterval()</code> вы можете указать функцию обратного вызова, которая будет выполняться для каждого интервала:</p>
+
+        <div class="w3-example">
+            <h3>Пример</h3>
+            <div class="w3-code notranslate jsHigh">
+                setInterval(myFunction, 1000);<br><br>
+                function myFunction() {<br>
+                &nbsp; let d = new Date();<br>
+                &nbsp; document.getElementById("demo").innerHTML=<br>
+                &nbsp; d.getHours() + ":" +<br>
+                &nbsp; d.getMinutes() + ":" + <br>
+                &nbsp; d.getSeconds();<br>}
+            </div>
+            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback6.html">Попробуйте сами &raquo;</a>
+        </div>
+        <p>В приведенном выше примере <code class="w3-codespan">myFunction</code> используется в качестве обратного вызова.</p>
+        <p><code class="w3-codespan">myFunction</code> передается в <code class="w3-codespan">setInterval()</code> в качестве аргумента.</p>
+        <p>1000 - количество миллисекунд между интервалами, поэтому <code class="w3-codespan">myFunction()</code> будет вызываться каждую секунду. .</p>
+        <hr>
+        <div class="adver">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- AdInFeed -->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Waiting for Files</h2>
+        <p>If you create a function to load an external resource (like a script or a file), you cannot use the content before it is fully loaded.</p>
+        <p>This is the perfect time to use a callback.</p>
+        <p>This example loads an HTML file (<code class="w3-codespan">mycar.html</code>), and displays the HTML file in a web page, after the file is fully loaded:</p>
+        <div class="w3-example">
+            <h3>Waiting for a File:</h3>
+            <div class="w3-code notranslate jsHigh">
+                function myDisplayer(some) {<br>&nbsp;
+                document.getElementById("demo").innerHTML = some;<br>}<br><br>
+                function getFile(myCallback) {<br>
+                &nbsp; let req = new XMLHttpRequest();<br>
+                &nbsp; req.open('GET', &quot;mycar.html&quot;);<br>
+                &nbsp; req.onload = function() {<br>
+                &nbsp;&nbsp;&nbsp; if (req.status == 200) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCallback(this.responseText);<br>
+                &nbsp;&nbsp;&nbsp; } else {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCallback(&quot;Error: &quot; + req.status);<br>
+                &nbsp;&nbsp;&nbsp; }<br>
+                &nbsp; }<br>
+                &nbsp; req.send();<br>
+                }<br><br>
+                getFile(myDisplayer);
+            </div>
+            <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback7.html">Попробуйте сами &raquo;</a>
+        </div>
+        <p>In the example above, <code class="w3-codespan">myDisplayer</code> is used as a callback.</p>
+        <p><code class="w3-codespan">myDisplayer</code> is passed to <code class="w3-codespan">getFile()</code> as an argument.</p>
+        <p>Below is a copy of <code class="w3-codespan">mycar.html</code>:</p>
+        <div class="w3-example">
+            <h3>mycar.html</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <br>&lt;img src="img_car.jpg" alt="Nice car" style="width:100%"&gt;<br><br>
+                &lt;p&gt;A car is a wheeled, self-powered motor vehicle used for transportation.<br>
+                Most definitions of the term specify that cars are designed to run primarily on roads, to have seating for one to eight people, to typically have four wheels.&lt;/p&gt;<br><br>
+                &lt;p&gt;(Wikipedia)&lt;/p&gt;<br><br>
+            </div>
+        </div>
         <hr>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="js_class_static.html">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="js_asynchronous.html">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="js_callback.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_promise.html">Next &#10095;</a>
         </div>
     </article>
 <div class="adver">
