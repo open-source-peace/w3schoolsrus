@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает наиболее популярные технологии, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <title>JavaScript Асинхронный. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript Асинхронный. Уроки для начинающих. W3Schools на русском'>
+<meta name='description' content='JavaScript Асинхронный. Функции, выполняющиеся параллельно с другими функциями, называются асинхронными. Ожидание тайм-аута. Ожидание интервалов. Ожидание файлов. myDisplayer используется в качестве обратного вызова. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -510,8 +510,8 @@
 
         <div class="w3-panel w3-info w3-center" style="padding:8px">
             <p class="w3-xlarge"><i>"Я закончу позже!"</i></p>
-            <p>Функции, выполняющиеся параллельно с другими функциями, называются асинхронными</p>
-            <p>Хорошим примером является JavaScript setTimeout()</p>
+            <p>Функции, выполняющиеся параллельно с другими функциями, называются асинхронными.</p>
+            <p>Хорошим примером является JavaScript setTimeout().</p>
         </div>
 
         <h2>Асинхронный JavaScript</h2>
@@ -597,12 +597,12 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Waiting for Files</h2>
-        <p>If you create a function to load an external resource (like a script or a file), you cannot use the content before it is fully loaded.</p>
-        <p>This is the perfect time to use a callback.</p>
-        <p>This example loads an HTML file (<code class="w3-codespan">mycar.html</code>), and displays the HTML file in a web page, after the file is fully loaded:</p>
+</div>        <h2>Ожидание файлов</h2>
+        <p>Если вы создаете функцию для загрузки внешнего ресурса (например, скрипта или файла), вы не можете использовать контент, пока он не будет полностью загружен.</p>
+        <p>Это идеальное время для обратного вызова.</p>
+        <p>В этом примере загружается HTML файл (<code class="w3-codespan">mycar.html</code>), и отображается файл HTML на веб-странице после полной загрузки файла:</p>
         <div class="w3-example">
-            <h3>Waiting for a File:</h3>
+            <h3>Ожидание файла:</h3>
             <div class="w3-code notranslate jsHigh">
                 function myDisplayer(some) {<br>&nbsp;
                 document.getElementById("demo").innerHTML = some;<br>}<br><br>
@@ -622,16 +622,16 @@
             </div>
             <a target="_blank" class="w3-btn" href="../jstryit/tryjs_callback7.html">Попробуйте сами &raquo;</a>
         </div>
-        <p>In the example above, <code class="w3-codespan">myDisplayer</code> is used as a callback.</p>
-        <p><code class="w3-codespan">myDisplayer</code> is passed to <code class="w3-codespan">getFile()</code> as an argument.</p>
-        <p>Below is a copy of <code class="w3-codespan">mycar.html</code>:</p>
+        <p>В приведенном выше примере <code class="w3-codespan">myDisplayer</code> используется в качестве обратного вызова.</p>
+        <p><code class="w3-codespan">myDisplayer</code> передается в <code class="w3-codespan">getFile()</code> в качестве аргумента.</p>
+        <p>Ниже представлена копия <code class="w3-codespan">mycar.html</code>:</p>
         <div class="w3-example">
             <h3>mycar.html</h3>
             <div class="w3-code notranslate htmlHigh">
                 <br>&lt;img src="img_car.jpg" alt="Nice car" style="width:100%"&gt;<br><br>
-                &lt;p&gt;A car is a wheeled, self-powered motor vehicle used for transportation.<br>
-                Most definitions of the term specify that cars are designed to run primarily on roads, to have seating for one to eight people, to typically have four wheels.&lt;/p&gt;<br><br>
-                &lt;p&gt;(Wikipedia)&lt;/p&gt;<br><br>
+                &lt;p&gt;Автомобиль - это колесный самоходный автомобиль, используемый для перевозки.<br>
+                В большинстве определений этого термина указывается, что автомобили предназначены в первую очередь для движения по дорогам, чтобы в них могли разместиться от одного до восьми человек, и, как правило, имеют четыре колеса.&lt;/p&gt;<br><br>
+                &lt;p&gt;(Wikipedia)&lt;/p&gt;<br>
             </div>
         </div>
         <hr>
