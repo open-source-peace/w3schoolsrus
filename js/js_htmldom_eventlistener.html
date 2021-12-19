@@ -11,8 +11,8 @@
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает наиболее популярные технологии, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
-<title>JavaScript HTML DOM - События. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript HTML DOM - События. HTML DOM позволяет JavaScript реагировать на HTML события. Реакция на события. Атрибуты событий HTML. Назначить события с помощью HTML DOM. События onload и onunload. Событие onchange. События onmouseover и onmouseout. События onmousedown, onmouseup и onclick. Справочник по объекту события. Уроки для начинающих. W3Schools на русском'>
+<title>JavaScript HTML DOM - Слушатель событий. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='JavaScript HTML DOM - Прослушиватель событий. Метод addEventListener(). Синтаксис. Добавить обработчик событий к элементу. Добавить несколько обработчиков событий к одному элементу. Добавить обработчик событий в объект окна. Передача параметров. Всплывающие события или захват событий? Метод removeEventListener(). Справка по объекту события HTML DOM. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -498,97 +498,68 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <p class='w3-right'>
-    <a href='js_htmldom_events_en.html' title='Перейти на английский язык'>En</a>
-    <a href="https://w3schoolsua.github.io/js/js_htmldom_events.html" target='_blank' title='Перейти на украинский язык'>Ua</a>
+    <a href='js_htmldom_eventlistener_en.html' title='Перейти на английский язык'>En</a>
+    <a href="https://w3schoolsua.github.io/js/js_htmldom_eventlistener.html" target='_blank' title='Перейти на украинский язык'>Ua</a>
 </p>
     <article>
-        <h1>JavaScript <span class="color_h1">HTML DOM События</span></h1>
+        <h1>JavaScript <span class="color_h1">HTML DOM Слушатель событий</span></h1>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="js_htmldom_animate.html">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="js_htmldom_eventlistener.html">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="js_htmldom_events.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_htmldom_navigation.html">Next &#10095;</a>
         </div>
         <hr>
-        <p class="intro">HTML DOM позволяет JavaScript реагировать на <strong>HTML события</strong>:</p>
-
+        <h2>Метод addEventListener()</h2>
         <div class="w3-example">
-            <div style="width:100%;height:120px;">
-                <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#fff;font-weight:bold;font-size:18px;float:left;text-align:center;" onmouseover="this.innerHTML='Спасибо'" onmouseout="this.innerHTML='Наведите мышь на меня'">Наведите мышь на меня</div>
-                <div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#fff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">Кликни меня</div>
-                <script type="application/javascript">
-                    function clickMeEvent(obj) {
-                        if (obj.innerHTML == "Кликни меня") {
-                            obj.innerHTML = "Кликни меня<br>Кликни ещё";
-                            return;
-                        }
-                        if (obj.innerHTML == "Кликни меня<br>Кликни ещё") {
-                            obj.innerHTML = "Спасибо";
-                            return;
-                        }
-                        if (obj.innerHTML == "Спасибо") {
-                            obj.innerHTML = "Пока";
-                            return;
-                        }
-                        if (obj.innerHTML == "Пока") {
-                            obj.style.display = "Нет";
-                            return;
-                        }
-                    }
-                </script>
-            </div>
+            <h3>Пример</h3>
+            <p>Добавить прослушиватель событий, который запускается, когда пользователь нажимает кнопку:</p>
+            <div class="w3-code notranslate jsHigh">
+                document.getElementById("myBtn").addEventListener("click", displayDate);</div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_displaydate.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
+        <p>Метод <code class="w3-codespan">addEventListener()</code> присоединяет обработчик событий к указанному элементу.</p>
+        <p>Метод <code class="w3-codespan">addEventListener()</code> присоединяет обработчик событий к элементу без перезаписи существующих обработчиков событий.</p>
+        <p>К одному элементу можно добавить множество обработчиков событий.</p>
+        <p>Вы можете добавить несколько обработчиков событий одного типа к одному элементу, т.е. два события &quot;клика&quot;.</p>
+        <p>Вы можете добавить слушателей событий к любому объекту DOM, а не только к элементам HTML, т.е. объект окна.</p>
+        <p>Метод <code class="w3-codespan">addEventListener()</code> упрощает управление реакцией события на всплытие.</p>
+        <p>При использовании метода <code class="w3-codespan">addEventListener()</code> JavaScript отделяется от разметки HTML для лучшей читаемости и позволяет добавлять прослушиватели событий, даже если вы не управляете разметкой HTML.</p>
+        <p>Вы можете легко удалить прослушиватель событий с помощью метода <code class="w3-codespan">removeEventListener()</code>.</p>
         <hr>
         <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Реакция на события</h2>
-        <p>JavaScript может выполняться при возникновении события, например, когда пользователь кликает HTML элемент.</p>
-        <p>Чтобы выполнить код, когда пользователь кликает элемент, добавьте код JavaScript в атрибут события HTML:</p>
+</div>        <h2>Синтаксис</h2>
         <div class="w3-code w3-border notranslate">
             <div>
-                onclick=<i>JavaScript</i>
+                <em>element</em>.addEventListener(<em>event, function, useCapture</em>);
             </div>
         </div>
+        <p>Первый параметр - это тип события (например &quot;<code class="w3-codespan">click</code>&quot; или &quot;<code class="w3-codespan">mousedown</code>&quot; или любое другое <a href="../jsref/dom_obj_event_en.html">HTML DOM событие</a>.)</p>
+        <p>Второй параметр - это функция, которую мы хотим вызвать при возникновении события.</p>
+        <p>Третий параметр - это логическое значение, определяющее, следует ли использовать восходящую цепочку событий или захват событий. Этот параметр не является обязательным.</p>
+        <div class="w3-panel w3-note">
+            <p>Обратите внимание, что вы не используете &quot;on&quot; префикс для события; используйте &quot;<code class="w3-codespan">click</code>&quot; вместо &quot;<code class="w3-codespan">onclick</code>&quot;.</p>
+        </div>
+        <hr>
 
-        <p>Примеры событий HTML: </p>
-        <ul>
-            <li>Когда пользователь кликает мышью</li>
-            <li>После загрузки веб-страницы</li>
-            <li>Когда изображение загружено</li>
-            <li>Когда указатель мыши перемещается по элементу</li>
-            <li>При изменении поля ввода</li>
-            <li>При отправке HTML-формы</li>
-            <li>Когда пользователь нажимает клавишу</li>
-        </ul>
-
-        <p>В этом примере содержимое элемента <code class="w3-codespan">&lt;h1&gt;</code> изменяется, когда пользователь нажимает на него:</p>
-
+        <h2>Добавить обработчик событий к элементу</h2>
         <div class="w3-example">
             <h3>Пример</h3>
-            <div class="w3-code notranslate htmlHigh">
-                &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
-                &lt;body&gt;<br><br>
-                &lt;h1 onclick=&quot;this.innerHTML = 'Ooops!'&quot;&gt;Нажмите на этот текст!&lt;/h1&gt;<br><br>
-                &lt;/body&gt;<br>&lt;/html&gt;
-            </div>
-            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_event_onclick2.html" target="_blank">Попробуйте сами &raquo;</a>
+            <p>Оповещение &quot;Hello World!&quot; когда пользователь нажимает на элемент :</p>
+            <div class="w3-code notranslate jsHigh">
+                <em>element</em>.addEventListener("click", function(){ alert("Hello World!"); });</div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_add.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
 
-        <p>В этом примере функция вызывается из обработчика событий:</p>
-
+        <p>Вы также можете обратиться к внешней &quot;именованной&quot; функции:</p>
         <div class="w3-example">
             <h3>Пример</h3>
-            <div class="w3-code notranslate htmlHigh">
-                &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>
-                &lt;h1 onclick=&quot;changeText(this)&quot;&gt;Нажмите на этот текст!&lt;/h1&gt;<br>
-                <br>&lt;script&gt;<br>
-                function changeText(id) {<br>
-                &nbsp;&nbsp;id.innerHTML = &quot;Ooops!&quot;;<br>}<br>
-                &lt;/script&gt;<br><br>
-                &lt;/body&gt;<br>&lt;/html&gt;
-            </div>
-            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_event_onclick3.html" target="_blank">Попробуйте сами &raquo;</a>
+            <p>Оповещение &quot;Hello World!&quot;, когда пользователь нажимает на элемент:</p>
+            <div class="w3-code notranslate jsHigh">
+                <em>element</em>.addEventListener(&quot;click&quot;,  myFunction);<br><br>function myFunction() {<br>&nbsp;&nbsp;alert (&quot;Hello World!&quot;);<br>}</div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_add2.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
         <hr>
         <div class="adver">
@@ -596,62 +567,57 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Атрибуты событий HTML</h2>
-        <p>Чтобы назначать события HTML-элементам, вы можете использовать атрибуты событий.</p>
+</div>
+        <h2>Добавить несколько обработчиков событий к одному элементу</h2>
+        <p>Метод <code class="w3-codespan">addEventListener()</code> позволяет добавлять множество событий в один и тот же элемент без перезаписи существующих событий:</p>
         <div class="w3-example">
             <h3>Пример</h3>
-            <p>Назначьте событие onclick элементу кнопки:</p>
-            <div class="w3-code notranslate htmlHigh">
-                &lt;button onclick=&quot;displayDate()&quot;&gt;Попробуй это&lt;/button&gt;
+            <div class="w3-code notranslate jsHigh">
+                <em>element</em>.addEventListener(&quot;click&quot;, myFunction);<br>
+                <em>element</em>.addEventListener(&quot;click&quot;, mySecondFunction);<br>
             </div>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_events1.html">Попробуйте сами &raquo;</a>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_add_many.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
-        <p>В приведенном выше примере функция с именем <code class="w3-codespan">displayDate</code> будет выполняться при нажатии кнопки.</p>
-        <hr>
 
-        <h2>Назначить события с помощью HTML DOM</h2>
-        <p>Модель HTML DOM позволяет назначать события элементам HTML с помощью JavaScript:</p>
+        <p>К одному элементу можно добавлять события разных типов:</p>
+
         <div class="w3-example">
             <h3>Пример</h3>
-            <p>Назначьте событие onclick элементу кнопки:</p>
-            <div class="w3-code notranslate htmlHigh">
-                &lt;script&gt;<br>
-                document.getElementById(&quot;myBtn&quot;).onclick = displayDate;<br>
-                &lt;/script&gt;
-            </div>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_events2.html">Попробуйте сами &raquo;</a>
+            <div class="w3-code notranslate jsHigh">
+                <em>element</em>.addEventListener(&quot;mouseover&quot;, myFunction);<br>
+                <em>element</em>.addEventListener(&quot;click&quot;, mySecondFunction);<br>
+                <em>element</em>.addEventListener(&quot;mouseout&quot;, myThirdFunction);</div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_add_many2.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
-        <p>В приведенном выше примере функция с именем <code class="w3-codespan">displayDate</code> назначается элементу HTML с <code class="w3-codespan">id=&quot;myBtn&quot;</code>.</p>
-        <p>Функция будет выполнена при нажатии кнопки.</p>
         <hr>
         <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>События onload и onunload</h2>
-        <p>События <code class="w3-codespan">onload</code> и <code class="w3-codespan">onunload</code> запускаются, когда пользователь входит или покидает страницу.</p>
-        <p>Событие <code class="w3-codespan">onload</code> можно использовать для проверки типа браузера посетителя и его версии, а также для загрузки правильной версии веб-страницы на основе информации.</p>
-        <p>События <code class="w3-codespan">onload</code> и <code class="w3-codespan">onunload</code> могут использоваться для работы с файлами cookie.</p>
+</div>
+        <h2>Добавить обработчик событий в объект окна</h2>
+        <p>Метод <code class="w3-codespan">addEventListener()</code> позволяет добавлять прослушиватели событий к любому объекту HTML DOM, например элементам HTML, документу HTML, объекту окна или другим объектам, которые поддерживают события, как объект <code class="w3-codespan">xmlHttpRequest</code>.</p>
+
         <div class="w3-example">
             <h3>Пример</h3>
-            <div class="w3-code notranslate htmlHigh">
-                &lt;body onload=&quot;checkCookies()&quot;&gt;
+            <p>Добавить прослушиватель событий, который запускается, когда пользователь изменяет размер окна:</p>
+            <div class="w3-code notranslate jsHigh">
+                window.addEventListener(&quot;resize&quot;, function(){<br>
+                &nbsp;&nbsp;document.getElementById("demo").innerHTML = <em>sometext</em>;<br>});
             </div>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_events_onload.html">Попробуйте сами &raquo;</a>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_dom.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
         <hr>
 
-        <h2>Событие onchange</h2>
-        <p>Событие <code class="w3-codespan">onchange</code> часто используется в сочетании с проверкой полей ввода.</p>
-        <p>Ниже приведен пример использования onchange. Функция <code class="w3-codespan">upperCase()</code> будет вызываться, когда пользователь изменяет содержимое поля ввода.</p>
-
+        <h2>Передача параметров</h2>
+        <p>При передаче значений параметров используйте &quot;анонимную функцию&quot;, которая вызывает указанную функцию с параметрами:</p>
         <div class="w3-example">
             <h3>Пример</h3>
-            <div class="w3-code notranslate htmlHigh">
-                &lt;input type=&quot;text&quot; id=&quot;fname&quot;
-                onchange=&quot;upperCase()&quot;&gt;</div>
-            <a target="_blank" href="../jstryit/tryjs_events_onchange.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+            <div class="w3-code notranslate jsHigh">
+                <em>element</em>.addEventListener(&quot;click&quot;, function(){ myFunction(p1, p2); });
+            </div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_parameters.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
         </div>
         <hr>
         <div class="adver">
@@ -659,62 +625,71 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>События onmouseover и onmouseout</h2>
-        <p>События <code class="w3-codespan">onmouseover</code> и <code class="w3-codespan">onmouseout</code> могут использоваться для запуска функции, когда пользователь наводит указатель мыши или убирает его с HTML-элемента:</p>
+</div>
+        <h2>Всплывающие события или захват событий?</h2>
+        <p>Есть два способа распространения событий в HTML DOM: всплывание и захватывание.</p>
+        <p>Распространение событий - это способ определения порядка элементов при возникновении события. Если у вас есть <code>&lt;p&gt;</code> элемент внутри <code>&lt;div&gt;</code> элемента, и пользователь кликает на <code>&lt;p&gt;</code> элемент, для какого событие &quot;click&quot; должно быть обработано в первую очередь?</p>
+        <p>Во <em>всплытии</em> сначала обрабатывается событие самого внутреннего элемента, а затем внешнее: сначала обрабатывается событие клика <code>&lt;p&gt;</code> элемента, затем событие клика <code>&lt;div&gt;</code> элемента.</p>
+        <p>При <em>захвате</em> сначала обрабатывается событие самого внешнего элемента, а затем внутреннее: сначала будет обработано событие клика <code>&lt;div&gt;</code> элемента, а затем событие клика <code>&lt;p&gt;</code> элемента.</p>
+        <p>С помощью метода addEventListener() вы можете указать тип распространения, используя параметр &quot;useCapture&quot;:</p>
 
-        <div class="w3-padding w3-xxlarge w3-red"
-             onmouseover="this.innerHTML='Спасибо'"
-             onmouseout="this.innerHTML='Наведите мышь'">
-            Наведите мышь
-        </div>
-        <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_events_mouseover.html">Попробуйте сами &raquo;</a></p>
-        <hr>
-
-        <h2>События onmousedown, onmouseup и onclick</h2>
-        <p>События <code class="w3-codespan">onmousedown</code>, <code class="w3-codespan">onmouseup</code> и <code class="w3-codespan">onclick</code> - это все части клика мышью. Сначала, когда нажимается кнопка мыши, запускается событие onmousedown, затем, когда кнопка мыши отпускается, запускается событие onmouseup, наконец, когда нажатие мыши завершается, запускается событие onclick.</p>
-
-        <div class="w3-padding w3-red w3-xxlarge notranslate "
-             onmousedown="mDown(this)"
-             onmouseup="mUp(this)">
-            Кликни меня
+        <div class="w3-code w3-border notranslate">
+            <div>
+                addEventListener(<em>event</em>, <em>function</em>, <span class="marked"><em>useCapture</em></span>);
+            </div>
         </div>
 
-        <script type="application/javascript">
-            function mDown(obj)
-            {
-                obj.style.backgroundColor="#1ec5e5";
-                obj.innerHTML="Отпусти меня"
-            }
-            function mUp(obj)
-            {
-                obj.style.backgroundColor="#D94A38";
-                obj.innerHTML="Спасибо"
-            }
-        </script>
-        <p><a target="_blank" class="w3-btn" href="../jstryit/tryjs_events_mousedown.html">Попробуйте сами &raquo;</a></p>
+        <p>Значение по умолчанию - <b>false</b>, которое будет использовать всплывающее распространение, когда значение установлено в <b>true</b>, событие использует распространение захватывания.</p>
+        <div class="w3-example">
+            <h3>Пример</h3>
+            <div class="w3-code notranslate jsHigh">
+                document.getElementById("myP").addEventListener(&quot;click&quot;, myFunction, true);<br>
+                document.getElementById("myDiv").addEventListener(&quot;click&quot;, myFunction, true);
+            </div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_usecapture.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        </div>
         <hr>
         <div class="adver">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Больше примеров</h2>
-        <p><a href="../jstryit/tryjs_event_onmousedown.html" target="_blank">onmousedown и onmouseup</a><br>
-            Изменить изображение, когда пользователь удерживает кнопку мыши.</p>
-        <p><a href="../jstryit/tryjs_event_onload.html" target="_blank">onload</a><br>
-            Отображать окно предупреждения, когда страница завершила загрузку.</p>
-        <p><a href="../jstryit/tryjs_event_onfocus.html" target="_blank">onfocus</a><br>
-            Изменить цвет фона поля ввода, когда оно окажется в фокусе.</p>
-        <p><a href="../jstryit/tryjs_event_onmouse.html" target="_blank">События мыши</a><br>
-            Изменить цвет элемента при наведении на него курсора.</p>
+</div>
+        <h2>Метод removeEventListener()</h2>
+        <p>Метод <code class="w3-codespan">removeEventListener()</code> удаляет обработчики событий, которые были прикреплены с помощью метода addEventListener():</p>
+        <div class="w3-example">
+            <h3>Пример</h3>
+            <div class="w3-code notranslate jsHigh">
+                <em>element</em>.removeEventListener(&quot;mousemove&quot;, myFunction);</div>
+            <a target="_blank" href="../jstryit/tryjs_addeventlistener_remove.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+        </div>
         <hr>
 
-        <h2>Справочник по объекту события HTML DOM</h2>
+        <h2>Справка по объекту события HTML DOM</h2>
         <p>Список всех событий HTML DOM смотрите в полном <a href="../jsref/dom_obj_event.html">Справочнике по объектам событий HTML DOM</a> на нашем сайте <a href='../index.html'><strong>W3Schools на русском</strong></a>.</p>
         <hr>
+        <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html9" method="post" target="_blank">
+            <h2 class="shadow-black-1">Проверьте себя с помощью упражнений</h2>
+            <div class="exercisewindow">
+                <h2>Упражнение:</h2>
+                <p>Используйте <code class="w3-codespan">eventListener</code> чтобы назначить событие onclick элементу <code class="w3-codespan">&lt;button&gt;</code>.</p>
+                <div class="exerciseprecontainer">
+<pre>
+&lt;button id="demo"&gt;&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("demo").<input name="ex1" maxlength="16" style="width:164px;">("<input name="ex2" maxlength="5" style="width:55px;">", myFunction);
+&lt;/script&gt;
+</pre>
+                </div>
+                <br>
+                <button type="submit" class="w3-btn w3-margin-bottom">Отправить ответ &raquo;</button>
+            </div>
+        </form>
+        <hr>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="js_htmldom_animate.html">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="js_htmldom_eventlistener.html">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="js_htmldom_events.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_htmldom_navigation.html">Next &#10095;</a>
         </div>
     </article>
 <div class="adver">
