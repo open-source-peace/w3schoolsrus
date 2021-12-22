@@ -11,8 +11,8 @@
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
-<title>JavaScript Window Screen. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='JavaScript Window Screen. Width. Height. Available Width. Available Height. Color Depth. Pixel Depth. For modern computers, Color Depth and Pixel Depth are equal. Lessons for beginners. W3Schools in English'>
+<title>JavaScript Window Location. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='JavaScript Window Location. Location Href. Location Hostname. Location Pathname. Location Protocol. Location Port. Location Assign. Lessons for beginners. W3Schools in English'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
@@ -505,74 +505,49 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools in English. Lessons for beginners' class='w3-left w3-padding' title='JavaScript for beginners. W3Schools in English' style='width: 120px'></a>
 
 <p class='w3-right'>
-    <a href='js_window_screen.html' title='Go to Russian language'>Ru</a>
-    <a href="https://w3schoolsua.github.io/js/js_window_screen.html" target='_blank' title='Go to Ukrainian language'>Ua</a>
+    <a href='js_window_location.html' title='Go to Russian language'>Ru</a>
+    <a href="https://w3schoolsua.github.io/js/js_window_location.html" target='_blank' title='Go to Ukrainian language'>Ua</a>
 </p>
 <article>
-    <h1>JavaScript <span class="color_h1">Window Screen</span></h1>
+    <h1>JavaScript <span class="color_h1">Window Location</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_window_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_window_location_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_window_screen_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_window_history_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">The window.screen object contains information about the user's screen.</p>
+    <p class="intro">The <code class="w3-codespan">window.location</code> object can be used to get the current page address (URL) and to redirect the browser to a new page.</p>
     <hr>
 
-    <h2>Window Screen</h2>
-    <p>The <code class="w3-codespan">window.screen</code> object can be written without the window prefix.</p>
-    <p>Properties:</p>
+    <h2>Window Location</h2>
+    <p>The <code class="w3-codespan">window.location</code> object can be written without the window prefix.</p>
+    <p>Some examples:</p>
     <ul>
-        <li><code class="w3-codespan">screen.width</code></li>
-        <li><code class="w3-codespan">screen.height</code></li>
-        <li><code class="w3-codespan">screen.availWidth</code></li>
-        <li><code class="w3-codespan">screen.availHeight</code></li>
-        <li><code class="w3-codespan">screen.colorDepth</code></li>
-        <li><code class="w3-codespan">screen.pixelDepth</code></li>
+        <li><code class="w3-codespan">window.location.href</code> returns the href (URL) of the current page</li>
+        <li><code class="w3-codespan">window.location.hostname</code> returns the domain name of the web host</li>
+        <li><code class="w3-codespan">window.location.pathname</code> returns the path and filename of the current page</li>
+        <li><code class="w3-codespan">window.location.protocol</code> returns the web protocol used (http: or https:)</li>
+        <li><code class="w3-codespan">window.location.assign()</code> loads a new document</li>
     </ul>
     <hr>
-    <div class="adver">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
-    <!-- AdInFeed -->
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Window Screen Width</h2>
-    <p>The <code class="w3-codespan">screen.width</code> property returns the width of the visitor's screen in pixels.</p>
+
+    <h2>Window Location Href</h2>
+    <p>The <code class="w3-codespan">window.location.href</code> property returns the URL of the current page.</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <p>Display the width of the screen in pixels:</p>
+        <p>Display the href (URL) of the current page:</p>
         <div class="w3-code notranslate jsHigh">
-            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Screen Width: &quot; + screen.width;<br>
+            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Page location is &quot; + window.location.href;<br>
         </div>
-        <p>Result will be:</p>
-        <div class="w3-white w3-padding notranslate">
+        <p>Result is:</p>
+        <div class="w3-white w3-padding notranslate" style="overflow:auto;">
             <code>
                 <script>
-                    document.write("Screen Width: " + screen.width);
+                    document.write("Page location is " + location.href);
                 </script>
             </code>
+            <br>
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top"  href="../jstryit/tryjs_screen_width.html">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-
-    <h2>Window Screen Height</h2>
-    <p>The <code class="w3-codespan">screen.height</code> property returns the height of the visitor's screen in pixels.</p>
-
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Display the height of the screen in pixels:</p>
-        <div class="w3-code notranslate jsHigh">
-            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Screen Height: &quot; + screen.height;<br>
-        </div>
-        <p>Result will be:</p>
-        <div class="w3-white w3-padding notranslate">
-            <code>
-                <script>
-                    document.write("Screen Height: " + screen.height);
-                </script>
-            </code>
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_screen_height.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_loc_href.html">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <div class="adver">
@@ -580,44 +555,42 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Window Screen Available Width</h2>
-    <p>The <code class="w3-codespan">screen.availWidth</code> property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.</p>
+</div>    <h2>Window Location Hostname</h2>
+    <p>The <code class="w3-codespan">window.location.hostname</code> property returns the name of the internet host (of the current page).</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <p>Display the available width of the screen in pixels:</p>
+        <p>Display the name of the host:</p>
         <div class="w3-code notranslate jsHigh">
-            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Available Screen Width: &quot; + screen.availWidth;<br>
-        </div>
-        <p>Result will be:</p>
+            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Page hostname is &quot; + window.location.hostname;</div>
+        <p>Result is:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
-                    document.write("Available Screen Width: " + screen.availWidth);
+                    document.write("Page hostname is " + location.hostname);
                 </script>
             </code>
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_screen_availwidth.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_loc_host.html">Try it Yourself &raquo;</a>
     </div>
     <hr>
 
-    <h2>Window Screen Available Height</h2>
-    <p>The <code class="w3-codespan">screen.availHeight</code> property returns the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.</p>
-
+    <h2>Window Location Pathname</h2>
+    <p>The <code class="w3-codespan">window.location.pathname</code> property returns the pathname of the current page.</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <p>Display the available height of the screen in pixels:</p>
+        <p>Display the path name of the current URL:</p>
         <div class="w3-code notranslate jsHigh">
-            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Available Screen Height: &quot; + screen.availHeight;<br>
+            document.getElementById(&quot;demo&quot;).innerHTML =<br>"Page path is " + window.location.pathname;
         </div>
-        <p>Result will be:</p>
+        <p>Result is:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
-                    document.write("Available Screen Height: " + screen.availHeight);
+                    document.write("Page path is " + location.pathname);
                 </script>
             </code>
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_screen_availheight.html">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_loc_pathname.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <div class="adver">
@@ -625,34 +598,46 @@
     <!-- udup_content_media_horizontally -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Window Screen Color Depth</h2>
-    <p>The <code class="w3-codespan">screen.colorDepth</code> property returns the number of bits used to display one color.</p>
-    <p>All modern computers use 24 bit or 32 bit hardware for color resolution:</p>
-    <ul>
-        <li>24 bits =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16,777,216 different &quot;True Colors&quot;</li>
-        <li>32 bits = 4,294,967,296 different &quot;Deep Colors&quot;</li>
-    </ul>
-    <p>Older computers used 16 bits: 65,536 different &quot;High Colors&quot; resolution.</p>
-    <p>Very old computers, and old cell phones used 8 bits: 256 different &quot;VGA colors&quot;.</p>
+</div>    <h2>Window Location Protocol</h2>
+    <p>The <code class="w3-codespan">window.location.protocol</code> property returns the web protocol of the page.</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <p>Display the color depth of the screen in bits:</p>
+        <p>Display the web protocol:</p>
         <div class="w3-code notranslate jsHigh">
-            document.getElementById(&quot;demo&quot;).innerHTML = <br>&quot;Screen Color Depth: &quot; + screen.colorDepth;<br>
+            document.getElementById(&quot;demo&quot;).innerHTML =<br>"Page protocol is " + window.location.protocol;
         </div>
-        <p>Result will be:</p>
+        <p>Result is:</p>
         <div class="w3-white w3-padding notranslate">
             <code>
                 <script>
-                    document.write("Screen Color Depth: " + screen.colorDepth);
+                    document.write("Page protocol is " + location.protocol);
                 </script>
             </code>
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_screen_colorDepth.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_loc_protocol.html">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Window Location Port</h2>
+    <p>The <code class="w3-codespan">window.location.port</code> property returns the number of the internet host port (of the current page).</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <p>Display the name of the host:</p>
+        <div class="w3-code notranslate jsHigh">
+            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Port number is &quot; + window.location.port;</div>
+        <p>Result is:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>
+                <script>
+                    document.write("Port number is " + location.port);
+                </script>
+            </code>
+        </div>
+        <a class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_loc_port.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
 
     <div class="w3-panel w3-note">
-        <p>The #rrggbb (rgb) values used in HTML represents &quot;True Colors&quot; (16,777,216 different colors)</p>
+        <p>Most browsers will not display default port numbers (80 for http and 443 for https)</p>
     </div>
     <hr>
     <div class="adver">
@@ -660,32 +645,32 @@
     <!-- AdInFeed -->
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Window Screen Pixel Depth</h2>
-    <p>The <code class="w3-codespan">screen.pixelDepth</code> property returns the pixel depth of the screen.</p>
+</div>
+    <h2>Window Location Assign</h2>
+    <p>The <code class="w3-codespan">window.location.assign()</code> method loads a new document.</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <p>Display the pixel depth of the screen in bits:</p>
-        <div class="w3-code notranslate jsHigh">
-            document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Screen Pixel Depth: &quot; + screen.pixelDepth;<br>
+        <p>Load a new document:</p>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;html&gt;<br>
+            &lt;head&gt;<br>
+            &lt;script&gt;<br>
+            function newDoc()&nbsp;{<br>&nbsp; window.location.assign(&quot;https://www.w3schools.com&quot;)<br>
+            }<br>
+            &lt;/script&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br><br>
+            &lt;input type=&quot;button&quot; value=&quot;Load new document&quot;
+            onclick=&quot;newDoc()&quot;&gt;<br><br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
         </div>
-        <p>Result will be:</p>
-        <div class="w3-white w3-padding notranslate">
-            <code>
-                <script>
-                    document.write("Screen Pixel Depth: " + screen.pixelDepth);
-                </script>
-            </code>
-        </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_screen_pixelDepth.html">Try it Yourself &raquo;</a>
-    </div>
-
-    <div class="w3-panel w3-note">
-        <p>For modern computers, Color Depth and Pixel Depth are equal.</p>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_loc_assign.html">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_window_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_window_location_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_window_screen_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_window_history_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">
