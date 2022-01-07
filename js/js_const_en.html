@@ -11,10 +11,9 @@
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
-<title>JavaScript The let keyword. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='JavaScript The let keyword. Cannot be Redeclared. Block Scope. Redeclaring Variables. Browser Support. Let Hoisting. Lessons for beginners. W3Schools in English'>
-<link rel="stylesheet" href="../styles/browserref.css">
-
+<title>JavaScript The const keyword. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='JavaScript The const keyword. Cannot be Reassigned. Must be Assigned. When to use JavaScript const? Constant Objects and Arrays. Constant Arrays. Constant Objects. Browser Support. Redeclaring. Const Hoisting. Lessons for beginners. W3Schools in English'>
+    <link rel="stylesheet" href="../styles/browserref.css">
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS
@@ -506,124 +505,138 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools in English. Lessons for beginners' class='w3-left w3-padding' title='JavaScript for beginners. W3Schools in English' style='width: 120px'></a>
 
 <p class="w3-right">
-    <a href="js_let.html" title="Go to Russian language">Ru</a>
-    <a href="https://w3schoolsua.github.io/js/js_let.html" target="_blank" title="Go to Ukrainian language">Ua</a>
+    <a href="js_const.html" title="Go to Russian language">Ru</a>
+    <a href="https://w3schoolsua.github.io/js/js_const.html" target="_blank" title="Go to Ukrainian language">Ua</a>
 </p>
 <article>
-    <h1>JavaScript Let</h1>
+    <h1>JavaScript <span class="color_h1">Const</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_variables_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_const_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_let_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_operators_en.html">Next &#10095;</a>
     </div>
 
     <div class="w3-info">
-        <p>The <code class="w3-codespan">let</code> keyword was introduced in <a href="js_es6_en.html">ES6 (2015)</a>.</p>
-        <p>Variables defined with <code class="w3-codespan">let</code> cannot be Redeclared.</p>
-        <p>Variables defined with <code class="w3-codespan">let</code> must be Declared before use.</p>
-        <p>Variables defined with <code class="w3-codespan">let</code> have Block Scope.</p>
+        <p>The <code class="w3-codespan">const</code> keyword was introduced in <a href="js_es6_en.html">ES6 (2015)</a>.</p>
+        <p>Variables defined with <code class="w3-codespan">const</code> cannot be Redeclared.</p>
+        <p>Variables defined with <code class="w3-codespan">const</code> cannot be Reassigned.</p>
+        <p>Variables defined with <code class="w3-codespan">const</code> have Block Scope.</p>
     </div>
 
-    <h2>Cannot be Redeclared</h2>
-    <p>Variables defined with <code class="w3-codespan">let</code> cannot be <b>redeclared</b>.</p>
-    <p>You cannot accidentally redeclare a variable.</p>
-    <p>With <code class="w3-codespan">let</code> you can not do this:</p>
+    <h2>Cannot be Reassigned</h2>
+    <p>A <code class="w3-codespan">const</code> variable cannot be reassigned:</p>
+
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = "John Doe";<br><br>
-            let x = 0;<br><br>
-            // SyntaxError: 'x' has already been declared<br>
+            const PI = 3.141592653589793;<br>
+            PI = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will give an error<br>
+            PI = PI + 10;&nbsp;&nbsp; // This will also give an error
         </div>
-    </div>
-    <p>With <code class="w3-codespan">var</code> you can:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            var x = "John Doe";<br><br>
-            var x = 0;
-        </div>
-    </div>
-    <hr>
-    <div class="adver">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
-    <!-- AdInFeed -->
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Block Scope</h2>
-    <p>Before ES6 (2015), JavaScript had only <b>Global Scope</b> and <b>Function Scope</b>.</p>
-    <p>ES6 introduced two important new JavaScript keywords: <code class="w3-codespan">let</code> and <code class="w3-codespan">const</code>.</p>
-    <p>These two keywords provide <strong>Block Scope</strong> in JavaScript.</p>
-    <p>Variables declared inside a { } block cannot be accessed from outside the block:</p>
-
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            { <br>
-            &nbsp;&nbsp;let x = 2;<br>
-            }<br>
-            // x can NOT be used here</div>
-    </div>
-
-    <p>Variables declared with the <code class="w3-codespan">var</code> keyword can NOT have block scope.</p>
-    <p>Variables declared inside a { } block can be accessed from outside the block.</p>
-
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            { <br>
-            &nbsp;&nbsp;var x = 2; <br>
-            }<br>
-            // x CAN be used here</div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_value.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
 
-    <h2>Redeclaring Variables</h2>
-    <p>Redeclaring a variable using the <code class="w3-codespan">var</code> keyword can impose problems.</p>
-    <p>Redeclaring a variable inside a block will also redeclare the variable outside the block:</p>
-
+    <h2>Must be Assigned</h2>
+    <p>JavaScript <code class="w3-codespan">const</code> variables must be assigned a value when they are declared:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Correct</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 10;<br>
-            // Here x is 10<br>
-            <br>
-            { <br>
-            var x = 2;<br>
-            // Here x is 2<br>}<br>
-            <br>
-            // Here x is 2</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_var.html" target="_blank">Try it Yourself &raquo;</a>
-    </div>
-
-    <p>Redeclaring a variable using the <code class="w3-codespan">let</code> keyword can solve this problem.</p>
-    <p>Redeclaring a variable inside a block will not redeclare the variable outside the block:</p>
-
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            let x = 10;<br>
-            // Here x is 10<br>
-            <br>
-            {<br>
-            let x = 2;<br>
-            // Here x is 2<br>}<br>
-            <br>
-            // Here x is 10
+            const PI = 3.14159265359;<br>
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_es6_let.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <div class="w3-example w3-pale-red">
+        <h3>Incorrect</h3>
+        <div class="w3-code notranslate jsHigh w3-border-red">
+            const PI;<br>
+            PI = 3.14159265359;<br>
+        </div>
+    </div>
+    <div class="w3-note">
+        <h2>When to use JavaScript const?</h2>
+        <p>As a general rule, always declare a variable with <code class="w3-codespan">const</code> unless you know that the value will change.</p>
+        <p>Use <code class="w3-codespan">const</code> when you declare:</p>
+        <ul>
+            <li>A new Array</li>
+            <li>A new Object</li>
+            <li>A new Function</li>
+            <li>A new RegExp</li>
+        </ul>
     </div>
     <hr>
-    <div class="adver">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
-    <!-- AdInFeed -->
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Browser Support</h2>
-    <p>The <code class="w3-codespan">let</code> keyword is not fully supported in Internet Explorer 11 or earlier.</p>
-    <p>The following table defines the first browser versions with full support for the <code class="w3-codespan">let</code> keyword:</p>
+
+    <h2>Constant Objects and Arrays</h2>
+    <p>The keyword <code class="w3-codespan">const</code> is a little misleading.</p>
+    <p>It does not define a constant value. It defines a constant reference to a value.</p>
+    <p>Because of this you can NOT:</p>
+    <ul>
+        <li>Reassign a constant value</li>
+        <li>Reassign a constant array</li>
+        <li>Reassign a constant object</li>
+    </ul>
+    <p>But you CAN:</p>
+    <ul>
+        <li>Change the elements of constant array</li>
+        <li>Change the properties of constant object</li>
+    </ul>
+    <hr>
+
+    <h2>Constant Arrays</h2>
+    <p>You can change the elements of a constant array:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+            // You can create a constant array:<br>
+            const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br><br>
+            // You can change an element:<br>
+            cars[0] = &quot;Toyota&quot;;<br><br>
+            // You can add an element:<br>
+            cars.push(&quot;Audi&quot;);<br>
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_array.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <p>But you can NOT reassign the array:</p>
+
+    <div class="w3-example  w3-pale-red">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh w3-border-red">
+            const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br><br>
+            cars = [&quot;Toyota&quot;, &quot;Volvo&quot;, &quot;Audi&quot;];&nbsp;&nbsp;&nbsp; // ERROR
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_array_assign.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Constant Objects</h2>
+    <p>You can change the properties of a constant object:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+            // You can create a const object:<br>
+            const car = {type:"Fiat", model:"500", color:"white"};<br><br>
+            // You can change a property:<br>
+            car.color = "red";<br><br>
+            // You can add a property:<br>
+            car.owner = "Johnson";</div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_object.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+
+    <p>But you can NOT reassign the object:</p>
+    <div class="w3-example w3-pale-red">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh w3-border-red">
+            const car = {type:"Fiat", model:"500", color:"white"};<br><br>
+            car = {type:"Volvo", model:"EX60", color:"red"};&nbsp;&nbsp;&nbsp; // ERROR
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_object_assign.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Browser Support</h2>
+    <p>The <code class="w3-codespan">const</code> keyword is not supported in Internet Explorer 10 or earlier.</p>
+    <p>The following table defines the first browser versions with full support for the <code class="w3-codespan">const</code> keyword:</p>
     <div class="w3-responsive">
         <table class="browserref notranslate">
-            <tr>
+            <tbody><tr style="height:50px;">
                 <th style="width:20%;" class="bsChrome" title="Chrome"></th>
                 <th style="width:20%;" class="bsEdge" title="Edge"></th>
                 <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
@@ -632,73 +645,98 @@
             </tr>
             <tr>
                 <td>Chrome 49</td>
-                <td>Edge 12</td>
-                <td>Firefox 44</td>
-                <td>Safari 11</td>
+                <td>IE 11 / Edge</td>
+                <td>Firefox 36</td>
+                <td>Safari 10</td>
                 <td>Opera 36</td>
             </tr>
             <tr>
                 <td>Mar, 2016</td>
-                <td>Jul, 2015</td>
-                <td>Jan, 2015</td>
-                <td>Sep, 2017</td>
+                <td>Oct, 2013</td>
+                <td>Feb, 2015</td>
+                <td>Sep, 2016</td>
                 <td>Mar, 2016</td>
-            </tr>
+            </tr></tbody>
         </table>
     </div>
     <hr>
 
+    <h2>Block Scope</h2>
+    <p>Declaring a variable with <code class="w3-codespan">const</code> is similar to <code class="w3-codespan">let</code> when it comes to <strong>Block Scope</strong>.</p>
+    <p>The x declared in the block, in this example, is not the same as the x declared outside the block:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+            const x = 10;<br>
+            // Here x is 10<br><br>
+            { <br>
+            const x = 2;<br>
+            // Here x is 2<br>}<br><br>
+            // Here x is 10
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <p>You can learn more about block scope in the chapter <a href="js_scope_en.html">JavaScript Scope</a>.</p>
+    <hr>
+
     <h2>Redeclaring</h2>
-    <p>Redeclaring a JavaScript variable with <code class="w3-codespan">var</code> is allowed anywhere in a program:</p>
-
+    <p>Redeclaring a JavaScript <code class="w3-codespan">var</code> variable is allowed anywhere in a program:</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 2;<br>
-            // Now x is 2<br><br>
-            var x = 3;<br>
-            // Now x is 3
+            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
+            var x = 3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
+            x = 4;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_redeclare_var.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
-    <p>With <code class="w3-codespan">let</code>, redeclaring a variable in the same block is NOT allowed:</p>
+    <p>Redeclaring an existing <code class="w3-codespan">var</code> or <code class="w3-codespan">let</code> variable to <code class="w3-codespan">const</code>, in the same scope, is not allowed:</p>
 
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh">
-            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            let x = 3;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
-            <br>
+            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br><br>
             {<br>
-            let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            let x = 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
-            }<br>
-            <br>
+            let x = 2;&nbsp; &nbsp;&nbsp; // Allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>}<br><br>
             {<br>
-            let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            var x = 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
-            }<br>
+            const x = 2;&nbsp;&nbsp; // Allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>}
         </div>
     </div>
 
-    <p>Redeclaring a variable with <code class="w3-codespan">let</code>, in another block, IS allowed:</p>
-
+    <p>Reassigning an existing <code class="w3-codespan">const</code> variable, in the same scope, is not allowed:</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh">
-            let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br><br>{<br>
-            let x = 3;&nbsp;&nbsp;&nbsp; // Allowed<br>
-            }<br>
-            <br>
-            {<br>
-            let x = 4;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
-            }</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_redeclare.html" target="_blank">Try it Yourself &raquo;</a>
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
+            x = 2;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            var x = 2;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            let x = 2;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br><br>{<br>&nbsp;
+            const x = 2;&nbsp;&nbsp; // Allowed<br>
+            &nbsp; x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            // Not allowed<br>&nbsp; var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;
+            // Not allowed<br>&nbsp; let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;
+            // Not allowed<br>&nbsp;
+            const x = 2;&nbsp;&nbsp;&nbsp;// Not allowed<br>}<br>
+        </div>
+    </div>
+
+    <p>Redeclaring a variable with <code class="w3-codespan">const</code>, in another scope, or in another block, is allowed:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Allowed<br><br>{<br>&nbsp;
+            const x = 3;&nbsp;&nbsp; // Allowed<br>
+            }<br><br>{<br>
+            &nbsp;&nbsp;const x = 4;&nbsp;&nbsp;&nbsp;// Allowed<br>}
+        </div>
     </div>
     <hr>
-    <h2>Let Hoisting</h2>
-    <p>Variables defined with <code class="w3-codespan">var</code> are <strong>hoisted</strong> to the top
-        and can be initialized at any time.
+
+    <h2>Const Hoisting</h2>
+    <p>Variables defined with <code class="w3-codespan">var</code> are <strong>hoisted</strong> to the top and can be initialized at any time.</p>
     <p>Meaning: You can use the variable before it is declared:</p>
     <div class="w3-example">
         <h3>Example</h3>
@@ -710,20 +748,20 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_hoisting_var.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <p>If you want to learn more about hoisting, study the chapter <a href="js_hoisting_en.html">JavaScript Hoisting</a>.
-
-    <p>Variables defined with <code class="w3-codespan">let</code> are also hoisted to the top of the block, but not initialized.</p>
-    <p>Meaning: Using a <code class="w3-codespan">let</code> variable before it is declared will result in a <code class="w3-codespan">ReferenceError</code>:</p>
+    <p>Variables defined with <code class="w3-codespan">const</code> are also hoisted to the top, but not initialized.</p>
+    <p>Meaning: Using a <code class="w3-codespan">const</code> variable before it is declared will result in a <code class="w3-codespan">ReferenceError</code>:</p>
     <div class="w3-example w3-pale-red">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh w3-border-red">
-            carName = &quot;Saab&quot;;<br>
-            let carName = "Volvo";</div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_hoisting_let.html" target="_blank">Try it Yourself &raquo;</a>
+            alert (carName);<br>
+            const carName = &quot;Volvo&quot;;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_const_hoisting.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_variables_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_const_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_let_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_operators_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">
