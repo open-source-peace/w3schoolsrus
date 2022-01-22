@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools на русском предлагает бесплатные онлайн-уроки, учебные и справочные материалы, задачи и упражнения на большинстве языках программирования и создания веб-сайтов. Охватывает наиболее популярные технологии, такие как HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS и многие другие'>
 <!-- adauto-websunsey--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!-- / adauto-websunsey-->
-<title>JavaScript / jQuery CSS Стили. Уроки для начинающих. W3Schools на русском</title>
-<meta name='description' content='JavaScript / jQuery CSS Стили. CSS-стили JavaScript/jQuery. Скрытие HTML-элементов. Отображение HTML-элементов. Стилизация HTML-элементов с помощью JavaScript/jQuery. Уроки для начинающих. W3Schools на русском'>
+<title>JavaScript / jQuery HTML DOM. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='JavaScript / jQuery HTML DOM. Удаление элементов HTML. Получить родительский элемент. Примеры. Уроки для начинающих. W3Schools на русском'>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
@@ -499,38 +499,37 @@
 </div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
 
 <p class='w3-right'>
-    <a href='js_jquery_css_en.html' title='Перейти на английский язык'>En</a>
-    <a href="https://w3schoolsua.github.io/js/js_jquery_css.html" target='_blank' title='Перейти на украинский язык'>Ua</a>
+    <a href='js_jquery_dom_en.html' title='Перейти на английский язык'>En</a>
+    <a href="https://w3schoolsua.github.io/js/js_jquery_dom.html" target='_blank' title='Перейти на украинский язык'>Ua</a>
 </p>
     <article>
-        <h1>JavaScript / jQuery CSS Стили</h1>
+        <h1>JavaScript / jQuery HTML DOM</h1>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="js_jquery_elements.html">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="js_jquery_dom.html">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="js_jquery_css.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_graphics.html">Next &#10095;</a>
         </div>
         <hr>
-
         <h2>jQuery и JavaScript</h2>
         <p><strong><a href="../jquery/index.html">jQuery</a></strong> был создан в 2006 году Джоном Резигом. Он был разработан для обработки несовместимостей браузеров и упрощения манипулирования HTML DOM, обработки событий, анимации и Ajax.</p>
         <p>Уже более 10 лет <strong>jQuery</strong> является самой популярной библиотекой JavaScript в мире.</p>
         <p>Однако после <a href="js_es5.html">Версии 5</a> (2009 г.) большинство утилит <strong>jQuery</strong> можно решить с помощью нескольких строк стандартного кода JavaScript:</p>
         <hr>
 
-        <h2>Скрытие HTML-элементов</h2>
-        <p>Скрыть элемент HTML:</p>
+        <h2>Удаление элементов HTML</h2>
+        <p>Удалить элемент HTML:</p>
         <div class="w3-example">
             <h3>jQuery</h3>
             <div class="w3-code notranslate jsHigh">
-                myElement.hide();
+                $("#id02").remove();
             </div>
-            <a class="w3-btn" href="../jstryit/tryjs_jquery_hide.html" target="_blank">Попробуйте сами &raquo;</a>
+            <a class="w3-btn" href="../jstryit/tryjs_jquery_remove_element.html" target="_blank">Попробуйте сами &raquo;</a>
         </div>
         <div class="w3-example">
             <h3>JavaScript</h3>
             <div class="w3-code notranslate jsHigh">
-                myElement.style.display = &quot;none&quot;;
+                document.getElementById("id02").remove();
             </div>
-            <a class="w3-btn" href="../jstryit/tryjs_jquery_style_hide.html" target="_blank">Попробуйте сами &raquo;</a>
+            <a class="w3-btn" href="../jstryit/tryjs_jquery_dom_remove_element.html" target="_blank">Попробуйте сами &raquo;</a>
         </div>
         <hr>
         <div class="adver">
@@ -539,44 +538,26 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7d+da+12+1c+2v" data-ad-client="ca-pub-4060216941760396" data-ad-slot="8552527497"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-        <h2>Отображение HTML-элементов</h2>
-        <p>Показать элемент HTML:</p>
+        <h2>Получить родительский элемент</h2>
+        <p>Вернуть родительский элемент HTML-элемента:</p>
         <div class="w3-example">
             <h3>jQuery</h3>
             <div class="w3-code notranslate jsHigh">
-                myElement.show();
+                myParent = $("#02").parent.prop("nodeName"); ;
             </div>
-            <a class="w3-btn" href="../jstryit/tryjs_jquery_show.html" target="_blank">Попробуйте сами &raquo;</a>
+            <a class="w3-btn" href="../jstryit/tryjs_jquery_getparent.html" target="_blank">Попробуйте сами &raquo;</a>
         </div>
         <div class="w3-example">
             <h3>JavaScript</h3>
             <div class="w3-code notranslate jsHigh">
-                myElement.style.display = &quot;&quot;;
+                myParent = document.getElementById("02").parentNode.nodeName;
             </div>
-            <a class="w3-btn" href="../jstryit/tryjs_jquery_style_show.html" target="_blank">Попробуйте сами &raquo;</a>
-        </div>
-        <hr>
-
-        <h2>Стилизация HTML-элементов</h2>
-        <p>Изменить размер шрифта элемента HTML:</p>
-        <div class="w3-example">
-            <h3>jQuery</h3>
-            <div class="w3-code notranslate jsHigh">
-                $("#demo").css("font-size","35px");
-            </div>
-            <a class="w3-btn" href="../jstryit/tryjs_jquery_css.html" target="_blank">Попробуйте сами &raquo;</a>
-        </div>
-        <div class="w3-example">
-            <h3>JavaScript</h3>
-            <div class="w3-code notranslate jsHigh">
-                document.getElementById("demo").style.fontSize = "35px";
-            </div>
-            <a class="w3-btn" href="../jstryit/tryjs_jquery_style_css.html" target="_blank">Попробуйте сами &raquo;</a>
+            <a class="w3-btn" href="../jstryit/tryjs_jquery_dom_getparent.html" target="_blank">Попробуйте сами &raquo;</a>
         </div>
         <hr>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="js_jquery_elements.html">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="js_jquery_dom.html">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="js_jquery_css.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_graphics.html">Next &#10095;</a>
         </div>
     </article>
 <div class="adver">
