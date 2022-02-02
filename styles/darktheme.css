@@ -21,7 +21,8 @@ body.test_dark_1 #leftmenuinnerinner::-webkit-scrollbar-track {background:rgb(21
 body.test_dark_1 #leftmenuinnerinner::-webkit-scrollbar-thumb {background: #29353e;}
 body.test_dark_1 #leftmenuinnerinner {background-color:rgb(21,32,43);color:#ccc;}
 body.test_dark_1 #sidenav a.active_overview:link,body.test_dark_1 #sidenav a.active_overview:visited {background-color: #38444d;color:#ddd;}
-body.test_dark_1 .tut_overview {background-color: #38444d;}
+body.test_dark_1 .tut_overview {background-color: #38444d;color:#fff;}
+body.test_dark_1 .w3-light-grey {background-color: #1d2a35;color:#fff;}
 body.test_dark_1 #footer {border-top: 1px solid #38444d;background-color: #1d2a35;padding: 32px;}
 body.test_dark_1 .ws-grey {background-color: #38444d!important;color: #ddd!important;}
 body.test_dark_1 #getdiploma {background-color: rgb(13,23,33)!important;}

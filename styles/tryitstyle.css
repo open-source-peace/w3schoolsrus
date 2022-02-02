@@ -71,10 +71,12 @@ a.w3schoolslink:hover, a.w3schoolslink:active {text-decoration: underline !impor
 #iframewrapper {}
 body.darktheme {background-color: rgb(40, 44, 52);}
 body.darktheme #tryitLeaderboard {background-color: rgb(40, 44, 52);}
-body.darktheme .trytopnav {background-color: #616161;color: #dddddd;}
+body.darktheme .trytopnav {background-color: #616161;color: #ddd;}
 body.darktheme #container {background-color: #616161;}
-body.darktheme .trytopnav a {color: #dddddd;}
+body.darktheme .trytopnav a {color: #ddd;}
 body.darktheme ::-webkit-scrollbar {width: 12px;height: 3px;}
 body.darktheme ::-webkit-scrollbar-track-piece {background-color: #000;}
 body.darktheme ::-webkit-scrollbar-thumb {height: 50px; background-color: #616161;}
-body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
+body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaa;}
+
+iframe {border: 0}
