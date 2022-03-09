@@ -14,13 +14,10 @@
     <link rel='stylesheet' href='styles/main.css'>
     <link rel='stylesheet' href='styles/140colors.css'>
     <link rel='stylesheet' href='styles/fa.css'>
-    <!--Google Ads-->
-    <script data-ad-client="ca-pub-4060216941760396" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script data-ad-client="ca-pub-6358227327561384" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!--/Google Ads-->
 </head>
 
 <body>
+    <!--
 <div class='w3-row w3-padding w3-hide-medium w3-hide-small'>
     <div class='w3-col s5 notranslate' style='margin:4px 0 6px 0'><a class='w3schools-logo' href='index.html'>W3schoolsRUS<span class='dotcom'>.на русском</span></a>
     </div>
@@ -35,10 +32,8 @@
     <div class='w3-center w3-wide w3-hide-small' style='margin:14px 0 -5px 0'>ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ</div>
 </div>
 
-<!--Top menu-->
 <div class="w3-bar w3-theme w3-card-2 w3-wide notranslate">
-    <!--script для верхнего меню при адаптиве-->
-    <a class='w3-bar-item w3-button w3-hover-white w3-padding-16 hidesm' href='javascript:void(0)' onclick='w3_open()'><i class='fa fa-bars'></i></a> <!--/end script-->
+    <a class='w3-bar-item w3-button w3-hover-white w3-padding-16 hidesm' href='javascript:void(0)' onclick='w3_open()'><i class='fa fa-bars'></i></a>
     <a class='w3-bar-item w3-button barex w3-hover-white w3-padding-16' href='javascript:void(0)' onclick="w3_open_nav('tutorials')" id='navbtn_tutorials'>УЧЕБНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
     <a class='w3-bar-item w3-button barex w3-hover-white w3-padding-16' href='javascript:void(0)' onclick="w3_open_nav('references')" id='navbtn_references'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
     <a class='w3-bar-item w3-button barex w3-hover-white w3-padding-16' href='javascript:void(0)' onclick="w3_open_nav('examples')" id='navbtn_examples'>ПРИМЕРЫ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
@@ -47,9 +42,7 @@
     <a class='w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-right' href='index_en.html'>En</a>
     <a class='w3-bar-item w3-button barex w3-hover-white w3-padding-16 w3-right' href='https://w3schoolsua.github.io/' target="_blank">Ua</a>
 </div>
-<!--/Top menu-->
 
-<!--menu left-sidebar-->
 <nav class='w3-sidebar w3-collapse aliceblue w3-card-2' id='mySidenav'>
     <div class='w3-bar-block'>
         <div class='w3-container'>
@@ -170,9 +163,7 @@
         <a class='w3-bar-item w3-button' href='bootstrap/bootstrap_exercises.html'>Bootstrap Упражнения</a>
     </div>
 </nav>
-<!--/menu left-sidebar-->
 
-<!--menu top при меньших экранах-->
 <div id='myAccordion' class='w3-card-2 w3-light-grey w3-center w3-hide-large' style='display:none;cursor:default'>
     <a href='javascript:void(0)' onclick='w3_close()' class='w3-button w3-xlarge w3-right'>&times;</a><br>
     <div class='w3-container w3-padding-32'>
@@ -192,9 +183,7 @@
         <a class='w3-button w3-block w3-large w3-wide' href='cert/index.html'>СЕРТИФИКАТЫ</a>
     </div>
 </div>
-<!--/menu top-->
 
-<!--раскрывающееся menu top-->
 <nav id="nav_tutorials" class="w3-dark-grey w3-card-2 w3-hide-small navex">
     <span onclick="w3_close_nav('tutorials')" class="w3-button w3-xlarge w3-display-topright barex">&times;</span><br>
     <div class='w3-row-padding w3-bar-block'>
@@ -478,16 +467,18 @@
     </div>
     <br class="hidesm">
 </nav>
-<!--/menu left-->
-<!-- MAIN -->
+
 <div class="w3-main" id="main">
     <div class='w3-panel w3-center w3-brown w3-padding-16'>
-        <!--<h1><strong>W3Schools на русском - </strong></h1> это образовательный сайт для начинающих веб-разработчиков, созданный на основе популярного сайта <a href="https://www.w3schools.com/" target="_blank" rel="nofollow">W3Schools.com</a> в переводе на русский язык,<br> адаптированный для русскоязычных пользователей, с дополнительными материалами и объяснениями.<br>Также вы можете перейти на
+        <h1><strong>W3Schools на русском - </strong></h1> это образовательный сайт для начинающих веб-разработчиков, созданный на основе популярного сайта <a href="https://www.w3schools.com/" target="_blank" rel="nofollow">W3Schools.com</a> в переводе на русский язык,<br> адаптированный для русскоязычных пользователей, с дополнительными материалами и объяснениями.<br>Также вы можете перейти на
         <a href="https://w3schoolsua.github.io/" target="_blank">украиноязычную (Ua)</a> или <a href="index_en.html">англоязычную (En)</a> версию сайта.-->
-        <h1><strong>Русский солдат - УХОДИ С УКРАИНЫ!</strong></h1>
+        <h1 class="w3-center"><strong>Русский солдат - УХОДИ С УКРАИНЫ!</strong></h1>
         <p>24 февраля Россия вторглась в Украину. Началась война. Российские войска начали обстреливать территорию Украины ракетами, артиллерией, "Градами", "Смерчами", "Ураганами", бомбить авиацией.</p>
         <p>Большинство ударов наносится по жилым кварталам крупных украинских городов: Киева, Харькова, Сум, Мариуполя, Херсона. В Луганской области почти полностью стёрты с лица земли многие населенные пункты. Продолжаются бомбёжки городов Луганщины: Северодонецка, Лисичанска, Рубежного. Уничтожается мирное население.</p>
-        <p>Россияне! Вас обманывают российские СМИ! Россия ведет полномасштабную войну против народа Украины. Украинская армия защищает украинцев и противостоит российской агрессии. Уже погибло более 11 тысяч российских солдат. Матери России! Заберите своих сыновей с Украины!!!</p>
+        <p>Россияне! Вас обманывают российские СМИ! Россия ведёт полномасштабную войну против народа Украины. Украинская армия защищает украинцев и противостоит российской агрессии. Уже погибло более 11 тысяч российских солдат. Матери России! Заберите своих сыновей с Украины!!!</p>
+<hr>
+<p>Поддержка русскоязычной версии сайта "W3Schools на русском" ПРЕКРАЩЕНА!!!</p>
+        <!--
     </div>
     <div class="w3-row w3-margin-bottom">
         <div class="w3-col l6 w3-center" style="padding:3%">
@@ -882,18 +873,15 @@
             <br>
         </div>
         </footer>
-    <!-- END MAIN -->
+    
 </div>
 
-<!--Скрипт для верхнего меню -->
-<script src='scripts/index_topmenu.js'></script>
-<!-- / Скрипт для верхнего меню -->
 
-<!-- Скрипт підсвічування коду -->
+<script src='scripts/index_topmenu.js'></script>
+
 <script src='lib/w3codecolor.js'></script>
 <script>w3CodeColor();</script>
-<!-- / Скрипт підсвічування коду -->
-
+-->
 <!--[if lt IE 9]>
 <script src='cdn/html5shiv/3.7.3/html5shiv.js'></script>
 <script src='cdn/respond/1.4.2/respond.min.js'></script>
