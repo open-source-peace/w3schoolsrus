@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<title>Переменные JavaScript. Современный учебник. Уроки для начинающих</title>
+<meta name='description' content='Переменные в JavaScript. Различия между var и let. Объявление переменных. Современный онлайн учебник по JavaScript на русском языке'>
+<link rel='stylesheet' href='../styles/accordion.css'>
+
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Главная'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Учебник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Учебник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Учебник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Учебник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Учебник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>КАК СДЕЛАТЬ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Учебник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Учебник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Учебник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Учебник'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Выучить HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Выучить CSS</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Выучить W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Выучить Цвета</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Выучить Иконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Выучить Графику</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+                    <a class='w3-bar-item w3-button' href='index.html'>Выучить Как сделать</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Выучить Sass</a>
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Искусственный интеллект</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index.html">Выучить ИИ</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                        <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Выучить JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Выучить jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Выучить React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Выучить AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Выучить JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Выучить AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Выучить W3.JS</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Выучить Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Выучить Java</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Выучить C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Выучить C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Выучить R</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Выучить SQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Выучить PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Выучить ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Выучить Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+                    <h3>Веб-строительство</h3>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблоны</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../cert/index.html'>Веб-сертификаты</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-разработка</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Проверить скорость печати</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Искусственный интеллект</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Выучить AI</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                    <a class='w3-bar-item w3-button' href='../python/pandas/index.html'>Выучить Pandas</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Справочник тегов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Справочник цветов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Иконки Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Справочник</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Наборы символов</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Наборы символов</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Упражнения</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Упражнения</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Викторины</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертификаты</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертификат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar JS-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div class='w3-light-grey' id='leftmenuinnerinner'>
+            <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+            <h2 class='left'>JavaScript Учебник</h2>
+            <a target='_top' href='index.html'>JavaScript Старт</a>
+            <a target='_top' href='intro.html'>Введение в JavaScript</a>
+            <a target='_top' href='manuals_specifications.html'>Справочники</a>
+            <a target='_top' href='code_editors.html'>Редакторы кода</a>
+            <a target='_top' href='devtools.html'>Консоль разработчика</a>
+            <a target='_top' href='hello_world.html'>Привет, Мир!</a>
+            <a target='_top' href='structure.html'>Структура кода</a>
+            <a target='_top' href='strict_mode.html'>Строгий режим</a>
+            <a target='_top' href='variables.html'>Переменные</a>
+            <a target='_top' href='types.html'>Типы данных</a>
+            <a target='_top' href='alert_prompt_confirm.html'>Alert. Prompt. Confirm</a>
+            <a target='_top' href='type_conversions.html'>Преобразование типов</a>
+            <a target='_top' href='operators.html'>Базовые Операторы</a>
+            <a target='_top' href='comparison.html'>Операторы сравнения</a>
+            <a target='_top' href='ifelse.html'>If... Else</a>
+            <a target='_top' href='logical_operators.html'>Логические операторы</a>
+            <a target='_top' href='nullish_coalescing_operator.html'>Оператор объединения</a>
+            <a target='_top' href='while_for.html'>Циклы While и For</a>
+            <a target='_top' href='switch.html'>Switch</a>
+            <a target='_top' href='function_basics.html'>Базовые функции</a>
+            <a target='_top' href='function_expressions.html'>Функции-выражения</a>
+            <a target='_top' href='arrow_functions_basics.html'>Функции-стрелки</a>
+            <a target='_top' href='javascript_specials.html'>Особенности JavaScript</a>
+            <a target='_top' href='debugging_chrome.html'>Дебаггинг в Chrome</a>
+            <a target='_top' href='coding_style.html'>Стиль кода</a>
+            <a target='_top' href='comments.html'>Комментарии</a>
+            <a target='_top' href='ninja_code.html'>Ниндзя-код</a>
+            <a target='_top' href='testing_mocha.html'>Тестирование с Mocha</a>
+            <a target='_top' href='polyfills.html'>Полифилы</a>
+            <a target='_top' href='object.html'>Объекты</a>
+            <a target='_top' href='object_copy.html'>Копирование объектов</a>
+            <a target='_top' href='garbage_collection.html'>Уборка мусора</a>
+            <a target='_top' href='object_methods.html'>Методы объекта</a>
+            <a target='_top' href='constructor_new.html'>Конструктор, New</a>
+            <a target='_top' href='optional_chaining.html'>Опциональная цепочка</a>
+            <a target='_top' href='symbol.html'>Тип данных Symbol</a>
+            <a target='_top' href='object_toprimitive.html'>Преобразование объектов</a>
+            <a target='_top' href='primitives_methods.html'>Методы примитивов</a>
+            <a target='_top' href='number.html'>Числа</a>
+            <a target='_top' href='string.html'>Строки</a>
+            <a target='_top' href='array.html'>Массивы</a>
+            <a target='_top' href='array_methods.html'>Методы массивов</a>
+            <a target='_top' href='iterable.html'>Перебираемые объекты</a>
+            <a target='_top' href='map_set.html'>Map и Set</a>
+            <a target='_top' href='weakmap_weakset.html'>WeakMap и WeakSet</a>
+            <a target='_top' href='keys-values_entries.html'>Object.keys, values, entries</a>
+            <a target='_top' href='destructuring_assignment.html'>Деструктурирующее присваивание</a>
+            <a target='_top' href='date.html'>Дата и время</a>
+            <a target='_top' href='json.html'>Формат JSON</a>
+            <a target='_top' href='recursion.html'>Рекурсия и стек</a>
+            <a target='_top' href='rest_parameters_spread_operator.html'>Остаточные параметры и оператор расширения</a>
+            <a target='_top' href='closure.html'>Замыкание</a>
+            <a target='_top' href='var.html'>Ключевое слово var</a>
+            <a target='_top' href='global_object.html'>Глобальный объект</a>
+            <a target='_top' href='function_object.html'>Объект функции, NFE</a>
+            <a target='_top' href='new_function.html'>Синтаксис &quot;new Function&quot;</a>
+            <a target='_top' href='settimeout_setinterval.html'>Планирование: setTimeout и setInterval</a>
+            <a target='_top' href='call_apply_decorators.html'>Декораторы и переадресация вызова, call/apply</a>
+            <a target='_top' href='bind.html'>Привязка контекста к функции</a>
+            <a target='_top' href='arrow_functions.html'>Повторяем стрелочные функции</a>
+            <a target='_top' href='property_descriptors.html'>Флаги и дескрипторы свойств</a>
+            <a target='_top' href='property_accessors.html'>Свойства - геттеры и сеттеры</a>
+            <a target='_top' href='prototype_inheritance.html'>Прототипное наследование</a>
+            <a target='_top' href='function_prototype.html'>F.prototype</a>
+            <a target='_top' href='native_prototypes.html'>Встроенные прототипы</a>
+            <a target='_top' href='prototype_methods.html'>Методы прототипов</a>
+            <a target='_top' href='class.html'>Класс: базовый синтаксис</a>
+            <a target='_top' href='class_inheritance.html'>Наследование классов</a>
+            <a target='_top' href='static_properties_methods.html'>Статические свойства и методы</a>
+            <a target='_top' href='private_protected_properties_methods.html'>Приватные и защищённые методы и свойства</a>
+            <a target='_top' href='extend_natives.html'>Расширение встроенных классов</a>
+            <a target='_top' href='instanceof.html'>Проверка класса: &quot;instanceof&quot;</a>
+            <a target='_top' href='mixins.html'>Примеси</a>
+            <a target='_top' href='try_catch.html'>Обработка ошибок, &quot;try..catch&quot;</a>
+            <a target='_top' href='custom_errors.html'>Пользовательские ошибки</a>
+            <a target='_top' href='callbacks.html'>Введение: кэлбэки</a>
+            <a target='_top' href='promise_basics.html'>Промисы</a>
+            <a target='_top' href='promise_chaining.html'>Цепочка промисов</a>
+            <a target='_top' href='promise_error_handling.html'>Промисы: обработка ошибок</a>
+            <a target='_top' href='promise_api.html'>Promise API</a>
+            <a target='_top' href='promisify.html'>Промисификация</a>
+            <a target='_top' href='microtask_queue.html'>Микрозадачи</a>
+            <a target='_top' href='async_await.html'>Async/await</a>
+            <a target='_top' href='generators.html'>Генераторы</a>
+            <a target='_top' href='async_iterators_generators.html'>Асинхронные итераторы и генераторы</a>
+            <a target='_top' href='modules_intro.html'>Модули. Введение</a>
+            <a target='_top' href='import_export.html'>Экспорт и импорт</a>
+            <a target='_top' href='modules_dynamic_imports.html'>Динамические импорты</a>
+            <a target='_top' href='proxy.html'>Proxy и Reflect</a>
+            <a target='_top' href='eval.html'>Eval: выполнение строки кода</a>
+            <a target='_top' href='currying_partials.html'>Каррирование</a>
+            <a target='_top' href='bitwise_operators.html'>Побитовые операторы</a>
+            <a target='_top' href='bigint.html'>BigInt</a>
+            <a target='_top' href='intl.html'>Intl: интернационализация в JavaScript</a>
+            <br>
+            <h2 class='left'>Браузер: документ, события, интерфейсы</h2>
+            <a target='_top' href='browser_environment.html'>Браузерное окружение, спецификации</a>
+            <a target='_top' href='dom_nodes.html'>DOM-дерево</a>
+            <a target='_top' href='dom_navigation.html'>Навигация по DOM-элементам</a>
+            <a target='_top' href='searching_elements_dom.html'>Поиск: getElement*, querySelector*</a>
+            <a target='_top' href='basic_dom_node_properties.html'>Свойства узлов: тип, тег и содержимое</a>
+            <a target='_top' href='dom_attributes_and_properties.html'>Атрибуты и свойства</a>
+            <a target='_top' href='modifying_document.html'>Изменение документа</a>
+            <a target='_top' href='styles_and_classes.html'>Стили и классы</a>
+            <a target='_top' href='size_and_scroll.html'>Размеры и прокрутка элементов</a>
+            <a target='_top' href='size_and_scroll_window.html'>Размеры и прокрутка окна</a>
+            <a target='_top' href='coordinates.html'>Координаты</a>
+            <a target='_top' href='introduction_browser_events.html'>Введение в браузерные события</a>
+            <a target='_top' href='bubbling_and_capturing.html'>Всплытие и погружение</a>
+            <a target='_top' href='event_delegation.html'>Делегирование событий</a>
+            <a target='_top' href='default_browser_action.html'>Действия браузера по умолчанию</a>
+            <a target='_top' href='dispatch_events.html'>Генерация пользовательских событий</a>
+            <a target='_top' href='mouse_events_basics.html'>Основы событий мыши</a>
+            <a target='_top' href='mousemove-mouseover-mouseout-mouseenter-mouseleave.html'>Движение мыши: mouseover/out, mouseenter/leave</a>
+            <a target='_top' href='mouse_drag_and_drop.html'>Drag'n'Drop с событиями мыши</a>
+            <a target='_top' href='keyboard_events.html'>Клавиатура: keydown и keyup</a>
+            <a target='_top' href='pointer_events.html'>События указателя</a>
+            <a target='_top' href='onscroll.html'>Прокрутка</a>
+            <a target='_top' href='form_elements.html'>Свойства и методы формы</a>
+            <a target='_top' href='focus_blur.html'>Фокусировка: focus/blur</a>
+            <a target='_top' href='events_change_input.html'>События: change, input, cut, copy, paste</a>
+            <a target='_top' href='forms_submit.html'>Отправка формы: событие и метод submit</a>
+            <a target='_top' href='onload_ondomcontentloaded.html'>Страница: DOMContentLoaded, load, beforeunload, unload</a>
+            <a target='_top' href='script_async_defer.html'>Скрипты: async, defer</a>
+            <a target='_top' href='onload_onerror.html'>Загрузка ресурсов: onload и onerror</a>
+            <a target='_top' href='mutation_observer.html'>MutationObserver: наблюдатель за изменениями</a>
+            <a target='_top' href='selection_range.html'>Selection и Range</a>
+            <a target='_top' href='event_loop.html'>Событийный цикл: микрозадачи и макрозадачи</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu sidebar JS--><!--CONTENT JS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class='w3-hide-small w3-hide-medium'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки для начинающих' class='w3-left w3-padding' title='JavaScript для начинающих. W3Schools на русском' style='width: 120px'></a>
+
+<article>
+  <h1>JavaScript Переменные</h1>
+  <div class='w3-clear nextprev'>
+    <a class='w3-left w3-btn' href='strict_mode.html'>&#10094; Prev</a>
+    <a class='w3-right w3-btn' href='types.html'>Next &#10095;</a>
+  </div>
+  <hr>
+  <p>JavaScript-приложению обычно нужно работать с информацией. Например:</p>
+  <ul>
+    <li>Интернет-магазин – информация может включать продаваемые товары и корзину покупок.</li>
+    <li>Чат – информация может включать пользователей, сообщения и многое другое.</li>
+  </ul>
+  <p>Переменные используются для хранения этой информации.</p>
+  <hr>
+  <h2>Переменная</h2>
+  <p><a href="https://ru.wikipedia.org/wiki/Переменная_(программирование)" target="_blank" rel="nofollow">Переменная</a> – это «именованное хранилище» для данных. Мы можем использовать переменные для хранения товаров, посетителей и других данных.</p>
+  <p>Для создания переменной в JavaScript используйте ключевое слово <code>let</code>.<p>
+  <p>Приведённая ниже инструкция создаёт (другими словами: <i>объявляет</i> или <i>определяет</i>) переменную с именем «message»:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let message;
+    </div>
+  </div>
+  <p>Теперь можно поместить в неё данные, используя оператор присваивания <code>=</code> :</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let message;<br>
+      message = 'Hello'; // сохранить строку<br>
+    </div>
+  </div>
+  <p>Строка сохраняется в области памяти, связанной с переменной. Мы можем получить к ней доступ, используя имя переменной:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let message;<br>
+      message = 'Hello!';<br>
+      alert(message); // показывает содержимое переменной
+    </div>
+  </div>
+  <p>Для краткости можно совместить объявление переменной и запись данных в одну строку:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let message = 'Hello!'; // определяем переменную и присваиваем ей значение<br>
+      alert(message); // Hello!
+    </div>
+  </div>
+  <p>Мы также можем объявить несколько переменных в одной строке:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let user = 'John', age = 25, message = 'Hello';
+    </div>
+  </div>
+  <p>Такой способ может показаться короче, но мы не рекомендуем его. Для лучшей читаемости объявляйте каждую переменную на новой строке.</p>
+  <p>Многострочный вариант немного длиннее, но легче для чтения:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let user = 'John';<br>
+      let age = 25;<br>
+      let message = 'Hello';
+    </div>
+  </div>
+  <p>Некоторые кодеры также определяют несколько переменных в таком вот многострочном стиле:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let user = 'John',<br>
+      &nbsp;&nbsp;age = 25,<br>
+      &nbsp;&nbsp;message = 'Hello';
+    </div>
+  </div>
+  <p>…Или даже с запятой в начале строки:</p>
+  <div class='w3-example'>
+    <div class='w3-code notranslate jsHigh'>
+      let user = 'John'<br>
+      &nbsp;&nbsp;, age = 25<br>
+      &nbsp;&nbsp;, message = 'Hello';
+    </div>
+  </div>
+  <p>В принципе, все эти варианты работают одинаково. Так что это вопрос личного вкуса и эстетики.</p>
+  <div class='important'>
+    <p><span class='info_sign'>&#x2139;</span><b><code>var</code> вместо <code>let</code></b></p>
+    <p>В старых скриптах вы также можете найти другое ключевое слово: <code>var</code> вместо <code>let</code>:</p>
+    <div class='w3-code notranslate jsHigh'>
+      var message = 'Hello';
+    </div>
+    <p>Ключевое слово <code>var</code> – почти то же самое, что и <code>let</code>. Оно объявляет переменную, но немного по-другому, «устаревшим» способом.</p>
+    <p>Есть тонкие различия между <code>var</code> и <code>let</code>, но они пока не имеют для нас значения. Мы подробно рассмотрим их в главе
+      <a href="var.html">Устаревшее ключевое слово "var"</a>.</p>
+  </div>
+  <hr>
+  <h2>Аналогия из жизни</h2>
+  <p>Мы легко поймём концепцию «переменной», если представим её в виде «коробки» для данных с уникальным названием на ней.</p>
+  <p>Например, переменную <code>message</code> можно представить как коробку с названием <code>"message"</code> и значением <code>"Hello!"</code> внутри:</p>
+  <img src="../svg/jslearn_variables1.svg" alt="Переменные в JavaScript">
+  <p>Мы можем положить любое значение в коробку.</p>
+  <p>Мы также можем изменить его столько раз, сколько захотим:</p>
+  <div class='w3-example'>
+      <div class='w3-code notranslate jsHigh'>
+    let message;<br>
+    message = 'Hello!';<br>
+    message = 'World!'; // значение изменено<br>
+    alert(message);
+      </div>
+  </div>
+  <p>При изменении значения старые данные удаляются из переменной:</p>
+  <img src="../svg/jslearn_variables2.svg" alt="Переменные в JavaScript">
+  <p>Мы также можем объявить две переменные и скопировать данные из одной в другую.</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+    let hello = 'Hello world!';<br>
+            <br>
+    let message;<br>
+            <br>
+    // копируем значение 'Hello world' из переменной hello в переменную message<br>
+    message = hello;<br>
+            <br>
+    // теперь две переменные содержат одинаковые данные<br>
+    alert(hello); // Hello world!<br>
+    alert(message); // Hello world!
+        </div>
+    </div>
+    <div class='important'>
+        <p><span class='warning_sign'>&#x26a0;</span><b>Повторное объявление вызывает ошибку</b></p>
+        <p>Переменная может быть объявлена только один раз.</p>
+        <p>Повторное объявление той же переменной является ошибкой:</p>
+            <div class='w3-code notranslate jsHigh'>
+        let message = "Это";<br>
+        <br>
+        // повторение ключевого слова 'let' приводит к ошибке<br>
+        let message = "Другое"; // SyntaxError: 'message' has already been declared
+            </div>
+        <p>Поэтому следует объявлять переменную только один раз и затем использовать её уже без <code>let</code>.</p>
+    </div>
+    <br>
+    <div class='important'>
+        <p><span class='info_sign'>&#x2139;</span><b>Функциональные языки программирования</b></p>
+        <p>Примечательно, что существуют <a href="https://ru.wikipedia.org/wiki/Функциональное_программирование" target="_blank" rel="nofollow">функциональные</a> языки программирования, такие как
+            <a href="https://www.scala-lang.org/" target="_blank" rel="nofollow">Scala</a> или <a href="https://www.erlang.org/" target="_blank" rel="nofollow">Erlang</a>, которые запрещают изменять значение переменной.</p>
+        <p>В таких языках однажды сохранённое «в коробку» значение остаётся там навсегда. Если нам нужно сохранить что-то другое, язык заставляет нас создать новую коробку (объявить новую переменную). Мы не можем использовать старую переменную.</p>
+        <p>Хотя на первый взгляд это может показаться немного странным, эти языки вполне подходят для серьёзной разработки. Более того, есть такая область, как параллельные вычисления, где это ограничение даёт определённые преимущества. Изучение такого языка (даже если вы не планируете использовать его в ближайшее время) рекомендуется для расширения кругозора.</p>
+    </div>
+    <hr>
+    <h2>Имена переменных</h2>
+    <p>В JavaScript есть два ограничения, касающиеся имён переменных:</p>
+    <ol>
+        <li>Имя переменной должно содержать только буквы, цифры или символы <code>$</code> и <code>_</code>.</li>
+        <li>Первый символ не должен быть цифрой.</li>
+    </ol>
+    <p>Примеры допустимых имён:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+    let userName;<br>
+    let test123;
+        </div>
+    </div>
+    <p>Если имя содержит несколько слов, обычно используется верблюжья нотация, то есть, слова следуют одно за другим, где каждое следующее слово начинается с заглавной буквы: <code>myVeryLongName</code>.</p>
+    <p>Самое интересное – знак доллара <code>'$'</code> и подчёркивание <code>'_'</code> также можно использовать в названиях. Это обычные символы, как и буквы, без какого-либо особого значения.</p>
+    <p>Эти имена являются допустимыми:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+    let $ = 1; // объявили переменную с именем "$"<br>
+    let _ = 2; // а теперь переменную с именем "_"<br>
+    <br>
+    alert($ + _); // 3
+        </div>
+    </div>
+    <p>Примеры неправильных имён переменных:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+    let 1a; // не может начинаться с цифры<br>
+    <br>
+    let my-name; // дефис '-' не разрешён в имени
+        </div>
+    </div>
+    <div class='important'>
+        <p><span class='info_sign'>&#x2139;</span><b>Регистр имеет значение</b></p>
+        <p>Переменные с именами <code>apple</code> и <code>AppLE</code> – это две разные переменные.</p>
+    </div>
+    <br>
+    <div class='important'>
+        <p><span class='info_sign'>&#x2139;</span><b>Нелатинские буквы разрешены, но не рекомендуются</b></p>
+        <p>Можно использовать любой язык, включая кириллицу или даже иероглифы, например:</p>
+        <div class='w3-code notranslate jsHigh'>
+            let имя = '...';<br>
+            let 我 = '...';
+        </div>
+        <p>Технически здесь нет ошибки, такие имена разрешены, но есть международная традиция использовать английский язык в именах переменных. Даже если мы пишем небольшой скрипт, у него может быть долгая жизнь впереди. Людям из других стран, возможно, придётся прочесть его не один раз.</p>
+    </div>
+    <br>
+    <div class='important'>
+        <p><span class='warning_sign'>&#x26a0;</span><b>Зарезервированные имена</b></p>
+        <p>Существует список зарезервированных слов, которые нельзя использовать в качестве имён переменных, потому что они используются самим языком.</p>
+        <p>Например: <code>let</code>, <code>class</code>, <code>return</code> и <code>function</code> зарезервированы.</p>
+        <p>Приведённый ниже код даёт синтаксическую ошибку:</p>
+        <div class='w3-code notranslate jsHigh'>
+            let let = 5; // нельзя назвать переменную "let", ошибка!<br>
+            let return = 5; // также нельзя назвать переменную "return", ошибка!
+        </div>
+    </div>
+    <br>
+    <div class='important'>
+        <p><span class='warning_sign'>&#x26a0;</span><b>Создание переменной без использования <code>use strict</code></b></p>
+        <p>Обычно нам нужно определить переменную перед её использованием. Но в старые времена было технически возможно создать переменную простым присвоением значения без использования <code>let</code>. Это все ещё работает, если мы не включаем <code>use strict</code> в наших файлах, чтобы обеспечить совместимость со старыми скриптами.</p>
+        <div class='w3-code notranslate jsHigh'>
+            // заметка: "use strict" в этом примере не используется<br>
+            <br>
+            num = 5; // если переменная "num" раньше не существовала, она создаётся<br>
+            <br>
+            alert(num); // 5
+        </div>
+        <p>Это плохая практика, которая приводит к ошибке в строгом режиме:</p>
+        <div class='w3-code notranslate jsHigh'>
+        "use strict";<br>
+            <br>
+        num = 5; // ошибка: num is not defined
+        </div>
+    </div>
+    <hr>
+    <h2>Константы</h2>
+    <p>Чтобы объявить константную, то есть, неизменяемую переменную, используйте <code>const</code> вместо <code>let</code>:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+            const myBirthday = '18.04.1982';
+        </div>
+    </div>
+    <p>Переменные, объявленные с помощью <code>const</code>, называются «константами». Их нельзя изменить. Попытка сделать это приведёт к ошибке:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+    const myBirthday = '18.04.1982';<br>
+            <br>
+    myBirthday = '01.01.2001'; // ошибка, константу нельзя перезаписать!
+        </div>
+    </div>
+    <p>Если программист уверен, что переменная никогда не будет меняться, он может гарантировать это и наглядно донести до каждого, объявив её через <code>const</code>.</p>
+    <hr>
+    <h2>Константы в верхнем регистре</h2>
+    <p>Широко распространена практика использования констант в качестве псевдонимов для трудно запоминаемых значений, которые известны до начала исполнения скрипта.</p>
+    <p>Названия таких констант пишутся с использованием заглавных букв и подчёркивания.</p>
+    <p>Например, сделаем константы для различных цветов в «шестнадцатеричном формате»:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+            const COLOR_RED = "#F00";<br>
+            const COLOR_GREEN = "#0F0";<br>
+            const COLOR_BLUE = "#00F";<br>
+            const COLOR_ORANGE = "#FF7F00";<br>
+            <br>
+            // ...когда нам нужно выбрать цвет<br>
+            let color = COLOR_ORANGE;<br>
+            alert(color); // #FF7F00
+        </div>
+    </div>
+    <p>Преимущества</p>
+    <ul>
+        <li><code>COLOR_ORANGE</code> гораздо легче запомнить, чем <code>"#FF7F00"</code>.</li>
+        <li>Гораздо легче допустить ошибку при вводе <code>"#FF7F00"</code>, чем при вводе <code>COLOR_ORANGE</code>.</li>
+        <li>При чтении кода <code>COLOR_ORANGE</code> намного понятнее, чем <code>#FF7F00</code>.</li>
+    </ul>
+    <p>Когда мы должны использовать для констант заглавные буквы, а когда называть их нормально? Давайте разберёмся и с этим.</p>
+    <p>Название «константа» просто означает, что значение переменной никогда не меняется. Но есть константы, которые известны до выполнения (например, шестнадцатеричное значение для красного цвета), а есть константы, которые вычисляются во время выполнения сценария, но не изменяются после их первоначального назначения.</p>
+    <p>Например:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+    const pageLoadTime = /* время, потраченное на загрузку веб-страницы */;
+        </div>
+    </div>
+    <p>Значение <code>pageLoadTime</code> неизвестно до загрузки страницы, поэтому её имя записано обычными, а не прописными буквами. Но это всё ещё константа, потому что она не изменяется после назначения.</p>
+    <p>Другими словами, константы с именами, записанными заглавными буквами, используются только как псевдонимы для «жёстко закодированных» значений.</p>
+    <hr>
+    <h2>Придумывайте правильные (корректные) имена</h2>
+    <p>В разговоре о переменных необходимо упомянуть, что есть ещё одна чрезвычайно важная вещь.</p>
+    <p>Название переменной должно иметь ясный и понятный смысл, говорить о том, какие данные в ней хранятся.</p>
+    <p>Именование переменных – это один из самых важных и сложных навыков в программировании. Быстрый взгляд на имена переменных может показать, какой код был написан новичком, а какой – опытным разработчиком.</p>
+    <p>В реальном проекте большая часть времени тратится на изменение и расширение существующей кодовой базы, а не на написание чего-то совершенно нового с нуля. Когда мы возвращаемся к коду после какого-то промежутка времени, гораздо легче найти информацию, которая хорошо размечена. Или, другими словами, когда переменные имеют хорошие имена.</p>
+    <p>Пожалуйста, потратьте время на обдумывание правильного имени переменной перед её объявлением. Делайте так, и будете вознаграждены.</p>
+    <p>Несколько хороших правил:</p>
+    <ul>
+        <li>Используйте легко читаемые имена, такие как <code>userName</code> или <code>shoppingCart</code>.</li>
+        <li>Избегайте использования аббревиатур или коротких имён, таких как <code>a</code>, <code>b</code>, <code>c</code>, за исключением тех случаев, когда вы точно знаете, что так нужно.</li>
+        <li>Делайте имена максимально описательными и лаконичными. Примеры плохих имён: <code>data</code> и <code>value</code>. Такие имена ничего не говорят. Их можно использовать только в том случае, если из контекста кода очевидно, какие данные хранит переменная.</li>
+        <li>Договоритесь с вашей командой об используемых терминах. Если посетитель сайта называется «user», тогда мы должны называть связанные с ним переменные <code>currentUser</code> или <code>newUser</code>, а не, к примеру, <code>currentVisitor</code> или <code>newManInTown</code>.</li>
+    </ul>
+    <p>Звучит просто? Действительно, это так, но на практике для создания описательных и кратких имён переменных зачастую требуется подумать. Действуйте.</p>
+    <div class='important'>
+        <p><span class='info_sign'>&#x2139;</span><b>Повторно использовать или создавать новую переменную?</b></p>
+        <p>И последняя заметка. Есть ленивые программисты, которые вместо объявления новых переменных повторно используют существующие.</p>
+        <p>В результате их переменные похожи на коробки, в которые люди бросают разные предметы, не меняя на них этикетки. Что сейчас находится внутри коробки? Кто знает? Нам необходимо подойти поближе и проверить.</p>
+        <p>Такие программисты немного экономят на объявлении переменных, но теряют в десять раз больше при отладке.</p>
+        <p>Дополнительная переменная – это добро, а не зло.</p>
+        <p>Современные JavaScript-минификаторы и браузеры оптимизируют код достаточно хорошо, поэтому он не создаёт проблем с производительностью. Использование разных переменных для разных значений может даже помочь движку оптимизировать ваш код.</p>
+    </div>
+    <hr>
+    <h2>Резюме</h2>
+    <p>Мы можем объявить переменные для хранения данных с помощью ключевых слов <code>var</code>, <code>let</code> или <code>const</code>.</p>
+    <ul>
+        <li><code>let</code> – это современный способ объявления.</li>
+        <li><code>var</code> – это устаревший способ объявления. Обычно мы вообще не используем его, но мы рассмотрим тонкие отличия от <code>let</code> в главе Устаревшее ключевое слово "var" на случай, если это всё-таки вам понадобится.</li>
+        <li><code>const</code> – похоже на <code>let</code>, но значение переменной не может изменяться.</li>
+    </ul>
+    <hr>
+    <h2>&#9989; Задачи</h2>
+    <h3>1. Работа с переменными</h3>
+    <ol>
+        <li>Объявите две переменные: <code>admin</code> и <code>name</code>.</li>
+        <li>Запишите строку "Джон" в переменную <code>name</code>.</li>
+        <li>Скопируйте значение из переменной <code>name</code> в <code>admin</code>.</li>
+        <li>Выведите на экран значение <code>admin</code>, используя функцию <code>alert</code> (должна показать «Джон»).</li>
+    </ol>
+    <button class="accordion">Решение <i class='fa fa-caret-down'></i></button>
+    <div class="panel">
+        <div class='important'>
+            <p>В коде ниже каждая строка решения соответствует одному элементу в списке задач.</p>
+            <div class='w3-code notranslate jsHigh'>
+            let admin, name; // можно объявить две переменные через запятую<br>
+                <br>
+            name = "Джон";<br>
+            admin = name;<br>
+                <br>
+            alert( admin ); // "Джон"
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <h3>2. Придумайте правильные имена</h3>
+    <ul>
+        <li>Создайте переменную для названия нашей планеты. Как бы вы её назвали?</li>
+        <li>Создайте переменную для хранения имени текущего посетителя сайта. Как бы вы назвали такую переменную?</li>
+    </ul>
+    <button class="accordion">Решение <i class='fa fa-caret-down'></i></button>
+    <div class="panel">
+        <div class='important'>
+            <p><b>Переменная для названия нашей планеты.</b></p>
+            <p>Например:</p>
+            <div class='w3-code notranslate jsHigh'>
+                let ourPlanetName = "Земля";
+            </div>
+            <p>Обратите внимание, мы могли бы использовать короткое имя <code>planet</code>, но тогда будет непонятно, о какой планете мы говорим. Лучше описать содержимое переменной подробнее, по крайней мере, до тех пор, пока имя переменной неСтанетСлишкомДлинным.</p>
+            <p><b>Имя текущего посетителя:</b></p>
+            <div class='w3-code notranslate jsHigh'>
+                let currentUserName = "Джон";
+            </div>
+            <p>Опять же, мы могли бы укоротить название до <code>userName</code>, если мы точно знаем, что это текущий пользователь.</p>
+            <p>Современные редакторы и автодополнение ввода в них позволяют легко писать длинные названия переменных. Не экономьте буквы. Имена, состоящие из трёх слов, вполне нормальны.</p>
+            <p>Если в вашем редакторе нет автодополнения, воспользуйтесь другими.</p>
+        </div>
+    </div>
+    <hr>
+
+    <h3>3. Какие буквы (заглавные или строчные) использовать для имён констант?</h3>
+    <p>Рассмотрим следующий код:</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+            const birthday = '18.04.1982';<br>
+            const age = someCode(birthday);
+        </div>
+    </div>
+    <p>У нас есть константа <code>birthday</code>, а также <code>age</code>, которая вычисляется при помощи некоторого кода, используя значение из <code>birthday</code> (в данном случае детали не имеют значения, поэтому код не рассматривается).</p>
+    <p>Можно ли использовать заглавные буквы для имени <code>birthday</code>? А для <code>age</code>? Или одновременно для обеих переменных?</p>
+    <div class='w3-example'>
+        <div class='w3-code notranslate jsHigh'>
+            const BIRTHDAY = '18.04.1982'; // использовать заглавные буквы?<br>
+            const AGE = someCode(BIRTHDAY); // а здесь?
+        </div>
+    </div>
+    <button class="accordion">Решение <i class='fa fa-caret-down'></i></button>
+    <div class="panel">
+        <div class='important'>
+            <p>Обычно мы используем буквы в верхнем регистре для констант, которые «жёстко закодированы». Или, другими словами, когда значение известно до выполнения скрипта и записывается непосредственно в код.</p>
+            <p>В нашем примере, <code>birthday</code> именно такая переменная. Поэтому мы можем использовать заглавные буквы.</p>
+            <p>В отличие от предыдущей, переменная <code>age</code> вычисляется во время выполнения скрипта. Сегодня у нас один возраст, а через год уже совсем другой. Она является константой, потому что не изменяется при выполнении кода. Но она является «менее константной», чем <code>birthday</code>: она вычисляется, поэтому мы должны сохранить её в нижнем регистре.</p>
+        </div>
+    </div>
+    <script src="../scripts/accordion.js"></script>
+    <hr>
+  <div class='w3-clear nextprev'>
+    <a class='w3-left w3-btn' href='strict_mode.html'>&#10094; Prev</a>
+    <a class='w3-right w3-btn' href='types.html'>Next &#10095;</a>
+  </div>
+</article>
+<div class="w3-hide-medium w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ОБРАТНАЯ СВЯЗЬ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПЕЧАТЬ СТРАНИЦЫ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Связь с админом</h2>
+      <p>Если вы хотите сообщить об ошибке, а также внести предложение о работе сайта, добавить объявление или рекламу на сайт, не стесняйтесь отправить админу электронное письмо на email:</p>
+      <p>w3schoolsrus@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Учебники</h4>
+        <a href='../html/index.html'>HTML Учебник</a><br>
+        <a href='../css/index.html'>CSS Учебник</a><br>
+        <a href='../js/index.html'>JavaScript Учебник</a><br>
+        <a href='../sql/index.html'>SQL Учебник</a><br>
+        <a href='../python/index.html'>Python Учебник</a><br>
+        <a href='../php/index.html'>PHP Учебник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
+        <a href='../appml/index.html'>AppML Учебник</a><br>
+        <a href='../jquery/index.html'>jQuery Учебник</a><br>
+        <a href='../angular/index.html'>Angular Учебник</a><br>
+        <a href='../sass/index.html'>Sass Учебник</a><br>
+        <a href='../java/index.html'>Java Учебник</a><br>
+        <a href='../cpp/index.html'>C++ Учебник</a><br>
+        <a href='../cs/index.html'>C# Учебник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Справочники</h4>
+        <a href='../tags/index.html'>HTML Справочник</a><br>
+        <a href='../cssref/index.html'>CSS Справочник</a><br>
+        <a href='../jsref/index.html'>JavaScript Справочник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
+        <a href='../python/python_reference.html'>Python Справочник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
+        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Примеры</h4>
+        <a href='../html/html_examples.html'>HTML Примеры</a><br>
+        <a href='../css/css_examples.html'>CSS Примеры</a><br>
+        <a href='../js/js_examples.html'>JavaScript Примеры</a><br>
+        <a href='../sql/sql_examples.html'>SQL Примеры</a><br>
+        <a href='../python/python_examples.html'>Python Примеры</a><br>
+        <a href='../php/php_examples.html'>PHP Примеры</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Примеры</a><br>
+        <a href='../angular/angular_examples.html'>Angular Примеры</a><br>
+        <a href='../java/java_examples.html'>Java Примеры</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Примеры</a><br>
+        <a href='../cs/cs_examples.html'>C# Примеры</a><br>
+        <a href='../xml/xml_examples.html'>XML Примеры</a><br>
+        <a href='../howto/index.html'>Как сделать? Примеры</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб Сертификаты</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертификат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертификат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертификат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертификат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертификат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука о данных Сертификат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертификат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертификат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертификат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертификат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертификат</a><br>
+        <a href='../cert/career_tips.html'>Планирование карьеры</a><br>
+        <a href='../cert/career_cv.html'>Составление резюме</a><br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+  Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
+    Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
+    Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <!--GoogleAdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!--/GoogleAdSense-->
+</div>
+</div>
+<!--AdSense-auto-w3schoolsrus-->
+<script data-ad-client="ca-pub-4060216941760396" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--/AdSense-auto-w3schoolsrus-->
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

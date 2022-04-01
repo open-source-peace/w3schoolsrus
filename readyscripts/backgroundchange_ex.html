@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Пример изменения фона с помощью JavaScript</title>
+</head>
+<body>
+  <script>
+theTime = new Date();
+theHour = theTime.getHours();
+if(theHour > 6 && theHour < 18){
+document.write('<body background="day.jpg" text="day" >');
+}
+else{
+document.write('<body background="night.jpg" text="night" >');
+}
+</script>
+
+</body>
+</html>

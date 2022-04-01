@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<title>Статистика Проверка среднего. Уроки для начинающих. W3Schools на русском</title>
+<meta name='description' content='Статистика Гипотеза, проверяющая среднее. Проверить условия. Определить претензии. Уровень значимости. Рассчитать статистику теста. Заключение. Подход критических значений. Подход P-значения. Левосторонние и двусторонние тесты. Уроки для начинающих. W3Schools на русском'>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsRUS<span class='dotcom w3-hide-small'>. на русском</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Главная'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Учебник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Учебник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Учебник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Учебник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Учебник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>КАК СДЕЛАТЬ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Учебник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Учебник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Учебник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Учебник'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Больше учебников'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Включить тёмный код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачать книги бесплатно с Google-диска'>КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Справочники'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Упражнения'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Выучить HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Выучить CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Выучить RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Выучить W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Выучить Цвета</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Выучить Иконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Выучить Графику</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Выучить SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Выучить Как сделать</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Выучить Sass</a>
+
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Искусственный интеллект</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index.html">Выучить ИИ</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Выучить NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Выучить Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Выучить SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Выучить Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Выучить Статистика</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Выучить Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Выучить Google таблицы</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Выучить JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Выучить jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Выучить React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Выучить AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Выучить JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Выучить AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Выучить W3.JS</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Выучить Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Выучить Java</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Выучить C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Выучить C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Выучить R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Выучить Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Выучить Go</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Выучить SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Выучить MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Выучить PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Выучить ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Выучить Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Выучить Git</a>
+
+                    <h3>Веб-строительство</h3>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблоны</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../cert/index.html'>Веб-сертификаты</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-разработка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кибербезопасность</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступность</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Проверить скорость печати</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодовая игра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Искусственный интеллект</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Выучить ИИ</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Выучить Машинное обучение</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Выучить Наука о данных</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Выучить NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Выучить Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Выучить SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Выучить Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Выучить Статистика</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Выучить Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Выучить Google таблицы</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Выучить XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Выучить XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Выучить XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Выучить XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Выучить XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Выучить XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Справочник тегов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Справочник цветов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селекторы Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Иконки Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Справочник</a>
+                    <h3>Программирование</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Справочник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверная сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Справочник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML DOM Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Наборы символов</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Наборы символов</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Упражнения</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Упражнения</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Упражнения</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Викторины</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кибербезопасность Викторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступность Викторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертификаты</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертификат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертификат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner' style="background-color:#E7E9EB;">
+            <h2 class='left'><span class="left_h2">Статистика</span> Учебник</h2>
+            <a target='_top' href="index.html">Stat Главная</a>
+            <a target='_top' href="statistics_introduction.html">Stat Интро</a>
+            <a target='_top' href="statistics_gathering_data.html">Stat Сбор данных</a>
+            <a target='_top' href="statistics_describing_data.html">Stat Описание данных</a>
+            <a target='_top' href="statistics_making_conclusions.html">Stat Делаем выводы</a>
+            <a target='_top' href="statistics_prediction_and_explanation.html">Stat Прогнозирование &amp; Объяснение</a>
+            <a target='_top' href="statistics_populations_and_samples.html">Stat Совокупность &amp; Выборка</a>
+            <a target='_top' href="statistics_parameters_and_statistics.html">Stat Параметры &amp; Статистика</a>
+            <a target='_top' href="statistics_study_types.html">Stat Типы исследований</a>
+            <a target='_top' href="statistics_sample_types.html">Stat Типы выборок</a>
+            <a target='_top' href="statistics_data_types.html">Stat Типы данных</a>
+            <a target='_top' href="statistics_measurement_levels.html">Stat Уровни измерения</a>
+            <br>
+            <h2 class='left'>Описательная статистика</h2>
+            <a target='_top' href="statistics_descriptive_statistics.html">Stat Описательная статистика</a>
+            <a target='_top' href="statistics_frequency_tables.html">Stat Таблицы частот</a>
+            <a target='_top' href="statistics_histograms.html">Stat Гистограммы</a>
+            <a target='_top' href="statistics_bar_graphs.html">Stat Бар-графики</a>
+            <a target='_top' href="statistics_pie_charts.html">Stat Круговые диаграммы</a>
+            <a target='_top' href="statistics_box_plots.html">Stat Коробчатые графики</a>
+            <a target='_top' href="statistics_average.html">Stat Среднее значение</a>
+            <a target='_top' href="statistics_mean.html">Stat Среднее</a>
+            <a target='_top' href="statistics_median.html">Stat Медиана</a>
+            <a target='_top' href="statistics_mode.html">Stat Режим</a>
+            <a target='_top' href="statistics_variation.html">Stat Вариация</a>
+            <a target='_top' href="statistics_range.html">Stat Диапазон</a>
+            <a target='_top' href="statistics_quartiles_and_percentiles.html">Stat Квартили и процентили</a>
+            <a target='_top' href="statistics_interquartile_range.html">Stat Межквартильный диапазон</a>
+            <a target='_top' href="statistics_standard_deviation.html">Stat Среднеквадратичное отклонение</a>
+            <br>
+            <h2 class='left'>Выведенная статистика</h2>
+            <a target='_top' href="statistics_statistical_inference.html">Stat Статистические выводы</a>
+            <a target='_top' href="statistics_normal_distribution.html">Stat Нормальное распределение</a>
+            <a target='_top' href="statistics_standard_normal_distribution.html">Stat Стандартное нормальное</a>
+            <a target='_top' href="statistics_students_t_distribution.html">Stat Т-распределение</a>
+            <a target='_top' href="statistics_estimation.html">Stat Предварительный расчет</a>
+            <a target='_top' href="statistics_estimation_proportion.html">Stat Оценка доли совокупности</a>
+            <a target='_top' href="statistics_estimation_mean.html">Stat Оценка средней совокупности</a>
+            <a target='_top' href="statistics_hypothesis_testing.html">Stat Проверка гипотезы</a>
+            <a target='_top' href="statistics_hypothesis_testing_proportion.html">Stat Проверка пропорции</a>
+            <a target='_top' href="statistics_hypothesis_testing_mean.html">Stat Проверка среднего</a>
+            <br>
+            <h2 class='left'><span class="left_h2">Stat</span> Справочник</h2>
+            <a target='_top' href="statistics_z_table.html">Stat Z-таблица</a>
+            <a target='_top' href="statistics_t_table.html">Stat T-таблица</a>
+            <a target='_top' href="statistics_hypothesis_testing_proportion_left.html">Stat Пропорция проверки гипотез (левосторонняя)</a>
+            <a target='_top' href="statistics_hypothesis_testing_proportion_2tail.html">Stat Пропорция проверки гипотез (двусторонняя)</a>
+            <a target='_top' href="statistics_hypothesis_testing_mean_left.html">Stat Среднее значение проверки гипотез (левосторонняя)</a>
+            <a target='_top' href="statistics_hypothesis_testing_mean_2tail.html">Stat Среднее значение проверки гипотез (двусторонняя)</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu sidebar--><!--CONTENT JS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class='w3-hide-small'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/python.svg' alt='Статистика. W3Schools на русском. Уроки для начинающих' class='w3-left w3-padding' title='Статистика для начинающих. W3Schools на русском' style='width: 90px'></a>
+
+<article>
+    <h1>Статистика - Гипотеза, проверяющая среднее</h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="statistics_hypothesis_testing_proportion.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong><a href="statistics_mean.html">Среднее</a></strong> генеральной совокупности - это среднее значение генеральной совокупности.</p>
+    <p class="intro"><strong>Тесты гипотез</strong> используются для проверки утверждения о размере этого среднего совокупности.</p>
+    <hr>
+    <h2>Гипотеза, проверяющая среднее</h2>
+    <p>Для проверки гипотез используются следующие шаги:</p>
+    <ol>
+        <li>Проверить условия</li>
+        <li>Определить претензии</li>
+        <li>Определить уровень значимости</li>
+        <li>Рассчитать статистику теста</li>
+        <li>Заключение</li>
+    </ol>
+    <p>Например:</p>
+    <ul>
+        <li><strong>Совокупность</strong>: Лауреаты Нобелевской премии</li>
+        <li><strong>Категория</strong>: Возраст, когда они получили премию</li>
+    </ul>
+    <p>И мы хотим проверить претензию:</p>
+    <div class="w3-code notranslate">
+        <p>"Средний возраст лауреатов Нобелевской премии, когда они получили премию, <b>более</b> чем 55 лет."</p>
+    </div>
+    <p>Взяв выборку из 30 случайно выбранных лауреатов Нобелевской премии, мы смогли обнаружить, что:</p>
+    <div class="w3-code notranslate">
+        <p>Средний возраст в выборке (\(\bar{x}\)) равен 62.1</p>
+        <p>Стандартное отклонение возраста в выборке (\(s\)) равно 13.46</p>
+    </div>
+    <p>По этим выборкам данных мы проверяем претензию, выполнив следующие действия.</p>
+    <div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>1. Проверка условий</h2>
+    <p>Условия для расчета доверительного интервала для доли:</p>
+    <ul>
+        <li>Выборка произведена <a href="statistics_sample_types.html">случайным образом</a></li>
+        <li>А также:</li>
+        <ul>
+            <li>Данные о совокупности распределены нормально</li>
+            <li>Размер выборки достаточно велик</li>
+        </ul>
+    </ul>
+    <p>Обычно достаточно большого размера выборки, например 30.</p>
+    <p>В этом примере размер выборки был 30, и она была выбрана случайным образом, поэтому условия выполняются.</p>
+    <div class="w3-panel w3-note">
+        <p><b>Примечание:</b> Проверить, нормально ли распределяются данные, можно с помощью специализированных статистических тестов.</p>
+    </div>
+    <hr>
+    <h2>2. Определение претензий</h2>
+    <p>Нам нужно определить <strong>нулевую гипотезу</strong> (\(H_{0}\)) и <strong>альтернативную гипотезу</strong> (\(H_{1}\)) на основе утверждения, которое мы проверяем.</p>
+    <p>Претензия была:</p>
+    <div class="w3-code notranslate">
+        <p>"Средний возраст лауреатов Нобелевской премии, когда они получили премию, <b>более</b> чем 55 лет".</p>
+    </div>
+    <p>В этом случае <b>параметр</b> - это средний возраст лауреатов Нобелевской премии, когда они получили премию (\(\mu\)).</p>
+    <p>Тогда нулевая и альтернативная гипотезы:</p>
+    <div class="w3-code notranslate">
+        <p><strong>Нулевая гипотеза</strong>: средний возраст - 55 лет.</p>
+        <p><strong>Альтернативная гипотеза</strong>: средний возраст был <b>больше</b> чем 55 лет.</p>
+    </div>
+    <p>Что можно выразить символами как:</p>
+    <div class="w3-code notranslate">
+        <p>\(H_{0}\): \(\mu = 55 \)</p>
+        <p>\(H_{1}\): \(\mu > 55 \)</p>
+    </div>
+    <p>Это '<b>правый</b> хвост' теста, поскольку альтернативная гипотеза утверждает, что пропорция <b>больше</b>, чем в нулевой гипотезе.</p>
+    <p>Если данные подтверждают альтернативную гипотезу, мы <b>отклоняем</b> нулевую гипотезу и <b>принимаем</b> альтернативную гипотезу.</p>
+    <div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>3. Определение уровня значимости</h2>
+    <p>Уровень значимости (\(\alpha\)) - это <strong>неопределённость</strong>, которую мы принимаем при отклонении нулевой гипотезы в проверке гипотез.</p>
+    <p>Уровень значимости - это процентная вероятность случайного ошибочного вывода.</p>
+    <p>Типичные уровни значимости:</p>
+    <ul>
+        <li>\(\alpha = 0.1\) (10&#37;)</li>
+        <li>\(\alpha = 0.05\) (5&#37;)</li>
+        <li>\(\alpha = 0.01\) (1&#37;)</li>
+    </ul>
+    <p>Более низкий уровень значимости означает, что доказательства в данных должны быть более убедительными, чтобы отвергнуть нулевую гипотезу. </p>
+    <p>Не существует &quot;правильного&quot; уровня значимости - он лишь констатирует неопределенность вывода.</p>
+    <div class="w3-panel w3-note">
+        <p><b>Примечание:</b> 5&#37; уровень значимости означает, что когда мы отвергаем нулевую гипотезу:</p>
+        <p>Мы ожидаем отклонить <b>истинную</b> нулевую гипотезу в 5 случаях из 100.</p>
+    </div>
+    <hr>
+    <h2>4. Расчет статистики теста</h2>
+    <p>Статистика теста используется для определения результата проверки гипотезы.</p>
+    <p>Статистика теста - это <a href="statistics_standard_normal_distribution.html">стандартизованное</a> значение, рассчитанное на основе выборки.</p>
+    <p>Формула для тестовой статистики (TS) среднего значения генеральной совокупности:</p>
+    <p>\(\displaystyle \frac{\bar{x} - \mu}{s} \cdot \sqrt{n} \)</p>
+    <p>\(\bar{x}-\mu\) - это <b>разница</b> между <b>выборкой</b> среднего (\(\bar{x}\)) и заявленным средним <b>совокупности</b> (\(\mu\)).</p>
+    <p>\(s\) - это <a href="statistics_standard_deviation.html">стандартное отклонение выборки</a>.</p>
+    <p>\(n\) - это размер выборки.</p>
+    <p>В нашем примере:</p>
+    <div class="w3-code notranslate">
+        <p>Заявленное (\(H_{0}\)) среднее совокупности (\(\mu\)) было \( 55 \)</p>
+        <p>Среднее выборки (\(\bar{x}\)) было \(62.1\)</p>
+        <p>Стандартное отклонение выборки (\(s\)) было \(13.46\)</p>
+        <p>Размер выборки (\(n\)) был \(30\)</p>
+    </div>
+    <p>Таким образом, тестовая статистика (TS) тогда:</p>
+    <p>\(\displaystyle \frac{62.1-55}{13.46} \cdot \sqrt{30} = \frac{7.1}{13.46} \cdot \sqrt{30}  \approx 0.528 \cdot 5.477 = \underline{2.889}\)</p>
+    <p>Вы также можете рассчитать статистику теста, используя функции языка программирования:</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>В Python используйте библиотеки scipy и math для вычисления статистики теста.</p>
+        <div class="w3-code notranslate pythonHigh">
+            import scipy.stats as stats
+            <br>
+            import math
+            <br>
+            <br>
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
+            <br>
+            x_bar = 62.1
+            <br>
+            s = 13.46
+            <br>
+            mu_null = 55
+            <br>
+            n = 30
+            <br>
+            <br>
+            # Рассчитайте и распечатайте тестовую статистику
+            <br>
+            print((x_bar - mu_null)/(s/math.sqrt(n)))
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_mean_test_statistic.html">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>С помощью R используйте встроенные математические и статистические функции для расчета тестовой статистики.</p>
+        <div class="w3-code notranslate pythonHigh">
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
+            <br>
+            x_bar <- 62.1
+            <br>
+            s <- 13.46
+            <br>
+            mu_null <- 55
+            <br>
+            n <- 30
+            <br>
+            <br>
+            # Вывести статистику теста
+            <br>
+            (x_bar - mu_null)/(s/sqrt(n))
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_mean_test_statistic.html">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>5. Заключение</h2>
+    <p>Существует два основных подхода к заключению проверки гипотезы:</p>
+    <ul>
+        <li>Подход <strong>критического значения</strong> сравнивает статистику теста с критическим значением уровня значимости</li>
+        <li>Подход <strong>P-значения</strong> сравнивает P-значение тестовой статистики и уровень значимости</li>
+    </ul>
+    <div class="w3-panel w3-note">
+        <p><b>Примечание.</b> Эти два подхода различаются только тем, как они представляют заключение.</p>
+    </div>
+    <h3>Подход критических значений</h3>
+    <p>Для подхода критического значения нам нужно найти <strong>критическое значение</strong> (CV) уровня значимости (\(\alpha\)).</p>
+    <p>Для теста на среднее значение для генеральной совокупности критическое значение (CV) - это <strong>T-значение</strong> из <a href="students_t_distribution.html">стьюдент t-распределения</a>.</p>
+    <p>Это критическое T-значение (CV) определяет <strong>область отклонения</strong> для теста.</p>
+    <p>Область отклонения - это область вероятности в хвостах стандартного нормального распределения.</p>
+    <p>Поскольку утверждается, что среднее значение генеральной совокупности <b>больше</b> чем 55, область отклонения находится в правом хвосте:</p>
+    <p><img src="../svg/img_critical_value_right_prop1.svg" alt="Стандартное нормальное распределение с правой хвостовой областью (область отклонения), обозначенной греческим символом alpha"></p>
+    <p>Размер области отклонения определяется уровнем значимости (\(\alpha\)).
+    <p>Стьюдент t-распределение скорректировано с учетом неопределенности по меньшим выборкам.</p>
+    <p>Эта корректировка называется степенями свободы (df), то есть размером выборки \((n) - 1\)</p>
+    <p>В этом случае степени свободы (df) равны: \(30 - 1 = \underline{29} \)</p>
+    <p>Выбрав уровень значимости (\(\alpha\)) 0,01 или 1&#37;, мы можем найти критическое T-значение из <a href="statistics_t_table.html">T-таблицы</a>, или с помощью функции языка программирования:</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>В Python используйте функцию библиотеки Scipy Stats <code class="w3-codespan">t.ppf()</code> найдите T-значение для \(\alpha\) = 0,01 при 29 степенях свободы (df).</p>
+        <div class="w3-code notranslate pythonHigh">
+            import scipy.stats as stats
+            <br>
+            print(stats.t.ppf(1-0.01, 29))
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_t_score2.html">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>В R используйте встроенную функцию <code class="w3-codespan">qt()</code> чтобы найти t-значение для \(\alpha\) = 0,01 при 29 степенях свободы (df).</p>
+        <div class="w3-code notranslate pythonHigh">
+            qt(1-0.01, 29)
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_t_score2.html">Попробуйте сами &raquo;</a>
+    </div>
+    <p>Используя любой метод, мы можем найти, что критическое T-значение равно \(\approx \underline{2.462}\)</p>
+    <p>Для <b>правостороннего</b> теста необходимо проверить, не превышает ли тестовая статистика (TS) критическое значение (CV).</p>
+    <p>Если тестовая статистика больше критического значения, то тестовая статистика находится в <strong>области отклонения</strong>.</p>
+    <p>Когда статистика теста находится в области отклонения, мы <b>отклоняем</b> нулевую гипотезу (\(H_{0}\)).</p>
+    <p>Здесь тестовая статистика (TS) была \(\approx \underline{2.889}\), а критическое значение было \(\approx \underline{2.462}\)</p>
+    <p>Вот иллюстрация этого теста в виде графика:</p>
+    <p><img src="../svg/img_critical_value_right_mean2.svg" alt="Т-распределение Стьюдента с областью правого хвоста (область отклонения), равной 0,01, критическим значением 2,462 и тестовой статистикой 2,889"></p>
+    <p>Поскольку статистика теста была <b>больше</b> критического значения, мы <b>отклоняем</b> нулевую гипотезу.</p>
+    <p>Это означает, что выборки данных подтверждают альтернативную гипотезу.</p>
+    <p>И мы можем резюмировать вывод о том, что:</p>
+    <div class="w3-code notranslate">
+        <p>Выборки данных <b>подтверждают</b> утверждение о том, что "средний возраст лауреатов Нобелевской премии на момент получения премии превышает 55 лет" при <strong>1&#37; уровне значимости</strong>.</p>
+    </div>
+    <div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h3>Подход P-значения</h3>
+    <p>Для подхода P-значения нам нужно найти <strong>P-значение</strong> тестовой статистики (TS).</p>
+    <p>Если P-значение <b>меньше</b> уровня значимости (\(\alpha\)), мы <b>отклоняем</b> нулевую гипотезу (\(H_{0}\)).</p>
+    <p>Статистика теста оказалась \( \approx \underline{2.889} \)</p>
+    <p>Для теста доли населения статистика теста представляет собой T-значение из <a href="students_t_distribution.html">стьюдент t-распределения</a>.</p>
+    <p>Поскольку это <b>правосторонний</b> тест, нам нужно найти P-значение для T-значения <b>больше</b> чем 2,889.</p>
+    <p>Стьюдент T-распределение корректируется в соответствии со степенями свободы (df), которые являются размером выборки \((30) - 1 = \underline{29}\)</p>
+    <p>Мы можем найти P-значение с помощью <a href="statistics_t_table.html">T-таблицы</a> или с помощью функции языка программирования:</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>Используя Python, используйте функцию библиотеки Scipy Stats <code class="w3-codespan">t.cdf()</code> чтобы найти P-значение для T-значения больше 2,889 при 29 степенях свободы (df):</p>
+        <div class="w3-code notranslate pythonHigh">
+            import scipy.stats as stats
+            <br>
+            print(1-stats.t.cdf(2.889, 29))
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_p_value.html">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>С помощью R используйте встроенную функцию <code class="w3-codespan">pt()</code>, чтобы найти P-значение для T-значения больше 2,889 при 29 степенях свободы (df):</p>
+        <div class="w3-code notranslate pythonHigh">
+            1-pt(2.889, 29)
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_p_value.html">Попробуйте сами &raquo;</a>
+    </div>
+    <p>Используя любой метод, мы можем найти, что p-значение равно \(\approx \underline{0.0036}\)</p>
+    <p>Это говорит нам о том, что уровень значимости (\(\alpha\)) должен быть больше 0.0036, или 0.36&#37;, чтобы <b>отклонить</b> нулевую гипотезу.</p>
+    <p>Вот иллюстрация этого теста в виде графика:</p>
+    <p><img src="../svg/img_p_value_right_mean.svg" alt="p-значение"></p>
+    <p>Это P-значение <b>меньше</b>, чем любой из распространенных уровней значимости (10&#37;, 5&#37;, 1&#37;).</p>
+    <p>Таким образом, нулевая гипотеза <b>отклоняется</b> на всех этих уровнях значимости.</p>
+    <p>И мы можем резюмировать вывод, констатируя:</p>
+    <div class="w3-code notranslate">
+        <p>Выборки данных <b>подтверждают</b> утверждение о том, что "Средний возраст лауреатов Нобелевской премии, когда они получили премию, превышает 55 лет" при <b>10&#37;, 5&#37;, или 1&#37; уровне значимости</b>.</p>
+    </div>
+    <div class="w3-panel w3-note">
+        <p><b>Примечание:</b> Результат проверки гипотезы, который отклоняет нулевую гипотезу с p-значением 0.36&#37; означает:</p>
+        <p>Для этого p-значения мы ожидаем отклонить истинную нулевую гипотезу только 36 раз из 10000.</p>
+    </div>
+    <div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Расчет P-значения для проверки гипотез с помощью программирования</h2>
+    <p>Многие языки программирования могут вычислять P-значение для определения результата проверки гипотез.</p>
+    <p>Использование программного обеспечения и программирования для расчета статистики более распространено для больших наборов данных, поскольку вычисление вручную становится затруднительным.</p>
+    <p>Рассчитанное здесь P-значение покажет нам <strong>самый низкий возможный уровень значимости</strong>, при котором нулевая гипотеза может быть отклонена.</p>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>В Python используйте библиотеки scipy и math для вычисления P-значения для проверки гипотезы с правым хвостом для среднего.</p>
+        <p>Здесь размер выборки - 30, выборочное среднее - 62,1, стандартное отклонение выборки - 13,46, а тест - для среднего значения больше 55. </p>
+        <div class="w3-code notranslate pythonHigh">
+            import scipy.stats as stats
+            <br>
+            import math
+            <br>
+            <br>
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
+            <br>
+            x_bar = 62.1
+            <br>
+            s = 13.46
+            <br>
+            mu_null = 55
+            <br>
+            n = 30
+            <br>
+            <br>
+            # Рассчитайте тестовую статистику
+            <br>
+            test_stat = (x_bar - mu_null)/(s/math.sqrt(n))
+            <br>
+            <br>
+            # Выведите p-значение тестовой статистики (правосторонний тест)
+            <br>
+            print(1-stats.t.cdf(test_stat, n-1))
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_stat_python_mean_test.html">Попробуйте сами &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Пример</h3>
+        <p>С помощью R используйте встроенные математические и статистические функции, чтобы найти P-значение для проверки гипотезы с правым хвостом для среднего.</p>
+        <p>Здесь размер выборки составляет 30, среднее значение выборки - 62,1, стандартное отклонение выборки - 13,46, а тест предназначен для среднего значения, превышающего 55.</p>
+        <div class="w3-code notranslate pythonHigh">
+            # Укажите среднее значение выборки (x_bar), стандартное отклонение выборки, среднее значение, заявленное в нулевой гипотезе (mu_null), и размер выборки (n)
+            <br>
+            x_bar <- 62.1
+            <br>
+            s <- 13.46
+            <br>
+            mu_null <- 55
+            <br>
+            n <- 30
+            <br>
+            <br>
+            # Рассчитайте тестовую статистику
+            <br>
+            test_stat = (x_bar - mu_null)/(s/sqrt(n))
+            <br>
+            <br>
+            # P-значение тестовой статистики (правосторонний тест)
+            <br>
+            1-pt(test_stat, n-1)
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../rtryit/demo_stat_r_mean_test.html">Попробуйте сами &raquo;</a>
+    </div>
+    <hr>
+    <h2>Левосторонние и двусторонние тесты</h2>
+    <p>Это был пример <b>правостороннего</b> теста, в котором альтернативная гипотеза утверждала, что параметр <b>больше</b>, чем утверждение нулевой гипотезы.</p>
+    <p>Вы можете ознакомиться с аналогичным пошаговым руководством для других типов здесь:</p>
+    <ul>
+        <li><a href="statistics_hypothesis_testing_mean_left.html">Левосторонний тест</a></li>
+        <li><a href="statistics_hypothesis_testing_mean_2tail.html">Двусторонний тест</a></li>
+    </ul>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="statistics_hypothesis_testing_proportion.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="w3-hide-small">
+    <hr>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛИТРА ЦВЕТОВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИСОЕДИНЯЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook страницу' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Получите ваш<br>Сертификат сегодня!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертификат от W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Выберите тему</a>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_vertical -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="7795161518" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- adrightbar_media_square -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="5246865704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ОБРАТНАЯ СВЯЗЬ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПЕЧАТЬ СТРАНИЦЫ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Связь с админом</h2>
+      <p>Если вы хотите сообщить об ошибке, а также внести предложение о работе сайта, добавить объявление или рекламу на сайт, не стесняйтесь отправить админу электронное письмо на email:</p>
+      <p>w3schoolsrus@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Учебники</h4>
+        <a href='../html/index.html'>HTML Учебник</a><br>
+        <a href='../css/index.html'>CSS Учебник</a><br>
+        <a href='../js/index.html'>JavaScript Учебник</a><br>
+        <a href='../sql/index.html'>SQL Учебник</a><br>
+        <a href='../python/index.html'>Python Учебник</a><br>
+        <a href='../php/index.html'>PHP Учебник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Учебник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Учебник</a><br>
+        <a href='../appml/index.html'>AppML Учебник</a><br>
+        <a href='../jquery/index.html'>jQuery Учебник</a><br>
+        <a href='../angular/index.html'>Angular Учебник</a><br>
+        <a href='../sass/index.html'>Sass Учебник</a><br>
+        <a href='../java/index.html'>Java Учебник</a><br>
+        <a href='../cpp/index.html'>C++ Учебник</a><br>
+        <a href='../cs/index.html'>C# Учебник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Справочники</h4>
+        <a href='../tags/index.html'>HTML Справочник</a><br>
+        <a href='../cssref/index.html'>CSS Справочник</a><br>
+        <a href='../jsref/index.html'>JavaScript Справочник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Справочник</a><br>
+        <a href='../python/python_reference.html'>Python Справочник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Справочник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Справочник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Справочник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Справочник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Справочник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Справочник</a><br>
+        <a href='../colors/colors_names.html'>Цвета Справочник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Топ Примеры</h4>
+        <a href='../html/html_examples.html'>HTML Примеры</a><br>
+        <a href='../css/css_examples.html'>CSS Примеры</a><br>
+        <a href='../js/js_examples.html'>JavaScript Примеры</a><br>
+        <a href='../sql/sql_examples.html'>SQL Примеры</a><br>
+        <a href='../python/python_examples.html'>Python Примеры</a><br>
+        <a href='../php/php_examples.html'>PHP Примеры</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Примеры</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Примеры</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Примеры</a><br>
+        <a href='../angular/angular_examples.html'>Angular Примеры</a><br>
+        <a href='../java/java_examples.html'>Java Примеры</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Примеры</a><br>
+        <a href='../cs/cs_examples.html'>C# Примеры</a><br>
+        <a href='../xml/xml_examples.html'>XML Примеры</a><br>
+        <a href='../howto/index.html'>Как сделать? Примеры</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб Сертификаты</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертификат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертификат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертификат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертификат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертификат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука о данных Сертификат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертификат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертификат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертификат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертификат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертификат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертификат</a><br>
+        <a href='../cert/career_tips.html'>Планирование карьеры</a><br>
+        <a href='../cert/career_cv.html'>Составление резюме</a><br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+  Этот сайт оптимизирован для обучения и тестирования. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href='../about/about_copyright.html'>условия использования</a>, <a href='../about/about_privacy.html'>cookie и политику конфиденциальности</a>.<br>
+    Также вы можете абсолютно <strong><a href='https://github.com/w3schoolsrus/w3schoolsrus.github.io/archive/master.zip' target='_blank'>бесплатно скачать офлайн версию сайта W3Schools на русском</a></strong> архивом с GitHub и пользоваться локально на своём компьютере.<br>
+    Также доступна версия сайта <a href='https://w3schoolsua.github.io/' target='_blank' title='W3Schools українською'><strong>W3Schools на украинском</strong></a> языке.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2022</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт работает на фреймворке W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <!--GoogleAdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script>
+    <!-- udup_content_media_horizontally -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!--/GoogleAdSense-->
+</div>
+</div>
+<!--AdSense-auto-w3schoolsrus-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396"
+        crossorigin="anonymous"></script>
+<!--/AdSense-auto-w3schoolsrus-->
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

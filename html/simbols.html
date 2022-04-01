@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>HTML Специальные символы. Уроки для начинающих. W3Schools на русском</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,уроки,для начинающих,html5,css3,атрибут,идентификатор,id,веб,страница,w3schools,на русском">
+<meta name="Description" content="Атрибут id. Идентификатор. Основы HTML. Что такое атрибуты html-элементов? W3Schools на русском. Учебник для начинающих.">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Source%20Code%20Pro' rel='stylesheet'>
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+</style>
+</head>
+
+<body>
+<div id="mainContent">
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.на русском</span></a>
+  <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ</div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Tutorial'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Tutorial'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Tutorial'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Tutorial'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Tutorial'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='default.html' title='How To'>КАК СДЕЛАТЬ</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Tutorial'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Tutorial'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../xml/default.html' title='XML Tutorial'>XML</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'>КНИГИ</a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>     
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">   
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML и CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Выучить HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Выучить CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Выучить Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Выучить W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Выучить Colors</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Выучить Icons</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Выучить Graphics</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Выучить SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Выучить Canvas</a>
+          <a class="w3-bar-item w3-button" href='default.html'>Выучить How To</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Выучить Sass</a>
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Выучить XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Выучить XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Выучить XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Выучить XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Выучить XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Выучить XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Выучить JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Выучить jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Выучить React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Выучить AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Выучить JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Выучить AJAX</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Выучить W3.JS</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Выучить Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Выучить Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Выучить C++</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Выучить SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Выучить PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Выучить ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Выучить Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Выучить Raspberry Pi</a>
+          <h3>Веб-строительство</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Веб-шаблоны</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Веб-статистика</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Веб-сертификаты</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Веб-редактор</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Веб-разработка</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Выучить XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Выучить XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Выучить XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Выучить XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Выучить XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Выучить XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Выучить XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Выучить XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Справочник тегов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Справочник цветов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Icon Справочник</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Справочник</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Справочник</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Справочник</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Справочник</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Справочник</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Справочник</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Наборы символов</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Упражнения</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Упражнения</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Викторины</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Викторина</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3>Сертификаты</h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Сертификат</a>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<!--/Top menu-->
+
+<!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">HTML5</span> Учебник</h2>
+<a target="_top" href="default.html">HTML СТАРТ</a>
+<a target="_top" href="html_intro.html">HTML Введение</a>
+<a target="_top" href="html_editors.html">HTML Редакторы</a>
+<a target="_top" href="html_basic.html">HTML Основные примеры</a>
+<a target="_top" href="html_elements.html">HTML Элементы</a>
+<a target="_top" href="html_attributes.html">HTML Атрибуты</a>
+<a target="_top" href="html_headings.html">HTML Заголовки</a>
+<a target="_top" href="html_paragraphs.html">HTML Параграфы</a>
+<a target="_top" href="html_styles.html">HTML Стили</a>
+<a target="_top" href="html_formatting.html">HTML Форматирование</a>
+<a target="_top" href="html_quotation_elements.html">HTML Цитаты</a>
+<a target="_top" href="html_comments.html">HTML Комментарии</a>
+<a target="_top" href="html_colors.html">HTML Цвета</a>
+<a target="_top" href="html_css.html">HTML CSS</a>
+<a target="_top" href="html_links.html">HTML Ссылки</a>
+<a target="_top" href="html_images.html">HTML Изображения</a>
+<div class="tut_overview">
+  <a target="_top" href="html_images.html">Изображения</a>
+  <a target="_top" href="html_images_imagemap.html">Карта изображений</a>
+  <a target="_top" href="html_images_background.html">Фоновое изображение</a>
+  <a target="_top" href="html_images_picture.html">Элемент Picture</a>
+</div>
+<a target="_top" href="html_tables.html">HTML Таблицы</a>
+<a target="_top" href="html_lists.html">HTML Списки</a>
+<a target="_top" href="html_blocks.html">HTML Блоки</a>
+<a target="_top" href="html_classes.html">HTML Классы</a>
+<a target="_top" href="html_id.html">HTML Идентификаторы</a>
+<a target="_top" href="html_iframe.html">HTML Фреймы</a>
+<a target="_top" href="html_scripts.html">HTML JavaScript</a>
+<a target="_top" href="html_filepaths.html">HTML Пути файлов</a>
+<a target="_top" href="html_head.html">HTML Голова веб-страницы</a>
+<a target="_top" href="html_layout.html">HTML Макеты</a>
+<a target="_top" href="html_responsive.html">HTML Адаптивность</a>
+<a target="_top" href="html_computercode_elements.html">HTML Компьютерный код</a>
+<a target="_top" href="html_entities.html">HTML Символьные объекты</a>
+<a target="_top" href="html_symbols.html">HTML Символы</a>
+<a target="_top" href="html_charset.html">HTML Кодировка</a>
+<a target="_top" href="html_urlencode.html">HTML URL кодирование</a>
+<a target="_top" href="html_xhtml.html">HTML XHTML</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Формы</h2>
+<a target="_top" href="html_forms.html">HTML Формы</a>
+<a target="_top" href="html_form_elements.html">HTML Элементы формы</a>
+<a target="_top" href="html_form_input_types.html">HTML Типы ввода</a>
+<a target="_top" href="html_form_attributes.html">HTML Атрибуты ввода</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML5</span></h2>
+<a target="_top" href="html5_intro.html">HTML5 Введение</a>
+<a target="_top" href="html5_browsers.html">HTML5 Поддержка</a>
+<a target="_top" href="html5_new_elements.html">HTML5 Новые элементы</a>
+<a target="_top" href="html5_semantic_elements.html">HTML5 Семантические элементы</a>
+<a target="_top" href="html5_migration.html">HTML5 Переход с HTML4</a>
+<a target="_top" href="html5_syntax.html">HTML5 Гид по стилю</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Графика</h2>
+<a target="_top" href="html5_canvas.html">HTML Canvas</a>
+<a target="_top" href="html5_svg.html">HTML SVG</a>
+<!--<a target="_top" href="html_googlemaps.asp">HTML Google Maps</a>-->
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Медиа</h2>
+<a target="_top" href="html_media.html">HTML Медиа</a>
+<a target="_top" href="html5_video.html">HTML Видео</a>
+<a target="_top" href="html5_audio.html">HTML Аудио</a>
+<a target="_top" href="html_object.html">HTML Плагины</a>
+<a target="_top" href="html_youtube.html">HTML YouTube</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> API</h2>
+<a target="_top" href="html5_geolocation.html">HTML Геолокация</a>
+<a target="_top" href="html5_draganddrop.html">HTML Drag/Drop</a>
+<a target="_top" href="html5_webstorage.html">HTML Web хранилище</a>
+<a target="_top" href="html5_webworkers.html">HTML Web работники</a>
+<a target="_top" href="html5_serversentevents.html">HTML SSE</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Примеры</h2>
+<a target="_top" href="html_examples.html">HTML Примеры</a>
+<a target="_top" href="html_quiz.html">HTML Викторина</a>
+<a target="_top" href="html_exercises.html">HTML Упражнения</a>
+<a target="_top" href="html_exam.html">HTML Сертификат</a>
+<a target="_top" href="html_summary.html">HTML Резюме</a>
+<a target="_top" href="html_accessibility.html">HTML Доступность</a>
+<br>
+<h2 class="left"><span class="left_h2">HTML</span> Справочники</h2>
+<a target="_top" href="../tags/default.html">HTML Список тегов</a>
+<a target="_top" href="../tags/ref_attributes.html">HTML Атрибуты</a>
+<a target="_top" href="../tags/ref_standardattributes.html">HTML Глобальные атрибуты</a>
+<a target="_top" href="../tags/ref_eventattributes.html">HTML События</a>
+<a target="_top" href="../tags/ref_colornames.html">HTML Цвета</a>
+<a target="_top" href="../tags/ref_canvas.html">HTML Canvas</a>
+<a target="_top" href="../tags/ref_av_dom.html">HTML Аудио/Видео</a>
+<a target="_top" href="../tags/ref_html_dtd.html">HTML Действующие Doctype</a>
+<a target="_top" href="../tags/ref_charactersets.html">HTML Наборы символов</a>
+<a target="_top" href="../tags/ref_urlencode.html">HTML URL кодировка</a>
+<a target="_top" href="../tags/ref_language_codes.html">HTML Кодировка языка</a>
+<a target="_top" href="../tags/ref_httpmessages.html">HTTP Сообщения</a>
+<a target="_top" href="../tags/ref_httpmethods.html">HTTP Методы</a>
+<a target="_top" href="../tags/ref_pxtoemconversion.html">PX в EM Конвертер</a>
+<a target="_top" href="../tags/ref_keyboardshortcuts.html">Горячие клавиши</a>
+      <br><br>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar -->
+
+<!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+<a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для начинающих" class="w3-left" title="HTML5 для начинающих" width="90"></a>
+
+<h1>HTML <span class="color_h1">Специальные символы</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
+</div>
+<hr>
+
+<table>
+  <tbody><tr>
+<th>Символ</th>
+<th>HTML-код</th>
+<th>Десятичный<br>код</th>
+<th>Описание</th>
+</tr>
+<tr><td><span style="background:gray">&nbsp;</span> </td><td>&amp;nbsp; </td><td>&amp;#160;</td><td>неразрывный пробел</td></tr>
+<tr><td><span style="background:gray"> </span>  </td><td>&amp;ensp; </td><td>&amp;#8194;</td><td>узкий пробел (еn-шириной в букву n)</td></tr>
+<tr><td><span style="background:gray"> </span>  </td><td>&amp;emsp; </td><td>&amp;#8195;</td><td>широкий пробел (em-шириной в букву m)</td></tr>
+<tr><td>–</td><td>&amp;ndash;</td><td>&amp;#8211;</td><td>узкое тире (en-тире)</td></tr>
+<tr><td>—</td><td>&amp;mdash;</td><td>&amp;#8212;</td><td>широкое тире (em -тире)</td></tr>
+<tr><td>­</td><td>&amp;shy;</td><td>&amp;#173;</td><td>мягкий перенос</td></tr>
+<tr><td>а́</td><td>&nbsp;</td><td>&amp;#769;</td><td>ударение, ставится после "ударной" буквы</td></tr>
+<tr><td>©</td><td>&amp;copy;</td><td>&amp;#169;</td><td>копирайт</td></tr>
+<tr><td>®</td><td>&amp;reg;</td><td>&amp;#174;</td><td>знак зарегистрированной торговой марки</td></tr>
+<tr><td>™</td><td>&amp;trade;</td><td>&amp;#8482;</td><td>знак торговой марки</td></tr>
+<tr><td>º</td><td>&amp;ordm;</td><td>&amp;#186;</td><td>копье Марса</td></tr>
+<tr><td>ª</td><td>&amp;ordf;</td><td>&amp;#170;</td><td>зеркало Венеры</td></tr>
+<tr><td>‰</td><td>&amp;permil;</td><td>&amp;#8240;</td><td>промилле</td></tr>
+<tr><td style="font-size:23pt;font-family:Times New Roman,serif;">π</td><td>&amp;pi;</td><td>&amp;#960;</td><td>пи (используйте Times New Roman)</td></tr>
+<tr><td>¦</td><td>&amp;brvbar;</td><td>&amp;#166;</td><td>вертикальный пунктир  </td></tr>
+<tr><td>§</td><td>&amp;sect;</td><td>&amp;#167;</td><td>параграф</td></tr>
+<tr><td>°</td><td>&amp;deg;</td><td>&amp;#176;</td><td>градус</td></tr>
+<tr><td>µ</td><td>&amp;micro;</td><td>&amp;#181;</td><td>знак "микро"</td></tr>
+<tr><td>¶</td><td>&amp;para;</td><td>&amp;#182;</td><td>знак абзаца</td></tr>
+<tr><td>…</td><td>&amp;hellip;</td><td>&amp;#8230;</td><td>многоточие   </td></tr>
+<tr><td>‾</td><td>&amp;oline;</td><td>&amp;#8254;</td><td>надчеркивание   </td></tr>
+<tr><td>´</td><td>&amp;acute;</td><td>&amp;#180;</td><td>знак ударения    </td></tr>
+<tr><td>№</td><td>&nbsp;</td><td>&amp;#8470;</td><td>знак номера</td></tr>
+<tr><td>🔍</td><td>&nbsp;</td><td>&amp;#128269;</td><td>Лупа (наклонённая влево)</td></tr>
+<tr><td>🔎</td><td>&nbsp;</td><td>&amp;#128270;</td><td>Лупа (наклонённая вправо)</td></tr>
+<tr><td>☎</td><td>&nbsp;</td><td>&amp;#9742;</td><td>Телефон</td></tr>
+<tr><td>✉</td><td>&nbsp;</td><td>&amp;#9993;</td><td>Конверт, email, почта</td></tr>
+<tr><td>💾</td><td>&nbsp;</td><td>&amp;#128190;</td><td>Дискета</td></tr>
+<tr><td>🛠</td><td>&nbsp;</td><td>&amp;#128736;</td><td>Молоток и гаечный ключ, настройка</td></tr>
+<tr><td>🔒</td><td>&nbsp;</td><td>&amp;#128274;</td><td>Замок закрыт</td></tr>
+<tr><td>🔓</td><td>&nbsp;</td><td>&amp;#128275;</td><td>Замок открыт</td></tr>
+<tr><td>🔔</td><td>&nbsp;</td><td>&amp;#128276;</td><td>Колокольчик</td></tr>
+<tr><td>🔕</td><td>&nbsp;</td><td>&amp;#128277;</td><td>Колокольчик перечеркнутый</td></tr>
+<tr><td>🗑</td><td>&nbsp;</td><td>&amp;#128465;</td><td>Урна</td></tr>
+<tr><td>🔥</td><td>&nbsp;</td><td>&amp;#128293;</td><td>Огонь</td></tr>
+<tr><td>🛇</td><td>&nbsp;</td><td>&amp;#128711;</td><td>Запрещено</td></tr>
+<tr><td>⛔</td><td>&nbsp;</td><td>&amp;#9940;</td><td>Вход запрещен (кирпич)</td></tr>
+<tr><td>⛳</td><td>&nbsp;</td><td>&amp;#9971;</td><td>Фраг в воронке, местоположение, место встречи, гольф</td></tr>
+<tr><th colspan="4" style="text-align: center"><strong>Знаки арифметических и математических операций</strong></th></tr>
+<tr><td>×</td><td>&amp;times;</td><td>&amp;#215;</td><td>умножить</td></tr>
+<tr><td>÷</td><td>&amp;divide;  </td><td>&amp;#247;</td><td>разделить</td></tr>
+<tr><td>&lt;</td><td>&amp;lt; </td><td>&amp;#60;</td><td>меньше</td></tr>
+<tr><td>&gt;</td><td>&amp;gt; </td><td>&amp;#62;</td><td>больше</td></tr>
+<tr><td>±</td><td>&amp;plusmn;  </td><td>&amp;#177;</td><td>плюс/минус</td></tr>
+<tr><td>¹</td><td>&amp;sup1;  </td><td>&amp;#185;</td><td>степень 1</td></tr>
+<tr><td>²</td><td>&amp;sup2;  </td><td>&amp;#178;</td><td>степень 2</td></tr>
+<tr><td>³</td><td>&amp;sup3;  </td><td>&amp;#179;</td><td>степень 3</td></tr>
+<tr><td>¬</td><td>&amp;not; </td><td>&amp;#172;</td><td>отрицание</td></tr>
+<tr><td>¼</td><td>&amp;frac14;  </td><td>&amp;#188;</td><td>одна четвертая</td></tr>
+<tr><td>½</td><td>&amp;frac12;  </td><td>&amp;#189;</td><td>одна вторая</td></tr>
+<tr><td>¾</td><td>&amp;frac34;  </td><td>&amp;#190;</td><td>три четверти</td></tr>
+<tr><td>⁄</td><td>&nbsp;frasl;  </td><td>&amp;#8260;</td><td>дробная черта</td></tr>
+<tr><td>−</td><td>&nbsp;minus;  </td><td>&amp;#8722;</td><td>минус</td></tr>
+<tr><td>≤</td><td>&amp;le;  </td><td>&amp;#8804;</td><td>меньше или равно</td></tr>
+<tr><td>≥</td><td>&amp;ge;  </td><td>&amp;#8805;</td><td>больше или равно</td></tr>
+<tr><td>≈</td><td>&amp;asymp; </td><td>&amp;#8776;</td><td>приблизительно (почти) равно</td></tr>
+<tr><td>≠</td><td>&amp;ne;  </td><td>&amp;#8800;</td><td>не равно</td></tr>
+<tr><td>≡</td><td>&amp;equiv; </td><td>&amp;#8801;</td><td>тождественно</td></tr>
+<tr><td>√</td><td>&amp;radic; </td><td>&amp;#8730;</td><td>квадратный корень (радикал)  </td></tr>
+<tr><td>∞</td><td>&amp;infin; </td><td>&amp;#8734;</td><td>бесконечность    </td></tr>
+<tr><td>∑</td><td>&amp;sum; </td><td>&amp;#8721;</td><td>знак суммирования    </td></tr>
+<tr><td>∏</td><td>&amp;prod;  </td><td>&amp;#8719;</td><td>знак произведения    </td></tr>
+<tr><td>∂</td><td>&amp;part;  </td><td>&amp;#8706;</td><td>частичный дифференциал </td></tr>
+<tr><td>∫</td><td>&amp;int; </td><td>&amp;#8747;</td><td>интеграл     </td></tr>
+<tr><td>∀</td><td>&amp;forall;  </td><td>&amp;#8704;</td><td>для всех (видно только если жирным шрифтом)</td></tr>
+<tr><td>∃</td><td>&amp;exist; </td><td>&amp;#8707;</td><td>существует</td></tr>
+<tr><td>∅</td><td>&amp;empty; </td><td>&amp;#8709;</td><td>пустое множество</td></tr>
+<tr><td>Ø</td><td>&amp;Oslash;  </td><td>&amp;#216;</td><td>диаметр</td></tr>
+<tr><td>∈</td><td>&amp;isin;  </td><td>&amp;#8712;</td><td>принадлежит</td></tr>
+<tr><td>∉ </td><td>&amp;notin;  </td><td>&amp;#8713;</td><td>не принадлежит</td></tr>
+<tr><td>∋</td><td>&amp;ni;  </td><td>&amp;#8727;</td><td>содержит</td></tr>
+<tr><td>⊂</td><td>&amp;sub; </td><td>&amp;#8834;</td><td>является подмножеством</td></tr>
+<tr><td>⊃</td><td>&amp;sup; </td><td>&amp;#8835;</td><td>является надмножеством</td></tr>
+<tr><td>⊄</td><td>&amp;nsub;  </td><td>&amp;#8836;</td><td>не является подмножеством</td></tr>
+<tr><td>⊆</td><td>&amp;sube;  </td><td>&amp;#8838;</td><td>является подмножеством либо равно</td></tr>
+<tr><td>⊇</td><td>&amp;supe;  </td><td>&amp;#8839;</td><td>является надмножеством либо равно</td></tr>
+<tr><td>⊕</td><td>&amp;oplus; </td><td>&amp;#8853;</td><td>плюс в кружке</td></tr>
+<tr><td>⊗</td><td>&amp;otimes;  </td><td>&amp;#8855;</td><td>знак умножения в кружке </td></tr>
+<tr><td>⊥</td><td>&amp;perp;  </td><td>&amp;#8869;</td><td>перпендикулярно</td></tr>
+<tr><td>∠</td><td>&amp;ang; </td><td>&amp;#8736;</td><td>угол</td></tr>
+<tr><td>∧</td><td>&amp;and; </td><td>&amp;#8743;</td><td>логическое И</td></tr>
+<tr><td>∨</td><td>&amp;or;  </td><td>&amp;#8744;</td><td>логическое ИЛИ</td></tr>
+<tr><td>∩</td><td>&amp;cap; </td><td>&amp;#8745;</td><td>пересечение</td></tr>
+<tr><td>∪</td><td>&amp;cup; </td><td>&amp;#8746;</td><td>объединение</td></tr>
+
+<tr><th colspan="4" style="text-align: center"><strong>Знаки валют</strong></th></tr>
+<tr><td>¤ </td><td>&amp;current;  </td><td>&amp;#164;</td><td>Знак валюты </td></tr>
+<tr><td>₴ </td><td>&amp;hryvnia </td><td>&amp;#8372;</td><td>Гривна</td></tr>
+<tr><td>€ </td><td>&amp;euro; </td><td>&amp;#8364;</td><td>Евро </td></tr>
+<tr><td>$ </td><td>&amp;dollar; </td><td>&amp;#36;</td><td>Доллар </td></tr>
+<tr><td>¢ </td><td>&amp;cent; </td><td>&amp;#162;</td><td>Цент  </td></tr>
+<tr><td>£ </td><td>&amp;pound;  </td><td>&amp;#163;</td><td>Фунт  </td></tr>
+<tr><td>¥ </td><td>&amp;yen;  </td><td>&amp;#165;</td><td>Знак йены и юаня</td></tr>
+<tr><td>₽ </td><td>&nbsp; </td><td>&amp;#8381;</td><td>Рубль</td></tr>
+
+<tr><th colspan="4" style="text-align: center"><strong>Маркеры, птички, галочки, check mark</strong></th></tr>
+<tr><td>•   </td><td>&amp;bull; </td><td>&amp;#8226;</td><td>простой маркер </td></tr>
+<tr><td>○   </td><td>&nbsp;   </td><td>&amp;#9675;</td><td>круг </td></tr>
+<tr><td>·   </td><td>&amp;middot; </td><td>&amp;#183;</td><td>средняя точка </td></tr>
+<tr><td>†   </td><td>&nbsp;   </td><td>&amp;#8224;</td><td>крест </td></tr>
+<tr><td>‡   </td><td>&nbsp;   </td><td>&amp;#8225;</td><td>двойной крест </td></tr>
+<tr><td>♠   </td><td>&amp;spades; </td><td>&amp;#9824;</td><td>пики </td></tr>
+<tr><td>♣   </td><td>&amp;clubs;  </td><td>&amp;#9827;</td><td>трефы </td></tr>
+<tr><td>♥   </td><td>&amp;hearts; </td><td>&amp;#9829;</td><td>червы </td></tr>
+<tr><td>♦   </td><td>&amp;diams;  </td><td>&amp;#9830;</td><td>бубны </td></tr>
+<tr><td>◊   </td><td>&amp;loz;  </td><td>&amp;#9674;</td><td>ромб </td></tr>
+<tr><td>❤    </td><td>&nbsp;    </td><td>&amp;#10084;</td><td>жирное сердце </td></tr>
+<tr><td>✓    </td><td>&nbsp;    </td><td>&amp;#10003;</td><td>Символ галочка  </td></tr>
+<tr><td>✔    </td><td>&nbsp;    </td><td>&amp;#10004;</td><td>Жирная отметка галочкой </td></tr>
+<tr><td>🗸</td><td>&nbsp;    </td><td>&amp;#65794;</td><td>Крестик </td></tr>
+<tr><td>🗸    </td><td>&nbsp;    </td><td>&amp;#128504;</td><td>Тонкая галочка </td></tr>
+<tr><td>✅    </td><td>&nbsp;    </td><td>&amp;#9989;</td><td>Жирная незакрашенная отметка галочка </td></tr>
+<tr><td>☑    </td><td>&nbsp;    </td><td>&amp;#9745;</td><td>Галочка в квадрате</td></tr>
+<tr><td>🗹    </td><td>&nbsp;    </td><td>&amp;#128505;</td><td>Жирная галочка в квадрате  </td></tr>
+<tr><td>⚠    </td><td>&nbsp;    </td><td>&amp;#9888;</td><td>Внимание!  </td></tr>
+
+<tr><th colspan="4" style="text-align: center"><strong>Карандаши, перья, кисти</strong></th></tr>
+<tr><td>✍   </td><td>&nbsp;   </td><td>&amp;#9997;</td><td>пишущая рука   </td></tr>
+<tr><td>✎   </td><td>&nbsp;   </td><td>&amp;#9998;</td><td>карандаш, направленный вправо-вниз   </td></tr>
+<tr><td>✏   </td><td>&nbsp;   </td><td>&amp;#9999;</td><td>карандаш   </td></tr>
+<tr><td>✐ </td><td>&nbsp;   </td><td>&amp;#10000;</td><td>карандаш, направленный вправо-вверх   </td></tr>
+<tr><td>✑   </td><td>&nbsp;   </td><td>&amp;#10001;</td><td>незакрашенное острие пера   </td></tr>
+<tr><td>✒   </td><td>&nbsp;   </td><td>&amp;#10002;</td><td>закрашенное острие пера   </td></tr>
+<tr><td>🖌   </td><td>&nbsp;   </td><td>&amp;#128396;</td><td>кисть, направленная влево-вниз   </td></tr>
+
+<tr><th colspan="4" style="text-align: center"><strong>Кавычки</strong></th></tr>
+<tr><td>"   </td><td>&amp;quot; </td><td>&amp;#34;</td><td>двойная кавычка</td></tr>
+<tr><td>&amp;   </td><td>&amp;amp;  </td><td>&amp;#38;</td><td>амперсанд</td></tr>
+<tr><td>«   </td><td>&amp;laquo;  </td><td>&amp;#171;</td><td>левая типографская кавычка (кавычка-елочка) </td></tr>
+<tr><td>»   </td><td>&amp;raquo;  </td><td>&amp;#187;</td><td>правая типографская кавычка (кавычка-елочка)</td></tr>
+<tr><td>‹   </td><td>&nbsp;   </td><td>&amp;#8249;</td><td>одиночная угловая кавычка открывающая  </td></tr>
+<tr><td>›   </td><td>&nbsp;   </td><td>&amp;#8250;</td><td>одиночная угловая кавычка закрывающая  </td></tr>
+<tr><td>′   </td><td>&amp;prime;  </td><td>&amp;#8242;</td><td>штрих (минуты, футы)     </td></tr>
+<tr><td>″   </td><td>&amp;Prime;  </td><td>&amp;#8243;</td><td>двойной штрих (секунды, дюймы)   </td></tr>
+<tr><td>‘   </td><td>&amp;lsquo;  </td><td>&amp;#8216;</td><td>левая верхняя одиночная кавычка    </td></tr>
+<tr><td>’   </td><td>&amp;rsquo;  </td><td>&amp;#8217;</td><td>правая верхняя одиночная кавычка </td></tr>
+<tr><td>‚   </td><td>&amp;sbquo;  </td><td>&amp;#8218;</td><td>правая нижняя одиночная кавычка    </td></tr>
+<tr><td>“   </td><td>&amp;ldquo;  </td><td>&amp;#8220;</td><td>кавычка-лапка левая      </td></tr>
+<tr><td>”   </td><td>&amp;rdquo;  </td><td>&amp;#8221;</td><td>кавычка-лапка правая верхняя   </td></tr>
+<tr><td>„   </td><td>&amp;bdquo;  </td><td>&amp;#8222;</td><td>кавычка-лапка правая нижняя    </td></tr>
+<tr><td>❛ </td><td>&nbsp;   </td><td>&amp;#10075;</td><td>одиночная английская кавычка открывающая</td></tr>
+<tr><td>❜ </td><td>&nbsp;   </td><td>&amp;#10076;</td><td>одиночная английская кавычка закрывающая</td></tr>
+<tr><td>❝ </td><td>&nbsp;   </td><td>&amp;#10077;</td><td>двойная английская кавычка открывающая</td></tr>
+<tr><td>❞ </td><td>&nbsp;   </td><td>&amp;#10078;</td><td>двойная английская кавычка закрывающая</td></tr>
+
+<tr><th colspan="4" style="text-align: center"><strong>Стрелки</strong></th></tr>
+<tr><td>←</td><td>&amp;larr;  </td><td>&amp;#8592;</td><td>стрелка влево  </td></tr>
+<tr><td>↑</td><td>&amp;uarr;  </td><td>&amp;#8593;</td><td>стрелка вверх  </td></tr>
+<tr><td>→</td><td>&amp;rarr;  </td><td>&amp;#8594;</td><td>стрелка вправо </td></tr>
+<tr><td>↓</td><td>&amp;darr;  </td><td>&amp;#8595;</td><td>стрелка вниз   </td></tr>
+<tr><td>↔</td><td>&amp;harr;  </td><td>&amp;#8596;</td><td>стрелка влево и вправо</td></tr>
+<tr><td>↕</td><td>&nbsp;    </td><td>&amp;#8597;</td><td>стрелка вверх и вниз</td></tr>
+<tr><td>↵</td><td>&amp;crarr;   </td><td>&amp;#8629;</td><td>возврат каретки</td></tr>
+<tr><td>⇐</td><td>&amp;lArr;  </td><td>&amp;#8656;</td><td>двойная стрелка влево  </td></tr>
+<tr><td>⇑</td><td>&amp;uArr;  </td><td>&amp;#8657;</td><td>двойная стрелка вверх  </td></tr>
+<tr><td>⇒</td><td>&amp;rArr;  </td><td>&amp;#8658;</td><td>двойная стрелка вправо </td></tr>
+<tr><td>⇓</td><td>&amp;dArr;  </td><td>&amp;#8659;</td><td>двойная стрелка вниз   </td></tr>
+<tr><td>⇔</td><td>&amp;hArr;  </td><td>&amp;#8660;</td><td>двойная стрелка влево и вправо</td></tr>
+<tr><td>⇕</td><td>&nbsp;</td><td>&amp;#8661;</td><td>двойная стрелка вверх и вниз</td></tr>
+<tr><td>▲</td><td>&nbsp;</td><td>&amp;#9650;</td><td>треугольная стрелка вверх </td></tr>
+<tr><td>▼</td><td>&nbsp;</td><td>&amp;#9660;</td><td>треугольная стрелка вниз  </td></tr>
+<tr><td>►</td><td>&nbsp;</td><td>&amp;#9658;</td><td>треугольная стрелка вправо</td></tr>
+<tr><td>◄</td><td>&nbsp;</td><td>&amp;#9668;</td><td>треугольная стрелка влево </td></tr>
+
+<tr><th colspan="4" style="text-align: center"><strong>Звездочки, снежинки</strong></th></tr>
+<tr><td>☃   </td><td>&nbsp; </td><td>&amp;#9731;</td><td>Снеговик</td></tr>
+<tr><td>❄ </td><td>&nbsp; </td><td>&amp;#10052;</td><td>Снежинка</td></tr>
+<tr><td>❅ </td><td>&nbsp; </td><td>&amp;#10053;</td><td>Зажатая трилистниками снежинка</td></tr>
+<tr><td>❆ </td><td>&nbsp; </td><td>&amp;#10054;</td><td>Жирная остроугольная снежинка</td></tr>
+<tr><td>★   </td><td>&nbsp; </td><td>&amp;#9733;</td><td>Закрашенная звезда</td></tr>
+<tr><td>☆   </td><td>&nbsp; </td><td>&amp;#9734;</td><td>Незакрашенная звезда</td></tr>
+<tr><td>✪ </td><td>&nbsp; </td><td>&amp;#10026;</td><td>Незакрашенная звезда в закрашенном круге</td></tr>
+<tr><td>✫ </td><td>&nbsp; </td><td>&amp;#10027;</td><td>Закрашенная звезда с незакрашенным кругом внутри</td></tr>
+<tr><td>✯ </td><td>&nbsp; </td><td>&amp;#10031;</td><td>Вращающаяся звезда</td></tr>
+<tr><td>⚝   </td><td>&nbsp; </td><td>&amp;#9885;</td><td>Начерченная белая звезда</td></tr>
+<tr><td>⚪   </td><td>&nbsp; </td><td>&amp;#9898;</td><td>Средний незакрашенный круг</td></tr>
+<tr><td>⚫   </td><td>&nbsp; </td><td>&amp;#9899;</td><td>Средний закрашенный круг</td></tr>
+<tr><td>⚹   </td><td>&nbsp; </td><td>&amp;#9913;</td><td>Секстиле (типа снежинка)</td></tr>
+<tr><td>✵ </td><td>&nbsp; </td><td>&amp;#10037;</td><td>Восьмиконечная вращающаяся звезда</td></tr>
+<tr><td>❉ </td><td>&nbsp; </td><td>&amp;#10057;</td><td>Звёздочка с шарообразными окончаниями</td></tr>
+<tr><td>❋ </td><td>&nbsp; </td><td>&amp;#10059;</td><td>Жирная восьмиконечная каплеобразная звёздочка-пропеллер</td></tr>
+<tr><td>✺ </td><td>&nbsp; </td><td>&amp;#10042;</td><td>Шестнадцатиконечная звёздочка</td></tr>
+<tr><td>✹ </td><td>&nbsp; </td><td>&amp;#10041;</td><td>Двенадцатиконечная закрашенная звезда</td></tr>
+<tr><td>✸ </td><td>&nbsp; </td><td>&amp;#10040;</td><td>Жирная восьмиконечная прямолинейная закрашенная звезда</td></tr>
+<tr><td>✶ </td><td>&nbsp; </td><td>&amp;#10038;</td><td>Шестиконечная закрашенная звезда</td></tr>
+<tr><td>✷ </td><td>&nbsp; </td><td>&amp;#10039;</td><td>Восьмиконечная прямолинейная закрашенная звезда</td></tr>
+<tr><td>✴ </td><td>&nbsp; </td><td>&amp;#10036;</td><td>Восьмиконечная закрашенная звезда</td></tr>
+<tr><td>✳ </td><td>&nbsp; </td><td>&amp;#10035;</td><td>Восьмиконечная звёздочка</td></tr>
+<tr><td>✲ </td><td>&nbsp; </td><td>&amp;#10034;</td><td>Звёздочка с незакрашенным центром</td></tr>
+<tr><td>✱ </td><td>&nbsp; </td><td>&amp;#10033;</td><td>Жирная звёздочка</td></tr>
+<tr><td>✧ </td><td>&nbsp; </td><td>&amp;#10023;</td><td>Заострённая четырёхконечная незакрашенная звезда</td></tr>
+<tr><td>✦ </td><td>&nbsp; </td><td>&amp;#10022;</td><td>Заострённая четырёхконечная закрашенная звезда</td></tr>
+<tr><td>⍟   </td><td>&nbsp; </td><td>&amp;#9055;</td><td>Звезда в круге</td></tr>
+<tr><td>⊛   </td><td>&nbsp; </td><td>&amp;#8859;</td><td>Снежинка в круге</td></tr>
+<tr><th colspan="4" style="text-align: center"><strong>Часы, время</strong></th></tr>
+<tr><td>⏰   </td><td>&nbsp; </td><td>&amp;#9200;</td><td>Будильник</td></tr>
+<tr><td>⌚   </td><td>&nbsp; </td><td>&amp;#8986;</td><td>Наручные часы</td></tr>
+<tr><td>⌛   </td><td>&nbsp; </td><td>&amp;#8987;</td><td>Песочные часы</td></tr>
+<tr><td>⏳   </td><td>&nbsp; </td><td>&amp;#9203;</td><td>Песочные часы</td></tr>
+<tr><td>🕰   </td><td>&nbsp; </td><td>&amp;#128368;</td><td>Каминные часы</td></tr>
+</tbody>
+</table>
+
+<hr>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="index.html">Next &#10095;</a>
+</div>
+
+<!--Комментарии от Disqus-->
+        <iframe class="predisqus" src="../pages/predisqus.html"></iframe>
+        <div id="disqus_thread"></div>
+        <script>
+                var disqus_config = function () {
+                this.page.url = w3schoolsrus.github.io; // канонический URL страницы
+                this.page.identifier = w3schoolsrus.github.io / html / html_id.html; // уникальный идентификатор страницы
+                };
+                (function() { // Не редактировать ниже этой линии
+                var d = document, s = d.createElement('script');
+                s.src = 'https://w3schoolsrus-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+        </script> <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев, предоставленных Disqus.</a></noscript> <!--/ Комментарии от Disqus-->
+        <hr>
+
+      </div>
+
+<!--Right sidebar-->
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection w3-light-grey" style="padding-bottom: 5px">
+<h4><a href="../colors/colors_picker.html">ПАЛИТРА ЦВЕТОВ</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="default.html" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_js_tabs.html">Вкладки</a><br>    
+    <a href="../howto/howto_css_dropdown.html">Выпадающее меню</a><br>
+    <a href="../howto/howto_js_accordion.html">Меню аккордеон</a><br>
+    <a href="../howto/howto_js_sidenav.html">Боковая навигация</a><br>
+    <a href="../howto/howto_js_topnav.html">Верхняя навигация</a><br>
+    <a href="../howto/howto_css_modals.html">Модальные блоки</a><br>
+    <a href="../howto/howto_js_progressbar.html">Прогресс-бары</a><br>
+    <a href="../howto/howto_css_parallax.html">Паралакс</a><br>
+    <a href="../howto/howto_css_login_form.html">Форма входа</a><br>
+    <a href="../howto/howto_html_include.html">HTML сниппеты</a><br>
+    <a href="../graphics/google_maps_intro.html">Google карты</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Ползунки диапазона</a><br>
+    <a href="../howto/howto_css_tooltip.html">Всплывающие подсказки</a><br>
+    <a href="../howto/howto_js_slideshow.html">Слайдшоу</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Список фильтров</a><br>
+    <a href="../howto/howto_js_sort_list.html">Отсортированный список</a>
+  </div>
+</div>
+
+</div>
+<!--/Right sidebar-->
+
+</div>
+
+<!--FOOTER-->
+<div id="footer" class="footer w3-container w3-white">
+<hr>
+
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
+</div>
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+<h2>Ваше предложение:</h2>
+<form>
+<div class="w3-section">
+<label for="err_email">Ваш E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">
+<label for="err_email">Адрес страницы:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Описание:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
+</div>
+<br>
+</form>
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<h2>Спасибо за Вашу помощь!</h2>
+<p>Ваше сообщение было отправлено в W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Учебники</h4>
+<a href="default.html">HTML Учебник</a><br>
+<a href="../css/default.html">CSS Учебник</a><br>
+<a href="../js/default.html">JavaScript Учебник</a><br>
+<a href="../howto/default.html">Как сделать Учебник</a><br>
+<a href="../sql/default.html">SQL Учебник</a><br>
+<a href="../python/default.html">Python Учебник</a><br>
+<a href="../w3css/default.html">W3.CSS Учебник</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Учебник</a><br>
+<a href="../php/default.html">PHP Учебник</a><br>
+<a href="../jquery/default.html">jQuery Учебник</a><br>
+<a href="../java/default.html">Java Учебник</a><br>
+<a href="../cpp/default.html">C++ Учебник</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Справочники</h4>
+<a href="../tags/default.html">HTML Справочник</a><br>
+<a href="../cssref/default.html">CSS Справочник</a><br>
+<a href="../jsref/default.html">JavaScript Справочник</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Справочник</a><br>
+<a href="../python/python_reference.html">Python Справочник</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Справочник</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Справочник</a><br>
+<a href="../php/php_ref_overview.html">PHP Справочник</a><br>
+<a href="../colors/colors_names.html">HTML Цвета</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Справочник</a><br>
+<a href="../java/java_ref_keywords.html">Java Справочник</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Справочник</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Примеры</h4>
+<a href="html_examples.html">HTML Примеры</a><br>
+<a href="../css/css_examples.html">CSS Примеры</a><br>
+<a href="../js/js_examples.html">JavaScript Примеры</a><br>
+<a href="../howto/default.html">Как сделать Примеры</a><br>
+<a href="../sql/sql_examples.html">SQL Примеры</a><br>
+<a href="../python/python_examples.html">Python Примеры</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Примеры</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Примеры</a><br>
+<a href="../php/php_examples.html">PHP Примеры</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Примеры</a><br>
+<a href="../java/java_examples.html">Java Примеры</a><br>
+<a href="../xml/xml_examples.html">XML Примеры</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Веб Сертификаты</h4>
+<a href="../cert/default.html">HTML Сертификат</a><br>
+<a href="../cert/default.html">CSS Сертификат</a><br>
+<a href="../cert/default.html">JavaScript Сертификат</a><br>
+<a href="../cert/default.html">SQL Сертификат</a><br>
+<a href="../cert/default.html">Python Сертификат</a><br>
+<a href="../cert/default.html">jQuery Сертификат</a><br>
+<a href="../cert/default.html">PHP Сертификат</a><br>
+<a href="../cert/default.html">Bootstrap Сертификат</a><br>
+<a href="../cert/default.html">XML Сертификат</a><br>
+<a class="w3-button w3-margin-top w3-dark-grey" href="../cert/default.html" style="text-decoration:none">Получить Сертификацию &raquo;</a>
+</div>
+</div>
+</div>
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+Этот сайт оптимизирован для обучения, тестирования и обучения. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
+<a href="../about/about_copyright.html">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
+ <a href="../w3css/default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</div>
+
+</body>
+</html>

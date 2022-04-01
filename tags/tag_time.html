@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>HTML Тег &lt;time&gt;. Справочник тегов. W3Schools на русском</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="HTML,CSS,тег,атрибуты,полный,справочник,W3Schools,на русском,уроки,для начинающих" />
+<meta name="description" content="HTML тег time определяет удобочитаемую дату / время. Также необходим для поисковых систем, чтобы они могли выдавать более точные результаты поиска в соответствие с датой. Полный справочник HTML-тегов. Применение на веб-странице. Уроки для начинающих. W3Schools на русском" />
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../w3css/4/w3.css">
+<link rel="stylesheet" href="../browserref.css">
+</head>
+
+<body>
+<div id="mainContent">
+<div class='w3-container top'>
+  <a class='w3schools-logo notranslate' href='../index.html'>w3schools<span class='dotcom'>.на русском</span></a>
+  <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">ЛУЧШИЙ САЙТ ДЛЯ ВЕБ-РАЗРАБОТЧИКОВ</div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto;">
+    <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../default.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Главная'></a>
+      <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Учебник'>HTML</a>
+      <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Учебник'>CSS</a>
+      <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Учебник'>JAVASCRIPT</a>
+      <a class="w3-bar-item w3-button" href='../sql/default.html' title='SQL Учебник'>SQL</a>
+      <a class="w3-bar-item w3-button" href='../python/default.html' title='Python Учебник'>PYTHON</a>
+      <a class="w3-bar-item w3-button" href='../php/default.html' title='PHP Учебник'>PHP</a>
+      <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html' title='Bootstrap Учебник'>BOOTSTRAP</a>
+      <a class="w3-bar-item w3-button" href='../howto/default.html' title='How To'>КАК СДЕЛАТЬ</a>
+      <a class="w3-bar-item w3-button" href='../w3css/default.html' title='W3.CSS Учебник'>W3.CSS</a>
+      <a class="w3-bar-item w3-button" href='../jquery/default.html' title='jQuery Учебник'>JQUERY</a>
+      <a class="w3-bar-item w3-button" href='../xml/default.html' title='XML Учебник'>XML</a>
+      <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Учебникs'>БОЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Поиск на сайте'>&#128269;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключить на тёмный код'>&#9681;</a>
+      <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'>КНИГИ</a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>УПРАЖНЕНИЯ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+      <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>СПРАВОЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+
+    </div>
+    <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+      <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML и CSS</h3>
+          <a class="w3-bar-item w3-button" href='../html/default.html'>Уроки HTML</a>
+          <a class="w3-bar-item w3-button" href='../css/default.html'>Уроки CSS</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Уроки Bootstrap</a>
+          <a class="w3-bar-item w3-button" href='../w3css/default.html'>Уроки W3.CSS</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>Уроки Цвета</a>
+          <a class="w3-bar-item w3-button" href='../icons/default.html'>Уроки Иконки</a>
+          <a class="w3-bar-item w3-button" href='../graphics/default.html'>Уроки Графика</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Уроки SVG</a>
+          <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Уроки Canvas</a>
+          <a class="w3-bar-item w3-button" href='default.html'>Уроки Как сделать</a>
+          <a class="w3-bar-item w3-button" href='../sass/default.html'>Уроки Sass</a>
+          <div class="w3-hide-large w3-hide-small">
+            <h3>XML</h3>
+            <a class="w3-bar-item w3-button" href='../xml/default.html'>Уроки XML</a>
+            <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Уроки XML AJAX</a>
+            <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Уроки XML DOM</a>
+            <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Уроки XML DTD</a>
+            <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Уроки XML Schema</a>
+            <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Уроки XSLT</a>
+            <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Уроки XPath</a>
+            <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Уроки XQuery</a>
+          </div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../js/default.html'>Уроки JavaScript</a>
+          <a class="w3-bar-item w3-button" href='../jquery/default.html'>Уроки jQuery</a>
+          <a class="w3-bar-item w3-button" href='../react/default.html'>Уроки React</a>
+          <a class="w3-bar-item w3-button" href='../angular/default.html'>Уроки AngularJS</a>
+          <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Уроки JSON</a>
+          <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Уроки AJAX</a>
+          <a class="w3-bar-item w3-button" href="../w3js/default.html">Уроки W3.JS</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/default.html'>Уроки Python</a>
+          <a class="w3-bar-item w3-button" href='../java/default.html'>Уроки Java</a>
+          <a class="w3-bar-item w3-button" href='../cpp/default.html'>Уроки C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Уроки C#</a>
+          <a class="w3-bar-item w3-button" href='../python/python_ml_getting_started.html'>Уроки Машинное обучение</a>
+          <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/default.html'>Уроки SQL</a>
+          <a class="w3-bar-item w3-button" href='../php/default.html'>Уроки PHP</a>
+          <a class="w3-bar-item w3-button" href='../asp/default.html'>Уроки ASP</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/default.html'>Уроки Node.js</a>
+          <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Уроки Raspberry Pi</a>
+          <h3>Веб-строительство</h3>
+          <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Веб-шаблоны</a>
+          <a class="w3-bar-item w3-button" href='../browsers/default.html'>Веб-статистика</a>
+          <a class="w3-bar-item w3-button" href='../cert/default.html'>Веб-сертификаты</a>
+          <a class="w3-bar-item w3-button" href='../tryit/default.html'>Веб-редактор</a>
+          <a class="w3-bar-item w3-button" href="../whatis/default.html">Веб-разработка</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium'>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/default.html'>Уроки XML</a>
+          <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Уроки XML AJAX</a>
+          <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Уроки XML DOM</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Уроки XML DTD</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Уроки XML Schema</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Уроки XSLT</a>
+          <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Уроки XPath</a>
+          <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Уроки XQuery</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_references' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l3 m6'>
+          <h3>HTML</h3>
+          <a class="w3-bar-item w3-button" href='../tags/default.html'>HTML Справочник тегов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Справочник событий</a>
+          <a class="w3-bar-item w3-button" href='../colors/default.html'>HTML Справочник цветов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Справочник атрибутов</a>
+          <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Справочник</a>
+          <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Справочник</a>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google-карты Справочник</a>
+          <h3>CSS</h3>
+          <a class="w3-bar-item w3-button" href='../cssref/default.html'>CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Поддержка браузерами</a>
+          <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Selector Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Справочник</a>
+          <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Справочник</a>
+          <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Иконки Справочник</a>
+          <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Справочник</a>
+       </div>
+        <div class='w3-col l3 m6'>
+          <h3>JavaScript</h3>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>JavaScript Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jsref/default.html'>HTML DOM Справочник</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Справочник</a>
+          <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Справочник</a>
+          <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Справочник</a>
+          <h3>Программирование</h3>
+          <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Справочник</a>
+          <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Справочник</a>
+        </div>
+        <div class='w3-col l3 m6'>
+          <h3>Серверная сторона</h3>
+          <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Справочник</a>
+          <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Справочник</a>
+          <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Справочник</a>
+          <h3>XML</h3>
+          <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Справочник</a>
+          <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Справочник</a>
+        </div>
+        <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+          <h3>Наборы символов</h3>
+          <a class="w3-bar-item w3-button" href='../charsets/default.html'>HTML Наборы символов</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Символы</a>
+          <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+      <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+      <div class='w3-row-padding' style="padding:24px 48px">
+        <div class='w3-col l4 m6'>
+          <h3>Упражнения</h3>
+          <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Упражнения</a>
+          <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Упражнения</a>
+        </div>
+        <div class='w3-col l4 m6'>
+          <h3>Викторины</h3>
+          <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Викторина</a>
+          <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Викторина</a>
+          <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Викторина</a>
+          <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Викторина</a>
+          <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Викторина</a>
+          <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Викторина</a>
+          <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Викторина</a>
+          <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Викторина</a>
+          <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Викторина</a>
+        </div>
+        <div class='w3-col l4 m12'>
+         <h3>Сертификаты</h3>
+         <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap Сертификат</a>
+         <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Сертификат</a>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<!--/Top menu-->
+
+<!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">HTML</span> Справочник</h2>
+<a target="_top" href="default.html">HTML Теги по алфавиту</a>
+<a target="_top" href="ref_byfunc.html">HTML Теги по категории</a>
+<a target="_top" href="ref_attributes.html">HTML Атрибуты</a>
+<a target="_top" href="ref_standardattributes.html">HTML Глобальные атрибуты</a>
+<a target="_top" href="ref_eventattributes.html">HTML Атрибуты событий</a>
+<a target="_top" href="ref_colornames.html">HTML Цвета</a>
+<a target="_top" href="ref_canvas.html">HTML Canvas</a>
+<a target="_top" href="ref_av_dom.html">HTML Аудио/Видео</a>
+<a target="_top" href="ref_charactersets.html">HTML Наборы символов</a>
+<a target="_top" href="ref_html_dtd.html">HTML Doctype</a>
+<a target="_top" href="ref_urlencode.html">HTML URL кодирование</a>
+<a target="_top" href="ref_language_codes.html">HTML Коды языков</a>
+<a target="_top" href="ref_country_codes.html">HTML Коды стран</a>
+<a target="_top" href="ref_httpmessages.html">HTTP Сообщения</a>
+<a target="_top" href="ref_httpmethods.html">HTTP Методы</a>
+<a target="_top" href="ref_pxtoemconversion.html">PX в EM Конвертер</a>
+<a target="_top" href="ref_keyboardshortcuts.html">Горячие клавиши</a>
+<br>
+<div class="notranslate">
+<h2 class="left"><span class="left_h2">HTML</span> Теги</h2>
+<a target="_top" href="tag_comment.html">&lt;!--&gt;</a>
+<a target="_top" href="tag_doctype.html">&lt;!DOCTYPE&gt;</a>
+<a target="_top" href="tag_a.html">&lt;a&gt;</a>
+<a target="_top" href="tag_abbr.html">&lt;abbr&gt;</a>
+<a target="_top" href="tag_acronym.html">&lt;acronym&gt;</a>
+<a target="_top" href="tag_address.html">&lt;address&gt;</a>
+<a target="_top" href="tag_applet.html">&lt;applet&gt;</a>
+<a target="_top" href="tag_area.html">&lt;area&gt;</a>
+<a target="_top" href="tag_article.html">&lt;article&gt;</a>
+<a target="_top" href="tag_aside.html">&lt;aside&gt;</a>
+<a target="_top" href="tag_audio.html">&lt;audio&gt;</a>
+<a target="_top" href="tag_b.html">&lt;b&gt;</a>
+<a target="_top" href="tag_base.html">&lt;base&gt;</a>
+<a target="_top" href="tag_basefont.html">&lt;basefont&gt;</a>
+<a target="_top" href="tag_bdi.html">&lt;bdi&gt;</a>
+<a target="_top" href="tag_bdo.html">&lt;bdo&gt;</a>
+<a target="_top" href="tag_big.html">&lt;big&gt;</a>
+<a target="_top" href="tag_blockquote.html">&lt;blockquote&gt;</a>
+<a target="_top" href="tag_body.html">&lt;body&gt;</a>
+<a target="_top" href="tag_br.html">&lt;br&gt;</a>
+<a target="_top" href="tag_button.html">&lt;button&gt;</a>
+<a target="_top" href="tag_canvas.html">&lt;canvas&gt;</a>
+<a target="_top" href="tag_caption.html">&lt;caption&gt;</a>
+<a target="_top" href="tag_center.html">&lt;center&gt;</a>
+<a target="_top" href="tag_cite.html">&lt;cite&gt;</a>
+<a target="_top" href="tag_code.html">&lt;code&gt;</a>
+<a target="_top" href="tag_col.html">&lt;col&gt;</a>
+<a target="_top" href="tag_colgroup.html">&lt;colgroup&gt;</a>
+<a target="_top" href="tag_data.html">&lt;data&gt;</a>
+<a target="_top" href="tag_datalist.html">&lt;datalist&gt;</a>
+<a target="_top" href="tag_dd.html">&lt;dd&gt;</a>
+<a target="_top" href="tag_del.html">&lt;del&gt;</a>
+<a target="_top" href="tag_details.html">&lt;details&gt;</a>
+<a target="_top" href="tag_dfn.html">&lt;dfn&gt;</a>
+<a target="_top" href="tag_dialog.html">&lt;dialog&gt;</a>
+<a target="_top" href="tag_dir.html">&lt;dir&gt;</a>
+<a target="_top" href="tag_div.html">&lt;div&gt;</a>
+<a target="_top" href="tag_dl.html">&lt;dl&gt;</a>
+<a target="_top" href="tag_dt.html">&lt;dt&gt;</a>
+<a target="_top" href="tag_em.html">&lt;em&gt;</a>
+<a target="_top" href="tag_embed.html">&lt;embed&gt;</a>
+<a target="_top" href="tag_fieldset.html">&lt;fieldset&gt;</a>
+<a target="_top" href="tag_figcaption.html">&lt;figcaption&gt;</a>
+<a target="_top" href="tag_figure.html">&lt;figure&gt;</a>
+<a target="_top" href="tag_font.html">&lt;font&gt;</a>
+<a target="_top" href="tag_footer.html">&lt;footer&gt;</a>
+<a target="_top" href="tag_form.html">&lt;form&gt;</a>
+<a target="_top" href="tag_frame.html">&lt;frame&gt;</a>
+<a target="_top" href="tag_frameset.html">&lt;frameset&gt;</a>
+<a target="_top" href="tag_hn.html">&lt;h1&gt; - &lt;h6&gt;</a>
+<a target="_top" href="tag_head.html">&lt;head&gt;</a>
+<a target="_top" href="tag_header.html">&lt;header&gt;</a>
+<a target="_top" href="tag_hr.html">&lt;hr&gt;</a>
+<a target="_top" href="tag_html.html">&lt;html&gt;</a>
+<a target="_top" href="tag_i.html">&lt;i&gt;</a>
+<a target="_top" href="tag_iframe.html">&lt;iframe&gt;</a>
+<a target="_top" href="tag_img.html">&lt;img&gt;</a>
+<a target="_top" href="tag_input.html">&lt;input&gt;</a>
+<a target="_top" href="tag_ins.html">&lt;ins&gt;</a>
+<a target="_top" href="tag_kbd.html">&lt;kbd&gt;</a>
+<a target="_top" href="tag_label.html">&lt;label&gt;</a>
+<a target="_top" href="tag_legend.html">&lt;legend&gt;</a>
+<a target="_top" href="tag_li.html">&lt;li&gt;</a>
+<a target="_top" href="tag_link.html">&lt;link&gt;</a>
+<a target="_top" href="tag_main.html">&lt;main&gt;</a>
+<a target="_top" href="tag_map.html">&lt;map&gt;</a>
+<a target="_top" href="tag_mark.html">&lt;mark&gt;</a>
+<a target="_top" href="tag_meta.html">&lt;meta&gt;</a>
+<a target="_top" href="tag_meter.html">&lt;meter&gt;</a>
+<a target="_top" href="tag_nav.html">&lt;nav&gt;</a>
+<a target="_top" href="tag_noframes.html">&lt;noframes&gt;</a>
+<a target="_top" href="tag_noscript.html">&lt;noscript&gt;</a>
+<a target="_top" href="tag_object.html">&lt;object&gt;</a>
+<a target="_top" href="tag_ol.html">&lt;ol&gt;</a>
+<a target="_top" href="tag_optgroup.html">&lt;optgroup&gt;</a>
+<a target="_top" href="tag_option.html">&lt;option&gt;</a>
+<a target="_top" href="tag_output.html">&lt;output&gt;</a>
+<a target="_top" href="tag_p.html">&lt;p&gt;</a>
+<a target="_top" href="tag_param.html">&lt;param&gt;</a>
+<a target="_top" href="tag_picture.html">&lt;picture&gt;</a>
+<a target="_top" href="tag_pre.html">&lt;pre&gt;</a>
+<a target="_top" href="tag_progress.html">&lt;progress&gt;</a>
+<a target="_top" href="tag_q.html">&lt;q&gt;</a>
+<a target="_top" href="tag_rp.html">&lt;rp&gt;</a>
+<a target="_top" href="tag_rt.html">&lt;rt&gt;</a>
+<a target="_top" href="tag_ruby.html">&lt;ruby&gt;</a>
+<a target="_top" href="tag_s.html">&lt;s&gt;</a>
+<a target="_top" href="tag_samp.html">&lt;samp&gt;</a>
+<a target="_top" href="tag_script.html">&lt;script&gt;</a>
+<a target="_top" href="tag_section.html">&lt;section&gt;</a>
+<a target="_top" href="tag_select.html">&lt;select&gt;</a>
+<a target="_top" href="tag_small.html">&lt;small&gt;</a>
+<a target="_top" href="tag_source.html">&lt;source&gt;</a>
+<a target="_top" href="tag_span.html">&lt;span&gt;</a>
+<a target="_top" href="tag_strike.html">&lt;strike&gt;</a>
+<a target="_top" href="tag_strong.html">&lt;strong&gt;</a>
+<a target="_top" href="tag_style.html">&lt;style&gt;</a>
+<a target="_top" href="tag_sub.html">&lt;sub&gt;</a>
+<a target="_top" href="tag_summary.html">&lt;summary&gt;</a>
+<a target="_top" href="tag_sup.html">&lt;sup&gt;</a>
+<a target="_top" href="tag_svg.html">&lt;svg&gt;</a>
+<a target="_top" href="tag_table.html">&lt;table&gt;</a>
+<a target="_top" href="tag_tbody.html">&lt;tbody&gt;</a>
+<a target="_top" href="tag_td.html">&lt;td&gt;</a>
+<a target="_top" href="tag_template.html">&lt;template&gt;</a>
+<a target="_top" href="tag_textarea.html">&lt;textarea&gt;</a>
+<a target="_top" href="tag_tfoot.html">&lt;tfoot&gt;</a>
+<a target="_top" href="tag_th.html">&lt;th&gt;</a>
+<a target="_top" href="tag_thead.html">&lt;thead&gt;</a>
+<a target="_top" href="tag_time.html">&lt;time&gt;</a>
+<a target="_top" href="tag_title.html">&lt;title&gt;</a>
+<a target="_top" href="tag_tr.html">&lt;tr&gt;</a>
+<a target="_top" href="tag_track.html">&lt;track&gt;</a>
+<a target="_top" href="tag_tt.html">&lt;tt&gt;</a>
+<a target="_top" href="tag_u.html">&lt;u&gt;</a>
+<a target="_top" href="tag_ul.html">&lt;ul&gt;</a>
+<a target="_top" href="tag_var.html">&lt;var&gt;</a>
+<a target="_top" href="tag_video.html">&lt;video&gt;</a>
+<a target="_top" href="tag_wbr.html">&lt;wbr&gt;</a>
+</div>
+<br><br>
+</div>
+</div>
+</div>
+<!--/Left menu sidebar -->
+
+<!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='w3-row w3-white'>
+    <div class='w3-col l10 m12' id='main'>
+      <a href="default.html"><img src="../svg/HTML5_icon.svg" alt="HTML теги. Полный справочник" class="w3-left" title="HTML теги. Полный справочник" width="90"></a>
+
+<h1>HTML тег <span class="color_h1">&lt;time&gt;</span></h1>
+<div class="w3-clear w3-center nextprev">
+<a class="w3-left w3-btn" href="tag_thead.html">&#10094;<span class="w3-hide-small"> Prev</span></a>
+<a class="w3-btn" href="default.html"><span class="w3-hide-small">Полный HTML </span>справочник</a>
+<a class="w3-right w3-btn" href="tag_title.html"><span class="w3-hide-small">Next </span>&#10095;</a>
+</div>
+<br>
+
+<div class="w3-example">
+<h3>Пример</h3>
+<p>Как определить время и дату:</p>
+<div class="w3-code notranslate htmlHigh">
+    &lt;p&gt;Мы открываемся в
+ &lt;time&gt;10:00&lt;/time&gt; каждое утро.&lt;/p&gt;<br><br>
+ &lt;p&gt;Моя любимая дата &lt;time datetime=&quot;2008-02-14 20:00&quot;&gt;День Святого Валентина&lt;/time&gt;.&lt;/p&gt;
+</div>
+<a target="_blank" href="tryitace2.html?filename=tryhtml5_time" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
+</div>
+<hr>
+
+<h2>Определение и использование</h2>
+<p>Тег &lt;time&gt; определяет удобочитаемую дату / время.</p>
+<p>Этот элемент также можно использовать для кодирования дат и времени машиночитаемым способом, чтобы агенты пользователей могли предлагать добавлять напоминания о днях рождения или запланированные события в календарь пользователя, а поисковые системы могли создавать более точные результаты поиска.</p>
+<hr>
+
+<h2>Поддержка браузерами</h2>
+<p>Числа в таблице указывают первую версию браузера, которая полностью поддерживает элемент.</p>
+<table class="browserref notranslate">
+  <tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Элемент</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>
+  </tr><tr>
+    <td style="text-align:left;">&lt;time&gt;</td>
+    <td>6.0</td>
+    <td>9.0</td>
+    <td>4.0</td>
+    <td>5.0</td>
+    <td>11.1</td>
+  </tr>
+  </table>
+<hr>
+
+<h2>Различия между HTML 4.01 и HTML5</h2>
+<p>Тег &lt;time&gt; новый в HTML5.</p>
+<hr>
+
+<h2>Атрибуты</h2>
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:20%">Атрибут</th>
+    <th style="width:15%">Значение</th>
+    <th>Описание</th>
+  </tr>
+    <tr>
+    <td><a href="att_time_datetime.html">datetime</a></td>
+    <td><i>datetime</i></td>
+    <td>Представляет машиночитаемую дату / время элемента &lt;time&gt;</td>
+    </tr>
+</table>
+
+<h2>Глобальные атрибуты</h2>
+<p>Тег &lt;time&gt; также поддерживает <a href="ref_standardattributes.html">Глобальыне атрибуты в HTML</a>.</p>
+<hr>
+<h2>Атрибуты событий</h2>
+<p>Тег &lt;time&gt; также поддерживает <a href="ref_eventattributes.html">Атрибуты событий в HTML</a>.</p>
+<hr>
+<h2>Связанные страницы</h2>
+<p>HTML DOM справочник: <a href="../jsref/dom_obj_time.html">Объект Time</a></p>
+<hr>
+<h2>Настройки CSS по умолчанию</h2>
+<p>Отсутствуют.</p>
+
+<hr>
+<div class="w3-clear w3-center nextprev">
+<a class="w3-left w3-btn" href="tag_thead.html">&#10094;<span class="w3-hide-small"> Prev</span></a>
+<a class="w3-btn" href="default.html"><span class="w3-hide-small">Полный HTML </span>справочник</a>
+<a class="w3-right w3-btn" href="tag_title.html"><span class="w3-hide-small">Next </span>&#10095;</a>
+</div>
+
+</div>
+<!--/CONTENT-->
+
+<!--Right sidebar-->
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection w3-light-grey" style="padding-bottom: 5px">
+<h4><a href="../colors/colors_picker.html">ПАЛИТРА ЦВЕТОВ</a></h4>
+<a href="../colors/colors_picker.html">
+<img src="../images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection w3-light-grey" style="margin-left:auto;margin-right:auto;max-width:230px">
+  <div class="w3-container w3-dark-grey">
+    <h4><a href="../howto/default.html" class="w3-hover-text-white">КАК СДЕЛАТЬ</a></h4>
+  </div>
+  <div class="w3-container w3-left-align w3-padding-16">
+    <a href="../howto/howto_js_tabs.html">Вкладки</a><br>
+    <a href="../howto/howto_css_dropdown.html">Выпадающее меню</a><br>
+    <a href="../howto/howto_js_accordion.html">Меню аккордеон</a><br>
+    <a href="../howto/howto_js_sidenav.html">Боковая навигация</a><br>
+    <a href="../howto/howto_js_topnav.html">Верхняя навигация</a><br>
+    <a href="../howto/howto_css_modals.html">Модальные блоки</a><br>
+    <a href="../howto/howto_js_progressbar.html">Прогресс-бары</a><br>
+    <a href="../howto/howto_css_parallax.html">Паралакс</a><br>
+    <a href="../howto/howto_css_login_form.html">Форма входа</a><br>
+    <a href="../howto/howto_html_include.html">HTML сниппеты</a><br>
+    <a href="../graphics/google_maps_intro.html">Google карты</a><br>
+    <a href="../howto/howto_js_rangeslider.html">Ползунки диапазона</a><br>
+    <a href="../howto/howto_css_tooltip.html">Всплывающие подсказки</a><br>
+    <a href="../howto/howto_js_slideshow.html">Слайдшоу</a><br>
+    <a href="../howto/howto_js_filter_lists.html">Список фильтров</a><br>
+    <a href="../howto/howto_js_sort_list.html">Отсортированный список</a>
+  </div>
+</div>
+
+</div>
+<!--/Right sidebar-->
+
+</div>
+
+<!--FOOTER-->
+<div id="footer" class="footer w3-container w3-white">
+<hr>
+
+<div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">СООБЩИТЬ ПРО ОШИБКУ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" target="_blank" onclick="printPage();return false;" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПЕЧАТЬ СТРАНИЦЫ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../blog/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">БЛОГ</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a class="w3-button w3-light-grey w3-block" href="../about/default.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ПРО САЙТ</a>
+</div>
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-margin-bottom" id="err_form" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright w3-large">&times;</span>
+<h2>Ваше предложение:</h2>
+<form>
+<div class="w3-section">
+<label for="err_email">Ваш E-mail:</label>
+<input class="w3-input w3-border" type="text" style="margin-top:5px;width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-section">
+<label for="err_email">Адрес страницы:</label>
+<input class="w3-input w3-border" type="text" style="width:100%;margin-top:5px" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-section">
+<label for="err_email">Описание:</label>
+<textarea rows="10" class="w3-input w3-border" id="err_desc" name="err_desc" style="width:100%;margin-top:5px;resize:vertical;"></textarea>
+</div>
+<div class="form-group">
+<button type="button" class="w3-button w3-dark-grey" onclick="sendErr()">Отправить</button>
+</div>
+<br>
+</form>
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;position:relative">
+<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<h2>Спасибо за Вашу помощь!</h2>
+<p>Ваше сообщение было отправлено в W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Учебники</h4>
+<a href="default.html">HTML Учебник</a><br>
+<a href="../css/default.html">CSS Учебник</a><br>
+<a href="../js/default.html">JavaScript Учебник</a><br>
+<a href="../howto/default.html">Как сделать Учебник</a><br>
+<a href="../sql/default.html">SQL Учебник</a><br>
+<a href="../python/default.html">Python Учебник</a><br>
+<a href="../w3css/default.html">W3.CSS Учебник</a><br>
+<a href="../bootstrap/bootstrap_ver.html">Bootstrap Учебник</a><br>
+<a href="../php/default.html">PHP Учебник</a><br>
+<a href="../jquery/default.html">jQuery Учебник</a><br>
+<a href="../java/default.html">Java Учебник</a><br>
+<a href="../cpp/default.html">C++ Учебник</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Справочники</h4>
+<a href="../tags/default.html">HTML Справочник</a><br>
+<a href="../cssref/default.html">CSS Справочник</a><br>
+<a href="../jsref/default.html">JavaScript Справочник</a><br>
+<a href="../sql/sql_ref_keywords.html">SQL Справочник</a><br>
+<a href="../python/python_reference.html">Python Справочник</a><br>
+<a href="../w3css/w3css_references.html">W3.CSS Справочник</a><br>
+<a href="../bootstrap/bootstrap_ref_all_classes.html">Bootstrap Справочник</a><br>
+<a href="../php/php_ref_overview.html">PHP Справочник</a><br>
+<a href="../colors/colors_names.html">HTML Цвета</a><br>
+<a href="../jquery/jquery_ref_overview.html">jQuery Справочник</a><br>
+<a href="../java/java_ref_keywords.html">Java Справочник</a><br>
+<a href="../angular/angular_ref_directives.html">Angular Справочник</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Топ Примеры</h4>
+<a href="html_examples.html">HTML Примеры</a><br>
+<a href="../css/css_examples.html">CSS Примеры</a><br>
+<a href="../js/js_examples.html">JavaScript Примеры</a><br>
+<a href="../howto/default.html">Как сделать Примеры</a><br>
+<a href="../sql/sql_examples.html">SQL Примеры</a><br>
+<a href="../python/python_examples.html">Python Примеры</a><br>
+<a href="../w3css/w3css_examples.html">W3.CSS Примеры</a><br>
+<a href="../bootstrap/bootstrap_examples.html">Bootstrap Примеры</a><br>
+<a href="../php/php_examples.html">PHP Примеры</a><br>
+<a href="../jquery/jquery_examples.html">jQuery Примеры</a><br>
+<a href="../java/java_examples.html">Java Примеры</a><br>
+<a href="../xml/xml_examples.html">XML Примеры</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Веб Сертификаты</h4>
+<a href="../cert/default.html">HTML Сертификат</a><br>
+<a href="../cert/default.html">CSS Сертификат</a><br>
+<a href="../cert/default.html">JavaScript Сертификат</a><br>
+<a href="../cert/default.html">SQL Сертификат</a><br>
+<a href="../cert/default.html">Python Сертификат</a><br>
+<a href="../cert/default.html">jQuery Сертификат</a><br>
+<a href="../cert/default.html">PHP Сертификат</a><br>
+<a href="../cert/default.html">Bootstrap Сертификат</a><br>
+<a href="../cert/default.html">XML Сертификат</a><br>
+<a class="w3-button w3-margin-top w3-dark-grey" href="../cert/default.html" style="text-decoration:none">Получить Сертификацию &raquo;</a>
+</div>
+</div>
+</div>
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+Этот сайт оптимизирован для обучения, тестирования и обучения. Примеры могут быть упрощены для улучшения чтения и базового понимания. Учебные пособия, ссылки и примеры постоянно пересматриваются, чтобы избежать ошибок, но мы не можем гарантировать полную правильность и работоспособность всего контента. Используя этот сайт, вы соглашаетесь с тем, что прочитали и приняли <a href="../about/about_copyright.html">условия использования</a>, <a href="../about/about_privacy.html">cookie и политики конфиденциальности</a>.
+<a href="../about/about_copyright.html">Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.<br>
+ <a href="../w3css/default.html">Сайт работает на фреймворке W3.CSS</a>.<br><br>
+<a href="../index.html">
+<img style="width:150px;height:28px;border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools"></a>
+</div>
+<br>
+</div>
+
+</div>
+<script src="../lib/w3schools_footer.js"></script>
+<!--[if lt IE 9]>
+<script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
+<script src="../cdn/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</div>
+
+</body>
+</html>
